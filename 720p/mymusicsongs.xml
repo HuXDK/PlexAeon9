@@ -1,0 +1,69 @@
+<window id="501">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>550,50,54,57,53,551,52</views>
+	<controls>
+<!--
+		<control type="multiimage">
+			<include>BackgroundVarsGlobal</include>
+			<include>BackgroundVarsMusic</include>
+		</control>
+ 
+		<control type="largeimage" id="102">
+			<include>FullscreenDimensions</include>
+			<visible>!Control.IsVisible(103) + [Control.IsVisible(57) | Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(551)] + !IsEmpty(listitem.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
+			<fadetime>400</fadetime>
+			<texture>$INFO[listitem.property(fanart_image)]</texture>
+			<include>Animation_FanartFade</include>
+		</control>
+
+		<control type="largeimage" id="103">
+			<include>FullscreenDimensions</include>
+			<visible>[Control.IsVisible(57) | Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(551)] + !IsEmpty(container.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
+			<fadetime>400</fadetime>
+			<texture>$INFO[container.property(fanart_image)]</texture>
+			<include>Animation_FanartFade</include>
+		</control>
+-->
+ 
+		<control type="largeimage">
+			<include>FullscreenDimensions</include>
+			<visible>Skin.HasSetting(nomusicfanart)</visible>
+			<texture>$INFO[listitem.property(fanart_image)]</texture>
+			<animation effect="fade" start="0" end="100" time="1550" delay="0">Visible</animation>	
+		</control>
+ 
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<imagepath>-</imagepath>
+			<timeperimage>20000</timeperimage>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+       		<animation effect="fade" start="0" end="100" time="1200" reversible="false" delay="0">Visible</animation>	
+			<info>Skin.String(CustomMusicFolder)</info>
+			<visible>!Skin.HasSetting(nomusicfanart)</visible>
+		</control>
+		<include>Furniture_HomeNowPlaying</include>
+		<include>Furniture_WallBackground</include>
+		<control type="group">
+			<include>FullscreenDimensions</include>
+			<include>Animation_OpenCloseZoom</include>
+			<include>Furniture_Time</include>
+			<include condition="Skin.HasSetting(TotalsPanelOn)">Furniture_Totals</include>
+			<include>Furniture_MediaPanel</include>
+			<include>Furniture_WallTime</include>
+			<include>Furniture_WallRSS</include>
+			<include>Viewtype_List</include>
+			<include condition="!Skin.HasSetting(MultiplexOff)">Viewtype_Music_Multiplex</include>
+			<include condition="!Skin.HasSetting(ListLowOff)">Viewtype_List_Low</include>
+			<include condition="!Skin.HasSetting(WallOff)">Viewtype_Wall</include>
+			<include condition="!Skin.HasSetting(SlimListOff)">Viewtype_List_Slim</include>
+			<include condition="!Skin.HasSetting(ClearListOff)">Viewtype_ClearList</include>
+			<include condition="!Skin.HasSetting(ShowcaseOff)">Viewtype_Showcase</include>
+			<include>NewMediaMenu</include>
+		</control>
+			<include>ScrollOffsetLabel</include>
+			<include>Furniture_DarkGradient</include>
+		<!--<include>Background_ContextBlack</include>--><include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
+	</controls>
+</window>

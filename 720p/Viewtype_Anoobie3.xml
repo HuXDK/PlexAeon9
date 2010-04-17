@@ -1,0 +1,105 @@
+<includes>
+	<include name="Viewtype_Anoobie3">
+
+	<control type="group">
+	<visible>Control.IsVisible(563)</visible>
+	<include>Animation_OpenCloseZoom</include>
+	
+		<include>Anoobie3InfoPaneMovies</include>		
+        <control type="button" id="110">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>0</width>
+            <height>0</height>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onleft>563</onleft>
+            <onright>563</onright>
+            <onup>7000</onup>
+            <ondown>563</ondown>
+        </control>
+		<control type="wraplist" id="563">
+		<visible>Container.Content(movies)</visible>
+			<viewtype label="31786">wrap</viewtype>
+			<include>Anoobie3MovieVarsWrap</include>
+			<pagecontrol>-</pagecontrol>
+			<onleft>563</onleft>
+			<onright>563</onright>
+			<onup>7000</onup>
+			<orientation>horizontal</orientation>
+			<focusposition>5</focusposition>	
+			<itemlayout width="105" height="129">
+				<control type="image">
+					<include>Anoobie3IconDimensionsWrap</include>
+					<texture diffuse="wall/wall_movie_mask.png" background="true">defaultvideobig.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>		
+				<control type="image">
+					<include>Anoobie3IconDimensionsWrap</include>
+					<bordertexture border="-3">wall/wall_movie_nfborder.png</bordertexture>
+					<texture>wall/wall_nfoverlay.png</texture>
+				</control>	
+				<control type="image">
+					<include>WatchedOverlayAnoobie3</include>
+					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+					<info>ListItem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout width="105" height="129">
+				<control type="image">
+					<include>Anoobie3IconDimensionsWrap</include>
+					<texture diffuse="wall/wall_movie_mask.png" background="true">defaultvideobig.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+					<animation effect="zoom" center="45,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>					
+				</control>
+				<control type="image">
+					<include>Anoobie3IconDimensionsWrap</include>
+					<bordertexture border="-2">wall/wall_movie_nfborder.png</bordertexture>
+					<texture>wall/wall_movie_nfoverlay.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="100" end="0" time="200" reversible="false" />
+						<effect type="zoom" center="45,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false" />
+					</animation>
+				</control>
+				<control type="image">
+					<include>WatchedOverlayAnoobie3</include>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="45,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false" />
+					</animation>			
+					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+					<info>ListItem.Overlay</info>
+				</control>
+				
+			</focusedlayout>
+			</control>			
+		<include>Anoobie3LabelsMovies</include>
+<!--		
+		<control type="scrollbar" id="60">
+			<description>My first scroll bar control</description>
+			<posx>67</posx>
+			<posy>673</posy>
+	        <width>1147</width>
+			<height>41</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(563) + Control.HasFocus(60) + !Control.IsVisible(105)</visible>
+	        <texturesliderbackground>stripshow/stripshow_scrollbar.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>
+			<textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
+			<pulseonselect></pulseonselect>
+			<orientation>horizontal</orientation>
+			<showonepage>false</showonepage>
+			<onup>563</onup>
+			<ondown>197</ondown>
+			<onleft>60</onleft>
+			<onright>60</onright>
+			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			<include>Animation_HideMultiplex</include>			
+		</control>
+-->
+	</control>
+	</include>
+
+</includes>
