@@ -63,7 +63,7 @@
 		<control type="group">
  
 			<posx>0</posx>
-			<posy>65</posy>
+			<posy>65</posy>F
 			<width>1280</width>
 			<height>381</height>
 			<visible>Container.Content(movies) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | ControlGroup(7000).HasFocus()]</visible>
@@ -108,7 +108,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.Director]</label>
+						<label fallback="31425">$INFO[ListItem.Director]</label>
 					</control>
  
 				</control>
@@ -123,7 +123,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.Writer]</label>
+						<label fallback="31425">$INFO[ListItem.Writer]</label>
 					</control>
  
 				</control>
@@ -138,7 +138,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.Year]</label>
+						<label fallback="31425">$INFO[ListItem.Year]</label>
 					</control>
  
 				</control>
@@ -154,7 +154,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.Duration]</label>
+						<label fallback="31425">$INFO[ListItem.Duration]</label>
 					</control>
  
 				</control>
@@ -170,7 +170,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.Genre]</label>
+						<label fallback="31425">$INFO[ListItem.Genre]</label>
 					</control>
  
 				</control>
@@ -186,7 +186,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.MPAA]</label>
+						<label fallback="31425">$INFO[ListItem.MPAA]</label>
 					</control>
  
 				</control>
@@ -202,7 +202,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.RatingandVotes]</label>
+						<label fallback="31425">$INFO[ListItem.RatingandVotes]</label>
 						<visible>Skin.HasSetting(movieratingtext)</visible>
 					</control>
 					  <control type="image">
@@ -228,7 +228,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValueBigThumb</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.Duration]</label>
+						<label fallback="31425">$INFO[ListItem.Duration]</label>
 					</control>
  
 				</control>
@@ -244,7 +244,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValueBigThumb</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.MPAA]</label>
+						<label fallback="31425">$INFO[ListItem.MPAA]</label>
 					</control>
  
 				</control>
@@ -261,7 +261,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValueBigThumb</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.RatingandVotes]</label>
+						<label fallback="31425">$INFO[ListItem.RatingandVotes]</label>
 						<visible>Skin.HasSetting(movieratingtext)</visible>
 					</control>
  
@@ -363,7 +363,7 @@
 					<height>161</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[Container(52).ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+					<texture>$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
 				</control>
  
 				<control type="image">
@@ -383,7 +383,7 @@
 					<height>161</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[Container(52).ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+					<texture>$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
 				</control>
  
 			</control>
@@ -449,7 +449,7 @@
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
 					<timeperimage>4000</timeperimage>
-					<imagepath background="true">$INFO[Container(52).ListItem.Path,,extrathumbs]</imagepath>
+					<imagepath background="true">$INFO[ListItem.Path,,extrathumbs]</imagepath>
 				</control>
  
 			</control>
@@ -484,7 +484,7 @@
 					<height>254</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[Container(52).listitem.property(fanart_image)]</texture>
+					<texture>$INFO[ListItem.property(fanart_image)]</texture>
 					<visible>!Player.HasVideo | Skin.HasSetting(homevis)</visible>
 				</control>
  
@@ -558,7 +558,7 @@
 					<height>333</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[Container(52).listitem.property(fanart_image)]</texture>
+					<texture>$INFO[ListItem.property(fanart_image)]</texture>
 					<visible>!Player.HasVideo | [Skin.HasSetting(homevis) + Player.HasVideo]</visible>
 				</control>
  
@@ -660,7 +660,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.Genre]</label>
+						<label fallback="31425">$INFO[ListItem.Genre]</label>
 					</control>
  
 				</control>
@@ -675,7 +675,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.Episode]</label>
+						<label fallback="31425">$INFO[ListItem.Episode]</label>
 					</control>
  
 				</control>
@@ -690,7 +690,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.Date]</label>
+						<label fallback="31425">$INFO[ListItem.Date]</label>
 					</control>
  
 				</control>
@@ -713,7 +713,7 @@
 					<control type="label">
 						<include>MultiplexInfoValue</include>
 						<visible>!IsEmpty(ListItem.Title)</visible>
-						<label fallback="31425">$INFO[Container(52).ListItem.Episode]</label>
+						<label fallback="31425">$INFO[ListItem.Episode]</label>
 					</control>
  
 				</control>
@@ -728,7 +728,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.Property(WatchedEpisodes)]</label>
+						<label fallback="31425">$INFO[ListItem.Property(WatchedEpisodes)]</label>
 					</control>
  
 				</control>
@@ -743,7 +743,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[Container(52).ListItem.Property(UnwatchedEpisodes)]</label>
+						<label fallback="31425">$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
 					</control>
  
 				</control>
@@ -782,7 +782,7 @@
 					<height>356</height>
 					<fadetime>400</fadetime>
 					<aspectratio>scale</aspectratio>
-					<texture>$INFO[Container(52).listitem.property(fanart_image)]</texture>
+					<texture>$INFO[ListItem.property(fanart_image)]</texture>
 					<visible>!Skin.HasSetting(multiplextvbigthumb) | !Container.Content(episodes)</visible>
 					<include>Animation_VisibleChange200</include>
 				</control>
@@ -1410,6 +1410,7 @@
  
 			<visible>Control.IsVisible(52)</visible>
 			<include>Animation_HideMultiplex</include>
+<!--
 			<control type="fadelabel">
 				<label>31609</label>
 				<label>31610</label>
@@ -1429,19 +1430,19 @@
 				<include>ShowcaseMainLabel</include>
 				<visible>false</visible>
 			</control>
- 
-	<control type="label">
-		<description>Runtime</description>
-		<posx>980</posx>
-		<posy>675</posy>
-		<width>70</width>
-		<height>20</height>
-		<align>left</align>
-		<font>Font_MultiplexInfoValue</font>
-		<textcolor>abFFFFFF</textcolor>
-		<label>$INFO[ListItem.Duration]</label>
-		<visible>Container.Content(movies) + Skin.HasSetting(nomediaflags)</visible>
-	</control>
+-->
+			<control type="label">
+				<description>Runtime</description>
+				<posx>980</posx>
+				<posy>675</posy>
+				<width>70</width>
+				<height>20</height>
+				<align>left</align>
+				<font>Font_MultiplexInfoValue</font>
+				<textcolor>abFFFFFF</textcolor>
+				<label>$INFO[ListItem.Duration]</label>
+				<visible>Container.Content(movies) + Skin.HasSetting(nomediaflags)</visible>
+			</control>
   
  
 			<control type="label">

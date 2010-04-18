@@ -756,6 +756,7 @@
 		<font>Font_ShowcaseMainLabel</font>
 		<include condition="Skin.HasSetting(lightfloor)">Colour_ShowcaseLabelLightShade</include>
 		<include condition="Skin.HasSetting(darkfloor) | Skin.HasSetting(clearfloor)">Colour_ShowcaseLabelNightShade</include>
+		<textcolor>FFFFFFFF</textcolor>
 		<visible>!ControlGroup(7000).HasFocus()</visible>
 		<animation effect="slide" end="0,-11" time="200" condition="[!Control.IsVisible(72) | IsEmpty(Control.GetLabel(72))]">Conditional</animation>
 	</include>

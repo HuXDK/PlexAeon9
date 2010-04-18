@@ -275,7 +275,7 @@
 	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask.png">$INFO[listitem.path]poster.jpg</texture>
 </include>
 <include name="LowList_PosterIconSeason">
-	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask.png">$INFO[Container(551).SeasonThumb]</texture>
+	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask.png">$INFO[SeasonThumb]</texture>
 </include>
 <include name="LowList_DVDIconNormal">
 	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[ListItem.Icon]</texture>
@@ -284,7 +284,7 @@
 	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[listitem.path]poster.jpg</texture>
 </include>
 <include name="LowList_DVDIconSeason">
-	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Container(551).SeasonThumb]</texture>
+	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[SeasonThumb]</texture>
 </include>
 <include name="LowList_PosterIconNormalReflect">
 	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask_reflect.png">$INFO[ListItem.Icon]</texture>
@@ -293,7 +293,7 @@
 	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask_reflect.png">$INFO[listitem.path]poster.jpg</texture>
 </include>
 <include name="LowList_PosterIconSeasonReflect">
-	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask_reflect.png">$INFO[Container(551).SeasonThumb]</texture>
+	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask_reflect.png">$INFO[SeasonThumb]</texture>
 </include>
 <include name="LowList_DVDIconNormalReflect">
 	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask_reflect.png">$INFO[ListItem.Icon]</texture>
@@ -302,7 +302,7 @@
 	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask_reflect.png">$INFO[listitem.path]poster.jpg</texture>
 </include>
 <include name="LowList_DVDIconSeasonReflect">
-	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask_reflect.png">$INFO[Container(551).SeasonThumb]</texture>
+	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask_reflect.png">$INFO[SeasonThumb]</texture>
 </include>
 <!-- Poster Media Icons -->
 <include name="LowList_PosterMediaIcons">
@@ -1854,7 +1854,7 @@
 				<fadetime>400</fadetime>
 				<aspectratio>scale</aspectratio>
 				<timeperimage>6000</timeperimage>
-				<imagepath fallback="common/black.png" background="true">$INFO[Container(551).ListItem.Path,,extrathumbs]</imagepath>
+				<imagepath fallback="common/black.png" background="true">$INFO[ListItem.Path,,extrathumbs]</imagepath>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="slide" start="0,0" end="0,-65" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>
 				<include>Animation_BackgroundFade</include>
@@ -1929,7 +1929,7 @@
 			<control type="textbox">
 				<description>DESCRIPTION: (Short - Seasons)</description>
 				<include>LowList_ShortTextBox</include>
-				<label fallback="31425">$INFO[Container(551).ShowPlot,[UPPERCASE][COLOR 66ffffff]$LOCALIZE[21821]: [/COLOR][/UPPERCASE]]</label>
+				<label fallback="31425">$INFO[PlotOutline,[UPPERCASE][COLOR 66ffffff]$LOCALIZE[21821]: [/COLOR][/UPPERCASE]]</label>
 				<visible>Container.Content(seasons) + !Skin.HasSetting(highlist) + ![Skin.HasSetting(tvdescpaneloff) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
 			</control>
 
@@ -1943,7 +1943,7 @@
 			<control type="textbox">
 				<description>DESCRIPTION: (Tall - Seasons)</description>
 				<include>LowList_TallTextBox</include>
-				<label fallback="31425">$INFO[Container(551).ShowPlot,[UPPERCASE][COLOR 66ffffff]$LOCALIZE[21821]:[/COLOR][/UPPERCASE][CR]]</label>
+				<label fallback="31425">$INFO[PlotOutline,[UPPERCASE][COLOR 66ffffff]$LOCALIZE[21821]:[/COLOR][/UPPERCASE][CR]]</label>
 				<visible>Container.Content(seasons) + Skin.HasSetting(highlist) + ![Skin.HasSetting(tvdescpaneloff) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
 			</control>
 
@@ -2098,7 +2098,7 @@
 				<height>196</height>
 				<fadetime>400</fadetime>
 				<aspectratio>scale</aspectratio>
-				<texture>$INFO[Container(551).listitem.property(fanart_image)]</texture>
+				<texture>$INFO[listitem.property(fanart_image)]</texture>
 				<visible>!IsEmpty(Container(551).listitem.property(fanart_image)) + [Container.Content(artists) | Container.Content(movies)]</visible>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="slide" start="0,0" end="0,-65" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>

@@ -191,7 +191,7 @@
 						<wrapmultiline>false</wrapmultiline>
 						<font>cast</font>
 						<textcolor>FFFFFFFF</textcolor>				
-						<label>$INFO[ListItem.Director]</label>
+						<label>$INFO[ListItem.firstDirector]</label>
 					</control>			
 				</control>
 				

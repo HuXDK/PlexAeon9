@@ -905,15 +905,16 @@
 						<include>ListLabel_WidthMusic_LowTV_Low</include>
 						<include>lowlistdetailcolornofocus</include>
 						<info>ListItem.Title</info>
-						<visible>!IsEmpty(ListItem.Title) + ![Container.Content(seasons) + IsEmpty(ListItem.Season)]</visible>
+						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
+<!--
 					<control type="label">
 						<include>ListLabel_WidthMusic_LowTV_Low</include>
 						<include>lowlistdetailcolornofocus</include>
 						<label>$LOCALIZE[310621]</label>
 						<visible>!IsEmpty(ListItem.Title) + [Container.Content(seasons) + IsEmpty(ListItem.Season)]</visible>
 					</control>
-
+-->
 					<control type="label">
 						<include>ListLabel_WidthMusic_LowTV_Low</include>
 						<include>lowlistdetailcolornofocus</include>
@@ -982,15 +983,16 @@
 						<include>ListLabel_WidthMusic_LowTV_Low</include>
 						<include>listcolorfocus</include>
 						<info>ListItem.Title</info>
-						<visible>!IsEmpty(ListItem.Title) + ![Container.Content(seasons) + IsEmpty(ListItem.Season)]</visible>
+						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
+<!--
 					<control type="label">
 						<include>ListLabel_WidthMusic_LowTV_Low</include>
 						<include>listcolorfocus</include>
 						<label>$LOCALIZE[310621]</label>
 						<visible>!IsEmpty(ListItem.Title) + [Container.Content(seasons) + IsEmpty(ListItem.Season)]</visible>
 					</control>
-
+-->
 					<control type="label">
 						<include>ListLabel_WidthMusic_LowTV_Low</include>
 						<include>listcolorfocus</include>
