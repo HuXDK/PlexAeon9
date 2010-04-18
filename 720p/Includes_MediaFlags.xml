@@ -31,7 +31,7 @@
 	</include>
 	<include name="Furniture_ListMediaFlagsVars">
 		<posy>115</posy>
-		<width>45</width>
+		<width>50</width>
 		<height>30</height>
 		<aspectratio>keep</aspectratio>
 	 	<colordiffuse>efffffff</colordiffuse>
@@ -400,17 +400,12 @@
 				<posx>60</posx>
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars</include>
-			<info>Listitem.Property(mediaTag::studio)</info>
+					<info>Listitem.Property(mediaTag::studio)</info>
 					<visible>!Skin.HasSetting(nostudio)</visible>
 				</control>
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars</include>
-			<info>Listitem.Property(mediaTag::tvStudio)</info>
-					<visible>!Skin.HasSetting(nostudio)</visible>
-				</control>
-				<control type="image" id="91">
-					<include>Furniture_PanelMediaFlagsVars</include>
-			<info>Listitem.Property(mediaTag::aspectRatio)</info>
+					<info>Listitem.Property(mediaTag::aspectRatio)</info>
 					<visible>Skin.HasSetting(nostudio)</visible>
 				</control>
 			</control>
@@ -418,25 +413,21 @@
 				<posx>1005</posx>
 				<control type="image" id="93">
 					<include>Furniture_PanelMediaFlagsVars</include>
-			<info>Listitem.Property(mediaTag::videoResolution)</info>
+					<info>Listitem.Property(mediaTag::videoResolution)</info>
 				</control>
 			</control>
 			<control type="group">
 				<posx>1115</posx>
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
-			<info>Listitem.Property(mediaTag::audioChannels)</info>
-				</control>
-				<control type="image">
-					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>$INFO[Listitem.Property(audioCodec)]</texture>
+					<info>Listitem.Property(mediaTag::audioChannels)</info>
 				</control>
 			</control>
 			<control type="group">
 				<posx>170</posx>
 				<control type="image" id="92">
 					<include>Furniture_PanelMediaFlagsVars</include>
-			<info>Listitem.Property(mediaTag::videoCodec)</info>
+					<info>Listitem.Property(mediaTag::videoCodec)</info>
 				</control>
 			</control>
 		</control>
@@ -648,36 +639,24 @@
 			<visible>Window.IsActive(24) + [Control.IsVisible(57) | Control.IsVisible(52)] + !Skin.HasSetting(nomediaflags) + Container.Content(episodes) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
 			<include>Animation_CommonFade</include>
 			<control type="group">
-				<posx>80</posx>
-				<control type="image" id="81">
-					<include>Furniture_EpisodeMediaFlagsVars</include>
-					<texture>$INFO[ListItem.Path,,tvstudio.png]</texture>
-					<visible>true</visible>
-				</control>
-			</control>
-			<control type="group">
 				<posx>190</posx>
 				<control type="image" id="92">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
-			<info>Listitem.Property(mediaTag::videoCodec)</info>
+					<info>Listitem.Property(mediaTag::videoCodec)</info>
 				</control>
 			</control>
 			<control type="group">
 				<posx>975</posx>
 				<control type="image" id="93">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
-			<info>Listitem.Property(mediaTag::videoResolution)</info>
+					<info>Listitem.Property(mediaTag::videoResolution)</info>
 				</control>
 			</control>
 			<control type="group">
 				<posx>1085</posx>
 				<control type="image">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
-			<info>Listitem.Property(mediaTag::audioChannels)</info>
-				</control>
-				<control type="image">
-					<include>Furniture_EpisodeMediaFlagsVars</include>
-					<texture>$INFO[Listitem.Property(audioCodec)]</texture>
+					<info>Listitem.Property(mediaTag::audioChannels)</info>
 				</control>
 			</control>
 		</control>
