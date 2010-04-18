@@ -194,7 +194,7 @@
 				<include>Animation_HideShowcase</include>
 				<include>Animation_HideMultiplex</include>
 				<visible>Control.IsVisible(50)</visible>
-				<info>Listitem.Property(mediaTag::movieStudio)</info>
+				<info>Listitem.Property(mediaTag::studio)</info>
 				<posx>1105</posx>
 			</control>
 -->
@@ -248,7 +248,7 @@
 				<posx>100</posx>
 				<control type="image">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::movieStudio)</info>
+					<info>Listitem.Property(mediaTag::studio)</info>
 					<visible>!Skin.HasSetting(nostudio)</visible>
 				</control>
 				<control type="image">
@@ -295,7 +295,7 @@
 				<posx>60</posx>
 			<control type="image" id="91">
 				<include>Furniture_PanelMediaFlagsVars</include>
-				<info>Listitem.Property(mediaTag::movieStudio)</info>
+				<info>Listitem.Property(mediaTag::studio)</info>
 				<visible>!Skin.HasSetting(nostudio)</visible>
 				<colordiffuse>6FFEF280</colordiffuse>
 \			</control>
@@ -346,7 +346,7 @@
 				<posx>700</posx>
 			<control type="image" id="91">
 				<include>Furniture_PanelMediaFlagsVars</include>
-				<info>Listitem.Property(mediaTag::movieStudio)</info>
+				<info>Listitem.Property(mediaTag::studio)</info>
 				<colordiffuse>6FFEF280</colordiffuse>
 				<visible>!Skin.HasSetting(nostudio)</visible>
 			</control>
@@ -400,7 +400,7 @@
 				<posx>60</posx>
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars</include>
-			<info>Listitem.Property(mediaTag::movieStudio)</info>
+			<info>Listitem.Property(mediaTag::studio)</info>
 					<visible>!Skin.HasSetting(nostudio)</visible>
 				</control>
 				<control type="image" id="91">
@@ -454,7 +454,7 @@
 				<posx>235</posx>
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars2</include>
-			<info>Listitem.Property(mediaTag::movieStudio)</info>
+			<info>Listitem.Property(mediaTag::studio)</info>
 					<visible>!Skin.HasSetting(nostudio)</visible>
 				</control>
 				<control type="image" id="91">
@@ -588,7 +588,7 @@
 				<control type="image">
 				<visible>!Skin.HasSetting(nostudio)</visible>
 				<include>Furniture_MediaFlagsVarsAnoobie3</include>
-				<info>Listitem.Property(mediaTag::movieStudio)</info>
+				<info>Listitem.Property(mediaTag::studio)</info>
 			</control>
 			<control type="image">
 				<include>Furniture_MediaFlagsVarsAnoobie3</include>
@@ -698,7 +698,7 @@
 			<aspectratio>keep</aspectratio>
 			<include>Animation_CommonFade</include>
 			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
-			<info>Listitem.Property(mediaTag::movieStudio)</info>
+			<info>Listitem.Property(mediaTag::studio)</info>
 			<visible>!Skin.HasSetting(nostudio)</visible>
 		</control>
 <!--
@@ -780,7 +780,7 @@
 				<posx>0</posx>
 				<control type="image" id="81">
 					<include>LowList_MovieFlagVars</include>
-					<info>Listitem.Property(mediaTag::movieStudio)</info>
+					<info>Listitem.Property(mediaTag::studio)</info>
 					<visible>!Skin.HasSetting(nostudio)</visible>
 				</control>
 				<control type="image" id="81">
