@@ -13,7 +13,6 @@
 	<include file="Includes_Settings_LabelsButtons.xml" />
 	<include file="Includes_Settings_Presets.xml" />
 	<include file="Includes_Settings_Welcome.xml" />
-	<include file="Includes_MediaFlags.xml" />
 	<include file="Includes_Submenu.xml" />
 	<include file="Viewtype_Showcase.xml" />
 	<include file="Viewtype_StripShow.xml" />
@@ -29,14 +28,10 @@
 	<include file="Includes_CDDVDMod.xml" />
 	<include file="Includes_NightMod.xml" />
 	<include file="Includes_WallMod.xml" />
-<!-- 	<include file="Includes_latest_added.xml" /> 
-	<include file="mod_moviegenre_list1.xml" /> -->
 	<include file="PlexIncludes.xml" />
 	<include file="Viewtype_ClearList.xml" />
 	<include file="Viewtype_Music_Multiplex.xml" />	
 	<include file="Includes_genre.xml" />	  
-	<include file="Includes_MediaMenu.xml" />
-	<include file="Viewtype_Anoobie3.xml" />
 	<include file="Viewtype_Coverflow.xml" />
 	<include file="Viewtype_Includes.xml" />
 

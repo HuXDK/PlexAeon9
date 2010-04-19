@@ -1,9 +1,2185 @@
-
-
-		<!-- ********  Anoobie3 ********-->
-
-
 <includes>
+
+			<!-- ********  Media Flags ********-->
+
+	<include name="Furniture_EpisodeMediaFlagsVars">
+		<posy>655</posy>
+		<width>70</width>
+		<height>39</height>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<include>Animation_HideMultiplex</include>
+		<visible>Control.IsVisible(57) | Control.IsVisible(52) | Control.IsVisible(553)</visible>
+		<include condition="Skin.HasSetting(Lightfloor)">ShowcaseMediaFlagLightShade</include>
+		<include condition="Skin.HasSetting(darkfloor) | Skin.HasSetting(clearfloor)">ShowcaseMediaFlagNightShade</include>
+	</include>
+<!--
+	<include name="ShowcaseMediaFlagLightShade">
+	 	<colordiffuse>efffffff</colordiffuse>
+	</include>
+	<include name="ShowcaseMediaFlagNightShade">
+	 	<colordiffuse>efffffff</colordiffuse>
+	</include>
+-->
+	<include name="Furniture_ShowcaseMediaFlagsVars">
+		<posy>677</posy>
+		<width>60</width>
+		<height>40</height>
+		<aspectratio>keep</aspectratio>
+ 		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<include>Animation_HideMultiplex</include>
+		<visible>Control.IsVisible(57) | Control.IsVisible(52) |  [Control.IsVisible(53) + Skin.HasSetting(newwall)]</visible>
+	 	<colordiffuse>efffffff</colordiffuse>
+	</include>
+	<include name="Furniture_ListMediaFlagsVars">
+		<posy>115</posy>
+		<width>50</width>
+		<height>30</height>
+		<aspectratio>keep</aspectratio>
+	 	<colordiffuse>efffffff</colordiffuse>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<include>Animation_HideMultiplex</include>
+		<visible>Control.IsVisible(50)</visible>
+	</include>
+	<include name="LowList_MovieFlagVars">
+		<posx>910</posx>
+		<posy>665</posy>
+		<width>50</width>
+		<height>29</height>
+		<include>Animation_CommonFade</include>
+		<aspectratio>keep</aspectratio>
+		<visible>Control.IsVisible(551) + ![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7898)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7850) + ![IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]]</visible>
+	</include>
+	<include name="Furniture_PanelMediaFlagsVars">
+		<posy>459</posy>
+		<width>70</width>
+		<height>39</height>
+		<aspectratio>keep</aspectratio>
+		<include>Animation_CommonFade</include>
+		<visible>Control.IsVisible(553) | Control.IsVisible(53) | Control.IsVisible(55)</visible>
+	</include>
+	<include name="Furniture_ShowcaseMediaFlagsBlack">
+		<posy>647</posy>
+		<width>110</width>
+		<height>72</height>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<include>Animation_HideMultiplex</include>
+		<include>Conditions_ShowcaseIsVisible</include>
+	</include>
+	<include name="Furniture_PanelMediaFlagsVars2">
+		<posy>640</posy>
+		<width>50</width>
+		<height>25</height>
+		<aligny>bottom</aligny>
+		<aspectratio>keep</aspectratio>
+		<colordiffuse>BFFFFFFF</colordiffuse>
+		<include>Animation_CommonFade</include>
+		<visible>Control.IsVisible(555)</visible>
+	</include>
+	<include name="Furniture_MovieInfoFlagSource">
+		<posx>4</posx>
+		<posy>585</posy>
+		<width>70</width>
+		<height>40</height>
+		<colordiffuse>FF7c7c7c</colordiffuse>
+	</include>
+	<include name="Furniture_MovieInfoFlagAspect">
+		<posx>110</posx>
+		<posy>585</posy>
+		<width>70</width>
+		<height>40</height>
+		<colordiffuse>FF7c7c7c</colordiffuse>
+	</include>
+	<include name="Furniture_MovieInfoFlagSoundCodec">
+		<posx>525</posx>
+		<posy>585</posy>
+		<width>70</width>
+		<height>40</height>
+		<aspectratio>keep</aspectratio>
+		<colordiffuse>FF7c7c7c</colordiffuse>
+	</include>
+
+	<include name="Furniture_MovieInfoFlagSound">
+		<posx>425</posx>
+		<posy>585</posy>
+		<width>70</width>
+		<height>40</height>
+		<aspectratio>keep</aspectratio>
+		<colordiffuse>FF7c7c7c</colordiffuse>
+	</include>
+	<include name="Furniture_MovieInfoFrame">
+		<posx>325</posx>
+		<posy>585</posy>
+		<width>70</width>
+		<height>40</height>
+		<aspectratio>keep</aspectratio>
+		<colordiffuse>FF7c7c7c</colordiffuse>
+	</include>
+	<include name="Furniture_MovieInfoFlagSubs">
+		<posx>263</posx>
+		<posy>585</posy>
+		<width>70</width>
+		<height>40</height>
+		<colordiffuse>FF7c7c7c</colordiffuse>
+	</include>
+	<include name="Furniture_MovieInfoFlagRes">
+		<posx>210</posx>
+		<posy>585</posy>
+		<width>70</width>
+		<height>40</height>
+		<aspectratio>keep</aspectratio>
+		<colordiffuse>FF7c7c7c</colordiffuse>
+	</include>
+	<include name="Furniture_MovieInfoMediaFlags">
+		<control type="image" id="91">
+			<include>Furniture_MovieInfoFlagSource</include>
+			<info>Listitem.Property(mediaTag::videoCodec)</info>
+		</control>
+
+		<control type="image">
+			<include>Furniture_MovieInfoFlagSoundCodec</include>
+			<info>Listitem.Property(mediaTag::audioCodec)</info>
+		</control>
+		<control type="image">
+			<include>Furniture_MovieInfoFlagAspect</include>
+			<info>Listitem.Property(mediaTag::aspectRatio)</info>
+		</control>
+		<control type="image">
+			<include>Furniture_MovieInfoFrame</include>
+			<info>Listitem.Property(mediaTag::videoFrameRate)</info>
+		</control>
+		<control type="image" id="92">
+			<include>Furniture_MovieInfoFlagSound</include>
+			<info>Listitem.Property(mediaTag::audioChannels)</info>
+		</control>
+		<control type="image" id="94">
+			<include>Furniture_MovieInfoFlagRes</include>
+			<info>Listitem.Property(mediaTag::videoResolution)</info>
+		</control>
+	</include>
+	<include name="Furniture_FlagUpright">
+		<posy>581</posy>
+		<width>1</width>
+		<height>47</height>
+		<texture>info/info_flagupright.png</texture>
+		<animation effect="fade" start="70" end="70" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>
+	</include>
+
+	<include name="Furniture_ListMediaFlags">
+		<control type="group">		
+		
+		<include>Animation_CommonFade</include>
+<!--
+			<control type="image">
+				<posy>577</posy> 
+				<width>40</width>
+				<height>20</height>
+				<aspectratio>keep</aspectratio>
+			 	<colordiffuse>efffffff</colordiffuse>
+				<include>Animation_CommonFade</include>
+				<include>Animation_HideShowcase</include>
+				<include>Animation_HideMultiplex</include>
+				<visible>Control.IsVisible(50)</visible>
+				<info>Listitem.Property(mediaTag::contentRating)</info>
+				<posx>1105</posx>
+			</control>
+
+			<control type="image">
+				<posy>90</posy>
+				<width>140</width>
+				<height>50</height>
+				<aspectratio>keep</aspectratio>
+			 	<colordiffuse>efffffff</colordiffuse>
+				<include>Animation_CommonFade</include>
+				<include>Animation_HideShowcase</include>
+				<include>Animation_HideMultiplex</include>
+				<visible>Control.IsVisible(50)</visible>
+				<info>Listitem.Property(mediaTag::studio)</info>
+				<posx>1105</posx>
+			</control>
+-->
+			<control type="group">
+			<posx>40</posx>
+				<control type="image">
+					<include>Furniture_ListMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::videoResolution)</info>
+				</control>	
+
+				<control type="image">
+					<include>Furniture_ListMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::videoCodec)</info>
+					<posx>60</posx>
+				</control>
+
+				<control type="image">
+					<include>Furniture_ListMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::audioCodec)</info>
+					<posx>120</posx>
+				</control>
+
+				<control type="image">
+					<include>Furniture_ListMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::audioChannels)</info>
+					<posx>180</posx>
+				</control>
+
+				<control type="image">
+				<width>40</width>
+				<height>20</height>
+			 	<colordiffuse>efffffff</colordiffuse>
+				<include>Animation_CommonFade</include>
+				<include>Animation_HideShowcase</include>
+				<include>Animation_HideMultiplex</include>
+				<visible>Control.IsVisible(50)</visible>
+				<info>Listitem.Property(mediaTag::contentRating)</info>
+				<posx>240</posx>
+				<posy>120</posy>
+				</control>
+
+			</control>
+		</control>
+
+	</include>
+	<include name="Furniture_ShowcaseMediaFlags">
+		<control type="group">
+			<visible>[Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(553) | Control.IsVisible(57)] + !Skin.HasSetting(nomediaflags) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
+			<include>Animation_CommonFade</include>
+			<control type="group">
+				<posx>100</posx>
+				<control type="image">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::studio)</info>
+					<visible>!Skin.HasSetting(nostudio)</visible>
+				</control>
+				<control type="image">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::aspectRatio)</info>
+					<visible>Skin.HasSetting(nostudio)</visible>
+				</control>
+			</control>
+
+				<control type="image">
+					<posx>1015</posx>
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::videoResolution)</info>
+				</control>
+
+			<control type="group">
+				<posx>1110</posx>
+				<control type="image">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::audioChannels)</info>
+				</control>
+				<control type="image">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>$INFO[Listitem.Property(audioCodec)]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>190</posx>
+				<control type="image" id="82">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::videoCodec)</info>
+					<visible>true</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="Furniture_MultiplexMediaFlags">  <!-- Old Multiplex -->
+		<control type="group">
+			<visible>Window.IsActive(24) + [Control.IsVisible(52) | Control.IsVisible(553)] + !Skin.HasSetting(nomediaflags) + [Container.Content(movies)]</visible>
+			<include>Animation_CommonFade</include>
+			<include>Animation_HideMultiplex</include>
+			<control type="group">
+				<posx>60</posx>
+			<control type="image" id="91">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<info>Listitem.Property(mediaTag::studio)</info>
+				<visible>!Skin.HasSetting(nostudio)</visible>
+				<colordiffuse>6FFEF280</colordiffuse>
+\			</control>
+			<control type="image" id="91">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<info>Listitem.Property(mediaTag::tvStudio)</info>
+				<visible>!Skin.HasSetting(nostudio)</visible>
+				<colordiffuse>6FFEF280</colordiffuse>
+			</control>
+			<control type="image" id="91">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<info>Listitem.Property(mediaTag::aspectRatio)</info>
+				<visible>Skin.HasSetting(nostudio)</visible>
+				<colordiffuse>6FFEF280</colordiffuse>
+			</control>
+			</control>
+			<control type="group">
+				<posx>1030</posx>
+			<control type="image" id="93">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<colordiffuse>6FFEF280</colordiffuse>
+			</control>
+			</control>
+			<control type="group">
+				<posx>1140</posx>
+			<control type="image">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<info>Listitem.Property(mediaTag::audioChannels)</info>
+				<colordiffuse>6FFEF280</colordiffuse>
+			</control>
+			</control>
+			<control type="group">
+				<posx>170</posx>
+			<control type="image" id="92">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<info>Listitem.Property(mediaTag::videoCodec)</info>
+				<colordiffuse>6FFEF280</colordiffuse>
+			</control>
+			</control>
+		</control>
+<!--
+		<control type="group">
+			<visible>Window.IsActive(24) + [Control.IsVisible(52) | Control.IsVisible(553)] + !Skin.HasSetting(nomediaflags) + [Container.Content(episodes)]</visible>
+			<include>Animation_CommonFade</include>
+			<include>Animation_HideMultiplex</include>
+			<control type="group">
+				<posx>700</posx>
+			<control type="image" id="91">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<info>Listitem.Property(mediaTag::studio)</info>
+				<colordiffuse>6FFEF280</colordiffuse>
+				<visible>!Skin.HasSetting(nostudio)</visible>
+			</control>
+			<control type="image" id="91">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<info>Listitem.Property(mediaTag::tvStudio)</info>
+				<colordiffuse>6FFEF280</colordiffuse>
+				<visible>!Skin.HasSetting(nostudio)</visible>
+			</control>
+			<control type="image" id="91">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<info>Listitem.Property(mediaTag::aspectRatio)</info>
+				<colordiffuse>6FFEF280</colordiffuse>
+				<visible>Skin.HasSetting(nostudio)</visible>
+			</control>
+			</control>
+			<control type="group">
+				<posx>1005</posx>
+			<control type="image" id="93">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<colordiffuse>6FFEF280</colordiffuse>
+				<info>Listitem.Property(mediaTag::videoResolution)</info>
+			</control>
+			</control>
+			<control type="group">
+				<posx>1115</posx>
+			<control type="image">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<colordiffuse>6FFEF280</colordiffuse>
+				<info>Listitem.Property(mediaTag::audioChannels)</info>
+			</control>
+			</control>
+			<control type="group">
+				<posx>790</posx>
+			<control type="image" id="92">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<colordiffuse>6FFEF280</colordiffuse>
+				<info>Listitem.Property(mediaTag::videoCodec)</info>
+			</control>
+			</control>
+		</control>
+		-->
+	</include>
+	<include name="Furniture_CoverflowMediaFlags">  <!-- CoverFlow Media Flags -->
+		<control type="group">
+			<posy>100</posy>
+			<visible>Control.IsVisible(55) + !Skin.HasSetting(nomediaflags)</visible>
+			<include>Animation_CommonFade</include>
+			<include>Animation_HideMultiplex</include>
+			<control type="group">
+				<posx>60</posx>
+				<control type="image" id="91">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::studio)</info>
+					<visible>!Skin.HasSetting(nostudio)</visible>
+				</control>
+				<control type="image" id="91">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::aspectRatio)</info>
+					<visible>Skin.HasSetting(nostudio)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<posx>1005</posx>
+				<control type="image" id="93">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::videoResolution)</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>1115</posx>
+				<control type="image">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::audioChannels)</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>170</posx>
+				<control type="image" id="92">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::videoCodec)</info>
+				</control>
+			</control>
+		</control>
+	</include>
+
+		<include name="Furniture_Anoobie2MediaFlags">
+		<control type="group">
+			<visible>Window.IsActive(24) + Control.IsVisible(555) + !Skin.HasSetting(nomediaflags) + Container.Content(movies)</visible>
+			<include>Animation_CommonFade</include>
+			<include>Animation_HideMultiplex</include>
+			<control type="group">
+				<visible>!Container(555).OnNext + !Container(555).OnPrevious</visible>
+				<animation effect="fade" delay="3000" start="0" end="100" time="2500" >Visible</animation>
+				<animation effect="fade" delay="3000" start="0" end="100" time="2500" >WindowOpen</animation>
+				<posx>235</posx>
+				<control type="image" id="91">
+					<include>Furniture_PanelMediaFlagsVars2</include>
+			<info>Listitem.Property(mediaTag::studio)</info>
+					<visible>!Skin.HasSetting(nostudio)</visible>
+				</control>
+				<control type="image" id="91">
+					<include>Furniture_PanelMediaFlagsVars2</include>
+			<info>Listitem.Property(mediaTag::aspectRatio)</info>
+					<visible>Skin.HasSetting(nostudio)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<visible>!Container(555).OnNext + !Container(555).OnPrevious</visible>
+				<animation effect="fade" delay="3000" start="0" end="100" time="2500" >Visible</animation>
+				<animation effect="fade" delay="3000" start="0" end="100" time="2500" >WindowOpen</animation>
+				<posx>300</posx>
+				<control type="image" id="91">
+					<include>Furniture_PanelMediaFlagsVars2</include>
+			<info>Listitem.Property(mediaTag::videoCodec)</info>
+				</control>
+			</control>
+			<control type="group">
+			<visible>!Container(555).OnNext + !Container(555).OnPrevious</visible>
+					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >Visible</animation>
+					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >WindowOpen</animation>
+				<posx>370</posx>
+				<control type="image" id="93">
+					<include>Furniture_PanelMediaFlagsVars2</include>
+			<info>Listitem.Property(mediaTag::videoResolution)</info>
+				</control>
+			</control>
+<!--
+			<control type="group">
+			<visible>!Container(555).OnNext + !Container(555).OnPrevious</visible>
+					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >Visible</animation>
+					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >WindowOpen</animation>
+				<posx>485</posx>
+				<control type="image">
+					<include>Furniture_PanelMediaFlagsVars2</include>
+					<texture>$INFO[Listitem.Property(audioCodec)]</texture>
+					<visible>true</visible>
+				</control>
+			</control>
+-->
+			<control type="group">
+				<visible>!Container(555).OnNext + !Container(555).OnPrevious</visible>
+					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >Visible</animation>
+					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >WindowOpen</animation>
+				<posx>440</posx>
+				<control type="image">
+					<include>Furniture_PanelMediaFlagsVars2</include>
+			<info>Listitem.Property(mediaTag::audioChannels)</info>
+					<visible>true</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!Container(555).OnNext + !Container(555).OnPrevious</visible>
+					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >Visible</animation>
+					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >WindowOpen</animation>
+			<control type="image">
+				<posx>650</posx>
+				<include>Furniture_PanelMediaFlagsVars2</include>
+				<info>Listitem.Property(mediaTag::contentRating)</info>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>!Container(555).OnNext + !Container(555).OnPrevious</visible>
+				<animation effect="fade" delay="3000" start="0" end="100" time="2500" >Visible</animation>
+				<animation effect="fade" delay="3000" start="0" end="100" time="2500" >WindowOpen</animation>
+				<control type="image">
+					<posx>720</posx>
+					<posy>634</posy>
+					<width>130</width>
+					<height>30</height>
+					<align>center</align>
+					<include>Animation_CommonFade</include>
+					<visible>Control.IsVisible(555) + !Skin.HasSetting(movieratingtext)</visible>
+					<texture>$INFO[ListItem.StarRating]</texture>
+				    <colordiffuse>FFFFFF00</colordiffuse>
+				</control>
+				<control type="label">
+					<description>IMDB rating</description>
+					<posx>775</posx>
+					<posy>640</posy>
+					<font>cast</font>
+					<align>left</align>
+					<label>IMDB: $INFO[Container(555).ListItem.Rating]</label>
+					<textcolor>FFFFFFFF</textcolor>
+					<include>Animation_CommonFade</include>
+					<visible>Control.IsVisible(555) + Skin.HasSetting(movieratingtext)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+			<visible>!Container(555).OnNext + !Container(555).OnPrevious</visible>
+					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >Visible</animation>
+					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >WindowOpen</animation>
+				<posx>210</posx>	
+						<!-- UK Certification -->
+
+				<!-- US Certification -->
+
+				<!-- Germany Certification -->
+				<control type="group">
+					<posy>-5</posy>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="Furniture_Anoobie3MediaFlags">
+		<control type="group">
+			<visible>Window.IsActive(24) + Control.IsVisible(563) + !Skin.HasSetting(nomediaflags) + Container.Content(movies)</visible>
+			<include>Animation_CommonFade</include>
+			<include>Animation_HideMultiplex</include>
+			<control type="group">
+				<posx>90</posx>
+				<control type="image" id="91">
+				<include>Furniture_MediaFlagsVarsAnoobie3</include>
+				<info>Listitem.Property(mediaTag::audioCodec)</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>175</posx>
+				<control type="image" id="93">
+				<include>Furniture_MediaFlagsVarsAnoobie3</include>
+				<info>Listitem.Property(mediaTag::audioChannels)</info>
+			</control>
+			</control>
+			<control type="group">
+				<posx>10</posx>
+				<posy>40</posy>
+				<control type="image">
+				<visible>!Skin.HasSetting(nostudio)</visible>
+				<include>Furniture_MediaFlagsVarsAnoobie3</include>
+				<info>Listitem.Property(mediaTag::studio)</info>
+			</control>
+			<control type="image">
+				<include>Furniture_MediaFlagsVarsAnoobie3</include>
+				<info>Listitem.Property(mediaTag::aspectRatio)</info>
+				<visible>Skin.HasSetting(nostudio)</visible>
+			</control>
+			<control type="image">
+				<posx>85</posx>
+				<include>Furniture_MediaFlagsVarsAnoobie3</include>
+				<info>Listitem.Property(mediaTag::videoResolution)</info>
+			</control>
+			<control type="image">
+				<posx>170</posx>
+				<include>Furniture_MediaFlagsVarsAnoobie3</include>
+				<info>Listitem.Property(mediaTag::videoFrameRate)</info>
+			</control>
+			<control type="image">
+				<posx>190</posx>
+				<posy>-10</posy>
+				<include>Furniture_MediaFlagsVarsAnoobie3</include>
+				<info>Listitem.Property(mediaTag::contentRating)</info>
+			</control>
+			</control>
+			<control type="group">
+				<posx>10</posx>
+				<control type="image" id="92">
+				<include>Furniture_MediaFlagsVarsAnoobie3</include>
+				<info>Listitem.Property(mediaTag::videoCodec)</info>
+			</control>
+			</control>
+	</control>
+</include>
+	<include name="Furniture_EpisodeMediaFlags">
+		<control type="group">
+			<visible>Window.IsActive(24) + [Control.IsVisible(57) | Control.IsVisible(52)] + !Skin.HasSetting(nomediaflags) + Container.Content(movies) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
+			<include>Animation_CommonFade</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>569</posy>
+				<width>298</width>
+				<height>151</height>
+				<texture>showcase/flagshade.png</texture>
+				<include>Animation_HideShowcase</include>
+				<visible>Skin.HasSetting(Lightfloor)</visible>
+			</control>
+			<control type="image">
+				<posx>982</posx>
+				<posy>569</posy>
+				<width>298</width>
+				<height>151</height>
+				<texture flipx="true">showcase/flagshade.png</texture>
+				<include>Animation_HideShowcase</include>
+				<visible>Skin.HasSetting(Lightfloor)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Window.IsActive(24) + [Control.IsVisible(57) | Control.IsVisible(52)] + !Skin.HasSetting(nomediaflags) + Container.Content(episodes) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
+			<include>Animation_CommonFade</include>
+			<control type="group">
+				<posx>190</posx>
+				<control type="image" id="92">
+					<include>Furniture_EpisodeMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::videoCodec)</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>975</posx>
+				<control type="image" id="93">
+					<include>Furniture_EpisodeMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::videoResolution)</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>1085</posx>
+				<control type="image">
+					<include>Furniture_EpisodeMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::audioChannels)</info>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="Furniture_WallMediaFlagsVars">
+		<visible>Window.IsActive(24) + Control.IsVisible(53) + !Skin.HasSetting(nomediaflags) + [Container.Content(movies) | Container.Content(episodes)]</visible>
+		<include>Animation_CommonFade</include>
+		<include>Animation_WindowFade200</include>
+		<animation effect="slide" start="0,12" end="0,12" time="0" condition="Skin.HasSetting(smallmoviewall) + [Window.IsActive(1) | Window.IsActive(24)] + !Container.Content(episodes)">Conditional</animation>
+		<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+		<posy>193</posy>
+		<control type="group">
+			<posx>85</posx>
+		<control type="image" id="91">
+			<posy>440</posy>
+			<width>50</width>
+			<height>39</height>
+			<aspectratio>keep</aspectratio>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
+			<info>Listitem.Property(mediaTag::studio)</info>
+			<visible>!Skin.HasSetting(nostudio)</visible>
+		</control>
+<!--
+			<control type="image" id="91">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<texture>$INFO[ListItem.Path,,tvstudio.png]</texture>
+				<visible>!Skin.HasSetting(nostudio)</visible>
+			</control>
+-->
+		<control type="image" id="91">
+			<posy>440</posy>
+			<width>50</width>
+			<height>39</height>
+			<aspectratio>keep</aspectratio>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
+			<info>Listitem.Property(mediaTag::aspectRatio)</info>
+			<visible>Skin.HasSetting(nostudio)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<posx>230</posx>
+		<control type="image" id="93">
+			<posy>440</posy>
+			<width>50</width>
+			<height>39</height>
+			<aspectratio>keep</aspectratio>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
+			<info>Listitem.Property(mediaTag::videoResolution)</info>
+			</control>
+		</control>
+		<control type="group">
+			<posx>305</posx>
+		<control type="image">
+			<posy>440</posy>
+			<width>50</width>
+			<height>39</height>
+			<aspectratio>keep</aspectratio>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
+			<info>Listitem.Property(mediaTag::audioChannels)</info>
+		</control>
+		</control>
+		<control type="group">
+			<posx>155</posx>
+		<control type="image" id="92">
+			<posy>440</posy>
+			<width>50</width>
+			<height>39</height>
+			<aspectratio>keep</aspectratio>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
+			<info>Listitem.Property(mediaTag::videoCodec)</info>
+			</control>
+		</control>
+	</include>
+	<include name="Furniture_WallMediaFlags">
+		<control type="group">
+			<include>Furniture_WallMediaFlagsVars</include>
+			<visible>[!Skin.HasSetting(smallmoviewall) + [Container(53).Column(0) | Container(53).Column(1) | Container(53).Column(2) | Container(53).Column(3)]] | [Skin.HasSetting(smallmoviewall) + [Container(53).Column(0) | Container(53).Column(1) | Container(53).Column(2) | Container(53).Column(3) | Container(53).Column(4)]]</visible>
+		</control>
+		<control type="group">
+			<posx>830</posx>
+			<include>Furniture_WallMediaFlagsVars</include>
+			<visible>[!Skin.HasSetting(smallmoviewall) + [Container(53).Column(4) | Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8)]] | [Skin.HasSetting(smallmoviewall) + [Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8) | Container(53).Column(9) | Container(53).Column(10)]] </visible>
+		</control>
+	</include>
+	<!-- LOW LIST FLAGS -->
+
+	<include name="LowList_MediaFlags">
+		<control type="group">
+			<visible>!Skin.HasSetting(nomediaflags) + Control.IsVisible(551)</visible>
+			<animation effect="fade" start="0" end="100" time="250">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>Animation_HideMultiplex</include>
+			<!-- Studio flag -->
+			<control type="group">
+				<posx>0</posx>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<info>Listitem.Property(mediaTag::studio)</info>
+					<visible>!Skin.HasSetting(nostudio)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<info>Listitem.Property(mediaTag::aspectRatio)</info>
+					<visible>Skin.HasSetting(nostudio)</visible>
+				</control>
+			</control>
+
+			<!-- Video Resolution flag -->
+			<control type="group">
+				<posx>180</posx>
+				<control type="image" id="83">
+					<include>LowList_MovieFlagVars</include>
+					<info>Listitem.Property(mediaTag::videoResolution)</info>
+				</control>
+			</control>
+
+			<!-- Audio Codec flag -->
+			<control type="group">
+				<posx>270</posx>
+				<control type="image">
+					<include>LowList_MovieFlagVars</include>
+					<info>Listitem.Property(mediaTag::audioChannels)</info>
+				</control>
+			</control>
+
+			<!-- Source flag -->
+			<control type="group">
+				<posx>90</posx>
+				<control type="image" id="82">
+					<include>LowList_MovieFlagVars</include>
+					<info>Listitem.Property(mediaTag::videoCodec)</info>
+				</control>
+			</control>
+		</control>
+
+	</include>
+
+			<!-- ********  End Media Flags ********-->
+
+
+
+			<!-- ********  Media Menu ********-->
+
+
+	<!--############################################ Animations #################################################-->
+	<!--#########################################################################################################-->
+	<include name="Animation_MediaMenuSlideVertical">
+		<animation type="Conditional" condition="!ControlGroup(7000).HasFocus()">
+			<effect type="slide" end="-215,0" time="400" easing="in" tween="cubic" />
+			<effect type="fade" start="100" end="0" time="400" />
+		</animation>
+	</include>
+	<!--################################### Button Look and Dimensions ##########################################-->
+	<!--#########################################################################################################-->
+	<include name="Horizontal_MediaMenuButtonVars">
+		<height>34</height>
+		<width>200</width>
+		<textcolor>FF939597</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<disabledcolor>3cFFFFFF</disabledcolor>
+		<textoffsetx>20</textoffsetx>
+		<align>left</align>
+		<texturefocus>windows/mediamenu.png</texturefocus>
+		<texturenofocus>verticalmenu/button.png</texturenofocus>
+		<alttexturenofocus>windows/menudivider.png</alttexturenofocus>
+		<alttexturefocus>verticalmenu/button_focushoriz.png</alttexturefocus>
+		<radiowidth>67</radiowidth>
+		<radioposx>130</radioposx>
+		<radioheight>45</radioheight>
+		<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+		<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+		<align>left</align>
+		<aligny>center</aligny>
+
+	</include>
+	<include name="Vertical_MediaMenuButtonVars">
+		<height>30</height>
+		<width>235</width>
+		<textcolor>FF939597</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<textoffsetx>10</textoffsetx>
+		<texturefocus>windows/mediamenu.png</texturefocus>
+		<texturenofocus>verticalmenu/button.png</texturenofocus>
+		<alttexturefocus>dialogs/setcontent_button_focus.png</alttexturefocus>
+		<alttexturenofocus>verticalmenu/button.png</alttexturenofocus>
+		<radiowidth>72</radiowidth>
+		<radioposx>156</radioposx>
+		<radioheight>50</radioheight>
+		<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+		<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+		<align>left</align>
+		<aligny>center</aligny>
+	</include>
+	<!-- Common Button -->
+	<include name="MediaMenuButton">
+		<include condition="Skin.HasSetting(novertikalmenu)">Horizontal_MediaMenuButtonVars</include>
+		<include condition="!Skin.HasSetting(novertikalmenu)">Vertical_MediaMenuButtonVars</include>
+		<pulseonselect>false</pulseonselect>
+		<font>Font_MediaWindowTitleMenu</font>
+		<include>Animation_CommonFade</include>
+	</include>
+	<include name="VerticalMenu_ButtonSecondColumn">
+		<height>35</height>
+		<width>170</width>
+		<pulseonselect>false</pulseonselect>
+		<textcolor>FF939597</textcolor>
+		<focusedcolor>d0000000</focusedcolor>
+		<textoffsetx>0</textoffsetx>
+		<texturefocus>verticalmenu/button_focus.png</texturefocus>
+		<texturenofocus>verticalmenu/button.png</texturenofocus>
+		<align>center</align>
+		<font>Font_MediaWindowTitle</font>
+	</include>
+	<include name="Vertical_MediaLogo">
+		<posx>10</posx>
+		<posy>15</posy>
+		<include>Animation_MediaMenuSlideVertical</include>
+	</include>
+	<include name="Horizontal_MediaLogo">
+		<posx>49</posx>
+		<posy>13</posy>
+		<include>Animation_MediaMenuSlide</include>
+	</include>
+	<include name="MediaMenuLogo">
+		<include condition="Skin.HasSetting(novertikalmenu)">Horizontal_MediaLogo</include>
+		<include condition="!Skin.HasSetting(novertikalmenu)">Vertical_MediaLogo</include>
+		<width>44</width>
+		<height>30</height>
+		<include>common-fade-quick</include>
+	</include>
+	<include name="Vertical_MediaMenuLabelVars">
+		<posx>70</posx>
+		<posy>18</posy>
+		<height>25</height>
+		<include>Animation_MediaMenuSlideVertical</include>
+	</include>
+	<include name="Horizontal_MediaMenuLabelVars">
+		<posx>111</posx>
+		<posy>14</posy>
+		<height>25</height>
+		<visible allowhiddenfocus="true">!Control.HasFocus(88)</visible>
+		<include>Animation_MediaMenuSlide</include>
+	</include>
+	<include name="MediaMenuLabel">
+		<include condition="Skin.HasSetting(novertikalmenu)">Horizontal_MediaMenuLabelVars</include>
+		<include condition="!Skin.HasSetting(novertikalmenu)">Vertical_MediaMenuLabelVars</include>
+		<font>Font_MediaWindowTitle</font>
+		<textcolor>d0FFFFFF</textcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>common-fade-quick</include>
+	</include>
+	<include name="Vertical_GroupTitle">
+		<height>22</height>
+		<width>195</width>
+		<font>Font_ListDetailTV</font>
+		<textcolor>d0FFFFFF</textcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+	<include name="Vertical_MediaMenuGroup">
+		<posx>0</posx>
+		<posy>60</posy>
+		<width>235</width>
+		<height>600</height>
+		<itemgap>0</itemgap>
+		<orientation>vertical</orientation>
+		<scroll>false</scroll>
+		<onleft>50</onleft>
+		<onright>50</onright>
+		<onup>7000</onup>
+		<ondown>7000</ondown>
+		<include>Animation_CommonFade</include>
+		<include>Animation_MediaMenuSlideVertical</include>
+		<visible>!Skin.HasSetting(kiosk)</visible>
+	</include>
+	<include name="Horizontal_MediaMenuGroup">
+		<posx>230</posx>
+		<posy>9</posy>
+		<width>990</width>
+		<height>34</height>
+		<itemgap>0</itemgap>
+		<orientation>horizontal</orientation>
+		<scroll>false</scroll>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<onleft>7000</onleft>
+		<onright>7000</onright>
+		<include>Animation_CommonFade</include>
+		<include>Animation_MediaMenuSlide</include>
+		<visible>!Skin.HasSetting(kiosk)</visible>
+		<animation effect="fade" start="100" end="50" time="200" condition="!ControlGroup(7000).HasFocus() + !Skin.HasSetting(fademenus)">Conditional</animation>
+	</include>
+	<!--############################################ Buttons ####################################################-->
+	<!--#########################################################################################################-->
+
+<!--
+	<include name="MediaMenuButton_Viewmode"> 
+		<control type="button" id="102">
+			<onclick>Container.NextViewMode</onclick>
+			<label>[B]$LOCALIZE[31050] $INFO[Container.ViewMode][/B]</label>
+			<height>30</height>
+			<width>235</width>
+			<textcolor>60FFFFFF</textcolor>
+			<focusedcolor>d0ffffff</focusedcolor>
+			<textoffsetx>10</textoffsetx>
+			<include>MediaMenuButton</include>
+			<radiowidth>72</radiowidth>
+			<radioposx>146</radioposx>
+			<radioheight>50</radioheight>
+			<align>center</align>
+			<aligny>center</aligny>
+			<pulseonselect>false</pulseonselect>
+			<font>Font_MediaWindowTitleMenu</font>
+			<include>Animation_CommonFade</include>
+			<textureleft>multiplex/multiplex_arrow2.png</textureleft>
+			<textureright>multiplex/multiplex_arrow.png</textureright>
+			<textureleftfocus>multiplex/multiplex_arrowfocus2.png</textureleftfocus>
+			<texturerightfocus>multiplex/multiplex_arrowfocus.png</texturerightfocus>
+		</control>
+	</include>
+
+-->
+	<include name="MediaMenuButton_Viewmode"> 
+		<control type="button" id="102">
+			<onclick>Container.NextViewMode</onclick>
+			<label>[B]$LOCALIZE[31050] $INFO[Container.ViewMode][/B]</label>
+			<height>30</height>
+			<width>235</width>
+			<textcolor>FF939597</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<textoffsetx>10</textoffsetx>
+			<include>MediaMenuButton</include>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Font_MediaWindowTitleMenu</font>
+			<include>Animation_CommonFade</include>
+		</control>
+	</include>
+
+	<include name="MediaMenuButton_FlattenFlow">
+		<control type="togglebutton" id="700001">
+			<label>31061</label>
+			<altlabel>31060</altlabel>
+			<usealttexture>Skin.HasSetting(flattenshowcase)</usealttexture>
+			<include>MediaMenuButton</include>
+			<onclick>Skin.ToggleSetting(flattenshowcase)</onclick>
+			<visible>Control.IsVisible(57) + !Container.Content(episodes)</visible>
+		</control>
+		<control type="togglebutton" id="700002">
+			<label>31061</label>
+			<altlabel>31060</altlabel>
+			<usealttexture>Skin.HasSetting(flattenflow)</usealttexture>
+			<include>MediaMenuButton</include>
+			<onclick>Skin.ToggleSetting(flattenflow)</onclick>
+			<visible>Control.IsVisible(55) + !Container.Content(episodes)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_Sort">
+		<control type="button" id="3">
+			<label>103</label>
+			<include>MediaMenuButton</include>
+			<visible>Container.Content(movies)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_MultiplexInfo">
+		<control type="button" id="700003">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(multiplexinfoauto)</onclick>
+			<onclick>Skin.Reset(multiplexinfooff)</onclick>
+			<onclick>SetFocus(50)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplexinfooff)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700004">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(multiplexinfotrigger)</onclick>
+			<onclick>Skin.Reset(multiplexinfoauto)</onclick>
+			<onclick>SetFocus(50)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + ![Skin.HasSetting(multiplexinfotrigger) | Skin.HasSetting(multiplexinfooff) | Skin.HasSetting(multiplexinfoon)]</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700005">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<onclick>Skin.SetBool(multiplexinfoon)</onclick>
+			<onclick>Skin.Reset(multiplexinfotrigger)</onclick>
+			<onclick>SetFocus(50)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplexinfotrigger)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700006">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(multiplexinfooff)</onclick>
+			<onclick>Skin.Reset(multiplexinfoon)</onclick>
+			<onclick>SetFocus(50)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplexinfoon)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700007">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(multiplextvinfoauto)</onclick>
+			<onclick>Skin.Reset(multiplextvinfooff)</onclick>
+			<onclick>SetFocus(50)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplextvinfooff)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700008">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(multiplextvinfotrigger)</onclick>
+			<onclick>Skin.Reset(multiplextvinfoauto)</onclick>
+			<onclick>SetFocus(50)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + ![Skin.HasSetting(multiplextvinfotrigger) | Skin.HasSetting(multiplextvinfooff) | Skin.HasSetting(multiplextvinfoon)]</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700009">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<onclick>Skin.SetBool(multiplextvinfoon)</onclick>
+			<onclick>Skin.Reset(multiplextvinfotrigger)</onclick>
+			<onclick>SetFocus(50)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplextvinfotrigger)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700010">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(multiplextvinfooff)</onclick>
+			<onclick>Skin.Reset(multiplextvinfoon)</onclick>
+			<onclick>SetFocus(50)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplextvinfoon)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_WallInfo">
+		<control type="button" id="700011">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(wallinfoon)</onclick>
+			<onclick>Skin.Reset(walleinfoauto)</onclick>
+			<onclick>SetFocus(53)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(53) + ![Skin.HasSetting(wallinfoon) | Skin.HasSetting(wallinfooff)]</visible>
+		</control>
+		<control type="button" id="700012">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(wallinfooff)</onclick>
+			<onclick>Skin.Reset(wallinfoon)</onclick>
+			<onclick>SetFocus(53)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(53) + Skin.HasSetting(wallinfoon)</visible>
+		</control>
+		<control type="button" id="700013">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(wallinfoauto)</onclick>
+			<onclick>Skin.Reset(wallinfooff)</onclick>
+			<onclick>SetFocus(53)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(53) + Skin.HasSetting(wallinfooff)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_MultiplexStyle">
+		<control type="button" id="700014">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31046]</label>
+			<onclick>Skin.SetBool(multiplexbigthumb)</onclick>
+			<onclick>Skin.Reset(multiplexplot)</onclick>
+			<onclick>SetFocus(52)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + ![Skin.HasSetting(multiplexbigthumb) | Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplextrailer) | Skin.HasSetting(multiplexbigtrailer) | Skin.HasSetting(multiplexposter)]</visible>
+		</control>
+		<control type="button" id="700015">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31045]</label>
+			<onclick>Skin.SetBool(multiplexfanart)</onclick>
+			<onclick>Skin.Reset(multiplexbigthumb)</onclick>
+			<onclick>SetFocus(52)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexbigthumb)</visible>
+		</control>
+		<control type="button" id="700016">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31044]</label>
+			<onclick>Skin.SetBool(multiplextrailer)</onclick>
+			<onclick>Skin.Reset(multiplexfanart)</onclick>
+			<onclick>SetFocus(52)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexfanart)</visible>
+		</control>
+		<control type="button" id="700017">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[32000]</label>
+			<onclick>Skin.SetBool(multiplexbigtrailer)</onclick>
+			<onclick>Skin.Reset(multiplextrailer)</onclick>
+			<onclick>SetFocus(52)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplextrailer)</visible>
+		</control>
+		<control type="button" id="700018">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[32001]</label>
+			<onclick>Skin.SetBool(multiplexposter)</onclick>
+			<onclick>Skin.Reset(multiplexbigtrailer)</onclick>
+			<onclick>SetFocus(52)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexbigtrailer)</visible>
+		</control>
+		<control type="button" id="700019">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: Poster</label>
+			<onclick>Skin.SetBool(multiplexplot)</onclick>
+			<onclick>Skin.Reset(multiplexposter)</onclick>
+			<onclick>SetFocus(52)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexposter)</visible>
+		</control>
+		<control type="togglebutton" id="700020">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31045]: $LOCALIZE[31063]</label>
+			<altlabel>$LOCALIZE[31045]: $LOCALIZE[31064]</altlabel>
+			<usealttexture>!Skin.HasSetting(multiplextvbigthumb)</usealttexture>
+			<onclick>Skin.ToggleSetting(multiplextvbigthumb)</onclick>
+			<visible>Container.Content(episodes) + Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(552)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_PanelDensity">
+		<control type="radiobutton" id="700021">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31053] $LOCALIZE[31065]</label>
+			<onclick>Skin.ToggleSetting(listpanelthin)</onclick>
+			<selected>Skin.HasSetting(listpanelthin)</selected>
+			<visible>Control.IsVisible(550)</visible>
+		</control>
+		<control type="radiobutton" id="700022">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31053] $LOCALIZE[31065]</label>
+			<onclick>Skin.ToggleSetting(multiplexthin)</onclick>
+			<selected>Skin.HasSetting(multiplexthin)</selected>
+			<visible>[Control.IsVisible(52) | Control.IsVisible(552)] + Window.IsActive(myvideofiles)</visible>
+		</control>
+		<control type="radiobutton" id="7000221">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31053] $LOCALIZE[31065]</label>
+			<onclick>Skin.ToggleSetting(showcasethin)</onclick>
+			<selected>Skin.HasSetting(showcasethin)</selected>
+			<visible>Control.IsVisible(57) + Window.IsActive(myvideofiles)</visible>
+		</control>
+		<control type="radiobutton" id="7000222">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31053] $LOCALIZE[31065]</label>
+			<onclick>Skin.ToggleSetting(lowlistpanelthin)</onclick>
+			<selected>Skin.HasSetting(lowlistpanelthin)</selected>
+			<visible>Control.IsVisible(551)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_PanelDark">
+		<control type="radiobutton" id="700321">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31171]</label>
+			<onclick>Skin.ToggleSetting(Listpaneldark)</onclick>
+			<selected>Skin.HasSetting(Listpaneldark)</selected>
+			<visible>Control.IsVisible(550)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_ListLayout">
+		<control type="radiobutton" id="700023">
+			<include>MediaMenuButton</include>
+			<include>Objects_ListLayoutStrings</include>
+			<onclick>Skin.ToggleSetting(tvlistmax)</onclick>
+			<selected>!Skin.HasSetting(tvlistmax)</selected>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(50)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_VerticalWall">
+		<control type="togglebutton" id="700024">
+			<include>MediaMenuButton</include>
+			<include>Objects_WallLayoutStrings</include>
+			<usealttexture>Skin.HasSetting(VerticalWall)</usealttexture>
+			<onclick>Skin.SetBool(VerticalWall)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<altclick>Skin.Reset(VerticalWall)</altclick>
+			<altclick>XBMC.ReloadSkin</altclick>
+			<visible>Control.IsVisible(53)</visible>
+		</control>
+	</include>
+<!--
+	<include name="MediaMenuButton_Fanart">
+		<control type="radiobutton" id="700025">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31064]</label>
+			<onclick>Skin.ToggleSetting(nomoviefanart)</onclick>
+			<selected>!Skin.HasSetting(nomoviefanart)</selected>
+			<visible>Container.Content(movies)</visible>
+		</control>
+
+		<control type="radiobutton" id="700026">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31064]</label>
+			<onclick>Skin.ToggleSetting(notvfanart)</onclick>
+			<selected>!Skin.HasSetting(notvfanart)</selected>
+			<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+		</control>
+ 
+		<control type="radiobutton" id="705028">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31064]</label>
+			<onclick>Skin.ToggleSetting(nopicturefanart)</onclick>
+			<selected>!Skin.HasSetting(nopicturefanart)</selected>
+			<visible>Window.IsActive(2)</visible>
+		</control>
+		<control type="radiobutton" id="702027">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31064]</label>
+			<onclick>Skin.ToggleSetting(novideofanart)</onclick>
+			<selected>!Skin.HasSetting(novideofanart)</selected>
+			<visible>false</visible>
+		</control>
+		<control type="radiobutton" id="700051">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31064]</label>
+			<onclick>Skin.ToggleSetting(nomusicfanart)</onclick>
+			<selected>!Skin.HasSetting(nomusicfanart)</selected>
+			<visible>Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(551)</visible>
+			<visible>Window.IsActive(502) | Window.IsActive(501)</visible>
+		</control>
+	</include>
+-->
+	<include name="MediaMenuButton_ClearList">
+		<control type="togglebutton" id="700030">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[310797]</label>
+			<altlabel>$LOCALIZE[310798]</altlabel>
+			<usealttexture>!Skin.HasSetting(Lightclearlist)</usealttexture>
+			<onclick>Skin.Reset(Lightclearlist)</onclick>
+			<altclick>Skin.SetBool(Lightclearlist)</altclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<altclick>XBMC.ReloadSkin</altclick>
+			<visible>Control.IsVisible(54)</visible>
+		</control>
+<!--
+		<control type="radiobutton" id="711028">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]</label>
+			<onclick>Skin.ToggleSetting(cListmovieshowinfo)</onclick>
+			<selected>Skin.HasSetting(cListmovieshowinfo)</selected>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Control.IsVisible(54)</visible>
+		</control>
+-->
+		<control type="radiobutton" id="700028">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[310793]</label>
+			<onclick>Skin.ToggleSetting(clearlistthin)</onclick>
+			<selected>Skin.HasSetting(clearlistthin)</selected>
+			<visible>Control.IsVisible(54)</visible>
+		</control>
+		<control type="radiobutton" id="700029">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[310795]</label>
+			<onclick>Skin.ToggleSetting(clearlistinfothin)</onclick>
+			<selected>Skin.HasSetting(clearlistinfothin)</selected>
+			<visible>Control.IsVisible(54)</visible>
+		</control>
+
+	</include>
+	<include name="MediaMenuButton_Stripshow">
+		<control type="togglebutton" id="700031">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31076]: $LOCALIZE[31074]</label>
+			<altlabel>$LOCALIZE[31076]: $LOCALIZE[31073]</altlabel>
+			<usealttexture>!Skin.HasSetting(stripshowmax)</usealttexture>
+			<onclick>Skin.ToggleSetting(stripshowmax)</onclick>
+			<onclick>SetFocus(51)</onclick>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
+		<control type="togglebutton" id="700032">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31079]: $LOCALIZE[31078]</label>
+			<altlabel>$LOCALIZE[31079]: $LOCALIZE[31077]</altlabel>
+			<usealttexture>!Skin.HasSetting(nostripshowhide)</usealttexture>
+			<onclick>Skin.ToggleSetting(nostripshowhide)</onclick>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
+		<control type="togglebutton" id="700033">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31042]</label>
+			<altlabel>$LOCALIZE[31043]</altlabel>
+			<usealttexture>Skin.HasSetting(darkstripshow)</usealttexture>
+			<onclick>Skin.ToggleSetting(darkstripshow)</onclick>
+			<onclick>SetFocus(51)</onclick>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_Flags">
+		<control type="radiobutton" id="700034">
+			<label>$LOCALIZE[31069]</label>
+			<include>MediaMenuButton</include>
+			<onclick>Skin.ToggleSetting(nomediaflags)</onclick>
+			<selected>!Skin.HasSetting(nomediaflags)</selected>
+			<visible>!Skin.HasSetting(nomediaflagsbutton)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_WallGrid">
+		<control type="togglebutton" id="700035">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31076]: $LOCALIZE[31074]</label>
+			<altlabel>$LOCALIZE[31076]: $LOCALIZE[31073]</altlabel>
+			<usealttexture>!Skin.HasSetting(smallmoviewall)</usealttexture>
+			<onclick>Skin.ToggleSetting(smallmoviewall)</onclick>
+			<onclick>SetFocus(53)</onclick>
+			<visible>Control.IsVisible(53)</visible>
+			<visible>[Window.IsActive(1) | Window.IsActive(myvideofiles)] + !Container.Content(episodes)</visible>
+		</control>
+		<control type="togglebutton" id="700036">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31076]: $LOCALIZE[31074]</label>
+			<altlabel>$LOCALIZE[31076]: $LOCALIZE[31073]</altlabel>
+			<usealttexture>!Skin.HasSetting(smallmusicwall)</usealttexture>
+			<onclick>Skin.ToggleSetting(smallmusicwall)</onclick>
+			<onclick>SetFocus(53)</onclick>
+			<visible>Control.IsVisible(53)</visible>
+			<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2) | [Window.IsActive(myvideofiles) + Container.Content(episodes)]</visible>
+		</control>
+	</include>
+<!--	<include name="MediaMenuButton_WallBackdrop">
+		<control type="togglebutton" id="700037">
+			<label>$LOCALIZE[31067]: $LOCALIZE[31078]</label>
+			<altlabel>$LOCALIZE[31067]: $LOCALIZE[31077]</altlabel>
+			<usealttexture>Skin.HasSetting(transparentwall)</usealttexture>
+			<include>MediaMenuButton</include>
+			<onclick>Skin.ToggleSetting(transparentwall)</onclick>
+			<visible>Control.IsVisible(53)</visible>
+		</control>
+	</include>
+	-->
+	<include name="MediaMenuButton_Overlay">
+		<control type="radiobutton" id="700038">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31066]</label>
+			<onclick>Skin.ToggleSetting(nomovieoverlays)</onclick>
+			<selected>!Skin.HasSetting(nomovieoverlays)</selected>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="radiobutton" id="700039">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31066]</label>
+			<onclick>Skin.ToggleSetting(notvoverlays)</onclick>
+			<selected>!Skin.HasSetting(notvoverlays)</selected>
+			<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_Curtains">
+		<control type="radiobutton" id="700040">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31067]</label>
+			<selected>!Skin.HasSetting(curtains)</selected>
+			<usealttexture>Skin.HasSetting(curtains)</usealttexture>
+			<onclick>Skin.ToggleSetting(curtains)</onclick>
+			<visible>true</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_LightNight">
+		<control type="togglebutton" id="700041">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31043]</label>
+			<onclick>Skin.Reset(darkfloor)</onclick>
+			<onclick>Skin.Reset(clearfloor)</onclick>
+			<onclick>Skin.SetBool(lightfloor)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Skin.HasSetting(Darkfloor) + [[Control.IsVisible(550) | Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(57)] | [Control.IsVisible(53) + Skin.HasSetting(newwall)]]</visible>
+		</control>
+		<control type="togglebutton" id="700142">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31042]</label>
+			<onclick>Skin.Reset(lightfloor)</onclick>
+			<onclick>Skin.Reset(darkfloor)</onclick>
+			<onclick>Skin.SetBool(clearfloor)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Skin.HasSetting(Lightfloor) + [[Control.IsVisible(550) | Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(57)] | [Control.IsVisible(53) + Skin.HasSetting(newwall)]]</visible>
+		</control>
+		<control type="togglebutton" id="700143">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31542]</label>
+			<onclick>Skin.Reset(clearfloor)</onclick>
+			<onclick>Skin.Reset(lightfloor)</onclick>
+			<onclick>Skin.SetBool(darkfloor)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>[Skin.HasSetting(clearfloor) | [!Skin.HasSetting(LightFloor) + !Skin.HasSetting(DarkFloor) + !Skin.HasSetting(clearfloor)]] + [[Control.IsVisible(550) | Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(57)] | [Control.IsVisible(53) + Skin.HasSetting(newwall)]]</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_Watched">
+		<control type="radiobutton" id="14">
+			<description>Watched Toggle Button</description>
+				<label>$LOCALIZE[31058]</label>
+			<include>MediaMenuButton</include>
+			<visible>[Container.Content(movies) + !Skin.HasSetting(nomenumoviewatched)] | [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(nomenutvwatched)]</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_Search">
+		<control type="button" id="8">
+			<label>137</label>
+			<include>MediaMenuButton</include>
+			<visible>[Container.Content(movies) + !Skin.HasSetting(nomenumoviesearch)] | [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(nomenutvsearch)]</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_Filter">
+		<control type="button" id="19">
+			<label>587</label>
+			<include>MediaMenuButton</include>
+			<visible>Window.IsActive(myvideofiles) | Window.IsActive(502)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_Files">
+		<control type="button" id="11">
+			<label>31057</label>
+			<include>MediaMenuButton</include>
+			<onclick>XBMC.ReplaceWindow(MyVideoFiles)</onclick>
+			<visible>!Skin.HasSetting(nomenufiles) + Window.IsActive(myvideofiles)</visible>
+		</control>
+		<control type="button" id="700049">
+			<label>31057</label>
+			<include>MediaMenuButton</include>
+			<onclick>XBMC.ReplaceWindow(MyMusicFiles)</onclick>
+			<visible>!Skin.HasSetting(nomenufiles) + Window.IsActive(502)</visible>
+		</control>
+		<control type="button" id="700050">
+			<label>31068</label>
+			<include>MediaMenuButton</include>
+			<onclick>XBMC.ReplaceWindow(MyMusicLibrary)</onclick>
+			<visible>!Skin.HasSetting(nomenufiles) + Window.IsActive(501)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_Playlist">
+		<control type="togglebutton" id="20">
+			<label>ORDER: NORMAL</label>
+			<altlabel>ORDER: RANDOM</altlabel>
+			<include>MediaMenuButton</include>
+			<visible>Window.IsActive(28) | Window.IsActive(500)</visible>
+		</control>
+		<control type="button" id="26">
+			<label>REPEAT</label>
+			<include>MediaMenuButton</include>
+			<visible>Window.IsActive(28) | Window.IsActive(500)</visible>
+		</control>
+		<control type="button" id="21">
+			<label>190</label>
+			<include>MediaMenuButton</include>
+			<visible>Window.IsActive(28) | Window.IsActive(500)</visible>
+		</control>
+		<control type="button" id="22">
+			<label>192</label>
+			<include>MediaMenuButton</include>
+			<visible>Window.IsActive(28) | Window.IsActive(500)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_Random">
+		<control type="togglebutton" id="9">
+			<label>$LOCALIZE[31051]: $LOCALIZE[31078]</label>
+			<altlabel>$LOCALIZE[31051]: $LOCALIZE[31077]</altlabel>
+			<include>MediaMenuButton</include>
+			<visible>Window.IsActive(2)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_GamesPoster">
+		<control type="togglebutton" id="700042">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31059]</label>
+			<altlabel>$LOCALIZE[31056]</altlabel>
+			<usealttexture>Skin.HasSetting(listgamessquare)</usealttexture>
+			<onclick>Skin.SetBool(listgamessquare)</onclick>
+			<altclick>Skin.Reset(listgamessquare)</altclick>
+			<visible>Control.IsVisible(50) | Control.IsVisible(550)</visible>
+			<visible>Window.IsActive(1)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_Setup">
+		<control type="button" id="700043">
+			<label>31016</label>
+			<include>MediaMenuButton</include>
+			<onclick>XBMC.ActivateWindow(VideosSettings)</onclick>
+			<visible>!Skin.HasSetting(nomenusettings) + [Window.IsActive(myvideofiles) | Window.IsActive(28)]</visible>
+		</control>
+		<control type="button" id="700044">
+			<label>31016</label>
+			<include>MediaMenuButton</include>
+			<onclick>XBMC.ActivateWindow(PicturesSettings)</onclick>
+			<visible>!Skin.HasSetting(nomenusettings) + Window.IsActive(2)</visible>
+		</control>
+		<control type="button" id="700045">
+			<label>31016</label>
+			<include>MediaMenuButton</include>
+			<onclick>XBMC.ActivateWindow(ProgramsSettings)</onclick>
+			<visible>!Skin.HasSetting(nomenusettings) + Window.IsActive(1)</visible>
+		</control>
+		<control type="button" id="700046">
+			<label>31016</label>
+			<include>MediaMenuButton</include>
+			<onclick>XBMC.ActivateWindow(MusicSettings)</onclick>
+			<visible>!Skin.HasSetting(nomenusettings) + [Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(500)]</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_MediaDebug">
+		<control type="button" id="700047">
+			<label>31607</label>
+			<include>MediaMenuButton</include>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Skin.HasSetting(debug)</visible>
+		</control>
+		<control type="button" id="700048">
+			<label>31608</label>
+			<onclick>Skin.ToggleSetting(debuginfo)</onclick>
+			<include>MediaMenuButton</include>
+			<visible>Skin.HasSetting(debug)</visible>
+		</control>
+	</include>
+	<include name="LowList_HighLowMediaMenuButton">
+		<control type="radiobutton" id="5517002">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[393] $LOCALIZE[535]</label>
+			<onclick>Skin.ToggleSetting(highlist)</onclick>
+			<selected>Skin.HasSetting(highlist)</selected>
+			<visible>Control.IsVisible(551)</visible>
+		</control>
+	</include>
+<!--
+	<include name="LowList_ToggleSlideshowMediaMenuButton">
+		<control type="togglebutton" id="5517003">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[539]: $LOCALIZE[31044]</label>
+			<altlabel>$LOCALIZE[539]: $LOCALIZE[31045]</altlabel>
+			<onclick>Skin.SetBool(widepanelthumbon)</onclick>
+			<altclick>Skin.Reset(widepanelthumbon)</altclick>
+			<selected>Skin.HasSetting(widepanelthumbon)</selected>
+			<visible>Control.IsVisible(551) + Window.IsActive(myvideofiles)</visible>
+		</control>
+	</include>
+	<include name="LowList_BrowsingLayoutMediaMenuButton">
+		<control type="button" id="5517020">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31245]</label>
+			<onclick>SetFocus(55103)</onclick>
+			<visible>Control.IsVisible(551) + [Container.Content(movies) | Window.IsActive(502)]</visible>
+		</control>
+	</include>
+ 	<include name="LowList_AutoTriggerMediaMenuButton">
+		<control type="togglebutton" id="5517005">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<altlabel>$LOCALIZE[31070]: $LOCALIZE[31049]</altlabel>
+			<onclick>Skin.SetBool(lowlistinfoauto)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<altclick>Skin.Reset(lowlistinfoauto)</altclick>
+			<altclick>XBMC.ReloadSkin</altclick>
+			<selected>Skin.HasSetting(lowlistinfoauto)</selected>
+			<visible>Control.IsVisible(551)</visible>
+		</control>
+	</include>
+	-->
+	<include name="LowList_SlimFullMediaMenuButton">
+		<control type="radiobutton" id="5517006">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31074]</label>
+			<onclick>Skin.ToggleSetting(movieslistfull)</onclick>
+			<selected>Skin.HasSetting(movieslistfull)</selected>
+			<visible>Control.IsVisible(551) + Container.Content(movies)</visible>
+		</control>
+		<control type="radiobutton" id="5517007">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31074]</label>
+			<onclick>Skin.ToggleSetting(artistlistfull)</onclick>
+			<selected>Skin.HasSetting(artistlistfull)</selected>
+			<visible>Control.IsVisible(551) + Container.Content(artists)</visible>
+		</control>
+		<control type="radiobutton" id="5517008">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31074]</label>
+			<onclick>Skin.ToggleSetting(albumlistfull)</onclick>
+			<selected>Skin.HasSetting(albumlistfull)</selected>
+			<visible>Control.IsVisible(551) + Container.Content(albums)</visible>
+		</control>
+		<control type="radiobutton" id="5517009">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31074]</label>
+			<onclick>Skin.ToggleSetting(songlistfull)</onclick>
+			<selected>Skin.HasSetting(songlistfull)</selected>
+			<visible>Control.IsVisible(551) + Container.Content(songs)</visible>
+		</control>
+	</include>
+	<include name="LowList_ToggleRollerMediaMenuButton">
+		<control type="togglebutton" id="5517010">
+			<include>MediaMenuButton</include>
+			<label>ROLLER: ON</label>
+			<altlabel>ROLLER: OFF</altlabel>
+			<onclick>Skin.SetBool(artistrolleroff)</onclick>
+			<altclick>Skin.Reset(artistrolleroff)</altclick>
+			<selected>Skin.HasSetting(artistrolleroff)</selected>
+			<visible>Control.IsVisible(551) + Container.Content(artists)</visible>
+		</control>
+		<control type="togglebutton" id="5517011">
+			<include>MediaMenuButton</include>
+			<label>ROLLER: ON</label>
+			<altlabel>ROLLER: OFF</altlabel>
+			<onclick>Skin.SetBool(albumrolleroff)</onclick>
+			<altclick>Skin.Reset(albumrolleroff)</altclick>
+			<selected>Skin.HasSetting(albumrolleroff)</selected>
+			<visible>Control.IsVisible(551) + Container.Content(albums)</visible>
+		</control>
+		<control type="togglebutton" id="5517012">
+			<include>MediaMenuButton</include>
+			<label>ROLLER: ON</label>
+			<altlabel>ROLLER: OFF</altlabel>
+			<onclick>Skin.SetBool(songrolleroff)</onclick>
+			<altclick>Skin.Reset(songrolleroff)</altclick>
+			<selected>Skin.HasSetting(songrolleroff)</selected>
+			<visible>Control.IsVisible(551) + Container.Content(songs)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_ShowcaseInfo">
+		<control type="button" id="700060">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(showcaseinfoauto)</onclick>
+			<onclick>Skin.Reset(showcaseinfooff)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseinfooff)</visible>
+		</control>
+		<control type="button" id="700061">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(showcaseinfotrigger)</onclick>
+			<onclick>Skin.Reset(showcaseinfoauto)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + ![Skin.HasSetting(showcaseinfotrigger) | Skin.HasSetting(showcaseinfooff) | Skin.HasSetting(showcaseinfoon)]</visible>
+		</control>
+		<control type="button" id="700062">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<onclick>Skin.SetBool(showcaseinfoon)</onclick>
+			<onclick>Skin.Reset(showcaseinfotrigger)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseinfotrigger)</visible>
+		</control>
+		<control type="button" id="700063">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(showcaseinfooff)</onclick>
+			<onclick>Skin.Reset(showcaseinfoon)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseinfoon)</visible>
+		</control>
+		<control type="button" id="700064">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(showcasetvinfoauto)</onclick>
+			<onclick>Skin.Reset(showcasetvinfooff)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + Skin.HasSetting(showcasetvinfooff)</visible>
+		</control>
+		<control type="button" id="700065">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(showcasetvinfotrigger)</onclick>
+			<onclick>Skin.Reset(showcasetvinfoauto)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + ![Skin.HasSetting(showcasetvinfotrigger) | Skin.HasSetting(showcasetvinfooff) | Skin.HasSetting(showcasetvinfoon)]</visible>
+		</control>
+		<control type="button" id="700066">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<onclick>Skin.SetBool(showcasetvinfoon)</onclick>
+			<onclick>Skin.Reset(showcasetvinfotrigger)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + Skin.HasSetting(showcasetvinfotrigger)</visible>
+		</control>
+		<control type="button" id="700067">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(showcasetvinfooff)</onclick>
+			<onclick>Skin.Reset(showcasetvinfoon)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + Skin.HasSetting(showcasetvinfoon)</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_ShowcaseStyle">
+		<control type="button" id="700068">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31046]</label>
+			<onclick>Skin.SetBool(showcasebigthumb)</onclick>
+			<onclick>Skin.Reset(showcaseplot)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + ![Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasetrailer) | Skin.HasSetting(showcasebigtrailer) | Skin.HasSetting(showcaseposter)]</visible>
+		</control>
+		<control type="button" id="700069">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31045]</label>
+			<onclick>Skin.SetBool(showcasefanart)</onclick>
+			<onclick>Skin.Reset(showcasebigthumb)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasebigthumb)</visible>
+		</control>
+		<control type="button" id="700070">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31044]</label>
+			<onclick>Skin.SetBool(showcasetrailer)</onclick>
+			<onclick>Skin.Reset(showcasefanart)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasefanart)</visible>
+		</control>
+		<control type="button" id="700071">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[32000]</label>
+			<onclick>Skin.SetBool(showcasebigtrailer)</onclick>
+			<onclick>Skin.Reset(showcasetrailer)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasetrailer)</visible>
+		</control>
+		<control type="button" id="700072">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[32001]</label>
+			<onclick>Skin.SetBool(showcaseposter)</onclick>
+			<onclick>Skin.Reset(showcasebigtrailer)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasebigtrailer)</visible>
+		</control>
+		<control type="button" id="700073">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: Poster</label>
+			<onclick>Skin.SetBool(showcaseplot)</onclick>
+			<onclick>Skin.Reset(showcaseposter)</onclick>
+			<onclick>SetFocus(57)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseposter)</visible>
+		</control>
+		<control type="togglebutton" id="700074">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31045]: $LOCALIZE[31063]</label>
+			<altlabel>$LOCALIZE[31045]: $LOCALIZE[31064]</altlabel>
+			<usealttexture>!Skin.HasSetting(showcasetvbigthumb)</usealttexture>
+			<onclick>Skin.ToggleSetting(showcasetvbigthumb)</onclick>
+			<visible>Container.Content(episodes) + Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57)</visible>
+		</control>
+	</include>
+	<include name="Objects_AnoobieStyleButtons">
+
+		<control type="button" id="33000">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31046]</label>
+			<onclick>Skin.SetBool(anoobiebigthumb)</onclick>
+			<onclick>Skin.Reset(anoobieplot)</onclick>
+			<onclick>SetFocus(563)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(563) + Skin.HasSetting(anoobieplot)]</visible>
+		</control>
+
+		<control type="button" id="33001">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31045]</label>
+			<onclick>Skin.SetBool(anoobiefanart)</onclick>
+			<onclick>Skin.Reset(anoobiebigthumb)</onclick>
+			<onclick>SetFocus(563)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(563) + Skin.HasSetting(anoobiebigthumb)]</visible>
+		</control>
+
+		<control type="button" id="33002">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31044]</label>
+			<onclick>Skin.SetBool(anoobieplot)</onclick>
+			<onclick>Skin.Reset(anoobiefanart)</onclick>
+			<onclick>SetFocus(563)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(563) + Skin.HasSetting(anoobiefanart)] | [Control.IsVisible(563) + [!Skin.HasSetting(anoobiebigthumb) + !Skin.HasSetting(anoobiefanart) + !Skin.HasSetting(anoobieplot)]]]</visible>
+		</control>
+    </include>
+
+	<include name="MediaMenuButton_OldMultiplexInfo">
+		<control type="button" id="700100">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(oldmultiplexinfoauto)</onclick>
+			<onclick>Skin.Reset(oldmultiplexinfooff)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexinfooff)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700101">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(oldmultiplexinfotrigger)</onclick>
+			<onclick>Skin.Reset(oldmultiplexinfoauto)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexinfotrigger) | Skin.HasSetting(oldmultiplexinfooff) | Skin.HasSetting(oldmultiplexinfoon)]</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700102">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<onclick>Skin.SetBool(oldmultiplexinfoon)</onclick>
+			<onclick>Skin.Reset(oldmultiplexinfotrigger)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexinfotrigger)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700103">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(oldmultiplexinfooff)</onclick>
+			<onclick>Skin.Reset(oldmultiplexinfoon)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexinfoon)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700104">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(oldmultiplextvinfoauto)</onclick>
+			<onclick>Skin.Reset(oldmultiplextvinfooff)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextvinfooff)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700105">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(oldmultiplextvinfotrigger)</onclick>
+			<onclick>Skin.Reset(oldmultiplextvinfoauto)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplextvinfotrigger) | Skin.HasSetting(oldmultiplextvinfooff) | Skin.HasSetting(oldmultiplextvinfoon)]</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700106">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<onclick>Skin.SetBool(oldmultiplextvinfoon)</onclick>
+			<onclick>Skin.Reset(oldmultiplextvinfotrigger)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextvinfotrigger)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+		<control type="button" id="700107">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(oldmultiplextvinfooff)</onclick>
+			<onclick>Skin.Reset(oldmultiplextvinfoon)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextvinfoon)</visible>
+			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
+		</control>
+	</include>
+		<include name="MediaMenuButton_multiwallInfo">
+		<control type="button" id="704100">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(multiwallinfoauto)</onclick>
+			<onclick>Skin.Reset(multiwallinfooff)</onclick>
+			<onclick>SetFocus(556)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(556) + Skin.HasSetting(multiwallinfooff)</visible>
+			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
+		</control>
+		<control type="button" id="704101">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(multiwallinfotrigger)</onclick>
+			<onclick>Skin.Reset(multiwallinfoauto)</onclick>
+			<onclick>SetFocus(556)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(556) + ![Skin.HasSetting(multiwallinfotrigger) | Skin.HasSetting(multiwallinfooff) | Skin.HasSetting(multiwallinfoon)]</visible>
+			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
+		</control>
+		<control type="button" id="704102">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<onclick>Skin.SetBool(multiwallinfoon)</onclick>
+			<onclick>Skin.Reset(multiwallinfotrigger)</onclick>
+			<onclick>SetFocus(556)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(556) + Skin.HasSetting(multiwallinfotrigger)</visible>
+			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
+		</control>
+		<control type="button" id="704103">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(multiwallinfooff)</onclick>
+			<onclick>Skin.Reset(multiwallinfoon)</onclick>
+			<onclick>SetFocus(556)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(556) + Skin.HasSetting(multiwallinfoon)</visible>
+			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
+		</control>
+		<control type="button" id="704104">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(multiwalltvinfoauto)</onclick>
+			<onclick>Skin.Reset(multiwalltvinfooff)</onclick>
+			<onclick>SetFocus(556)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + Skin.HasSetting(multiwalltvinfooff)</visible>
+			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
+		</control>
+		<control type="button" id="704105">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(multiwalltvinfotrigger)</onclick>
+			<onclick>Skin.Reset(multiwalltvinfoauto)</onclick>
+			<onclick>SetFocus(556)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + ![Skin.HasSetting(multiwalltvinfotrigger) | Skin.HasSetting(multiwalltvinfooff) | Skin.HasSetting(multiwalltvinfoon)]</visible>
+			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
+		</control>
+		<control type="button" id="704106">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<onclick>Skin.SetBool(multiwalltvinfoon)</onclick>
+			<onclick>Skin.Reset(multiwalltvinfotrigger)</onclick>
+			<onclick>SetFocus(556)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + Skin.HasSetting(multiwalltvinfotrigger)</visible>
+			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
+		</control>
+		<control type="button" id="704107">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(multiwalltvinfooff)</onclick>
+			<onclick>Skin.Reset(multiwalltvinfoon)</onclick>
+			<onclick>SetFocus(556)</onclick>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + Skin.HasSetting(multiwalltvinfoon)</visible>
+			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
+		</control>
+	</include>
+
+	<include name="MediaMenuButton_OldMultiplexStyle">
+		<control type="button" id="700110">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31046]</label>
+			<onclick>Skin.SetBool(oldmultiplexbigthumb)</onclick>
+			<onclick>Skin.Reset(oldmultiplexplot)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplextrailer) | Skin.HasSetting(oldmultiplexbigtrailer) | Skin.HasSetting(oldmultiplexposter)]</visible>
+		</control>
+		<control type="button" id="700111">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31045]</label>
+			<onclick>Skin.SetBool(oldmultiplexfanart)</onclick>
+			<onclick>Skin.Reset(oldmultiplexbigthumb)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexbigthumb)</visible>
+		</control>
+		<control type="button" id="700112">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[31044]</label>
+			<onclick>Skin.SetBool(oldmultiplextrailer)</onclick>
+			<onclick>Skin.Reset(oldmultiplexfanart)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexfanart)</visible>
+		</control>
+		<control type="button" id="700113">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[32000]</label>
+			<onclick>Skin.SetBool(oldmultiplexbigtrailer)</onclick>
+			<onclick>Skin.Reset(oldmultiplextrailer)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextrailer)</visible>
+		</control>
+		<control type="button" id="700114">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: $LOCALIZE[32001]</label>
+			<onclick>Skin.SetBool(oldmultiplexposter)</onclick>
+			<onclick>Skin.Reset(oldmultiplexbigtrailer)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexbigtrailer)</visible>
+		</control>
+		<control type="button" id="700115">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31047]: Poster</label>
+			<onclick>Skin.SetBool(oldmultiplexplot)</onclick>
+			<onclick>Skin.Reset(oldmultiplexposter)</onclick>
+			<onclick>SetFocus(553)</onclick>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexposter)</visible>
+		</control>
+		<control type="togglebutton" id="700116">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31045]: $LOCALIZE[31063]</label>
+			<altlabel>$LOCALIZE[31045]: $LOCALIZE[31064]</altlabel>
+			<usealttexture>!Skin.HasSetting(oldmultiplextvbigthumb)</usealttexture>
+			<onclick>Skin.ToggleSetting(oldmultiplextvbigthumb)</onclick>
+			<visible>Container.Content(episodes) + Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553)</visible>
+		</control>
+	</include>
+
+	<!--############################################ Media Menu #################################################-->
+	<!--#########################################################################################################-->
+	<include name="NewMediaMenu">
+		<control type="group">
+			<visible>Control.IsVisible(7000)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>235</width>
+				<height>720</height>
+				<texture>showcase/showcase_menupanel.png</texture>
+				<include>Animation_MediaMenuSlideVertical</include>
+				<visible>!Skin.HasSetting(novertikalmenu)</visible>
+			</control>
+			<control type="image" id="74">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>57</height>
+				<texture>showcase/showcase_menupanel.png</texture>
+				<include>Animation_MediaMenuSlide</include>
+				<visible>Skin.HasSetting(novertikalmenu)</visible>
+			</control>
+			<control type="image">
+				<include>MediaMenuLogo</include>
+				<texture>windows/logo_movies.png</texture>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | Container.Content(movies)</visible>
+				<visible>Window.IsActive(myvideofiles) | Window.IsActive(28)</visible>
+			</control>
+			<control type="image">
+				<include>MediaMenuLogo</include>
+				<texture>windows/logo_music.png</texture>
+				<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
+			</control>
+			<control type="image">
+				<include>MediaMenuLogo</include>
+				<texture>windows/logo_pics.png</texture>
+				<visible>Window.IsActive(2)</visible>
+			</control>
+			<control type="image">
+				<include>MediaMenuLogo</include>
+				<texture>windows/logo_games.png</texture>
+				<visible>Window.IsActive(1) | [Window.IsActive(myvideofiles) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]]</visible>
+			</control>
+			<control type="label">
+				<include>MediaMenuLogo</include>
+				<label>31020</label>
+				<visible>Window.IsActive(20)</visible>
+			</control>
+			<control type="label">
+				<include>MediaMenuLabel</include>
+				<label>31030</label>
+				<visible>Window.IsActive(1) | [Window.IsActive(myvideofiles) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]]</visible>
+			</control>
+			<control type="label">
+				<include>MediaMenuLabel</include>
+				<label>31031</label>
+				<visible>Window.IsActive(2)</visible>
+			</control>
+			<control type="label">
+				<include>MediaMenuLabel</include>
+				<label>31037</label>
+				<visible>Window.IsActive(501) | Window.IsActive(502)</visible>
+			</control>
+			<control type="label">
+				<include>MediaMenuLabel</include>
+				<label>PLAYLIST</label>
+				<visible>Window.IsActive(500) | Window.IsActive(28)</visible>
+			</control>
+			<control type="label">
+				<include>MediaMenuLabel</include>
+				<label>31033</label>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+				<visible>Window.IsActive(myvideofiles)</visible>
+			</control>
+			<control type="label">
+				<include>MediaMenuLabel</include>
+				<label>31032</label>
+				<visible>Container.Content(movies)</visible>
+				<visible>Window.IsActive(myvideofiles)</visible>
+			</control>
+
+			<control type="grouplist" id="7000">
+				<visible>Control.IsVisible(7000)</visible>
+				<include condition="Skin.HasSetting(novertikalmenu)">Horizontal_MediaMenuGroup</include>
+				<include condition="!Skin.HasSetting(novertikalmenu)">Vertical_MediaMenuGroup</include>
+				<include>MediaMenuButton_Viewmode</include>
+				<include>MediaMenuButton_LightNight</include>
+				<include>MediaMenuButton_ClearList</include>
+				<include>MediaMenuButton_Random</include>
+				<include condition="Window.IsActive(500) | Window.IsActive(28)">MediaMenuButton_Playlist</include>
+				<include>MediaMenuButton_FlattenFlow</include>
+				<include>MediaMenuButton_MultiplexInfo</include>
+				<include>MediaMenuButton_OldMultiplexInfo</include>
+				<include>MediaMenuButton_multiwallInfo</include>
+				<include>MediaMenuButton_ShowcaseInfo</include>
+				<include>MediaMenuButton_WallInfo</include>
+				<include>MediaMenuButton_GamesPoster</include>
+				<include>MediaMenuButton_MultiplexStyle</include>
+				<include>Objects_AnoobieStyleButtons</include>
+		<!--	<include>MediaMenuButton_MultiplexFlow</include>-->
+				<include>MediaMenuButton_OldMultiplexStyle</include>
+				<include>MediaMenuButton_ShowcaseStyle</include>
+				<include>MediaMenuButton_ListLayout</include>
+				<include>MediaMenuButton_VerticalWall</include>
+				<include>MediaMenuButton_Stripshow</include>
+	<!--			<include>MediaMenuButton_StackButton</include> -->
+				<include>MediaMenuButton_WallGrid</include>
+	<!--			<include>MediaMenuButton_WallBackdrop</include> -->
+				<include>LowList_SlimFullMediaMenuButton</include>
+				<include>LowList_HighLowMediaMenuButton</include>
+				<include>MediaMenuButton_PanelDensity</include>
+				<include>MediaMenuButton_PanelDark</include>
+				<include>MediaMenuButton_Overlay</include>
+				<include>MediaMenuButton_Flags</include>
+	<!--			<include>MediaMenuButton_Fanart</include>  -->
+				<include>MediaMenuButton_Curtains</include>
+				<include>MediaMenuButton_Watched</include>
+	<!--		<include>MediaMenuButton_Sort</include> -->
+				<include>MediaMenuButton_Filter</include>
+				<include>MediaMenuButton_Search</include>
+		<!--	<include>MediaMenuButton_Files</include> -->
+				<include>MediaMenuButton_Setup</include>
+				<include>MediaMenuButton_MediaDebug</include>
+		<!--	<include>LowList_ToggleSlideshowMediaMenuButton</include>
+				<include>LowList_BrowsingLayoutMediaMenuButton</include>
+				<include condition="Window.IsActive(502)">LowList_ToggleRollerMediaMenuButton</include> 
+				<include>LowList_AutoTriggerMediaMenuButton</include> -->
+			</control>
+		</control>
+	</include>
+
+		<!-- ********  Media Menu End  ********-->
+
+
+		<!-- ********  Anoobie3 Includes  ********-->
+
+
 <include name="Anoobie3Trailer">
 	<ondown>PlayMedia($INFO[ListItem.Trailer])</ondown>
 </include>
@@ -106,9 +2282,8 @@
 			<posy>85</posy>
 			<width>1280</width>
 			<height>381</height>
-			<visible>!Skin.HasSetting(multiplexinfooff) + [Container.Content(movies) + Control.IsVisible(563) + !Control.HasFocus(197) + [true | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]]</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(563) + [Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | Control.IsVisible(109) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
 			<animation effect="fade" end="0" time="200">WindowClose</animation>
- 			<animation effect="fade" start="0" end="100" time="600">VisibleChange</animation>	 	
 	
 			<control type="image">
 					<posx>0</posx>
@@ -125,7 +2300,6 @@
 					<width>310</width>
 					<height>485</height>
 					<aspectratio></aspectratio>
-					<fadetime>400</fadetime>
 					<animation effect="rotatey" center="0" start="45" end="-45" time="0" condition="true">Conditional</animation>
 					<texture>list/list_movieicon_glass.png</texture>
 					<bordertexture border="-20">mod/list_movieicon_frame2.png</bordertexture>
@@ -287,7 +2461,7 @@
 					<width>240</width>
 					<height>360</height>
 					<animation effect="rotatey" center="0" start="50" end="45" time="0" condition="true">Conditional</animation>
-					<texture diffuse="list/list_movieicon_mask.png">$INFO[listitem(0).Icon]</texture>
+					<texture diffuse="list/list_movieicon_mask.png">$INFO[listitem.Icon]</texture>
 					<bordertexture border="-13">list/list_movieicon_frame.png</bordertexture>	
 			</control>	
 			<control type="largeimage">
@@ -295,7 +2469,7 @@
 				<width>240</width>
 				<height>360</height>
 				<animation effect="rotatey" center="0" start="45" end="45" time="0" condition="true">Conditional</animation>
-				<texture flipy="true" diffuse="list/list_episodeicon_flipmask.png">$INFO[ListItem(0).Icon]</texture>
+				<texture flipy="true" diffuse="list/list_episodeicon_flipmask.png">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="largeimage">	
 					<width>240</width>
@@ -311,6 +2485,8 @@
 		<control type="group">
 			<posx>320</posx>
 			<posy>20</posy>
+					<animation effect="fade" start="0" end="100" time="1350" reversible="false">Visible</animation>	
+					<visible>!Container().OnNext + !Container().OnPrevious</visible>
 			
 			<control type="largeimage">
 					<visible>Skin.HasSetting(anoobiefanart) | ![Skin.HasSetting(anoobiebigthumb) | Skin.HasSetting(anoobiefanart) | Skin.HasSetting(anoobieplot)]</visible>
@@ -463,6 +2639,2046 @@
 
 		</control>	
 	</include>
+
+		<!-- ********  End of Anoobie3 Includes ********-->
+
+	<include name="Viewtype_Anoobie3">
+
+	<control type="group">
+	<visible>Control.IsVisible(563)</visible>
+	<include>Animation_OpenCloseZoom</include>
+	
+		<include>Anoobie3InfoPaneMovies</include>		
+        <control type="button" id="110">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>0</width>
+            <height>0</height>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onleft>563</onleft>
+            <onright>563</onright>
+            <onup>7000</onup>
+            <ondown>563</ondown>
+        </control>
+		<control type="wraplist" id="563">
+		<visible>Container.Content(movies)</visible>
+			<viewtype label="31786">wrap</viewtype>
+			<include>Anoobie3MovieVarsWrap</include>
+			<pagecontrol>-</pagecontrol>
+			<onleft>563</onleft>
+			<onright>563</onright>
+			<onup>7000</onup>
+			<orientation>horizontal</orientation>
+			<focusposition>5</focusposition>	
+			<itemlayout width="105" height="129">
+				<control type="image">
+					<include>Anoobie3IconDimensionsWrap</include>
+					<texture diffuse="wall/wall_movie_mask.png" background="true">defaultvideobig.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>		
+				<control type="image">
+					<posx>58</posx>
+					<posy>16</posy>
+					<width>30</width>
+					<height>30</height>
+					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+					<info>ListItem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout width="105" height="129">
+				<control type="image">
+					<include>Anoobie3IconDimensionsWrap</include>
+					<texture diffuse="wall/wall_movie_mask.png" background="true">defaultvideobig.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<info>ListItem.Icon</info>
+					<animation effect="zoom" center="45,75" start="100" end="120" time="400" delay="300" easing="out" tween="cubic" reversible="true">Focus</animation>					
+				</control>
+				<control type="image">
+					<posx>58</posx>
+					<posy>16</posy>
+					<width>30</width>
+					<height>30</height>
+					<animation effect="zoom" center="45,75" start="100" end="120" time="400" delay="300" easing="out" tween="cubic" reversible="true">Focus</animation>					
+					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+					<info>ListItem.Overlay</info>
+				</control>
+				
+			</focusedlayout>
+			</control>			
+		<include>Anoobie3LabelsMovies</include>
+	</control>
+	</include>
+
+		<!-- ********  End of Anoobie3  ********-->
+
+
+		<!-- ********  COVERFLOW   ********-->
+
+
+	<include name="CoverflowVisible">
+		<visible>Control.IsVisible(55)</visible>
+		<include>Animation_OpenCloseZoom</include>
+	</include>
+
+	<include name="MusicFlowGroupVars">
+		<posx>-245</posx>
+		<posy>190</posy>
+		<width>1770</width>
+		<height>350</height>			
+	</include>
+
+	<include name="MovieFlowGroupVars">
+		<posx>-83</posx>
+		<posy>187</posy>
+		<width>1546</width>
+		<height>350</height>			
+	</include>
+	
+<!-- Movie Flow Variables: Main thumbs -->
+
+	<include name="MovieFlowThumbDimensions">
+	    <posx>49</posx>
+	    <posy>9</posy>
+	    <width>173</width>
+	    <height>254</height>
+    </include>
+  
+	<include name="MovieFlowThumb">
+	    <include>MovieFlowThumbDimensions</include>
+		<align>center</align>
+		<texture diffuse="thumbs/movieposter_mask.png">defaultvideobig.png</texture>
+	    <aspectratio scalediffuse="false">stretch</aspectratio>
+		<visible>!Control.HasFocus(85)</visible>
+	</include>
+  
+	<include name="MovieFlowThumbMain">
+	    <include>MovieFlowThumbDimensions</include>
+		<align>center</align>
+		<texture diffuse="thumbs/movieposter_mask.png">defaultvideobig.png</texture>
+	    <aspectratio scalediffuse="false">stretch</aspectratio>
+	</include>
+
+<!-- Movie Flow Variables: Thumb glass overlays -->
+	
+	<include name="MovieFlowGlassOverlayDimensions">
+	    <posx>17</posx>
+	    <posy>-25</posy>
+	    <width>236</width>
+	    <height>320</height>
+	</include>
+
+	<include name="MovieFlowGlassOverlay">
+	    <include>MovieFlowThumbDimensions</include>
+	    <bordertexture border="-16">thumbs/poster_shadow.png</bordertexture>
+	    <texture>thumbs/poster_glass_noedge.png</texture>
+	</include>
+	  
+	<include name="MovieFlowGlassOverlayAngled">
+	    <include>MovieFlowThumbDimensions</include>
+	    <bordertexture border="-16">thumbs/poster_shadow.png</bordertexture>
+	    <texture>thumbs/poster_glass_noedge.png</texture>
+	</include>
+	
+	<include name="MovieFlowOverlay">
+	    <include>MovieFlowThumbDimensions</include>
+		<colordiffuse>4e000000</colordiffuse>
+		<texture>-</texture>
+	    <aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>!Control.HasFocus(55)</visible>
+		<include>Animation_CommonFade</include>
+	</include>
+
+<!-- Music Flow Variables: Main thumbs -->
+	
+	<include name="MusicFlowThumbDimensions">
+	    <posx>18</posx>
+	    <posy>18</posy>
+	    <width>234</width>
+	    <height>234</height>
+	</include>
+	
+	<include name="MusicFlowThumb">
+	    <include>MusicFlowThumbDimensions</include>
+		<texture diffuse="thumbs/cdcover_mask.png">defaultaudiobig.png</texture>
+	    <aspectratio scalediffuse="false">scale</aspectratio>
+	</include>
+	
+	<include name="MusicFlowFolderBack">
+		<control type="image">
+			<include>MusicFlowThumbDimensions</include>
+			<texture diffuse="thumbs/cdcover_mask.png">defaultpictureback.png</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<visible>Window.IsActive(2) + Skin.HasSetting(solidpictureback)</visible>
+		</control>
+	</include>	
+
+	<include name="MusicFlowThumbMain">
+	    <include>MusicFlowThumbDimensions</include>
+		<texture diffuse="thumbs/cdcover_mask.png">defaultaudiobig.png</texture>
+	    <aspectratio scalediffuse="false">scale</aspectratio>
+	</include>
+
+<!-- Music Flow Variables: Thumb glass overlays -->
+
+	<include name="MusicFlowGlassOverlayDimensions">
+	    <posx>-14</posx>
+	    <posy>-14</posy>
+	    <width>298</width>
+	    <height>298</height>
+	</include>
+	
+	<include name="MusicFlowGlassOverlayDimensionsAA">
+	    <posx>-14</posx>
+	    <posy>-15</posy>
+	    <width>298</width>
+	    <height>300</height>
+	</include>
+	
+	<include name="MusicFlowGlassOverlayMain">
+	    <include>MusicFlowThumbDimensions</include>
+	    <bordertexture border="-18">thumbs/cd_shadow.png</bordertexture>
+	    <texture>thumbs/cd_glass_noedge.png</texture>
+	</include>  
+
+	<include name="MusicFlowGlassOverlay">
+	    <include>MusicFlowThumbDimensions</include>
+	    <bordertexture border="-18">thumbs/cd_shadow.png</bordertexture>
+	    <texture>thumbs/cd_glass_noedge.png</texture>
+	    <texture>cdcover_frame.png</texture>
+	</include>  
+	  
+	<include name="MusicFlowGlassOverlayAngled">
+	    <include>MusicFlowThumbDimensions</include>
+	    <bordertexture border="-18">thumbs/cd_shadow.png</bordertexture>
+	    <texture>thumbs/cd_glass_noedge.png</texture>
+	</include>
+
+<!-- Music Flow Variables: Icon labels -->
+	
+	<include name="MusicFlowOverlay">
+	    <include>MusicFlowThumbDimensions</include>
+		<colordiffuse>4e000000</colordiffuse>
+		<texture>-</texture>
+	    <aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>!Control.HasFocus(55)</visible>
+	</include>
+  
+<!-- Common Flow labels -->
+
+	<include name="FlowLabelVars">
+	    <posx>0</posx>	
+	    <width>1280</width>
+	    <align>center</align>
+	    <aligny>center</aligny>
+	</include>
+
+	<include name="FlowMainLabel">
+		<include>FlowLabelVars</include>
+	    <posy>563</posy>
+	    <font>Font_MediaWindowTitle</font>
+		<textcolor>9b3cd2fd</textcolor>
+	</include>
+
+	<include name="FlowDetailLabel">
+		<include>FlowLabelVars</include>
+	    <posy>587</posy>
+	    <font>Font_List</font>
+		<textcolor>d0FFFFFF</textcolor>
+	</include>
+	
+<!-- Music Flow objects -->	
+
+	<include name="CoverflowSquare">
+	    <control type="group" id="8001">
+	        <posy>190</posy>
+	        <visible>Control.IsVisible(55) + Container.OnNext + ![Skin.HasSetting(flattenflow) | Container.Content(episodes)]</visible>
+	        <animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
+	        <control type="group">
+	            <posx>50</posx>
+	            <visible>Container.OnNext</visible>
+	            <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+	            <animation effect="rotatey" center="-50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-6).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>150</posx>
+	            <animation effect="rotatey" center="50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>250</posx>
+	            <animation effect="rotatey" center="150" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>350</posx>
+	            <animation effect="rotatey" center="250" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>450</posx>
+	            <animation effect="rotatey" center="350" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>1060</posx>
+	            <visible>!Container.OnNext</visible>
+	            <animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+	            <animation effect="rotatey" center="1430" start="65" end="65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>960</posx>
+	            <animation effect="rotatey" center="1330" start="65" end="65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>860</posx>
+	            <animation effect="rotatey" center="1230" start="65" end="65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>760</posx>
+	            <animation effect="rotatey" center="1130" start="65" end="65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>660</posx>
+	            <animation effect="rotatey" center="1030" start="65" end="65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(1).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <visible>Container.OnNext</visible>
+	            <animation effect="slide" end="45,0" time="250" reversible="false">Hidden</animation>
+	            <control type="group">
+	                <posx>560</posx>
+	                <visible>Container.OnNext</visible>
+	                <animation effect="rotatey" center="930" start="0" end="-65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+	                <animation effect="rotatey" center="930" start="65" end="65" time="0" condition="true">Conditional</animation>
+	                <control type="group">
+					<include>MusicFlowFolderBack</include>					
+	                    <control type="image">
+	                        <include>MusicFlowThumb</include>
+	                        <info>ListItem(0).Icon</info>
+	                    </control>
+	                    <control type="image">
+	                        <description>Glass overlay</description>
+	                        <include>MusicFlowGlassOverlayAngled</include>
+	                    </control>
+	                    <control type="image">
+	                        <description>Black overlay</description>
+	                        <include>MusicFlowOverlay</include>
+	                    </control>
+	                </control>
+	            </control>
+	            <control type="group">
+	                <posx>505</posx>
+	                <visible>Container.OnNext</visible>
+	                <animation effect="rotatey" center="405" start="0" end="-65" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+	                <control type="group">
+					<include>MusicFlowFolderBack</include>					
+	                    <control type="image">
+	                        <include>MusicFlowThumb</include>
+	                        <info>ListItem(-1).Icon</info>
+	                    </control>
+	                    <control type="image">
+	                        <description>Glass overlay</description>
+	                        <include>MusicFlowGlassOverlayAngled</include>
+	                    </control>
+	                    <control type="image">
+	                        <description>Black overlay</description>
+	                        <include>MusicFlowOverlay</include>
+	                    </control>
+	                </control>
+	            </control>
+	        </control>
+	    </control>
+	    <control type="group" id="8002">
+	        <posy>190</posy>
+	        <visible>Control.IsVisible(55) + Container.OnPrevious + ![Skin.HasSetting(flattenflow) | Container.Content(episodes)]</visible>
+	        <animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
+	        <control type="group">
+	            <posx>960</posx>
+	            <visible>Container.OnPrevious</visible>
+	            <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+	            <animation effect="rotatey" center="1330" start="65" end="65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(6).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>860</posx>
+	            <animation effect="rotatey" center="1230" start="65" end="65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>760</posx>
+	            <animation effect="rotatey" center="1130" start="65" end="65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>660</posx>
+	            <animation effect="rotatey" center="1030" start="65" end="65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>560</posx>
+	            <animation effect="rotatey" center="930" start="65" end="65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>-50</posx>
+	            <visible>!Container.OnPrevious</visible>
+	            <animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
+	            <animation effect="rotatey" center="-150" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>50</posx>
+	            <animation effect="rotatey" center="-50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>150</posx>
+	            <animation effect="rotatey" center="50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>250</posx>
+	            <animation effect="rotatey" center="150" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>350</posx>
+	            <animation effect="rotatey" center="250" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-1).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <visible>Container.OnPrevious</visible>
+	            <animation effect="slide" end="-45,0" time="250" reversible="false">Hidden</animation>
+	            <control type="group">
+	                <posx>450</posx>
+	                <visible>Container.OnPrevious</visible>
+	                <animation effect="rotatey" center="350" start="0" end="65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+	                <animation effect="rotatey" center="350" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	                <control type="group">
+					<include>MusicFlowFolderBack</include>					
+	                    <control type="image">
+	                        <include>MusicFlowThumb</include>
+	                        <info>ListItem(0).Icon</info>
+	                    </control>
+	                    <control type="image">
+	                        <description>Glass overlay</description>
+	                        <include>MusicFlowGlassOverlayAngled</include>
+	                    </control>
+	                    <control type="image">
+	                        <description>Black overlay</description>
+	                        <include>MusicFlowOverlay</include>
+	                    </control>
+	                </control>
+	            </control>
+	            <control type="group">
+	                <posx>505</posx>
+	                <visible>Container.OnPrevious</visible>
+	                <animation effect="rotatey" center="875" start="0" end="65" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+	                <control type="group">
+					<include>MusicFlowFolderBack</include>					
+	                    <control type="image">
+	                        <include>MusicFlowThumb</include>
+	                        <info>ListItem(1).Icon</info>
+	                    </control>
+	                    <control type="image">
+	                        <description>Glass overlay</description>
+	                        <include>MusicFlowGlassOverlayAngled</include>
+	                    </control>
+	                    <control type="image">
+	                        <description>Black overlay</description>
+	                        <include>MusicFlowOverlay</include>
+	                    </control>
+	                </control>
+	            </control>
+	        </control>
+	    </control>
+		<control type="button" id="971">
+			<texture>-</texture>
+			<visible>![Skin.HasSetting(flattenflow) | Container.Content(episodes)]</visible>
+			<animation effect="fade" start="100" end="0" time="800">Hidden</animation>
+		</control>
+	    <control type="group" id="8000">
+	        <posy>190</posy>
+	        <visible>Control.IsVisible(55) + !Control.IsVisible(8001) + !Control.IsVisible(8002) + [Control.IsVisible(971) + !Container.Content(episodes)]</visible>
+	        <control type="group">
+	            <posx>50</posx>
+	            <animation effect="rotatey" center="-50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="-50" start="0" end="65" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="-795" time="800" tween="cubic" easing="inout" />
+				</animation>				
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>150</posx>
+	            <animation effect="rotatey" center="50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="50" start="0" end="65" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="-645" time="800" tween="cubic" easing="inout" />
+				</animation>						
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>250</posx>
+	            <animation effect="rotatey" center="150" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="150" start="0" end="65" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="-495" time="800" tween="cubic" easing="inout" />
+				</animation>				
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>350</posx>
+	            <animation effect="rotatey" center="250" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="250" start="0" end="65" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="-345" time="800" tween="cubic" easing="inout" />
+				</animation>					
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>450</posx>
+	            <animation effect="rotatey" center="350" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="350" start="0" end="65" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="-195" time="800" tween="cubic" easing="inout" />
+				</animation>				
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(-1).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>960</posx>
+	            <animation effect="rotatey" center="1330" start="65" end="65" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="1330" start="0" end="-65" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="795" time="800" tween="cubic" easing="inout" />
+				</animation>				
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>860</posx>
+	            <animation effect="rotatey" center="1230" start="65" end="65" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="1230" start="0" end="-65" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="645" time="800" tween="cubic" easing="inout" />
+				</animation>				
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>760</posx>
+	            <animation effect="rotatey" center="1130" start="65" end="65" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="1130" start="0" end="-65" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="495" time="800" tween="cubic" easing="inout" />
+				</animation>				
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>660</posx>
+	            <animation effect="rotatey" center="1030" start="65" end="65" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="1030" start="0" end="-65" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="345" time="800" tween="cubic" easing="inout" />
+				</animation>					
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>560</posx>
+	            <animation effect="rotatey" center="930" start="65" end="65" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="930" start="0" end="-65" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="195" time="800" tween="cubic" easing="inout" />
+				</animation>				
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumb</include>
+	                    <info>ListItem(1).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>505</posx>
+	            <control type="group">
+					<include>MusicFlowFolderBack</include>				
+	                <control type="image">
+	                    <include>MusicFlowThumbMain</include>
+	                    <info>ListItem(0).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MusicFlowGlassOverlayMain</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MusicFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	    </control>
+	</include>
+	
+<!-- Movie Flow objects -->
+	
+	<include name="CoverflowMovies">
+	    <control type="group" id="9001">
+	        <posy>187</posy>
+	        <visible>Control.IsVisible(55) + Container.OnNext + !Skin.HasSetting(flattenflow)</visible>
+	        <animation effect="slide" end="-90,0" time="250" reversible="false">Hidden</animation>
+	        <control type="group">
+	            <posx>10</posx>
+	            <visible>Container.OnNext</visible>
+	            <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+	            <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-7).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>100</posx>
+	            <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-6).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>190</posx>
+	            <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>280</posx>
+	            <animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>370</posx>
+	            <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>460</posx>
+	            <animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>1090</posx>
+	            <visible>!Container.OnNext</visible>
+	            <animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+	            <animation effect="rotatey" center="1470" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(6).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>1000</posx>
+	            <animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>910</posx>
+	            <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>820</posx>
+	            <animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>730</posx>
+	            <animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>640</posx>
+	            <animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(1).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <visible>Container.OnNext</visible>
+	            <animation effect="slide" end="50,0" time="250" reversible="false">Hidden</animation>
+	            <control type="group">
+	                <posx>550</posx>
+	                <visible>Container.OnNext</visible>
+	                <animation effect="rotatey" center="930" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+	                <animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+	                <control type="group">
+                    <control type="image">
+	                        <include>MovieFlowThumb</include>
+	                        <info>ListItem(0).Icon</info>
+	                    </control>
+	                    <control type="image">
+	                        <description>Glass overlay</description>
+	                        <include>MovieFlowGlassOverlayAngled</include>
+	                    </control>
+	                    <control type="image">
+	                        <description>Black overlay</description>
+	                        <include>MovieFlowOverlay</include>
+	                    </control>
+	                </control>
+	            </control>
+	            <control type="group">
+	                <posx>505</posx>
+	                <visible>Container.OnNext</visible>
+	                <animation effect="rotatey" center="405" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+	                <control type="group">
+                    <control type="image">
+	                        <include>MovieFlowThumb</include>
+	                        <info>ListItem(-1).Icon</info>
+	                    </control>
+	                    <control type="image">
+	                        <description>Glass overlay</description>
+	                        <include>MovieFlowGlassOverlayAngled</include>
+	                    </control>
+	                    <control type="image">
+	                        <description>Black overlay</description>
+	                        <include>MovieFlowOverlay</include>
+	                    </control>
+	                </control>
+	            </control>
+	        </control>
+	    </control>
+	    <control type="group" id="9002">
+	        <posy>187</posy>
+	        <visible>Control.IsVisible(55) + Container.OnPrevious + !Skin.HasSetting(flattenflow)</visible>
+	        <animation effect="slide" end="90,0" time="250" reversible="false">Hidden</animation>
+	        <control type="group">
+	            <posx>1000</posx>
+	            <visible>Container.OnPrevious</visible>
+	            <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+	            <animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(7).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>910</posx>
+	            <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(6).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>820</posx>
+	            <animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>730</posx>
+	            <animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>640</posx>
+	            <animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>550</posx>
+	            <animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>-80</posx>
+	            <visible>!Container.OnPrevious</visible>
+	            <animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
+	            <animation effect="rotatey" center="-180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-6).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>10</posx>
+	            <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>100</posx>
+	            <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>190</posx>
+	            <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>280</posx>
+	            <animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>370</posx>
+	            <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-1).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <visible>Container.OnPrevious</visible>
+	            <animation effect="slide" end="-50,0" time="250" reversible="false">Hidden</animation>
+	            <control type="group">
+	                <posx>460</posx>
+	                <visible>Container.OnPrevious</visible>
+	                <animation effect="rotatey" center="360" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+	                <animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+	                <control type="group">
+                    <control type="image">
+	                        <include>MovieFlowThumb</include>
+	                        <info>ListItem(0).Icon</info>
+	                    </control>
+	                    <control type="image">
+	                        <description>Glass overlay</description>
+	                        <include>MovieFlowGlassOverlay</include>
+	                    </control>
+	                    <control type="image">
+	                        <description>Black overlay</description>
+	                        <include>MovieFlowOverlay</include>
+	                    </control>
+	                </control>
+	            </control>
+	            <control type="group">
+	                <posx>505</posx>
+	                <visible>Container.OnPrevious</visible>
+	                <animation effect="rotatey" center="885" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+	                <control type="group">
+                    <control type="image">
+	                        <include>MovieFlowThumb</include>
+	                        <info>ListItem(1).Icon</info>
+	                    </control>
+	                    <control type="image">
+	                        <description>Glass overlay</description>
+	                        <include>MovieFlowGlassOverlay</include>
+	                    </control>
+	                    <control type="image">
+	                        <description>Black overlay</description>
+	                        <include>MovieFlowOverlay</include>
+	                    </control>
+	                </control>
+	            </control>
+	        </control>
+	    </control>
+		<control type="button" id="962">
+			<texture>-</texture>
+			<visible>!Skin.HasSetting(flattenflow)</visible>
+			<animation effect="fade" start="100" end="0" time="800">Hidden</animation>
+		</control>
+	    <control type="group" id="9000">
+	        <posy>187</posy>
+	        <visible>Control.IsVisible(55) + !Control.IsVisible(9001) + !Control.IsVisible(9002) + Control.IsVisible(962)</visible>
+	        <control type="group">
+	            <posx>10</posx>
+	            <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="-90" start="0" end="55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="-685" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-6).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>100</posx>
+	            <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="0" start="0" end="55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="-577" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>190</posx>
+	            <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="90" start="0" end="55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="-469" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>280</posx>
+	            <animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="180" start="0" end="55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="-362" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>370</posx>
+	            <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="270" start="0" end="55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="-256" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>460</posx>
+	            <animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="360" start="0" end="55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="-151" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(-1).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>1000</posx>
+	            <animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="1380" start="0" end="-55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="685" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(6).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>910</posx>
+	            <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="1290" start="0" end="-55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="577" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(5).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>820</posx>
+	            <animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="1200" start="0" end="-55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="469" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(4).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>730</posx>
+	            <animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="1110" start="0" end="-55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="362" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(3).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>640</posx>
+	            <animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="1020" start="0" end="-55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="256" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(2).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>550</posx>
+	            <animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenflow)">
+					<effect type="rotatey" center="930" start="0" end="-55" time="800" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="151" time="800" tween="cubic" easing="inout" />
+				</animation>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumb</include>
+	                    <info>ListItem(1).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlayAngled</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	        <control type="group">
+	            <posx>505</posx>
+	            <control type="group">
+                    <control type="image">
+	                    <include>MovieFlowThumbMain</include>
+	                    <info>ListItem(0).Icon</info>
+	                </control>
+	                <control type="image">
+	                    <description>Glass overlay</description>
+	                    <include>MovieFlowGlassOverlay</include>
+	                </control>
+	                <control type="image">
+	                    <description>Black overlay</description>
+	                    <include>MovieFlowOverlay</include>
+	                </control>
+	            </control>
+	        </control>
+	    </control>
+	</include>
+
+
+	
+	<include name="Viewtype_Coverflow">
+	    <control type="group">
+
+	        <include>CoverflowVisible</include>
+	    <control type="group">
+	        <visible>Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)</visible>
+	        <include>CoverflowMovies</include>
+	    </control>
+	    <control type="group">
+	        <visible>Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2) | Container.Content(episodes)</visible>
+	        <include>CoverflowSquare</include>
+	    </control>
+	    <control type="group">
+	        <include>CoverflowVisible</include>
+	        <control type="wraplist" id="55">
+				<include condition="!Container.Content(episodes) + [Window.IsActive(28) | Window.IsActive(myvideofiles) | Window.IsActive(1)]">MovieFlowGroupVars</include>
+				<include condition="Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2) | Container.Content(episodes)">MusicFlowGroupVars</include>
+	            <onleft>55</onleft>
+	            <onright>55</onright>
+	            <onup>7000</onup>
+	            <ondown>60</ondown>
+	            <viewtype label="Coverflow">list</viewtype>
+	            <pagecontrol>60</pagecontrol>
+	            <orientation>horizontal</orientation>
+	            <scrolltime>250</scrolltime>
+	            <focusposition>3</focusposition>
+                <itemlayout height="350" width="196" condition="Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)">
+                    <control type="image">
+                        <include>MovieFlowThumbMain</include>
+                        <info>ListItem.Icon</info>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000)</visible>
+                    </control>
+                    <control type="image">
+                        <description>Glass overlay</description>
+                        <include>MovieFlowGlassOverlay</include>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000)</visible>
+                    </control>
+				</itemlayout>
+                <focusedlayout height="350" width="196"	condition="Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)">
+                    <control type="image">
+                        <include>MovieFlowThumbMain</include>
+                        <info>ListItem.Icon</info>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000)</visible>
+						<animation effect="zoom" start="100" end="110" center="135,130" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
+                    </control>
+                    <control type="image">
+                        <description>Glass overlay</description>
+                        <include>MovieFlowGlassOverlay</include>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000)</visible>
+						<animation effect="zoom" start="100" end="110" center="135,130" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>						
+                    </control>
+				</focusedlayout>
+                <itemlayout height="350" width="250" condition="Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2) | Container.Content(episodes)">
+                    <control type="image">
+                        <include>MusicFlowThumbMain</include>
+                        <info>ListItem.Icon</info>
+						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)]</visible>
+                    </control>
+                    <control type="image">
+                        <description>Glass overlay</description>
+                        <include>MusicFlowGlassOverlay</include>
+						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)]</visible>
+                    </control>
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicFlowOverlay</include>
+						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)] + !Control.HasFocus(55)</visible>
+                    </control>
+				</itemlayout>
+                <focusedlayout height="350" width="250" condition="Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2) | Container.Content(episodes)">
+                    <control type="image">
+                        <include>MusicFlowThumbMain</include>
+                        <info>ListItem.Icon</info>
+						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)]</visible>
+						<animation effect="zoom" start="100" end="110" center="135,160" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,160" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + [Skin.HasSetting(flattenflow) | Container.Content(episodes)]">Unfocus</animation>						
+                    </control>
+                    <control type="image">
+                        <description>Glass overlay</description>
+                        <include>MusicFlowGlassOverlay</include>
+						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)]</visible>
+						<animation effect="zoom" start="100" end="110" center="135,160" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,160" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + [Skin.HasSetting(flattenflow) | Container.Content(episodes)]">Unfocus</animation>						
+                    </control>
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicFlowOverlay</include>
+						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)] + !Control.HasFocus(55)</visible>
+						<animation effect="zoom" start="100" end="110" center="135,160" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,160" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + [Skin.HasSetting(flattenflow) | Container.Content(episodes)]">Unfocus</animation>						
+                    </control>
+				</focusedlayout>				
+	        </control>
+
+	        <control type="scrollbar" id="60">
+	            <posx>67</posx>
+	            <posy>485</posy>
+	            <width>1147</width>
+	            <height>41</height>
+	            <visible>Control.IsVisible(55)</visible>
+	            <texturesliderbackground>windows/scrollbarbackwide_nofocus.png</texturesliderbackground>
+	            <texturesliderbar>-</texturesliderbar>
+	            <texturesliderbarfocus>-</texturesliderbarfocus>
+	            <textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>
+	            <textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
+	            <pulseonselect></pulseonselect>
+	            <orientation>horizontal</orientation>
+	            <showonepage>false</showonepage>
+	            <onup>55</onup>
+	            <ondown>55</ondown>
+	            <onleft>60</onleft>
+	            <onright>60</onright>
+	            <include>Animation_CommonFade</include>
+	        </control>
+			
+			<include>Furniture_CoverflowMediaFlags</include>
+				
+	        <control type="group">
+	            <include>Animation_CommonFade</include>
+                <control type="fadelabel">
+                    <label>31609</label>
+                    <label>31610</label>					
+					<scrollout>false</scrollout>
+					<pauseatend>3000</pauseatend>
+					<scroll>false</scroll>
+                    <include>FlowMainLabel</include>
+					<visible>Window.IsActive(myvideofiles) + stringcompare(container(55).numitems,0)</visible>
+	                <animation effect="slide" start="0,10" end="0,10" time="0" condition="true">Conditional</animation>					
+                </control>
+                <control type="fadelabel">
+                    <label>31609</label>
+                    <label>31611</label>					
+					<scrollout>false</scrollout>
+					<pauseatend>3000</pauseatend>
+					<scroll>false</scroll>
+                    <include>FlowMainLabel</include>
+					<visible>Window.IsActive(502) + stringcompare(container(55).numitems,0)</visible>
+	                <animation effect="slide" start="0,10" end="0,10" time="0" condition="true">Conditional</animation>					
+                </control>						
+	            <control type="label">
+	                <description>Title</description>
+	                <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+	                <include>FlowMainLabel</include>
+	                <animation effect="slide" start="0,0" end="0,10" time="200" condition="IsEmpty(Control.GetLabel(75))">Conditional</animation>
+	            </control>
+	            <control type="label" id="75">
+	                <description>Detail</description>
+	                <label>$INFO[ListItem.Label2]</label>
+	                <include>FlowDetailLabel</include>
+	                <visible>Window.IsActive(501)</visible>
+	            </control>
+	            <control type="label" id="75">
+	                <description>Artist</description>
+	                <info>ListItem.Artist</info>
+	                <include>FlowDetailLabel</include>
+	                <visible>Container.Content(albums)</visible>
+	            </control>
+	            <control type="label" id="75">
+	                <description>Album and Artist</description>
+	                <label>$INFO[ListItem.Album,, -] $INFO[ListItem.Artist]</label>
+	                <include>FlowDetailLabel</include>
+	                <visible>Container.Content(songs)</visible>
+	            </control>
+	            <control type="label" id="75">
+	                <description>Detail</description>
+	                <info>ListItem.Year</info>
+	                <include>FlowDetailLabel</include>
+	                <visible>Container.Content(movies)</visible>
+	            </control>
+	            <control type="label" id="75">
+	                <description>Detail</description>
+	                <label>$INFO[ListItem.Episode] EPISODES</label>
+	                <include>FlowDetailLabel</include>
+	                <visible>Container.Content(tvshows) + !IsEmpty(ListItem.Episode)</visible>
+	            </control>
+	            <control type="label" id="75">
+	                <description>Detail</description>
+	                <label>$INFO[ListItem.TVShowTitle]</label>
+	                <include>FlowDetailLabel</include>
+	                <visible>Container.Content(seasons)</visible>
+	            </control>
+	            <control type="label" id="75">
+	                <description>Detail</description>
+	                <label>$LOCALIZE[31062] $INFO[ListItem.Season], $LOCALIZE[31063] $INFO[ListItem.Episode]</label>
+	                <include>FlowDetailLabel</include>
+	                <visible>Container.Content(episodes) + !IsEmpty(ListItem.Episode)</visible>
+	            </control>
+	            <control type="label" id="75">
+	                <description>Detail</description>
+	                <label fallback="416">$INFO[ListItem.PictureResolution]</label>
+	                <include>FlowDetailLabel</include>
+	                <visible>Window.IsActive(2) + !IsEmpty(ListItem.Label2)</visible>
+	            </control>
+	            <control type="image">
+	                <include>FlowDetailLabel</include>
+	                <include>StarRatingImage</include>
+	                <visible>![Container.Content(albums) | Container.Content(songs)] + !IsEmpty(ListItem.Rating)</visible>
+	            </control>
+	        </control>
+	    </control>
+	    </control>
+
+	</include>
+
+		<!-- ********  End of COVERFLOW   ********-->
+
+
 </includes>
 
-		<!-- ********  End of Anoobie3 ********-->

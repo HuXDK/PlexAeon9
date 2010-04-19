@@ -10,9 +10,8 @@
 			<width>0</width>
 			<height>0</height>
 			<texture>-</texture>
-			<visible>![Container().OnNext | Container().OnPrevious]</visible>
-			<animation effect="fade" start="0" end="100" time="550">Visible</animation>
-			<animation effect="fade" start="100" end="100" time="2550">Hidden</animation>
+			<visible>![Skin.HasSetting(multiplextvinfooff) | Skin.HasSetting(multiplextvinfotrigger) | Skin.HasSetting(multiplexinfooff) | Skin.HasSetting(multiplexinfotrigger) | Skin.HasSetting(oldmultiplexinfooff) | Skin.HasSetting(oldmultiplexinfotrigger) | Skin.HasSetting(oldmultiplextvinfotrigger) | Skin.HasSetting(oldmultiplextvinfooff) | Container().OnNext | Container().OnPrevious]</visible>
+			<animation effect="fade" start="0" end="100" time="150" delay="3000">Visible</animation>
 		</control>
 
 		<control type="largeimage">
