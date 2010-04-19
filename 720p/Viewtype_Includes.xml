@@ -2284,6 +2284,7 @@
 			<height>381</height>
 			<visible>Container.Content(movies) + Control.IsVisible(563) + [Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | Control.IsVisible(109) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
 			<animation effect="fade" end="0" time="200">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" time="1300">Visible</animation>
 	
 			<control type="image">
 					<posx>0</posx>
