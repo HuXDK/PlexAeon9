@@ -101,7 +101,7 @@
 			<include condition="!Skin.HasSetting(smallmoviewall)">WallIconMovieDimensions</include>
 			<include condition="Skin.HasSetting(smallmoviewall)">WallIconMovieDimensionsSmall</include>
 			<texture background="true" diffuse="wall/wall_movie_mask.png">defaultvideo.png</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<info>ListItem.Icon</info>
 			<fadetime>500</fadetime>
 		</control>
@@ -130,7 +130,7 @@
 			<include condition="!Skin.HasSetting(smallmoviewall)">WallIconMovieDimensions</include>
 			<include condition="Skin.HasSetting(smallmoviewall)">WallIconMovieDimensionsSmall</include>
 			<texture background="true" diffuse="wall/wall_movie_mask.png">defaultvideo.png</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<info>ListItem.Icon</info>
 			<fadetime>500</fadetime>
 			<include condition="!Skin.HasSetting(smallmoviewall)">WallIconZoomAnimation</include>
@@ -179,7 +179,7 @@
 			<include condition="!Skin.HasSetting(smallmoviewall)">WallIconMovieDimensionsDVD</include>
 			<include condition="Skin.HasSetting(smallmoviewall)">WallIconMovieDimensionsDVDSmall</include>
 			<texture background="true" diffuse="wall/boxes/wall_movie_mask.png">defaultvideo.png</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<info>ListItem.Icon</info>
 			<fadetime>500</fadetime>
 		</control>
@@ -216,7 +216,7 @@
 			<include condition="!Skin.HasSetting(smallmoviewall)">WallIconMovieDimensionsDVD</include>
 			<include condition="Skin.HasSetting(smallmoviewall)">WallIconMovieDimensionsDVDSmall</include>
 			<texture background="true" diffuse="wall/boxes/wall_movie_mask.png">defaultvideo.png</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<info>ListItem.Icon</info>
 			<fadetime>500</fadetime>
 			<include condition="!Skin.HasSetting(smallmoviewall)">WallIconZoomAnimationDVD</include>

@@ -182,7 +182,7 @@
 				<control type="image">
 					<include>WallIconDimensions</include>
 					<texture background="true" diffuse="wall/wall_mask.png">defaultpicture.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 					<fadetime>500</fadetime>
 					<visible>Window.IsActive(2)</visible>
@@ -190,7 +190,7 @@
 				<control type="image">
 					<include>WallIconDimensions</include>
 					<texture background="true" diffuse="wall/wall_mask.png">defaultaudio.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 					<fadetime>500</fadetime>
 					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)</visible>
@@ -219,7 +219,7 @@
 				<control type="image">
 					<include>WallIconDimensions</include>
 					<texture background="true" diffuse="wall/wall_mask.png">defaultaudio.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 					<fadetime>500</fadetime>
 					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)</visible>
@@ -228,7 +228,7 @@
 				<control type="image">
 					<include>WallIconDimensions</include>
 					<texture background="true" diffuse="wall/wall_mask.png">defaultpicture.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 					<fadetime>500</fadetime>
 					<visible>Window.IsActive(2)</visible>
@@ -269,7 +269,7 @@
 				<control type="image">
 					<include>WallIconDimensionsSmall</include>
 					<texture background="true" diffuse="wall/wall_mask.png">defaultpicture.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 					<fadetime>500</fadetime>
 					<visible>Window.IsActive(2)</visible>
@@ -277,7 +277,7 @@
 				<control type="image">
 					<include>WallIconDimensionsSmall</include>
 					<texture background="true" diffuse="wall/wall_mask.png">defaultaudio.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 					<fadetime>500</fadetime>
 					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)</visible>
@@ -306,7 +306,7 @@
 				<control type="image">
 					<include>WallIconDimensionsSmall</include>
 					<texture background="true" diffuse="wall/wall_mask.png">defaultaudio.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 					<fadetime>500</fadetime>
 					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)</visible>
@@ -315,7 +315,7 @@
 				<control type="image">
 					<include>WallIconDimensionsSmall</include>
 					<texture background="true" diffuse="wall/wall_mask.png">defaultpicture.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 					<fadetime>500</fadetime>
 					<visible>Window.IsActive(2)</visible>
