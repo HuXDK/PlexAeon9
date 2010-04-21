@@ -103,7 +103,6 @@
 			<texture background="true" diffuse="wall/wall_movie_mask.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<info>ListItem.Icon</info>
-			<fadetime>500</fadetime>
 		</control>
  
 		<control type="image">

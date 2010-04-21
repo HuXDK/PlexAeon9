@@ -268,7 +268,7 @@
 					<animation effect="fade" start="100" end="0" time="1200">Hidden</animation>
 					<include>Anoobie2IconDimensionsWrap</include>
 					<texture background="true" diffuse="thumbs/movieposter_mask.png">defaultvideobig.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 					<bordertexture border="-17">thumbs/poster_shadow.png</bordertexture>
 				</control>		
@@ -285,7 +285,7 @@
 					<animation effect="fade" start="100" end="0" time="1200">Hidden</animation>
 					<include>Anoobie2IconDimensionsWrap</include>
 					<texture  background="true" diffuse="thumbs/movieposter_mask.png">defaultvideobig.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 					<bordertexture border="-17">thumbs/poster_shadow.png</bordertexture>
 					<animation type="Focus">
