@@ -144,19 +144,19 @@
 			</control>
 			<control type="label">
 				<include>ListLabel_Main</include>
-				<include>listcolorfocus</include>	
+				<include>listcolornofocus</include>	
 				<info>ListItem.Label</info>
 			</control>
 			<control type="label">
 				<visible>![Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 				<include>ListLabel_Detail</include>
-				<include>listcolorfocus</include>
+				<include>listcolornofocus</include>
 				<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
 			</control>			
 			<control type="label">
 				<visible>!Container.Content(movies)</visible>
 				<include>ListLabel_Detail</include>
-				<include>listcolorfocus</include>
+				<include>listcolornofocus</include>
 				<animation effect="slide" start="0,0" end="-665,0" time="0" easing="inout" tween="cubic" condition="Container.Content(episodes)">Conditional</animation>
 				<label>[UPPERCASE]$INFO[ListItem.episode][/UPPERCASE]</label>
 			</control>			
