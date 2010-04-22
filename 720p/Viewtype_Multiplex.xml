@@ -1327,27 +1327,6 @@
 			<ondown>52</ondown>
 		</control>
  
-		<control type="image">
-			<posx>40</posx>
-			<posy>537</posy>
-			<width>33</width>
-			<height>37</height>
-			<texture>multiplex/multiplex_arrow2.png</texture>
-			<include>Animation_HideMultiplex</include>
-			<visible>Control.IsVisible(52)</visible>
-		</control>
- 
-		<control type="image">
-			<posx>1207</posx>
-			<posy>537</posy>
-			<width>33</width>
-			<height>37</height>
-			<texture flipx="true">multiplex/multiplex_arrow2.png</texture>
-			<include>Animation_HideMultiplex</include>
-			<visible>Control.IsVisible(52)</visible>
-		</control>
- 
- 
 		<include>MultiplexInfoPaneMovies</include>
 		<include>MultiplexInfoPaneTVPoster</include>
 		<control type="group">
@@ -1370,7 +1349,6 @@
 			<scrolltime>200</scrolltime>
 			<visible>Container.Content(movies) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)]</visible>
 			<include>Animation_HideMultiplex</include>
-			<preloaditems>4</preloaditems>
 			<itemlayout width="120" height="300">
 				<include condition="!Skin.HasSetting(dvdcase)">MultiplexNormalCoversNoFocus</include>
 				<include condition="Skin.HasSetting(dvdcase)">MultiplexDVDCoversNoFocus</include>
@@ -1398,26 +1376,13 @@
 			<orientation>horizontal</orientation>
 			<showonepage>false</showonepage>
 			<onup>57</onup>
-			<ondown>197</ondown>
+			<ondown>52</ondown>
 			<onleft>60</onleft>
 			<onright>60</onright>
 			<include>Animation_HideMultiplex</include>
 			<include>Animation_CommonFade</include>
 		</control>
- 
-		<control type="button" id="197">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>0</width>
-			<height>0</height>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<onleft>52</onleft>
-			<onright>52</onright>
-			<onup>52</onup>
-			<ondown>52</ondown>
-		</control>
- 
+  
 		<control type="group">
  
 			<visible>Control.IsVisible(52)</visible>
