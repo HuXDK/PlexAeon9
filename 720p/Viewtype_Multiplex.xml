@@ -896,7 +896,7 @@
  
 		<control type="image">
 			<include>MultiplexIconDimensionsWrap</include>
-			<bordertexture border="-17">multiplex/multiplex_border.png</bordertexture>
+		<bordertexture border="-3">wall/wall_movie_nfborder.png</bordertexture>
 			<texture>common/blank.png</texture>
 		</control>
  
@@ -939,7 +939,7 @@
  
 		<control type="image">
 			<include>MultiplexIconDimensionsWrap</include>
-			<bordertexture border="-17">multiplex/multiplex_border.png</bordertexture>
+		<bordertexture border="-3">wall/wall_movie_nfborder.png</bordertexture>
 			<texture>common/blank.png</texture>
 			<include>Animation_MultiplexFocusZoom</include>
 		</control>

@@ -3991,8 +3991,7 @@
 				<orientation>horizontal</orientation>
 				<scrolltime>200</scrolltime>
 				<focusposition>3</focusposition>
-				<visible>![Window.IsActive(24) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]] | [Window.IsActive(24) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]</visible>
-				<preloaditems>2</preloaditems>				
+				<visible>true</visible>
 				<itemlayout height="350" width="196" condition="Window.IsActive(28) | [Window.IsActive(24) + !Container.Content(episodes)] | Window.IsActive(1)">
 					<control type="image">
 						<include>MovieShowcaseThumbMain</include>

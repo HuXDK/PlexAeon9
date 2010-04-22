@@ -2680,6 +2680,12 @@
 					<info>ListItem.Icon</info>
 				</control>		
 				<control type="image">
+					<include>Anoobie3IconDimensionsWrap</include>
+					<bordertexture border="-7">wall/wall_movie_fborder.png</bordertexture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				    <texture>thumbs/poster_glass_noedge.png</texture>
+				</control>		
+				<control type="image">
 					<posx>58</posx>
 					<posy>16</posy>
 					<width>30</width>
@@ -2705,6 +2711,13 @@
 					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 					<info>ListItem.Overlay</info>
 				</control>
+				<control type="image">
+					<include>Anoobie3IconDimensionsWrap</include>
+					<bordertexture border="-7">wall/wall_movie_fborder.png</bordertexture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				    <texture>thumbs/poster_glass_noedge.png</texture>
+					<animation effect="zoom" center="45,75" start="100" end="120" time="400" delay="300" easing="out" tween="cubic" reversible="true">Focus</animation>					
+				</control>		
 				
 			</focusedlayout>
 			</control>			
@@ -2772,13 +2785,13 @@
 
 	<include name="MovieFlowGlassOverlay">
 	    <include>MovieFlowThumbDimensions</include>
-	    <bordertexture border="-16">thumbs/poster_shadow.png</bordertexture>
+		<bordertexture border="-36">wall/wall_movie_fborder.png</bordertexture>
 	    <texture>thumbs/poster_glass_noedge.png</texture>
 	</include>
 	  
 	<include name="MovieFlowGlassOverlayAngled">
 	    <include>MovieFlowThumbDimensions</include>
-	    <bordertexture border="-16">thumbs/poster_shadow.png</bordertexture>
+		<bordertexture border="-36">wall/wall_movie_fborder.png</bordertexture>
 	    <texture>thumbs/poster_glass_noedge.png</texture>
 	</include>
 	
@@ -4515,15 +4528,15 @@
                         <include>MovieFlowThumbMain</include>
                         <info>ListItem.Icon</info>
 						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,130" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,130" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieFlowGlassOverlay</include>
 						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,130" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,130" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>						
+						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>						
                     </control>
 				</focusedlayout>
                 <itemlayout height="350" width="250" condition="Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2) | Container.Content(episodes)">

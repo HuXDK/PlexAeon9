@@ -657,12 +657,12 @@
  
 	<!-- Poster Glass/Shadow -->
 	<include name="MoviePosterNormal">
-		<bordertexture border="-17">thumbs/poster_shadow.png</bordertexture>
+		<bordertexture border="-23">thumbs/poster_shadow.png</bordertexture>
 		<texture>thumbs/poster_glass.png</texture>
 	</include>
  
 	<include name="MoviePosterNormalNoEdge">
-		<bordertexture border="-17">thumbs/poster_shadow.png</bordertexture>
+		<bordertexture border="-23">thumbs/poster_shadow.png</bordertexture>
 		<texture>thumbs/poster_glass_noedge.png</texture>
 	</include>
  
