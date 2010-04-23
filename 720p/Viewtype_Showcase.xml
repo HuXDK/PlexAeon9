@@ -102,7 +102,7 @@
 					</control>
 					<control type="label">
 						<include>ShowcaseInfoValue</include>
-						<label fallback="31425">$INFO[Container(57).ListItem.Director]</label>
+						<label fallback="31425">$INFO[ListItem.Director]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -113,7 +113,7 @@
 					</control>
 					<control type="label">
 						<include>ShowcaseInfoValue</include>
-						<label fallback="31425">$INFO[Container(57).ListItem.Writer]</label>
+						<label fallback="31425">$INFO[ListItem.Writer]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -124,7 +124,7 @@
 					</control>
 					<control type="label">
 						<include>ShowcaseInfoValue</include>
-						<label fallback="31425">$INFO[Container(57).ListItem.Year]</label>
+						<label fallback="31425">$INFO[ListItem.Year]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -136,7 +136,7 @@
 					</control>
 					<control type="label">
 						<include>ShowcaseInfoValue</include>
-						<label fallback="31425">$INFO[Container(57).ListItem.Duration]</label>
+						<label fallback="31425">$INFO[ListItem.Duration]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -148,7 +148,7 @@
 					</control>
 					<control type="label">
 						<include>ShowcaseInfoValue</include>
-						<label fallback="31425">$INFO[Container(57).ListItem.Genre]</label>
+						<label fallback="31425">$INFO[ListItem.Genre]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -160,7 +160,7 @@
 					</control>
 					<control type="label">
 						<include>ShowcaseInfoValue</include>
-						<label fallback="31425">$INFO[Container(57).ListItem.MPAA]</label>
+						<label fallback="31425">$INFO[ListItem.MPAA]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -173,7 +173,7 @@
 					<control type="label">
 						<include>ShowcaseInfoValue</include>
 						<visible>Skin.HasSetting(movieratingtext)</visible>
-						<label fallback="31425">$INFO[Container(57).ListItem.RatingAndVotes]</label>
+						<label fallback="31425">$INFO[ListItem.RatingAndVotes]</label>
 					</control>
 					<control type="image">
 	            	    <description>IMDB Star Rating</description>
@@ -195,7 +195,7 @@
 					</control>
 					<control type="label">
 						<include>ShowcaseInfoValueBigThumb</include>
-						<label fallback="31425">$INFO[Container(57).ListItem.Duration]</label>
+						<label fallback="31425">$INFO[ListItem.Duration]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -207,7 +207,7 @@
 					</control>
 					<control type="label">
 						<include>ShowcaseInfoValueBigThumb</include>
-						<label fallback="31425">$INFO[Container(57).ListItem.MPAA]</label>
+						<label fallback="31425">$INFO[ListItem.MPAA]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -220,7 +220,7 @@
 					<control type="label">
 						<include>ShowcaseInfoValueBigThumb</include>
 						<visible>Skin.HasSetting(movieratingtext)</visible>
-						<label fallback="31425">$INFO[Container(57).ListItem.RatingAndVotes]</label>
+						<label fallback="31425">$INFO[ListItem.RatingAndVotes]</label>
 					</control>
 					<control type="image">
 	            	    <description>IMDB Star Rating</description>
@@ -309,7 +309,7 @@
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[Container(57).ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+					<texture>$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -327,7 +327,7 @@
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[Container(57).ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+					<texture>$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
 				</control>
 			</control>
 			<!--New Poster Group-->
@@ -385,7 +385,7 @@
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
 					<timeperimage>4000</timeperimage>
-					<imagepath background="true">$INFO[Container(57).ListItem.Path,,extrathumbs]</imagepath>
+					<imagepath background="true">$INFO[ListItem.Path,,extrathumbs]</imagepath>
 				</control>
 			</control>
 			<control type="group">
@@ -415,7 +415,7 @@
 					<height>254</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[Container(57).listitem.property(fanart_image)]</texture>
+					<texture>$INFO[ListItem.property(fanart_image)]</texture>
 					<visible>[!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(homevis)]]</visible>
 				</control>
 				<control type="image">
@@ -479,10 +479,10 @@
 					<posy>1</posy>
 					<width>522</width>
 					<height>293</height>
-					<aspectratio>scale</aspectratio>
-					<fadetime>400</fadetime>
-					<texture>$INFO[Container(57).listitem.property(fanart_image)]</texture>
-					<visible>[!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(homevis)]]</visible>
+					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[ListItem.property(fanart_image)]</texture>
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<visible>[!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(homevis)]] + Control.IsVisible(70109)</visible>
 				</control>
 				<control type="image">
 					<posx>140</posx>
@@ -504,7 +504,7 @@
 					<label>Press DOWN to see trailer</label>
 					<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(showcasebigtrailer) + [!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(homevis)]] + Control.IsVisible(57) + !Control.HasFocus(70197) + [Control.IsVisible(70109) | Control.HasFocus(70110) | Skin.HasSetting(showcaseinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(showcaseinfotrigger)]]</visible>
 					<colordiffuse>d0FFFFFF</colordiffuse>
-					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
+					<animation effect="fade" start="0" end="100" time="400" reversible="false">VisibleChange</animation>
 				</control>
 				<control type="label">
 					<posx>140</posx>
@@ -1098,7 +1098,7 @@
 						<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>
 						<control type="image">
 							<include>MusicShowcaseThumb</include>
-							<info>ListItem(0).Thumb</info>
+							<info>ListItem.Thumb</info>
 						</control>
 						<include>genre_Showcase_7</include>
 						<!-- <<<<<< Add this -->
@@ -1109,7 +1109,7 @@
 						<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>
 						<control type="image">
 							<include>MusicShowcaseThumbReflection</include>
-							<info>ListItem(0).Thumb</info>
+							<info>ListItem.Thumb</info>
 						</control>
 						<control type="image">
 							<description>Glass overlay reflection</description>
@@ -1443,7 +1443,7 @@
 						<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>
 						<control type="image">
 							<include>MusicShowcaseThumb</include>
-							<info>ListItem(0).Thumb</info>
+							<info>ListItem.Thumb</info>
 						</control>
 						<include>genre_Showcase_7</include>
 						<!-- <<<<<< Add this -->
@@ -1454,7 +1454,7 @@
 						<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>
 						<control type="image">
 							<include>MusicShowcaseThumbReflection</include>
-							<info>ListItem(0).Thumb</info>
+							<info>ListItem.Thumb</info>
 						</control>
 						<control type="image">
 							<description>Glass overlay reflection</description>
@@ -1832,7 +1832,7 @@
 					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>
 					<control type="image">
 						<include>MusicShowcaseThumbMain</include>
-						<info>ListItem(0).Thumb</info>
+						<info>ListItem.Thumb</info>
 					</control>
 					<include>genre_Showcase_7</include>
 					<!-- <<<<<< Add this -->
@@ -1842,7 +1842,7 @@
 					</control>
 					<control type="image">
 						<include>MusicShowcaseThumbReflection</include>
-						<info>ListItem(0).Thumb</info>
+						<info>ListItem.Thumb</info>
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -1870,12 +1870,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-7).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-7).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)]</visible>
+						
 					</control>
 					<include>genre_Showcase_15</include>
 					<!-- <<<<<< Add this -->
@@ -1886,12 +1881,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-7).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-7).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -1901,7 +1891,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-7).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-7).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_15</include>
@@ -1915,12 +1905,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_1</include>
 					<!-- <<<<<< Add this -->
@@ -1931,12 +1916,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -1946,7 +1926,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-6).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-6).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_1</include>
@@ -1960,12 +1940,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_2</include>
 					<!-- <<<<<< Add this -->
@@ -1976,12 +1951,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -1991,7 +1961,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-5).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-5).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_2</include>
@@ -2005,12 +1975,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_3</include>
 					<!-- <<<<<< Add this -->
@@ -2021,12 +1986,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2036,7 +1996,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-4).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-4).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_3</include>
@@ -2050,12 +2010,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_4</include>
 					<!-- <<<<<< Add this -->
@@ -2066,12 +2021,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2081,7 +2031,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-3).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-3).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_4</include>
@@ -2095,12 +2045,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_5</include>
 					<!-- <<<<<< Add this -->
@@ -2111,12 +2056,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2126,7 +2066,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-2).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-2).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_5</include>
@@ -2141,22 +2081,12 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(9).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(9).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(9).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(9).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 				</control>
 			</control>
@@ -2168,22 +2098,12 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(8).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(8).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(8).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(8).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 				</control>
 			</control>
@@ -2195,22 +2115,12 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(7).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(7).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(7).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(7).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 				</control>
 			</control>
@@ -2223,12 +2133,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_13</include>
 					<!-- <<<<<< Add this -->
@@ -2239,12 +2144,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2254,7 +2154,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(6).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(6).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_13</include>
@@ -2268,12 +2168,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_12</include>
 					<!-- <<<<<< Add this -->
@@ -2284,12 +2179,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2299,7 +2189,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(5).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(5).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_12</include>
@@ -2313,12 +2203,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_11</include>
 					<!-- <<<<<< Add this -->
@@ -2329,12 +2214,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2344,7 +2224,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(4).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(4).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_11</include>
@@ -2358,12 +2238,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_10</include>
 					<!-- <<<<<< Add this -->
@@ -2374,12 +2249,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2389,7 +2259,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(3).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(3).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_10</include>
@@ -2403,12 +2273,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_9</include>
 					<!-- <<<<<< Add this -->
@@ -2419,12 +2284,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2434,7 +2294,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(2).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(2).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_9</include>
@@ -2448,12 +2308,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(1).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(1).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_8</include>
 					<!-- <<<<<< Add this -->
@@ -2464,12 +2319,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(1).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(1).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2479,7 +2329,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(1).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(1).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_8</include>
@@ -2497,13 +2347,8 @@
 					<control type="group">
 						<control type="image">
 							<include>MovieShowcaseThumb</include>
-							<info>ListItem(0).Thumb</info>
-							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-						</control>
-						<control type="image">
-							<include>MovieShowcaseThumb</include>
-							<info>ListItem(0).Thumb</info>
-							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+							<info>ListItem.Thumb</info>
+							
 						</control>
 						<include>genre_Showcase_7</include>
 						<!-- <<<<<< Add this -->
@@ -2513,13 +2358,8 @@
 						</control>
 						<control type="image">
 							<include>MovieShowcaseThumbReflection</include>
-							<info>ListItem(0).Thumb</info>
-							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-						</control>
-						<control type="image">
-							<include>MovieShowcaseThumbReflection</include>
-							<info>ListItem(0).Thumb</info>
-							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+							<info>ListItem.Thumb</info>
+							
 						</control>
 						<control type="image">
 							<description>Glass overlay reflection</description>
@@ -2529,8 +2369,8 @@
 							<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 							<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 							<include>detailcolornofocus</include>
-							<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay)</visible>
-							<info>ListItem(0).Overlay</info>
+							<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+							<info>ListItem.Overlay</info>
 						</control>
 						<include>genre_Showcase_ref_7</include>
 						<!-- <<<<<< Add this -->
@@ -2544,12 +2384,7 @@
 						<control type="image">
 							<include>MovieShowcaseThumb</include>
 							<info>ListItem(-1).Thumb</info>
-							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-						</control>
-						<control type="image">
-							<include>MovieShowcaseThumb</include>
-							<info>ListItem(-1).Thumb</info>
-							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+							
 						</control>
 						<include>genre_Showcase_6</include>
 						<!-- <<<<<< Add this -->
@@ -2560,12 +2395,7 @@
 						<control type="image">
 							<include>MovieShowcaseThumbReflection</include>
 							<info>ListItem(-1).Thumb</info>
-							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-						</control>
-						<control type="image">
-							<include>MovieShowcaseThumbReflection</include>
-							<info>ListItem(-1).Thumb</info>
-							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+							
 						</control>
 						<control type="image">
 							<description>Glass overlay reflection</description>
@@ -2575,7 +2405,7 @@
 							<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 							<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 							<include>detailcolornofocus</include>
-							<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-1).Overlay)</visible>
+							<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 							<info>ListItem(-1).Overlay</info>
 						</control>
 						<include>genre_Showcase_ref_6</include>
@@ -2598,12 +2428,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(7).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(7).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_14</include>
 					<!-- <<<<<< Add this -->
@@ -2614,12 +2439,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(7).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(7).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2629,7 +2449,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(7).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(7).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_14</include>
@@ -2643,12 +2463,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_13</include>
 					<!-- <<<<<< Add this -->
@@ -2659,12 +2474,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2674,7 +2484,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(6).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(6).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_13</include>
@@ -2688,12 +2498,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_12</include>
 					<!-- <<<<<< Add this -->
@@ -2704,12 +2509,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2719,7 +2519,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(5).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(5).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_12</include>
@@ -2733,12 +2533,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_11</include>
 					<!-- <<<<<< Add this -->
@@ -2749,12 +2544,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2764,7 +2554,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(4).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(4).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_11</include>
@@ -2778,12 +2568,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_10</include>
 					<!-- <<<<<< Add this -->
@@ -2794,12 +2579,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2809,7 +2589,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(3).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(3).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_10</include>
@@ -2823,12 +2603,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_9</include>
 					<!-- <<<<<< Add this -->
@@ -2839,12 +2614,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2854,7 +2624,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(2).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(2).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_9</include>
@@ -2869,22 +2639,12 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-10).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-10).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-10).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-10).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 				</control>
 			</control>
@@ -2896,22 +2656,12 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-9).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-9).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-9).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-9).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 				</control>
 			</control>
@@ -2923,22 +2673,12 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-8).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-8).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-8).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-8).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 				</control>
 			</control>
@@ -2951,12 +2691,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_1</include>
 					<!-- <<<<<< Add this -->
@@ -2967,12 +2702,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -2982,7 +2712,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-6).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-6).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_1</include>
@@ -2996,12 +2726,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_2</include>
 					<!-- <<<<<< Add this -->
@@ -3012,12 +2737,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3027,7 +2747,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-5).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-5).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_2</include>
@@ -3041,12 +2761,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_3</include>
 					<!-- <<<<<< Add this -->
@@ -3057,12 +2772,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3072,7 +2782,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-4).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-4).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_3</include>
@@ -3086,12 +2796,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_4</include>
 					<!-- <<<<<< Add this -->
@@ -3102,12 +2807,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3117,7 +2817,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-3).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-3).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_4</include>
@@ -3131,12 +2831,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_5</include>
 					<!-- <<<<<< Add this -->
@@ -3147,12 +2842,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3162,7 +2852,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-2).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-2).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_5</include>
@@ -3176,12 +2866,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-1).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-1).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_6</include>
 					<!-- <<<<<< Add this -->
@@ -3192,12 +2877,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-1).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-1).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3207,7 +2887,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-1).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-1).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_6</include>
@@ -3225,13 +2905,8 @@
 					<control type="group">
 						<control type="image">
 							<include>MovieShowcaseThumb</include>
-							<info>ListItem(0).Thumb</info>
-							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-						</control>
-						<control type="image">
-							<include>MovieShowcaseThumb</include>
-							<info>ListItem(0).Thumb</info>
-							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+							<info>ListItem.Thumb</info>
+							
 						</control>
 						<include>genre_Showcase_7</include>
 						<!-- <<<<<< Add this -->
@@ -3241,13 +2916,8 @@
 						</control>
 						<control type="image">
 							<include>MovieShowcaseThumbReflection</include>
-							<info>ListItem(0).Thumb</info>
-							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-						</control>
-						<control type="image">
-							<include>MovieShowcaseThumbReflection</include>
-							<info>ListItem(0).Thumb</info>
-							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+							<info>ListItem.Thumb</info>
+							
 						</control>
 						<control type="image">
 							<description>Glass overlay reflection</description>
@@ -3257,8 +2927,8 @@
 							<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 							<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 							<include>detailcolornofocus</include>
-							<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay)</visible>
-							<info>ListItem(0).Overlay</info>
+							<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+							<info>ListItem.Overlay</info>
 						</control>
 						<include>genre_Showcase_ref_7</include>
 						<!-- <<<<<< Add this -->
@@ -3272,12 +2942,7 @@
 						<control type="image">
 							<include>MovieShowcaseThumb</include>
 							<info>ListItem(1).Thumb</info>
-							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-						</control>
-						<control type="image">
-							<include>MovieShowcaseThumb</include>
-							<info>ListItem(1).Thumb</info>
-							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+							
 						</control>
 						<include>genre_Showcase_8</include>
 						<!-- <<<<<< Add this -->
@@ -3288,12 +2953,7 @@
 						<control type="image">
 							<include>MovieShowcaseThumbReflection</include>
 							<info>ListItem(1).Thumb</info>
-							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-						</control>
-						<control type="image">
-							<include>MovieShowcaseThumbReflection</include>
-							<info>ListItem(1).Thumb</info>
-							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+							
 						</control>
 						<control type="image">
 							<description>Glass overlay reflection</description>
@@ -3303,7 +2963,7 @@
 							<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 							<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 							<include>detailcolornofocus</include>
-							<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(1).Overlay)</visible>
+							<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 							<info>ListItem(1).Overlay</info>
 						</control>
 						<include>genre_Showcase_ref_8</include>
@@ -3334,12 +2994,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_1</include>
 					<!-- <<<<<< Add this -->
@@ -3350,12 +3005,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_ref_1</include>
 					<!-- <<<<<< Add this -->
@@ -3372,12 +3022,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_2</include>
 					<!-- <<<<<< Add this -->
@@ -3388,12 +3033,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3403,7 +3043,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-5).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-5).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_2</include>
@@ -3421,12 +3061,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_3</include>
 					<!-- <<<<<< Add this -->
@@ -3437,12 +3072,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3452,7 +3082,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-4).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-4).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_3</include>
@@ -3470,12 +3100,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_4</include>
 					<!-- <<<<<< Add this -->
@@ -3486,12 +3111,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3501,7 +3121,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-3).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-3).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_4</include>
@@ -3519,12 +3139,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_5</include>
 					<!-- <<<<<< Add this -->
@@ -3535,12 +3150,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3550,7 +3160,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-2).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-2).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_5</include>
@@ -3568,12 +3178,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(-1).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(-1).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_6</include>
 					<!-- <<<<<< Add this -->
@@ -3584,12 +3189,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(-1).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(-1).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3599,7 +3199,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-1).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(-1).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_6</include>
@@ -3617,12 +3217,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_13</include>
 					<!-- <<<<<< Add this -->
@@ -3633,12 +3228,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(6).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(6).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3648,7 +3238,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(6).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(6).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_13</include>
@@ -3666,12 +3256,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_12</include>
 					<!-- <<<<<< Add this -->
@@ -3682,12 +3267,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(5).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(5).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3697,7 +3277,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(5).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(5).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_12</include>
@@ -3715,12 +3295,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_11</include>
 					<!-- <<<<<< Add this -->
@@ -3731,12 +3306,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(4).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(4).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3746,7 +3316,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(4).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(4).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_11</include>
@@ -3764,12 +3334,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_10</include>
 					<!-- <<<<<< Add this -->
@@ -3780,12 +3345,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(3).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(3).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3795,7 +3355,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(3).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(3).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_10</include>
@@ -3813,12 +3373,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_9</include>
 					<!-- <<<<<< Add this -->
@@ -3829,12 +3384,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(2).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(2).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3844,7 +3394,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(2).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(2).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_9</include>
@@ -3862,12 +3412,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumb</include>
 						<info>ListItem(1).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumb</include>
-						<info>ListItem(1).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<include>genre_Showcase_8</include>
 					<!-- <<<<<< Add this -->
@@ -3878,12 +3423,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem(1).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflection</include>
-						<info>ListItem(1).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3893,7 +3433,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(1).Overlay)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 						<info>ListItem(1).Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_8</include>
@@ -3905,13 +3445,8 @@
 				<control type="group">
 					<control type="image">
 						<include>MovieShowcaseThumbMain</include>
-						<info>ListItem(0).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbMain</include>
-						<info>ListItem(0).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						<info>ListItem.Thumb</info>
+						
 					</control>
 					<include>genre_Showcase_7</include>
 					<!-- <<<<<< Add this -->
@@ -3921,13 +3456,8 @@
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbReflectionMain</include>
-						<info>ListItem(0).Thumb</info>
-						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflectionMain</include>
-						<info>ListItem(0).Thumb</info>
-						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
+						<info>ListItem.Thumb</info>
+						
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -3937,8 +3467,8 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay)</visible>
-						<info>ListItem(0).Overlay</info>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						<info>ListItem.Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_7</include>
 					<!-- <<<<<< Add this -->
@@ -3996,7 +3526,7 @@
 					<control type="image">
 						<include>MovieShowcaseThumbMain</include>
 						<info>ListItem.Icon</info>
-						<visible>!Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbMain</include>
@@ -4008,17 +3538,17 @@
 					<control type="image">
 						<description>Glass overlay</description>
 						<include>MovieShowcaseGlassOverlay</include>
-						<visible>!Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
 						<description>Black overlay</description>
 						<include>MovieShowcaseOverlay</include>
-						<visible>!Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
 						<info>ListItem.Icon</info>
-						<visible>!Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbReflection</include>
@@ -4028,7 +3558,7 @@
 					<control type="image">
 						<description>Glass overlay reflection</description>
 						<include>MovieShowcaseThumbReflectionDVD</include>
-						<visible>!Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
@@ -4039,15 +3569,8 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay) + !Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<info>ListItem(0).Overlay</info>
-					</control>
-					<control type="image">
-						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
-						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
-						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay) + Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<info>ListItem(0).Overlay</info>
+						<visible>!Skin.HasSetting(nomovieoverlays) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<info>ListItem.Overlay</info>
 					</control>
 					<include>genre_Showcase_ref_21</include>
 					<!-- <<<<<< Add this -->
@@ -4056,15 +3579,15 @@
 					<control type="image">
 						<include>MovieShowcaseThumbMain</include>
 						<info>ListItem.Icon</info>
-						<visible>!Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,120" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<animation effect="zoom" start="100" end="110" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbMain</include>
 						<info>ListItem.Icon</info>
 						<visible>Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,120" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<include>genre_Showcase_20</include>
@@ -4073,66 +3596,42 @@
 						<description>Glass overlay</description>
 						<include>MovieShowcaseGlassOverlay</include>
 						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,120" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<control type="image">
 						<description>Black overlay</description>
 						<include>MovieShowcaseOverlay</include>
 						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,120" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbReflectionMain</include>
 						<info>ListItem.Icon</info>
-						<visible>!Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,120" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
-					</control>
-					<control type="image">
-						<include>MovieShowcaseThumbReflectionMain</include>
-						<info>ListItem.Icon</info>
-						<visible>Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,120" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<animation effect="zoom" start="100" end="110" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
 						<include>MovieShowcaseThumbReflectionDVD</include>
-						<visible>!Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,120" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
-					</control>
-					<control type="image">
-						<description>Glass overlay reflection</description>
-						<include>MovieShowcaseThumbReflectionDVD</include>
-						<visible>Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,120" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<animation effect="zoom" start="100" end="110" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<control type="image">
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay) + !Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<info>ListItem(0).Overlay</info>
-						<animation effect="zoom" start="100" end="110" center="135,120" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
-					</control>
-					<control type="image">
-						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
-						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
-						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay) + Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-						<info>ListItem(0).Overlay</info>
-						<animation effect="zoom" start="100" end="110" center="135,120" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<visible>!Skin.HasSetting(nomovieoverlays) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<info>ListItem.Overlay</info>
+						<animation effect="zoom" start="100" end="110" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<include>genre_Showcase_ref_20</include>
 					<!-- <<<<<< Add this -->
 				</focusedlayout>
-				<preloaditems>2</preloaditems>
 				<itemlayout height="350" width="250" condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2) | Window.IsActive(20) | Container.Content(episodes)">
 					<control type="image">
 						<include>MusicShowcaseThumbMain</include>
@@ -4167,7 +3666,7 @@
 						<include>MusicShowcaseThumbMain</include>
 						<info>ListItem.Icon</info>
 						<visible>[[Skin.HasSetting(flattenshowcase) + !Control.IsVisible(970)] | Container.Content(episodes)]</visible>
-						<animation effect="zoom" start="100" end="110" center="135,230" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,230" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,230" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + [Skin.HasSetting(flattenshowcase) | Container.Content(episodes)]">Unfocus</animation>
 					</control>
 					<include>genre_Showcase_22</include>
@@ -4176,28 +3675,28 @@
 						<description>Glass overlay</description>
 						<include>MusicShowcaseGlassOverlay</include>
 						<visible>[[Skin.HasSetting(flattenshowcase) + !Control.IsVisible(970)] | Container.Content(episodes)]</visible>
-						<animation effect="zoom" start="100" end="110" center="135,230" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,230" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,230" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + [Skin.HasSetting(flattenshowcase) | Container.Content(episodes)]">Unfocus</animation>
 					</control>
 					<control type="image">
 						<description>Black overlay</description>
 						<include>MusicShowcaseOverlay</include>
 						<visible>[[Skin.HasSetting(flattenshowcase) + !Control.IsVisible(970)] | Container.Content(episodes)]</visible>
-						<animation effect="zoom" start="100" end="110" center="135,230" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,230" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,230" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + [Skin.HasSetting(flattenshowcase) | Container.Content(episodes)]">Unfocus</animation>
 					</control>
 					<control type="image">
 						<include>MusicShowcaseThumbReflection</include>
 						<info>ListItem.Icon</info>
 						<visible>[[Skin.HasSetting(flattenshowcase) + !Control.IsVisible(970)] | Container.Content(episodes)]</visible>
-						<animation effect="zoom" start="100" end="110" center="135,230" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,230" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,230" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + [Skin.HasSetting(flattenshowcase) | Container.Content(episodes)]">Unfocus</animation>
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
 						<include>MusicShowcaseThumbReflectionCD</include>
 						<visible>[[Skin.HasSetting(flattenshowcase) + !Control.IsVisible(970)] | Container.Content(episodes)]</visible>
-						<animation effect="zoom" start="100" end="110" center="135,230" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,230" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,230" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + [Skin.HasSetting(flattenshowcase) | Container.Content(episodes)]">Unfocus</animation>
 					</control>
 				</focusedlayout>
@@ -4218,7 +3717,7 @@
 				<orientation>horizontal</orientation>
 				<showonepage>false</showonepage>
 				<onup>57</onup>
-				<ondown>70197</ondown>
+				<ondown>57</ondown>
 				<onleft>60</onleft>
 				<onright>60</onright>
 				<include>Animation_HideShowcase</include>
@@ -4239,26 +3738,7 @@
 			<control type="group">
 				<visible>Control.IsVisible(57)</visible>
 				<include>Animation_HideShowcase</include>
-<!--
-				<control type="fadelabel">
-					<label>31609</label>
-					<label>31610</label>
-					<scrollout>false</scrollout>
-					<pauseatend>3000</pauseatend>
-					<scroll>false</scroll>
-					<include>ShowcaseMainLabel</include>
-					<visible>false</visible>
-				</control>
-				<control type="fadelabel">
-					<label>31609</label>
-					<label>31611</label>
-					<scrollout>false</scrollout>
-					<pauseatend>3000</pauseatend>
-					<scroll>false</scroll>
-                    <include>ShowcaseMainLabel</include>
-					<visible>false</visible>
-                </control>	
--->
+
 				<control type="label">
 					<description>Runtime</description>
 					<posx>980</posx>
@@ -4281,14 +3761,6 @@
                      <visible>Container.Content(movies) + Skin.HasSetting(nomediaflags)</visible>
                      <colordiffuse>FFFFFF00</colordiffuse>
        			 </control>
-				<control type="image">
-					<posx>1080</posx>
-					<posy>655</posy>
-					<width>90</width>
-					<height>50</height>
-					<visible>Container.Content(movies) + Skin.HasSetting(nomediaflags)</visible>
-					<texture>$INFO[listitem.studio,flags/studios/,.png]</texture>
-				</control>
                 <control type="label">
                     <label>$INFO[ListItem.Label]</label>
                     <include>ShowcaseMainLabel</include>
@@ -4339,8 +3811,8 @@
 					<width>0</width>
 					<height>0</height>
 					<texture>-</texture>
-					<visible>[Container.Content(movies) + ![Skin.HasSetting(showcaseinfooff) | Skin.HasSetting(showcaseinfotrigger)] + [Control.HasFocus(57) | ControlGroup(7000).HasFocus()] + [!Container(57).OnNext + !Container(57).OnPrevious]]</visible>
-					<animation effect="fade" start="0" end="100" time="150" delay="1000">Visible</animation>
+					<visible>[Container.Content(movies) + ![Skin.HasSetting(showcaseinfooff) | Skin.HasSetting(showcaseinfotrigger)] + [Control.HasFocus(57) | ControlGroup(7000).HasFocus()] + [!Container.OnNext + !Container.OnPrevious]]</visible>
+					<animation effect="fade" start="0" end="100" delay="200">Visible</animation>
 				</control>
 			</control>
 		</control>

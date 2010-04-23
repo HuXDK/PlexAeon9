@@ -2700,14 +2700,14 @@
 					<texture diffuse="wall/wall_movie_mask.png" background="true">defaultvideobig.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
-					<animation effect="zoom" center="45,75" start="100" end="120" time="400" delay="300" easing="out" tween="cubic" reversible="true">Focus</animation>					
+					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="300" easing="out" tween="cubic" reversible="true">Focus</animation>					
 				</control>
 				<control type="image">
 					<posx>58</posx>
 					<posy>16</posy>
 					<width>30</width>
 					<height>30</height>
-					<animation effect="zoom" center="45,75" start="100" end="120" time="400" delay="300" easing="out" tween="cubic" reversible="true">Focus</animation>					
+					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="300" easing="out" tween="cubic" reversible="true">Focus</animation>					
 					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 					<info>ListItem.Overlay</info>
 				</control>
@@ -2716,7 +2716,7 @@
 					<bordertexture border="-7">wall/wall_movie_fborder.png</bordertexture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				    <texture>thumbs/poster_glass_noedge.png</texture>
-					<animation effect="zoom" center="45,75" start="100" end="120" time="400" delay="300" easing="out" tween="cubic" reversible="true">Focus</animation>					
+					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="300" easing="out" tween="cubic" reversible="true">Focus</animation>					
 				</control>		
 				
 			</focusedlayout>

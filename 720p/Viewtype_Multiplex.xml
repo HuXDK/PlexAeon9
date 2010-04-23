@@ -1197,7 +1197,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVNormal</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<visible>!Skin.HasSetting(notvoverlays)</visible>
 			<info>ListItem.Overlay</info>
 		</control>
  
@@ -1246,7 +1246,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVDVD</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<visible>!Skin.HasSetting(notvoverlays)</visible>
 			<info>ListItem.Overlay</info>
 		</control>
  
@@ -1301,7 +1301,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVDVD</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<visible>!Skin.HasSetting(notvoverlays)</visible>
 			<info>ListItem.Overlay</info>
 			<include>Animation_MultiplexTVFocusZoom</include>
 		</control>
