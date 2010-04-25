@@ -170,7 +170,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[ListItem.Genre]</label>
+						<label fallback="31425">$INFO[ListItem.Property(FirstGenre)]</label>
 					</control>
  
 				</control>
@@ -660,7 +660,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[ListItem.Genre]</label>
+						<label fallback="31425">$INFO[ListItem.Property(FirstGenre)]</label>
 					</control>
  
 				</control>
@@ -1446,7 +1446,7 @@
 			</control>
  
 			<control type="label" id="72">
-				<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+				<label>[UPPERCASE]$INFO[ListItem.Property(FirstGenre)][/UPPERCASE]</label>
 				<include>ShowcaseDetailLabel</include>
 				<visible>Container.Content(movies) + !IsEmpty(ListItem.Genre)</visible>
 			</control>
@@ -1464,7 +1464,7 @@
 			</control>
  
 			<control type="label" id="72">
-				<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+				<label>[UPPERCASE]$INFO[ListItem.Property(FirstGenre)][/UPPERCASE]</label>
 				<include>ShowcaseDetailLabel</include>
 				<visible>[Container.Content(tvshows)] + !IsEmpty(ListItem.Genre)</visible>
 			</control>
