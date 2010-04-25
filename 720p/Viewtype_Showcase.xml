@@ -102,7 +102,7 @@
 					</control>
 					<control type="label">
 						<include>ShowcaseInfoValue</include>
-						<label fallback="31425">$INFO[ListItem.Director]</label>
+						<label fallback="31425">$INFO[ListItem.Property(FirstDirector)]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -113,7 +113,7 @@
 					</control>
 					<control type="label">
 						<include>ShowcaseInfoValue</include>
-						<label fallback="31425">$INFO[ListItem.Writer]</label>
+						<label fallback="31425">$INFO[ListItem.Property(FirstWriter)]</label>
 					</control>
 				</control>
 				<control type="group">

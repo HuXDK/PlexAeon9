@@ -111,7 +111,7 @@
 
 			<control type="label">
 				<include>WallTitleLabel</include>
-				<label>$INFO[Container(53).ListItem.Title]</label>
+				<label>$INFO[ListItem.Title]</label>
 			</control>
 
 		</control>
@@ -133,7 +133,7 @@
 
 				<control type="label">
 					<include>WallInfoValue</include>
-					<label fallback="31425">$INFO[Container(53).ListItem.Director]</label>
+					<label fallback="31425">$INFO[ListItem.Property(FirstDirector)]</label>
 				</control>
 
 			</control>
@@ -148,7 +148,7 @@
 
 				<control type="label">
 					<include>WallInfoValue</include>
-					<label fallback="31425">$INFO[Container(53).ListItem.Writer]</label>
+					<label fallback="31425">$INFO[ListItem.Property(FirstWriter)]</label>
 				</control>
 
 			</control>
@@ -163,7 +163,7 @@
 
 				<control type="label">
 					<include>WallInfoValue</include>
-					<label fallback="31425">$INFO[Container(53).ListItem.Year]</label>
+					<label fallback="31425">$INFO[ListItem.Year]</label>
 				</control>
 
 			</control>
@@ -178,7 +178,7 @@
 
 				<control type="label">
 					<include>WallInfoValue</include>
-					<label fallback="31425">$INFO[Container(53).ListItem.Duration]</label>
+					<label fallback="31425">$INFO[ListItem.Duration]</label>
 				</control>
 
 			</control>
@@ -194,7 +194,7 @@
 
 				<control type="label">
 					<include>WallInfoValue</include>
-					<label fallback="31425">$INFO[Container(53).ListItem.MPAA]</label>
+					<label fallback="31425">$INFO[ListItem.MPAA]</label>
 				</control>
 
 			</control>
@@ -210,7 +210,7 @@
 
 				<control type="label">
 					<include>WallInfoValue</include>
-					<label fallback="31425">$INFO[Container(53).ListItem.RatingAndVotes]</label>
+					<label fallback="31425">$INFO[ListItem.RatingAndVotes]</label>
 				</control>
 
 			</control>
@@ -246,7 +246,7 @@
 					<height>111</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[Container(53).ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+					<texture>$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
 				</control>
 
 				<control type="image">
@@ -265,7 +265,7 @@
 					<height>111</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[Container(53).ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+					<texture>$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
 				</control>
 
 			</control>

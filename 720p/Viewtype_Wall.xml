@@ -621,34 +621,34 @@
 				<label>[UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31005][/UPPERCASE]</label>
 				<include>ShowcaseItemsLabel</include>
 			</control>
-			<control type="label" id="72">
+			<control type="label">
 				<label>[UPPERCASE]$INFO[ListItem.Year]  |  $INFO[ListItem.Duration]  |  $INFO[Container(53).ListItem.Rating][/UPPERCASE]</label>
 				<!--CHANGED GENRE TO YEAR/DURATION/RATING-->
 				<include>ShowcaseDetailLabel</include>
 				<visible>Container.Content(movies) + [!IsEmpty(ListItem.Duration) | !IsEmpty(ListItem.Year)]</visible>
 				<!--CHANGED GENRE TO YEAR/DURATION/RATING-->
 			</control>
-			<control type="label" id="72">
+			<control type="label">
 				<label>$INFO[ListItem.Album,, -] $INFO[ListItem.Artist]</label>
 				<include>ShowcaseDetailLabel</include>
 				<visible>Container.Content(songs)</visible>
 			</control>
-			<control type="label" id="72">
+			<control type="label">
 				<info>ListItem.Label2</info>
 				<include>ShowcaseDetailLabel</include>
 				<visible>Window.IsActive(1) | Container.Content(albums)</visible>
 			</control>
-			<control type="label" id="72">
+			<control type="label">
 				<label>[UPPERCASE]$INFO[ListItem.Episode] $LOCALIZE[31406][/UPPERCASE]</label>
 				<include>ShowcaseDetailLabel</include>
 				<visible>[Container.Content(tvshows)] + !IsEmpty(ListItem.Episode)</visible>
 			</control>
-			<control type="label" id="72">
+			<control type="label">
 				<label>[UPPERCASE]$LOCALIZE[31432] $INFO[ListItem.Season], $LOCALIZE[31433] $INFO[ListItem.Episode][/UPPERCASE]</label>
 				<include>ShowcaseDetailLabel</include>
 				<visible>Container.Content(episodes) + !IsEmpty(ListItem.Episode)</visible>
 			</control>
-			<control type="label" id="72">
+			<control type="label">
 				<info>ListItem.PictureResolution</info>
 				<include>ShowcaseDetailLabel</include>
 				<visible>Window.IsActive(2) + !IsEmpty(ListItem.PictureResolution)</visible>
@@ -669,21 +669,21 @@
 				<include>WallLabelVars</include>
 				<animation effect="slide" start="0,0" end="0,-7" time="200" easing="out" tween="cubic" condition="!IsEmpty(Control.GetLabel(72))">Conditional</animation>
 			</control>
-			<control type="label" id="72">
+			<control type="label">
 				<posy>19</posy>
 				<label>$INFO[ListItem.Label2]</label>
 				<include>Colour_DarkGrey</include>
 				<include>WallLabelVars</include>
 				<visible>![Window.IsActive(2) | Window.IsActive(myvideofiles)]</visible>
 			</control>
-			<control type="label" id="72">
+			<control type="label">
 				<posy>19</posy>
 				<label>$INFO[ListItem.PictureResolution]</label>
 				<include>Colour_DarkGrey</include>
 				<include>WallLabelVars</include>
 				<visible>Window.IsActive(2)</visible>
 			</control>
-			<control type="label" id="72">
+			<control type="label">
 				<posy>19</posy>
 				<label>$INFO[ListItem.Year]</label>
 				<include>Colour_DarkGrey</include>
@@ -708,7 +708,7 @@
 				<include>WallLabelVars</include>
 				<animation effect="slide" start="0,0" end="0,-7" time="200" easing="out" tween="cubic" condition="!IsEmpty(Control.GetLabel(72))">Conditional</animation>
 			</control>
-			<control type="label" id="72">
+			<control type="label">
 				<posy>19</posy>
 				<align>right</align>
 				<label>$INFO[ListItem.Label2]</label>
@@ -716,7 +716,7 @@
 				<include>WallLabelVars</include>
 				<visible>![Window.IsActive(2) | Window.IsActive(myvideofiles)]</visible>
 			</control>
-			<control type="label" id="72">
+			<control type="label">
 				<posy>19</posy>
 				<align>right</align>
 				<label>$INFO[ListItem.PictureResolution]</label>
@@ -725,7 +725,7 @@
 				<visible>Window.IsActive(2)</visible>
 			</control>
 
-			<control type="label" id="72">
+			<control type="label">
 				<posy>19</posy>
 				<align>right</align>
 				<label>$INFO[ListItem.Year]</label>

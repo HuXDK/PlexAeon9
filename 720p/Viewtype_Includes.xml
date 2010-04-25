@@ -1372,7 +1372,7 @@
 			<altlabel>$LOCALIZE[31076]: $LOCALIZE[31073]</altlabel>
 			<usealttexture>!Skin.HasSetting(smallmoviewall)</usealttexture>
 			<onclick>Skin.ToggleSetting(smallmoviewall)</onclick>
-			<onclick>SetFocus(53)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Control.IsVisible(53)</visible>
 			<visible>[Window.IsActive(1) | Window.IsActive(myvideofiles)] + !Container.Content(episodes)</visible>
 		</control>
@@ -1382,7 +1382,7 @@
 			<altlabel>$LOCALIZE[31076]: $LOCALIZE[31073]</altlabel>
 			<usealttexture>!Skin.HasSetting(smallmusicwall)</usealttexture>
 			<onclick>Skin.ToggleSetting(smallmusicwall)</onclick>
-			<onclick>SetFocus(53)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Control.IsVisible(53)</visible>
 			<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2) | [Window.IsActive(myvideofiles) + Container.Content(episodes)]</visible>
 		</control>
@@ -2370,7 +2370,7 @@
 						<wrapmultiline>false</wrapmultiline>
 						<font>cast</font>
 						<textcolor>FFFFFFFF</textcolor>				
-						<label>$INFO[ListItem.Director]</label>
+						<label>$INFO[ListItem.Property(FirstDirector)]</label>
 					</control>			
 				</control>
 				
