@@ -3,8 +3,7 @@
 		<posy>1</posy>
 		<height>61</height>
 		<font>Font_MainMenu</font>
-		<posx>80</posx>
-		<width>280</width>
+				<width min="30" max="995">auto</width>
 		<info>ListItem.Label</info>
 		<align>center</align>
 		<aligny>center</aligny>
@@ -39,6 +38,7 @@
 	</include>
 	<!-- End -->
 	<include name="MainMenu">
+
 		<control type="button" id="351">
 			<onfocus>SetFocus(940)</onfocus>
 			<visible>Container(300).HasFocus(6)</visible>

@@ -269,40 +269,40 @@
 	<include>LowList_DVDCaseVars</include>
 </include>
 <include name="LowList_PosterIconNormal">
-	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask.png">$INFO[ListItem.Icon]</texture>
+	<texture diffuse="thumbs/movieposter_mask.png">$INFO[ListItem.Icon]</texture>
 </include>
 <include name="LowList_PosterIconPoster">
-	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask.png">$INFO[listitem.path]poster.jpg</texture>
+	<texture diffuse="thumbs/movieposter_mask.png">$INFO[listitem.path]poster.jpg</texture>
 </include>
 <include name="LowList_PosterIconSeason">
-	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask.png">$INFO[SeasonThumb]</texture>
+	<texture diffuse="thumbs/movieposter_mask.png">$INFO[SeasonThumb]</texture>
 </include>
 <include name="LowList_DVDIconNormal">
-	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[ListItem.Icon]</texture>
+	<texture diffuse="thumbs/boxes/movieposter_mask.png">$INFO[ListItem.Icon]</texture>
 </include>
 <include name="LowList_DVDIconPoster">
-	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[listitem.path]poster.jpg</texture>
+	<texture diffuse="thumbs/boxes/movieposter_mask.png">$INFO[listitem.path]poster.jpg</texture>
 </include>
 <include name="LowList_DVDIconSeason">
-	<texture fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[SeasonThumb]</texture>
+	<texture diffuse="thumbs/boxes/movieposter_mask.png">$INFO[SeasonThumb]</texture>
 </include>
 <include name="LowList_PosterIconNormalReflect">
-	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask_reflect.png">$INFO[ListItem.Icon]</texture>
+	<texture flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">$INFO[ListItem.Icon]</texture>
 </include>
 <include name="LowList_PosterIconPosterReflect">
-	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask_reflect.png">$INFO[listitem.path]poster.jpg</texture>
+	<texture flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">$INFO[listitem.path]poster.jpg</texture>
 </include>
 <include name="LowList_PosterIconSeasonReflect">
-	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/movieposter_mask_reflect.png">$INFO[SeasonThumb]</texture>
+	<texture flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">$INFO[SeasonThumb]</texture>
 </include>
 <include name="LowList_DVDIconNormalReflect">
-	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask_reflect.png">$INFO[ListItem.Icon]</texture>
+	<texture flipy="true" diffuse="thumbs/boxes/movieposter_mask_reflect.png">$INFO[ListItem.Icon]</texture>
 </include>
 <include name="LowList_DVDIconPosterReflect">
-	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask_reflect.png">$INFO[listitem.path]poster.jpg</texture>
+	<texture flipy="true" diffuse="thumbs/boxes/movieposter_mask_reflect.png">$INFO[listitem.path]poster.jpg</texture>
 </include>
 <include name="LowList_DVDIconSeasonReflect">
-	<texture flipy="true" fallback="defaultvideobigposter.png" diffuse="thumbs/boxes/movieposter_mask_reflect.png">$INFO[SeasonThumb]</texture>
+	<texture flipy="true" diffuse="thumbs/boxes/movieposter_mask_reflect.png">$INFO[SeasonThumb]</texture>
 </include>
 <!-- Poster Media Icons -->
 <include name="LowList_PosterMediaIcons">

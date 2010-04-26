@@ -33,8 +33,7 @@
 	 	<colordiffuse>efffffff</colordiffuse>
 	</include>
 	<include name="Furniture_ListMediaFlagsVars">
-		<posy>115</posy>
-		<width>50</width>
+		<width min="0" max="65">auto</width>
 		<height>30</height>
 		<aspectratio>keep</aspectratio>
 	 	<colordiffuse>efffffff</colordiffuse>
@@ -170,75 +169,48 @@
 
 	<include name="Furniture_ListMediaFlags">
 		<control type="group">		
-		
-		<include>Animation_CommonFade</include>
-<!--
-			<control type="image">
-				<posy>577</posy> 
-				<width>40</width>
-				<height>20</height>
-				<aspectratio>keep</aspectratio>
-			 	<colordiffuse>efffffff</colordiffuse>
-				<include>Animation_CommonFade</include>
-				<include>Animation_HideShowcase</include>
-				<include>Animation_HideMultiplex</include>
-				<visible>Control.IsVisible(50)</visible>
-				<info>Listitem.Property(mediaTag::contentRating)</info>
-				<posx>1105</posx>
-			</control>
-
-			<control type="image">
-				<posy>90</posy>
-				<width>140</width>
-				<height>50</height>
-				<aspectratio>keep</aspectratio>
-			 	<colordiffuse>efffffff</colordiffuse>
-				<include>Animation_CommonFade</include>
-				<include>Animation_HideShowcase</include>
-				<include>Animation_HideMultiplex</include>
-				<visible>Control.IsVisible(50)</visible>
-				<info>Listitem.Property(mediaTag::studio)</info>
-				<posx>1105</posx>
-			</control>
--->
-			<control type="group">
+			<posy>117</posy>
 			<posx>40</posx>
+			<include>Animation_CommonFade</include>
+
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<height>85</height>
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoResolution)</info>
+					<visible>!IsEmpty(Listitem.Property(mediaTag::videoResolution))</visible>
 				</control>	
 
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoCodec)</info>
-					<posx>60</posx>
+					<visible>!IsEmpty(Listitem.Property(mediaTag::videoCodec))</visible>
 				</control>
 
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::audioCodec)</info>
-					<posx>120</posx>
+					<visible>!IsEmpty(Listitem.Property(mediaTag::audioCodec))</visible>
 				</control>
 
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::audioChannels)</info>
-					<posx>180</posx>
+					<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
 				</control>
 
 				<control type="image">
-				<width>40</width>
-				<height>20</height>
-			 	<colordiffuse>efffffff</colordiffuse>
-				<include>Animation_CommonFade</include>
-				<include>Animation_HideShowcase</include>
-				<include>Animation_HideMultiplex</include>
-				<visible>Control.IsVisible(50)</visible>
-				<info>Listitem.Property(mediaTag::contentRating)</info>
-				<posx>240</posx>
-				<posy>120</posy>
+					<aspectratio>keep</aspectratio>
+				<height>27</height>
+				<width min="0" max="95">auto</width>
+			 		<colordiffuse>efffffff</colordiffuse>
+					<include>Animation_CommonFade</include>
+					<include>Animation_HideShowcase</include>
+					<include>Animation_HideMultiplex</include>
+					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + Control.IsVisible(50)</visible>
+					<info>Listitem.Property(mediaTag::contentRating)</info>
 				</control>
-
 			</control>
 		</control>
 
