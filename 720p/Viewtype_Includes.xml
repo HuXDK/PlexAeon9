@@ -2283,7 +2283,7 @@
 			
 			<control type="label">
 				<posx>170</posx>
-				<posy>-90</posy>
+				<posy>-100</posy>
 				<width>940</width>
 				<height>150</height>
 				<align>center</align>
