@@ -3,7 +3,7 @@
 		<posy>1</posy>
 		<height>61</height>
 		<font>Font_MainMenu</font>
-				<width min="30" max="995">auto</width>
+		<width min="30" max="995">auto</width>
 		<info>ListItem.Label</info>
 		<align>center</align>
 		<aligny>center</aligny>

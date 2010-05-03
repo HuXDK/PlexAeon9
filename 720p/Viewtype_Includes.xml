@@ -1819,6 +1819,7 @@
 			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexinfooff)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
+<!--
 		<control type="button" id="700101">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
@@ -1828,13 +1829,14 @@
 			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexinfotrigger) | Skin.HasSetting(oldmultiplexinfooff) | Skin.HasSetting(oldmultiplexinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
+-->
 		<control type="button" id="700102">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
 			<onclick>Skin.SetBool(oldmultiplexinfoon)</onclick>
-			<onclick>Skin.Reset(oldmultiplexinfotrigger)</onclick>
+			<onclick>Skin.Reset(oldmultiplexinfoauto)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexinfotrigger)</visible>
+			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexinfotrigger) | Skin.HasSetting(oldmultiplexinfooff) | Skin.HasSetting(oldmultiplexinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700103">
@@ -1855,6 +1857,7 @@
 			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextvinfooff)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
+<!--
 		<control type="button" id="700105">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
@@ -1864,13 +1867,14 @@
 			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplextvinfotrigger) | Skin.HasSetting(oldmultiplextvinfooff) | Skin.HasSetting(oldmultiplextvinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
+-->
 		<control type="button" id="700106">
 			<include>MediaMenuButton</include>
-			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
 			<onclick>Skin.SetBool(oldmultiplextvinfoon)</onclick>
-			<onclick>Skin.Reset(oldmultiplextvinfotrigger)</onclick>
+			<onclick>Skin.Reset(oldmultiplextvinfoauto)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextvinfotrigger)</visible>
+			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplextvinfotrigger) | Skin.HasSetting(oldmultiplextvinfooff) | Skin.HasSetting(oldmultiplextvinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700107">
@@ -2707,7 +2711,7 @@
 
 
 	<include name="CoverflowVisible">
-		<visible>Control.IsVisible(55)</visible>
+		<visible>Control.IsVisible(55) + !Container.Content(Episodes)</visible>
 		<include>Animation_OpenCloseZoom</include>
 	</include>
 
@@ -4486,7 +4490,8 @@
 	            <orientation>horizontal</orientation>
 	            <scrolltime>250</scrolltime>
 	            <focusposition>3</focusposition>
-                <itemlayout height="350" width="196" condition="Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)">
+ 	      		<include>CoverflowVisible</include>
+               <itemlayout height="350" width="196" condition="Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)">
                     <control type="image">
                         <include>MovieFlowThumbMain</include>
                         <info>ListItem.Icon</info>

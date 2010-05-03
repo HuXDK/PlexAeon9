@@ -165,7 +165,7 @@
 			<scrolltime>200</scrolltime>
 			<include condition="Skin.HasSetting(VerticalWall)">VerticalWall</include>
 			<include condition="!Skin.HasSetting(VerticalWall)">HorizontalWall</include>
-			<visible>Control.IsVisible(53)+[Window.IsActive(20) | Window.IsActive(2) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+			<visible>Control.IsVisible(53) + [Window.IsActive(20) | Window.IsActive(2) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + !Container.Content(episodes)</visible>
 			<itemlayout width="133" height="133" condition="!Skin.HasSetting(smallmusicwall)">
 				<control type="image">
 					<include>WallIconDimensions</include>
@@ -351,7 +351,7 @@
 			<scrolltime>200</scrolltime>
 			<include condition="Skin.HasSetting(VerticalWall)">VerticalWall</include>
 			<include condition="!Skin.HasSetting(VerticalWall)">HorizontalWall</include>
-			<visible>Window.IsActive(28) | Window.IsActive(1) | Window.IsActive(myvideofiles)</visible>
+			<visible>Window.IsActive(28) | Window.IsActive(1) | Window.IsActive(myvideofiles) + !Container.Content(episodes)</visible>
 			<itemlayout width="123" height="179" condition="!Skin.HasSetting(smallmoviewall)">
 				<include condition="!Skin.HasSetting(dvdcase)">WallIconNormal</include>
 				<include condition="Skin.HasSetting(dvdcase)">WallIconDVDFocus</include>
