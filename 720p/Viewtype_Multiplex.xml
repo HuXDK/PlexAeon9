@@ -896,7 +896,7 @@
  
 		<control type="image">
 			<include>MultiplexIconDimensionsWrap</include>
-		<bordertexture border="-3">wall/wall_movie_nfborder.png</bordertexture>
+			<bordertexture border="-3">wall/wall_movie_nfborder.png</bordertexture>
 			<texture>common/blank.png</texture>
 		</control>
  

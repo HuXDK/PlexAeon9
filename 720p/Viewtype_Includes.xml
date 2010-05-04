@@ -48,7 +48,7 @@
 		<height>29</height>
 		<include>Animation_CommonFade</include>
 		<aspectratio>keep</aspectratio>
-		<visible>Control.IsVisible(551) + ![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7898)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7850) + ![IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]]</visible>
+		<visible>[Control.IsVisible(551) | Control.IsVisible(54)] + ![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7898)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7850) + ![IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]]</visible>
 	</include>
 	<include name="Furniture_PanelMediaFlagsVars">
 		<posy>459</posy>
@@ -724,7 +724,7 @@
 			<visible>[!Skin.HasSetting(smallmoviewall) + [Container(53).Column(4) | Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8)]] | [Skin.HasSetting(smallmoviewall) + [Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8) | Container(53).Column(9) | Container(53).Column(10)]] </visible>
 		</control>
 	</include>
-	<!-- LOW LIST FLAGS -->
+	<!-- LOW LIST FLAGS and CLEAR LIST Flags -->
 
 	<include name="LowList_MediaFlags">
 		<control type="group">		
@@ -742,10 +742,19 @@
 					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating))</visible>
 					<info>Listitem.Property(mediaTag::contentRating)</info>
 				</control>
+			<control type="image">
+				<visible>!IsEmpty(Listitem.Property(mediaTag::studio)) + Control.IsVisible(54)</visible>
+				<posy>-335</posy>
+				<posx>352</posx>
+				<height>60</height>
+				<width min="1" max="95">auto</width>
+				<info>Listitem.Property(mediaTag::studio)</info>
+				<aspectratio>keep</aspectratio>
+			</control>
 
 			<control type="grouplist">
-			<posx>90</posx>
-			<posy>-1</posy>
+				<posx>85</posx>
+				<posy>-1</posy>
 				<orientation>horizontal</orientation>
 				<height>85</height>
 
@@ -754,6 +763,12 @@
 					<info>Listitem.Property(mediaTag::videoResolution)</info>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::videoResolution))</visible>
 				</control>	
+
+				<control type="image">
+					<include>Furniture_ListMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::videoFrameRate)</info>
+					<visible>!IsEmpty(Listitem.Property(mediaTag::videoFrameRate))  + Control.IsVisible(54)</visible>
+				</control>
 
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
@@ -772,13 +787,11 @@
 					<info>Listitem.Property(mediaTag::audioChannels)</info>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
 				</control>
-
 			</control>
 		</control>
 	</include>
 
 			<!-- ********  End Media Flags ********-->
-
 
 
 			<!-- ********  Media Menu ********-->
@@ -2127,19 +2140,19 @@
 				<include>MediaMenuButton_ListLayout</include>
 				<include>MediaMenuButton_VerticalWall</include>
 				<include>MediaMenuButton_Stripshow</include>
-	<!--			<include>MediaMenuButton_StackButton</include> -->
+		<!--	<include>MediaMenuButton_StackButton</include> -->
 				<include>MediaMenuButton_WallGrid</include>
-	<!--			<include>MediaMenuButton_WallBackdrop</include> -->
+		<!--	<include>MediaMenuButton_WallBackdrop</include> -->
 				<include>LowList_SlimFullMediaMenuButton</include>
 				<include>LowList_HighLowMediaMenuButton</include>
 				<include>MediaMenuButton_PanelDensity</include>
 				<include>MediaMenuButton_PanelDark</include>
 				<include>MediaMenuButton_Overlay</include>
 				<include>MediaMenuButton_Flags</include>
-	<!--			<include>MediaMenuButton_Fanart</include>  -->
+		<!--	<include>MediaMenuButton_Fanart</include>  -->
 				<include>MediaMenuButton_Curtains</include>
 				<include>MediaMenuButton_Watched</include>
-	<!--		<include>MediaMenuButton_Sort</include> -->
+		<!--	<include>MediaMenuButton_Sort</include> -->
 				<include>MediaMenuButton_Filter</include>
 				<include>MediaMenuButton_Search</include>
 		<!--	<include>MediaMenuButton_Files</include> -->
