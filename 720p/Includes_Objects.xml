@@ -104,11 +104,11 @@
 
 				<control type="label">
 					<posx>263</posx>
-					<posy>7</posy>
+					<posy>92</posy>
 					<width>141</width>
 					<height>220</height>
 					<align>right</align>
-					<aligny>center</aligny>
+					<aligny>top</aligny>
 					<font>Font_WeatherLabel</font>
 					<textcolor>FFFFFFFF</textcolor>					
 					<label>$INFO[Weather.Temperature][CR]$INFO[Weather.Conditions]</label>
