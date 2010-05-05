@@ -234,7 +234,7 @@
 				<onclick>Skin.ToggleSetting(inforatings)</onclick>
 				<selected>Skin.HasSetting(inforatings)</selected>
 			</control>
--->
+
 			<control type="radiobutton" id="600">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31285</label>
@@ -247,7 +247,7 @@
 				<onclick>Skin.ToggleSetting(albumratingtext)</onclick>
 				<selected>Skin.HasSetting(albumratingtext)</selected>
 			</control>
-<!--			 
+			 
 			<control type="radiobutton" id="607">
 			    <description>TV Poster in Multiplex</description>
 			    <include>Objects_SettingsDefaultRadioButton</include>
@@ -256,7 +256,7 @@
 				<selected>Skin.HasSetting(tvposter)</selected>
 			</control>
 -->
-			<control type="radiobutton" id="608">
+			<control type="radiobutton" id="600">
 				<!--WALL FLOOR TOGGLE-->
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32011</label>

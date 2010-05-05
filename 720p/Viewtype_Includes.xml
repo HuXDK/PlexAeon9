@@ -724,7 +724,8 @@
 			<visible>[!Skin.HasSetting(smallmoviewall) + [Container(53).Column(4) | Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8)]] | [Skin.HasSetting(smallmoviewall) + [Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8) | Container(53).Column(9) | Container(53).Column(10)]] </visible>
 		</control>
 	</include>
-	<!-- LOW LIST FLAGS and CLEAR LIST Flags -->
+
+	<!-- LOW LIST FLAGS and CLEARLIST Flags -->
 
 	<include name="LowList_MediaFlags">
 		<control type="group">		
@@ -2505,7 +2506,7 @@
 				<width>640</width>
 				<height>340</height>
 				<label>$INFO[ListItem.Plot]</label>
-				<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>
+				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
 				<font>Font_MultiplexPlot</font>
 				<align>center</align>
 				<textcolor>FFFFFFFF</textcolor>		
