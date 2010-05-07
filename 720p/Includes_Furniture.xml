@@ -218,7 +218,7 @@
 	</include>
 
 	<include name="Furniture_TotalsPanelHigh">
-		<visible>!ControlGroup(7000).HasFocus() + !Control.IsVisible(54)</visible>
+		<visible>!ControlGroup(7000).HasFocus()</visible>
 		<control type="image">
 			<posx>-900</posx>
 			<posy>0</posy>
@@ -229,7 +229,7 @@
 				<effect type="slide" start="200,0" end="200,0" time="0" />
 				<effect type="zoom" start="125" end="125" time="0" />
 			</animation>
-			<visible>[Container.Content(tvshows) | Container.Content(seasons)] + ![Control.IsVisible(50) | Control.IsVisible(55)]</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
 		</control>
 		<control type="image">
 			<posx>-900</posx>
@@ -241,9 +241,9 @@
 				<effect type="slide" start="200,0" end="200,0" time="0" />
 				<effect type="zoom" start="125" end="125" time="0" />
 			</animation>
-			<visible>![Control.IsVisible(50) | Control.IsVisible(55)] + [Container.Content(episodes) | Container.Content(movies)]</visible>
+			<visible>[Container.Content(episodes) | Container.Content(movies)]</visible>
 		</control>
-
+<!--
 		<control type="image">
 			<posx>-900</posx>
 			<posy>0</posy>
@@ -268,7 +268,7 @@
 			</animation>
 			<visible>[Container.Content(episodes) | Container.Content(movies)] + [Control.IsVisible(50) | Control.IsVisible(55)]</visible>
 		</control>
-
+-->
 		<control type="image">
 			<posx>-890</posx>
 			<posy>0</posy>
@@ -459,18 +459,18 @@
 		</control>
 		<control type="group">
 			<include>Furniture_TimeGroupHighVars</include>
-			<visible>[[Skin.HasSetting(highertime) + Window.IsActive(Home)] | [Control.IsVisible(553) | Control.IsVisible(52) | Control.IsVisible(555) | Control.IsVisible(556) | Control.IsVisible(552) | Control.IsVisible(57) | Control.IsVisible(550) | Control.IsVisible(551) | Control.IsVisible(54) | Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(563)]] + !Skin.HasSetting(notime)</visible>
+			<visible>[[Skin.HasSetting(highertime) + Window.IsActive(Home)] | [Control.IsVisible(553) | Control.IsVisible(52) | Control.IsVisible(555) | Control.IsVisible(556) | Control.IsVisible(552) | Control.IsVisible(57) | Control.IsVisible(550) | Control.IsVisible(551) | Control.IsVisible(54) | Control.IsVisible(51) | Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(53) | Control.IsVisible(563)]] + !Skin.HasSetting(notime)</visible>
 			<include>Animation_CommonFade</include>
 			<include>Furniture_TimePanelHigh</include>
 		</control>
-
+<!--
 		<control type="group">
 			<include>Furniture_TimeGroupWindowVars</include>
 			<visible>[Control.IsVisible(50) | Control.IsVisible(55)] + !Skin.HasSetting(notime)</visible>
 			<include>Animation_CommonFade</include>
 			<include>Furniture_TimePanel</include>
 		</control>
-
+-->
 	</include>
 	
 		<include name="Furniture_Totals">
@@ -485,10 +485,11 @@
 -->
 		<control type="group">
 			<include>Furniture_TimeGroupHighVars</include>
-			<visible>[Control.IsVisible(553) | Control.IsVisible(52) | Control.IsVisible(555) | Control.IsVisible(556) | Control.IsVisible(552) | Control.IsVisible(57) | Control.IsVisible(550) | Control.IsVisible(551) | Control.IsVisible(54) | Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(563)]</visible>
+			<visible>[Control.IsVisible(553) | Control.IsVisible(52) | Control.IsVisible(555) | Control.IsVisible(556) | Control.IsVisible(552) | Control.IsVisible(57) | Control.IsVisible(550) | Control.IsVisible(551) | Control.IsVisible(54) | Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(563)]</visible>
 			<include>Animation_CommonFade</include>
 			<include>Furniture_TotalsPanelHigh</include>
 		</control>
+<!--
 		<control type="group">
 			<include>Furniture_TimeGroupWindowVars</include>
 			<visible>[Control.IsVisible(50) | Control.IsVisible(55)] + !Skin.HasSetting(notime)</visible>
@@ -497,7 +498,7 @@
 			<visible>[Control.IsVisible(50) | Control.IsVisible(55)] + !Skin.HasSetting(notime)</visible>
 		</control>
 
-<!--
+
 		<control type="group">
 			<include>Furniture_TimeGroupWindowVars</include>
 			<visible>!Window.IsActive(Home) + !Control.IsVisible(553) + !Control.IsVisible(51) + !Control.IsVisible(52) + !Control.IsVisible(552) + !Control.IsVisible(57) + !Control.IsVisible(50) + !Control.IsVisible(550) + !Control.IsVisible(551) + !Control.IsVisible(53) + !Control.IsVisible(54) + !Control.IsVisible(555) + !Control.IsVisible(556) + !Control.IsVisible(563) + !Skin.HasSetting(notime)</visible>

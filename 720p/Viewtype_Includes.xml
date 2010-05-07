@@ -34,12 +34,13 @@
 	</include>
 	<include name="Furniture_ListMediaFlagsVars">
 		<width min="0" max="65">auto</width>
-		<height>30</height>
+		<height>25</height>
 		<aspectratio>keep</aspectratio>
-	 	<colordiffuse>efffffff</colordiffuse>
+	 	<colordiffuse>cfffffff</colordiffuse>
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
 		<include>Animation_HideMultiplex</include>
+		<visible>!Skin.HasSetting(nomediaflags)</visible>
 	</include>
 	<include name="LowList_MovieFlagVars">
 		<posx>910</posx>
@@ -168,15 +169,16 @@
 
 	<include name="Furniture_ListMediaFlags">
 		<control type="group">		
+			<visible>!Skin.HasSetting(nomediaflags)</visible>
 			<posy>117</posy>
-			<posx>40</posx>
+			<posx>70</posx>
 			<include>Animation_CommonFade</include>
 
 				<control type="image">
 					<aspectratio>keep</aspectratio>
-					<height>27</height>
+					<height>23</height>
 					<width min="0" max="95">auto</width>
-			 		<colordiffuse>efffffff</colordiffuse>
+			 		<colordiffuse>9fffffff</colordiffuse>
 					<include>Animation_CommonFade</include>
 					<include>Animation_HideShowcase</include>
 					<include>Animation_HideMultiplex</include>
@@ -185,10 +187,9 @@
 				</control>
 
 			<control type="grouplist">
-			<posx>90</posx>
+			<posx>75</posx>
 			<posy>-1</posy>
 				<orientation>horizontal</orientation>
-				<height>85</height>
 
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
@@ -4480,9 +4481,6 @@
 	
 	<include name="Viewtype_Coverflow">
 	    <control type="group">
-
-	        <include>CoverflowVisible</include>
-	    <control type="group">
 	        <visible>Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)</visible>
 	        <include>CoverflowMovies</include>
 	    </control>
@@ -4491,7 +4489,6 @@
 	        <include>CoverflowSquare</include>
 	    </control>
 	    <control type="group">
-	        <include>CoverflowVisible</include>
 	        <control type="wraplist" id="55">
 				<include condition="!Container.Content(episodes) + [Window.IsActive(28) | Window.IsActive(myvideofiles) | Window.IsActive(1)]">MovieFlowGroupVars</include>
 				<include condition="Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2) | Container.Content(episodes)">MusicFlowGroupVars</include>
@@ -4504,7 +4501,6 @@
 	            <orientation>horizontal</orientation>
 	            <scrolltime>250</scrolltime>
 	            <focusposition>3</focusposition>
- 	      		<include>CoverflowVisible</include>
                <itemlayout height="350" width="196" condition="Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)">
                     <control type="image">
                         <include>MovieFlowThumbMain</include>
@@ -4574,6 +4570,8 @@
                     </control>
 				</focusedlayout>				
 	        </control>
+	    <control type="group">
+ 	      		<include>CoverflowVisible</include>
 
 	        <control type="scrollbar" id="60">
 	            <posx>67</posx>
@@ -4600,6 +4598,8 @@
 				
 	        <control type="group">
 	            <include>Animation_CommonFade</include>
+ 
+ <!--
                 <control type="fadelabel">
                     <label>31609</label>
                     <label>31610</label>					
@@ -4607,7 +4607,7 @@
 					<pauseatend>3000</pauseatend>
 					<scroll>false</scroll>
                     <include>FlowMainLabel</include>
-					<visible>Window.IsActive(myvideofiles) + stringcompare(container(55).numitems,0)</visible>
+					<visible>Window.IsActive(myvideofiles)/visible>
 	                <animation effect="slide" start="0,10" end="0,10" time="0" condition="true">Conditional</animation>					
                 </control>
                 <control type="fadelabel">
@@ -4617,9 +4617,10 @@
 					<pauseatend>3000</pauseatend>
 					<scroll>false</scroll>
                     <include>FlowMainLabel</include>
-					<visible>Window.IsActive(502) + stringcompare(container(55).numitems,0)</visible>
+					<visible>Window.IsActive(502)</visible>
 	                <animation effect="slide" start="0,10" end="0,10" time="0" condition="true">Conditional</animation>					
                 </control>						
+-->
 	            <control type="label">
 	                <description>Title</description>
 	                <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
@@ -4681,8 +4682,7 @@
 	            </control>
 	        </control>
 	    </control>
-	    </control>
-
+	</control>
 	</include>
 
 		<!-- ********  End of COVERFLOW   ********-->

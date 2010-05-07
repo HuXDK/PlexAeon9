@@ -240,9 +240,9 @@
 	</control>
 
 	<control type="label">
-		<posx>40</posx>
-		<posy>76</posy>
-		<width>830</width>
+		<posx>70</posx>
+		<posy>72</posy>
+		<width>800</width>
 		<height>43</height>
 		<font>ListView_ListTitle</font>
 		<aligny>center</aligny>

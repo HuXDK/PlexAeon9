@@ -3505,7 +3505,6 @@
 			<ondown>57</ondown>
 		</control>
 		<control type="group">
-		<visible>Control.IsVisible(57) + Container.Content(movies)</visible>
 				<control type="fixedlist" id="57">
 				<viewtype label="Showcase">list</viewtype>
 				<include condition="Window.IsActive(28) | [Window.IsActive(24) + !Container.Content(episodes)] | Window.IsActive(1)">MovieShowcaseGroupVars</include>
@@ -3521,7 +3520,6 @@
 				<orientation>horizontal</orientation>
 				<scrolltime>200</scrolltime>
 				<focusposition>3</focusposition>
-				<visible>Control.IsVisible(57) + Container.Content(movies)</visible>
 				<itemlayout height="350" width="196" condition="Window.IsActive(28) | [Window.IsActive(24) + !Container.Content(episodes)] | Window.IsActive(1)">
 					<control type="image">
 						<include>MovieShowcaseThumbMain</include>
