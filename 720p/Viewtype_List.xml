@@ -167,6 +167,7 @@
 				<height>43</height>
 				<aligny>center</aligny>
 				<info>ListItem.Overlay</info>
+				<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 		        <animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
 		    </control>
 		</itemlayout>
@@ -212,7 +213,8 @@
 				<height>43</height>
 				<aligny>center</aligny>
 				<info>ListItem.Overlay</info>
-		        <animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
+				<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+		        <animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
 		    </control>
  		</focusedlayout>
 	</control>

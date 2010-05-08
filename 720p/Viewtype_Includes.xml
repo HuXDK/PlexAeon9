@@ -1182,9 +1182,18 @@
 		<control type="radiobutton" id="700021">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31053] $LOCALIZE[31065]</label>
-			<onclick>Skin.ToggleSetting(listpanelthin)</onclick>
-			<selected>Skin.HasSetting(listpanelthin)</selected>
-			<visible>Control.IsVisible(550)</visible>
+			<onclick>Skin.ToggleSetting(ListPanelThin)</onclick>
+			<selected>Skin.HasSetting(ListPanelThin)</selected>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		<control type="radiobutton" id="7000223">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31053] $LOCALIZE[31065]</label>
+			<onclick>Skin.ToggleSetting(CoverFlowPanelThin)</onclick>
+			<selected>Skin.HasSetting(CoverFlowPanelThin)</selected>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Control.IsVisible(55)</visible>
 		</control>
 		<control type="radiobutton" id="700022">
 			<include>MediaMenuButton</include>

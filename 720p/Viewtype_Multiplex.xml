@@ -355,7 +355,7 @@
 					<colordiffuse>94FFFFFF</colordiffuse>
 					<animation effect="fade" start="50" end="50" time="0" condition="!Skin.HasSetting(darkmultiplex)">Conditional</animation>
 				</control>
- 
+ <!--
 				<control type="largeimage">
 					<posx>1</posx>
 					<posy>1</posy>
@@ -365,7 +365,7 @@
 					<fadetime>400</fadetime>
 					<texture>$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
 				</control>
- 
+ -->
 				<control type="image">
 					<posx>0</posx>
 					<posy>171</posy>
@@ -375,7 +375,7 @@
 					<colordiffuse>94FFFFFF</colordiffuse>
 					<animation effect="fade" start="50" end="50" time="0" condition="!Skin.HasSetting(darkmultiplex)">Conditional</animation>
 				</control>
- 
+ <!--
 				<control type="largeimage">
 					<posx>1</posx>
 					<posy>172</posy>
@@ -385,7 +385,7 @@
 					<fadetime>400</fadetime>
 					<texture>$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
 				</control>
- 
+ -->
 			</control>
  
 			<!--New Poster Group-->

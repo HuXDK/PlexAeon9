@@ -110,6 +110,7 @@
 					<include>BackgroundVarsMusic</include>
 					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
 					<visible>!Skin.HasSetting(nomusic)</visible>
+					<width min="95" max="95">auto</width>
 				</item>
 				<item id="22">
 					<description>Shutdown</description>
@@ -117,6 +118,7 @@
 					<label>31019</label>
 					<onclick>XBMC.Shutdown()</onclick>
 					<visible>!Skin.HasSetting(noshutdown) + !Skin.HasSetting(SleepSub)</visible>
+					<width min="95" max="95">auto</width>
 				</item>
 				<item id="22">
 					<description>Shutdown</description>
@@ -124,18 +126,21 @@
 					<label>31207</label>
 					<onclick>Plex.SleepSystem</onclick>
 					<visible>!Skin.HasSetting(noshutdown) + Skin.HasSetting(SleepSub)</visible>
+					<width min="95" max="95">auto</width>
 				</item>
 				<item id="8">
 					<label>31015</label>
 					<include>BackgroundVarsVideo</include>
 					<onclick>XBMC.ActivateWindow(24)</onclick>
 					<visible>!Skin.HasSetting(novideos)</visible>
+					<width min="95" max="95">auto</width>
 				</item>
 				<item id="2">
 					<label>31011</label>
 					<include>BackgroundVarsGames</include>
 		            <onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
 					<visible>true</visible>
+					<width min="95" max="95">auto</width>
 				</item>
 <!--
 				<item id="2">
@@ -160,6 +165,7 @@
 					<include>BackgroundVarsPictures</include>
 					<onclick>XBMC.ActivateWindow(MyPictures,return)</onclick>
 					<visible>!Skin.HasSetting(nopictures)</visible>
+					<width min="95" max="95">auto</width>
 				</item>
 <!--
 				<item id="7">
@@ -179,12 +185,14 @@
 					<include condition="!Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather</include>
 					<onclick>xbmc.activatewindow(2600)</onclick>
 					<visible>!Skin.HasSetting(noweather)</visible>
+					<width min="95" max="95">auto</width>
 				</item>
 				<item id="9">
 					<label>31016</label>
 					<include>BackgroundVarsSettings</include>
 					<onclick>Skin.Reset(settingsfade)</onclick>
 					<onclick>XBMC.ActivateWindow(4)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(nosettings)</visible>
 				</item>
 				<item id="24">
@@ -192,6 +200,7 @@
 					<include>BackgroundVarsScripts</include>
 					<label>31020</label>
 					<onclick>XBMC.ActivateWindow(20)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(scripts)</visible>
 				</item>
 				<item id="13">
@@ -199,6 +208,7 @@
 					<include>BackgroundVarsPlayDVD</include>
 					<label>31018</label>
 					<onclick>XBMC.PlayDVD</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>System.HasMediadvd</visible>
 				</item>
 				<item id="20">
@@ -206,6 +216,7 @@
 					<include>BackgroundVarsSettings</include>
 					<label>31607</label>
 					<onclick>XBMC.ReloadSkin</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(debug)</visible>
 				</item>
 				<item id="21">
@@ -213,6 +224,7 @@
 					<include>BackgroundVarsAssistant</include>
 					<label>31021</label>
 					<onclick>XBMC.ActivateWindow(134)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(assistant)</visible>
 				</item>
 				<item id="23">
@@ -220,9 +232,9 @@
 					<include>BackgroundVarsSignOut</include>
 					<label>31209</label>
 					<onclick>System.LogOff</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(signout)</visible>
 				</item>
-
 			</content>
 		</control>
 	</include>

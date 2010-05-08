@@ -571,6 +571,7 @@
 		</control>
 	</include>
 	<!-- RSS Feeds -->
+<!--
 	<include name="Furniture_WallRSS">
 		<control type="group">
 			<posx>-300</posx>
@@ -653,6 +654,7 @@
 			</control>
 		</control>
 	</include>
+-->
 	<include name="Furniture_HomeRSS">
 		<control type="group">
 			<posx>0</posx>
@@ -667,8 +669,8 @@
 				<posx>54</posx>
 				<posy>0</posy>
 				<width>1253</width>
-				<height>57</height>
-				<texture>common/rssbar_mid.png</texture>
+				<height>27</height>
+				<texture flipy="true">common/rssbar_mid.png</texture>
 				<animation type="Conditional" condition="Skin.HasSetting(bighome)">
 					<effect type="slide" start="0,1" end="0,1" time="0" />
 					<effect type="zoom" start="125" end="125" time="0" />
@@ -676,29 +678,29 @@
 				<include>Animation_CommonFade</include>
 			</control>
 			<control type="rss" id="1">
-				<posx>110</posx>
+				<posx>80</posx>
 				<posy>5</posy>
 				<width>1170</width>
 				<visible>true</visible>
 				<font>Font_RSS</font>
-				<include>Colour_RSS</include>
+				<include>Colour_RSSLight</include>
 				<urlset>1</urlset>
 				<include>Animation_CommonFade</include>
 				<visible>!Skin.HasSetting(bighome)</visible>
 			</control>
 			<control type="rss" id="1">
-				<posx>110</posx>
+				<posx>100</posx>
 				<posy>3</posy>
 				<width>1170</width>
 				<visible>true</visible>
 				<font>Font_BigRSS</font>
-				<include>Colour_RSS</include>
+				<include>Colour_RSSLight</include>
 				<urlset>1</urlset>
 				<include>Animation_CommonFade</include>
 				<visible>Skin.HasSetting(bighome)</visible>
 			</control>
 			<control type="image">
-				<posx>77</posx>
+				<posx>57</posx>
 				<posy>0</posy>
 				<width>133</width>
 				<height>27</height>
@@ -929,21 +931,22 @@
 			<animation effect="slide" start="0,0" end="0,150" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Control.HasFocus(92)">Conditional</animation>
 			<include>Animation_CommonFade</include>
 			<control type="image">
-				<posx>36</posx>
+				<posx>54</posx>
 				<posy>0</posy>
 				<width>804</width>
-				<height>38</height>
-				<texture>common/rssbar_mid.png</texture>
+				<height>17</height>
+				<texture flipy="true">common/rssbar_mid.png</texture>
+				<include>Animation_CommonFade</include>
 			</control>
 			<control type="rss" id="1">
-				<description>My First RSS control</description>
 				<posx>72</posx>
-				<posy>3</posy>
+				<posy>0</posy>
 				<width>769</width>
 				<visible>true</visible>
-				<font>Font_VirtualRSS</font>
-				<include>Colour_RSS</include>
+				<font>Font_RSS</font>
+				<include>Colour_RSSLight</include>
 				<urlset>1</urlset>
+				<include>Animation_CommonFade</include>
 			</control>
 			<control type="image">
 				<posx>52</posx>
@@ -1013,21 +1016,16 @@
 
 	<include name="Furniture_MediaPanel">
 	<control type="group">
-		<include>Animation_OpenCloseZoom</include>
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture>list/list_filter.png</texture>
-			<colordiffuse>a0FFFFFF</colordiffuse>
-			<visible>Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(551)</visible>
-		</control>
 		<control type="image">
 			<include>Furniture_MediaPanelVars</include>
 			<texture>windows/backpanelwide.png</texture>
+			<animation effect="fade" start="80" end="80" time="0" condition="Skin.HasSetting(CoverFlowPanelThin)">Conditional</animation>
 			<visible>Control.IsVisible(55)</visible>
 		</control>
 		<control type="image">
 			<include>Furniture_MediaPanelVars</include>
 			<texture>windows/backpanel.png</texture>
+			<animation effect="fade" start="80" end="80" time="0" condition="Skin.HasSetting(ListPanelThin)">Conditional</animation>
 			<visible>Control.IsVisible(50)</visible>
 		</control>
 		<control type="image">
@@ -1039,7 +1037,6 @@
 			<include condition="Skin.HasSetting(Lightfloor)">ShowcaseFloorLight</include>
 			<include condition="Skin.HasSetting(darkfloor)">ShowcaseFloorNight</include>
 			<visible>Control.IsVisible(57) | Control.IsVisible(52) | [Control.IsVisible(53) + Skin.HasSetting(newwall)] | [Control.IsVisible(500) + Skin.HasSetting(newwall)] | [Control.IsVisible(501) + Skin.HasSetting(newwall)] | [Control.IsVisible(502) + Skin.HasSetting(newwall)] | Control.IsVisible(552)</visible>
-			<!--ADDED WALL FLOOR-->
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideShowcase</include>
 			<include>Animation_HideMultiplex</include>
@@ -1052,7 +1049,6 @@
 			<visible>Skin.HasSetting(clearfloor)</visible>
 			<include condition="Skin.HasSetting(ClearFloor)">MultiplexFloorBase</include>
 			<visible>Control.IsVisible(57) | Control.IsVisible(52) | [Control.IsVisible(53) + Skin.HasSetting(newwall)] | [Control.IsVisible(500) + Skin.HasSetting(newwall)] | [Control.IsVisible(501) + Skin.HasSetting(newwall)] | [Control.IsVisible(502) + Skin.HasSetting(newwall)] | Control.IsVisible(552)</visible>
-			<!--ADDED WALL FLOOR-->
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideShowcase</include>
 			<include>Animation_HideMultiplex</include>
@@ -1069,33 +1065,7 @@
 			<include>Animation_HideShowcase</include>
 			<include>Animation_HideMultiplex</include>
 			<visible>Control.IsVisible(57) | Control.IsVisible(52) | [Control.IsVisible(53) + Skin.HasSetting(newwall)] | [Control.IsVisible(500) + Skin.HasSetting(newwall)] | [Control.IsVisible(501) + Skin.HasSetting(newwall)] | [Control.IsVisible(502) + Skin.HasSetting(newwall)] | Control.IsVisible(552)</visible>
-			<!--ADDED WALL-->
 		</control>
-<!--
-		<control type="image">
-			<posx>144</posx>
-			<posy>583</posy>
-			<width>993</width>
-			<height>137</height>
-			<include condition="!Skin.HasSetting(clearfloor)">ShowcaseSpotLight</include>
-			<include>Animation_CommonFade</include>
-			<include>Animation_HideShowcase</include>
-			<visible>Control.IsVisible(50) | Control.IsVisible(550)</visible>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>315</posy>
-			<width>1280</width>
-			<height>405</height>
--->
-<!--			<include condition="Skin.HasSetting(Lightfloor)">ListFloorLight</include> -->
-<!--			<include condition="!Skin.HasSetting(clearfloor)">ListFloorNight</include>
-			<visible>Control.IsVisible(50) | Control.IsVisible(550)</visible>
-			<include>Animation_CommonFade</include>
-			<include>Animation_HideShowcase</include>
-			<include>Animation_HideMultiplex</include>
-		</control>
--->
 		<control type="image">
 			<posx>140</posx>
 			<posy>503</posy>
@@ -1106,60 +1076,9 @@
 			<include>Animation_HideShowcase</include>
 			<include>Animation_HighListSlide</include>
 			<visible>Control.IsVisible(551)</visible>
-			<animation effect="fade" start="100" end="60" time="50" condition="!Skin.HasSetting(listpanelthin)">Conditional</animation>
-			<animation effect="fade" start="100" end="40" time="50" condition="Skin.HasSetting(listpanelthin)">Conditional</animation>
+			<animation effect="fade" start="100" end="60" time="0" condition="!Skin.HasSetting(listpanelthin)">Conditional</animation>
+			<animation effect="fade" start="100" end="40" time="0" condition="Skin.HasSetting(listpanelthin)">Conditional</animation>
 		</control>
-<!--
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>464</width>
-			<height>720</height>
-			<texture>showcase/showcase_vignette.png</texture>
-			<visible>Skin.HasSetting(nomediaflags) | [[Control.IsVisible(57) | Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(551) | Control.IsVisible(52)  | Control.IsVisible(552)] + ![Control.HasFocus(94) | Control.HasFocus(197) | Control.HasFocus(320) | Control.HasFocus(321) | Control.HasFocus(322)]]</visible>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="100" time="400" easing="inout" tween="cubic" />
-				<effect type="slide" start="-464,0" end="0,0" time="400" easing="inout" tween="cubic" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
-				<effect type="slide" start="0,0" end="-464,0" time="400" easing="inout" tween="cubic" />
-			</animation>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="400" easing="inout" tween="cubic" />
-				<effect type="slide" start="-464,0" end="0,0" time="400" easing="inout" tween="cubic" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
-				<effect type="slide" start="0,0" end="-464,0" time="400" easing="inout" tween="cubic" />
-			</animation>
-		</control>
-
-		<control type="image">
-			<posx>816</posx>
-			<posy>0</posy>
-			<width>464</width>
-			<height>720</height>
-			<texture flipx="true">showcase/showcase_vignette.png</texture>
-			<visible>Skin.HasSetting(nomediaflags) | [[Control.IsVisible(57) | Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(551) | Control.IsVisible(52) | Control.IsVisible(552)] + ![Control.HasFocus(94) | Control.HasFocus(197) | Control.HasFocus(320) | Control.HasFocus(321) | Control.HasFocus(322)]]</visible>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="100" time="400" easing="inout" tween="cubic" />
-				<effect type="slide" start="464,0" end="0,0" time="400" easing="inout" tween="cubic" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
-				<effect type="slide" start="0,0" end="464,0" time="400" easing="inout" tween="cubic" />
-			</animation>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="400" easing="inout" tween="cubic" />
-				<effect type="slide" start="464,0" end="0,0" time="400" easing="inout" tween="cubic" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
-				<effect type="slide" start="0,0" end="464,0" time="400" easing="inout" tween="cubic" />
-			</animation>
-		</control>
--->
 	</control>
 	</include>
 
