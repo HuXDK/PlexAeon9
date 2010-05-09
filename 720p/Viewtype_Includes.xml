@@ -171,7 +171,7 @@
 		<control type="group">		
 			<visible>!Skin.HasSetting(nomediaflags)</visible>
 			<posy>117</posy>
-			<posx>70</posx>
+			<posx>73</posx>
 			<include>Animation_CommonFade</include>
 
 				<control type="image">
@@ -182,14 +182,15 @@
 					<include>Animation_CommonFade</include>
 					<include>Animation_HideShowcase</include>
 					<include>Animation_HideMultiplex</include>
-					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + Control.IsVisible(50)</visible>
 					<info>Listitem.Property(mediaTag::contentRating)</info>
+					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + Control.IsVisible(50)</visible>
 				</control>
 
 			<control type="grouplist">
 			<posx>75</posx>
 			<posy>-1</posy>
 			<orientation>horizontal</orientation>
+			<animation effect="slide" end="-76,0" time="300" condition="IsEmpty(Listitem.Property(mediaTag::contentRating))">Conditional</animation>
 
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
@@ -1452,6 +1453,7 @@
 			<visible>[Skin.HasSetting(clearfloor) | [!Skin.HasSetting(LightFloor) + !Skin.HasSetting(DarkFloor) + !Skin.HasSetting(clearfloor)]] + [[Control.IsVisible(550) | Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(57)] | [Control.IsVisible(53) + Skin.HasSetting(newwall)]]</visible>
 		</control>
 	</include>
+<!--
 	<include name="MediaMenuButton_Watched">
 		<control type="radiobutton" id="14">
 			<description>Watched Toggle Button</description>
@@ -1460,6 +1462,7 @@
 			<visible>[Container.Content(movies) + !Skin.HasSetting(nomenumoviewatched)] | [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(nomenutvwatched)]</visible>
 		</control>
 	</include>
+
 	<include name="MediaMenuButton_Search">
 		<control type="button" id="8">
 			<label>137</label>
@@ -1474,6 +1477,7 @@
 			<visible>Window.IsActive(myvideofiles) | Window.IsActive(502)</visible>
 		</control>
 	</include>
+
 	<include name="MediaMenuButton_Files">
 		<control type="button" id="11">
 			<label>31057</label>
@@ -1494,6 +1498,7 @@
 			<visible>!Skin.HasSetting(nomenufiles) + Window.IsActive(501)</visible>
 		</control>
 	</include>
+-->
 	<include name="MediaMenuButton_Playlist">
 		<control type="togglebutton" id="20">
 			<label>ORDER: NORMAL</label>
@@ -1525,6 +1530,7 @@
 			<visible>Window.IsActive(2)</visible>
 		</control>
 	</include>
+<!--
 	<include name="MediaMenuButton_GamesPoster">
 		<control type="togglebutton" id="700042">
 			<include>MediaMenuButton</include>
@@ -1537,6 +1543,7 @@
 			<visible>Window.IsActive(1)</visible>
 		</control>
 	</include>
+-->
 	<include name="MediaMenuButton_Setup">
 		<control type="button" id="700043">
 			<label>31016</label>
@@ -2142,7 +2149,7 @@
 				<include>MediaMenuButton_multiwallInfo</include>
 				<include>MediaMenuButton_ShowcaseInfo</include>
 				<include>MediaMenuButton_WallInfo</include>
-				<include>MediaMenuButton_GamesPoster</include>
+		<!--	<include>MediaMenuButton_GamesPoster</include> -->
 				<include>MediaMenuButton_MultiplexStyle</include>
 				<include>Objects_AnoobieStyleButtons</include>
 		<!--	<include>MediaMenuButton_MultiplexFlow</include>-->
@@ -2162,11 +2169,11 @@
 				<include>MediaMenuButton_Flags</include>
 		<!--	<include>MediaMenuButton_Fanart</include>  -->
 				<include>MediaMenuButton_Curtains</include>
-				<include>MediaMenuButton_Watched</include>
-		<!--	<include>MediaMenuButton_Sort</include> -->
+		<!--	<include>MediaMenuButton_Watched</include>
+				<include>MediaMenuButton_Sort</include> 
 				<include>MediaMenuButton_Filter</include>
 				<include>MediaMenuButton_Search</include>
-		<!--	<include>MediaMenuButton_Files</include> -->
+				<include>MediaMenuButton_Files</include> -->
 				<include>MediaMenuButton_Setup</include>
 				<include>MediaMenuButton_MediaDebug</include>
 		<!--	<include>LowList_ToggleSlideshowMediaMenuButton</include>
