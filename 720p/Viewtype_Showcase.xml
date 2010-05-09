@@ -3752,9 +3752,9 @@
 					<include>ShowcaseItemsLabel</include>
 				</control>
 				<control type="label" id="72">
-					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					<label>[UPPERCASE]"$INFO[ListItem.Tagline]"[/UPPERCASE]</label>
 					<include>ShowcaseDetailLabel</include>
-					<visible>Container.Content(movies) + !IsEmpty(ListItem.Genre)</visible>
+					<visible>Container.Content(movies) + !IsEmpty(ListItem.Tagline)</visible>
 				</control>
 				<control type="label" id="72">
 					<label>$INFO[ListItem.Album,, -] $INFO[ListItem.Artist]</label>

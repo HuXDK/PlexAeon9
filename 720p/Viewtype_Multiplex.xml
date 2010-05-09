@@ -758,7 +758,7 @@
 				<font>Font_MultiplexPlotSmall</font>
 				<info>ListItem.Plot</info>
 				<textcolor>d0FFFFFF</textcolor>
-				<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>
+				<autoscroll delay="15000" time="2000" repeat="10000">true</autoscroll>
 				<visible>Container.Content(tvshows)</visible>
 			</control>
 
@@ -770,7 +770,7 @@
 				<font>Font_MultiplexPlotSmall</font>
 				<info>Container.Property(description)</info>
 				<textcolor>d0FFFFFF</textcolor>
-				<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>
+				<autoscroll delay="15000" time="2000" repeat="10000">true</autoscroll>
 				<visible>Container.Content(seasons)</visible>
 			</control>
 
@@ -1446,9 +1446,9 @@
 			</control>
  
 			<control type="label" id="72">
-				<label>[UPPERCASE]$INFO[ListItem.Property(FirstGenre)][/UPPERCASE]</label>
+				<label>[UPPERCASE]"$INFO[ListItem.Tagline]"[/UPPERCASE]</label>
 				<include>ShowcaseDetailLabel</include>
-				<visible>Container.Content(movies) + !IsEmpty(ListItem.Genre)</visible>
+				<visible>Container.Content(movies) + !IsEmpty(ListItem.Tagline)</visible>
 			</control>
  
 			<control type="label" id="72">

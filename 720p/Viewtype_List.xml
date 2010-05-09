@@ -583,7 +583,7 @@
 		<posx>70</posx>
 		<posy>10</posy>
 		<visible>!Skin.HasSetting(singlemovielisticon) + Control.IsVisible(50) + [Window.IsActive(28) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(1)]</visible>
-<!--
+
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" start="0" end="100" time="500" />
 			<effect type="slide" start="300,0" end="0,0" time="500" easing="out" tween="quadratic"acceleration="-1" />
@@ -600,7 +600,7 @@
 			<effect type="fade" start="100" end="0" time="200" />
 			<effect type="slide" start="0,0" end="300,0" easing="in" tween="quadratic" time="200" acceleration="-1" />
 		</animation>
--->
+
 		<control type="image" id="4000">
 			<include>MovieListIcon_Thumb</include>
 			<animation effect="zoom" start="90" end="80" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>

@@ -24,7 +24,7 @@
 	<include name="Furniture_ShowcaseMediaFlagsVars">
 		<posy>677</posy>
 		<width>60</width>
-		<height>40</height>
+		<height>35</height>
 		<aspectratio>keep</aspectratio>
  		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
@@ -54,7 +54,7 @@
 	<include name="Furniture_PanelMediaFlagsVars">
 		<posy>459</posy>
 		<width>70</width>
-		<height>39</height>
+		<height>30</height>
 		<aspectratio>keep</aspectratio>
 		<include>Animation_CommonFade</include>
 		<visible>Control.IsVisible(553) | Control.IsVisible(53) | Control.IsVisible(55)</visible>
@@ -71,7 +71,7 @@
 	<include name="Furniture_PanelMediaFlagsVars2">
 		<posy>640</posy>
 		<width>50</width>
-		<height>25</height>
+		<height>30</height>
 		<aligny>bottom</aligny>
 		<aspectratio>keep</aspectratio>
 		<colordiffuse>BFFFFFFF</colordiffuse>
@@ -2901,16 +2901,26 @@
 
 	<include name="FlowMainLabel">
 		<include>FlowLabelVars</include>
-	    <posy>563</posy>
+	    <posy>88</posy>
 	    <font>Font_MediaWindowTitle</font>
 		<textcolor>9b3cd2fd</textcolor>
 	</include>
 
 	<include name="FlowDetailLabel">
 		<include>FlowLabelVars</include>
-	    <posy>587</posy>
+	    <posy>132</posy>
 	    <font>Font_List</font>
 		<textcolor>d0FFFFFF</textcolor>
+	</include>
+
+	<include name="PlotDetailLabel">
+	    <posy>543</posy>
+	    <posx>300</posx>
+		<width>675</width>
+		<height>57</height>
+	    <font>Font_List</font>
+		<textcolor>d0FFFFFF</textcolor>
+		<autoscroll delay="6000" time="3000" repeat="10000">true</autoscroll>
 	</include>
 	
 <!-- Music Flow objects -->	
@@ -4646,6 +4656,15 @@
 	            </control>
 	            <control type="label" id="75">
 	                <description>Detail</description>
+	                <label>"$INFO[ListItem.TagLine]"</label>
+					<include>FlowLabelVars</include>
+	  			 	<posy>112</posy>
+					<textcolor>d0FFFFFF</textcolor>
+					<font>cast</font>	
+	                <visible>!IsEmpty(ListItem.Tagline)</visible>
+	            </control>
+	            <control type="label" id="75">
+	                <description>Detail</description>
 	                <label>$INFO[ListItem.Label2]</label>
 	                <include>FlowDetailLabel</include>
 	                <visible>Window.IsActive(501)</visible>
@@ -4696,6 +4715,13 @@
 	                <include>FlowDetailLabel</include>
 	                <include>StarRatingImage</include>
 	                <visible>![Container.Content(albums) | Container.Content(songs)] + !IsEmpty(ListItem.Rating)</visible>
+	            </control>
+	            <control type="textbox">
+	                <description>Plot</description>
+	                <label fallback="416">$INFO[ListItem.Plot]</label>
+	                <include>PlotDetailLabel</include>
+					<multiline>true</multiline>
+	                <visible>true</visible>
 	            </control>
 	        </control>
 	    </control>
