@@ -1543,7 +1543,7 @@
 			<visible>Window.IsActive(1)</visible>
 		</control>
 	</include>
--->
+
 	<include name="MediaMenuButton_Setup">
 		<control type="button" id="700043">
 			<label>31016</label>
@@ -1570,6 +1570,7 @@
 			<visible>!Skin.HasSetting(nomenusettings) + [Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(500)]</visible>
 		</control>
 	</include>
+-->
 	<include name="MediaMenuButton_MediaDebug">
 		<control type="button" id="700047">
 			<label>31607</label>
@@ -2173,8 +2174,8 @@
 				<include>MediaMenuButton_Sort</include> 
 				<include>MediaMenuButton_Filter</include>
 				<include>MediaMenuButton_Search</include>
-				<include>MediaMenuButton_Files</include> -->
-				<include>MediaMenuButton_Setup</include>
+				<include>MediaMenuButton_Files</include> 
+				<include>MediaMenuButton_Setup</include> -->
 				<include>MediaMenuButton_MediaDebug</include>
 		<!--	<include>LowList_ToggleSlideshowMediaMenuButton</include>
 				<include>LowList_BrowsingLayoutMediaMenuButton</include>
