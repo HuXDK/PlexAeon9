@@ -189,7 +189,7 @@
 			<control type="grouplist">
 			<posx>75</posx>
 			<posy>-1</posy>
-				<orientation>horizontal</orientation>
+			<orientation>horizontal</orientation>
 
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>

@@ -148,6 +148,17 @@
 				<info>ListItem.Label</info>
 			</control>
 			<control type="label">
+				<include>listcolornofocus</include>	
+				<posx>40</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>43</height>
+				<font>Font_MediaWindowMenu</font>
+				<aligny>center</aligny>
+				<info>ListItem.episode</info>
+				<visible>Container.Content(episodes)</visible>
+			</control>
+			<control type="label">
 				<visible>![Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 				<include>ListLabel_Detail</include>
 				<include>listcolornofocus</include>
@@ -158,7 +169,7 @@
 				<include>ListLabel_Detail</include>
 				<include>listcolornofocus</include>
 				<animation effect="slide" start="0,0" end="-665,0" time="0" easing="inout" tween="cubic" condition="Container.Content(episodes)">Conditional</animation>
-				<label>[UPPERCASE]$INFO[ListItem.episode][/UPPERCASE]</label>
+				<label>[UPPERCASE]$INFO[ListItem.Property(UnWatchedEpisodes)][/UPPERCASE]</label>
 			</control>			
 		    <control type="image">
 				<posx>350</posx>
@@ -167,7 +178,7 @@
 				<height>43</height>
 				<aligny>center</aligny>
 				<info>ListItem.Overlay</info>
-				<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+				<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 		        <animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
 		    </control>
 		</itemlayout>
@@ -193,6 +204,17 @@
 				<info>ListItem.Label</info>
 			</control>
 			<control type="label">
+				<include>listcolorfocus</include>	
+				<posx>40</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>43</height>
+				<font>Font_MediaWindowMenu</font>
+				<aligny>center</aligny>
+				<info>ListItem.episode</info>
+				<visible>Container.Content(episodes)</visible>
+			</control>
+			<control type="label">
 				<visible>![Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 				<include>ListLabel_Detail</include>
 				<include>listcolorfocus</include>
@@ -204,7 +226,7 @@
 				<include>ListLabel_Detail</include>
 				<include>listcolorfocus</include>
 				<animation effect="slide" start="0,0" end="-665,0" time="0" easing="inout" tween="cubic" condition="Container.Content(episodes)">Conditional</animation>
-				<label>[UPPERCASE]$INFO[ListItem.episode][/UPPERCASE]</label>
+				<label>[UPPERCASE]$INFO[ListItem.Property(UnWatchedEpisodes)][/UPPERCASE]</label>
 			</control>			
 		    <control type="image">
 				<posx>350</posx>
@@ -213,7 +235,7 @@
 				<height>43</height>
 				<aligny>center</aligny>
 				<info>ListItem.Overlay</info>
-				<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+				<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 		        <animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
 		    </control>
  		</focusedlayout>
@@ -250,6 +272,20 @@
 		<aligny>center</aligny>
 		<include>listcolorfocus</include>	
 		<info>ListItem.Label</info>
+		<visible>Control.IsVisible(50)</visible>
+	  <include>Animation_CommonFade</include>
+	</control>
+
+	<control type="label">
+		<posx>1000</posx>
+		<posy>522</posy>
+		<width>150</width>
+		<height>43</height>
+		<font>Font_MediaWindowMenu</font>
+		<aligny>center</aligny>
+		<align>center</align>
+		<include>listcolornofocus</include>	
+		<label>SEASON [UPPERCASE]$INFO[ListItem.Season][/UPPERCASE]</label>
 		<visible>Control.IsVisible(50)</visible>
 	  <include>Animation_CommonFade</include>
 	</control>
