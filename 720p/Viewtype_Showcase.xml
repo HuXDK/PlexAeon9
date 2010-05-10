@@ -3506,6 +3506,7 @@
 		</control>
 		<control type="group">
 				<control type="fixedlist" id="57">
+				<visible>Container.Content(movies)</visible>
 				<viewtype label="Showcase">list</viewtype>
 				<include condition="Window.IsActive(28) | [Window.IsActive(24) + !Container.Content(episodes)] | Window.IsActive(1)">MovieShowcaseGroupVars</include>
 				<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2) | Window.IsActive(20)">MusicShowcaseGroupVars</include>

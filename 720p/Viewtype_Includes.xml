@@ -2743,7 +2743,7 @@
 
 
 	<include name="CoverflowVisible">
-		<visible>Control.IsVisible(55) + !Container.Content(Episodes)</visible>
+		<visible>Control.IsVisible(55)</visible>
 		<include>Animation_OpenCloseZoom</include>
 	</include>
 
@@ -4516,86 +4516,46 @@
 	        <include>CoverflowSquare</include>
 	    </control>
 	    <control type="group">
-	        <control type="wraplist" id="55">
-				<include condition="!Container.Content(episodes) + [Window.IsActive(28) | Window.IsActive(myvideofiles) | Window.IsActive(1)]">MovieFlowGroupVars</include>
-				<include condition="Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2) | Container.Content(episodes)">MusicFlowGroupVars</include>
+	        <control type="fixedlist" id="55">
+	            <viewtype label="Coverflow">list</viewtype>
+				<include>MovieFlowGroupVars</include>
 	            <onleft>55</onleft>
 	            <onright>55</onright>
 	            <onup>7000</onup>
 	            <ondown>60</ondown>
-	            <viewtype label="Coverflow">list</viewtype>
 	            <pagecontrol>60</pagecontrol>
 	            <orientation>horizontal</orientation>
 	            <scrolltime>250</scrolltime>
 	            <focusposition>3</focusposition>
-               <itemlayout height="350" width="196" condition="Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)">
+               <itemlayout height="350" width="196" condition="true">
                     <control type="image">
                         <include>MovieFlowThumbMain</include>
                         <info>ListItem.Icon</info>
-						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000)</visible>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) | Container.Content(episodes)</visible>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieFlowGlassOverlay</include>
-						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000)</visible>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) | Container.Content(episodes)</visible>
                     </control>
 				</itemlayout>
-                <focusedlayout height="350" width="196"	condition="Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)">
+                <focusedlayout height="350" width="196"	condition="true">
                     <control type="image">
                         <include>MovieFlowThumbMain</include>
                         <info>ListItem.Icon</info>
-						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000)</visible>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) | Container.Content(episodes)</visible>
 						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieFlowGlassOverlay</include>
-						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000)</visible>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) | Container.Content(episodes)</visible>
 						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>						
                     </control>
 				</focusedlayout>
-                <itemlayout height="350" width="250" condition="Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2) | Container.Content(episodes)">
-                    <control type="image">
-                        <include>MusicFlowThumbMain</include>
-                        <info>ListItem.Icon</info>
-						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)]</visible>
-                    </control>
-                    <control type="image">
-                        <description>Glass overlay</description>
-                        <include>MusicFlowGlassOverlay</include>
-						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)]</visible>
-                    </control>
-                    <control type="image">
-                        <description>Black overlay</description>
-                        <include>MusicFlowOverlay</include>
-						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)] + !Control.HasFocus(55)</visible>
-                    </control>
-				</itemlayout>
-                <focusedlayout height="350" width="250" condition="Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2) | Container.Content(episodes)">
-                    <control type="image">
-                        <include>MusicFlowThumbMain</include>
-                        <info>ListItem.Icon</info>
-						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)]</visible>
-						<animation effect="zoom" start="100" end="110" center="135,160" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,160" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + [Skin.HasSetting(flattenflow) | Container.Content(episodes)]">Unfocus</animation>						
-                    </control>
-                    <control type="image">
-                        <description>Glass overlay</description>
-                        <include>MusicFlowGlassOverlay</include>
-						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)]</visible>
-						<animation effect="zoom" start="100" end="110" center="135,160" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,160" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + [Skin.HasSetting(flattenflow) | Container.Content(episodes)]">Unfocus</animation>						
-                    </control>
-                    <control type="image">
-                        <description>Black overlay</description>
-                        <include>MusicFlowOverlay</include>
-						<visible>[[Skin.HasSetting(flattenflow) + !Control.IsVisible(971)] | Container.Content(episodes)] + !Control.HasFocus(55)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,160" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,160" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + [Skin.HasSetting(flattenflow) | Container.Content(episodes)]">Unfocus</animation>						
-                    </control>
-				</focusedlayout>				
+
 	        </control>
 	    <control type="group">
  	      		<include>CoverflowVisible</include>
