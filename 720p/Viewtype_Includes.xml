@@ -839,7 +839,7 @@
 		<textoffsetx>10</textoffsetx>
 		<texturefocus>windows/mediamenu.png</texturefocus>
 		<texturenofocus>verticalmenu/button.png</texturenofocus>
-		<alttexturefocus>dialogs/setcontent_button_focus.png</alttexturefocus>
+		<alttexturefocus>windows/mediamenu.png</alttexturefocus>
 		<alttexturenofocus>verticalmenu/button.png</alttexturenofocus>
 		<radiowidth>72</radiowidth>
 		<radioposx>156</radioposx>
@@ -4655,7 +4655,7 @@
 	            </control>
 	            <control type="label" id="75">
 	                <description>Detail</description>
-	                <label>$INFO[ListItem.TVShowTitle]</label>
+	                <label>$INFO[Container.SecondTitle]</label>
 	                <include>FlowDetailLabel</include>
 	                <visible>Container.Content(seasons)</visible>
 	            </control>

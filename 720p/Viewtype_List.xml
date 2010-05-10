@@ -272,7 +272,33 @@
 		<aligny>center</aligny>
 		<include>listcolorfocus</include>	
 		<info>ListItem.Label</info>
-		<visible>Control.IsVisible(50)</visible>
+		<visible>Control.IsVisible(50) + ![Container.Content(episodes) | Container.Content(seasons)]</visible>
+	  <include>Animation_CommonFade</include>
+	</control>
+
+	<control type="label">
+		<posx>70</posx>
+		<posy>72</posy>
+		<width>800</width>
+		<height>43</height>
+		<font>ListView_ListTitle</font>
+		<aligny>center</aligny>
+		<include>listcolorfocus</include>	
+		<info>Container.SecondTitle</info>
+		<visible>Control.IsVisible(50) + Container.Content(seasons)</visible>
+	  <include>Animation_CommonFade</include>
+	</control>
+
+	<control type="label">
+		<posx>70</posx>
+		<posy>72</posy>
+		<width>800</width>
+		<height>43</height>
+		<font>ListView_ListTitle</font>
+		<aligny>center</aligny>
+		<include>listcolorfocus</include>	
+		<info>Container.FirstTitle</info>
+		<visible>Control.IsVisible(50) + Container.Content(episodes)</visible>
 	  <include>Animation_CommonFade</include>
 	</control>
 
@@ -286,7 +312,7 @@
 		<align>center</align>
 		<include>listcolornofocus</include>	
 		<label>SEASON [UPPERCASE]$INFO[ListItem.Season][/UPPERCASE]</label>
-		<visible>Control.IsVisible(50)</visible>
+		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Season)</visible>
 	  <include>Animation_CommonFade</include>
 	</control>
 

@@ -783,7 +783,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_MultiplexTVLabelOld</font>
-					<label>$INFO[ListItem.TVShowTitle]</label>
+					<label>$INFO[Container.SecondTitle]</label>
 					<visible>Container.Content(seasons)</visible>
 				</control>
 				<!--				<control type="image"><posx>0</posx><posy>1</posy><width>1280</width><height>35</height><texture>multiplex/old/multiplex_gradienttv.png</texture><visible>Control.IsVisible(553)</visible></control>--></control>

@@ -54,7 +54,10 @@
 		<texture>clearlist/light/nowplaying_background.png</texture>
 	</include>
 	<include name="cList_LightBackgroundTextureInfoPanel">
-		<texture>clearlist/light/infopanel_background.png</texture>
+		<texture background="true" diffuse="multiplex/multiplex_mask.png">clearlist/light/infopanel_background.png</texture>
+		<aspectratio scalediffuse="false">stretch</aspectratio>
+		<bordertexture border="28">wall/wall_movie_fborder.png</bordertexture>
+		<bordersize>9</bordersize>
 	</include>
 	<include name="cList_LightBackgroundTextureInfoPanelSolid">
 		<texture>clearlist/light/infopanel_background_solid.png</texture>
@@ -84,7 +87,7 @@
 		<texture>clearlist/light/button_big.png</texture>
 	</include>
 	<include name="cList_LightButtonTextureFocus">
-		<texture>clearlist/light/button_focus.png</texture>
+		<texture>windows/mediamenu.png</texture>
 	</include>
 	<include name="cList_LightBigButtonTextureFocus">
 		<texture>clearlist/light/button_big_focus.png</texture>
@@ -103,7 +106,10 @@
 		<texture>clearlist/nowplaying_background.png</texture>
 	</include>
 	<include name="cList_NightBackgroundTextureInfoPanel">
-		<texture>clearlist/infopanel_background.png</texture>
+		<texture background="true" diffuse="multiplex/multiplex_mask.png">clearlist/infopanel_background.png</texture>
+		<aspectratio scalediffuse="false">stretch</aspectratio>
+		<bordertexture border="28">wall/wall_movie_fborder.png</bordertexture>
+		<bordersize>9</bordersize>
 	</include>
 	<include name="cList_NightBackgroundTextureInfoPanelSolid">
 		<texture>clearlist/infopanel_background_solid.png</texture>
@@ -114,7 +120,7 @@
 	<!-- Night-List -->
 	<include name="cList_NightLabelColors">
 		<selectedcolor>FF3ab9ed</selectedcolor>
-		<textcolor>FFFFFFFF</textcolor>
+		<textcolor>7FFFFFFF</textcolor>
 	</include>
 	<include name="cList_NightLabelColorsFocus">
 		<selectedcolor>FF206581</selectedcolor>
@@ -133,7 +139,7 @@
 		<texture>clearlist/button_big.png</texture>
 	</include>
 	<include name="cList_NightButtonTextureFocus">
-		<texture>dialogs/setcontent_button_focus.png</texture>
+		<texture>windows/mediamenu.png</texture>
 	</include>
 	<include name="cList_NightBigButtonTextureFocus">
 		<texture>clearlist/button_big_focus.png</texture>
@@ -144,7 +150,7 @@
 		<posx>160</posx>
 		<posy>10</posy>
 		<height>25</height>
-		<font>Font_MediaWindowTitle</font>
+		<font>Font_MediaWindowMenu</font>
 		<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>
 		<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 		<align>center</align>
@@ -228,7 +234,7 @@
 				<posx>-240</posx>
 			<control type="image">
 				<posx>270</posx>
-				<posy>10</posy>
+				<posy>20</posy>
 				<width>150</width>
 				<height>222</height>
 				<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
@@ -238,7 +244,7 @@
 			</control>
 			<control type="image">
 				<posx>270</posx>
-				<posy>10</posy>
+				<posy>20</posy>
 				<width>150</width>
 				<height>222</height>
 				<bordertexture border="-23">wall/wall_movie_fborder.png</bordertexture>
@@ -247,7 +253,7 @@
 			</control>
 			<control type="image">
 				<posx>270</posx>
-				<posy>10</posy>
+				<posy>20</posy>
 				<width>150</width>
 				<height>222</height>
 				<texture>multiplex/multiplex_glass.png</texture>
@@ -531,7 +537,7 @@
 				<height>198</height>
 				<font>Font_MultiplexPlotSmall</font>
 				<info>ListItem.Plot</info>
-				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>
+				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
 				<visible>Window.IsActive(myvideofiles)</visible>
@@ -949,7 +955,7 @@
 			<!-- List Background -->
 			<control type="image">
 				<posx>114</posx>
-				<posy>50</posy>
+				<posy>40</posy>
 				<width>430</width>
 				<height>600</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
@@ -958,7 +964,7 @@
 			</control>
 			<control type="image">
 				<posx>114</posx>
-				<posy>50</posy>
+				<posy>40</posy>
 				<width>450</width>
 				<height>610</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
@@ -1009,6 +1015,7 @@
 						<label>$INFO[ListItem.Artist]</label>
 						<visible>Container.Content(artists)</visible>
 					</control>
+
 					<control type="label">
 						<posx>10</posx>
 						<posy>0</posy>
@@ -1146,7 +1153,7 @@
 						<height>40</height>
 						<font>Font_ClearInfoValue</font>
 						<aligny>center</aligny>
-						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
+						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
@@ -1173,7 +1180,7 @@
 						<height>40</height>
 						<font>Font_ClearInfoValue</font>
 						<aligny>center</aligny>
-						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
+						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
 						<align>left</align>
 						<label>$INFO[ListItem.Title]</label>
@@ -1577,7 +1584,7 @@
 			
 			<control type="group">
 				<visible>!ControlGroup(7000).HasFocus()</visible>
-				<posy>45</posy>
+				<posy>35</posy>
 				<control type="label">
 					<label>ONLINE MEDIA</label>
 					<include>cList_Title</include>
@@ -1615,16 +1622,16 @@
 					<visible>Container.Content(tvshows) + Window.IsActive(myvideofiles)</visible>
 				</control>
 				<control type="label">
-					<label>[UPPERCASE]$INFO[ListItem.TVShowTitle][/UPPERCASE]</label>
+					<label>[UPPERCASE]$INFO[Container.SecondTitle][/UPPERCASE]</label>
 					<include>cList_Title</include>
 					<width>330</width>
-					<visible>Container.Content(seasons) + Window.IsActive(myvideofiles)</visible>
+					<visible>Container.Content(seasons)</visible>
 				</control>
 				<control type="label">
-					<label>[UPPERCASE]$INFO[ListItem.TVShowTitle][/UPPERCASE]</label>
+					<label>[UPPERCASE]$INFO[Container.FirstTitle][/UPPERCASE]</label>
 					<include>cList_Title</include>
 					<width>330</width>
-					<visible>Container.Content(episodes) + Window.IsActive(myvideofiles)</visible>
+					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="label">
 					<label>31929</label>
