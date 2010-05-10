@@ -224,6 +224,7 @@
 		<control type="group">
 			<visible>[Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(553) | Control.IsVisible(57)] + !Skin.HasSetting(nomediaflags) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
 			<include>Animation_CommonFade</include>
+			<posy>5</posy>
 			<control type="group">
 				<posx>100</posx>
 				<control type="image">
@@ -2915,7 +2916,7 @@
 
 	<include name="PlotDetailLabel">
 	    <posy>543</posy>
-	    <posx>300</posx>
+	    <posx>302</posx>
 		<width>675</width>
 		<height>57</height>
 	    <font>Font_List</font>
@@ -4649,7 +4650,7 @@
 	            </control>
 	            <control type="label" id="75">
 	                <description>Detail</description>
-	                <label>$INFO[ListItem.Episode] EPISODES</label>
+	                <label>$INFO[ListItem.Property(UnWatchedEpisodes)] EPISODES</label>
 	                <include>FlowDetailLabel</include>
 	                <visible>Container.Content(tvshows) + !IsEmpty(ListItem.Episode)</visible>
 	            </control>
@@ -4681,7 +4682,14 @@
 	                <label fallback="416">$INFO[ListItem.Plot]</label>
 	                <include>PlotDetailLabel</include>
 					<multiline>true</multiline>
-	                <visible>true</visible>
+	                <visible>!IsEmpty(ListItem.Plot)</visible>
+	            </control>
+	            <control type="textbox">
+	                <description>Plot</description>
+	                <label fallback="416">$INFO[Container.Property(description)]</label>
+	                <include>PlotDetailLabel</include>
+					<multiline>true</multiline>
+	                <visible>!IsEmpty(Container.Property(description))</visible>
 	            </control>
 	        </control>
 	    </control>

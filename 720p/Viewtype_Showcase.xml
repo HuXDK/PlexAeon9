@@ -758,7 +758,6 @@
 		<include condition="Skin.HasSetting(darkfloor) | Skin.HasSetting(clearfloor)">Colour_ShowcaseLabelNightShade</include>
 		<textcolor>FFFFFFFF</textcolor>
 		<visible>!ControlGroup(7000).HasFocus()</visible>
-		<animation effect="slide" end="0,-11" time="200" condition="[!Control.IsVisible(72) | IsEmpty(Control.GetLabel(72))]">Conditional</animation>
 	</include>
 	<include name="ShowcaseMainLabelWide">
 		<include>ShowcaseLabelVars</include>
@@ -769,7 +768,6 @@
 		<include condition="Skin.HasSetting(lightfloor)">Colour_ShowcaseLabelLightShade</include>
 		<include condition="Skin.HasSetting(darkfloor) | Skin.HasSetting(clearfloor)">Colour_ShowcaseLabelNightShade</include>
 		<visible>!ControlGroup(7000).HasFocus()</visible>
-		<animation effect="slide" end="0,-11" time="200" condition="!Container.Content(seasons) + [!Control.IsVisible(72) | IsEmpty(Control.GetLabel(72))]">Conditional</animation>
 	</include>
 	<include name="ShowcaseItemsLabel">
 		<include>ShowcaseLabelVars</include>
@@ -3756,6 +3754,16 @@
 					<label>[UPPERCASE]"$INFO[ListItem.Tagline]"[/UPPERCASE]</label>
 					<include>ShowcaseDetailLabel</include>
 					<visible>Container.Content(movies) + !IsEmpty(ListItem.Tagline)</visible>
+				</control>
+				<control type="label" id="72">
+					<label>$INFO[ListItem.Year]</label>
+					<include>ShowcaseDetailLabel</include>
+					<visible>Container.Content(movies) + IsEmpty(ListItem.Tagline)</visible>
+				</control>
+				<control type="label" id="72">
+					<label>$INFO[ListItem.Duration]</label>
+					<include>ShowcaseDetailLabel</include>
+					<visible>Container.Content(movies) + IsEmpty(ListItem.Tagline) + IsEmpty(ListItem.Year)</visible>
 				</control>
 				<control type="label" id="72">
 					<label>$INFO[ListItem.Album,, -] $INFO[ListItem.Artist]</label>

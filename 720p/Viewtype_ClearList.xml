@@ -269,7 +269,7 @@
       			<texture background="true">$INFO[listitem.property(fanart_image)]</texture>
         		<bordertexture border="8">list/list_frame.png</bordertexture>
         		<bordersize>15</bordersize>
-        		<visible>[Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)]] + IsEmpty(ListItem.Thumb)</visible>
+        		<visible>[Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes) + !Container.Content(Seasons)]] + IsEmpty(ListItem.Thumb)</visible>
      		</control>
      		 <control type="image">
 				<posx>270</posx>
@@ -540,7 +540,19 @@
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
-				<visible>Window.IsActive(myvideofiles)</visible>
+				<visible>!IsEmpty(ListItem.Plot)</visible>
+			</control>
+			<control type="textbox">
+				<posx>30</posx>
+				<posy>250</posy>
+				<width>380</width>
+				<height>198</height>
+				<font>Font_MultiplexPlotSmall</font>
+				<info>Container.Property(description)</info>
+				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
+				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
+				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
+	            <visible>!IsEmpty(Container.Property(description))</visible>
 			</control>
 			<!-- TvShow Plot -->
 <!--
