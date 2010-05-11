@@ -1,7 +1,7 @@
 <window id="2">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	 <views>54,551,550,50,51,57,53</views>
+	 <views>50,54,51,57,53,551</views>
 	<controls>
 
 		<control type="image">
@@ -34,9 +34,9 @@
 			<include>Furniture_Time</include>
 			<include>Furniture_MediaPanel</include>
 			<include condition="!Skin.HasSetting(WallOff)">Viewtype_Wall</include>
-			<include>Viewtype_StripShow</include>
 			<include>Viewtype_List</include>
-			<include condition="!Skin.HasSetting(SlimListOff)">Viewtype_List_Slim</include>
+			<include>Viewtype_StripShow</include>
+<!--		<include condition="!Skin.HasSetting(SlimListOff)">Viewtype_List_Slim</include> -->
 			<include condition="!Skin.HasSetting(ClearListOff)">Viewtype_ClearList</include>
 			<include condition="!Skin.HasSetting(ShowcaseOff)">Viewtype_Showcase</include>
 			<include condition="!Skin.HasSetting(ListLowOff)">Viewtype_List_Low</include>

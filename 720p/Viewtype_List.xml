@@ -364,7 +364,7 @@
 	<control type="group">
 		<posx>160</posx>
 		<posy>55</posy>
-		<visible>Skin.HasSetting(singlemusiclisticon) + Control.IsVisible(50) + [Window.IsActive(20) | Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes)]</visible>
+		<visible>Window.IsActive(2) | [Skin.HasSetting(singlemusiclisticon) + Control.IsVisible(50) + [Window.IsActive(20) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes)]]</visible>
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" start="0" end="100" time="500" />
 			<effect type="slide" start="300,0" end="0,0" time="500" easing="out" tween="quadratic" acceleration="-1" />
@@ -400,7 +400,7 @@
 	<control type="group">
 		<posx>160</posx>
 		<posy>55</posy>
-		<visible>!Skin.HasSetting(singlemusiclisticon) + Control.IsVisible(50) + [[Window.IsActive(20) | Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes)] | Window.IsActive(myvideofiles) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+		<visible>!Skin.HasSetting(singlemusiclisticon) + Control.IsVisible(50) + [[Window.IsActive(20) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes)] | Window.IsActive(myvideofiles) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]]</visible>
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" start="0" end="100" time="500" />
 			<effect type="slide" start="300,0" end="0,0" time="500" easing="out" tween="quadratic" acceleration="-1" />
@@ -587,7 +587,7 @@
 	<control type="group">
 		<posx>95</posx>
 		<posy>8</posy>
-		<visible>Skin.HasSetting(singlemovielisticon) + Control.IsVisible(50) + [!Container.Content(episodes) + [Window.IsActive(28) | Window.IsActive(24) | Window.IsActive(25) | Window.IsActive(1)]]</visible>
+		<visible>Skin.HasSetting(singlemovielisticon) + Control.IsVisible(50) + [!Container.Content(episodes) + [Window.IsActive(28) | Window.IsActive(24) | Window.IsActive(1)]]</visible>
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" start="0" end="100" time="500" />
 			<effect type="slide" start="300,0" end="0,0" time="500" easing="out" tween="quadratic" acceleration="-1" />

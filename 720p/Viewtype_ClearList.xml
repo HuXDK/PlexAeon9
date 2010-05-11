@@ -207,7 +207,7 @@
 		<control type="group" id="2502">
 			<posx>620</posx>
 			<posy>50</posy>
-			<visible>Control.IsVisible(54) + [Window.IsActive(myvideofiles) | Window.IsActive(1)]</visible>
+			<visible>Control.IsVisible(54) + [Window.IsActive(myvideofiles) | Window.IsActive(1) | Window.IsActive(2)]</visible>
 			<include>Animation_cListCommonFade</include>
 			<include>Animation_cListInfoPanelZoom</include>
 <!--			<include>Animation_cListHorizontalMenuInfoPanelSlide</include> -->
@@ -282,6 +282,8 @@
         		<visible>[Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)]] + IsEmpty(ListItem.Thumb)</visible>
       		</control>
 		</control>			
+		
+	
 			<!-- Episode Thumb -->
 
 			<control type="image">
@@ -916,31 +918,8 @@
 				<texture>$INFO[listitem.property(fanart_image)]</texture>
 				<visible>Window.IsActive(2)</visible>
 			</control>
-			-->
-
-			<control type="image">
-				<posy>-482</posy>
-				<posx>800</posx>
-				<width>366</width>
-				<height>1000</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<fadetime>400</fadetime>
-				<texture>$INFO[ListItem.Icon]</texture>
-				<bordertexture border="10">list/list_frame.png</bordertexture>
-				<bordersize>10</bordersize>
-				<visible>Window.IsActive(2)</visible>
-			</control>
-			<control type="image">
-				<posy>506</posy>
-				<posx>800</posx>
-				<width>366</width>
-				<height>1000</height>
-				<aspectratio aligny="top">keep</aspectratio>
-				<fadetime>400</fadetime>
-				<texture flipy="true" diffuse="list/list_reflect_mask.png">$INFO[ListItem.Icon]</texture>
-				<bordersize>8</bordersize>
-				<visible>Window.IsActive(2)</visible>
-			</control>
+			
+-->
 
 			<!-- Background for Solid List -->
 			<control type="image">
@@ -972,7 +951,7 @@
 				<height>600</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
-				<visible>Control.IsVisible(54) + !Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
+				<visible>Control.IsVisible(54) + Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
 			</control>
 			<control type="image">
 				<posx>114</posx>
@@ -986,6 +965,20 @@
 
 			<include>cList_VideoInfoPanel</include>
 			<include>cList_MusicInfoPanel</include>
+			<!-- Pictures Thumb -->
+			
+			<control type="image">
+				<posy>100</posy>
+				<posx>680</posx>
+				<width>366</width>
+				<height>800</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<fadetime>400</fadetime>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<bordertexture border="10">list/list_frame.png</bordertexture>
+				<bordersize>10</bordersize>
+				<visible>Window.IsActive(2)</visible>
+			</control>
 
 			<control type="list" id="54">
 				<viewtype label="31581">list</viewtype>

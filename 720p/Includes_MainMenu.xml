@@ -163,7 +163,7 @@
 					<item id="5">
 					<label>31012</label>
 					<include>BackgroundVarsPictures</include>
-					<onclick>XBMC.ActivateWindow(MyPictures,return)</onclick>
+					<onclick>XBMC.ActivateWindow(2)</onclick>
 					<visible>!Skin.HasSetting(nopictures)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
