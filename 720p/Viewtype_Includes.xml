@@ -2308,9 +2308,9 @@
 			</control>		
 			
 			<control type="label">
-				<posx>170</posx>
+				<posx>340</posx>
 				<posy>-100</posy>
-				<width>940</width>
+				<width>600</width>
 				<height>150</height>
 				<align>center</align>
 				<aligny>center</aligny>
