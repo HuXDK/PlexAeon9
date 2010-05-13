@@ -524,14 +524,6 @@
 					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >Visible</animation>
 					<animation effect="fade" delay="3000" start="0" end="100" time="2500" >WindowOpen</animation>
 				<posx>210</posx>	
-						<!-- UK Certification -->
-
-				<!-- US Certification -->
-
-				<!-- Germany Certification -->
-				<control type="group">
-					<posy>-5</posy>
-				</control>
 			</control>
 		</control>
 	</include>
@@ -540,6 +532,7 @@
 			<visible>Window.IsActive(24) + Control.IsVisible(563) + !Skin.HasSetting(nomediaflags) + Container.Content(movies)</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideMultiplex</include>
+			<posy>60</posy>
 			<control type="group">
 				<posx>90</posx>
 				<control type="image" id="91">
@@ -578,9 +571,13 @@
 				<info>Listitem.Property(mediaTag::videoFrameRate)</info>
 			</control>
 			<control type="image">
-				<posx>190</posx>
-				<posy>-10</posy>
-				<include>Furniture_MediaFlagsVarsAnoobie3</include>
+				<posx>-5</posx>
+				<posy>-40</posy>
+				<width>70</width>
+				<height>25</height>
+				<align>left</align>
+				<aspectratio>keep</aspectratio>
+				<include>Animation_CommonFade</include>
 				<info>Listitem.Property(mediaTag::contentRating)</info>
 			</control>
 			</control>
@@ -2255,7 +2252,7 @@
 		<posy>284</posy>
 		<width>50</width>
 		<height>29</height>
-		<aspect>keep</aspect>
+		<aspectratio>keep</aspectratio>
 		<include>Animation_CommonFade</include>
 	</include>
 	
@@ -2339,7 +2336,7 @@
 					<posy>150</posy>
 					<camera x="440" y="195" />	
 					<width>300</width>
-					<height>195</height>
+					<height>200</height>
 					<animation effect="rotatey" center="0" start="50" end="-45" time="0" condition="true">Conditional</animation>
 					<font>Font_MultiplexPlot</font>
 					<textcolor>FFFFFFFF</textcolor>				
@@ -2364,7 +2361,7 @@
 
 -->			
 			<control type="group">
-				<posx>45</posx>
+				<posx>65</posx>
 				<posy>-40</posy>
 				<camera x="440" y="195" />
 				<animation effect="rotatey" center="0" start="-30" end="-45" time="0" condition="true">Conditional</animation>
@@ -2388,7 +2385,8 @@
 				
 
 				<control type="group">
-					<posy>70</posy>
+					<posy>120</posy>
+					<posx>180</posx>
 					<control type="label">
 						<include>Anoobie3InfoLabel</include>
 						<label>$LOCALIZE[31436]:</label>
@@ -2407,7 +2405,7 @@
 
 				<control type="group">
 					<posy>22</posy>
-					<posx>200</posx>
+					<posx>180</posx>
 					<control type="label">
 						<include>Anoobie3InfoLabel</include>
 						<label>$LOCALIZE[31438]:</label>
@@ -2417,7 +2415,7 @@
 						<posx>0</posx>	
 						<posy>17</posy>
 						<width>80</width>
-						<height>126</height>
+						<height>50</height>
 						<autoscroll>false</autoscroll>
 						<font>cast</font>
 						<textcolor>FFFFFFFF</textcolor>				
@@ -2427,7 +2425,7 @@
 				</control>
 				
 				<control type="group">
-					<posy>120</posy>
+					<posy>70</posy>
 					<posx>0</posx>
 					<control type="label">
 						<posx>0</posx>
