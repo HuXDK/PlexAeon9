@@ -36,7 +36,6 @@
 		<width min="0" max="65">auto</width>
 		<height>25</height>
 		<aspectratio>keep</aspectratio>
-	 	<colordiffuse>cfffffff</colordiffuse>
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
 		<include>Animation_HideMultiplex</include>
@@ -658,13 +657,6 @@
 			<info>Listitem.Property(mediaTag::studio)</info>
 			<visible>!Skin.HasSetting(nostudio)</visible>
 		</control>
-<!--
-			<control type="image" id="91">
-				<include>Furniture_PanelMediaFlagsVars</include>
-				<texture>$INFO[ListItem.Path,,tvstudio.png]</texture>
-				<visible>!Skin.HasSetting(nostudio)</visible>
-			</control>
--->
 		<control type="image" id="91">
 			<posy>440</posy>
 			<width>50</width>

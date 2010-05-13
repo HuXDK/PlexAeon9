@@ -150,8 +150,8 @@
 		<posx>160</posx>
 		<posy>10</posy>
 		<height>25</height>
-		<font>Font_MediaWindowMenu</font>
-		<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>
+		<font>FlowMainLabel</font>
+<!--	<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>  -->
 		<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 		<align>center</align>
 		<aligny>center</aligny>
@@ -587,7 +587,7 @@
 		</control>
 		<control type="group">
 			<posx>-245</posx>
-			<posy>-85</posy>
+			<posy>-95</posy>
 		<include>LowList_MediaFlags</include>
 		</control>
 	</include>
@@ -885,7 +885,7 @@
 	<control type="group">
 		<control type="group">
 		<visible>Control.IsVisible(54)</visible>
-			<include>Animation_cListHorizontalMenuBackgroundSlide</include>
+<!--			<include>Animation_cListHorizontalMenuBackgroundSlide</include> -->
 <!--
 			<control type="button" id="2501">
 				<posx>0</posx>
@@ -993,7 +993,7 @@
 				<include condition="Window.IsActive(myvideofiles) | Window.IsActive(1)">cList_OnRightLibraryMovies</include>
 				<include condition="Window.IsActive(502)">cList_OnRightLibraryMusic</include>
 				<orientation>vertical</orientation>
-	<!--			<pagecontrol>2505</pagecontrol> --->
+	<!--		<pagecontrol>2505</pagecontrol> --->
 				<visible>true</visible>
 				<include>Animation_cListCommonFade</include>
 				<!-- Librarys without Songs and Albums -->
@@ -1040,13 +1040,13 @@
 						<posy>0</posy>
 						<width>380</width>
 						<height>40</height>
-						<font>Font_ClearInfoValue</font>
+						<font>FlowMainLabel</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>[Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Skin.HasSetting(nooverlays)]] + [!Container.Content(episodes) | [Container.Content(episodes) + Skin.HasSetting(oldCListInfo)]]</visible>
+						<visible>Window.IsActive(1) | [!Container.Content(episodes) | [Container.Content(episodes) + Skin.HasSetting(oldCListInfo)]]</visible>
 					</control>
 					
 					<control type="label">
@@ -1075,7 +1075,7 @@
 						<label>$INFO[ListItem.Title]</label>
 						<visible>Container.Content(episodes) + !Skin.HasSetting(oldCListInfo)</visible>
 					</control>
-
+<!--
 					<control type="label">
 						<posx>10</posx>
 						<posy>0</posy>
@@ -1089,7 +1089,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					</control>
-
+-->
 					<control type="label">
 						<posx>426</posx>
 						<posy>8</posy>
@@ -1191,7 +1191,7 @@
 						<label>$INFO[ListItem.Title]</label>
 						<visible>Container.Content(episodes) + !Skin.HasSetting(oldCListInfo)</visible>
 					</control>
-
+<!--
 					<control type="label">
 						<posx>10</posx>
 						<posy>0</posy>
@@ -1205,7 +1205,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					</control>
-
+-->
 					<control type="label">
 						<posx>426</posx>
 						<posy>8</posy>
@@ -1588,10 +1588,9 @@
 			<!-- Title (top) >>>>>-->
 			
 			<control type="group">
-				<visible>!ControlGroup(7000).HasFocus()</visible>
 				<posy>35</posy>
 				<control type="label">
-					<label>ONLINE MEDIA</label>
+					<label>31015</label>
 					<include>cList_Title</include>
 					<width>330</width>
 					<visible>Window.IsActive(myvideofiles) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
