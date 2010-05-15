@@ -1110,7 +1110,7 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1899</width>
-				<texture flipy="true">common/rssbar_mid.png</texture>
+				<texture flipy="true">lowlist/lowlistbar_mid.png</texture>
 				<include>Animation_DetailMenuSlideForRSS</include>
 			</control>
 

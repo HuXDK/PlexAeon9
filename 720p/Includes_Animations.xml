@@ -213,7 +213,7 @@
 
 	<include name="Animation_BackgroundFade">
 		<animation effect="fade" time="500" start="0" end="80" reversible="true">Visible</animation>
-	    <animation effect="fade" time="1000"  start="80" end="0" reversible="true">Hidden</animation>
+	    <animation effect="fade" time="500"  start="80" end="0" reversible="true">Hidden</animation>
 	    <animation effect="fade" time="300" start="80" end="20" reversible="false">WindowClose + !WindowNext(2600)</animation>
 
 	</include>

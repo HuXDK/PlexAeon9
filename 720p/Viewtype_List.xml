@@ -276,7 +276,7 @@
 				<include>listcolorfocus</include>	
 				<info>ListItem.Label</info>
 				<visible>Control.IsVisible(50) + ![Container.Content(episodes) | Container.Content(seasons)]</visible>
-			 	<include>Animation_CommonFade</include>
+				<animation effect="fade" time="500">Visible</animation>
 			</control>
 
 			<control type="label">
@@ -287,7 +287,7 @@
 				<include>listcolorfocus</include>	
 				<info>Container.SecondTitle</info>
 				<visible>Control.IsVisible(50) + Container.Content(seasons)</visible>
-	  			<include>Animation_CommonFade</include>
+				<animation effect="fade" time="500">Visible</animation>
 			</control>
 
 			<control type="label">
@@ -296,10 +296,22 @@
 				<font>ListView_ListTitle</font>	
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
-				<label>$INFO[Container.FirstTitle] (Season [UPPERCASE]$INFO[ListItem.Season])[/UPPERCASE]</label>
+				<label>$INFO[Container.FirstTitle]</label>
 				<visible>Control.IsVisible(50) + Container.Content(episodes)</visible>
-	 			<include>Animation_CommonFade</include>
+				<animation effect="fade" time="500">Visible</animation>
 			</control>
+			<control type="label">
+				<width min="0" max="680">auto</width>
+				<height>47</height>
+				<font>Font_FSInfoPlot</font>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<label>(SEASON [UPPERCASE]$INFO[ListItem.Season])[/UPPERCASE]</label>
+				<visible>Control.IsVisible(50) + Container.Content(episodes) + !IsEmpty(ListItem.Season)</visible>
+				<animation effect="fade" time="500">Visible</animation>
+			</control>
+
+
 
 			<control type="label">
 				<width min="0" max="60">auto</width>
@@ -309,7 +321,7 @@
 				<include>listcolorfocus</include>	
 				<label>($INFO[ListItem.year])</label>
 				<visible>Control.IsVisible(50) + !IsEmpty(Listitem.Year)</visible>
-	 			<include>Animation_CommonFade</include>
+				<animation effect="fade" time="500">Visible</animation>
 			</control>
 	</control>
 
@@ -339,7 +351,7 @@
 		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Season)</visible>
 	  <include>Animation_CommonFade</include>
 	</control>
--->
+
 	<control type="label">
 		<posx>40</posx>
 		<posy>105</posy>
@@ -352,7 +364,7 @@
 		<visible>Control.IsVisible(50) + ![Container.Content(Movies) | Container.Content(TVShows)]</visible>
 	  <include>Animation_CommonFade</include>
 	</control>
-
+-->
 	<include>Furniture_ListMediaFlags</include>
 
 	<control type="textbox">

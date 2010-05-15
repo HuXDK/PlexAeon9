@@ -3445,10 +3445,10 @@
 				<aligny>center</aligny>
 				<font>tagline</font>	
 				<shadowcolor>ff000000</shadowcolor>
-				<info>ListItem.Tagline</info>
-				<autoscroll delay="10000" time="2000" repeat="5000">Skin.HasSetting(allowscroll)</autoscroll>
+				<label>"$INFO[ListItem.Tagline]"</label>
 				<wrapmultiline>true</wrapmultiline>
 				<textcolor>d0FFFFFF</textcolor>
+				<visible>!IsEmpty(ListItem.Tagline)</visible>
 			</control>
 				
 				<control type="textbox">

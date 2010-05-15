@@ -37,7 +37,7 @@
 				<label>[UPPERCASE]$INFO[Container(555).ListItem.Year][/UPPERCASE]</label>
 			</control>	
 			<control type="label" id="3327">
-				<visible>!Container(555).OnNext + !Container(555).OnPrevious</visible>
+				<visible>[!Container(555).OnNext + !Container(555).OnPrevious] + !IsEmpty(ListItem.Tagline)</visible>
 				<animation effect="fade" delay="3000" start="0" end="100" time="500">Visible</animation>
 				<animation effect="fade" delay="3000" start="0" end="100" time="500">WindowOpen</animation>
 				<animation effect="fade" delay="500" start="100" end="0" time="500" condition="Player.HasVideo">conditional</animation>
@@ -48,7 +48,7 @@
 				<align>center</align>
 				<font>cast</font>	
 				<shadowcolor>ff000000</shadowcolor>
-				<info>Container(555).ListItem.Tagline</info>
+				<label>"$INFO[ListItem.Tagline]"</label>
 				<autoscroll delay="9000" time="3000" repeat="5000">Skin.HasSetting(allowscroll)</autoscroll>
 				<textcolor>d0FFFFFF</textcolor>
 			</control>		
