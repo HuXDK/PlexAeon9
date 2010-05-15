@@ -172,6 +172,7 @@
 			<control type="grouplist">
 			<posx>943</posx>
 			<posy>585</posy>
+	<animation effect="slide" end="40,-50" time="0" condition="Control.IsVisible(50) + Container.Content(episodes)">Conditional</animation>
 			<orientation>horizontal</orientation>
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
