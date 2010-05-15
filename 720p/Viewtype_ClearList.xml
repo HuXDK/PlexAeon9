@@ -1114,10 +1114,10 @@
 -->
 					<control type="image">
 						<posx>410</posx>
-						<posy>13</posy>
-						<width>16</width>
-						<height>16</height>
-						<texture>clearlist/$INFO[ListItem.Overlay]</texture>
+						<posy>10</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
 						<!--<info>ListItem.Overlay</info>-->
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays) | [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(notvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
@@ -1231,10 +1231,10 @@
 -->
 					<control type="image">
 						<posx>410</posx>
-						<posy>13</posy>
-						<width>16</width>
-						<height>16</height>
-						<texture>clearlist/$INFO[ListItem.Overlay]</texture>
+						<posy>10</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
 						<!--<info>ListItem.Overlay</info>-->
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays) | [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(notvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
 						</control>

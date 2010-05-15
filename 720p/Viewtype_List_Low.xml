@@ -147,16 +147,16 @@
 
 	<include name="WatchedOverlaySlim_Low">
 		<posx>564</posx>
-		<posy>1</posy>
+		<posy>9</posy>
 		<width>80</width>
-		<height>37</height>
+		<height>25</height>
 	</include>
 
 	<include name="WatchedOverlayFull_Low">
 		<posx>564</posx>
-		<posy>13</posy>
+		<posy>20</posy>
 		<width>80</width>
-		<height>37</height>
+		<height>25</height>
 	</include>
 
 	<include name="ListLabel_Detail_LowTV_Low">
