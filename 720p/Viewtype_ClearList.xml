@@ -53,12 +53,14 @@
 	<include name="cList_LightBackgroundTextureNowplaying">
 		<texture>clearlist/light/nowplaying_background.png</texture>
 	</include>
+<!--
 	<include name="cList_LightBackgroundTextureInfoPanel">
 		<texture background="true" diffuse="multiplex/multiplex_mask.png">clearlist/light/infopanel_background.png</texture>
 		<aspectratio scalediffuse="false">stretch</aspectratio>
 		<bordertexture border="28">wall/wall_movie_fborder.png</bordertexture>
 		<bordersize>9</bordersize>
 	</include>
+-->
 	<include name="cList_LightBackgroundTextureInfoPanelSolid">
 		<texture>clearlist/light/infopanel_background_solid.png</texture>
 	</include>
@@ -106,10 +108,8 @@
 		<texture>clearlist/nowplaying_background.png</texture>
 	</include>
 	<include name="cList_NightBackgroundTextureInfoPanel">
-		<texture background="true" diffuse="multiplex/multiplex_mask.png">clearlist/infopanel_background.png</texture>
+		<texture>clearlist/infopanel_background.png</texture>
 		<aspectratio scalediffuse="false">stretch</aspectratio>
-		<bordertexture border="28">wall/wall_movie_fborder.png</bordertexture>
-		<bordersize>9</bordersize>
 	</include>
 	<include name="cList_NightBackgroundTextureInfoPanelSolid">
 		<texture>clearlist/infopanel_background_solid.png</texture>
@@ -212,10 +212,10 @@
 			<include>Animation_cListInfoPanelZoom</include>
 <!--			<include>Animation_cListHorizontalMenuInfoPanelSlide</include> -->
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>430</width>
-				<height>500</height>
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>400</width>
+				<height>480</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureInfoPanelSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureInfoPanelSolid</include>
 				<visible>Control.IsVisible(54) + !Skin.HasSetting(clearlistinfothin)</visible>
@@ -223,7 +223,7 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>430</width>
+				<width>420</width>
 				<height>500</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureInfoPanel</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureInfoPanel</include>
@@ -231,7 +231,7 @@
 			</control>
 			<!-- Movie/TvShow Icon -->
 		<control type="group">
-				<posx>-240</posx>
+			<posx>-240</posx>
 			<control type="image">
 				<posx>270</posx>
 				<posy>20</posy>
@@ -242,6 +242,7 @@
 				<info>ListItem.Icon</info>
 				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)</visible>
 			</control>
+<!--
 			<control type="image">
 				<posx>270</posx>
 				<posy>20</posy>
@@ -251,6 +252,7 @@
 				<texture>common/blank.png</texture>
 				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)</visible>
 			</control>
+-->
 			<control type="image">
 				<posx>270</posx>
 				<posy>20</posy>
@@ -594,7 +596,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<posx>-200</posx>
+			<posx>-220</posx>
 			<posy>-105</posy>
 		<include>LowList_MediaFlags</include>
 		</control>
@@ -932,9 +934,9 @@
 			<!-- Background for Solid List -->
 			<control type="image">
 				<posx>114</posx>
-				<posy>50</posy>
+				<posy>40</posy>
 				<width>430</width>
-				<height>600</height>
+				<height>640</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureSolid</include>
 				<visible>Control.IsVisible(54) + !Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
@@ -943,9 +945,9 @@
 			</control>
 			<control type="image">
 				<posx>114</posx>
-				<posy>50</posy>
+				<posy>40</posy>
 				<width>450</width>
-				<height>600</height>
+				<height>640</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureSolid</include>
 				<visible>Control.IsVisible(54) + !Skin.HasSetting(clearlistthin) + [Window.IsActive(myvideofiles) | Window.IsActive(1) | [Window.IsActive(502) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
@@ -956,7 +958,7 @@
 				<posx>114</posx>
 				<posy>40</posy>
 				<width>430</width>
-				<height>600</height>
+				<height>640</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
 				<visible>Control.IsVisible(54) + Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>

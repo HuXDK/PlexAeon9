@@ -261,45 +261,69 @@
 	  <include>Animation_CommonFade</include>
 	</control>
 
-	<control type="label">
+	<control type="grouplist">
 		<posx>70</posx>
 		<posy>72</posy>
-		<width>800</width>
-		<height>43</height>
-		<font>ListView_ListTitle</font>
-		<aligny>center</aligny>
-		<include>listcolorfocus</include>	
-		<info>ListItem.Label</info>
-		<visible>Control.IsVisible(50) + ![Container.Content(episodes) | Container.Content(seasons)]</visible>
-	  <include>Animation_CommonFade</include>
+		<orientation>horizontal</orientation>
+		<itemgap>12</itemgap>
+			<control type="label">
+				<width min="0" max="680">auto</width>
+				<height>43</height>
+				<font>ListView_ListTitle</font>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<info>ListItem.Label</info>
+				<visible>Control.IsVisible(50) + ![Container.Content(episodes) | Container.Content(seasons)]</visible>
+			 	<include>Animation_CommonFade</include>
+			</control>
+
+			<control type="label">
+				<width min="0" max="680">auto</width>
+				<height>43</height>
+				<font>ListView_ListTitle</font>	
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<info>Container.SecondTitle</info>
+				<visible>Control.IsVisible(50) + Container.Content(seasons)</visible>
+	  			<include>Animation_CommonFade</include>
+			</control>
+
+			<control type="label">
+				<width min="0" max="680">auto</width>
+				<height>43</height>
+				<font>ListView_ListTitle</font>	
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<label>$INFO[Container.FirstTitle] (Season [UPPERCASE]$INFO[ListItem.Season])[/UPPERCASE]</label>
+				<visible>Control.IsVisible(50) + Container.Content(episodes)</visible>
+	 			<include>Animation_CommonFade</include>
+			</control>
+
+			<control type="label">
+				<width min="0" max="60">auto</width>
+				<height>47</height>
+				<font>Font_FSInfoPlot</font>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<label>($INFO[ListItem.year])</label>
+				<visible>Control.IsVisible(50) + !IsEmpty(Listitem.Year)</visible>
+	 			<include>Animation_CommonFade</include>
+			</control>
 	</control>
 
-	<control type="label">
-		<posx>70</posx>
-		<posy>72</posy>
-		<width>800</width>
-		<height>43</height>
-		<font>ListView_ListTitle</font>
-		<aligny>center</aligny>
-		<include>listcolorfocus</include>	
-		<info>Container.SecondTitle</info>
-		<visible>Control.IsVisible(50) + Container.Content(seasons)</visible>
-	  <include>Animation_CommonFade</include>
+	<control type="image">
+		<posx>68</posx>
+		<posy>112</posy>
+		<height>30</height>
+		<info>ListItem.StarRating</info>
+        <colordiffuse>FFFFFF00</colordiffuse>
+		<aspectratio>keep</aspectratio>
+	    <visible>!IsEmpty(ListItem.Rating)</visible>
 	</control>
 
-	<control type="label">
-		<posx>70</posx>
-		<posy>72</posy>
-		<width>800</width>
-		<height>43</height>
-		<font>ListView_ListTitle</font>
-		<aligny>center</aligny>
-		<include>listcolorfocus</include>	
-		<info>Container.FirstTitle</info>
-		<visible>Control.IsVisible(50) + Container.Content(episodes)</visible>
-	  <include>Animation_CommonFade</include>
-	</control>
 
+
+<!--
 	<control type="label">
 		<posx>1000</posx>
 		<posy>512</posy>
@@ -308,12 +332,12 @@
 		<font>Font_MediaWindowMenu</font>
 		<aligny>center</aligny>
 		<align>center</align>
-		<include>listcolornofocus</include>	
+		<include>listcolorfocus</include>	
 		<label>SEASON [UPPERCASE]$INFO[ListItem.Season][/UPPERCASE]</label>
 		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Season)</visible>
 	  <include>Animation_CommonFade</include>
 	</control>
-
+-->
 	<control type="label">
 		<posx>40</posx>
 		<posy>105</posy>

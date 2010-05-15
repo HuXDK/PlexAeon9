@@ -33,8 +33,8 @@
 	 	<colordiffuse>efffffff</colordiffuse>
 	</include>
 	<include name="Furniture_ListMediaFlagsVars">
-		<width min="0" max="65">auto</width>
-		<height>25</height>
+		<width min="0" max="40">auto</width>
+		<height>18</height>
 		<aspectratio>keep</aspectratio>
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
@@ -169,28 +169,15 @@
 	<include name="Furniture_ListMediaFlags">
 		<control type="group">		
 			<visible>!Skin.HasSetting(nomediaflags)</visible>
-			<posy>117</posy>
-			<posx>73</posx>
-			<include>Animation_CommonFade</include>
-
-				<control type="image">
-					<aspectratio>keep</aspectratio>
-					<height>23</height>
-					<width min="0" max="95">auto</width>
-			 		<colordiffuse>9fffffff</colordiffuse>
-					<include>Animation_CommonFade</include>
-					<include>Animation_HideShowcase</include>
-					<include>Animation_HideMultiplex</include>
-					<info>Listitem.Property(mediaTag::contentRating)</info>
-					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + Control.IsVisible(50)</visible>
-				</control>
-
 			<control type="grouplist">
-			<posx>75</posx>
-			<posy>-1</posy>
+			<posx>943</posx>
+			<posy>585</posy>
 			<orientation>horizontal</orientation>
-			<animation effect="slide" end="-76,0" time="300" condition="IsEmpty(Listitem.Property(mediaTag::contentRating))">Conditional</animation>
-
+				<control type="image">
+					<include>Furniture_ListMediaFlagsVars</include>
+					<info>Listitem.Property(mediaTag::contentRating)</info>
+					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating))</visible>
+				</control>	
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoResolution)</info>
