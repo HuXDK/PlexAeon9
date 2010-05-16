@@ -306,8 +306,9 @@
 				<posy>30</posy>
 				<width>17</width>
 				<height>15</height>
-				<texture>clearlist/$INFO[ListItem.Overlay]</texture>
+				<texture>$INFO[ListItem.Overlay]</texture>
 				<visible>Container.Content(Episodes) + !Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+				<animation effect="fade" start="30" time="200" delay="2300" condition="true" pulse="true">Conditional</animation> 
 			</control>
 
 			<!-- Movie Infos -->
@@ -1124,6 +1125,7 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<!--<info>ListItem.Overlay</info>-->
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays) | [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(notvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
+		     		   <animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
 					</control>
 
 				</itemlayout>
@@ -1241,7 +1243,8 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<!--<info>ListItem.Overlay</info>-->
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays) | [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(notvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
-						</control>
+		    	    	<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
+					</control>
 
 				</focusedlayout>
 				<!-- Music-Albums -->
