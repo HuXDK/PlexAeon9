@@ -105,7 +105,7 @@
 	</include>	
 	
 	<include name="ListLabel_Detail">
-		<posx>720</posx>
+		<posx>695</posx>
 		<posy>0</posy>
 		<width>180</width>
 		<height>43</height>
@@ -168,18 +168,16 @@
 				<visible>!Container.Content(movies)</visible>
 				<include>ListLabel_Detail</include>
 				<include>listcolornofocus</include>
-				<animation effect="slide" start="0,0" end="-665,0" time="0" condition="Container.Content(episodes)">Conditional</animation>
 				<label>[UPPERCASE]$INFO[ListItem.Property(UnWatchedEpisodes)][/UPPERCASE]</label>
 			</control>			
 		    <control type="image">
-				<posx>350</posx>
+				<posx>430</posx>
 				<posy>10</posy>
 				<width>580</width>
 				<height>25</height>
 				<info>ListItem.Overlay</info>
 				<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 		        <animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
-				<animation effect="slide" end="30,0" time="0" condition="Container.Content(seasons) | Container.Content(TVShows)">Conditional</animation>
 		    </control>
 		</itemlayout>
 		<focusedlayout height="43">
@@ -229,14 +227,13 @@
 				<label>[UPPERCASE]$INFO[ListItem.Property(UnWatchedEpisodes)][/UPPERCASE]</label>
 			</control>			
 		    <control type="image">
-				<posx>350</posx>
+				<posx>430</posx>
 				<posy>10</posy>
 				<width>580</width>
 				<height>25</height>
 				<info>ListItem.Overlay</info>
 				<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 		        <animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-				<animation effect="slide" end="30,0" time="0" condition="Container.Content(seasons) | Container.Content(TVShows)">Conditional</animation>
 		    </control>
  		</focusedlayout>
 	</control>

@@ -308,7 +308,7 @@
 				<height>15</height>
 				<texture>$INFO[ListItem.Overlay]</texture>
 				<visible>Container.Content(Episodes) + !Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-				<animation effect="fade" start="30" time="200" delay="2300" condition="true" pulse="true">Conditional</animation> 
+				<animation effect="fade" start="40" time="200" delay="3500" condition="true" pulse="true">Conditional</animation> 
 			</control>
 
 			<!-- Movie Infos -->
