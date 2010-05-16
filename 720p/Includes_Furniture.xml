@@ -217,7 +217,7 @@
 
 	</include>
 
-	<include name="Furniture_TotalsPanelHighReal">
+	<include name="Furniture_TotalsPanelHigh">
 		<visible>!ControlGroup(7000).HasFocus()</visible>
 		<control type="image">
 			<posx>-900</posx>
@@ -421,18 +421,35 @@
 		</control>
 	</include>
 
-	<include name="Furniture_TotalsPanelHigh">
+	<include name="Furniture_Navigation">
+		<control type="group">
+			<include>Furniture_TimeGroupHighVars</include>
+			<visible>[Control.IsVisible(553) | Control.IsVisible(52) | Control.IsVisible(555) | Control.IsVisible(556) | Control.IsVisible(552) | Control.IsVisible(57) | Control.IsVisible(550) | Control.IsVisible(551) | Control.IsVisible(54) | Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(563)]</visible>
+			<include>Animation_CommonFade</include>
 		<visible>!ControlGroup(7000).HasFocus()</visible>
 		<control type="image">
 			<posx>-900</posx>
 			<posy>0</posy>
-			<width>410</width>
+			<width>400</width>
 			<height>27</height>
 			<texture flipx="true" flipy="true">common/timepanel_mid.png</texture>
 			<animation type="Conditional" condition="Skin.HasSetting(bighome)">
 				<effect type="slide" start="200,0" end="200,0" time="0" />
 				<effect type="zoom" start="125" end="125" time="0" />
 			</animation>
+			<visible>!Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<posx>-900</posx>
+			<posy>0</posy>
+			<width>300</width>
+			<height>27</height>
+			<texture flipx="true" flipy="true">common/timepanel_mid.png</texture>
+			<animation type="Conditional" condition="Skin.HasSetting(bighome)">
+				<effect type="slide" start="200,0" end="200,0" time="0" />
+				<effect type="zoom" start="125" end="125" time="0" />
+			</animation>
+			<visible>Container.Content(movies)</visible>
 		</control>
 		<control type="image">
 			<posx>-890</posx>
@@ -452,11 +469,23 @@
 			<texture>common/logo_music.png</texture>
 			<visible>Window.IsVisible(501)</visible>
 		</control>
-	<control type="grouplist">
+	
+		<control type="grouplist">
 			<posx>-850</posx>
 			<posy>-10</posy>
 			<orientation>horizontal</orientation>
 			<itemgap>8</itemgap>
+
+			<control type="label">
+				<width min="0" max="230">auto</width>
+				<height>43</height>
+				<font>Font_Time</font>	
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<label>Online Media</label>
+				<visible>Window.IsActive(24) + [!Container.Content(Movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)] + IsEmpty(Container.FirstTitle)</visible>
+				<animation effect="fade" time="500">Visible</animation>
+			</control>
 
 			<control type="label">
 				<width min="0" max="230">auto</width>
@@ -477,6 +506,7 @@
 				<label>$INFO[Container.SecondTitle]</label>
 				<animation effect="fade" time="500">Visible</animation>
 			</control>
+	</control>
 	</control>
 
 </include>
