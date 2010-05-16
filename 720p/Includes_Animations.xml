@@ -198,7 +198,7 @@
 	</include>
 
 	<include name="common-fade-quick">
-		<animation effect="fade" time="0">Visible</animation>
+		<animation effect="fade" time="500">Visible</animation>
 		<animation effect="fade" time="0">Hidden</animation>
 		<animation effect="fade" time="500">WindowOpen</animation>
 		<animation effect="fade" time="200">WindowClose</animation>

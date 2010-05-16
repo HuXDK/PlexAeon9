@@ -300,6 +300,7 @@
 				<visible>Control.IsVisible(50) + Container.Content(episodes)</visible>
 				<animation effect="fade" time="500">Visible</animation>
 			</control>
+
 			<control type="label">
 				<width min="0" max="680">auto</width>
 				<height>47</height>
@@ -311,8 +312,6 @@
 				<animation effect="fade" time="500">Visible</animation>
 			</control>
 
-
-
 			<control type="label">
 				<width min="0" max="60">auto</width>
 				<height>47</height>
@@ -320,9 +319,21 @@
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
 				<label>($INFO[ListItem.year])</label>
-				<visible>Control.IsVisible(50) + !IsEmpty(Listitem.Year)</visible>
+				<visible>Control.IsVisible(50) + !IsEmpty(Listitem.Year) + [Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				<animation effect="fade" time="500">Visible</animation>
 			</control>
+
+	</control>
+
+	<control type="label">
+		<posx>70</posx>
+		<posy>122</posy>
+		<font>Font_FSInfoPlot</font>
+		<aligny>center</aligny>
+		<include>listcolorfocus</include>	
+		<label>($INFO[ListItem.year])</label>
+		<visible>Control.IsVisible(50) + !IsEmpty(Listitem.Year) + ![Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		<animation effect="fade" time="500">Visible</animation>
 	</control>
 
 	<control type="image">
