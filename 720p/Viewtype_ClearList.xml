@@ -112,7 +112,8 @@
 		<aspectratio scalediffuse="false">stretch</aspectratio>
 	</include>
 	<include name="cList_NightBackgroundTextureInfoPanelSolid">
-		<texture>clearlist/infopanel_background_solid.png</texture>
+		<texture>showcase/showcase_menupanel.png</texture>
+		<colordiffuse>BFFFFFFF</colordiffuse>
 	</include>
 	<include name="cList_NightMediaFlagsInfoPanel">
 		<colordiffuse>FFe1e1e1</colordiffuse>
@@ -130,7 +131,8 @@
 		<texture>clearlist/background.png</texture>
 	</include>
 	<include name="cList_NightBackgroundTextureSolid">
-		<texture>lowlist/lowlist_full_base.png</texture>
+		<texture>showcase/showcase_menupanel.png</texture>
+		<colordiffuse>BFFFFFFF</colordiffuse>
 	</include>
 	<include name="cList_NightButtonTexture">
 		<texture>dialogs/setcontent_button_nofocus.png</texture>
@@ -1018,11 +1020,11 @@
 					</control>
 					<!-- Music -->
 					<control type="label">
-						<posx>10</posx>
+						<posx>20</posx>
 						<posy>0</posy>
 						<width>330</width>
 						<height>40</height>
-						<font>Font_ClearInfoValue</font>
+						<font>FlowMainLabel</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
@@ -1032,11 +1034,11 @@
 					</control>
 
 					<control type="label">
-						<posx>10</posx>
+						<posx>20</posx>
 						<posy>0</posy>
 						<width>330</width>
 						<height>40</height>
-						<font>Font_ClearInfoValue</font>
+						<font>FlowMainLabel</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
@@ -1046,7 +1048,7 @@
 					</control>
 					<!-- Movies and TvShows -->
 					<control type="label">
-						<posx>10</posx>
+						<posx>20</posx>
 						<posy>0</posy>
 						<width>380</width>
 						<height>40</height>
@@ -1060,11 +1062,11 @@
 					</control>
 					
 					<control type="label">
-						<posx>10</posx>
+						<posx>20</posx>
 						<posy>0</posy>
 						<width>380</width>
 						<height>40</height>
-						<font>Font_ClearInfoValue</font>
+						<font>FlowMainLabel</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
@@ -1077,7 +1079,7 @@
 						<posy>0</posy>
 						<width>335</width>
 						<height>40</height>
-						<font>Font_ClearInfoValue</font>
+						<font>FlowMainLabel</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
@@ -1136,11 +1138,11 @@
 					</control>
 					<!-- Artists -->
 					<control type="label">
-						<posx>10</posx>
+						<posx>20</posx>
 						<posy>0</posy>
 						<width>330</width>
 						<height>40</height>
-						<font>Font_ClearInfoValue</font>
+						<font>FlowMainLabel</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
@@ -1150,11 +1152,11 @@
 					</control>
 					<!-- Sonstiges -->
 					<control type="label">
-						<posx>10</posx>
+						<posx>20</posx>
 						<posy>0</posy>
 						<width>330</width>
 						<height>40</height>
-						<font>Font_ClearInfoValue</font>
+						<font>FlowMainLabel</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
@@ -1163,11 +1165,11 @@
 						<visible>[Window.IsActive(502) + !Container.Content(artists)] | [Window.IsActive(myvideofiles) + Skin.HasSetting(nooverlays)]</visible>
 					</control>
 					<control type="label">
-						<posx>10</posx>
+						<posx>20</posx>
 						<posy>0</posy>
 						<width>380</width>
 						<height>40</height>
-						<font>Font_ClearInfoValue</font>
+						<font>FlowMainLabel</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
@@ -1177,11 +1179,11 @@
 					</control>
 					
 					<control type="label">
-						<posx>10</posx>
+						<posx>20</posx>
 						<posy>0</posy>
 						<width>380</width>
 						<height>40</height>
-						<font>Font_ClearInfoValue</font>
+						<font>FlowMainLabel</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
@@ -1194,7 +1196,7 @@
 						<posy>0</posy>
 						<width>335</width>
 						<height>40</height>
-						<font>Font_ClearInfoValue</font>
+						<font>FlowMainLabel</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
