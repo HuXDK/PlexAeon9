@@ -482,7 +482,7 @@
 				<font>Font_Time</font>	
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
-				<label>Online Media</label>
+				<label>Media</label>
 				<visible>Window.IsActive(24) + [!Container.Content(Movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)] + IsEmpty(Container.FirstTitle)</visible>
 				<animation effect="fade" time="500">Visible</animation>
 			</control>

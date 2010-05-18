@@ -105,7 +105,17 @@
 	</include>	
 	
 	<include name="ListLabel_Detail">
-		<posx>695</posx>
+		<posx>670</posx>
+		<posy>0</posy>
+		<width>180</width>
+		<height>43</height>
+		<font>Font_MediaWindowMenu</font>
+		<align>left</align>
+		<aligny>center</aligny>	
+	</include>
+	
+	<include name="ListLabel_DetailEpisodes">
+		<posx>690</posx>
 		<posy>0</posy>
 		<width>180</width>
 		<height>43</height>
@@ -113,7 +123,7 @@
 		<align>right</align>
 		<aligny>center</aligny>	
 	</include>
-	
+
 	<include name="Viewtype_List">
 	<control type="group">
 	<visible>Control.IsVisible(50)</visible>
@@ -160,7 +170,7 @@
 			</control>
 			<control type="label">
 				<visible>![Container.Content(TVShows) | Container.Content(Seasons)]</visible>
-				<include>ListLabel_Detail</include>
+				<include>ListLabel_DetailEpisodes</include>
 				<include>listcolornofocus</include>
 				<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
 			</control>			
@@ -214,7 +224,7 @@
 			</control>
 			<control type="label">
 				<visible>![Container.Content(TVShows) | Container.Content(Seasons)]</visible>
-				<include>ListLabel_Detail</include>
+				<include>ListLabel_DetailEpisodes</include>
 				<include>listcolorfocus</include>
 				<label fallback="-">[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
 				<visible>!Control.IsVisible(76)</visible>
