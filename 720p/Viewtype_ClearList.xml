@@ -17,7 +17,7 @@
 	</include>
 	<!-- Animation for Info Panel Zoom by Now Playing -->
 	<include name="Animation_cListInfoPanelZoom">
-		<animation type="Conditional" condition="!Player.HasAudio + [!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(homevis)]]">
+		<animation type="Conditional" condition="!Player.HasAudio + [!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(homevis)]]">
 			<effect type="zoom" start="100" end="115" time="200" />
 		</animation>
 	</include>
@@ -1844,7 +1844,7 @@
 			<!--<<<<< Num Items (bottom)-->
 			<!-- Now Playing >>>>>-->
 			<control type="group">
-				<visible>Control.IsVisible(54) + [Player.HasAudio | [Player.HasVideo + !Skin.HasSetting(homevis)]]</visible>
+				<visible>Control.IsVisible(54) + [Player.HasAudio | [Player.HasVideo + Skin.HasSetting(homevis)]]</visible>
 				<posx>850</posx>
 				<posy>570</posy>
 				<include>Animation_cListCommonFade</include>

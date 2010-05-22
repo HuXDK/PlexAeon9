@@ -1227,10 +1227,6 @@
 	<include name="Furniture_HomeNowPlaying">
 		<control type="group">
 			<visible>!Skin.HasSetting(homevis) + Player.HasVideo</visible>
-			<control type="image">
-				<include>FullscreenDimensions</include>
-				<texture>common/black.png</texture>
-			</control>
 			<control type="videowindow">
 				<include>FullscreenDimensions</include>
 			</control>
