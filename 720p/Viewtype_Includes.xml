@@ -41,6 +41,15 @@
 		<include>Animation_HideMultiplex</include>
 		<visible>!Skin.HasSetting(nomediaflags)</visible>
 	</include>
+	<include name="Furniture_LowClearListMediaFlagsVars">
+		<width min="0" max="50">auto</width>
+		<height>29</height>
+		<aspectratio>keep</aspectratio>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<include>Animation_HideMultiplex</include>
+		<visible>!Skin.HasSetting(nomediaflags)</visible>
+	</include>
 	<include name="LowList_MovieFlagVars">
 		<posx>910</posx>
 		<posy>665</posy>
@@ -170,10 +179,11 @@
 		<control type="group">		
 			<visible>!Skin.HasSetting(nomediaflags)</visible>
 			<control type="grouplist">
-			<posx>943</posx>
+			<posx>933</posx>
 			<posy>585</posy>
-	<animation effect="slide" end="40,-50" time="0" condition="Control.IsVisible(50) + Container.Content(episodes)">Conditional</animation>
+			<animation effect="slide" end="40,-50" time="0" condition="Control.IsVisible(50) + Container.Content(episodes)">Conditional</animation>
 			<orientation>horizontal</orientation>
+			<itemgap>10</itemgap>
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::contentRating)</info>
@@ -724,11 +734,12 @@
 					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating))</visible>
 					<info>Listitem.Property(mediaTag::contentRating)</info>
 				</control>
+
 			<control type="image">
 				<visible>!IsEmpty(Listitem.Property(mediaTag::studio)) + Control.IsVisible(54)</visible>
-				<posy>-335</posy>
-				<posx>302</posx>
-				<height>60</height>
+				<posy>-10</posy>
+				<posx>322</posx>
+				<height>50</height>
 				<width min="1" max="95">auto</width>
 				<info>Listitem.Property(mediaTag::studio)</info>
 				<aspectratio>keep</aspectratio>
@@ -739,33 +750,40 @@
 				<posy>-1</posy>
 				<orientation>horizontal</orientation>
 				<height>85</height>
+				<itemgap>10</itemgap>
 
 				<control type="image">
-					<include>Furniture_ListMediaFlagsVars</include>
+					<include>Furniture_LowClearListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoResolution)</info>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::videoResolution))</visible>
 				</control>	
-
+<!--
 				<control type="image">
-					<include>Furniture_ListMediaFlagsVars</include>
+					<include>Furniture_LowClearListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoFrameRate)</info>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::videoFrameRate))  + Control.IsVisible(54)</visible>
 				</control>
-
+-->
 				<control type="image">
-					<include>Furniture_ListMediaFlagsVars</include>
+					<include>Furniture_LowClearListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoCodec)</info>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::videoCodec))</visible>
 				</control>
 
 				<control type="image">
-					<include>Furniture_ListMediaFlagsVars</include>
+					<include>Furniture_LowClearListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::audioCodec)</info>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::audioCodec))</visible>
 				</control>
 
 				<control type="image">
-					<include>Furniture_ListMediaFlagsVars</include>
+		<width min="10" max="35">auto</width>
+		<height>29</height>
+		<aspectratio>keep</aspectratio>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<include>Animation_HideMultiplex</include>
+		<visible>!Skin.HasSetting(nomediaflags)</visible>
 					<info>Listitem.Property(mediaTag::audioChannels)</info>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
 				</control>
@@ -3198,8 +3216,7 @@
 			<control type="image">
 				<include>MediaMenuLogo</include>
 				<texture>windows/logo_movies.png</texture>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | Container.Content(movies)</visible>
-				<visible>Window.IsActive(myvideofiles) | Window.IsActive(28)</visible>
+				<visible>![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(1) | Window.IsActive(2)]</visible>
 			</control>
 			<control type="image">
 				<include>MediaMenuLogo</include>
@@ -3214,7 +3231,7 @@
 			<control type="image">
 				<include>MediaMenuLogo</include>
 				<texture>windows/logo_games.png</texture>
-				<visible>Window.IsActive(1) | [Window.IsActive(myvideofiles) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]]</visible>
+				<visible>Window.IsActive(1)</visible>
 			</control>
 			<control type="label">
 				<include>MediaMenuLogo</include>
@@ -3224,7 +3241,7 @@
 			<control type="label">
 				<include>MediaMenuLabel</include>
 				<label>31030</label>
-				<visible>Window.IsActive(1) | [Window.IsActive(myvideofiles) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]]</visible>
+				<visible>Window.IsActive(1)</visible>
 			</control>
 			<control type="label">
 				<include>MediaMenuLabel</include>
@@ -3252,6 +3269,11 @@
 				<label>31032</label>
 				<visible>Container.Content(movies)</visible>
 				<visible>Window.IsActive(myvideofiles)</visible>
+			</control>
+			<control type="label">
+				<include>MediaMenuLabel</include>
+				<info>Container.FirstTitle</info>
+				<visible>Window.IsActive(24) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]</visible>
 			</control>
 
 			<control type="grouplist" id="7000">

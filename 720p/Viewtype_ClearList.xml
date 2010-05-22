@@ -190,7 +190,7 @@
 		<posx>0</posx>
 		<width>250</width>
 		<height>13</height>
-		<font>Font_HomeNowPlayingAlbum</font>
+		<font>Font_ListObjects</font>
 		<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
 		<include condition="Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 	</include>
@@ -399,6 +399,7 @@
 						<posy>20</posy>
 						<width>100</width>
                         <height>25</height>
+ 						<aspectratio>keep</aspectratio>
                         <info>ListItem.StarRating</info>
                         <colordiffuse>FFFFFF00</colordiffuse>
 					</control>
@@ -769,7 +770,7 @@
 					<control type="label">
 						<posy>17</posy>
 						<include>cList_InfoValueMusic</include>
-						<label fallback="31425">$INFO[ListItem.genre]</label>
+						<label fallback="31425">[UPPERCASE]$INFO[ListItem.genre][/UPPERCASE]</label>
 					</control>
 				</control>
 				<!-- Töne -->
@@ -1607,7 +1608,7 @@
 			<control type="group">
 				<posy>35</posy>
 				<control type="label">
-					<label>31015</label>
+					<info>Container.FirstTitle</info>
 					<include>cList_Title</include>
 					<width>330</width>
 					<visible>Window.IsActive(myvideofiles) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>

@@ -503,7 +503,7 @@
 				<font>Font_Time</font>	
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
-				<label>$INFO[Container.SecondTitle]</label>
+				<info>Container.SecondTitle</info>
 				<animation effect="fade" time="500">Visible</animation>
 			</control>
 	</control>
@@ -1226,7 +1226,7 @@
 	</include>
 	<include name="Furniture_HomeNowPlaying">
 		<control type="group">
-			<visible>Skin.HasSetting(homevis) + Player.HasVideo</visible>
+			<visible>!Skin.HasSetting(homevis) + Player.HasVideo</visible>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture>common/black.png</texture>
@@ -1236,7 +1236,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Skin.HasSetting(homevis) + Player.HasAudio</visible>			
+			<visible>!Skin.HasSetting(homevis) + Player.HasAudio</visible>			
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture>common/black.png</texture>

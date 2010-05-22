@@ -92,7 +92,7 @@
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32020</label>
 				<onclick>Skin.ToggleSetting(HomeVis)</onclick>
-				<selected>Skin.HasSetting(HomeVis)</selected>
+				<selected>!Skin.HasSetting(HomeVis)</selected>
 			</control>
 			<control type="button" id="414">
 				<include>Objects_SettingsDefaultRadioButton</include>

@@ -1005,13 +1005,14 @@
 					<colordiffuse>58FFFFFF</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>181</posx>
-					<posy>18</posy>
-					<width>48</width>
-					<height>52</height>
+					<posx>170</posx>
+					<posy>24</posy>
+					<width>80</width>
+					<height>25</height>
 					<info>ListItem.Overlay</info>
 					<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					<include>Animation_VisibleChange200</include>
+		            <animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 				</control>
 			</itemlayout>
 			<focusedlayout width="229" height="129" condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">
@@ -1072,10 +1073,10 @@
 					<visible>!Container(553).Column(4)</visible>
 				</control>
 				<control type="image">
-					<posx>181</posx>
-					<posy>18</posy>
-					<width>48</width>
-					<height>52</height>
+					<posx>170</posx>
+					<posy>24</posy>
+					<width>80</width>
+					<height>25</height>
 					<info>ListItem.Overlay</info>
 					<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					<include>Animation_VisibleChange200</include>
