@@ -208,7 +208,13 @@
 				</control>
 
 				<control type="image">
-					<include>Furniture_ListMediaFlagsVars</include>
+		<width min="0" max="25">auto</width>
+		<height>18</height>
+		<aspectratio>keep</aspectratio>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<include>Animation_HideMultiplex</include>
+		<visible>!Skin.HasSetting(nomediaflags)</visible>
 					<info>Listitem.Property(mediaTag::audioChannels)</info>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
 				</control>
