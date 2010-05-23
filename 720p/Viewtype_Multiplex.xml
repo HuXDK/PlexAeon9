@@ -1347,7 +1347,7 @@
 			<orientation>horizontal</orientation>
 			<include>MultiplexFocusMovies</include>
 			<scrolltime>200</scrolltime>
-			<visible>Container.Content(movies) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)]</visible>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 			<include>Animation_HideMultiplex</include>
 			<itemlayout width="120" height="300">
 				<include condition="!Skin.HasSetting(dvdcase)">MultiplexNormalCoversNoFocus</include>

@@ -326,7 +326,7 @@
 		<font>Font_OSDOptions</font>
 		<label>[COLOR cdfbfbfb]$INFO[VideoPlayer.Year][/COLOR]</label>
 	</control>
-	<control type="label">
+	<control type="image">
 		<posy>-530</posy>
 		<posx>30</posx>
 		<height>50</height>

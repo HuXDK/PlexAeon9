@@ -33,7 +33,7 @@
 	 	<colordiffuse>efffffff</colordiffuse>
 	</include>
 	<include name="Furniture_ListMediaFlagsVars">
-		<width min="0" max="40">auto</width>
+		<width min="0" max="50">auto</width>
 		<height>18</height>
 		<aspectratio>keep</aspectratio>
 		<include>Animation_CommonFade</include>

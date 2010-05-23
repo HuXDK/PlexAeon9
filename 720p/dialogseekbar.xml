@@ -383,9 +383,9 @@
 			</control>
 
 			<control type="label">
-				<posx>0</posx>
+				<posx>250</posx>
 				<posy>64</posy>
-				<width>1280</width>
+				<width>780</width>
 				<height>25</height>
 				<align>center</align>
 				<aligny>center</aligny>

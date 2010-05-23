@@ -149,7 +149,7 @@
 	<!--############################################ Dimensions #################################################-->
 	<!--#########################################################################################################-->
 	<include name="cList_Title">
-		<posx>160</posx>
+		<posx>170</posx>
 		<posy>20</posy>
 		<height>25</height>
 		<font>FlowMainLabel</font>
@@ -159,7 +159,7 @@
 		<aligny>center</aligny>
 	</include>
 	<include name="cList_Title2">
-		<posx>160</posx>
+		<posx>170</posx>
 		<posy>40</posy>
 		<height>25</height>
 		<font>Font_ListObjects</font>
@@ -897,7 +897,6 @@
 	<!--#########################################################################################################-->
 	<include name="Viewtype_ClearList">
 	<control type="group">
-		<control type="group">
 		<visible>Control.IsVisible(54)</visible>
 <!--			<include>Animation_cListHorizontalMenuBackgroundSlide</include> -->
 <!--
@@ -943,7 +942,7 @@
 				<height>640</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureSolid</include>
-				<visible>Control.IsVisible(54) + !Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
+				<visible>!Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
 				<visible></visible>
 
 			</control>
@@ -954,7 +953,7 @@
 				<height>640</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureSolid</include>
-				<visible>Control.IsVisible(54) + !Skin.HasSetting(clearlistthin) + [Window.IsActive(myvideofiles) | Window.IsActive(1) | [Window.IsActive(502) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
+				<visible>!Skin.HasSetting(clearlistthin) + [Window.IsActive(myvideofiles) | Window.IsActive(1) | [Window.IsActive(502) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 
 			</control>
 			<!-- List Background -->
@@ -965,7 +964,7 @@
 				<height>640</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
-				<visible>Control.IsVisible(54) + Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
+				<visible>Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
 			</control>
 			<control type="image">
 				<posx>114</posx>
@@ -1049,6 +1048,7 @@
 						<visible>[Window.IsActive(502) + !Container.Content(artists)] | [Window.IsActive(myvideofiles) + Skin.HasSetting(nooverlays)]</visible>
 					</control>
 					<!-- Movies and TvShows -->
+
 					<control type="label">
 						<posx>20</posx>
 						<posy>0</posy>
@@ -1603,6 +1603,8 @@
 					-->
 				</focusedlayout>
 			</control>
+
+
 			<!-- Title (top) >>>>>-->
 			
 			<control type="group">
@@ -1611,127 +1613,12 @@
 					<info>Container.FirstTitle</info>
 					<include>cList_Title</include>
 					<width>330</width>
-					<visible>Window.IsActive(myvideofiles) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 				<control type="label">
-					<label>31927</label>
-					<include>cList_Title</include>
-					<width>330</width>
-					<visible>Container.Content(artists)</visible>
-				</control>
-				<control type="label">
-					<label>31923</label>
-					<include>cList_Title</include>
-					<width>330</width>
-					<visible>Container.Content(years)</visible>
-				</control>
-				<control type="label">
-					<label>31922</label>
-					<include>cList_Title</include>
-					<width>330</width>
-					<visible>Container.Content(genres)</visible>
-				</control>
-				<control type="label">
-					<label>31934</label>
-					<include>cList_Title</include>
-					<width>330</width>
-					<visible>Container.Content(movies) + Window.IsActive(myvideofiles)</visible>
-				</control>
-				<control type="label">
-					<label>31933</label>
-					<include>cList_Title</include>
-					<width>330</width>
-					<visible>Container.Content(tvshows) + Window.IsActive(myvideofiles)</visible>
-				</control>
-				<control type="label">
-					<label>[UPPERCASE]$INFO[Container.SecondTitle][/UPPERCASE]</label>
-					<include>cList_Title</include>
-					<width>330</width>
-					<visible>Container.Content(seasons)</visible>
-				</control>
-				<control type="label">
-					<label>[UPPERCASE]$INFO[Container.FirstTitle][/UPPERCASE]</label>
-					<include>cList_Title</include>
-					<width>330</width>
-					<visible>Container.Content(episodes)</visible>
-				</control>
-				<control type="label">
-					<label>31929</label>
-					<include>cList_Title</include>
-					<width>330</width>
-					<visible>Container.Content(playlists)</visible>
-				</control>
-				<control type="label">
-					<label>31924</label>
-					<include>cList_Title</include>
-					<width>330</width>
-					<visible>Container.Content(actors)</visible>
-				</control>
-				<control type="label">
-					<label>31926</label>
-					<include>cList_Title</include>
-					<width>330</width>
-					<visible>Container.Content(studios)</visible>
-				</control>
-				<control type="label">
-					<label>31925</label>
-					<include>cList_Title</include>
-					<width>330</width>
-					<visible>Container.Content(directors)</visible>
-				</control>
-				<control type="label">
-					<label>[UPPERCASE]$LOCALIZE[31062] $INFO[ListItem.Season][/UPPERCASE]</label>
+					<info>Container.SecondTitle</info>
 					<include>cList_Title2</include>
 					<width>330</width>
 					<scroll>true</scroll>
-					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Season)</visible>
-				</control>
-				<control type="label">
-					<label>$LOCALIZE[20366]</label>
-					<include>cList_Title2</include>
-					<width>330</width>
-					<scroll>true</scroll>
-					<visible>Container.Content(episodes) + IsEmpty(ListItem.Season)</visible>
-				</control>
-<!--				<control type="label">
-					<label>31932</label>
-					<include>cList_Title</include>
-					<width>410</width>
-					<visible>Window.IsActive(501) | [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-				</control>
--->
-				<control type="label">
-					<label>31012</label>
-					<include>cList_Title</include>
-					<width>310</width>
-					<visible>Window.IsActive(2)</visible>
-				</control>
-				<control type="label">
-					<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
-					<include>cList_Title</include>
-					<width>310</width>
-					<scroll>true</scroll>
-					<visible>Container.Content(albums)</visible>
-				</control>
-				<control type="label">
-					<label>31038</label>
-					<include>cList_Title</include>
-					<width>310</width>
-					<visible>Window.IsActive(500) | Window.IsActive(28)</visible>
-				</control>
-				<control type="label">
-					<label>[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</label>
-					<include>cList_Title</include>
-					<width>310</width>
-					<scroll>true</scroll>
-					<visible>Container.Content(songs)</visible>
-				</control>
-				<control type="label">
-					<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
-					<include>cList_Title2</include>
-					<width>310</width>
-					<scroll>true</scroll>
-					<visible>Container.Content(songs)</visible>
 				</control>
 			</control>
 
@@ -2026,6 +1913,5 @@
 			<animation effect="fade" start="100" end="0" time="0" condition="[Control.IsVisible(54) + [Control.HasFocus(54) | Control.HasFocus(2501) | Control.HasFocus(2502) | Control.HasFocus(7000)]]">Conditional</animation>
 		</control>
 -->
-		</control>
 	</include>
 </includes>
