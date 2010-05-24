@@ -141,6 +141,8 @@
 		<texture>clearlist/button_big.png</texture>
 	</include>
 	<include name="cList_NightButtonTextureFocus">
+
+		<colordiffuse>aF314469</colordiffuse>
 		<texture>windows/mediamenu.png</texture>
 	</include>
 	<include name="cList_NightBigButtonTextureFocus">
@@ -152,7 +154,7 @@
 		<posx>170</posx>
 		<posy>20</posy>
 		<height>25</height>
-		<font>FlowMainLabel</font>
+	    <font>Font_List</font>
 <!--	<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>  -->
 		<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 		<align>center</align>
@@ -162,7 +164,7 @@
 		<posx>170</posx>
 		<posy>40</posy>
 		<height>25</height>
-		<font>Font_ListObjects</font>
+	    <font>Font_List</font>
 		<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>
 		<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 		<align>center</align>
@@ -428,7 +430,7 @@
 -->
 				</control>
 			</control>
-			<!-- Episode Infos -->
+			<!-- TVShows Infos -->
 			<control type="group">
 				<posx>210</posx>
 				<posy>10</posy>
@@ -547,7 +549,7 @@
 			</control>
 			<!-- Movie/Episode Plot -->
 			<control type="textbox">
-				<posx>30</posx>
+				<posx>20</posx>
 				<posy>250</posy>
 				<width>375</width>
 				<height>178</height>
@@ -556,10 +558,45 @@
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
-				<visible>!IsEmpty(ListItem.Plot)</visible>
+				<visible>!IsEmpty(ListItem.Plot) + !Container.Content(episodes)</visible>
 			</control>
 			<control type="textbox">
-				<posx>30</posx>
+				<posx>20</posx>
+				<posy>300</posy>
+				<width>375</width>
+				<height>128</height>
+				<font>Font_MultiplexPlotSmall</font>
+				<info>ListItem.Plot</info>
+				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
+				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
+				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
+				<visible>!IsEmpty(ListItem.Plot) + Container.Content(episodes)</visible>
+			</control>
+			<control type="label">
+				<description>Title</description>
+				<posx>20</posx>
+				<posy>250</posy>
+				<width>375</width>
+				<label>[COLOR FF365EEE]$INFO[ListItem.TVShowTitle] [/COLOR]</label>
+				<include>cList_InfoValue</include>
+				<scroll>true</scroll>
+				<visible>Container.Content(episodes)</visible>
+			</control>
+
+
+			<control type="label">
+				<description>Title</description>
+				<posx>20</posx>
+				<posy>270</posy>
+				<width>375</width>
+				<label>[COLOR FF3692EE]$LOCALIZE[20373] $INFO[ListItem.Season], $LOCALIZE[20359] $INFO[ListItem.Episode]: [/COLOR] [COLOR FFFFFFFF]$INFO[ListItem.Title] [/COLOR]</label>
+				<include>cList_InfoValue</include>
+				<visible>Container.Content(episodes)</visible>
+			</control>
+
+
+			<control type="textbox">
+				<posx>20</posx>
 				<posy>250</posy>
 				<width>380</width>
 				<height>198</height>
@@ -587,7 +624,7 @@
 -->
 			<!-- Season Plot -->
 			<control type="textbox">
-				<posx>30</posx>
+				<posx>20</posx>
 				<posy>250</posy>
 				<width>380</width>
 				<height>198</height>
@@ -943,8 +980,6 @@
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureSolid</include>
 				<visible>!Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
-				<visible></visible>
-
 			</control>
 			<control type="image">
 				<posx>114</posx>
@@ -954,23 +989,32 @@
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureSolid</include>
 				<visible>!Skin.HasSetting(clearlistthin) + [Window.IsActive(myvideofiles) | Window.IsActive(1) | [Window.IsActive(502) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
-
 			</control>
 			<!-- List Background -->
+					<control type="image">
+						<posx>114</posx>
+						<posy>40</posy>
+						<width>450</width>
+						<height>80</height>
+						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightButtonTextureFocus</include>
+						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBigButtonTextureFocus</include>
+						<visible>true</visible>
+					</control>
+
 			<control type="image">
 				<posx>114</posx>
-				<posy>40</posy>
+				<posy>120</posy>
 				<width>430</width>
-				<height>640</height>
+				<height>560</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
 				<visible>Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
 			</control>
 			<control type="image">
 				<posx>114</posx>
-				<posy>40</posy>
+				<posy>120</posy>
 				<width>450</width>
-				<height>640</height>
+				<height>560</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
 				<visible>Window.IsActive(myvideofiles) | Window.IsActive(1) | [Window.IsActive(502) + !Container.Content(albums) + !Container.Content(songs)]</visible>
@@ -1010,7 +1054,7 @@
 				<visible>true</visible>
 				<include>Animation_cListCommonFade</include>
 				<!-- Librarys without Songs and Albums -->
-				<itemlayout width="450" height="40" condition="Window.IsActive(myvideofiles) | [Window.IsActive(502) + !Container.Content(songs) + !Container.Content(albums)]">
+				<itemlayout width="450" height="40" condition="!Container.Content(songs) + !Container.Content(albums) + !Container.Content(tvshows)">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -1130,7 +1174,7 @@
 					</control>
 
 				</itemlayout>
-				<focusedlayout width="450" height="40" condition="Window.IsActive(myvideofiles) | [Window.IsActive(502) + !Container.Content(songs) + !Container.Content(albums)]">
+				<focusedlayout width="450" height="40" condition="!Container.Content(songs) + !Container.Content(albums) + !Container.Content(tvshows)">
 					<control type="image">
 						<posx>2</posx>
 						<posy>0</posy>
@@ -1248,8 +1292,8 @@
 					</control>
 
 				</focusedlayout>
-				<!-- Music-Albums -->
-				<itemlayout width="430" height="80" condition="[Window.IsActive(502) | Window.IsActive(501)] + Container.Content(albums)">
+				<!-- Music-Albums and TV Shows -->
+				<itemlayout width="430" height="80" condition="Container.Content(albums) | Container.Content(tvshows)">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -1257,6 +1301,27 @@
 						<height>80</height>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBigButtonTexture</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBigButtonTexture</include>
+						<visible>Container.Content(tvshows)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>330</width>
+						<height>80</height>
+						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBigButtonTexture</include>
+						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBigButtonTexture</include>
+						<visible>Container.Content(albums)</visible>
+					</control>
+					<control type="image">
+						<posx>2</posx>
+						<posy>0</posy>
+						<width>450</width>
+						<height>80</height>
+						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBigButtonTextureFocus</include>
+						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBigButtonTextureFocus</include>
+						<info>listitem.banner</info>
+		     		   <animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
+						<visible>Container.Content(tvshows)</visible>
 					</control>
 					<control type="label">
 						<posx>10</posx>
@@ -1295,14 +1360,32 @@
 						<visible>Container.Content(albums)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout width="430" height="80" condition="[Window.IsActive(502) | Window.IsActive(501)] + Container.Content(albums)">
+				<focusedlayout width="430" height="80" condition="Container.Content(albums) | Container.Content(tvshows)">
 					<control type="image">
-						<posx>0</posx>
+						<posx>2</posx>
 						<posy>0</posy>
-						<width>430</width>
+						<width>450</width>
+						<height>80</height>
+						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightButtonTextureFocus</include>
+						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBigButtonTextureFocus</include>
+						<visible>Container.Content(tvshows)</visible>
+					</control>
+					<control type="image">
+						<posx>2</posx>
+						<posy>0</posy>
+						<width>330</width>
 						<height>80</height>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBigButtonTextureFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBigButtonTextureFocus</include>
+						<visible>Container.Content(albums)</visible>
+					</control>
+					<control type="image">
+						<posx>2</posx>
+						<posy>0</posy>
+						<width>450</width>
+						<height>80</height>
+						<info>listitem.banner</info>
+						<visible>Container.Content(tvshows)</visible>
 					</control>
 					<control type="label">
 						<posx>10</posx>
@@ -1342,7 +1425,7 @@
 					</control>
 				</focusedlayout>
 				<!-- Songs, Files, Pictures or Playlists -->
-				<itemlayout width="430" height="40" condition="[Window.IsActive(502) + Container.Content(songs)] | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(28) | Window.IsActive(2) | Window.IsActive(1)">
+				<itemlayout width="430" height="40" condition="Container.Content(songs)">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -1472,11 +1555,11 @@
 					</control>
 					-->
 				</itemlayout>
-				<focusedlayout width="430" height="40" condition="[Window.IsActive(502) + Container.Content(songs)] | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(28) | Window.IsActive(2)">
+				<focusedlayout width="430" height="40" condition="Container.Content(songs)">
 					<control type="image">
-						<posx>0</posx>
+						<posx>2</posx>
 						<posy>0</posy>
-						<width>430</width>
+						<width>428</width>
 						<height>40</height>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightButtonTextureFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightButtonTextureFocus</include>
@@ -1645,7 +1728,6 @@
 					<colordiffuse>d0FFFFFF</colordiffuse>
 					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
 				</control>
-
 
 			<!--<<<<< Title (top) -->
 			<!-- Num Items (bottom) >>>>>-->
