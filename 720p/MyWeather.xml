@@ -118,8 +118,6 @@
         		    <wrapmultiline>true</wrapmultiline>
 					<textcolor>FFFFFFFF</textcolor>					
 					<label>$INFO[Weather.Temperature][CR]$INFO[Weather.Conditions]</label>
-				
-				
 				</control>	
 				<control type="image">
 					<posx>90</posx>

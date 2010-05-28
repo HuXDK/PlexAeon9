@@ -142,7 +142,7 @@
 	</include>
 	<include name="cList_NightButtonTextureFocus">
 
-		<colordiffuse>aF314469</colordiffuse>
+		<colordiffuse>CF4250E4</colordiffuse>
 		<texture>windows/mediamenu.png</texture>
 	</include>
 	<include name="cList_NightBigButtonTextureFocus">
@@ -1091,7 +1091,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<visible>[Window.IsActive(502) + !Container.Content(artists)] | [Window.IsActive(myvideofiles) + Skin.HasSetting(nooverlays)]</visible>
 					</control>
-					<!-- Movies and TvShows -->
+					<!-- Movies and Seasons and Episodes -->
 
 					<control type="label">
 						<posx>20</posx>
@@ -1164,11 +1164,10 @@
 -->
 					<control type="image">
 						<posx>410</posx>
-						<posy>10</posy>
+						<posy>8</posy>
 						<width>25</width>
 						<height>25</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<!--<info>ListItem.Overlay</info>-->
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays) | [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(notvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
 		     		   <animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
 					</control>
@@ -1282,11 +1281,10 @@
 -->
 					<control type="image">
 						<posx>410</posx>
-						<posy>10</posy>
+						<posy>8</posy>
 						<width>25</width>
 						<height>25</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<!--<info>ListItem.Overlay</info>-->
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays) | [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(notvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
 		    	    	<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
 					</control>
@@ -1380,9 +1378,9 @@
 						<visible>Container.Content(albums)</visible>
 					</control>
 					<control type="image">
-						<posx>2</posx>
+						<posx>-12</posx>
 						<posy>0</posy>
-						<width>450</width>
+						<width>470</width>
 						<height>80</height>
 						<info>listitem.banner</info>
 						<visible>Container.Content(tvshows)</visible>
