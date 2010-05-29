@@ -1929,7 +1929,7 @@
 			<control type="textbox">
 				<description>DESCRIPTION: (Short - Seasons)</description>
 				<include>LowList_ShortTextBox</include>
-				<label fallback="31425">$INFO[PlotOutline,[UPPERCASE][COLOR 66ffffff]$LOCALIZE[21821]: [/COLOR][/UPPERCASE]]</label>
+				<label fallback="31425">$INFO[Container.Property(description),[UPPERCASE][COLOR 66ffffff]$LOCALIZE[21821]: [/COLOR][/UPPERCASE]]</label>
 				<visible>Container.Content(seasons) + !Skin.HasSetting(highlist) + ![Skin.HasSetting(tvdescpaneloff) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
 			</control>
 
@@ -1943,7 +1943,7 @@
 			<control type="textbox">
 				<description>DESCRIPTION: (Tall - Seasons)</description>
 				<include>LowList_TallTextBox</include>
-				<label fallback="31425">$INFO[PlotOutline,[UPPERCASE][COLOR 66ffffff]$LOCALIZE[21821]:[/COLOR][/UPPERCASE][CR]]</label>
+				<label fallback="31425">$INFO[Container.Property(description),[UPPERCASE][COLOR 66ffffff]$LOCALIZE[21821]:[/COLOR][/UPPERCASE][CR]]</label>
 				<visible>Container.Content(seasons) + Skin.HasSetting(highlist) + ![Skin.HasSetting(tvdescpaneloff) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
 			</control>
 
@@ -1951,15 +1951,15 @@
 			<control type="label">
 				<description>GENRE:</description>
 				<include>LowList_DetailInfoLabelPos4L</include>
-				<label>[UPPERCASE]$LOCALIZE[515]:[/UPPERCASE] [COLOR d0ffffff]$INFO[ListItem.genre][/COLOR]</label>
+				<label>[UPPERCASE]$LOCALIZE[515]:[/UPPERCASE] [COLOR d0ffffff]$INFO[ListItem.Firstgenre][/COLOR]</label>
 				<visible>!IsEmpty(ListItem.genre)</visible>
-				<visible>!Container.Content(episodes) + !Window.IsActive(24)</visible>
+				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 			</control>
 			<control type="label">
 				<description>RUNTIME: info label</description>
 				<include>LowList_DetailInfoLabelPos4L</include>
 				<label>[UPPERCASE]$LOCALIZE[2050]:[/UPPERCASE]  [COLOR d0ffffff]$INFO[ListItem.label2][/COLOR]</label>
-				<visible>Window.IsActive(24) + !IsEmpty(ListItem.label2)</visible>
+				<visible>Window.IsActive(24) + !IsEmpty(ListItem.label2) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			</control>
 			<control type="label">
 				<description>GENRE:</description>
