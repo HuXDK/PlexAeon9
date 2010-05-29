@@ -42,8 +42,8 @@
 		<visible>!Skin.HasSetting(nomediaflags)</visible>
 	</include>
 	<include name="Furniture_LowClearListMediaFlagsVars">
-		<width min="0" max="50">auto</width>
-		<height>29</height>
+		<width min="0" max="60">auto</width>
+		<height>40</height>
 		<aspectratio>keep</aspectratio>
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
@@ -726,12 +726,12 @@
 	<include name="LowList_MediaFlags">
 		<control type="group">		
 			<include>Animation_CommonFade</include>
-				<posx>902</posx>
+				<posx>875</posx>
 				<posy>670</posy>
 				<control type="image">
 					<posy>-3</posy>
 					<aspectratio>keep</aspectratio>
-					<height>27</height>
+					<height>30</height>
 					<width min="0" max="95">auto</width>
 			 		<colordiffuse>efffffff</colordiffuse>
 					<include>Animation_CommonFade</include>
@@ -739,12 +739,14 @@
 					<include>Animation_HideMultiplex</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating))</visible>
 					<info>Listitem.Property(mediaTag::contentRating)</info>
+					<animation effect="slide" end="205,-275" time="0" condition="Container.Content(movies) + Control.IsVisible(54)">Conditional</animation>
+					<animation effect="slide" end="25,0" time="0" condition="Container.Content(movies) + !Control.IsVisible(54)">Conditional</animation>
 				</control>
 
 			<control type="image">
 				<visible>!IsEmpty(Listitem.Property(mediaTag::studio)) + Control.IsVisible(54)</visible>
 				<posy>-10</posy>
-				<posx>322</posx>
+				<posx>342</posx>
 				<height>50</height>
 				<width min="1" max="95">auto</width>
 				<info>Listitem.Property(mediaTag::studio)</info>
@@ -752,11 +754,12 @@
 			</control>
 
 			<control type="grouplist">
-				<posx>85</posx>
+				<posx>65</posx>
 				<posy>-1</posy>
 				<orientation>horizontal</orientation>
 				<height>85</height>
 				<itemgap>10</itemgap>
+				<animation effect="slide" end="-905,0" time="0" condition="Container.Content(movies) + !Control.IsVisible(54)">Conditional</animation>
 
 				<control type="image">
 					<include>Furniture_LowClearListMediaFlagsVars</include>
@@ -783,8 +786,8 @@
 				</control>
 
 				<control type="image">
-		<width min="10" max="35">auto</width>
-		<height>29</height>
+		<width min="10" max="40">auto</width>
+		<height>40</height>
 		<aspectratio>keep</aspectratio>
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>

@@ -143,7 +143,7 @@
 	<include name="cList_NightButtonTextureFocus">
 
 		<colordiffuse>CF4250E4</colordiffuse>
-		<texture>windows/mediamenu.png</texture>
+		<texture>windows/listselectbar.png</texture>
 	</include>
 	<include name="cList_NightBigButtonTextureFocus">
 		<texture>clearlist/button_big_focus.png</texture>
@@ -991,30 +991,32 @@
 				<visible>!Skin.HasSetting(clearlistthin) + [Window.IsActive(myvideofiles) | Window.IsActive(1) | [Window.IsActive(502) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 			</control>
 			<!-- List Background -->
+
+					<!-- Top of List Background -->
 					<control type="image">
 						<posx>114</posx>
 						<posy>40</posy>
 						<width>450</width>
 						<height>80</height>
-						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightButtonTextureFocus</include>
-						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBigButtonTextureFocus</include>
+						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
+						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
 						<visible>true</visible>
 					</control>
 
 			<control type="image">
 				<posx>114</posx>
-				<posy>120</posy>
+				<posy>40</posy>
 				<width>430</width>
-				<height>560</height>
+				<height>680</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
 				<visible>Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
 			</control>
 			<control type="image">
 				<posx>114</posx>
-				<posy>120</posy>
+				<posy>40</posy>
 				<width>450</width>
-				<height>560</height>
+				<height>680</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
 				<visible>Window.IsActive(myvideofiles) | Window.IsActive(1) | [Window.IsActive(502) + !Container.Content(albums) + !Container.Content(songs)]</visible>
@@ -1042,7 +1044,7 @@
 				<posx>114</posx>
 				<posy>120</posy>
 				<width>450</width>
-				<height>555</height>
+				<height>590</height>
 				<onup>54</onup>
 				<ondown>54</ondown>
 				<onleft>7000</onleft>
@@ -1069,7 +1071,7 @@
 						<posy>0</posy>
 						<width>330</width>
 						<height>40</height>
-						<font>FlowMainLabel</font>
+						<font>Font_MediaWindowMenu</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
@@ -1083,7 +1085,7 @@
 						<posy>0</posy>
 						<width>330</width>
 						<height>40</height>
-						<font>FlowMainLabel</font>
+						<font>Font_MediaWindowMenu</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
@@ -1098,7 +1100,7 @@
 						<posy>0</posy>
 						<width>380</width>
 						<height>40</height>
-						<font>FlowMainLabel</font>
+						<font>Font_MediaWindowMenu</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
@@ -1112,7 +1114,7 @@
 						<posy>0</posy>
 						<width>380</width>
 						<height>40</height>
-						<font>FlowMainLabel</font>
+						<font>Font_MediaWindowMenu</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
@@ -1125,7 +1127,7 @@
 						<posy>0</posy>
 						<width>335</width>
 						<height>40</height>
-						<font>FlowMainLabel</font>
+						<font>Font_MediaWindowMenu</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
@@ -1175,12 +1177,20 @@
 				</itemlayout>
 				<focusedlayout width="450" height="40" condition="!Container.Content(songs) + !Container.Content(albums) + !Container.Content(tvshows)">
 					<control type="image">
-						<posx>2</posx>
-						<posy>0</posy>
-						<width>448</width>
-						<height>40</height>
+						<posx>-10</posx>
+						<posy>-15</posy>
+						<width>468</width>
+						<height>70</height>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightButtonTextureFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightButtonTextureFocus</include>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>468</width>
+						<height>40</height>
+						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightButtonTexture</include>
+						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightButtonTexture</include>
 					</control>
 					<!-- Artists -->
 					<control type="label">
@@ -1188,7 +1198,7 @@
 						<posy>0</posy>
 						<width>330</width>
 						<height>40</height>
-						<font>FlowMainLabel</font>
+						<font>Font_MediaWindowMenu</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
@@ -1202,7 +1212,7 @@
 						<posy>0</posy>
 						<width>330</width>
 						<height>40</height>
-						<font>FlowMainLabel</font>
+						<font>Font_MediaWindowMenu</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
@@ -1215,7 +1225,7 @@
 						<posy>0</posy>
 						<width>380</width>
 						<height>40</height>
-						<font>FlowMainLabel</font>
+						<font>Font_MediaWindowMenu</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
@@ -1229,7 +1239,7 @@
 						<posy>0</posy>
 						<width>380</width>
 						<height>40</height>
-						<font>FlowMainLabel</font>
+						<font>Font_MediaWindowMenu</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
@@ -1242,7 +1252,7 @@
 						<posy>0</posy>
 						<width>335</width>
 						<height>40</height>
-						<font>FlowMainLabel</font>
+						<font>Font_MediaWindowMenu</font>
 						<aligny>center</aligny>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
