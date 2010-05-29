@@ -797,19 +797,13 @@
 				<height>85</height>
 				<itemgap>10</itemgap>
 				<animation effect="slide" end="-900,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
+				<animation effect="slide" end="-75,0" time="0" condition="Control.IsVisible(54) + Container.Content(movies)">Conditional</animation>
 
 				<control type="image">
 					<include>Furniture_LowClearListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoResolution)</info>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::videoResolution))</visible>
 				</control>	
-<!--
-				<control type="image">
-					<include>Furniture_LowClearListMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::videoFrameRate)</info>
-					<visible>!IsEmpty(Listitem.Property(mediaTag::videoFrameRate))  + Control.IsVisible(54)</visible>
-				</control>
--->
 				<control type="image">
 					<include>Furniture_LowClearListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoCodec)</info>

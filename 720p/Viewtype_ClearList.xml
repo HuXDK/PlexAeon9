@@ -293,7 +293,7 @@
 			<!-- Episode Thumb -->
 
 			<control type="image">
-				<posx>10</posx>
+				<posx>5</posx>
 				<posy>10</posy>
 				<width>410</width>
 				<height>230</height>
@@ -383,7 +383,7 @@
 						<label>$LOCALIZE[31709]:</label>
 					</control>
 					<control type="label">
-						<posy>19</posy>
+						<posy>17</posy>
 						<include>cList_InfoValue</include>
 						<label fallback="31425">$INFO[ListItem.Duration]</label>
 					</control>
@@ -554,11 +554,23 @@
 				<width>375</width>
 				<height>178</height>
 				<font>Font_MultiplexPlotSmall</font>
-				<info>ListItem.Plot</info>
+				<label>[COLOR=FF3692EE]$INFO[ListItem.tagline][/COLOR][CR]$INFO[ListItem.Plot]</label>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
-				<visible>!IsEmpty(ListItem.Plot) + !Container.Content(episodes)</visible>
+				<visible>!IsEmpty(ListItem.Plot) + !Container.Content(episodes)+ !IsEmpty(ListItem.Tagline)</visible>
+			</control>
+			<control type="textbox">
+				<posx>20</posx>
+				<posy>250</posy>
+				<width>375</width>
+				<height>178</height>
+				<font>Font_MultiplexPlotSmall</font>
+				<label>$INFO[ListItem.Plot]</label>
+				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
+				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
+				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
+				<visible>!IsEmpty(ListItem.Plot) + !Container.Content(episodes) + IsEmpty(ListItem.Tagline)</visible>
 			</control>
 			<control type="textbox">
 				<posx>20</posx>
@@ -1048,6 +1060,7 @@
 				<onup>54</onup>
 				<ondown>54</ondown>
 				<onleft>7000</onleft>
+				<scrolltime>0</scrolltime>
 				<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(2)">cList_OnRightPlaylist</include>
 				<include condition="Window.IsActive(myvideofiles) | Window.IsActive(1)">cList_OnRightLibraryMovies</include>
 				<include condition="Window.IsActive(502)">cList_OnRightLibraryMusic</include>
@@ -1875,7 +1888,6 @@
 					<font>Font_ListPlaying</font>
 					<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightNowPlayingColor2</include>
 					<include condition="Skin.HasSetting(Lightclearlist)">cList_LightNowPlayingColor2</include>
-					<scroll>true</scroll>
 					<label>$LOCALIZE[31205]:</label>
 					<visible>Player.HasAudio</visible>
 				</control>
@@ -1888,7 +1900,6 @@
 					<font>Font_ListPlaying</font>
 					<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightNowPlayingColor1</include>
 					<include condition="Skin.HasSetting(Lightclearlist)">cList_LightNowPlayingColor1</include>
-					<scroll>true</scroll>
 					<label>[UPPERCASE]$INFO[MusicPlayer.Artist][/UPPERCASE]</label>
 					<visible>Player.HasAudio</visible>
 				</control>
@@ -1901,7 +1912,6 @@
 					<font>Font_ListPlaying</font>
 					<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightNowPlayingColor2</include>
 					<include condition="Skin.HasSetting(Lightclearlist)">cList_LightNowPlayingColor2</include>
-					<scroll>true</scroll>
 					<label>[UPPERCASE]$INFO[MusicPlayer.Title][/UPPERCASE]</label>
 					<visible>Player.HasAudio</visible>
 				</control>
@@ -1914,7 +1924,6 @@
 					<font>Font_ListPlaying</font>
 					<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightNowPlayingColor2</include>
 					<include condition="Skin.HasSetting(Lightclearlist)">cList_LightNowPlayingColor2</include>
-					<scroll>true</scroll>
 					<label>[UPPERCASE]$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration][/UPPERCASE]</label>
 					<visible>Player.HasAudio</visible>
 				</control>
@@ -1927,7 +1936,6 @@
 					<font>Font_ListPlaying</font>
 					<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightNowPlayingColor2</include>
 					<include condition="Skin.HasSetting(Lightclearlist)">cList_LightNowPlayingColor2</include>
-					<scroll>true</scroll>
 					<label>[UPPERCASE]$LOCALIZE[31426]: $INFO[MusicPlayer.PlaylistPosition] / $INFO[MusicPlayer.PlayListLength][/UPPERCASE]</label>
 					<visible>Player.HasAudio</visible>
 				</control>
@@ -1940,7 +1948,6 @@
 					<font>Font_ListPlaying</font>
 					<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightNowPlayingColor2</include>
 					<include condition="Skin.HasSetting(Lightclearlist)">cList_LightNowPlayingColor2</include>
-					<scroll>true</scroll>
 					<label>$LOCALIZE[31205]:</label>
 					<visible>Player.HasVideo</visible>
 				</control>
@@ -1960,7 +1967,6 @@
 					<font>Font_ListPlaying</font>
 					<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightNowPlayingColor2</include>
 					<include condition="Skin.HasSetting(Lightclearlist)">cList_LightNowPlayingColor2</include>
-					<scroll>true</scroll>
 					<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
 					<visible>Player.HasVideo</visible>
 				</control>
