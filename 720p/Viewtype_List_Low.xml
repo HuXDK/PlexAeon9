@@ -59,7 +59,7 @@
 		<height>39</height>
 		<font>Font_ListSmall</font>
 		<aligny>center</aligny>
-		<animation effect="slide" start="60,0" end="60,0" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(myvideofiles)]">Conditional</animation>
+		<animation effect="slide" start="60,0" end="60,0" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]">Conditional</animation>
 		<include>Animation_LandscapeIconSlide</include>
 	</include>
 
@@ -569,7 +569,7 @@
 						<description>LABEL label</description>
 						<include>ListLabel_WidthMusic_LowSmall_Low</include>
 						<include>lowlistcolorfocus</include>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Labeel]</label>
 						<visible>Window.IsActive(24)</visible>
 					</control>
 					<control type="label">
@@ -925,12 +925,6 @@
 						<visible>IsEmpty(ListItem.Title) + !Window.IsActive(24)</visible>
 					</control>
 
-					<control type="label">
-		<!--				<include>ListLabel_WidthMusic_LowTV_LowAPP</include> -->
-						<include>lowlistdetailcolornofocus</include>
-						<info>ListItem.Label</info>
-						<visible>IsEmpty(ListItem.Title) + Window.IsActive(24)</visible>
-					</control>
 
 					<control type="label">
 						<font>Font_FileBrowserDetail</font>
@@ -951,7 +945,7 @@
 					<control type="label">
 						<include>ListLabel_Detail_LowSmall_Low</include>
 						<include>lowlistdetailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
 						<visible>Container.Content(episodes)</visible>
 					</control>
 
@@ -1023,7 +1017,7 @@
 					<control type="label">
 						<include>ListLabel_Detail_LowSmall_Low</include>
 						<include>listcolorfocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
 						<visible>Container.Content(episodes)</visible>
 					</control>
 

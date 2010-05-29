@@ -2020,7 +2020,6 @@
 				<visible>Container.Content(seasons)</visible>
 			</control>
 
-			<include>LowList_VideoAspectLabel</include>
 		</control>
 
 	</include>
