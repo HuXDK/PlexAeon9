@@ -34,7 +34,7 @@
 	</include>
 	<include name="Furniture_ListMediaFlagsVars">
 		<width min="0" max="50">auto</width>
-		<height>18</height>
+		<height>25</height>
 		<aspectratio>keep</aspectratio>
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
@@ -176,19 +176,42 @@
 	</include>
 
 	<include name="Furniture_ListMediaFlags">
+
+		<control type="image">
+			<posx>208</posx>
+			<posy>117</posy>
+			<width min="0" max="80">auto</width>
+			<height>22</height>
+			<aspectratio>keep</aspectratio>
+			<include>Animation_CommonFade</include>
+			<include>Animation_HideShowcase</include>
+			<include>Animation_HideMultiplex</include>
+			<visible>!Skin.HasSetting(nomediaflags)</visible>
+			<info>Listitem.Property(mediaTag::contentRating)</info>
+			<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating))</visible>
+		</control>	
+		<control type="image">
+			<posx>8</posx>
+			<posy>85</posy>
+			<width min="0" max="80">auto</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<include>Animation_CommonFade</include>
+			<include>Animation_HideShowcase</include>
+			<include>Animation_HideMultiplex</include>
+			<visible>!Skin.HasSetting(nomediaflags)</visible>
+			<info>Listitem.Property(mediaTag::studio)</info>
+			<visible>!IsEmpty(Listitem.Property(mediaTag::studio))</visible>
+		</control>	
+
 		<control type="group">		
 			<visible>!Skin.HasSetting(nomediaflags)</visible>
 			<control type="grouplist">
-			<posx>933</posx>
-			<posy>585</posy>
+			<posx>943</posx>
+			<posy>575</posy>
 			<animation effect="slide" end="40,-50" time="0" condition="Control.IsVisible(50) + Container.Content(episodes)">Conditional</animation>
 			<orientation>horizontal</orientation>
 			<itemgap>10</itemgap>
-				<control type="image">
-					<include>Furniture_ListMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::contentRating)</info>
-					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating))</visible>
-				</control>	
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoResolution)</info>
@@ -208,13 +231,13 @@
 				</control>
 
 				<control type="image">
-		<width min="0" max="25">auto</width>
-		<height>18</height>
-		<aspectratio>keep</aspectratio>
-		<include>Animation_CommonFade</include>
-		<include>Animation_HideShowcase</include>
-		<include>Animation_HideMultiplex</include>
-		<visible>!Skin.HasSetting(nomediaflags)</visible>
+					<width min="0" max="30">auto</width>
+					<height>26</height>
+					<aspectratio>keep</aspectratio>
+					<include>Animation_CommonFade</include>
+					<include>Animation_HideShowcase</include>
+					<include>Animation_HideMultiplex</include>
+					<visible>!Skin.HasSetting(nomediaflags)</visible>
 					<info>Listitem.Property(mediaTag::audioChannels)</info>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
 				</control>
@@ -731,26 +754,40 @@
 				<control type="image">
 					<posy>-3</posy>
 					<aspectratio>keep</aspectratio>
-					<height>30</height>
+					<height>25</height>
+					<width min="0" max="85">auto</width>
+			 		<colordiffuse>efffffff</colordiffuse>
+					<include>Animation_CommonFade</include>
+					<include>Animation_HideShowcase</include>
+					<include>Animation_HideMultiplex</include>
+					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + Container.Content(movies)</visible>
+					<info>Listitem.Property(mediaTag::contentRating)</info>
+					<animation effect="slide" end="205,-275" time="0" condition="Control.IsVisible(54)">Conditional</animation>
+					<animation effect="slide" end="25,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
+				</control>
+				<control type="image">
+					<posy>-6</posy>
+					<aspectratio>keep</aspectratio>
+					<height>40</height>
 					<width min="0" max="95">auto</width>
 			 		<colordiffuse>efffffff</colordiffuse>
 					<include>Animation_CommonFade</include>
 					<include>Animation_HideShowcase</include>
 					<include>Animation_HideMultiplex</include>
-					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating))</visible>
+					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + !Container.Content(movies)</visible>
 					<info>Listitem.Property(mediaTag::contentRating)</info>
-					<animation effect="slide" end="205,-275" time="0" condition="Container.Content(movies) + Control.IsVisible(54)">Conditional</animation>
-					<animation effect="slide" end="25,0" time="0" condition="Container.Content(movies) + !Control.IsVisible(54)">Conditional</animation>
+					<animation effect="slide" end="30,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
 				</control>
 
 			<control type="image">
-				<visible>!IsEmpty(Listitem.Property(mediaTag::studio)) + Control.IsVisible(54)</visible>
+				<visible>!IsEmpty(Listitem.Property(mediaTag::studio))</visible>
 				<posy>-10</posy>
 				<posx>342</posx>
 				<height>50</height>
 				<width min="1" max="95">auto</width>
 				<info>Listitem.Property(mediaTag::studio)</info>
 				<aspectratio>keep</aspectratio>
+				<animation effect="slide" end="-30,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
 			</control>
 
 			<control type="grouplist">
@@ -759,7 +796,7 @@
 				<orientation>horizontal</orientation>
 				<height>85</height>
 				<itemgap>10</itemgap>
-				<animation effect="slide" end="-905,0" time="0" condition="Container.Content(movies) + !Control.IsVisible(54)">Conditional</animation>
+				<animation effect="slide" end="-900,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
 
 				<control type="image">
 					<include>Furniture_LowClearListMediaFlagsVars</include>
@@ -2036,6 +2073,7 @@
 		<posx>70</posx>
 		<posy>18</posy>
 		<height>25</height>
+		<width>170</width>
 		<include>Animation_MediaMenuSlideVertical</include>
 	</include>
 	<include name="Horizontal_MediaMenuLabelVars">
