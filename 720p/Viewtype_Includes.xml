@@ -3940,7 +3940,7 @@
 	<include name="MovieFlowGroupVars">
 		<posx>-83</posx>
 		<posy>187</posy>
-		<width>1546</width>
+		<width>1946</width>
 		<height>350</height>			
 	</include>
 	
@@ -5710,33 +5710,78 @@
 	            <orientation>horizontal</orientation>
 	            <scrolltime>250</scrolltime>
 	            <focusposition>3</focusposition>
-               <itemlayout height="350" width="196" condition="true">
+               <itemlayout condition="!Container.Content(episodes)" height="350" width="196">
                     <control type="image">
                         <include>MovieFlowThumbMain</include>
                         <info>ListItem.Icon</info>
-						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) | Container.Content(episodes)</visible>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieFlowGlassOverlay</include>
-						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) | Container.Content(episodes)</visible>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
                     </control>
 				</itemlayout>
-                <focusedlayout height="350" width="196"	condition="true">
+                <focusedlayout condition="!Container.Content(episodes)" height="350" width="196">
                     <control type="image">
                         <include>MovieFlowThumbMain</include>
                         <info>ListItem.Icon</info>
-						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) | Container.Content(episodes)</visible>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
 						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieFlowGlassOverlay</include>
-						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) | Container.Content(episodes)</visible>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
 						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>						
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
+					</control>
+				</focusedlayout>
+ 
+               <itemlayout condition="Container.Content(episodes)" height="226" width="450">
+                    <control type="image">
+						<texture diffuse="osd/bookmark_mask.png">defaultvideobig.png</texture>
+	   					<aspectratio scalediffuse="false">scale</aspectratio>
+	   					<posx>-815</posx>
+	   					<posy>20</posy>
+	 					<width>400</width>
+	    				<height>226</height>
+                        <info>ListItem.Icon</info>
+						<visible>!Control.IsVisible(9000) + Container.Content(episodes)</visible>
                     </control>
+				    <control type="image">
+						<posx>-460</posx>
+						<posy>35</posy>
+						<width>25</width>
+						<height>25</height>
+						<info>ListItem.Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
+				</itemlayout>
+                <focusedlayout condition="Container.Content(episodes)" height="226" width="450">
+                    <control type="image">
+						<texture diffuse="osd/bookmark_mask.png">defaultvideobig.png</texture>
+	   					<aspectratio scalediffuse="false">scale</aspectratio>
+	    				<posx>-815</posx>
+	    				<posy>20</posy>
+	   				    <width>400</width>
+	   					<height>226</height>
+                        <info>ListItem.Icon</info>
+						<visible>!Control.IsVisible(9000) + Container.Content(episodes)</visible>
+						<animation effect="zoom" start="100" end="110" center="auto" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="auto" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55)">Unfocus</animation>
+                   </control>
+				    <control type="image">
+						<posx>-460</posx>
+						<posy>35</posy>
+						<width>25</width>
+						<height>25</height>
+						<info>ListItem.Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<animation effect="zoom" center="-616,135" start="100" end="110" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+		   			</control>
 				</focusedlayout>
 
 	        </control>
