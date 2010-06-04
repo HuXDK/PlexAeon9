@@ -810,6 +810,7 @@
 				<texture>multiplex/old/multiplex_frame.png</texture>
 				<animation effect="slide" start="0,0" end="0,-15" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(60)">Conditional</animation>
 			</control>
+<!--
 			<control type="image">
 				<posx>20</posx>
 				<posy>60</posy>
@@ -832,6 +833,7 @@
 				<visible>!Control.IsVisible(105)</visible>
 				<include>Animation_CommonFade</include>
 			</control>
+-->
 		</control>
 	</include>
 	<include name="OldMultiplexBaseTV">
@@ -856,6 +858,7 @@
 				<animation effect="slide" start="0,0" end="0,-15" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(60)">Conditional</animation>
 				<visible>!Control.IsVisible(775)</visible>
 			</control>
+<!--
 			<control type="image">
 				<posx>20</posx>
 				<posy>-10</posy>
@@ -878,6 +881,7 @@
 				<visible>!Control.IsVisible(105)</visible>
 				<include>Animation_CommonFade</include>
 			</control>
+-->
 		</control>
 	</include>
 	<include name="OldMultiplexLabelsMovies">
@@ -929,163 +933,118 @@
 		<include>OldMultiplexBaseMovies</include>
 		<include>Furniture_MultiplexMediaFlags</include>
 
-	<control type="group">
-			<visible>Window.IsActive(myvideofiles) + !Container.Content(movies)</visible>
-		<control type="fixedlist" id="553">
-			<viewtype label="31582">wrap</viewtype>
-			<include>OldMultiplexMovieVarsWrap</include>
-			<include>OldMultiplexTVVarsWrap</include>
-			<pagecontrol>60</pagecontrol>
-			<onleft>553</onleft>
-			<onright>553</onright>
-			<include condition="!Skin.HasSetting(oldmultiplexinfotrigger)">OldMultiplexInfoAutoUp</include>
-			<include condition="Skin.HasSetting(oldmultiplexinfotrigger)">OldMultiplexInfoTriggerUp</include>
-			<include condition="!Skin.HasSetting(oldmultiplextrailer) + !Skin.HasSetting(oldmultiplexbigtrailer)">OldMultiplexOnDown</include>
-			<include condition="Skin.HasSetting(oldmultiplextrailer) | Skin.HasSetting(oldmultiplexbigtrailer)">OldMultiplexOnDownTrailer</include>
-			<orientation>horizontal</orientation>
-			<include>OldMultiplexFocusTV</include>
-			<scrolltime>200</scrolltime>
-			<visible>Window.IsActive(myvideofiles) + !Container.Content(movies)</visible>
-			<include>Animation_HideMultiplex</include>
-			<animation effect="slide" start="0,0" end="0,-15" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(60) | Control.HasFocus(197)">Conditional</animation>
-			<itemlayout width="229" height="129" condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">
-				<control type="image">
-					<include>OldMultiplexIconDimensionsTVWrap</include>
-					<texture>common/black.png</texture>
-				</control>
-				<control type="image">
-					<include>OldMultiplexIconDimensionsTVWrap</include>
-					<texture>defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<info>ListItem.Icon</info>
-				</control>
-				<control type="image">
-					<include>OldMultiplexSeasonOverlayWrap</include>
-					<texture>common/black.png</texture>
-					<colordiffuse>b6FFFFFF</colordiffuse>
-					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
-				</control>
-				<control type="label">
-					<posx>115</posx>
-					<posy>129</posy>
-					<width>229</width>
-					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Font_MultiplexSeasonLabelOld</font>
-					<label>$INFO[ListItem.Label]</label>
-					<visible>Container.Content(seasons)</visible>
-					<animation effect="zoom" center="115,100" start="80" end="80" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="label">
-					<posx>115</posx>
-					<posy>129</posy>
-					<width>229</width>
-					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Font_MultiplexSeasonLabelOld</font>
-					<label>$LOCALIZE[31433] $INFO[ListItem.Episode]</label>
-					<animation effect="zoom" center="115,100" start="80" end="80" time="0" condition="true">Conditional</animation>
-					<visible>Container.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<include>OldMultiplexSeasonOverlayWrap</include>
-					<texture>multiplex/old/multiplex_seasongradient.png</texture>
-					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<include>OldMultiplexIconDimensionsTVWrap</include>
-					<bordertexture border="-53">multiplex/old/multiplex_iconframetv.png</bordertexture>
-					<texture>-</texture>
-				</control>
-				<control type="image">
-					<include>OldMultiplexIconDimensionsTVWrap</include>
-					<texture>common/black.png</texture>
-					<colordiffuse>58FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>170</posx>
-					<posy>24</posy>
-					<width>80</width>
-					<height>25</height>
-					<info>ListItem.Overlay</info>
-					<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-					<include>Animation_VisibleChange200</include>
-		            <animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
-				</control>
-			</itemlayout>
-			<focusedlayout width="229" height="129" condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">
-				<control type="image">
-					<include>OldMultiplexIconDimensionsTVWrap</include>
-					<texture>common/black.png</texture>
-					<animation effect="zoom" center="115,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-				</control>
-				<control type="image">
-					<include>OldMultiplexIconDimensionsTVWrap</include>
-					<texture>defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<info>ListItem.Icon</info>
-					<animation effect="zoom" center="115,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-				</control>
-				<control type="image">
-					<include>OldMultiplexSeasonOverlayWrap</include>
-					<texture>common/black.png</texture>
-					<colordiffuse>b6FFFFFF</colordiffuse>
-					<animation effect="zoom" center="115,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
-				</control>
-				<control type="label">
-					<posx>115</posx>
-					<posy>129</posy>
-					<width>229</width>
-					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Font_MultiplexSeasonLabelOld</font>
-					<label>$INFO[ListItem.Label]</label>
-					<animation effect="zoom" center="115,100" start="80" end="100" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-					<visible>Container.Content(seasons)</visible>
-				</control>
-				<control type="label">
-					<posx>115</posx>
-					<posy>129</posy>
-					<width>229</width>
-					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Font_MultiplexSeasonLabelOld</font>
-					<label>$LOCALIZE[31433] $INFO[ListItem.Episode]</label>
-					<animation effect="zoom" center="115,100" start="80" end="100" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-					<visible>Container.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<include>OldMultiplexSeasonOverlayWrap</include>
-					<texture>multiplex/old/multiplex_seasongradient.png</texture>
-					<animation effect="zoom" center="115,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<include>OldMultiplexIconDimensionsTVWrap</include>
-					<bordertexture border="-30">multiplex/old/multiplex_iconframetv.png</bordertexture>
-					<texture>common/blank.png</texture>
-					<animation effect="zoom" center="115,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-					<visible>!Container(553).Column(4)</visible>
-				</control>
-				<control type="image">
-					<posx>170</posx>
-					<posy>24</posy>
-					<width>80</width>
-					<height>25</height>
-					<info>ListItem.Overlay</info>
-					<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-					<include>Animation_VisibleChange200</include>
-					<animation effect="zoom" center="115,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-				</control>
-			</focusedlayout>
-		</control>
-	</control>
+	    <control type="group">
+	        <visible>Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)</visible>
+	        <include>CoverflowMovies</include>
+	    </control>
+	    <control type="group">
+	        <visible>Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2) | Container.Content(episodes)</visible>
+	        <include>CoverflowSquare</include>
+	    </control>
+	    <control type="group">
+	        <control type="fixedlist" id="553">
+	            <viewtype label="31582">list</viewtype>
+				<posx>-83</posx>
+				<posy>460</posy>
+				<width>1946</width>
+				<height>350</height>			
+	            <onleft>553</onleft>
+	            <onright>553</onright>
+	            <onup>7000</onup>
+	            <ondown>60</ondown>
+	            <pagecontrol>60</pagecontrol>
+	            <orientation>horizontal</orientation>
+	            <scrolltime>230</scrolltime>
+	            <focusposition>5</focusposition>
+				<animation effect="slide" start="0,0" end="-290,35" time="0" condition="Container.Content(episodes)">Conditional</animation>
+               	<itemlayout condition="!Container.Content(episodes)" height="350" width="126">
+	  			<control type="group">
+					<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">true</animation>
+                    <control type="image">
+                        <include>MovieFlowThumbMain</include>
+                        <info>ListItem.Icon</info>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
+                    </control>
+                    <control type="image">
+                        <description>Glass overlay</description>
+                        <include>MovieFlowGlassOverlay</include>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
+                    </control>
+                    </control>
+				</itemlayout>
+                <focusedlayout condition="!Container.Content(episodes)" height="350" width="126">
+	   			 <control type="group">
+						<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">true</animation>
+                    <control type="image">
+                        <include>MovieFlowThumbMain</include>
+                        <info>ListItem.Icon</info>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
+						<animation effect="zoom" start="100" end="120" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
+                    </control>
+                    <control type="image">
+                        <description>Glass overlay</description>
+                        <include>MovieFlowGlassOverlay</include>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
+						<animation effect="zoom" start="100" end="120" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
+					</control>
+                    </control>
+				</focusedlayout>
+ 
+               <itemlayout condition="Container.Content(episodes)" height="226" width="250">
+	   			 <control type="group">
+						<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">true</animation>
+                    <control type="image">
+						<texture diffuse="osd/bookmark_mask.png">defaultvideobig.png</texture>
+	   					<aspectratio scalediffuse="false">scale</aspectratio>
+	   					<posx>-815</posx>
+	   					<posy>20</posy>
+	 					<width>400</width>
+	    				<height>226</height>
+                        <info>ListItem.Icon</info>
+						<visible>!Control.IsVisible(9000) + Container.Content(episodes)</visible>
+                    </control>
+				    <control type="image">
+						<posx>-460</posx>
+						<posy>35</posy>
+						<width>25</width>
+						<height>25</height>
+						<info>ListItem.Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
+		   			</control>
+				</itemlayout>
+                <focusedlayout condition="Container.Content(episodes)" height="226" width="250">
+	   			 <control type="group">
+						<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">true</animation>
+                    <control type="image">
+						<texture diffuse="osd/bookmark_mask.png">defaultvideobig.png</texture>
+	   					<aspectratio scalediffuse="false">scale</aspectratio>
+	    				<posx>-815</posx>
+	    				<posy>20</posy>
+	   				    <width>400</width>
+	   					<height>226</height>
+                        <info>ListItem.Icon</info>
+						<visible>!Control.IsVisible(9000) + Container.Content(episodes)</visible>
+						<animation effect="zoom" start="100" end="120" center="auto" time="400" delay="200" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="120" end="100" center="auto" time="400" delay="200" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55)">Unfocus</animation>
+                   </control>
+				    <control type="image">
+						<posx>-460</posx>
+						<posy>35</posy>
+						<width>25</width>
+						<height>25</height>
+						<info>ListItem.Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<animation effect="zoom" center="-616,135" start="100" end="120" time="400" delay="200" easing="out" reversible="false" tween="cubic">Focus</animation>
+		   			</control>
+		   			</control>
+				</focusedlayout>
+	        </control>
 
+	        </control>
 		<control type="button" id="110">
 			<posx>0</posx>
 			<posy>0</posy>

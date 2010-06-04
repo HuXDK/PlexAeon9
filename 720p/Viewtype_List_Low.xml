@@ -525,7 +525,7 @@
 						<include>detailcolornofocus</include>
 						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						<info>ListItem.Overlay</info>
-		     		    <animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
+		     		    <animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
 					</control>
 
 				</itemlayout>
@@ -599,7 +599,6 @@
 						<include>detailcolorfocus</include>
 						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						<info>ListItem.Overlay</info>
-		     		   <animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
 					</control>
 
 				</focusedlayout>
@@ -739,7 +738,7 @@
 						<include>WatchedOverlayFull_Low</include>
 						<include>detailcolornofocus</include>
 						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-		     		   <animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
+		     		   <animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
 						<info>ListItem.Overlay</info>
 					</control>
 
@@ -960,7 +959,7 @@
 						<include>detailcolornofocus</include>
 						<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						<info>ListItem.Overlay</info>
-		     		    <animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
+		     		    <animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
 					</control>
 
 				</itemlayout>

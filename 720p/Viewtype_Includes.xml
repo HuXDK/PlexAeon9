@@ -293,7 +293,7 @@
 		</control>
 	</include>
 
-	<include name="Furniture_MultiplexMediaFlags">  <!-- Old Multiplex -->
+	<include name="Furniture_MultiplexMediaFlags">  <!-- Old Multiplex Movies and Multiplex -->
 		<control type="group">
 			<visible>Window.IsActive(24) + [Control.IsVisible(52) | Control.IsVisible(553)] + !Skin.HasSetting(nomediaflags) + [Container.Content(movies)]</visible>
 			<include>Animation_CommonFade</include>
