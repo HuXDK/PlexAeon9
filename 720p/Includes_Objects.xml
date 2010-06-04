@@ -1206,7 +1206,7 @@
 			<animation effect="slide" end="560,540" time="0" condition="Control.IsVisible(551)">Conditional</animation>
 			<animation effect="slide" end="605,400" time="0" condition="Control.IsVisible(55)">Conditional</animation>
 			<control type="group">
-				<animation effect="fade" start="100" end="0" time="700" condition="!Container().OnNext + !Container().OnPrevious">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="700" delay="10" condition="!Container().OnNext + !Container().OnPrevious">Conditional</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>

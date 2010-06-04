@@ -25,23 +25,14 @@
 			<include>Animation_FanartFade</include>
 		</control>
 -->
- 
-		<control type="largeimage">
+ 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
-			<visible>Skin.HasSetting(nomusicfanart)</visible>
+			<visible>!Skin.HasSetting(curtains) + ![[Container.Content(songs) | Container.Content(albums)] + [Container().OnNext | Container().OnPrevious]]</visible>
+			<animation effect="zoom" start="110" end="130" center="auto" time="30000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="14000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<animation effect="rotate" center="360,640" start="-2" end="2" time="22000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
 			<texture>$INFO[listitem.property(fanart_image)]</texture>
-			<animation effect="fade" start="0" end="100" time="1550" delay="0">Visible</animation>	
-		</control>
- 
-		<control type="multiimage">
-			<include>FullscreenDimensions</include>
-			<imagepath>-</imagepath>
-			<timeperimage>20000</timeperimage>
-			<fadetime>2000</fadetime>
-			<randomize>true</randomize>
-       		<animation effect="fade" start="0" end="100" time="1200" reversible="false" delay="0">Visible</animation>	
-			<info>Skin.String(CustomMusicFolder)</info>
-			<visible>!Skin.HasSetting(nomusicfanart)</visible>
+			<animation effect="fade" time="500" start="20" end="70" delay="50" reversible="false">Visible</animation>
 		</control>
 		<include>Furniture_HomeNowPlaying</include>
 		<include>Furniture_WallBackground</include>
