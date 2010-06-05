@@ -946,7 +946,7 @@
 	            <viewtype label="31582">list</viewtype>
 				<posx>-83</posx>
 				<posy>460</posy>
-				<width>2146</width>
+				<width>2000</width>
 				<height>350</height>			
 	            <onleft>553</onleft>
 	            <onright>553</onright>
@@ -956,10 +956,10 @@
 	            <orientation>horizontal</orientation>
 	            <scrolltime>230</scrolltime>
 	            <focusposition>6</focusposition>
-				<animation effect="slide" start="0,0" end="-380,35" time="0" condition="Container.Content(episodes)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-380,35" condition="Container.Content(episodes)">Conditional</animation>
                	<itemlayout condition="!Container.Content(episodes)" height="350" width="106">
 	  			<control type="group">
-					<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55)">true</animation>
+					<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55)">Conditional</animation>
                     <control type="image">
                         <include>MovieFlowThumbMain</include>
                         <info>ListItem.Icon</info>
@@ -974,7 +974,7 @@
 				</itemlayout>
                 <focusedlayout condition="!Container.Content(episodes)" height="350" width="106">
 	   			 <control type="group">
-						<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55)">true</animation>
+						<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55)">Conditional</animation>
                     <control type="image">
                         <include>MovieFlowThumbMain</include>
                         <info>ListItem.Icon</info>
@@ -994,7 +994,7 @@
  
                <itemlayout condition="Container.Content(episodes)" height="226" width="225">
 	   			 <control type="group">
-						<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55)">true</animation>
+						<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55)">Conditional</animation>
                     <control type="image">
 						<texture diffuse="osd/bookmark_mask.png">defaultvideobig.png</texture>
 	   					<aspectratio scalediffuse="false">scale</aspectratio>
@@ -1018,7 +1018,7 @@
 				</itemlayout>
                 <focusedlayout condition="Container.Content(episodes)" height="226" width="225">
 	   			 <control type="group">
-						<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55)">true</animation>
+						<animation effect="zoom" start="50" end="50" center="auto" condition="!Control.HasFocus(55)">Conditional</animation>
                     <control type="image">
 						<texture diffuse="osd/bookmark_mask.png">defaultvideobig.png</texture>
 	   					<aspectratio scalediffuse="false">scale</aspectratio>
