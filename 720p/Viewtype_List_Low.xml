@@ -147,7 +147,7 @@
 
 	<include name="WatchedOverlaySlim_Low">
 		<posx>564</posx>
-		<posy>9</posy>
+		<posy>7</posy>
 		<width>80</width>
 		<height>25</height>
 	</include>
@@ -510,7 +510,7 @@
 						<include>ListLabel_Detail_LowSmall_Low</include>
 						<include>detailcolornofocus</include>
 						<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
-						<visible>![Container.Content(movies) | Container.Content(albums)] + !Window.IsActive(24)</visible>
+						<visible>!Container.Content(albums) + !Window.IsActive(24)</visible>
 					</control>
 
 					<control type="label">
@@ -532,12 +532,14 @@
 				<!-- Slim focused layout -->
 				<focusedlayout condition="[Window.IsActive(2) + !Skin.HasSetting(pictureslistfull)] | [Window.IsActive(24) + !Skin.HasSetting(movieslistfull) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + ![[Container.Content(artists) + Skin.HasSetting(artistlistfull)] | [Container.Content(albums) + Skin.HasSetting(albumlistfull)] | [Container.Content(songs) + Skin.HasSetting(songlistfull)]]]" height="40">
 					<include>List_Separator_Low</include>
+
 					<control type="image">
-						<posx>89</posx>
-						<posy>0</posy>
-						<width>498</width>
-						<height>39</height>
-						<texture>dialogs/setcontent_button_focus.png</texture>
+						<posx>60</posx>
+						<posy>-20</posy>
+						<width>583</width>
+						<height>79</height>
+						<texture>windows/listselectbar.png</texture>
+						<colordiffuse>CF4250E4</colordiffuse>
 						<visible>Control.IsVisible(551) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 					</control>
 
@@ -591,7 +593,7 @@
 						<include>ListLabel_Detail_LowSmall_Low</include>
 						<include>lowlistcolorfocus</include>
 						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
-						<visible>!Control.IsVisible(76) + ![Container.Content(movies) | Container.Content(albums) | Window.IsActive(24)]</visible>
+						<visible>!Control.IsVisible(76) + ![Container.Content(albums) | Window.IsActive(24)]</visible>
 					</control>
 
 					<control type="image">
@@ -746,12 +748,14 @@
 				<!-- Full focused layout -->
 				<focusedlayout condition="[Window.IsActive(2) + Skin.HasSetting(pictureslistfull)] | [Window.IsActive(myvideofiles) + Skin.HasSetting(movieslistfull) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]] | [[Window.IsActive(502) | Window.IsActive(501)] + [[Container.Content(artists) + Skin.HasSetting(artistlistfull)] | [Container.Content(albums) + Skin.HasSetting(albumlistfull)] | [Container.Content(songs) + Skin.HasSetting(songlistfull)]]]" height="65">
 					<include>List_Separator_Low</include>
+
 					<control type="image">
-						<posx>89</posx>
-						<posy>1</posy>
-						<width>498</width>
-						<height>66</height>
-						<texture>dialogs/setcontent_button_focus.png</texture>
+						<posx>55</posx>
+						<posy>-32</posy>
+						<width>593</width>
+						<height>129</height>
+						<texture>windows/listselectbar.png</texture>
+						<colordiffuse>CF4250E4</colordiffuse>
 						<visible>Control.IsVisible(551) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 					</control>
 
@@ -966,11 +970,12 @@
 				<focusedlayout condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)" height="40">
 					<include>List_Separator_Low</include>
 					<control type="image">
-						<posx>89</posx>
-						<posy>0</posy>
-						<width>498</width>
-						<height>39</height>
-						<texture>dialogs/setcontent_button_focus.png</texture>
+						<posx>60</posx>
+						<posy>-20</posy>
+						<width>585</width>
+						<height>79</height>
+						<texture>windows/listselectbar.png</texture>
+						<colordiffuse>CF4250E4</colordiffuse>
 	<!--					<animation effect="zoom" end="129,0,458,39" time="0" condition="Container.Content(episodes)">Conditional</animation> -->
 					</control>
 

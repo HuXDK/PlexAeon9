@@ -204,6 +204,7 @@
 				<width>773</width>
 				<height>87</height>
 				<texture>windows/listselectbar.png</texture>
+				<colordiffuse>CF4250E4</colordiffuse>
 				<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 			</control>
 			<control type="label">

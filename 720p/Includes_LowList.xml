@@ -1170,41 +1170,6 @@
 		<include>LowList_DetailInfoLabelVars</include>
 	</include>
 
-	<!-- Item Count Label -->
-	<include name="LowList_ItemCountLabel">
-		<control type="group">
-
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>360</width>
-			<height>200</height>
-			<visible>![!Skin.HasSetting(highlist) + [Control.IsVisible(7850) | Control.IsVisible(7814)]]</visible>
-			<animation effect="slide" start="0,0" end="0,-55" time="0" condition="true">Conditional</animation>
-			<control type="label">
-				<description>NUM ARTISTS info label</description>
-				<include>LowList_DetailInfoLabelPosXX</include>
-				<label>[COLOR ffffffff]$INFO[Container.NumItems][/COLOR] $LOCALIZE[133]</label>
-				<visible>Container.Content(artists)</visible>
-			</control>
-
-			<control type="label">
-				<description>NUM ALBUMS info label</description>
-				<include>LowList_DetailInfoLabelPosXX</include>
-				<label>[COLOR ffffffff]$INFO[Container.NumItems][/COLOR] $LOCALIZE[132]</label>
-				<visible>Container.Content(albums)</visible>
-			</control>
-
-			<control type="label">
-				<description>NUM TRACKS info label</description>
-				<include>LowList_DetailInfoLabelPosXX</include>
-				<label>[COLOR ffffffff]$INFO[Container.NumItems][/COLOR] $LOCALIZE[182]</label>
-				<visible>Container.Content(songs)</visible>
-			</control>
-
-		</control>
-
-	</include>
-
 	<!-- Tagline Label -->
 	<include name="LowList_TaglineLabel">
 		<control type="group">
@@ -1215,25 +1180,12 @@
 			<height>200</height>
 			<visible>Skin.HasSetting(highlist)</visible>
 			<animation effect="slide" start="0,0" end="0,-52" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>
-			<control type="label">
-				<description>RUNTIME label</description>
-				<posx>0</posx>
-				<posy>17</posy>
-				<align>right</align>
-				<height>16</height>
-				<width>70</width>
-				<font>Font_MultiplexInfoLabel</font>
-				<textcolor>d0ffffff</textcolor>
-				<include>LowList_DetailInfoLabelPos1</include>
-				<label>$INFO[ListItem.Duration]</label>
-				<visible>Container.Content(movies)</visible>
-			</control>
 
 			<control type="label">
 				<description>TAGLINE label</description>
 				<posx>5</posx>
 				<posy>10</posy>
-				<width>270</width>
+				<width>370</width>
 				<align>left</align>
 				<height>16</height>
 				<font>Font_OSDMusicArtist</font>
@@ -1252,21 +1204,6 @@
 				<visible>Container.Content(movies) + IsEmpty(ListItem.tagline)</visible>
 			</control>
 
-		</control>
-
-	</include>
-
-	<!-- Video aspect label -->
-	<include name="LowList_VideoAspectLabel">
-		<control type="group">
-
-			<posy>0</posy>
-			<posx>0</posx>
-			<width>360</width>
-<!--
-			<visible>Container.Content(episodes) | Container.Content(movies)</visible>
--->
-			<visible>false</visible>
 		</control>
 
 	</include>
@@ -1512,7 +1449,6 @@
 				<visible>!Container.Content(artists) + !Container.Content(songs)</visible>
 			</control>
 
-			<include>LowList_ItemCountLabel</include>
 			<include>ListDetail_Stars</include>
 		</control>
 
@@ -1747,7 +1683,6 @@
 				<visible>Skin.HasSetting(highlist) + Container.Content(songs)</visible>
 			</control>
 
-			<include>LowList_ItemCountLabel</include>
 			<include>ListDetail_Stars</include>
 		</control>
 
@@ -1791,8 +1726,6 @@
 				<visible>Window.IsActive(myvideofiles)</visible>
           	</control>
 
-
-			<include>LowList_VideoAspectLabel</include>
 		</control>
 
 		<!-- Movie info panel -->
@@ -1837,8 +1770,6 @@
 				<label>$LOCALIZE[2050]: [COLOR d0ffffff]$INFO[ListItem.duration][/COLOR]</label>
 				<visible>Window.IsActive(myvideofiles)</visible>
 			</control>
-
-			<include>LowList_VideoAspectLabel</include>
 		</control>
 
 		<!-- Movie Gallery/Slideshow detail panel -->
@@ -2118,7 +2049,6 @@
 				<include>Animation_BackgroundFade</include>
 			</control>
 
-			<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">LowList_ItemCountLabel</include>
 			<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">ListDetail_Stars</include>
 			<include condition="Window.IsActive(myvideofiles)">LowList_TaglineLabel</include>
 		</control>
@@ -2166,15 +2096,6 @@
 					<visible>Container.Content(songs)</visible>
 				</control>
 
-				<control type="radiobutton" id="78984">
-					<include>ListDetail_RadioButtonVars</include>
-					<label>$LOCALIZE[20338] $LOCALIZE[535] $LOCALIZE[31072]</label>
-					<onclick>Skin.ToggleSetting(movieslistfull)</onclick>
-					<selected>Skin.HasSetting(movieslistfull)</selected>
-					<include>Animation_HighListSlide</include>
-					<visible>Container.Content(movies)</visible>
-				</control>
-
 				<control type="radiobutton" id="78988">
 					<include>ListDetail_RadioButtonVars</include>
 					<label>SINGLE $LOCALIZE[31045] FOR $LOCALIZE[133]</label>
@@ -2203,14 +2124,6 @@
 					<visible>Container.Content(songs)</visible>
 				</control>
 
-				<control type="radiobutton" id="789811">
-					<include>ListDetail_RadioButtonVars</include>
-					<label>$LOCALIZE[393] $LOCALIZE[535] $LOCALIZE[31077]/$LOCALIZE[31078]</label>
-					<onclick>Skin.ToggleSetting(highlist)</onclick>
-					<selected>Skin.HasSetting(highlist)</selected>
-					<include>Animation_HighListSlide</include>
-				</control>
-
 				<control type="radiobutton" id="789812">
 					<include>ListDetail_RadioButtonVars</include>
 					<label>$LOCALIZE[557] $LOCALIZE[536] $LOCALIZE[1405] $LOCALIZE[535]</label>
@@ -2236,51 +2149,6 @@
 					<selected>!Skin.HasSetting(hidelistsongicons)</selected>
 					<include>Animation_HighListSlide</include>
 					<visible>Container.Content(songs)</visible>
-				</control>
-<!-- 
-				<control type="radiobutton" id="789815">
-					<include>ListDetail_RadioButtonVars</include>
-					<label>USE POSTERS FOR TV SHOWS</label>
-					<onclick>Skin.ToggleSetting(tvshowposterthumbs)</onclick>
-					<selected>Skin.HasSetting(tvshowposterthumbs)</selected>
-					<include>Animation_HighListSlide</include>
-					<visible>Container.Content(tvshows)</visible>
-				</control>
-
-				<control type="radiobutton" id="789816">
-					<include>ListDetail_RadioButtonVars</include>
-					<label>--USE POSTER.JPG</label>
-					<onclick>Skin.ToggleSetting(useposter.jpg)</onclick>
-					<selected>Skin.HasSetting(useposter.jpg)</selected>
-					<include>Animation_HighListSlide</include>
-					<visible>Container.Content(tvshows) + Skin.HasSetting(tvshowposterthumbs)</visible>
-				</control>
- 
-				<control type="radiobutton" id="789817">
-					<include>ListDetail_RadioButtonVars</include>
-					<label>USE POSTERS FOR SEASONS</label>
-					<onclick>Skin.ToggleSetting(seasonposterthumbs)</onclick>
-					<selected>Skin.HasSetting(seasonposterthumbs)</selected>
-					<include>Animation_HighListSlide</include>
-					<visible>Container.Content(seasons)</visible>
-				</control>
--->
-				<control type="radiobutton" id="789850">
-					<include>ListDetail_RadioButtonVars</include>
-					<label>$LOCALIZE[31079] MENU BAR</label>
-					<onclick>Skin.ToggleSetting(detailmenuishidden)</onclick>
-					<onclick>Skin.Reset(lowlistrsson)</onclick>
-					<selected>Skin.HasSetting(detailmenuishidden)</selected>
-					<include>Animation_HighListSlide</include>
-				</control>
-
-				<control type="radiobutton" id="789851">
-					<include>ListDetail_RadioButtonVars</include>
-					<label>$LOCALIZE[13305]</label>
-					<onclick>Skin.ToggleSetting(lowlistrsson)</onclick>
-					<onclick>Skin.Reset(detailmenuishidden)</onclick>
-					<selected>Skin.HasSetting(lowlistrsson)</selected>
-					<include>Animation_HighListSlide</include>
 				</control>
 				<control type="radiobutton" id="789817">
 					<include>ListDetail_RadioButtonVars</include>

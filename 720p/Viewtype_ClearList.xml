@@ -1189,10 +1189,10 @@
 				</itemlayout>
 				<focusedlayout width="450" height="40" condition="!Container.Content(songs) + !Container.Content(albums)">
 					<control type="image">
-						<posx>-10</posx>
-						<posy>-15</posy>
-						<width>468</width>
-						<height>70</height>
+						<posx>-12</posx>
+						<posy>-20</posy>
+						<width>473</width>
+						<height>79</height>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightButtonTextureFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightButtonTextureFocus</include>
 					</control>
@@ -1446,7 +1446,7 @@
 						<visible>Container.Content(albums)</visible>
 					</control>
 				</focusedlayout>
-				<!-- Songs, Files, Pictures or Playlists -->
+				<!-- Songs -->
 				<itemlayout width="430" height="40" condition="Container.Content(songs)">
 					<control type="image">
 						<posx>0</posx>
