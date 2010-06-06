@@ -3227,7 +3227,7 @@
 			<altlabel>$LOCALIZE[31045]: $LOCALIZE[31064]</altlabel>
 			<usealttexture>!Skin.HasSetting(oldmultiplextvbigthumb)</usealttexture>
 			<onclick>Skin.ToggleSetting(oldmultiplextvbigthumb)</onclick>
-			<visible>Container.Content(episodes) + Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553)</visible>
+			<visible>Container.Content(episodes) + Window.IsActive(24) + Control.IsVisible(553)</visible>
 		</control>
 	</include>
 
