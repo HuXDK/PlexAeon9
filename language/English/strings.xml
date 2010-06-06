@@ -32,13 +32,13 @@
 <!-- Plexaeon Viewtype Mods Settings-->
 
 	<string id="32010">USE TV POSTERS FOR MULTIPLEX</string>
-	<string id="32011">USE NEW WALL VIEW</string>
+	<string id="32011">NEW WALL VIEW</string>
 	<string id="32012">USE OLD CLEARLIST EPISODE INFO VIEW</string>
 	<string id="32013">WEATHER BACKDROP BY CURRENT WEATHER CONDITIONS</string>
 	<string id="32014">ENABLE STARTUP PLAYLIST (PLAYLIST, AUDIO, OR VIDEO)</string>
 	<string id="32015">- PATH TO STARTUP FILE/PLAYLIST</string>
 	<string id="32016">NO 'EXTRA ZOOM' ON CONTEXT MENU</string>
-	<string id="32017">USE CD/DVD CASE OVERLAYS</string>	
+	<string id="32017">USE DVD CASES</string>	
 	<string id="32018">FAST SCROLLING LETTERS POPUP</string>
 	<string id="32019">USE VERTICAL VIEWTYPE MENU</string>
 	<string id="32020">USE PLAYING VIDEO AS FANART BACKDROP</string>

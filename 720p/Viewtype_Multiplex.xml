@@ -355,6 +355,20 @@
 					<colordiffuse>94FFFFFF</colordiffuse>
 					<animation effect="fade" start="50" end="50" time="0" condition="!Skin.HasSetting(darkmultiplex)">Conditional</animation>
 				</control>
+				<control type="label">
+					<posx>20</posx>
+					<posy>60</posy>
+					<align>left</align>
+					<width>230</width>
+					<height>32</height>
+					<font>Font_MultiplexPlot</font>
+					<label>Sorry, extra images are unavailable at this time.</label>
+					<visible>true</visible>
+					<wrapmultiline>true</wrapmultiline>
+					<colordiffuse>d0FFFFFF</colordiffuse>
+					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
+					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasVideo">Conditional</animation>
+				</control>
  <!--
 				<control type="largeimage">
 					<posx>1</posx>
@@ -375,6 +389,21 @@
 					<colordiffuse>94FFFFFF</colordiffuse>
 					<animation effect="fade" start="50" end="50" time="0" condition="!Skin.HasSetting(darkmultiplex)">Conditional</animation>
 				</control>
+ 				<control type="label">
+					<posx>20</posx>
+					<posy>220</posy>
+					<align>left</align>
+					<width>230</width>
+					<height>32</height>
+					<font>Font_MultiplexPlot</font>
+					<label>Sorry, extra images are unavailable at this time.</label>
+					<visible>true</visible>
+					<wrapmultiline>true</wrapmultiline>
+					<colordiffuse>d0FFFFFF</colordiffuse>
+					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
+					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasVideo">Conditional</animation>
+				</control>
+
  <!--
 				<control type="largeimage">
 					<posx>1</posx>
@@ -439,6 +468,20 @@
 					<texture>common/black.png</texture>
 					<colordiffuse>94FFFFFF</colordiffuse>
 					<animation effect="fade" start="50" end="50" time="0" condition="!Skin.HasSetting(darkmultiplex)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>80</posx>
+					<posy>160</posy>
+					<align>left</align>
+					<width>430</width>
+					<height>32</height>
+					<font>Font_MultiplexPlot</font>
+					<label>Sorry, extra images are unavailable at this time.</label>
+					<visible>true</visible>
+					<wrapmultiline>true</wrapmultiline>
+					<colordiffuse>d0FFFFFF</colordiffuse>
+					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
+					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasVideo">Conditional</animation>
 				</control>
  
 				<control type="multiimage">

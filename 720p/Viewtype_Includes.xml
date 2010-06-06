@@ -2274,6 +2274,14 @@
 		</control>
 	</include>
 	<include name="MediaMenuButton_WallInfo">
+		<control type="radiobutton" id="700025">
+				<!-- NEW WALL TOGGLE-->
+			<include>MediaMenuButton</include>
+				<label>32011</label>
+				<onclick>Skin.ToggleSetting(newwall)</onclick>
+				<selected>Skin.HasSetting(newwall)</selected>
+			<visible>Window.IsActive(myvideofiles) + Control.IsVisible(53)</visible>
+			</control>
 		<control type="button" id="700011">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
@@ -2542,6 +2550,16 @@
 			<selected>!Skin.HasSetting(nomediaflags)</selected>
 			<visible>!Skin.HasSetting(nomediaflagsbutton)</visible>
 		</control>
+	</include>
+	<include name="MediaMenuButton_DVDCases">
+		<control type="radiobutton" id="700037">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[32017]</label>
+			<onclick>Skin.ToggleSetting(dvdcase)</onclick>
+			<selected>Skin.HasSetting(dvdcase)</selected>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Control.IsVisible(57) | Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(551)</visible>
+			</control>
 	</include>
 	<include name="MediaMenuButton_WallGrid">
 		<control type="togglebutton" id="700035">
@@ -3348,6 +3366,7 @@
 				<include>LowList_HighLowMediaMenuButton</include>
 				<include>MediaMenuButton_PanelDensity</include>
 				<include>MediaMenuButton_PanelDark</include>
+				<include>MediaMenuButton_DVDCases</include>
 				<include>MediaMenuButton_Overlay</include>
 				<include>MediaMenuButton_Flags</include>
 		<!--	<include>MediaMenuButton_Fanart</include>  -->

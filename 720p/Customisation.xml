@@ -51,68 +51,76 @@
 				<onclick>Skin.ToggleSetting(notime)</onclick>
 				<selected>!Skin.HasSetting(notime)</selected>
 			</control>
-			<control type="radiobutton" id="402">
+			<control type="radiobutton" id="401">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32029</label>
 				<onclick>Skin.ToggleSetting(TotalsPanelOff)</onclick>
 				<selected>!Skin.HasSetting(TotalsPanelOff)</selected>
 			</control>
-			<control type="radiobutton" id="401">
+			<control type="radiobutton" id="402">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31270</label>
 				<onclick>Skin.ToggleSetting(nozooms)</onclick>
 				<selected>!Skin.HasSetting(nozooms)</selected>
 			</control>
-			<control type="radiobutton" id="404">
+			<control type="radiobutton" id="403">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31294</label>
 				<onclick>Skin.ToggleSetting(keyboardzoom)</onclick>
 				<selected>Skin.HasSetting(keyboardzoom)</selected>
 			</control>
  
-			<control type="radiobutton" id="407">
+			<control type="radiobutton" id="404">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32016</label>
 				<onclick>Skin.ToggleSetting(nozoom)</onclick>
 				<selected>Skin.HasSetting(nozoom)</selected>
 			</control>
-			<control type="radiobutton" id="409">
+			<control type="radiobutton" id="405">
 				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>32017</label>
-				<onclick>Skin.ToggleSetting(dvdcase)</onclick>
-				<selected>Skin.HasSetting(dvdcase)</selected>
+				<label>312691</label>
+				<onclick>Skin.ToggleSetting(nostudio)</onclick>
+				<selected>Skin.HasSetting(nostudio)</selected>
 			</control>
-			<control type="radiobutton" id="411">
+
+			<control type="radiobutton" id="406">
+				<include>Objects_SettingsDefaultRadioButton</include>
+				<label>31173</label>
+				<onclick>Skin.ToggleSetting(StarkDialogs)</onclick>
+				<selected>!Skin.HasSetting(StarkDialogs)</selected>
+			</control>
+			<control type="radiobutton" id="407">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32018</label>
 				<onclick>Skin.ToggleSetting(noscrollletters)</onclick>
 				<selected>!Skin.HasSetting(noscrollletters)</selected>
 			</control>
-			<control type="radiobutton" id="412">
+			<control type="radiobutton" id="408">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32019</label>
 				<onclick>Skin.ToggleSetting(novertikalmenu)</onclick>
 				<selected>!Skin.HasSetting(novertikalmenu)</selected>
 			</control>
-			<control type="radiobutton" id="413">
+			<control type="radiobutton" id="409">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32020</label>
 				<onclick>Skin.ToggleSetting(HomeVis)</onclick>
 				<selected>!Skin.HasSetting(HomeVis)</selected>
 			</control>
-			<control type="button" id="414">
+			<control type="button" id="410">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32021</label>
 				<label2>$INFO[Skin.String(soundtest)]</label2>
 				<onclick>Skin.SetFile(soundtest,.avi)</onclick>
 			</control>
-			<control type="radiobutton" id="415">
+<!--
+			<control type="radiobutton" id="411">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32022</label>
 				<onclick>Skin.ToggleSetting(enablecinema)</onclick>
 				<selected>Skin.HasSetting(enablecinema)</selected>
 			</control>
-			<control type="button" id="416">
+			<control type="button" id="412">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32023</label>
 				<label2>$INFO[Skin.String(cinemapath)]</label2>
@@ -120,14 +128,14 @@
 				<enable>Skin.HasSetting(enablecinema)</enable>
 			</control>
 
-
-			<control type="radiobutton" id="405">
+-->
+			<control type="radiobutton" id="413">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31280</label>
 				<onclick>Skin.ToggleSetting(debug)</onclick>
 				<selected>Skin.HasSetting(debug)</selected>
 			</control>
-			<control type="radiobutton" id="402">
+			<control type="radiobutton" id="414">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31287</label>
 				<onclick>Skin.ToggleSetting(kiosk)</onclick>
@@ -198,128 +206,6 @@
 			</control>	
 		</control>
 
-		<control type="grouplist" id="12">
-			<include>Objects_SettingsControlAreaVars</include>
-			<onup>12</onup>
-			<ondown>12</ondown>
-			<onleft>8</onleft>
-			<onright>8</onright>
-			<visible>Control.HasFocus(8) | ControlGroup(12).HasFocus</visible>
-<!--
-			<control type="radiobutton" id="600">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31271</label>
-				<onclick>Skin.ToggleSetting(fademenus)</onclick>
-				<selected>Skin.HasSetting(fademenus)</selected>
-			</control>
-
-			<control type="radiobutton" id="600">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31278</label>
-				<onclick>Skin.ToggleSetting(allowscroll)</onclick>
-				<selected>Skin.HasSetting(allowscroll)</selected>
-			</control>
-
-			<control type="radiobutton" id="602">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31281</label>
-				<onclick>Skin.ToggleSetting(nomediaflags)</onclick>
-				<selected>!Skin.HasSetting(nomediaflags)</selected>
-			</control>
-
-			<control type="radiobutton" id="603">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31259</label>
-				<onclick>Skin.ToggleSetting(nodefaultflags)</onclick>
-				<selected>!Skin.HasSetting(nodefaultflags)</selected>
-			</control>
-
-			<control type="radiobutton" id="604">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31258</label>
-				<onclick>Skin.ToggleSetting(inforatings)</onclick>
-				<selected>Skin.HasSetting(inforatings)</selected>
-			</control>
-
-			<control type="radiobutton" id="600">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31285</label>
-				<onclick>Skin.ToggleSetting(movieratingtext)</onclick>
-				<selected>Skin.HasSetting(movieratingtext)</selected>
-			</control>
-			<control type="radiobutton" id="606">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31286</label>
-				<onclick>Skin.ToggleSetting(albumratingtext)</onclick>
-				<selected>Skin.HasSetting(albumratingtext)</selected>
-			</control>
-			 
-			<control type="radiobutton" id="607">
-			    <description>TV Poster in Multiplex</description>
-			    <include>Objects_SettingsDefaultRadioButton</include>
-				<label>32010</label>
-				<onclick>Skin.ToggleSetting(tvposter)</onclick>
-				<selected>Skin.HasSetting(tvposter)</selected>
-			</control>
--->
-			<control type="radiobutton" id="600">
-				<!--WALL FLOOR TOGGLE-->
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>32011</label>
-				<onclick>Skin.ToggleSetting(newwall)</onclick>
-				<selected>Skin.HasSetting(newwall)</selected>
-			</control>
-			<control type="radiobutton" id="609">
-				<!--USE OLD CLEARLIST INFO-->
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>32012</label>
-				<onclick>Skin.ToggleSetting(OldClistInfo)</onclick>
-				<selected>Skin.HasSetting(OldClistInfo)</selected>
-			</control>
-
-
-<!--
-			<control type="radiobutton" id="607">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31297</label>
-				<onclick>Skin.ToggleSetting(singlemusiclisticon)</onclick>
-				<selected>Skin.HasSetting(singlemusiclisticon)</selected>
-			</control>
-			<control type="radiobutton" id="608">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31298</label>
-				<onclick>Skin.ToggleSetting(singlemovielisticon)</onclick>
-				<selected>Skin.HasSetting(singlemovielisticon)</selected>
-			</control>
- 
-			<control type="radiobutton" id="609">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31299</label>
-				<onclick>Skin.ToggleSetting(showcaserss)</onclick>
-				<selected>Skin.HasSetting(showcaserss)</selected>
-			</control>
- 
-			<control type="radiobutton" id="610">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31268</label>
-				<onclick>Skin.ToggleSetting(wallrss)</onclick>
-				<selected>Skin.HasSetting(wallrss)</selected>
-			</control>
--->
-			<control type="radiobutton" id="612">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>312691</label>
-				<onclick>Skin.ToggleSetting(nostudio)</onclick>
-				<selected>Skin.HasSetting(nostudio)</selected>
-			</control>
-
-			<control type="radiobutton" id="613">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31173</label>
-				<onclick>Skin.ToggleSetting(StarkDialogs)</onclick>
-				<selected>!Skin.HasSetting(StarkDialogs)</selected>
-			</control>
-		</control>
 
 		<control type="grouplist" id="13">
 			<include>Objects_SettingsControlAreaVars</include>
@@ -382,13 +268,14 @@
 			<label2>$INFO[Skin.String(CustomCurtainsBG)]</label2>
 			<onclick>Skin.SetFile(CustomCurtainsBG,.jpg)</onclick>
 		</control>
-
+<!--
 		<control type="radiobutton" id="709">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>32027</label>
 			<onclick>Skin.ToggleSetting(MissingFanartBlack)</onclick>
 			<selected>!Skin.HasSetting(MissingFanartBlack)</selected>
 		</control>
+-->
 	    <control type="radiobutton" id="710">
  			<description>Hide Now playing in viz description</description>
 			<include>Objects_SettingsDefaultRadioButton</include>

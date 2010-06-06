@@ -903,7 +903,7 @@
 				<onleft>400</onleft>
 				<onright>400</onright>
 				<onup>11</onup>
-				<ondown>7</ondown>
+				<ondown>9</ondown>
 				<visible>Control.HasFocus(6) | ControlGroup(20).HasFocus</visible>
 			</control>
 
@@ -930,7 +930,7 @@
 				<label>31234</label>
 				<include>Objects_SettingsSectionMenuButton</include>
 				<onup>6</onup>
-				<ondown>8</ondown>
+				<ondown>9</ondown>
 				<onleft>500</onleft>
 				<onright>500</onright>
 				<visible allowhiddenfocus="true">![Control.HasFocus(7) | ControlGroup(11).HasFocus]</visible>
@@ -941,7 +941,7 @@
 				<label>31234</label>
 				<include>Objects_SettingsSectionMenuButtonFocused</include>
 				<onup>6</onup>
-				<ondown>8</ondown>
+				<ondown>9</ondown>
 				<onleft>500</onleft>
 				<onright>500</onright>
 				<visible>Control.HasFocus(7) | ControlGroup(11).HasFocus</visible>
@@ -964,6 +964,7 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(7) | ControlGroup(11).HasFocus</visible>
 			</control>
+<!--
 
 			<control type="button" id="8">
 				<posy>116</posy>
@@ -987,7 +988,6 @@
 				<onright>600</onright>
 				<visible>Control.HasFocus(8) | ControlGroup(12).HasFocus</visible>
 			</control>
-
 			<control type="label">
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
@@ -996,7 +996,6 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(8) | ControlGroup(12).HasFocus]</visible>
 			</control>
-
 			<control type="label">
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
@@ -1005,13 +1004,13 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(8) | ControlGroup(12).HasFocus</visible>
 			</control>
-
+-->
 			<control type="button" id="9">
-				<description>Purge</description>
-				<posy>174</posy>
+				<description>FANART SECTION</description>
+				<posy>116</posy>
 				<label>31240</label>
 				<include>Objects_SettingsSectionMenuButton</include>
-				<onup>8</onup>
+				<onup>7</onup>
 				<ondown>10</ondown>
 				<onleft>700</onleft>
 				<onright>700</onright>
@@ -1019,8 +1018,8 @@
 			</control>
 
 			<control type="button">
-				<description>Purge</description>
-				<posy>174</posy>
+				<description>FANART SECTION</description>
+				<posy>116</posy>
 				<label>31240</label>
 				<include>Objects_SettingsSectionMenuButtonFocused</include>
 				<onup>8</onup>
@@ -1031,8 +1030,8 @@
 			</control>
 
 			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>206</posy>
+				<description>FANART SECTION</description>
+				<posy>148</posy>
 				<label>31241</label>
 				<textcolor>FFf5f5f5</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
@@ -1040,8 +1039,8 @@
 			</control>
 
 			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>206</posy>
+				<description>FANART SECTION</description>
+				<posy>148</posy>
 				<label>31241</label>
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
@@ -1049,8 +1048,8 @@
 			</control>
 
 			<control type="button" id="10">
-				<description>Purge</description>
-				<posy>232</posy>
+				<description>Browsing Layout</description>
+				<posy>174</posy>
 				<label>31244</label>
 				<include>Objects_SettingsSectionMenuButton</include>
 				<onup>9</onup>
@@ -1061,8 +1060,8 @@
 			</control>
 
 			<control type="button">
-				<description>Purge</description>
-				<posy>232</posy>
+				<description>Browsing Layout</description>
+				<posy>174</posy>
 				<label>31244</label>
 				<include>Objects_SettingsSectionMenuButtonFocused</include>
 				<onup>9</onup>
@@ -1073,8 +1072,8 @@
 			</control>
 
 			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
+				<description>Browsing Layout</description>
+				<posy>206</posy>
 				<label>31245</label>
 				<textcolor>FFf5f5f5</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
@@ -1082,8 +1081,8 @@
 			</control>
 
 			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
+				<description>Browsing Layout</description>
+				<posy>206</posy>
 				<label>31245</label>
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
@@ -1092,7 +1091,7 @@
 
 			<control type="button" id="11">
 				<description>Viewtype Disable</description>
-				<posy>288</posy>
+				<posy>232</posy>
 				<label>31246</label>
 				<include>Objects_SettingsSectionMenuButton</include>
 				<onup>10</onup>
@@ -1104,7 +1103,7 @@
 
 			<control type="button">
 				<description>Viewtype Disable</description>
-				<posy>288</posy>
+				<posy>232</posy>
 				<label>31246</label>
 				<include>Objects_SettingsSectionMenuButtonFocused</include>
 				<onup>9</onup>
@@ -1116,7 +1115,7 @@
 
 			<control type="label">
 				<description>Viewtype disable Unfocused</description>
-				<posy>320</posy>
+				<posy>264</posy>
 				<label>31247</label>
 				<textcolor>FFf5f5f5</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
@@ -1125,7 +1124,7 @@
 
 			<control type="label">
 				<description>Viewtype disable Unfocused</description>
-				<posy>320</posy>
+				<posy>264</posy>
 				<label>31247</label>
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
