@@ -36,11 +36,10 @@
 		</control>
 		<include>Furniture_HomeNowPlaying</include>
 		<include>Furniture_WallBackground</include>
-		<control type="group">
+		<include condition="!Skin.HasSetting(TotalsPanelOff)">Furniture_Navigation</include>
 			<include>FullscreenDimensions</include>
 			<include>Animation_OpenCloseZoom</include>
 			<include>Furniture_Time</include>
-			<include condition="Skin.HasSetting(TotalsPanelOn)">Furniture_Totals</include>
 			<include>Furniture_MediaPanel</include>
 			<include>Furniture_WallTime</include>
 			<include>Furniture_WallRSS</include>
@@ -52,7 +51,6 @@
 			<include condition="!Skin.HasSetting(ClearListOff)">Viewtype_ClearList</include>
 			<include condition="!Skin.HasSetting(ShowcaseOff)">Viewtype_Showcase</include>
 			<include>NewMediaMenu</include>
-		</control>
 			<include>ScrollOffsetLabel</include>
 			<include>Furniture_DarkGradient</include>
 		<!--<include>Background_ContextBlack</include>--><include condition="Skin.HasSetting(debug)">Furniture_Debug</include>

@@ -217,210 +217,6 @@
 
 	</include>
 
-	<include name="Furniture_TotalsPanelHigh">
-		<visible>!ControlGroup(7000).HasFocus()</visible>
-		<control type="image">
-			<posx>-900</posx>
-			<posy>0</posy>
-			<width>410</width>
-			<height>27</height>
-			<texture flipx="true" flipy="true">common/timepanel_mid.png</texture>
-			<animation type="Conditional" condition="Skin.HasSetting(bighome)">
-				<effect type="slide" start="200,0" end="200,0" time="0" />
-				<effect type="zoom" start="125" end="125" time="0" />
-			</animation>
-			<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
-		</control>
-		<control type="image">
-			<posx>-900</posx>
-			<posy>0</posy>
-			<width>200</width>
-			<height>27</height>
-			<texture flipx="true" flipy="true">common/timepanel_mid.png</texture>
-			<animation type="Conditional" condition="Skin.HasSetting(bighome)">
-				<effect type="slide" start="200,0" end="200,0" time="0" />
-				<effect type="zoom" start="125" end="125" time="0" />
-			</animation>
-			<visible>[Container.Content(episodes) | Container.Content(movies)]</visible>
-		</control>
-		<control type="image">
-			<posx>-890</posx>
-			<posy>0</posy>
-			<width>30</width>
-			<height>25</height>
-			<aspect>keep</aspect>
-			<texture>common/logo_movies.png</texture>
-			<visible>Container.Content(movies)</visible>
-		</control>
-		<control type="image">
-			<posx>-890</posx>
-			<posy>0</posy>
-			<width>30</width>
-			<height>25</height>
-			<aspect>keep</aspect>
-			<texture>common/logo_movies.png</texture>
-			<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
-		</control>
-		<control type="image">
-			<posx>-890</posx>
-			<posy>1</posy>
-			<width>30</width>
-			<height>25</height>
-			<aspect>keep</aspect>
-			<texture>common/logo_music.png</texture>
-			<visible>Window.IsVisible(501)</visible>
-		</control>
-
-
-		<control type="label" id="70">
-			<posx>-850</posx>
-			<posy>3</posy>
-			<width>400</width>
-			<font>Font_Time</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>!Skin.HasSetting(bighome) + Container.Content(movies)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31013][/UPPERCASE][/COLOR]</label>
-		</control>
-		<control type="label" id="70">
-			<posx>-850</posx>
-			<posy>2</posy>
-			<width>600</width>
-			<font>Font_BigTime</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>Skin.HasSetting(bighome) + Container.Content(movies)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31013][/UPPERCASE][/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>2</posy>
-			<width>600</width>
-			<font>Font_BigTime</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>Skin.HasSetting(bighome) + [Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.Title)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[ListItem.Episode] $LOCALIZE[31403] | [/COLOR][COLOR FFcdcdcd]$INFO[ListItem.Property(watchedepisodes)] $LOCALIZE[31439] | [/COLOR][COLOR FFe5e5e5]$INFO[ListItem.Property(unwatchedepisodes)] $LOCALIZE[31440][/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>3</posy>
-			<width>600</width>
-			<font>Font_Time</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>!Skin.HasSetting(bighome) + [Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.Title)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[ListItem.Episode] $LOCALIZE[31403] | [/COLOR][COLOR FFcdcdcd]$INFO[ListItem.Property(watchedepisodes)] $LOCALIZE[31439] | [/COLOR][COLOR FFe5e5e5]$INFO[ListItem.Property(unwatchedepisodes)] $LOCALIZE[31440][/COLOR]</label>
-		</control>
-<!--
-		<control type="label">
-			<posx>-850</posx>
-			<posy>5</posy>
-			<width>600</width>
-			<font>Font_Time</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>!Skin.HasSetting(bighome) + [Container.Content(seasons)]</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] ITEMS | [/COLOR][COLOR FFcdcdcd]$INFO[ListItem.Property(watchedepisodes)] WATCHED | [/COLOR][COLOR FFe5e5e5]$INFO[ListItem.Property(unwatchedepisodes)] UNWATCHED[/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>2</posy>
-			<width>600</width>
-			<font>Font_BigTime</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>Skin.HasSetting(bighome) + [Container.Content(seasons)]</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] ITEMS | [/COLOR][COLOR FFcdcdcd]$INFO[ListItem.Property(watchedepisodes)] WATCHED | [/COLOR][COLOR FFe5e5e5]$INFO[ListItem.Property(unwatchedepisodes)] UNWATCHED[/COLOR]</label>
-		</control>
-		
--->
-		<control type="label">
-			<posx>-850</posx>
-			<posy>2</posy>
-			<width>600</width>
-			<font>Font_BigTime</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>Skin.HasSetting(bighome) + [Container.Content(episodes)]</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31403][/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>3</posy>
-			<width>600</width>
-			<font>Font_Time</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>!Skin.HasSetting(bighome) + [Container.Content(episodes)]</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31403][/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>5</posy>
-			<width>600</width>
-			<font>Font_Time</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>!Skin.HasSetting(bighome) + Container.Content(artists)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31927][/UPPERCASE][/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>5</posy>
-			<width>600</width>
-			<font>Font_Time</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>!Skin.HasSetting(bighome) + Container.Content(songs)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31935][/UPPERCASE][/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>5</posy>
-			<width>600</width>
-			<font>Font_Time</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>!Skin.HasSetting(bighome) + Container.Content(albums)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31928][/UPPERCASE][/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>5</posy>
-			<width>600</width>
-			<font>Font_Time</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>!Skin.HasSetting(bighome) + Window.IsActive(501) + [!Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists)]</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31935][/UPPERCASE][/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>2</posy>
-			<width>600</width>
-			<font>Font_BigTime</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>Skin.HasSetting(bighome) + Container.Content(artists)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31927][/UPPERCASE][/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>2</posy>
-			<width>600</width>
-			<font>Font_BigTime</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>Skin.HasSetting(bighome) + Container.Content(songs)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31935][/UPPERCASE][/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>2</posy>
-			<width>600</width>
-			<font>Font_BigTime</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>Skin.HasSetting(bighome) + Container.Content(albums)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31928][/UPPERCASE][/COLOR]</label>
-		</control>
-		<control type="label">
-			<posx>-850</posx>
-			<posy>2</posy>
-			<width>600</width>
-			<font>Font_BigTime</font>
-			<include>Colour_WhiteAlpha80</include>
-			<visible>Skin.HasSetting(bighome) + Window.IsActive(501) + [!Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists)]</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31927][/UPPERCASE][/COLOR]</label>
-		</control>
-	</include>
-
 	<include name="Furniture_Navigation">
 		<control type="group">
 			<include>Furniture_TimeGroupHighVars</include>
@@ -474,7 +270,7 @@
 			<posx>-850</posx>
 			<posy>-10</posy>
 			<orientation>horizontal</orientation>
-			<itemgap>8</itemgap>
+			<itemgap>4</itemgap>
 
 			<control type="label">
 				<width min="0" max="230">auto</width>
@@ -493,6 +289,17 @@
 				<font>Font_Time</font>	
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
+				<info>Container.NumItems</info>
+				<animation effect="fade" time="500">Visible</animation>
+				<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows)</visible>
+			</control>
+
+			<control type="label">
+				<width min="0" max="230">auto</width>
+				<height>43</height>
+				<font>Font_Time</font>	
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
 				<info>Container.FirstTitle</info>
 				<animation effect="fade" time="500">Visible</animation>
 			</control>
@@ -503,8 +310,9 @@
 				<font>Font_Time</font>	
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
-				<info>Container.SecondTitle</info>
+				<label>/ $INFO[Container.SecondTitle]</label>
 				<animation effect="fade" time="500">Visible</animation>
+				<visible>!IsEmpty(Container.SecondTitle)</visible>
 			</control>
 	</control>
 	</control>
@@ -535,41 +343,6 @@
 -->
 	</include>
 	
-		<include name="Furniture_Totals">
-<!--
-		<control type="group">
-			<include>Furniture_TimeGroupVars</include>
-			<visible>!Skin.HasSetting(highertime) + Window.IsActive(Home) + !Control.IsVisible(553) + !Control.IsVisible(51) + !Control.IsVisible(52) + !Control.IsVisible(552) + !Control.IsVisible(57) + !Control.IsVisible(50) + !Control.IsVisible(53) + !Control.IsVisible(550) + !Control.IsVisible(551) + !Control.IsVisible(54) + !Skin.HasSetting(notime)</visible>
-			<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
-			<include>Animation_OpenCloseZoom</include>
-			<include>Furniture_TotalsPanel</include>
-		</control>
--->
-		<control type="group">
-			<include>Furniture_TimeGroupHighVars</include>
-			<visible>[Control.IsVisible(553) | Control.IsVisible(52) | Control.IsVisible(555) | Control.IsVisible(556) | Control.IsVisible(552) | Control.IsVisible(57) | Control.IsVisible(550) | Control.IsVisible(551) | Control.IsVisible(54) | Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(563)]</visible>
-			<include>Animation_CommonFade</include>
-			<include>Furniture_TotalsPanelHigh</include>
-		</control>
-<!--
-		<control type="group">
-			<include>Furniture_TimeGroupWindowVars</include>
-			<visible>[Control.IsVisible(50) | Control.IsVisible(55)] + !Skin.HasSetting(notime)</visible>
-			<include>Animation_CommonFade</include>
-			<include>Furniture_TotalsPanelHigh</include>
-			<visible>[Control.IsVisible(50) | Control.IsVisible(55)] + !Skin.HasSetting(notime)</visible>
-		</control>
-
-
-		<control type="group">
-			<include>Furniture_TimeGroupWindowVars</include>
-			<visible>!Window.IsActive(Home) + !Control.IsVisible(553) + !Control.IsVisible(51) + !Control.IsVisible(52) + !Control.IsVisible(552) + !Control.IsVisible(57) + !Control.IsVisible(50) + !Control.IsVisible(550) + !Control.IsVisible(551) + !Control.IsVisible(53) + !Control.IsVisible(54) + !Control.IsVisible(555) + !Control.IsVisible(556) + !Control.IsVisible(563) + !Skin.HasSetting(notime)</visible>
-			<include>Animation_CommonFade</include>
-			<include>Furniture_TotalsPanel</include>
-		</control>
--->
-	</include>
-
 	
 	<include name="Furniture_WallTime">
 		<control type="group">

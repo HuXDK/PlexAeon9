@@ -51,6 +51,12 @@
 				<onclick>Skin.ToggleSetting(notime)</onclick>
 				<selected>!Skin.HasSetting(notime)</selected>
 			</control>
+			<control type="radiobutton" id="402">
+				<include>Objects_SettingsDefaultRadioButton</include>
+				<label>32029</label>
+				<onclick>Skin.ToggleSetting(TotalsPanelOff)</onclick>
+				<selected>!Skin.HasSetting(TotalsPanelOff)</selected>
+			</control>
 			<control type="radiobutton" id="401">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31270</label>
@@ -300,13 +306,6 @@
 				<selected>Skin.HasSetting(wallrss)</selected>
 			</control>
 -->
-			<control type="radiobutton" id="610">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>32029</label>
-				<onclick>Skin.ToggleSetting(TotalsPanelOn)</onclick>
-				<selected>Skin.HasSetting(TotalsPanelOn)</selected>
-			</control>
-
 			<control type="radiobutton" id="612">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>312691</label>

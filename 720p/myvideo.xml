@@ -31,8 +31,7 @@
 		<include>Furniture_WallBackground</include>
 		<include>Furniture_HomeNowPlaying</include>
     	<include>Curtain</include>    
-		<include condition="Skin.HasSetting(TotalsPanelOn)">Furniture_Totals</include>
-		<include condition="!Skin.HasSetting(TotalsPanelOn)">Furniture_Navigation</include>
+		<include condition="!Skin.HasSetting(TotalsPanelOff)">Furniture_Navigation</include>
 		<include>Furniture_Time</include>
 		<include>Furniture_MediaPanel</include>
 		<include>Viewtype_List</include>
