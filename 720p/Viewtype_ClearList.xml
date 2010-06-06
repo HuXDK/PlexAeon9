@@ -659,7 +659,7 @@
 		<control type="group">
 			<posx>620</posx>
 			<posy>50</posy>
-			<visible>[[Window.IsActive(502) + [Container.Content(artists) | Container.Content(albums)]] | [Window.IsActive(501) + Container.Content(albums)]] + Control.IsVisible(54)</visible>
+			<visible>[Container.Content(artists) | Container.Content(albums)] + Control.IsVisible(54)</visible>
 			<include>Animation_cListCommonFade</include>
 			<include>Animation_cListInfoPanelZoom</include>
 			<include>Animation_cListInfoPanelSlide</include>
@@ -671,7 +671,7 @@
 				<height>500</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureInfoPanelSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureInfoPanelSolid</include>
-				<visible>Control.IsVisible(54) + !Skin.HasSetting(clearlistinfothin)</visible>
+				<visible>!Skin.HasSetting(clearlistinfothin)</visible>
 			</control>
 			<!-- Background Image -->
 			<control type="image">
@@ -679,9 +679,8 @@
 				<posy>0</posy>
 				<width>430</width>
 				<height>500</height>
-				<!--<texture>clearlist/infopanel_background.png</texture>--><include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureInfoPanel</include>
+				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureInfoPanel</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureInfoPanel</include>
-				<visible>Control.IsVisible(54)</visible>
 			</control>
 			<!-- Artist/Album Icon -->
 			<control type="image">
@@ -692,7 +691,8 @@
 				<fadetime>400</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<texture diffuse="list/list_musicicon_mask.png">$INFO[ListItem.Icon]</texture>
-				<!--<bordertexture border="-32">list/list_musicicon_frame.png</bordertexture>--></control>
+				<bordertexture border="-32">list/list_musicicon_frame.png</bordertexture>
+				</control>
 			<!-- Artist Info -->
 			<control type="grouplist">
 				<posx>10</posx>
