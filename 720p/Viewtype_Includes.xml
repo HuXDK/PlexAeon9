@@ -2242,7 +2242,7 @@
 			<onclick>Skin.SetBool(multiplextvinfoauto)</onclick>
 			<onclick>Skin.Reset(multiplextvinfooff)</onclick>
 			<onclick>SetFocus(50)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplextvinfooff)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplextvinfooff)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700008">
@@ -2251,7 +2251,7 @@
 			<onclick>Skin.SetBool(multiplextvinfotrigger)</onclick>
 			<onclick>Skin.Reset(multiplextvinfoauto)</onclick>
 			<onclick>SetFocus(50)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + ![Skin.HasSetting(multiplextvinfotrigger) | Skin.HasSetting(multiplextvinfooff) | Skin.HasSetting(multiplextvinfoon)]</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + ![Skin.HasSetting(multiplextvinfotrigger) | Skin.HasSetting(multiplextvinfooff) | Skin.HasSetting(multiplextvinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700009">
@@ -2260,7 +2260,7 @@
 			<onclick>Skin.SetBool(multiplextvinfoon)</onclick>
 			<onclick>Skin.Reset(multiplextvinfotrigger)</onclick>
 			<onclick>SetFocus(50)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplextvinfotrigger)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplextvinfotrigger)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700010">
@@ -2269,7 +2269,7 @@
 			<onclick>Skin.SetBool(multiplextvinfooff)</onclick>
 			<onclick>Skin.Reset(multiplextvinfoon)</onclick>
 			<onclick>SetFocus(50)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplextvinfoon)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplextvinfoon)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 	</include>
@@ -2362,7 +2362,7 @@
 			<altlabel>$LOCALIZE[31045]: $LOCALIZE[31064]</altlabel>
 			<usealttexture>!Skin.HasSetting(multiplextvbigthumb)</usealttexture>
 			<onclick>Skin.ToggleSetting(multiplextvbigthumb)</onclick>
-			<visible>Container.Content(episodes) + Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(552)</visible>
+			<visible>Container.Content(episodes) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(552)</visible>
 		</control>
 	</include>
 	<include name="MediaMenuButton_PanelDensity">
@@ -2419,7 +2419,7 @@
 			<include>Objects_ListLayoutStrings</include>
 			<onclick>Skin.ToggleSetting(tvlistmax)</onclick>
 			<selected>!Skin.HasSetting(tvlistmax)</selected>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(50)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(50)</visible>
 		</control>
 	</include>
 	<include name="MediaMenuButton_VerticalWall">
@@ -2890,7 +2890,7 @@
 			<onclick>Skin.SetBool(showcaseinfoauto)</onclick>
 			<onclick>Skin.Reset(showcaseinfooff)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseinfooff)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseinfooff)</visible>
 		</control>
 		<control type="button" id="700061">
 			<include>MediaMenuButton</include>
@@ -2898,7 +2898,7 @@
 			<onclick>Skin.SetBool(showcaseinfotrigger)</onclick>
 			<onclick>Skin.Reset(showcaseinfoauto)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + ![Skin.HasSetting(showcaseinfotrigger) | Skin.HasSetting(showcaseinfooff) | Skin.HasSetting(showcaseinfoon)]</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(57) + ![Skin.HasSetting(showcaseinfotrigger) | Skin.HasSetting(showcaseinfooff) | Skin.HasSetting(showcaseinfoon)]</visible>
 		</control>
 		<control type="button" id="700062">
 			<include>MediaMenuButton</include>
@@ -2906,7 +2906,7 @@
 			<onclick>Skin.SetBool(showcaseinfoon)</onclick>
 			<onclick>Skin.Reset(showcaseinfotrigger)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseinfotrigger)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseinfotrigger)</visible>
 		</control>
 		<control type="button" id="700063">
 			<include>MediaMenuButton</include>
@@ -2914,7 +2914,7 @@
 			<onclick>Skin.SetBool(showcaseinfooff)</onclick>
 			<onclick>Skin.Reset(showcaseinfoon)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseinfoon)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseinfoon)</visible>
 		</control>
 		<control type="button" id="700064">
 			<include>MediaMenuButton</include>
@@ -2922,7 +2922,7 @@
 			<onclick>Skin.SetBool(showcasetvinfoauto)</onclick>
 			<onclick>Skin.Reset(showcasetvinfooff)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + Skin.HasSetting(showcasetvinfooff)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + Skin.HasSetting(showcasetvinfooff)</visible>
 		</control>
 		<control type="button" id="700065">
 			<include>MediaMenuButton</include>
@@ -2930,7 +2930,7 @@
 			<onclick>Skin.SetBool(showcasetvinfotrigger)</onclick>
 			<onclick>Skin.Reset(showcasetvinfoauto)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + ![Skin.HasSetting(showcasetvinfotrigger) | Skin.HasSetting(showcasetvinfooff) | Skin.HasSetting(showcasetvinfoon)]</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + ![Skin.HasSetting(showcasetvinfotrigger) | Skin.HasSetting(showcasetvinfooff) | Skin.HasSetting(showcasetvinfoon)]</visible>
 		</control>
 		<control type="button" id="700066">
 			<include>MediaMenuButton</include>
@@ -2938,7 +2938,7 @@
 			<onclick>Skin.SetBool(showcasetvinfoon)</onclick>
 			<onclick>Skin.Reset(showcasetvinfotrigger)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + Skin.HasSetting(showcasetvinfotrigger)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + Skin.HasSetting(showcasetvinfotrigger)</visible>
 		</control>
 		<control type="button" id="700067">
 			<include>MediaMenuButton</include>
@@ -2946,7 +2946,7 @@
 			<onclick>Skin.SetBool(showcasetvinfooff)</onclick>
 			<onclick>Skin.Reset(showcasetvinfoon)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + Skin.HasSetting(showcasetvinfoon)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + Skin.HasSetting(showcasetvinfoon)</visible>
 		</control>
 	</include>
 	<include name="MediaMenuButton_ShowcaseStyle">
@@ -2956,7 +2956,7 @@
 			<onclick>Skin.SetBool(showcasebigthumb)</onclick>
 			<onclick>Skin.Reset(showcaseplot)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + ![Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasetrailer) | Skin.HasSetting(showcasebigtrailer) | Skin.HasSetting(showcaseposter)]</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(57) + ![Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasetrailer) | Skin.HasSetting(showcasebigtrailer) | Skin.HasSetting(showcaseposter)]</visible>
 		</control>
 		<control type="button" id="700069">
 			<include>MediaMenuButton</include>
@@ -2964,7 +2964,7 @@
 			<onclick>Skin.SetBool(showcasefanart)</onclick>
 			<onclick>Skin.Reset(showcasebigthumb)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasebigthumb)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasebigthumb)</visible>
 		</control>
 		<control type="button" id="700070">
 			<include>MediaMenuButton</include>
@@ -2972,7 +2972,7 @@
 			<onclick>Skin.SetBool(showcasetrailer)</onclick>
 			<onclick>Skin.Reset(showcasefanart)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasefanart)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasefanart)</visible>
 		</control>
 		<control type="button" id="700071">
 			<include>MediaMenuButton</include>
@@ -2980,7 +2980,7 @@
 			<onclick>Skin.SetBool(showcasebigtrailer)</onclick>
 			<onclick>Skin.Reset(showcasetrailer)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasetrailer)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasetrailer)</visible>
 		</control>
 		<control type="button" id="700072">
 			<include>MediaMenuButton</include>
@@ -2988,7 +2988,7 @@
 			<onclick>Skin.SetBool(showcaseposter)</onclick>
 			<onclick>Skin.Reset(showcasebigtrailer)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasebigtrailer)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasebigtrailer)</visible>
 		</control>
 		<control type="button" id="700073">
 			<include>MediaMenuButton</include>
@@ -2996,7 +2996,7 @@
 			<onclick>Skin.SetBool(showcaseplot)</onclick>
 			<onclick>Skin.Reset(showcaseposter)</onclick>
 			<onclick>SetFocus(57)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseposter)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcaseposter)</visible>
 		</control>
 		<control type="togglebutton" id="700074">
 			<include>MediaMenuButton</include>
@@ -3004,7 +3004,7 @@
 			<altlabel>$LOCALIZE[31045]: $LOCALIZE[31064]</altlabel>
 			<usealttexture>!Skin.HasSetting(showcasetvbigthumb)</usealttexture>
 			<onclick>Skin.ToggleSetting(showcasetvbigthumb)</onclick>
-			<visible>Container.Content(episodes) + Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57)</visible>
+			<visible>Container.Content(episodes) + Control.IsVisible(57)</visible>
 		</control>
 	</include>
 	<include name="Objects_AnoobieStyleButtons">
@@ -3015,7 +3015,7 @@
 			<onclick>Skin.SetBool(anoobiebigthumb)</onclick>
 			<onclick>Skin.Reset(anoobieplot)</onclick>
 			<onclick>SetFocus(563)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(563) + Skin.HasSetting(anoobieplot)]</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(563) + Skin.HasSetting(anoobieplot)]</visible>
 		</control>
 
 		<control type="button" id="33001">
@@ -3024,7 +3024,7 @@
 			<onclick>Skin.SetBool(anoobiefanart)</onclick>
 			<onclick>Skin.Reset(anoobiebigthumb)</onclick>
 			<onclick>SetFocus(563)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(563) + Skin.HasSetting(anoobiebigthumb)]</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(563) + Skin.HasSetting(anoobiebigthumb)]</visible>
 		</control>
 
 		<control type="button" id="33002">
@@ -3033,7 +3033,7 @@
 			<onclick>Skin.SetBool(anoobieplot)</onclick>
 			<onclick>Skin.Reset(anoobiefanart)</onclick>
 			<onclick>SetFocus(563)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(563) + Skin.HasSetting(anoobiefanart)] | [Control.IsVisible(563) + [!Skin.HasSetting(anoobiebigthumb) + !Skin.HasSetting(anoobiefanart) + !Skin.HasSetting(anoobieplot)]]]</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(563) + Skin.HasSetting(anoobiefanart)] | [Control.IsVisible(563) + [!Skin.HasSetting(anoobiebigthumb) + !Skin.HasSetting(anoobiefanart) + !Skin.HasSetting(anoobieplot)]]]</visible>
 		</control>
     </include>
 
@@ -3064,7 +3064,7 @@
 			<onclick>Skin.SetBool(oldmultiplexinfoon)</onclick>
 			<onclick>Skin.Reset(oldmultiplexinfoauto)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexinfotrigger) | Skin.HasSetting(oldmultiplexinfooff) | Skin.HasSetting(oldmultiplexinfoon)]</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexinfotrigger) | Skin.HasSetting(oldmultiplexinfooff) | Skin.HasSetting(oldmultiplexinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700103">
@@ -3073,7 +3073,7 @@
 			<onclick>Skin.SetBool(oldmultiplexinfooff)</onclick>
 			<onclick>Skin.Reset(oldmultiplexinfoon)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexinfoon)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexinfoon)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700104">
@@ -3082,7 +3082,7 @@
 			<onclick>Skin.SetBool(oldmultiplextvinfoauto)</onclick>
 			<onclick>Skin.Reset(oldmultiplextvinfooff)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextvinfooff)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextvinfooff)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 <!--
@@ -3092,7 +3092,7 @@
 			<onclick>Skin.SetBool(oldmultiplextvinfotrigger)</onclick>
 			<onclick>Skin.Reset(oldmultiplextvinfoauto)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplextvinfotrigger) | Skin.HasSetting(oldmultiplextvinfooff) | Skin.HasSetting(oldmultiplextvinfoon)]</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplextvinfotrigger) | Skin.HasSetting(oldmultiplextvinfooff) | Skin.HasSetting(oldmultiplextvinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 -->
@@ -3102,7 +3102,7 @@
 			<onclick>Skin.SetBool(oldmultiplextvinfoon)</onclick>
 			<onclick>Skin.Reset(oldmultiplextvinfoauto)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplextvinfotrigger) | Skin.HasSetting(oldmultiplextvinfooff) | Skin.HasSetting(oldmultiplextvinfoon)]</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplextvinfotrigger) | Skin.HasSetting(oldmultiplextvinfooff) | Skin.HasSetting(oldmultiplextvinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700107">
@@ -3111,7 +3111,7 @@
 			<onclick>Skin.SetBool(oldmultiplextvinfooff)</onclick>
 			<onclick>Skin.Reset(oldmultiplextvinfoon)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextvinfoon)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextvinfoon)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 	</include>
@@ -3158,7 +3158,7 @@
 			<onclick>Skin.SetBool(multiwalltvinfoauto)</onclick>
 			<onclick>Skin.Reset(multiwalltvinfooff)</onclick>
 			<onclick>SetFocus(556)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + Skin.HasSetting(multiwalltvinfooff)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + Skin.HasSetting(multiwalltvinfooff)</visible>
 			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
 		</control>
 		<control type="button" id="704105">
@@ -3167,7 +3167,7 @@
 			<onclick>Skin.SetBool(multiwalltvinfotrigger)</onclick>
 			<onclick>Skin.Reset(multiwalltvinfoauto)</onclick>
 			<onclick>SetFocus(556)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + ![Skin.HasSetting(multiwalltvinfotrigger) | Skin.HasSetting(multiwalltvinfooff) | Skin.HasSetting(multiwalltvinfoon)]</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + ![Skin.HasSetting(multiwalltvinfotrigger) | Skin.HasSetting(multiwalltvinfooff) | Skin.HasSetting(multiwalltvinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
 		</control>
 		<control type="button" id="704106">
@@ -3176,7 +3176,7 @@
 			<onclick>Skin.SetBool(multiwalltvinfoon)</onclick>
 			<onclick>Skin.Reset(multiwalltvinfotrigger)</onclick>
 			<onclick>SetFocus(556)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + Skin.HasSetting(multiwalltvinfotrigger)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + Skin.HasSetting(multiwalltvinfotrigger)</visible>
 			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
 		</control>
 		<control type="button" id="704107">
@@ -3185,7 +3185,7 @@
 			<onclick>Skin.SetBool(multiwalltvinfooff)</onclick>
 			<onclick>Skin.Reset(multiwalltvinfoon)</onclick>
 			<onclick>SetFocus(556)</onclick>
-			<visible>Window.IsActive(myvideofiles) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + Skin.HasSetting(multiwalltvinfoon)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(556) + Skin.HasSetting(multiwalltvinfoon)</visible>
 			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
 		</control>
 	</include>
@@ -3321,13 +3321,11 @@
 				<include>MediaMenuLabel</include>
 				<label>31033</label>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-				<visible>Window.IsActive(myvideofiles)</visible>
 			</control>
 			<control type="label">
 				<include>MediaMenuLabel</include>
 				<label>31032</label>
 				<visible>Container.Content(movies)</visible>
-				<visible>Window.IsActive(myvideofiles)</visible>
 			</control>
 			<control type="label">
 				<include>MediaMenuLabel</include>

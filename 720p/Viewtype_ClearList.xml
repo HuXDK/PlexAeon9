@@ -89,7 +89,7 @@
 		<texture>clearlist/light/button_big.png</texture>
 	</include>
 	<include name="cList_LightButtonTextureFocus">
-		<texture>windows/mediamenu.png</texture>
+		<texture>windows/listselectbar.png</texture>
 	</include>
 	<include name="cList_LightBigButtonTextureFocus">
 		<texture>clearlist/light/button_big_focus.png</texture>
@@ -141,7 +141,6 @@
 		<texture>clearlist/button_big.png</texture>
 	</include>
 	<include name="cList_NightButtonTextureFocus">
-
 		<colordiffuse>CF4250E4</colordiffuse>
 		<texture>windows/listselectbar.png</texture>
 	</include>
