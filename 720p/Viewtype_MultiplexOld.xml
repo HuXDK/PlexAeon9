@@ -942,15 +942,16 @@
 		</control>
 	</include>
 
-	<include name="Viewtype_MultiplexOld">
+<include name="Viewtype_MultiplexOld">
 	<control type="group">
-	<visible>Control.IsVisible(553)</visible>
+		<visible>Control.IsVisible(553)</visible>
 		<include>Animation_OpenCloseZoom</include>
 		<include>OldMultiplexInfoPaneTV</include>
 		<include>OldMultiplexInfoPaneMovies</include>
 		<include>OldMultiplexBaseTV</include>
 		<include>OldMultiplexBaseMovies</include>
 		<include>Furniture_MultiplexMediaFlags</include>
+		<include>OldMultiplexLabelsMovies</include>
 
 	    <control type="group">
 	        <visible>Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)</visible>

@@ -841,7 +841,7 @@
 					<visible>!Skin.HasSetting(multiplextvbigthumb) | !Container.Content(episodes)</visible>
 					<include>Animation_VisibleChange200</include>
 				</control>
- 
+ <!--
 				<control type="largeimage">
 					<posx>1</posx>
 					<posy>1</posy>
@@ -853,7 +853,7 @@
 					<visible>!Skin.HasSetting(multiplextvbigthumb) | !Container.Content(episodes)</visible>
 					<include>Animation_VisibleChange200</include>
 				</control>
-  
+  -->
 			</control>
  
 		</control>
