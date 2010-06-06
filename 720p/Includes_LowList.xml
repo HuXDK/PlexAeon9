@@ -519,7 +519,7 @@
 </include>
 <!-- Episode icon variables -->
 <include name="ListIcon_EpisodeIconGroup">
-	<posx>14</posx>
+	<posx>0</posx>
 	<posy>37</posy>
 </include>
 <include name="LowList_EpisodeCaseVars">

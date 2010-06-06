@@ -986,43 +986,14 @@
 			<control type="image">
 				<posx>114</posx>
 				<posy>40</posy>
-				<width>430</width>
-				<height>640</height>
-				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureSolid</include>
-				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureSolid</include>
-				<visible>!Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
-			</control>
-			<control type="image">
-				<posx>114</posx>
-				<posy>40</posy>
 				<width>450</width>
-				<height>640</height>
+				<height>680</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureSolid</include>
-				<visible>!Skin.HasSetting(clearlistthin) + [Window.IsActive(myvideofiles) | Window.IsActive(1) | [Window.IsActive(502) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
+				<visible>!Skin.HasSetting(clearlistthin)</visible>
 			</control>
 			<!-- List Background -->
 
-					<!-- Top of List Background -->
-					<control type="image">
-						<posx>114</posx>
-						<posy>40</posy>
-						<width>450</width>
-						<height>80</height>
-						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
-						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
-						<visible>true</visible>
-					</control>
-
-			<control type="image">
-				<posx>114</posx>
-				<posy>40</posy>
-				<width>430</width>
-				<height>680</height>
-				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
-				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
-				<visible>Skin.HasSetting(clearlistthin) + [Window.IsActive(2) | Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [Container.Content(albums) | Container.Content(songs)]]]</visible>
-			</control>
 			<control type="image">
 				<posx>114</posx>
 				<posy>40</posy>
@@ -1030,7 +1001,6 @@
 				<height>680</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
-				<visible>Window.IsActive(myvideofiles) | Window.IsActive(1) | [Window.IsActive(502) + !Container.Content(albums) + !Container.Content(songs)]</visible>
 			</control>
 
 			<include>cList_VideoInfoPanel</include>
