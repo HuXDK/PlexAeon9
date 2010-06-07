@@ -4128,7 +4128,7 @@
 	<include name="CoverflowSquare">
 	    <control type="group" id="8001">
 	        <posy>190</posy>
-	        <visible>Control.IsVisible(55) + Container.OnNext + ![Skin.HasSetting(flattenflow) | Container.Content(episodes)]</visible>
+	        <visible>Control.IsVisible(55) + Container.OnNext + !Skin.HasSetting(flattenflow)</visible>
 	        <animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
 	        <control type="group">
 	            <posx>50</posx>
@@ -4372,7 +4372,7 @@
 	    </control>
 	    <control type="group" id="8002">
 	        <posy>190</posy>
-	        <visible>Control.IsVisible(55) + Container.OnPrevious + ![Skin.HasSetting(flattenflow) | Container.Content(episodes)]</visible>
+	        <visible>Control.IsVisible(55) + Container.OnPrevious + !Skin.HasSetting(flattenflow)</visible>
 	        <animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
 	        <control type="group">
 	            <posx>960</posx>
@@ -4616,7 +4616,7 @@
 	    </control>
 		<control type="button" id="971">
 			<texture>-</texture>
-			<visible>![Skin.HasSetting(flattenflow) | Container.Content(episodes)]</visible>
+			<visible>!Skin.HasSetting(flattenflow)</visible>
 			<animation effect="fade" start="100" end="0" time="800">Hidden</animation>
 		</control>
 	    <control type="group" id="8000">
@@ -5008,6 +5008,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(6).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5026,6 +5036,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(5).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5044,6 +5064,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(4).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5062,6 +5092,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(3).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5080,6 +5120,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(2).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5098,6 +5148,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(1).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5121,6 +5181,16 @@
 	                        <description>Black overlay</description>
 	                        <include>MovieFlowOverlay</include>
 	                    </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(0).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	                </control>
 	            </control>
 	            <control type="group">
@@ -5140,6 +5210,16 @@
 	                        <description>Black overlay</description>
 	                        <include>MovieFlowOverlay</include>
 	                    </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(-1).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	                </control>
 	            </control>
 	        </control>
@@ -5166,6 +5246,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(7).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5184,6 +5274,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(6).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5202,6 +5302,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(5).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5220,6 +5330,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(4).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5238,6 +5358,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(3).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5256,6 +5386,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(2).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5389,6 +5529,16 @@
 	                        <description>Black overlay</description>
 	                        <include>MovieFlowOverlay</include>
 	                    </control>
+					    <control type="image">
+							<posx>185</posx>
+							<posy>18</posy>
+							<width>25</width>
+							<height>25</height>
+							<aspectratio>keep</aspectratio>
+							<info>ListItem(0).Overlay</info>
+							<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+			   			</control>
 	                </control>
 	            </control>
 	            <control type="group">
@@ -5408,6 +5558,16 @@
 	                        <description>Black overlay</description>
 	                        <include>MovieFlowOverlay</include>
 	                    </control>
+					    <control type="image">
+							<posx>185</posx>
+							<posy>18</posy>
+							<width>25</width>
+							<height>25</height>
+							<aspectratio>keep</aspectratio>
+							<info>ListItem(1).Overlay</info>
+							<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+			   			</control>
 	                </control>
 	            </control>
 	        </control>
@@ -5572,6 +5732,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(6).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5594,6 +5764,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(5).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5616,6 +5796,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(4).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5638,6 +5828,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(3).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5660,6 +5860,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(2).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5682,6 +5892,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(1).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5699,6 +5919,16 @@
 	                    <description>Black overlay</description>
 	                    <include>MovieFlowOverlay</include>
 	                </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem(0).Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
 	            </control>
 	        </control>
 	    </control>
@@ -5708,11 +5938,11 @@
 	
 	<include name="Viewtype_Coverflow">
 	    <control type="group">
-	        <visible>Window.IsActive(28) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(1)</visible>
+	        <visible>Window.IsActive(28) | Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)]</visible>
 	        <include>CoverflowMovies</include>
 	    </control>
 	    <control type="group">
-	        <visible>Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2) | Container.Content(episodes)</visible>
+	        <visible>Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2)</visible>
 	        <include>CoverflowSquare</include>
 	    </control>
 	    <control type="group">
@@ -5738,6 +5968,16 @@
                         <include>MovieFlowGlassOverlay</include>
 						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
                     </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<info>ListItem.Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+		   			</control>
 				</itemlayout>
                 <focusedlayout condition="!Container.Content(episodes)" height="350" width="196">
                     <control type="image">
@@ -5754,6 +5994,18 @@
 						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
 					</control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<info>ListItem.Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
+		   			</control>
 				</focusedlayout>
  
                <itemlayout condition="Container.Content(episodes)" height="226" width="450">
@@ -5765,7 +6017,7 @@
 	 					<width>400</width>
 	    				<height>226</height>
                         <info>ListItem.Icon</info>
-						<visible>!Control.IsVisible(9000) + Container.Content(episodes)</visible>
+						<visible>Container.Content(episodes)</visible>
                     </control>
 				    <control type="image">
 						<posx>-460</posx>
@@ -5786,7 +6038,7 @@
 	   				    <width>400</width>
 	   					<height>226</height>
                         <info>ListItem.Icon</info>
-						<visible>!Control.IsVisible(9000) + Container.Content(episodes)</visible>
+						<visible>Container.Content(episodes)</visible>
 						<animation effect="zoom" start="100" end="110" center="auto" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="auto" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55)">Unfocus</animation>
                    </control>
@@ -5894,9 +6146,21 @@
 	            </control>
 	            <control type="label" id="75">
 	                <description>Detail</description>
-	                <label>$INFO[ListItem.Property(UnWatchedEpisodes)] EPISODES</label>
+	                <label>$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[31446]</label>
 	                <include>FlowDetailLabel</include>
-	                <visible>Container.Content(tvshows) + !IsEmpty(ListItem.Episode)</visible>
+	                <visible>Container.Content(tvshows) + IsEmpty(ListItem.Property(singularepisodecount)) + IsEmpty(ListItem.Property(zeroepisodecount))</visible>
+	            </control>
+	            <control type="label" id="75">
+	                <description>Detail</description>
+	                <label>$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[31447]</label>
+	                <include>FlowDetailLabel</include>
+	                <visible>Container.Content(tvshows) + !IsEmpty(ListItem.Property(singularepisodecount)) + IsEmpty(ListItem.Property(zeroepisodecount))</visible>
+	            </control>
+	            <control type="label" id="75">
+	                <description>Detail</description>
+	                <label>$INFO[ListItem.Episode] $LOCALIZE[31448]</label>
+	                <include>FlowDetailLabel</include>
+	                <visible>Container.Content(tvshows) + !IsEmpty(ListItem.Property(zeroepisodecount))</visible>
 	            </control>
 	            <control type="label" id="75">
 	                <description>Detail</description>

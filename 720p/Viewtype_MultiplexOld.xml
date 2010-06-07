@@ -990,6 +990,16 @@
                         <include>MovieFlowGlassOverlay</include>
 						<visible>!Control.IsVisible(9000)</visible>
                     </control>
+				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem.Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+					</control>
                     </control>
 				</itemlayout>
                 <focusedlayout condition="!Container.Content(episodes)" height="350" width="106">
@@ -1009,7 +1019,19 @@
 						<animation effect="zoom" start="100" end="120" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55)">Unfocus</animation>
 					</control>
-                    </control>
+ 				    <control type="image">
+						<posx>185</posx>
+						<posy>18</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem.Overlay</info>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<animation effect="zoom" start="100" end="120" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55)">Unfocus</animation>
+					</control>
+                   </control>
 				</focusedlayout>
  
                <itemlayout condition="Container.Content(episodes)" height="226" width="225">
