@@ -210,7 +210,7 @@
 		<control type="group" id="2502">
 			<posx>620</posx>
 			<posy>50</posy>
-			<visible>Control.IsVisible(54) + [Window.IsActive(myvideofiles) | Window.IsActive(1) | Window.IsActive(2)]</visible>
+			<visible>Control.IsVisible(54) + [Window.IsActive(24) | Window.IsActive(1) | Window.IsActive(2)]</visible>
 			<include>Animation_cListCommonFade</include>
 			<include>Animation_cListInfoPanelZoom</include>
 <!--			<include>Animation_cListHorizontalMenuInfoPanelSlide</include> -->
@@ -221,7 +221,7 @@
 				<height>480</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureInfoPanelSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureInfoPanelSolid</include>
-				<visible>Control.IsVisible(54) + !Skin.HasSetting(clearlistinfothin)</visible>
+				<visible>!Skin.HasSetting(clearlistinfothin)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -230,7 +230,6 @@
 				<height>500</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureInfoPanel</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureInfoPanel</include>
-				<visible>Control.IsVisible(54)</visible>
 			</control>
 			<!-- Movie/TvShow Icon -->
 		<control type="group">
@@ -240,10 +239,11 @@
 				<posy>20</posy>
 				<width>150</width>
 				<height>222</height>
-				<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
+				<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<info>ListItem.Icon</info>
-				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)</visible>
+				<animation effect="fade" time="300">Visible</animation>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)] + ![Container().OnNext | Container().OnPrevious]</visible>
 			</control>
 <!--
 			<control type="image">
@@ -263,7 +263,8 @@
 				<height>222</height>
 				<texture>multiplex/multiplex_glass.png</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)</visible>
+				<animation effect="fade" time="300">Visible</animation>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)] + ![Container().OnNext | Container().OnPrevious]</visible>
 			</control>
 		    <control type="image">
 				<posx>270</posx>
@@ -274,6 +275,7 @@
       			<texture background="true">$INFO[listitem.property(fanart_image)]</texture>
         		<bordertexture border="8">list/list_frame.png</bordertexture>
         		<bordersize>15</bordersize>
+				<animation effect="fade" time="300">Visible</animation>
         		<visible>[Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes) + !Container.Content(Seasons)]] + IsEmpty(ListItem.Thumb)</visible>
      		</control>
      		 <control type="image">
@@ -284,7 +286,8 @@
         		<aspectratio aligny="top">keep</aspectratio>
         		<texture flipy="true" diffuse="list/list_reflect_mask.png">$INFO[listitem.property(fanart_image)]</texture>
         		<bordersize>8</bordersize>
-        		<visible>[Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)]] + IsEmpty(ListItem.Thumb)</visible>
+ 				<animation effect="fade" time="300">Visible</animation>
+       		<visible>[Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)]] + IsEmpty(ListItem.Thumb)</visible>
       		</control>
 		</control>			
 		

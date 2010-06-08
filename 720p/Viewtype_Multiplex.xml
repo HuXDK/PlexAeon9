@@ -1536,8 +1536,8 @@
 			</control>
  
 		</control>
- 		</control>
 			<include>Furniture_ShowcaseMediaFlags</include>
+ 		</control>
 	</include>
  
 </includes>

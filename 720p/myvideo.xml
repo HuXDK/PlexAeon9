@@ -3,7 +3,6 @@
 	<allowoverlay>yes</allowoverlay>
 	<views>50,551,52,553,555,563,53,57,55,54,554</views>
 	<controls>
-
  		<control type="largeimage" id="109">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -11,9 +10,8 @@
 			<height>0</height>
 			<texture>-</texture>
 			<visible>![Skin.HasSetting(multiplextvinfooff) | Skin.HasSetting(multiplextvinfotrigger) | Skin.HasSetting(multiplexinfooff) | Skin.HasSetting(multiplexinfotrigger) | Skin.HasSetting(oldmultiplexinfooff) | Skin.HasSetting(oldmultiplexinfotrigger) | Skin.HasSetting(oldmultiplextvinfotrigger) | Skin.HasSetting(oldmultiplextvinfooff) | Container().OnNext | Container().OnPrevious]</visible>
-			<animation effect="fade" start="0" end="100" time="150" delay="2500">Visible</animation>
+			<animation effect="fade" start="0" end="100" time="150" delay="1500">Visible</animation>
 		</control>
-
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
 			<texture>genrefanart/$INFO[ListItem.Label].jpg</texture>
@@ -46,7 +44,6 @@
 		<include condition="!Skin.HasSetting(Anoobie2Off)">Viewtype_Anoobie2</include>
 		<include condition="!Skin.HasSetting(ClearListOff)">Viewtype_ClearList</include>
 		<include>NewMediaMenu</include>
-<!--		<include condition="[Container.Content(tvshows) | Container.Content(episodes)] + !Skin.HasSetting(nomediaflags)">Furniture_EpisodeMediaFlags</include> -->
 		<include>Furniture_DarkGradient</include>
 		<include>ScrollOffsetLabel</include>
 		<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
