@@ -50,7 +50,7 @@
 	<include name="Furniture_PanelMediaFlagsVars">
 		<posy>459</posy>
 		<width>70</width>
-		<height>30</height>
+		<height>40</height>
 		<aspectratio>keep</aspectratio>
 		<include>Animation_CommonFade</include>
 	</include>
@@ -285,14 +285,14 @@
 
 	<include name="Furniture_MultiplexMediaFlags">  <!-- Old Multiplex Movies-->
 		<control type="group">
-				<posy>10</posy>
+				<posy>3</posy>
 			<visible>!Skin.HasSetting(nomediaflags) + Container.Content(movies)</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideMultiplex</include>
 			<control type="group">
 				<posx>60</posx>
 			<control type="image" id="91">
-				<posy>445</posy>
+				<posy>455</posy>
 				<width>70</width>
 				<height>50</height>
 				<aspectratio>keep</aspectratio>
@@ -388,14 +388,14 @@
 	</include>
 	<include name="Furniture_CoverflowMediaFlags">  <!-- CoverFlow Media Flags -->
 		<control type="group">
-			<posy>100</posy>
+			<posy>95</posy>
 			<visible>!Skin.HasSetting(nomediaflags)</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideMultiplex</include>
 			<control type="group">
 				<posx>60</posx>
 				<control type="image" id="91">
-					<posy>449</posy>
+					<posy>455</posy>
 					<width>70</width>
 					<height>50</height>
 					<aspectratio>keep</aspectratio>
@@ -410,14 +410,14 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>1005</posx>
+				<posx>1020</posx>
 				<control type="image" id="93">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoResolution)</info>
 				</control>
 			</control>
 			<control type="group">
-				<posx>1115</posx>
+				<posx>1130</posx>
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::audioChannels)</info>
