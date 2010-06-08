@@ -237,9 +237,9 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(nomediaflags) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
 			<include>Animation_CommonFade</include>
-			<posy>-5</posy>
+			<posy>0</posy>
 			<control type="group">
-					<posx>100</posx>
+					<posx>60</posx>
 					<control type="image">
 					<posy>667</posy>
 					<width>60</width>
@@ -260,24 +260,20 @@
 			</control>
 
 				<control type="image">
-					<posx>1015</posx>
+					<posx>1055</posx>
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoResolution)</info>
 				</control>
 
 			<control type="group">
-				<posx>1110</posx>
+				<posx>1150</posx>
 				<control type="image">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::audioChannels)</info>
 				</control>
-				<control type="image">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>$INFO[Listitem.Property(audioCodec)]</texture>
-				</control>
 			</control>
 			<control type="group">
-				<posx>190</posx>
+				<posx>150</posx>
 				<control type="image" id="82">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<info>Listitem.Property(mediaTag::videoCodec)</info>

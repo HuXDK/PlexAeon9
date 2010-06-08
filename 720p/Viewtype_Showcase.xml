@@ -751,7 +751,7 @@
 	<include name="ShowcaseMainLabel">
 		<include>ShowcaseLabelVars</include>
 		<posx>200</posx>
-		<posy>670</posy>
+		<posy>668</posy>
 		<width>880</width>
 		<font>Font_ShowcaseMainLabel</font>
 		<include condition="Skin.HasSetting(lightfloor)">Colour_ShowcaseLabelLightShade</include>
