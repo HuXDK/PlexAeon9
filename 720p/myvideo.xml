@@ -10,7 +10,7 @@
 			<height>0</height>
 			<texture>-</texture>
 			<visible>![Skin.HasSetting(multiplextvinfooff) | Skin.HasSetting(multiplextvinfotrigger) | Skin.HasSetting(multiplexinfooff) | Skin.HasSetting(multiplexinfotrigger) | Skin.HasSetting(oldmultiplexinfooff) | Skin.HasSetting(oldmultiplexinfotrigger) | Skin.HasSetting(oldmultiplextvinfotrigger) | Skin.HasSetting(oldmultiplextvinfooff) | Container().OnNext | Container().OnPrevious]</visible>
-			<animation effect="fade" start="0" end="100" time="150" delay="1500">Visible</animation>
+			<animation effect="fade" delay="1500">Visible</animation>
 		</control>
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>

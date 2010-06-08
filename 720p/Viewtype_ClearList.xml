@@ -989,7 +989,7 @@
 			<control type="image">
 				<posx>114</posx>
 				<posy>40</posy>
-				<width>450</width>
+				<width>455</width>
 				<height>680</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureSolid</include>
@@ -1000,7 +1000,7 @@
 			<control type="image">
 				<posx>114</posx>
 				<posy>40</posy>
-				<width>450</width>
+				<width>460</width>
 				<height>680</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
@@ -1155,8 +1155,8 @@
 						<width>25</width>
 						<height>25</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays) | [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(notvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
-		     		   <animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		     		   <animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 					</control>
 
 				</itemlayout>
@@ -1280,7 +1280,7 @@
 						<width>25</width>
 						<height>25</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays) | [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(notvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 		    	    	<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
 					</control>
 
