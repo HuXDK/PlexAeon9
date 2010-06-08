@@ -3854,6 +3854,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="200" easing="out" tween="cubic" reversible="true">Focus</animation>					
+					<animation effect="zoom" center="45,75" start="115" end="100" time="400" delay="200" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
 				</control>
 				<control type="image">
 					<posx>63</posx>
@@ -3861,6 +3862,7 @@
 					<width>25</width>
 					<height>25</height>
 					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="200" easing="out" tween="cubic" reversible="true">Focus</animation>					
+					<animation effect="zoom" center="45,75" start="115" end="100" time="400" delay="200" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
 					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 					<info>ListItem.Overlay</info>
 				</control>
@@ -3870,6 +3872,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				    <texture>thumbs/poster_glass_noedge.png</texture>
 					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="200" easing="out" tween="cubic" reversible="true">Focus</animation>					
+					<animation effect="zoom" center="45,75" start="115" end="100" time="400" delay="200" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
 				</control>		
 				
 			</focusedlayout>
@@ -5926,15 +5929,15 @@
                         <include>MovieFlowThumbMain</include>
                         <info>ListItem.Icon</info>
 						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieFlowGlassOverlay</include>
 						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
-						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
 					</control>
 				    <control type="image">
 						<posx>185</posx>
@@ -5945,8 +5948,8 @@
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
 		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55) + Skin.HasSetting(flattenflow)">Unfocus</animation>
+						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
 		   			</control>
 				</focusedlayout>
  
@@ -5981,8 +5984,8 @@
 	   					<height>226</height>
                         <info>ListItem.Icon</info>
 						<visible>Container.Content(episodes)</visible>
-						<animation effect="zoom" start="100" end="110" center="auto" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="110" end="100" center="auto" time="400" delay="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55)">Unfocus</animation>
+						<animation effect="zoom" start="100" end="110" center="auto" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="auto" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
                    </control>
 				    <control type="image">
 						<posx>-460</posx>
@@ -5991,7 +5994,8 @@
 						<height>25</height>
 						<info>ListItem.Overlay</info>
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-						<animation effect="zoom" center="-616,135" start="100" end="110" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" center="-616,135" start="100" end="110" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" center="-616,135" start="110" end="100" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
 		   			</control>
 				</focusedlayout>
 
