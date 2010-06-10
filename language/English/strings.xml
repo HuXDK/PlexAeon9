@@ -17,7 +17,7 @@
 <!-- Main Menu -->
   
 	<string id="31010">MUSIC</string>
-	<string id="31011">APP STORE</string>
+	<string id="31011">PLEX ONLINE</string>
 	<string id="31012">PICTURES</string>
 	<string id="31013">MOVIES</string>
 	<string id="31014">TV SHOWS</string>
@@ -74,12 +74,12 @@
 	<string id="31041">BY:</string>
 
 <!-- Media Window options -->
-	<string id="31542">Floor: Clear</string>
-	<string id="31042">Floor: Light</string>
-	<string id="31043">Floor: Night</string>
-	<string id="31044">Art</string>
-	<string id="31045">Thumb</string>
-	<string id="31046">Plot</string>
+	<string id="31542">Floor: [COLOR=FFFFFFFF]Clear[/COLOR]</string>
+	<string id="31042">Floor: [COLOR=FFFFFFFF]Light[/COLOR]</string>
+	<string id="31043">Floor: [COLOR=FFFFFFFF]Night[/COLOR]</string>
+	<string id="31044">[COLOR=FFFFFFFF]Art[/COLOR]</string>
+	<string id="31045">[COLOR=FFFFFFFF]Thumb[/COLOR]</string>
+	<string id="31046">[COLOR=FFFFFFFF]Plot[/COLOR]</string>
 	<string id="31047">Layout</string>
 	<string id="31048">Trigger</string>
 	<string id="31049">Auto</string>
@@ -92,36 +92,37 @@
 	<string id="31056">Thumb: Square</string>
 	<string id="31057">Files</string>
 	<string id="31058">Hide Watched</string>
-	<string id="31059">Thumb: Poster</string>
+	<string id="31059">Thumb: [COLOR=FFFFFFFF]Poster[/COLOR]</string>
 	<string id="31060">Layout: Flat</string>
-	<string id="31061">Layout: Flow</string>
+	<string id="31061">FLOW THUMBS</string>
+	<string id="31022">Dim fanart</string>	
 	<string id="31062">Season</string>
 	<string id="310621">All Seasons</string>
 	<string id="31063">Episode</string>
 	<string id="31064">Fanart</string>
 	<string id="31065">Panel</string>
-	<string id="31066">Watched Icon</string>
-	<string id="31067">Backdrops</string>
+	<string id="31066">Unwatched Icon</string>
+	<string id="31067">FanArt</string>
 	<string id="31068">Library</string>
 	<string id="31069">Media Flags</string>
 	<string id="31070">Info Panel</string>
 	<string id="31071">Slim</string>
 	<string id="31072">Full</string>
-	<string id="31073">Default</string>
+	<string id="31073">[COLOR=FFFFFFFF]Default[/COLOR]</string>
 	<string id="31074">Max View</string>
 	<string id="31075">Layout</string>
 	<string id="31076">Grid</string>
 	<string id="31077">On</string>
 	<string id="31078">Off</string>
 	<string id="31079">Autohide</string>
-	<string id="310791">Horizontal</string>
-	<string id="310792">Vertical</string>
+	<string id="310791">Layout: [COLOR=FFFFFFFF]Horizontal[/COLOR]</string>
+	<string id="310792">Layout: [COLOR=FFFFFFFF]Vertical[/COLOR]</string>
 	<string id="310793">Thin List</string>
 	<string id="310794">Thin List: On</string>
 	<string id="310795">Thin Info</string>
 	<string id="310796">Thin Info: On</string>
-	<string id="310797">Panels: Light</string>
-	<string id="310798">Panels: Night</string>
+	<string id="310797">Panels: [COLOR=FFFFFFFF]Light[/COLOR]</string>
+	<string id="310798">Panels: [COLOR=FFFFFFFF]Night[/COLOR]</string>
 	<string id="310799">Use Genre In Full List</string>	
 <!-- Aeon Customisation Virtual Home page labels -->
   
@@ -573,7 +574,8 @@
 
 <!-- Trailer Mod -->
 
-	<string id="32000">Trailer</string>
-	<string id="32001">Big Trailer</string>
+	<string id="32000">[COLOR=FFFFFFFF]Trailer[/COLOR]</string>
+	<string id="32001">[COLOR=FFFFFFFF]Big Trailer[/COLOR]</string>
+	<string id="32002">[COLOR=FFFFFFFF]Poster[/COLOR]</string>
 	
 </strings>

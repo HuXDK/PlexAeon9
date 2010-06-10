@@ -65,7 +65,7 @@
 			<posy>26</posy>
 			<width>1280</width>
 			<height>381</height>
-			<visible>Window.IsActive(24) + Control.IsVisible(57) + !Control.HasFocus(70197) + [Control.IsVisible(70109) | Control.HasFocus(70110) | Skin.HasSetting(showcaseinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(showcaseinfotrigger)]]</visible>
+			<visible>Control.IsVisible(57)</visible>
 			<animation effect="fade"  start="0" end="100" time="400" condition="!Skin.HasSetting(showcaseinfoon)">WindowOpen</animation>
 			<animation effect="fade" end="0" time="400">WindowClose</animation>
 			<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
@@ -3510,12 +3510,16 @@
 				<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2) | Window.IsActive(20)">MusicShowcaseGroupVars</include>
 				<onleft>57</onleft>
 				<onright>57</onright>
+				<onup>7000</onup>
+
+<!--
 				<include condition="!Skin.HasSetting(showcaseinfotrigger)">ShowcaseInfoAutoUp</include>
 				<include condition="Skin.HasSetting(showcaseinfotrigger)">ShowcaseInfoTriggerUp</include>
 				<include condition="[!Skin.HasSetting(showcasetrailer) + !Skin.HasSetting(showcasebigtrailer)] + [!Skin.HasSetting(EnableCinema) | IsEmpty(Skin.String(CinemaPath))]">ShowcaseOnDown</include>
 				<include condition="[Skin.HasSetting(showcasetrailer) | Skin.HasSetting(showcasebigtrailer)] + [!Skin.HasSetting(EnableCinema) | IsEmpty(Skin.String(CinemaPath))]">ShowcaseOnDownTrailer</include>
 				<include condition="Skin.HasSetting(EnableCinema) + !IsEmpty(Skin.String(CinemaPath))">ShowcaseOnDownCinema</include>
-				<pagecontrol>60</pagecontrol>
+
+				<pagecontrol>60</pagecontrol> -->
 				<orientation>horizontal</orientation>
 				<scrolltime>200</scrolltime>
 				<focusposition>3</focusposition>
@@ -3698,6 +3702,7 @@
 				<include>Animation_HideShowcase</include>
 				<include>Animation_CommonFade</include>
 			</control>
+<!--
 			<control type="button" id="70197">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -3710,6 +3715,7 @@
 				<onup>57</onup>
 				<ondown>57</ondown>
 			</control>
+-->
 			<control type="group">
 				<visible>Control.IsVisible(57)</visible>
 				<include>Animation_HideShowcase</include>
@@ -3737,7 +3743,7 @@
                      <colordiffuse>FFFFFF00</colordiffuse>
        			 </control>
                 <control type="label">
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$INFO[ListItem.Title]</label>
                     <include>ShowcaseMainLabel</include>
 					<visible>Container.Content(movies) + !Skin.HasSetting(nomediaflags)</visible>
 				</control>

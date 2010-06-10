@@ -1953,7 +1953,7 @@
 	<include name="Vertical_MediaMenuButtonVars">
 		<height>30</height>
 		<width>235</width>
-		<textcolor>FF939597</textcolor>
+		<textcolor>FF3243C1</textcolor>
 		<focusedcolor>FFFFFFFF</focusedcolor>
 		<textoffsetx>10</textoffsetx>
 		<texturefocus>windows/mediamenu.png</texturefocus>
@@ -1961,7 +1961,7 @@
 		<alttexturefocus>windows/mediamenu.png</alttexturefocus>
 		<alttexturenofocus>verticalmenu/button.png</alttexturenofocus>
 		<radiowidth>72</radiowidth>
-		<radioposx>156</radioposx>
+		<radioposx>170</radioposx>
 		<radioheight>50</radioheight>
 		<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
 		<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
@@ -2038,10 +2038,10 @@
 	</include>
 	<include name="Vertical_MediaMenuGroup">
 		<posx>0</posx>
-		<posy>60</posy>
+		<posy>70</posy>
 		<width>235</width>
 		<height>600</height>
-		<itemgap>0</itemgap>
+		<itemgap>1</itemgap>
 		<orientation>vertical</orientation>
 		<scroll>false</scroll>
 		<onleft>50</onleft>
@@ -2102,10 +2102,10 @@
 	<include name="MediaMenuButton_Viewmode"> 
 		<control type="button" id="102">
 			<onclick>Container.NextViewMode</onclick>
-			<label>[B]$LOCALIZE[31050] $INFO[Container.ViewMode][/B]</label>
+			<label>[B]$LOCALIZE[31050] [COLOR=FFFFFFFF]$INFO[Container.ViewMode][/COLOR][/B]</label>
 			<height>30</height>
 			<width>235</width>
-			<textcolor>FF939597</textcolor>
+			<textcolor>FF3243C1</textcolor>
 			<focusedcolor>FFFFFFFF</focusedcolor>
 			<textoffsetx>10</textoffsetx>
 			<include>MediaMenuButton</include>
@@ -2117,20 +2117,20 @@
 	</include>
 
 	<include name="MediaMenuButton_FlattenFlow">
-		<control type="togglebutton" id="700001">
-			<label>31061</label>
-			<altlabel>31060</altlabel>
-			<usealttexture>Skin.HasSetting(flattenshowcase)</usealttexture>
+		<control type="radiobutton" id="700001">
 			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31061]</label>
+			<selected>!Skin.HasSetting(flattenshowcase)</selected>
 			<onclick>Skin.ToggleSetting(flattenshowcase)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Control.IsVisible(57) + !Container.Content(episodes)</visible>
 		</control>
-		<control type="togglebutton" id="700002">
-			<label>31061</label>
-			<altlabel>31060</altlabel>
-			<usealttexture>Skin.HasSetting(flattenflow)</usealttexture>
+		<control type="radiobutton" id="700002">
 			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31061]</label>
+			<selected>!Skin.HasSetting(flattenflow)</selected>
 			<onclick>Skin.ToggleSetting(flattenflow)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Control.IsVisible(55) + !Container.Content(episodes)</visible>
 		</control>
 	</include>
@@ -2148,7 +2148,7 @@
 			<onclick>Skin.SetBool(multiplexinfoauto)</onclick>
 			<onclick>Skin.Reset(multiplexinfooff)</onclick>
 			<onclick>SetFocus(50)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplexinfooff)</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplexinfooff)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700004">
@@ -2157,7 +2157,7 @@
 			<onclick>Skin.SetBool(multiplexinfotrigger)</onclick>
 			<onclick>Skin.Reset(multiplexinfoauto)</onclick>
 			<onclick>SetFocus(50)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + ![Skin.HasSetting(multiplexinfotrigger) | Skin.HasSetting(multiplexinfooff) | Skin.HasSetting(multiplexinfoon)]</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + ![Skin.HasSetting(multiplexinfotrigger) | Skin.HasSetting(multiplexinfooff) | Skin.HasSetting(multiplexinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700005">
@@ -2166,7 +2166,7 @@
 			<onclick>Skin.SetBool(multiplexinfoon)</onclick>
 			<onclick>Skin.Reset(multiplexinfotrigger)</onclick>
 			<onclick>SetFocus(50)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplexinfotrigger)</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplexinfotrigger)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700006">
@@ -2175,7 +2175,7 @@
 			<onclick>Skin.SetBool(multiplexinfooff)</onclick>
 			<onclick>Skin.Reset(multiplexinfoon)</onclick>
 			<onclick>SetFocus(50)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplexinfoon)</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplexinfoon)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 		<control type="button" id="700007">
@@ -2230,7 +2230,7 @@
 			<onclick>Skin.SetBool(wallinfoon)</onclick>
 			<onclick>Skin.Reset(walleinfoauto)</onclick>
 			<onclick>SetFocus(53)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(53) + ![Skin.HasSetting(wallinfoon) | Skin.HasSetting(wallinfooff)]</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(53) + ![Skin.HasSetting(wallinfoon) | Skin.HasSetting(wallinfooff)]</visible>
 		</control>
 		<control type="button" id="700012">
 			<include>MediaMenuButton</include>
@@ -2238,7 +2238,7 @@
 			<onclick>Skin.SetBool(wallinfooff)</onclick>
 			<onclick>Skin.Reset(wallinfoon)</onclick>
 			<onclick>SetFocus(53)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(53) + Skin.HasSetting(wallinfoon)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(53) + Skin.HasSetting(wallinfoon)</visible>
 		</control>
 		<control type="button" id="700013">
 			<include>MediaMenuButton</include>
@@ -2246,7 +2246,7 @@
 			<onclick>Skin.SetBool(wallinfoauto)</onclick>
 			<onclick>Skin.Reset(wallinfooff)</onclick>
 			<onclick>SetFocus(53)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(53) + Skin.HasSetting(wallinfooff)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(53) + Skin.HasSetting(wallinfooff)</visible>
 		</control>
 	</include>
 	<include name="MediaMenuButton_MultiplexStyle">
@@ -2256,7 +2256,7 @@
 			<onclick>Skin.SetBool(multiplexbigthumb)</onclick>
 			<onclick>Skin.Reset(multiplexplot)</onclick>
 			<onclick>SetFocus(52)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + ![Skin.HasSetting(multiplexbigthumb) | Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplextrailer) | Skin.HasSetting(multiplexbigtrailer) | Skin.HasSetting(multiplexposter)]</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + ![Skin.HasSetting(multiplexbigthumb) | Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplextrailer) | Skin.HasSetting(multiplexbigtrailer) | Skin.HasSetting(multiplexposter)]</visible>
 		</control>
 		<control type="button" id="700015">
 			<include>MediaMenuButton</include>
@@ -2264,7 +2264,7 @@
 			<onclick>Skin.SetBool(multiplexfanart)</onclick>
 			<onclick>Skin.Reset(multiplexbigthumb)</onclick>
 			<onclick>SetFocus(52)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexbigthumb)</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexbigthumb)</visible>
 		</control>
 		<control type="button" id="700016">
 			<include>MediaMenuButton</include>
@@ -2272,31 +2272,33 @@
 			<onclick>Skin.SetBool(multiplextrailer)</onclick>
 			<onclick>Skin.Reset(multiplexfanart)</onclick>
 			<onclick>SetFocus(52)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexfanart)</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexfanart)</visible>
 		</control>
 		<control type="button" id="700017">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31047]: $LOCALIZE[32000]</label>
-			<onclick>Skin.SetBool(multiplexbigtrailer)</onclick>
+			<onclick>Skin.SetBool(multiplexposter)</onclick>
 			<onclick>Skin.Reset(multiplextrailer)</onclick>
 			<onclick>SetFocus(52)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplextrailer)</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplextrailer)</visible>
 		</control>
+<!--
 		<control type="button" id="700018">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31047]: $LOCALIZE[32001]</label>
 			<onclick>Skin.SetBool(multiplexposter)</onclick>
 			<onclick>Skin.Reset(multiplexbigtrailer)</onclick>
 			<onclick>SetFocus(52)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexbigtrailer)</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexbigtrailer)</visible>
 		</control>
+-->
 		<control type="button" id="700019">
 			<include>MediaMenuButton</include>
-			<label>$LOCALIZE[31047]: Poster</label>
+			<label>$LOCALIZE[31047]: $LOCALIZE[32002]</label>
 			<onclick>Skin.SetBool(multiplexplot)</onclick>
 			<onclick>Skin.Reset(multiplexposter)</onclick>
 			<onclick>SetFocus(52)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexposter)</visible>
+			<visible>Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(552)] + Skin.HasSetting(multiplexposter)</visible>
 		</control>
 		<control type="togglebutton" id="700020">
 			<include>MediaMenuButton</include>
@@ -2559,6 +2561,17 @@
 			<selected>!Skin.HasSetting(curtains)</selected>
 			<usealttexture>Skin.HasSetting(curtains)</usealttexture>
 			<onclick>Skin.ToggleSetting(curtains)</onclick>
+			<visible>true</visible>
+		</control>
+	</include>
+	<include name="MediaMenuButton_DimFanart">
+		<control type="radiobutton" id="711028">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31022]</label>
+			<selected>Skin.HasSetting(DimFanart)</selected>
+			<usealttexture>!Skin.HasSetting(DimFanart)</usealttexture>
+			<onclick>Skin.ToggleSetting(DimFanart)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>true</visible>
 		</control>
 	</include>
@@ -2919,11 +2932,12 @@
 		<control type="button" id="700071">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31047]: $LOCALIZE[32000]</label>
-			<onclick>Skin.SetBool(showcasebigtrailer)</onclick>
+			<onclick>Skin.SetBool(showcaseposter)</onclick>
 			<onclick>Skin.Reset(showcasetrailer)</onclick>
 			<onclick>SetFocus(57)</onclick>
 			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasetrailer)</visible>
 		</control>
+<!--
 		<control type="button" id="700072">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31047]: $LOCALIZE[32001]</label>
@@ -2932,9 +2946,10 @@
 			<onclick>SetFocus(57)</onclick>
 			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasebigtrailer)</visible>
 		</control>
+-->
 		<control type="button" id="700073">
 			<include>MediaMenuButton</include>
-			<label>$LOCALIZE[31047]: Poster</label>
+			<label>$LOCALIZE[31047]: $LOCALIZE[32002]</label>
 			<onclick>Skin.SetBool(showcaseplot)</onclick>
 			<onclick>Skin.Reset(showcaseposter)</onclick>
 			<onclick>SetFocus(57)</onclick>
@@ -2986,7 +3001,7 @@
 			<onclick>Skin.SetBool(oldmultiplexinfoauto)</onclick>
 			<onclick>Skin.Reset(oldmultiplexinfooff)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexinfooff)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexinfooff)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 <!--
@@ -2996,7 +3011,7 @@
 			<onclick>Skin.SetBool(oldmultiplexinfotrigger)</onclick>
 			<onclick>Skin.Reset(oldmultiplexinfoauto)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexinfotrigger) | Skin.HasSetting(oldmultiplexinfooff) | Skin.HasSetting(oldmultiplexinfoon)]</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexinfotrigger) | Skin.HasSetting(oldmultiplexinfooff) | Skin.HasSetting(oldmultiplexinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
 -->
@@ -3064,7 +3079,7 @@
 			<onclick>Skin.SetBool(multiwallinfoauto)</onclick>
 			<onclick>Skin.Reset(multiwallinfooff)</onclick>
 			<onclick>SetFocus(556)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(556) + Skin.HasSetting(multiwallinfooff)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(556) + Skin.HasSetting(multiwallinfooff)</visible>
 			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
 		</control>
 		<control type="button" id="704101">
@@ -3073,7 +3088,7 @@
 			<onclick>Skin.SetBool(multiwallinfotrigger)</onclick>
 			<onclick>Skin.Reset(multiwallinfoauto)</onclick>
 			<onclick>SetFocus(556)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(556) + ![Skin.HasSetting(multiwallinfotrigger) | Skin.HasSetting(multiwallinfooff) | Skin.HasSetting(multiwallinfoon)]</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(556) + ![Skin.HasSetting(multiwallinfotrigger) | Skin.HasSetting(multiwallinfooff) | Skin.HasSetting(multiwallinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
 		</control>
 		<control type="button" id="704102">
@@ -3082,7 +3097,7 @@
 			<onclick>Skin.SetBool(multiwallinfoon)</onclick>
 			<onclick>Skin.Reset(multiwallinfotrigger)</onclick>
 			<onclick>SetFocus(556)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(556) + Skin.HasSetting(multiwallinfotrigger)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(556) + Skin.HasSetting(multiwallinfotrigger)</visible>
 			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
 		</control>
 		<control type="button" id="704103">
@@ -3091,7 +3106,7 @@
 			<onclick>Skin.SetBool(multiwallinfooff)</onclick>
 			<onclick>Skin.Reset(multiwallinfoon)</onclick>
 			<onclick>SetFocus(556)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(556) + Skin.HasSetting(multiwallinfoon)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(556) + Skin.HasSetting(multiwallinfoon)</visible>
 			<visible>!Skin.HasSetting(nomultiwallinfobuttons)</visible>
 		</control>
 		<control type="button" id="704104">
@@ -3139,7 +3154,7 @@
 			<onclick>Skin.SetBool(oldmultiplexbigthumb)</onclick>
 			<onclick>Skin.Reset(oldmultiplexplot)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplextrailer) | Skin.HasSetting(oldmultiplexbigtrailer) | Skin.HasSetting(oldmultiplexposter)]</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplextrailer) | Skin.HasSetting(oldmultiplexbigtrailer) | Skin.HasSetting(oldmultiplexposter)]</visible>
 		</control>
 		<control type="button" id="700111">
 			<include>MediaMenuButton</include>
@@ -3147,7 +3162,7 @@
 			<onclick>Skin.SetBool(oldmultiplexfanart)</onclick>
 			<onclick>Skin.Reset(oldmultiplexbigthumb)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexbigthumb)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexbigthumb)</visible>
 		</control>
 		<control type="button" id="700112">
 			<include>MediaMenuButton</include>
@@ -3155,31 +3170,33 @@
 			<onclick>Skin.SetBool(oldmultiplextrailer)</onclick>
 			<onclick>Skin.Reset(oldmultiplexfanart)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexfanart)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexfanart)</visible>
 		</control>
 		<control type="button" id="700113">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31047]: $LOCALIZE[32000]</label>
-			<onclick>Skin.SetBool(oldmultiplexbigtrailer)</onclick>
+			<onclick>Skin.SetBool(oldmultiplexposter)</onclick>
 			<onclick>Skin.Reset(oldmultiplextrailer)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextrailer)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextrailer)</visible>
 		</control>
+<!--
 		<control type="button" id="700114">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31047]: $LOCALIZE[32001]</label>
 			<onclick>Skin.SetBool(oldmultiplexposter)</onclick>
 			<onclick>Skin.Reset(oldmultiplexbigtrailer)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexbigtrailer)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexbigtrailer)</visible>
 		</control>
+-->
 		<control type="button" id="700115">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31047]: Poster</label>
 			<onclick>Skin.SetBool(oldmultiplexplot)</onclick>
 			<onclick>Skin.Reset(oldmultiplexposter)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Window.IsActive(myvideofiles) + Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexposter)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexposter)</visible>
 		</control>
 		<control type="togglebutton" id="700116">
 			<include>MediaMenuButton</include>
@@ -3277,19 +3294,20 @@
 
 			<control type="grouplist" id="7000">
 				<visible>Control.IsVisible(7000)</visible>
-				<include condition="Skin.HasSetting(novertikalmenu)">Horizontal_MediaMenuGroup</include>
+<!--			<include condition="Skin.HasSetting(novertikalmenu)">Horizontal_MediaMenuGroup</include>
 				<include condition="!Skin.HasSetting(novertikalmenu)">Vertical_MediaMenuGroup</include>
+-->
+				<include>Vertical_MediaMenuGroup</include>
 				<include>MediaMenuButton_Viewmode</include>
 				<include>MediaMenuButton_LightNight</include>
 				<include>MediaMenuButton_ClearList</include>
 				<include>MediaMenuButton_Random</include>
 				<include condition="Window.IsActive(500) | Window.IsActive(28)">MediaMenuButton_Playlist</include>
-				<include>MediaMenuButton_FlattenFlow</include>
-				<include>MediaMenuButton_MultiplexInfo</include>
+		<!--		<include>MediaMenuButton_MultiplexInfo</include>
 				<include>MediaMenuButton_OldMultiplexInfo</include>
 				<include>MediaMenuButton_multiwallInfo</include>
-				<include>MediaMenuButton_ShowcaseInfo</include>
-				<include>MediaMenuButton_WallInfo</include>
+				<include>MediaMenuButton_ShowcaseInfo</include> 
+				<include>MediaMenuButton_WallInfo</include>  -->
 		<!--	<include>MediaMenuButton_GamesPoster</include> -->
 				<include>MediaMenuButton_MultiplexStyle</include>
 				<include>Objects_AnoobieStyleButtons</include>
@@ -3297,6 +3315,7 @@
 				<include>MediaMenuButton_OldMultiplexStyle</include>
 				<include>MediaMenuButton_ShowcaseStyle</include>
 				<include>MediaMenuButton_ListLayout</include>
+				<include>MediaMenuButton_FlattenFlow</include>
 				<include>MediaMenuButton_VerticalWall</include>
 				<include>MediaMenuButton_Stripshow</include>
 		<!--	<include>MediaMenuButton_StackButton</include> -->
@@ -3310,6 +3329,7 @@
 				<include>MediaMenuButton_Overlay</include>
 				<include>MediaMenuButton_Flags</include>
 		<!--	<include>MediaMenuButton_Fanart</include>  -->
+				<include>MediaMenuButton_DimFanart</include>
 				<include>MediaMenuButton_Curtains</include>
 		<!--	<include>MediaMenuButton_Watched</include>
 				<include>MediaMenuButton_Sort</include> 
