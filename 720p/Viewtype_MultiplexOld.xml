@@ -974,7 +974,7 @@
 	            <ondown>60</ondown>
 	            <pagecontrol>60</pagecontrol>
 	            <orientation>horizontal</orientation>
-	            <scrolltime>230</scrolltime>
+				<scrolltime>300</scrolltime>
 	            <focusposition>6</focusposition>
 				<animation effect="slide" start="0,0" end="-380,35" condition="Container.Content(episodes)">Conditional</animation>
                	<itemlayout condition="!Container.Content(episodes)" height="350" width="106">

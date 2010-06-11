@@ -3845,6 +3845,7 @@
 			<onup>7000</onup>
 			<orientation>horizontal</orientation>
 			<focusposition>5</focusposition>	
+			<scrolltime>300</scrolltime>
 			<itemlayout width="105" height="129">
 				<control type="image">
 					<include>Anoobie3IconDimensionsWrap</include>

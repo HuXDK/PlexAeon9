@@ -3521,7 +3521,7 @@
 
 				<pagecontrol>60</pagecontrol> -->
 				<orientation>horizontal</orientation>
-				<scrolltime>200</scrolltime>
+				<scrolltime>300</scrolltime>
 				<focusposition>3</focusposition>
 				<itemlayout height="350" width="196" condition="Window.IsActive(28) | [Window.IsActive(24) + !Container.Content(episodes)] | Window.IsActive(1)">
 					<control type="image">
@@ -3567,7 +3567,7 @@
 						<info>ListItem.Icon</info>
 						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 						<animation effect="zoom" start="100" end="105" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
+						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<include>genre_Showcase_20</include>
 					<!-- <<<<<< Add this -->
@@ -3576,28 +3576,28 @@
 						<include>MovieShowcaseGlassOverlay</include>
 						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 						<animation effect="zoom" start="100" end="105" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
+						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<control type="image">
 						<description>Black overlay</description>
 						<include>MovieShowcaseOverlay</include>
 						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 						<animation effect="zoom" start="100" end="105" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
+						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<control type="image">
 						<include>MovieShowcaseThumbReflectionMain</include>
 						<info>ListItem.Icon</info>
 						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 						<animation effect="zoom" start="100" end="105" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
+						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<control type="image">
 						<description>Glass overlay reflection</description>
 						<include>MovieShowcaseThumbReflectionDVD</include>
 						<visible>Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 						<animation effect="zoom" start="100" end="105" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
+						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<control type="image">
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
@@ -3606,7 +3606,7 @@
 						<visible>!Skin.HasSetting(nomovieoverlays) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 						<info>ListItem.Overlay</info>
 						<animation effect="zoom" start="100" end="105" center="135,120" time="400" delay="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>
+						<animation effect="zoom" start="105" end="100" center="135,120" time="400" easing="out" reversible="false" tween="cubic" condition="Skin.HasSetting(flattenshowcase)">Unfocus</animation>
 					</control>
 					<include>genre_Showcase_ref_20</include>
 					<!-- <<<<<< Add this -->
