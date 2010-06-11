@@ -1336,7 +1336,7 @@
 					<posy>0</posy>
 					<width>253</width>
 					<height>254</height>
-					<visible>Player.HasVideo + Control.IsVisible(551) + !Skin.HasSetting(homevis)</visible>
+					<visible>Player.HasVideo + Control.IsVisible(551) + Skin.HasSetting(homevis)</visible>
 				</control>
 
 		<!-- Media icon -->

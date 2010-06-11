@@ -3861,8 +3861,8 @@
 				<control type="image">
 					<posx>63</posx>
 					<posy>23</posy>
-					<width>25</width>
-					<height>25</height>
+					<width>23</width>
+					<height>23</height>
 					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 					<info>ListItem.Overlay</info>
 				</control>
@@ -3877,16 +3877,6 @@
 					<animation effect="zoom" center="45,75" start="115" end="100" time="400" delay="200" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
 				</control>
 				<control type="image">
-					<posx>63</posx>
-					<posy>23</posy>
-					<width>25</width>
-					<height>25</height>
-					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="200" easing="out" tween="cubic" reversible="true">Focus</animation>					
-					<animation effect="zoom" center="45,75" start="115" end="100" time="400" delay="200" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
-					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
-					<info>ListItem.Overlay</info>
-				</control>
-				<control type="image">
 					<include>Anoobie3IconDimensionsWrap</include>
 					<bordertexture border="-7">wall/wall_movie_fborder.png</bordertexture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -3894,6 +3884,16 @@
 					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="200" easing="out" tween="cubic" reversible="true">Focus</animation>					
 					<animation effect="zoom" center="45,75" start="115" end="100" time="400" delay="200" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
 				</control>		
+				<control type="image">
+					<posx>63</posx>
+					<posy>23</posy>
+					<width>23</width>
+					<height>23</height>
+					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="200" easing="out" tween="cubic" reversible="true">Focus</animation>					
+					<animation effect="zoom" center="45,75" start="115" end="100" time="450" delay="250" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
+					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+					<info>ListItem.Overlay</info>
+				</control>
 				
 			</focusedlayout>
 			</control>			
