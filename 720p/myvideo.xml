@@ -15,6 +15,8 @@
 			<visible>true</visible>
 <!--			<animation effect="fade" delay="1500">Visible</animation>  -->
 		</control>
+    	<include>Curtain</include>    
+
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
 			<texture>genrefanart/$INFO[ListItem.Label].jpg</texture>
@@ -37,8 +39,8 @@
 			<animation effect="zoom" start="110" end="130" center="auto" time="30000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
 			<animation effect="slide" start="-10,-10" end="20,20" time="14000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
 			<animation effect="rotate" center="360,640" start="-2" end="2" time="22000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<animation effect="fade" start="50" end="0" time="900" condition="Skin.HasSetting(DimFanart)">Conditional</animation>
 			<texture>$INFO[listitem(1).property(fanart_image)]</texture>
-			<animation effect="fade" start="100" end="10" time="1550" delay="7500">Hidden</animation>	
 		</control>
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
@@ -46,22 +48,20 @@
 			<animation effect="zoom" start="110" end="130" center="auto" time="30000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
 			<animation effect="slide" start="-10,-10" end="20,20" time="14000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
 			<animation effect="rotate" center="360,640" start="-2" end="2" time="22000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<animation effect="fade" start="50" end="50" condition="Skin.HasSetting(DimFanart)">Conditional</animation>
 			<texture>$INFO[listitem.property(fanart_image)]</texture>
-			<animation effect="fade" start="0" end="100" time="1550">Visible</animation>	
-			<animation effect="fade" start="100" end="10" time="1550" delay="500">Hidden</animation>	
 		</control>
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
-			<visible>!Skin.HasSetting(curtains)</visible>
+			<visible>!Skin.HasSetting(curtains) + Container().OnPrevious</visible>
 			<animation effect="zoom" start="110" end="130" center="auto" time="30000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
 			<animation effect="slide" start="-10,-10" end="20,20" time="14000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
 			<animation effect="rotate" center="360,640" start="-2" end="2" time="22000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-			<texture>$INFO[listitem(=1).property(fanart_image)]</texture>
-			<animation effect="fade" start="100" end="10" time="1550" delay="7500">Hidden</animation>	
+			<animation effect="fade" start="50" end="0" time="900" condition="Skin.HasSetting(DimFanart)">Conditional</animation>
+			<texture>$INFO[listitem(-1).property(fanart_image)]</texture>
 		</control>
 		<include>Furniture_WallBackground</include>
 		<include>Furniture_HomeNowPlaying</include>
-    	<include>Curtain</include>    
 		<include condition="!Skin.HasSetting(TotalsPanelOff)">Furniture_Navigation</include>
 		<include>Furniture_Time</include>
 		<include>Furniture_MediaPanel</include>
