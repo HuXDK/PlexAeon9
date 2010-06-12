@@ -355,36 +355,6 @@
 	    <visible>!IsEmpty(ListItem.Rating)</visible>
 	</control>
 
-
-
-<!--
-	<control type="label">
-		<posx>1000</posx>
-		<posy>512</posy>
-		<width>150</width>
-		<height>43</height>
-		<font>Font_MediaWindowMenu</font>
-		<aligny>center</aligny>
-		<align>center</align>
-		<include>listcolorfocus</include>	
-		<label>SEASON [UPPERCASE]$INFO[ListItem.Season][/UPPERCASE]</label>
-		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Season)</visible>
-	  <include>Animation_CommonFade</include>
-	</control>
-
-	<control type="label">
-		<posx>40</posx>
-		<posy>105</posy>
-		<width>380</width>
-		<height>43</height>
-		<font>Font_MediaWindowMenu</font>
-		<align>left</align>
-		<aligny>center</aligny>	
-		<info>ListItem.Year</info>
-		<visible>Control.IsVisible(50) + ![Container.Content(Movies) | Container.Content(TVShows)]</visible>
-	  <include>Animation_CommonFade</include>
-	</control>
--->
 	<include>Furniture_ListMediaFlags</include>
 
 	<control type="textbox">
@@ -420,7 +390,7 @@
 	<control type="group">
 		<posx>160</posx>
 		<posy>55</posy>
-		<visible>Window.IsActive(2) | [Skin.HasSetting(singlemusiclisticon) + Control.IsVisible(50) + [Window.IsActive(20) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes)]]</visible>
+		<visible>Window.IsActive(2) | [Skin.HasSetting(singlemusiclisticon) + [Window.IsActive(20) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes)]]</visible>
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" start="0" end="100" time="500" />
 			<effect type="slide" start="300,0" end="0,0" time="500" easing="out" tween="quadratic" acceleration="-1" />

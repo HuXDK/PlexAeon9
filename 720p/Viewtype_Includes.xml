@@ -78,14 +78,12 @@
 		<posy>585</posy>
 		<width>70</width>
 		<height>40</height>
-		<colordiffuse>FF7c7c7c</colordiffuse>
 	</include>
 	<include name="Furniture_MovieInfoFlagAspect">
 		<posx>110</posx>
 		<posy>585</posy>
 		<width>70</width>
 		<height>40</height>
-		<colordiffuse>FF7c7c7c</colordiffuse>
 	</include>
 	<include name="Furniture_MovieInfoFlagSoundCodec">
 		<posx>525</posx>
@@ -93,7 +91,6 @@
 		<width>70</width>
 		<height>40</height>
 		<aspectratio>keep</aspectratio>
-		<colordiffuse>FF7c7c7c</colordiffuse>
 	</include>
 
 	<include name="Furniture_MovieInfoFlagSound">
@@ -102,7 +99,6 @@
 		<width>70</width>
 		<height>40</height>
 		<aspectratio>keep</aspectratio>
-		<colordiffuse>FF7c7c7c</colordiffuse>
 	</include>
 	<include name="Furniture_MovieInfoFrame">
 		<posx>325</posx>
@@ -110,14 +106,12 @@
 		<width>70</width>
 		<height>40</height>
 		<aspectratio>keep</aspectratio>
-		<colordiffuse>FF7c7c7c</colordiffuse>
 	</include>
 	<include name="Furniture_MovieInfoFlagSubs">
 		<posx>263</posx>
 		<posy>585</posy>
 		<width>70</width>
 		<height>40</height>
-		<colordiffuse>FF7c7c7c</colordiffuse>
 	</include>
 	<include name="Furniture_MovieInfoFlagRes">
 		<posx>210</posx>
@@ -125,7 +119,6 @@
 		<width>70</width>
 		<height>40</height>
 		<aspectratio>keep</aspectratio>
-		<colordiffuse>FF7c7c7c</colordiffuse>
 	</include>
 	<include name="Furniture_MovieInfoMediaFlags">
 		<control type="image" id="91">

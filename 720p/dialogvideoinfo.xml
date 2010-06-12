@@ -23,6 +23,7 @@
 		<height>720</height>
 		<texture>info/info_rightpanelbottom.png</texture>
 		<colordiffuse>A7FFFFFF</colordiffuse>
+		<include>Animation_CommonFade</include>
 	</control>
 <!--
 	<control type="image">
@@ -153,7 +154,7 @@
 			<texture>info/info_panellines_movie.png</texture>
 			<animation effect="fade" start="70" end="70" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>				
 		</control>
-
+<!--
 		<control type="label">
 			<description>Filename</description>
 			<posy>635</posy>
@@ -165,26 +166,25 @@
 			<wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.filenameandpath]</label>
 		</control>
-
+-->
 		<control type="image">
 			<posx>310</posx>
 			<posy>70</posy>
 			<width>55</width>
 			<height>35</height>
-			<aspect>keep</aspect>
+			<aspectratio>keep</aspectratio>
 			<visible>Container.Content(movies)</visible>
-			<colordiffuse>FF7c7c7c</colordiffuse>
 			<info>Listitem.Property(mediaTag::movieStudio)</info>
 		</control>
 
 		<control type="image">
-			<posx>390</posx>
-			<posy>70</posy>
-			<width>55</width>
-			<height>35</height>
-			<aspect>keep</aspect>
+			<posx>0</posx>
+			<posy>65</posy>
+			<width>85</width>
+			<height>45</height>
+			<aspectratio>keep</aspectratio>
+			<align>left</align>
 			<visible>Container.Content(movies)</visible>
-			<colordiffuse>FF7c7c7c</colordiffuse>
 			<info>Listitem.Property(mediaTag::contentRating)</info>
 		</control>
 
@@ -339,12 +339,14 @@
           <include>Objects_FSInfoButton</include>
           <visible>!IsEmpty(ListItem.Trailer)</visible>
         </control>
+<!--
 		<control type="button" id="13">
 			<label>Cinema</label>
 			<include>Objects_FSInfoButton</include>
 			<visible>Skin.HasSetting(enablecinema)</visible>
 			<onclick>RunScript(U:/skin/PlexAeon/extras/VideoIntro/VideoIntro.py)</onclick>
 		</control>			
+-->
     </control>
       <!-- end castmod new buttons added-->
       <control type="textbox">
@@ -356,10 +358,10 @@
 			<align>left</align>
 			<font>Font_FSInfoPlot</font>
 			<label fallback="31414">$INFO[ListItem.Plot]</label>
-			<autoscroll delay="15000" time="1000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>			
+			<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>			
 			<include>Colour_OffWhite</include>
 		<!-- castmod prevents it from showing when cast container shows -->
-        <visible>!Control.IsVisible(50)</visible>
+        <visible>!Control.IsVisible(5050)</visible>
         <!-- end castmod prevents it from showing when cast container shows -->
 		</control>
 		
@@ -376,8 +378,8 @@
 			<visible>false</visible>
 		</control>
 
-		<include condition="!Skin.HasSetting(nomediaflags)">Furniture_MovieInfoMediaFlags</include>		
-
+		<include>Furniture_MovieInfoMediaFlags</include>		
+<!--
 		<control type="label">
 			<description>IMDB rating</description>
 			<visible>!Skin.HasSetting(nomediaflags)+Skin.HasSetting(movieratingtext)</visible>
@@ -390,30 +392,16 @@
 			<label>[UPPERCASE]$INFO[ListItem.Rating][/UPPERCASE]</label>
 			<include>Colour_OffWhite</include>
 		</control>
- 
+--> 
 		<control type="image">
 			<description>IMDB rating</description>
-			<posx>60</posx>
+			<posx>340</posx>
 			<posy>70</posy>
 			<width>151</width>
 			<height>30</height>
 			<info>ListItem.StarRating</info>
-			<visible>!Skin.HasSetting(nomediaflags)+!Skin.HasSetting(movieratingtext)</visible>
-			<colordiffuse>FF7c7c7c</colordiffuse>
-			<animation effect="slide" start="-58,0" end="-58,0" time="0" condition="Control.IsVisible(91) + Control.IsVisible(92) + !Control.IsVisible(93) + Control.IsVisible(94)">Conditional</animation>				
-			<animation effect="slide" start="-323,0" end="-323,0" time="0" condition="!Control.IsVisible(91) + !Control.IsVisible(92) + !Control.IsVisible(93) + Control.IsVisible(94)">Conditional</animation>
-			<animation effect="slide" start="-302,0" end="-302,0" time="0" condition="Control.IsVisible(91) + !Control.IsVisible(92) + !Control.IsVisible(93) + !Control.IsVisible(94)">Conditional</animation>			
-			<animation effect="slide" start="-150,0" end="-150,0" time="0" condition="Control.IsVisible(91) + Control.IsVisible(92) + !Control.IsVisible(93) + !Control.IsVisible(94)">Conditional</animation>			
-			<animation effect="slide" start="-260,0" end="-260,0" time="0" condition="!Control.IsVisible(91) + Control.IsVisible(92) + !Control.IsVisible(93) + !Control.IsVisible(94)">Conditional</animation>				
-			<animation effect="slide" start="-88,0" end="-88,0" time="0" condition="Control.IsVisible(91) + Control.IsVisible(92) + Control.IsVisible(93) + !Control.IsVisible(94)">Conditional</animation>
-			<animation effect="slide" start="-108,0" end="-108,0" time="0" condition="!Control.IsVisible(91) + Control.IsVisible(92) + Control.IsVisible(93) + Control.IsVisible(94)">Conditional</animation>			
-			<animation effect="slide" start="-200,0" end="-200,0" time="0" condition="!Control.IsVisible(91) + Control.IsVisible(92) + Control.IsVisible(93) + !Control.IsVisible(94)">Conditional</animation>				
-			<animation effect="slide" start="-407,0" end="-407,0" time="0" condition="![Control.IsVisible(91) | Control.IsVisible(92) | Control.IsVisible(93) | Control.IsVisible(94)]">Conditional</animation>				
-			<animation effect="slide" start="-261,0" end="-261,0" time="0" condition="!Control.IsVisible(91) + !Control.IsVisible(92) + Control.IsVisible(93) + Control.IsVisible(94)">Conditional</animation>
-			<animation effect="slide" start="-148,0" end="-148,0" time="0" condition="Control.IsVisible(91) + !Control.IsVisible(92) + Control.IsVisible(93) + Control.IsVisible(94)">Conditional</animation>			
-			<animation effect="slide" start="-350,0" end="-350,0" time="0" condition="!Control.IsVisible(91) + !Control.IsVisible(92) + Control.IsVisible(93) + !Control.IsVisible(94)">Conditional</animation>			
-			<animation effect="slide" start="-238,0" end="-238,0" time="0" condition="Control.IsVisible(91) + !Control.IsVisible(92) + Control.IsVisible(93) + !Control.IsVisible(94)">Conditional</animation>				
-			<animation effect="slide" start="-177,0" end="-177,0" time="0" condition="!Control.IsVisible(91) + Control.IsVisible(92) + !Control.IsVisible(93) + Control.IsVisible(94)">Conditional</animation>			
+			<visible>true</visible>
+      		<colordiffuse>FFFFFF00</colordiffuse>
 		</control>
 	 
 	</control>
@@ -437,7 +425,7 @@
 			<visible>Container.Content(tvshows)</visible>
 			<animation effect="fade" start="70" end="70" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>				
 		</control>
-
+<!--
 		<control type="label">
 			<description>Filename</description>
 			<posy>635</posy>
@@ -449,7 +437,7 @@
 			<wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.filenameandpath]</label>
 		</control>		
-
+-->
 		<control type="label">
 			<description>Movie title</description>
 			<posx>0</posx>
@@ -531,7 +519,7 @@
 			<orientation>horizontal</orientation>
     	    <posx>0</posx>
        		<posy>295</posy>
-			<ondown>50</ondown>
+			<ondown>5050</ondown>
         <control type="button" id ="5">
           <description>Plot/Cast</description>
           <label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
@@ -562,10 +550,10 @@
 			<height>212</height>
 			<align>left</align>
 			<font>Font_FSInfoPlot</font>
-			<autoscroll delay="15000" time="1000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>			
+			<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>			
 			<label fallback="31414">$INFO[ListItem.Plot]</label>
 			<include>Colour_OffWhite</include>
-			<visible>!Control.IsVisible(50)</visible>
+			<visible>!Control.IsVisible(5050)</visible>
 		</control>
 		
 		<control type="label">
@@ -579,20 +567,20 @@
 			<label>31417</label>
 			<include>Colour_Grey</include>
 		</control>
-		
+<!--		
 		<control type="label">
 			<description>IMDB rating</description>
 			<posx>76</posx>
 			<posy>570</posy>
 			<width>110</width>
-			<height>29</height>
+			<height>39</height>
 			<align>left</align>
 			<font>Font_FSIMDBData</font>
 			<label>[UPPERCASE]$INFO[ListItem.Rating][/UPPERCASE]</label>
 			<include>Colour_OffWhite</include>
 			<visible>Skin.HasSetting(movieratingtext)</visible>			
 		</control>
-		
+	
 		<control type="image">
 			<description>IMDB rating</description>
 			<posx>76</posx>
@@ -602,7 +590,7 @@
 			<info>ListItem.StarRating</info>
 			<visible>!Skin.HasSetting(movieratingtext)</visible>
 		</control>		
-	
+-->	
 	</control>
 	
 <!-- Episode info -->
@@ -701,7 +689,7 @@
 			<label fallback="31435">$INFO[ListItem.CastAndRole]</label>
 			<include>Colour_OffWhite</include>
 		</control>
-
+<!--
 		<control type="label">
 			<description>Filename</description>
 			<posy>635</posy>
@@ -713,7 +701,7 @@
 			<wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.filenameandpath]</label>
 		</control>		
-
+-->
 	<control type="grouplist" id="9000">
 			<width>848</width>
 			<height>33</height>
@@ -750,9 +738,9 @@
 			<height>212</height>
 			<align>left</align>
 			<font>Font_FSInfoPlot</font>
-			<autoscroll delay="15000" time="1000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>			
+			<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>			
 			<label fallback="31414">$INFO[ListItem.Plot]</label>
-		    <visible>!Control.IsVisible(50)</visible>
+		    <visible>!Control.IsVisible(5050)</visible>
 			<include>Colour_OffWhite</include>
 		</control>
 		
@@ -767,7 +755,7 @@
 			<label>31417</label>
 			<include>Colour_Grey</include>
 		</control>
-		
+<!--		
 		<control type="label">
 			<description>IMDB rating</description>
 			<posx>76</posx>
@@ -790,12 +778,12 @@
 			<info>ListItem.StarRating</info>
 			<visible>!Skin.HasSetting(movieratingtext)</visible>
 		</control>		
-	
+-->	
 	</control>	
  <!-- castmod removed this for search dialog -->
     <!-- <include>Background_ContextBlack</include> --><!-- end castmod removed this for search dialog -->
     <!-- castmod displays selectable cast -->
-    <control type="list" id="50">
+    <control type="list" id="5050">
       <description>Cast List Container</description>
       <posx>550</posx>
       <posy>410</posy>
@@ -803,10 +791,10 @@
       <height>206</height>
       <font>Font_FSInfoPlot</font>
       <animation effect="slide" start="0,0" end="0,-25" time="0" condition="!Container.Content(movies)">conditional</animation>
-     <onleft>9000</onleft>
+      <onleft>9000</onleft>
       <onright>9000</onright>
       <onup>9000</onup>
-      <ondown>50</ondown>
+      <ondown>5050</ondown>
       <orientation>vertical</orientation>
       <itemlayout width="250" height="29">
        <control type="image">
@@ -815,7 +803,7 @@
           <width>22</width>
           <height>22</height>
           <texture>DefaultActorBig.png</texture>
-          <info>ListItem.Icon</info>
+          <info>ListItem.icon</info>
         </control>
         <control type="label">
           <posx>30</posx>
@@ -837,7 +825,7 @@
           <width>22</width>
           <height>22</height>
           <texture>DefaultActorBig.png</texture>
-          <info>ListItem.Icon</info>
+          <info>ListItem.icon</info>
         </control>
         <control type="label">
           <posx>30</posx>
@@ -853,7 +841,7 @@
      </focusedlayout>
     </control>
     <control type="group">
-      <visible>Control.IsVisible(50)</visible>
+      <visible>Control.IsVisible(5050)</visible>
       <animation effect="slide" start="0,0" end="25,0" time="0" condition="!Control.IsVisible(61)">conditional</animation>
       <animation effect="slide" start="0,0" end="0,-25" time="0" condition="!Container.Content(movies)">conditional</animation>
       <control type="image">
@@ -862,7 +850,7 @@
         <posy>410</posy>
         <width>150</width>
         <height>200</height>
-        <info>Container(50).ListItem.Icon</info>
+        <info>Container(5050).ListItem.icon</info>
         <aspectratio aligny="center">keep</aspectratio>
         <align>center</align>
       </control>
