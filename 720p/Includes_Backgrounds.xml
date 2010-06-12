@@ -612,7 +612,7 @@
 		</control>
 
 		<control type="multiimage">
-			<include>Background_SingleImage</include>
+			<include>Background_ImageFolder</include>
 			<imagepath>backdrops/default_settings</imagepath>
 			<info>Skin.String(CustomSettings)</info>
 			<visible>Container(300).HasFocus(9) + Control.IsVisible(300)</visible>
@@ -628,7 +628,7 @@
 		</control>
 			
 		<control type="multiimage">
-			<include>Background_SingleImage</include>
+			<include>Background_ImageFolder</include>
 			<imagepath>backdrops/default_pictures</imagepath>
 			<info>Skin.String(CustomPictures)</info>
 			<visible>Container(300).HasFocus(5) + Control.IsVisible(300)</visible>
@@ -644,7 +644,7 @@
 		</control>
 
 		<control type="multiimage">
-			<include>Background_SingleImage</include>
+			<include>Background_ImageFolder</include>
 			<imagepath>backdrops/default_games</imagepath>
 			<info>Skin.String(CustomGames)</info>
 			<visible>Container(300).HasFocus(2) + Control.IsVisible(300)</visible>
