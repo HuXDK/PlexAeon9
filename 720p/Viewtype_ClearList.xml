@@ -213,7 +213,6 @@
 			<visible>Control.IsVisible(54) + [Window.IsActive(24) | Window.IsActive(1) | Window.IsActive(2)]</visible>
 			<include>Animation_cListCommonFade</include>
 			<include>Animation_cListInfoPanelZoom</include>
-<!--			<include>Animation_cListHorizontalMenuInfoPanelSlide</include> -->
 			<control type="image">
 				<posx>10</posx>
 				<posy>10</posy>
@@ -221,31 +220,22 @@
 				<height>480</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureInfoPanelSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureInfoPanelSolid</include>
-				<visible>!Skin.HasSetting(clearlistinfothin)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>420</width>
-				<height>500</height>
-				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureInfoPanel</include>
-				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureInfoPanel</include>
+		     	<animation effect="fade" start="60" end="60" time="0" condition="Skin.HasSetting(clearlistthin)">Conditional</animation>
 			</control>
 			<!-- Movie/TvShow Icon -->
 		<control type="group">
 			<posx>-240</posx>
-			<control type="image">
+			<control type="largeimage">
 				<posx>270</posx>
 				<posy>20</posy>
 				<width>150</width>
 				<height>222</height>
-				<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
+				<texture diffuse="multiplex/multiplex_mask.png">deefaultvideo.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<info>ListItem.Icon</info>
-				<animation effect="fade" time="100">Visible</animation>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)] + ![Container().OnNext | Container().OnPrevious]</visible>
 			</control>
-<!--
+
 			<control type="image">
 				<posx>270</posx>
 				<posy>20</posy>
@@ -255,7 +245,7 @@
 				<texture>common/blank.png</texture>
 				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)</visible>
 			</control>
--->
+<!--
 			<control type="image">
 				<posx>270</posx>
 				<posy>20</posy>
@@ -263,9 +253,10 @@
 				<height>222</height>
 				<texture>multiplex/multiplex_glass.png</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<animation effect="fade" time="100">Visible</animation>
+				<animation effect="fade" start="70" end="100" time="100" delay="50">Visible</animation>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)] + ![Container().OnNext | Container().OnPrevious]</visible>
 			</control>
+-->
 		    <control type="image">
 				<posx>270</posx>
 				<posy>0</posy>
@@ -949,42 +940,6 @@
 	<include name="Viewtype_ClearList">
 	<control type="group">
 		<visible>Control.IsVisible(54)</visible>
-<!--			<include>Animation_cListHorizontalMenuBackgroundSlide</include> -->
-<!--
-			<control type="button" id="2501">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>0</width>
-				<height>0</height>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<onleft>7000</onleft>
-				<onright>54</onright>
-				<onup>54</onup>
-				<ondown>54</ondown>
-			</control>
--->
-			<!-- Black Background for Pictures 
-			<control type="image">
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<texture>clearlist/pictures_background.png</texture>
-				<visible>Window.IsActive(2)</visible>
-			</control>
-
-			<control type="image">
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<fadetime>400</fadetime>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<texture>$INFO[listitem.property(fanart_image)]</texture>
-				<visible>Window.IsActive(2)</visible>
-			</control>
-			
--->
-
 			<!-- Background for Solid List -->
 			<control type="image">
 				<posx>114</posx>
@@ -993,17 +948,7 @@
 				<height>680</height>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureSolid</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureSolid</include>
-				<visible>!Skin.HasSetting(clearlistthin)</visible>
-			</control>
-			<!-- List Background -->
-
-			<control type="image">
-				<posx>114</posx>
-				<posy>40</posy>
-				<width>460</width>
-				<height>680</height>
-				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTexture</include>
-				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTexture</include>
+		     	<animation effect="fade" start="60" end="60" time="0" condition="Skin.HasSetting(clearlistthin)">Conditional</animation>
 			</control>
 
 			<include>cList_VideoInfoPanel</include>
@@ -1033,14 +978,7 @@
 				<ondown>54</ondown>
 				<onleft>7000</onleft>
 				<scrolltime>0</scrolltime>
-				<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(2)">cList_OnRightPlaylist</include>
-				<include condition="Window.IsActive(myvideofiles) | Window.IsActive(1)">cList_OnRightLibraryMovies</include>
-				<include condition="Window.IsActive(502)">cList_OnRightLibraryMusic</include>
-				<orientation>vertical</orientation>
-	<!--		<pagecontrol>2505</pagecontrol> --->
-				<visible>true</visible>
-				<include>Animation_cListCommonFade</include>
-				<itemlayout width="450" height="40" condition="true">
+				<itemlayout width="450" height="40">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -1106,35 +1044,6 @@
 						<label>$INFO[ListItem.Title]</label>
 						<visible>Container.Content(episodes) + !Skin.HasSetting(oldCListInfo)</visible>
 					</control>
-<!--
-					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
-						<width>420</width>
-						<height>40</height>
-						<font>Font_ClearInfoValue</font>
-						<aligny>center</aligny>
-						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
-						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
-						<align>left</align>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-					</control>
-
-					<control type="label">
-						<posx>426</posx>
-						<posy>8</posy>
-						<width>46</width>
-						<height>23</height>
-						<font>Font_ClearInfoValue</font>
-						<aligny>center</aligny>
-						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColors</include>
-						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColors</include>
-						<align>right</align>
-						<label>$INFO[ListItem.Property(unwatchedepisodes)]</label>
-						<visible>Window.IsActive(myvideofiles) + !Skin.HasSetting(nooverlays)</visible>
-					</control>
--->
 					<control type="image">
 						<posx>410</posx>
 						<posy>8</posy>
@@ -1146,7 +1055,7 @@
 					</control>
 
 				</itemlayout>
-				<focusedlayout width="450" height="40" condition="true">
+				<focusedlayout width="450" height="40">
 					<control type="image">
 						<posx>-12</posx>
 						<posy>-20</posy>
@@ -1217,35 +1126,6 @@
 						<label>$INFO[ListItem.Title]</label>
 						<visible>Container.Content(episodes) + !Skin.HasSetting(oldCListInfo)</visible>
 					</control>
-<!--
-					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
-						<width>420</width>
-						<height>40</height>
-						<font>Font_ClearInfoValue</font>
-						<aligny>center</aligny>
-						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
-						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
-						<align>left</align>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-					</control>
-
-					<control type="label">
-						<posx>426</posx>
-						<posy>8</posy>
-						<width>46</width>
-						<height>23</height>
-						<font>Font_ClearInfoValue</font>
-						<aligny>center</aligny>
-						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
-						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightLabelColorsFocus</include>
-						<align>right</align>
-						<label>$INFO[ListItem.Property(unwatchedepisodes)]</label>
-						<visible>Window.IsActive(myvideofiles) + !Skin.HasSetting(nooverlays)</visible>
-					</control>
--->
 					<control type="image">
 						<posx>410</posx>
 						<posy>8</posy>

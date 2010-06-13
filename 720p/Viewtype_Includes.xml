@@ -2441,6 +2441,7 @@
 			<onclick>Skin.ToggleSetting(clearlistthin)</onclick>
 			<selected>Skin.HasSetting(clearlistthin)</selected>
 			<visible>Control.IsVisible(54)</visible>
+			<onclick>XBMC.ReloadSkin</onclick>
 		</control>
 		<control type="radiobutton" id="700029">
 			<include>MediaMenuButton</include>
@@ -2448,6 +2449,7 @@
 			<onclick>Skin.ToggleSetting(clearlistinfothin)</onclick>
 			<selected>Skin.HasSetting(clearlistinfothin)</selected>
 			<visible>Control.IsVisible(54)</visible>
+			<onclick>XBMC.ReloadSkin</onclick>
 		</control>
 
 	</include>
