@@ -667,33 +667,33 @@
 			<effect type="slide" start="0,0" end="300,0" easing="in" tween="quadratic" time="200" acceleration="-1" />
 		</animation>
 
-		<control type="image" id="4000">
+		<control type="largeimage" id="4000">
 			<include>MovieListIcon_Thumb</include>
 			<animation effect="zoom" start="90" end="80" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
 			<info>Container.Listitem(2).Icon</info>
 			<visible>Container.OnPrevious</visible>
 		</control>
 
-		<control type="image" id="4000">
+		<control type="largeimage" id="4000">
 			<include>MovieListIcon_Glass</include>
 			<animation effect="zoom" start="90" end="80" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
 			<visible>Container.OnPrevious</visible>			
 		</control>
 
-		<control type="image" id="4000">
+		<control type="largeimage" id="4000">
 			<include>MovieListIcon_Thumb</include>
 			<animation effect="zoom" start="100" end="90" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
 			<info>Container.Listitem(1).Icon</info>
 			<visible>Container.OnPrevious</visible>			
 		</control>
 
-		<control type="image" id="4000">
+		<control type="largeimage" id="4000">
 			<include>MovieListIcon_Glass</include>
 			<animation effect="zoom" start="100" end="90" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
 			<visible>Container.OnPrevious</visible>			
 		</control>
 
-		<control type="image" id="4000">
+		<control type="largeimage" id="4000">
 			<include>MovieListIcon_Thumb</include>
 			<visible>Container.OnPrevious</visible>
 			<animation effect="fade" start="0" end="0" time="0">visible</animation>
@@ -701,7 +701,7 @@
 			<info>Container.Listitem(0).Icon</info>
 		</control>
 
-		<control type="image" id="4000">
+		<control type="largeimage" id="4000">
 			<include>MovieListIcon_Glass</include>
 			<animation effect="fade" start="0" end="0" time="0">visible</animation>
 			<animation effect="fade" start="0" end="100" time="200">Hidden</animation>
