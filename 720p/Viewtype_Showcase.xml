@@ -3521,7 +3521,7 @@
 
 				<pagecontrol>60</pagecontrol> -->
 				<orientation>horizontal</orientation>
-				<scrolltime>300</scrolltime>
+				<scrolltime>250</scrolltime>
 				<focusposition>3</focusposition>
 				<itemlayout height="350" width="196" condition="Window.IsActive(28) | [Window.IsActive(24) + !Container.Content(episodes)] | Window.IsActive(1)">
 					<control type="image">
