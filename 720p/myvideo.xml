@@ -36,20 +36,16 @@
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
 			<visible>!Skin.HasSetting(curtains)</visible>
-			<animation effect="zoom" start="110" end="130" center="auto" time="30000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="14000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-			<animation effect="rotate" center="360,640" start="-2" end="2" time="22000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-			<animation effect="fade" start="50" end="0" time="900" condition="Skin.HasSetting(DimFanart)">Conditional</animation>
 			<texture>$INFO[listitem(1).property(fanart_image)]</texture>
+			<animation effect="fade" start="30" end="30" condition="Skin.HasSetting(DimFanart)">Conditional</animation>
+			<animation effect="fade" start="30" end="0" delay="500" time="500" condition="![Container().OnNext | Container().OnPrevious]">Conditional</animation>
 		</control>
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
 			<visible>!Skin.HasSetting(curtains)</visible>
-			<animation effect="zoom" start="110" end="130" center="auto" time="30000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="14000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-			<animation effect="rotate" center="360,640" start="-2" end="2" time="22000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-			<animation effect="fade" start="50" end="0" time="900" condition="Skin.HasSetting(DimFanart)">Conditional</animation>
 			<texture>$INFO[listitem(-1).property(fanart_image)]</texture>
+			<animation effect="fade" start="30" end="30" condition="Skin.HasSetting(DimFanart)">Conditional</animation>
+			<animation effect="fade" start="30" end="0" delay="500" time="500" condition="![Container().OnNext | Container().OnPrevious]">Conditional</animation>
 		</control>
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
