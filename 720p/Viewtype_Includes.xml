@@ -156,7 +156,8 @@
 	</include>
 
 	<include name="Furniture_ListMediaFlags">
-
+		<control type="group">
+			<visible>![Container().OnNext | Container().OnPrevious]</visible>
 		<control type="image">
 			<posx>208</posx>
 			<posy>117</posy>
@@ -224,11 +225,12 @@
 
 			</control>
 		</control>
+		</control>
 
 	</include>
 	<include name="Furniture_ShowcaseMediaFlags">  <!-- Showcase and Multiplex -->
 		<control type="group">
-			<visible>!Skin.HasSetting(nomediaflags) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
+			<visible>!Skin.HasSetting(nomediaflags) + ![Control.HasFocus(60) | Control.HasFocus(94)] + ![Container().OnNext | Container().OnPrevious]</visible>
 			<include>Animation_CommonFade</include>
 			<posy>0</posy>
 			<control type="group">
@@ -279,7 +281,7 @@
 	<include name="Furniture_MultiplexMediaFlags">  <!-- Old Multiplex Movies-->
 		<control type="group">
 				<posy>3</posy>
-			<visible>!Skin.HasSetting(nomediaflags) + Container.Content(movies)</visible>
+			<visible>!Skin.HasSetting(nomediaflags) + Container.Content(movies) + ![Container().OnNext | Container().OnPrevious]</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideMultiplex</include>
 			<control type="group">
@@ -382,7 +384,7 @@
 	<include name="Furniture_CoverflowMediaFlags">  <!-- CoverFlow Media Flags -->
 		<control type="group">
 			<posy>95</posy>
-			<visible>!Skin.HasSetting(nomediaflags)</visible>
+			<visible>!Skin.HasSetting(nomediaflags) + ![Container().OnNext | Container().OnPrevious]</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideMultiplex</include>
 			<control type="group">
@@ -537,7 +539,7 @@
 	</include>
 	<include name="Furniture_Anoobie3MediaFlags">
 		<control type="group">
-			<visible>Window.IsActive(24) + Control.IsVisible(563) + !Skin.HasSetting(nomediaflags) + Container.Content(movies)</visible>
+			<visible>Window.IsActive(24) + Control.IsVisible(563) + !Skin.HasSetting(nomediaflags) + Container.Content(movies) + ![Container().OnNext | Container().OnPrevious]</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideMultiplex</include>
 			<posy>60</posy>
@@ -682,6 +684,7 @@
 	<include name="LowList_MediaFlags">
 		<control type="group">		
 			<include>Animation_CommonFade</include>
+			<visible>![Container().OnNext | Container().OnPrevious]</visible>
 				<posx>875</posx>
 				<posy>670</posy>
 				<control type="image">
