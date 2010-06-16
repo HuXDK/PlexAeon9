@@ -157,7 +157,8 @@
 
 	<include name="Furniture_ListMediaFlags">
 		<control type="group">
-			<visible>![Container().OnNext | Container().OnPrevious]</visible>
+			<visible>![Container().OnNext | Container().OnPrevious] + !Container().IsScrolling</visible>
+		<animation effect="fade" start="70" end="70" time="500" delay="1500" condition="visible">Conditional</animation>
 		<control type="image">
 			<posx>208</posx>
 			<posy>117</posy>
@@ -328,58 +329,6 @@
 			</control>
 			</control>
 		</control>
-<!--
-		<control type="group">
-			<visible>Window.IsActive(24) + [Control.IsVisible(52) | Control.IsVisible(553)] + !Skin.HasSetting(nomediaflags) + [Container.Content(episodes)]</visible>
-			<include>Animation_CommonFade</include>
-			<include>Animation_HideMultiplex</include>
-			<control type="group">
-				<posx>700</posx>
-			<control type="image" id="91">
-				<include>Furniture_PanelMediaFlagsVars</include>
-				<info>Listitem.Property(mediaTag::studio)</info>
-				<colordiffuse>6FFEF280</colordiffuse>
-				<visible>!Skin.HasSetting(nostudio)</visible>
-			</control>
-			<control type="image" id="91">
-				<include>Furniture_PanelMediaFlagsVars</include>
-				<info>Listitem.Property(mediaTag::tvStudio)</info>
-				<colordiffuse>6FFEF280</colordiffuse>
-				<visible>!Skin.HasSetting(nostudio)</visible>
-			</control>
-			<control type="image" id="91">
-				<include>Furniture_PanelMediaFlagsVars</include>
-				<info>Listitem.Property(mediaTag::aspectRatio)</info>
-				<colordiffuse>6FFEF280</colordiffuse>
-				<visible>Skin.HasSetting(nostudio)</visible>
-			</control>
-			</control>
-			<control type="group">
-				<posx>1005</posx>
-			<control type="image" id="93">
-				<include>Furniture_PanelMediaFlagsVars</include>
-				<colordiffuse>6FFEF280</colordiffuse>
-				<info>Listitem.Property(mediaTag::videoResolution)</info>
-			</control>
-			</control>
-			<control type="group">
-				<posx>1115</posx>
-			<control type="image">
-				<include>Furniture_PanelMediaFlagsVars</include>
-				<colordiffuse>6FFEF280</colordiffuse>
-				<info>Listitem.Property(mediaTag::audioChannels)</info>
-			</control>
-			</control>
-			<control type="group">
-				<posx>790</posx>
-			<control type="image" id="92">
-				<include>Furniture_PanelMediaFlagsVars</include>
-				<colordiffuse>6FFEF280</colordiffuse>
-				<info>Listitem.Property(mediaTag::videoCodec)</info>
-			</control>
-			</control>
-		</control>
-		-->
 	</include>
 	<include name="Furniture_CoverflowMediaFlags">  <!-- CoverFlow Media Flags -->
 		<control type="group">
@@ -3488,7 +3437,7 @@
 				<label>"$INFO[ListItem.Tagline]"</label>
 				<wrapmultiline>true</wrapmultiline>
 				<textcolor>d0FFFFFF</textcolor>
-				<visible>!IsEmpty(ListItem.Tagline)</visible>
+				<visible>!IsEmpty(ListItem.Tagline) + ![Container().OnNext | Container().OnPrevious]</visible>
 			</control>
 				
 				<control type="textbox">
@@ -5902,14 +5851,7 @@
 	
 	<include name="Viewtype_Coverflow">
 	    <control type="group">
-	        <visible>Window.IsActive(28) | Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)]</visible>
-	        <include>CoverflowMovies</include>
-	    </control>
-	    <control type="group">
-	        <visible>Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2)</visible>
-	        <include>CoverflowSquare</include>
-	    </control>
-	    <control type="group">
+			<visible>Control.IsVisible(55)</visible>
 	        <control type="fixedlist" id="55">
 	            <viewtype label="Coverflow">list</viewtype>
 				<include>MovieFlowGroupVars</include>
@@ -6021,6 +5963,8 @@
 	        </control>
 	    <control type="group">
  	      		<include>CoverflowVisible</include>
+	        <include>CoverflowMovies</include>
+	        <include>CoverflowSquare</include>
 
 	        <control type="scrollbar" id="60">
 	            <posx>67</posx>
@@ -6083,7 +6027,7 @@
 	  			 	<posy>112</posy>
 					<textcolor>d0FFFFFF</textcolor>
 					<font>cast</font>	
-	                <visible>!IsEmpty(ListItem.Tagline)</visible>
+				<visible>!IsEmpty(ListItem.Tagline) + ![Container().OnNext | Container().OnPrevious]</visible>
 	            </control>
 	            <control type="label" id="75">
 	                <description>Detail</description>

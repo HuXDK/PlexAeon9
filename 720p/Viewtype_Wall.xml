@@ -735,8 +735,8 @@
 			</control>
 		</control>
 -->
-		<include condition="!Skin.HasSetting(smallmoviewall) + !Skin.HasSetting(wallinfooff)">WallInfoPaneMoviesBig</include>
-		<include condition="Skin.HasSetting(smallmoviewall) + !Skin.HasSetting(wallinfooff)">WallInfoPaneMoviesSmall</include>
+		<include condition="!Skin.HasSetting(smallmoviewall) + !Skin.HasSetting(wallinfooff) + Control.IsVisible(109)">WallInfoPaneMoviesBig</include>
+		<include condition="Skin.HasSetting(smallmoviewall) + !Skin.HasSetting(wallinfooff) + Control.IsVisible(109)">WallInfoPaneMoviesSmall</include>
 	</control>
 	</include>
 </includes>
