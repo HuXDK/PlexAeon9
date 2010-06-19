@@ -43,7 +43,8 @@
 		<posy>665</posy>
 		<width>50</width>
 		<height>29</height>
-		<include>Animation_CommonFade</include>
+		<include>MediaListSelectDelay</include>
+		<include>MediaViewFade</include>
 		<aspectratio>keep</aspectratio>
 		<visible>[Control.IsVisible(551) | Control.IsVisible(54)] + ![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7898)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7814)] + ![!Skin.HasSetting(highlist) + Control.IsVisible(7850) + ![IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]]</visible>
 	</include>
@@ -3403,7 +3404,8 @@
 			<height>381</height>
 			<visible>Container.Content(movies) + Control.IsVisible(563) + [Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | Control.IsVisible(109) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
 			<animation effect="fade" end="0" time="200">WindowClose</animation>
-			<animation effect="fade" start="0" end="100" time="1300">Visible</animation>
+			<include>MediaListSelectDelay</include>
+			<include>MediaViewFade</include>
 	
 			<control type="image">
 					<posx>0</posx>
@@ -3438,6 +3440,8 @@
 				<wrapmultiline>true</wrapmultiline>
 				<textcolor>d0FFFFFF</textcolor>
 				<visible>!IsEmpty(ListItem.Tagline) + ![Container().OnNext | Container().OnPrevious]</visible>
+				<include>MediaListSelectDelay</include>
+				<include>MediaViewFade</include>
 			</control>
 				
 				<control type="textbox">

@@ -249,6 +249,9 @@
 		    </control>
  		</focusedlayout>
 	</control>
+	<control type="group">
+			<include>MediaListSelectDelay</include>
+			<include>MediaViewFade</include>
 	
 	<control type="scrollbar" id="61">
       <description>My first scroll bar control</description>
@@ -342,7 +345,6 @@
 		<include>listcolorfocus</include>	
 		<label>($INFO[ListItem.year])</label>
 		<visible>Control.IsVisible(50) + !IsEmpty(Listitem.Year) + ![Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-		<animation effect="fade" time="500">Visible</animation>
 	</control>
 
 	<control type="image">
@@ -807,6 +809,7 @@
 		</control>
 
 	</control>
+</control>
 </control>
 </include>
 

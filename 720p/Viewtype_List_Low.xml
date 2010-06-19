@@ -1104,11 +1104,15 @@
 		</control>
 -->
 		<!-- Low List Detail Panel Includes -->
+		<control type="group">
+		<include>MediaListSelectDelay</include>
+		<include>MediaViewFade</include>
 		<include>LowList_MusicDetailPanels</include>
 		<include>LowList_MovieDetailPanels</include>
 		<include>LowList_TvDetailPanels</include>
 		<include>LowList_CommonDetailPanels</include>
 		<include>LowList_Detail_Separators</include>
+		</control>
 		<!-- Detail menu bar -->
 		<control type="group">
 
@@ -1345,7 +1349,7 @@
 			<description>Media icon</description>
 			<posx>10</posx>
 			<posy>400</posy>
-			<visible>Control.IsVisible(551) + !Container(551).OnNext + !Container(551).OnPrevious</visible>
+			<visible>Control.IsVisible(551)</visible>
 			<animation effect="slide" start="0,0" end="-22,0" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(61)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-57" time="400" easing="inout" tween="cubic" condition="Control.IsVisible(20)">Conditional</animation>
 			<animation effect="slide" time="1000" start="-600,0" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
@@ -1354,6 +1358,8 @@
 			<include condition="![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]">LowList_EpisodeMediaIcons</include>
 			<include condition="![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]">LowList_PosterMediaIcons</include>
 			<include condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]">LowList_SquareMediaIcons</include>
+			<include>MediaListSelectDelay</include>
+			<include>MediaViewFade</include>
 		</control>
 
 		<control type="group">

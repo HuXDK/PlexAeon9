@@ -1267,7 +1267,6 @@
 		<control type="group">
 			<include>MediaListSelectDelay</include>
 			<include>MediaViewFade</include>
-
 			<include>cList_VideoInfoPanel</include>
 			<include>cList_MusicInfoPanel</include>
 		</control>

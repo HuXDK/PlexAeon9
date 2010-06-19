@@ -28,6 +28,8 @@
 		<height>13</height>
 		<font>Font_MultiplexInfoLabel</font>
 		<textcolor>FFFFFAA6</textcolor>
+		<include>MediaListSelectDelay</include>
+		<include>MediaViewFade</include>
 	</include>
  
 	<include name="MultiplexInfoValue">
@@ -39,6 +41,8 @@
 		<height>13</height>
 		<font>Font_MultiplexInfoValue</font>
 		<textcolor>FFFFFFFF</textcolor>
+		<include>MediaListSelectDelay</include>
+		<include>MediaViewFade</include>
 	</include>
  
 	<include name="MultiplexInfoLabelBigThumb">
@@ -48,6 +52,8 @@
 		<height>13</height>
 		<font>Font_MultiplexInfoLabel</font>
 		<textcolor>FFFFFAA6</textcolor>
+		<include>MediaListSelectDelay</include>
+		<include>MediaViewFade</include>
 	</include>
  
 	<include name="MultiplexInfoValueBigThumb">
@@ -57,13 +63,15 @@
 		<height>13</height>
 		<font>Font_MultiplexInfoValue</font>
 		<textcolor>FFFFFFFF</textcolor>
+		<include>MediaListSelectDelay</include>
+		<include>MediaViewFade</include>
 	</include>
  
 	<include name="MultiplexInfoPaneMovies">
 		<control type="group">
  
 			<posx>0</posx>
-			<posy>65</posy>F
+			<posy>65</posy>
 			<width>1280</width>
 			<height>381</height>
 <!--			<visible>Container.Content(movies) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | ControlGroup(7000).HasFocus()]</visible> -->
@@ -195,7 +203,7 @@
 				<control type="group">
  
 					<posy>322</posy>
-				<visible>![Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb) | Skin.HasSetting(multiplexbigtrailer)]</visible>
+					<visible>![Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb) | Skin.HasSetting(multiplexbigtrailer)]</visible>
 					<control type="label">
 						<include>MultiplexInfoLabel</include>
 						<label>$LOCALIZE[31408]:</label>
@@ -214,6 +222,8 @@
                         <info>ListItem.StarRating</info>
                         <colordiffuse>FFFFFF00</colordiffuse>
    						<visible>!Skin.HasSetting(movieratingtext)</visible>
+						<include>MediaListSelectDelay</include>
+						<include>MediaViewFade</include>
                 	</control>
  
 				</control>
@@ -275,6 +285,8 @@
                         <info>ListItem.StarRating</info>
                         <colordiffuse>FFFFFF00</colordiffuse>
    						<visible>!Skin.HasSetting(movieratingtext)</visible>
+						<include>MediaListSelectDelay</include>
+						<include>MediaViewFade</include>
                 	</control>
  
 				</control>
@@ -315,7 +327,8 @@
 				<textcolor>d0FFFFFF</textcolor>
 				<autoscroll delay="15000" time="4000" repeat="10000">true</autoscroll>
 				<visible>Skin.HasSetting(multiplexplot) | ![Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb) | Skin.HasSetting(multiplexbigtrailer) | Skin.HasSetting(multiplexplot)  | Skin.HasSetting(multiplexposter)| Skin.HasSetting(multiplextrailer)] | Skin.HasSetting(multiplexposter)</visible>
-				<pagecontrol>13</pagecontrol>
+				<include>MediaListSelectDelay</include>
+				<include>MediaViewFade</include>
 			</control>
  
 			<control type="textbox">
@@ -327,6 +340,8 @@
 				<label>[COLOR=FF3692EE]$INFO[ListItem.tagline][/COLOR][CR]$INFO[ListItem.Plot]</label>
 				<textcolor>d0FFFFFF</textcolor>
 				<autoscroll delay="15000" time="4000" repeat="10000">true</autoscroll>
+				<include>MediaListSelectDelay</include>
+				<include>MediaViewFade</include>
 				<visible>Skin.HasSetting(multiplextrailer)</visible>
 			</control>
  
@@ -340,6 +355,8 @@
 				<textcolor>d0FFFFFF</textcolor>
 				<autoscroll delay="15000" time="4000" repeat="10000">true</autoscroll>
 				<visible>Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb) | Skin.HasSetting(multiplexbigtrailer)</visible>
+				<include>MediaListSelectDelay</include>
+				<include>MediaViewFade</include>
 			</control>
  
 			<control type="group">
