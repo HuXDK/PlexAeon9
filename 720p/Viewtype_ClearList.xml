@@ -233,7 +233,7 @@
 				<texture diffuse="multiplex/multiplex_mask.png">deefaultvideo.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<info>ListItem.Icon</info>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)] + ![Container().OnNext | Container().OnPrevious]</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
 			</control>
 
 			<control type="image">
@@ -266,7 +266,6 @@
       			<texture background="true">$INFO[listitem.property(fanart_image)]</texture>
         		<bordertexture border="8">list/list_frame.png</bordertexture>
         		<bordersize>15</bordersize>
-				<animation effect="fade" time="100">Visible</animation>
         		<visible>[Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes) + !Container.Content(Seasons)]] + IsEmpty(ListItem.Thumb)</visible>
      		</control>
      		 <control type="image">
@@ -277,7 +276,6 @@
         		<aspectratio aligny="top">keep</aspectratio>
         		<texture flipy="true" diffuse="list/list_reflect_mask.png">$INFO[listitem.property(fanart_image)]</texture>
         		<bordersize>8</bordersize>
- 				<animation effect="fade" time="100">Visible</animation>
        		<visible>[Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)]] + IsEmpty(ListItem.Thumb)</visible>
       		</control>
 		</control>			
@@ -551,7 +549,7 @@
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
-				<visible>!IsEmpty(ListItem.Plot) + !Container.Content(episodes)+ !IsEmpty(ListItem.Tagline)</visible>
+				<visible>!IsEmpty(ListItem.Plot) + !Container.Content(episodes) + !IsEmpty(ListItem.Tagline)</visible>
 			</control>
 			<control type="textbox">
 				<posx>20</posx>
@@ -563,7 +561,7 @@
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
-				<visible>!IsEmpty(ListItem.Plot) + !Container.Content(episodes) + IsEmpty(ListItem.Tagline)</visible>
+				<visible>!IsEmpty(ListItem.Plot) + !Container.Content(episodes) + IsEmpty(ListItem.Tagline) + ![Window.IsActive(24) + ![Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]]</visible>
 			</control>
 			<control type="textbox">
 				<posx>20</posx>
@@ -575,7 +573,7 @@
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
-				<visible>!IsEmpty(ListItem.Plot) + Container.Content(episodes)</visible>
+				<visible>!IsEmpty(ListItem.Plot) + Container.Content(episodes) | [Window.IsActive(24) + ![Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]]</visible>
 			</control>
 			<control type="label">
 				<description>Title</description>
@@ -599,6 +597,25 @@
 				<visible>Container.Content(episodes)</visible>
 			</control>
 
+			<control type="label">
+				<description>Title</description>
+				<posx>20</posx>
+				<posy>270</posy>
+				<width>375</width>
+				<label>[COLOR FF3692EE]$INFO[ListItem.year] [/COLOR]</label>
+				<include>cList_InfoValue</include>
+				<visible>!IsEmpty(Listitem.Year) + Window.IsActive(24) + ![Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			</control>
+			<control type="label">
+				<description>Title</description>
+				<posx>20</posx>
+				<posy>250</posy>
+				<width>375</width>
+				<label>[COLOR FF365EEE]$INFO[ListItem.Title] [/COLOR]</label>
+				<include>cList_InfoValue</include>
+				<scroll>false</scroll>
+				<visible>Window.IsActive(24) + ![Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			</control>
 
 			<control type="textbox">
 				<posx>20</posx>
@@ -951,23 +968,6 @@
 		     	<animation effect="fade" start="60" end="60" time="0" condition="Skin.HasSetting(clearlistthin)">Conditional</animation>
 			</control>
 
-			<include>cList_VideoInfoPanel</include>
-			<include>cList_MusicInfoPanel</include>
-			<!-- Pictures Thumb -->
-			
-			<control type="image">
-				<posy>100</posy>
-				<posx>680</posx>
-				<width>366</width>
-				<height>800</height>
-				<aspectratio aligny="top">keep</aspectratio>
-				<fadetime>400</fadetime>
-				<texture>$INFO[ListItem.Icon]</texture>
-				<bordertexture border="10">list/list_frame.png</bordertexture>
-				<bordersize>10</bordersize>
-				<visible>Window.IsActive(2)</visible>
-			</control>
-
 			<control type="list" id="54">
 				<viewtype label="31581">list</viewtype>
 				<posx>114</posx>
@@ -1153,10 +1153,10 @@
 					<info>Container.SecondTitle</info>
 					<include>cList_Title2</include>
 					<width>330</width>
-					<scroll>true</scroll>
+					<scroll>false</scroll>
 				</control>
 			</control>
-
+<!--
 				<control type="image">
 					<posx>745</posx>
 					<posy>638</posy>
@@ -1180,7 +1180,7 @@
 					<colordiffuse>d0FFFFFF</colordiffuse>
 					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
 				</control>
-
+-->
 			<!--<<<<< Title (top) -->
 			<!-- Num Items (bottom) >>>>>-->
 <!--
@@ -1264,6 +1264,27 @@
 			</control>
 			<!--<<<<< Num Items (bottom)-->
 			<!-- Now Playing >>>>>-->
+		<control type="group">
+			<include>MediaListSelectDelay</include>
+			<include>MediaViewFade</include>
+
+			<include>cList_VideoInfoPanel</include>
+			<include>cList_MusicInfoPanel</include>
+		</control>
+			<!-- Pictures Thumb -->
+			
+			<control type="image">
+				<posy>100</posy>
+				<posx>680</posx>
+				<width>366</width>
+				<height>800</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<fadetime>400</fadetime>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<bordertexture border="10">list/list_frame.png</bordertexture>
+				<bordersize>10</bordersize>
+				<visible>Window.IsActive(2)</visible>
+			</control>
 			<control type="group">
 				<visible>Control.IsVisible(54) + [Player.HasAudio | [Player.HasVideo + Skin.HasSetting(homevis)]]</visible>
 				<posx>850</posx>

@@ -8,17 +8,17 @@
 
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
-			<visible>!Skin.HasSetting(curtains)</visible>
+			<visible>!Skin.HasSetting(curtains) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 			<texture>$INFO[listitem(1).property(fanart_image)]</texture>
 			<animation effect="fade" start="30" end="30" condition="Skin.HasSetting(DimFanart)">Conditional</animation>
-			<animation effect="fade" start="30" end="0" delay="500" time="500" condition="![Container().OnNext | Container().OnPrevious]">Conditional</animation>
+			<animation effect="fade" start="20" end="0" delay="500" time="500" condition="![Container().OnNext | Container().OnPrevious]">Conditional</animation>
 		</control>
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
-			<visible>!Skin.HasSetting(curtains)</visible>
+			<visible>!Skin.HasSetting(curtains) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 			<texture>$INFO[listitem(-1).property(fanart_image)]</texture>
 			<animation effect="fade" start="30" end="30" condition="Skin.HasSetting(DimFanart)">Conditional</animation>
-			<animation effect="fade" start="30" end="0" delay="500" time="500" condition="![Container().OnNext | Container().OnPrevious]">Conditional</animation>
+			<animation effect="fade" start="20" end="0" delay="500" time="500" condition="![Container().OnNext | Container().OnPrevious]">Conditional</animation>
 		</control>
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
