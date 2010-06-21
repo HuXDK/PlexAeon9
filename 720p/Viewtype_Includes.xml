@@ -3439,7 +3439,7 @@
 				<label>"$INFO[ListItem.Tagline]"</label>
 				<wrapmultiline>true</wrapmultiline>
 				<textcolor>d0FFFFFF</textcolor>
-				<visible>!IsEmpty(ListItem.Tagline) + ![Container().OnNext | Container().OnPrevious]</visible>
+				<visible>!IsEmpty(ListItem.Tagline)</visible>
 				<include>MediaListSelectDelay</include>
 				<include>MediaViewFade</include>
 			</control>
@@ -3580,8 +3580,6 @@
 				<posx>982</posx>
 				<posy>24</posy>
 				<camera x="840" y="180" />
-					<animation effect="fade" start="0" end="100" time="1350" reversible="false">Visible</animation>	
-					<visible>!Container().OnNext + !Container().OnPrevious</visible>
 			<control type="largeimage">			
 					<width>240</width>
 					<height>360</height>
@@ -3610,8 +3608,6 @@
 		<control type="group">
 			<posx>320</posx>
 			<posy>20</posy>
-					<animation effect="fade" start="0" end="100" time="1350" reversible="false">Visible</animation>	
-					<visible>!Container().OnNext + !Container().OnPrevious</visible>
 			
 			<control type="largeimage">
 					<visible>Skin.HasSetting(anoobiefanart) | ![Skin.HasSetting(anoobiebigthumb) | Skin.HasSetting(anoobiefanart) | Skin.HasSetting(anoobieplot)]</visible>
