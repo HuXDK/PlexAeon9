@@ -3402,7 +3402,7 @@
 			<posy>85</posy>
 			<width>1280</width>
 			<height>381</height>
-			<visible>Container.Content(movies) + Control.IsVisible(563) + [Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | Control.IsVisible(109) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(563)</visible>
 			<animation effect="fade" end="0" time="200">WindowClose</animation>
 			<include>MediaListSelectDelay</include>
 			<include>MediaViewFade</include>
@@ -3457,23 +3457,23 @@
 					<label>$INFO[ListItem.PlotOutline]</label>
 					<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
 				</control>	
-<!--				
+				
 
 			<control type="multiimage">	
-					<visible>Skin.HasSetting(anoobieplot) + [Control.HasFocus(563) | ControlGroup(7000).HasFocus()] + [!Container().OnNext + !Container().OnPrevious]</visible>
+					<visible>Skin.HasSetting(anoobieplot)</visible>
 					<animation effect="fade" start="0" end="100" time="950" reversible="false" delay="800">Visible</animation>	
 					<posx>40</posx>	
 					<posy>150</posy>
 					<camera x="440" y="195" />	
 					<width>310</width>
-					<fadetime>500</fadetime>
+					<fadetime>800</fadetime>
 					<height>195</height>
 					<timeperimage>5000</timeperimage>
 					<animation effect="rotatey" center="0" start="50" end="-45" time="0" condition="true">Conditional</animation>
 					<imagepath diffuse="list/list_episodeicon_mask.png">$INFO[ListItem.Path,,extrathumbs]</imagepath>						
 			</control>	
 
--->			
+		
 			<control type="group">
 				<posx>65</posx>
 				<posy>-40</posy>
@@ -3639,9 +3639,9 @@
 				<textcolor>FFFFFFFF</textcolor>		
 				<animation effect="fade" start="100" end="0" time="1000" condition="Player.HasVideo">Conditional</animation>
 			</control>
-<!--			
+
 			<control type="multiimage">
-					<visible>[Skin.HasSetting(anoobiebigthumb) | [!Skin.HasSetting(anoobiebigthumb) + !Skin.HasSetting(anoobiefanart) + !Skin.HasSetting(anoobieplot)]] + [!Container().OnNext + !Container().OnPrevious]</visible>
+					<visible>[Skin.HasSetting(anoobiebigthumb) | [!Skin.HasSetting(anoobiebigthumb) + !Skin.HasSetting(anoobiefanart) + !Skin.HasSetting(anoobieplot)]]</visible>
 					<width>640</width>
 					<height>360</height>
 					<fadetime>500</fadetime>
@@ -3652,7 +3652,7 @@
 			</control>	
 		
 			<control type="multiimage">
-					<visible>[Skin.HasSetting(anoobiebigthumb) | [!Skin.HasSetting(anoobiebigthumb) + !Skin.HasSetting(anoobiefanart) + !Skin.HasSetting(anoobieplot)]] + [!Container().OnNext + !Container().OnPrevious]</visible>
+					<visible>[Skin.HasSetting(anoobiebigthumb) | [!Skin.HasSetting(anoobiebigthumb) + !Skin.HasSetting(anoobiefanart) + !Skin.HasSetting(anoobieplot)]]</visible>
 					<posy>362</posy>
 					<width>640</width>
 					<height>360</height>
@@ -3662,7 +3662,7 @@
 					<animation effect="fade" start="100" end="0" time="1000" condition="Player.HasVideo">Conditional</animation>
 					<imagepath flipy="true" diffuse="list/list_episodeicon_flipmask.png" background="true">$INFO[ListItem.Path,,extrathumbs]</imagepath>
 			</control>	
---> 
+ 
 			<control type="videowindow">
        				<posx>0</posx>
       				<width>640</width>

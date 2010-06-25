@@ -291,81 +291,50 @@
 				<visible>Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexbigtrailer)</visible>
 			</control>
 			<control type="group">
+			<include>MediaListSelectDelay</include>
+			<include>MediaViewFade</include>
 				<posx>921</posx>
 				<posy>18</posy>
 				<visible>![Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexposter) | Skin.HasSetting(oldmultiplexbigtrailer) | Skin.HasSetting(oldmultiplextrailer)]</visible>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>299</width>
-					<height>169</height>
-					<texture>common/black.png</texture>
-					<colordiffuse>94FFFFFF</colordiffuse>
-				</control>
-				<control type="label">
-					<posx>30</posx>
-					<posy>60</posy>
-					<align>left</align>
-					<width>230</width>
-					<height>32</height>
-					<font>Font_MultiplexPlot</font>
-					<label>Sorry, extra images are unavailable at this time.</label>
-					<visible>true</visible>
-					<wrapmultiline>true</wrapmultiline>
-					<colordiffuse>d0FFFFFF</colordiffuse>
-					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
-					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasVideo">Conditional</animation>
-				</control>
-<!--
-				<control type="multiimage">
+
+				<control type="largeimage">
 					<posx>2</posx>
 					<posy>2</posy>
 					<width>295</width>
 					<height>165</height>
-					<aspectratio>scale</aspectratio>
-					<fadetime>800</fadetime>
-					<timeperimage>4000</timeperimage>
-					<randomize>true</randomize>
-					<visible>![Container().OnNext | Container().OnPrevious]</visible>
-					<imagepath>/extrathumbs/$INFO[ListItem.Title]/extrathumbs</imagepath>
+					<aspectratio>stretch</aspectratio>
+					<texture>defaultvideobig.png</texture>
+			   		<animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
 				</control>
--->
-				<control type="image">
-					<posx>0</posx>
-					<posy>180</posy>
-					<width>299</width>
-					<height>169</height>
-					<texture>common/black.png</texture>
-					<colordiffuse>94FFFFFF</colordiffuse>
+
+				<control type="largeimage">
+					<posx>2</posx>
+					<posy>2</posy>
+					<width>295</width>
+					<height>165</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
 				</control>
- 				<control type="label">
-					<posx>30</posx>
-					<posy>230</posy>
-					<align>left</align>
-					<width>230</width>
-					<height>32</height>
-					<font>Font_MultiplexPlot</font>
-					<label>Sorry, extra images are unavailable at this time.</label>
-					<visible>true</visible>
-					<wrapmultiline>true</wrapmultiline>
-					<colordiffuse>d0FFFFFF</colordiffuse>
-					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
-					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasVideo">Conditional</animation>
-				</control>
-<!--
-				<control type="multiimage">
+
+				<control type="largeimage">
 					<posx>2</posx>
 					<posy>182</posy>
 					<width>295</width>
 					<height>165</height>
-					<aspectratio>scale</aspectratio>
-					<fadetime>800</fadetime>
-					<timeperimage>4000</timeperimage>
-					<randomize>true</randomize>
-					<visible>![Container().OnNext | Container().OnPrevious]</visible>
-					<imagepath>/extrathumbs/$INFO[ListItem.Title]/extrathumbs</imagepath>
+					<aspectratio>stretch</aspectratio>
+					<texture>defaultvideobig.png</texture>
+			   		<animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
 				</control>
--->
+
+				<control type="largeimage">
+					<posx>2</posx>
+					<posy>182</posy>
+					<width>295</width>
+					<height>165</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+				</control>
+
 			</control>
 			<control type="group">
 				<posx>921</posx>

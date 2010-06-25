@@ -61,6 +61,8 @@
 	</include>
 	<include name="ShowcaseInfoPaneMovies">
 		<control type="group">
+			<include>MediaListSelectDelay</include>
+			<include>MediaViewFade</include>
 			<posx>0</posx>
 			<posy>26</posy>
 			<width>1280</width>
@@ -302,13 +304,22 @@
 					<colordiffuse>94FFFFFF</colordiffuse>
 					<animation effect="fade" start="50" end="50" time="0" condition="!Skin.HasSetting(darkfloor)">Conditional</animation>
 				</control>
-				<control type="largeimage">
+				<control type="image">
 					<posx>1</posx>
 					<posy>1</posy>
 					<width>243</width>
 					<height>150</height>
-					<aspectratio>scale</aspectratio>
-					<fadetime>400</fadetime>
+					<aspectratio>stretch</aspectratio>
+					<texture>defaultvideobig.png</texture>
+			   		<animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>1</posy>
+					<width>243</width>
+					<height>150</height>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>800</fadetime>
 					<texture>$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
 				</control>
 				<control type="image">
@@ -320,13 +331,22 @@
 					<colordiffuse>94FFFFFF</colordiffuse>
 					<animation effect="fade" start="50" end="50" time="0" condition="!Skin.HasSetting(darkfloor)">Conditional</animation>
 				</control>
-				<control type="largeimage">
+				<control type="image">
 					<posx>1</posx>
 					<posy>156</posy>
 					<width>243</width>
 					<height>150</height>
-					<aspectratio>scale</aspectratio>
-					<fadetime>400</fadetime>
+					<aspectratio>stretch</aspectratio>
+					<texture>defaultvideobig.png</texture>
+			   		<animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>156</posy>
+					<width>243</width>
+					<height>150</height>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>800</fadetime>
 					<texture>$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
 				</control>
 			</control>
@@ -377,13 +397,22 @@
 					<colordiffuse>94FFFFFF</colordiffuse>
 					<animation effect="fade" start="50" end="50" time="0" condition="!Skin.HasSetting(darkfloor)">Conditional</animation>
 				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>1</posy>
+					<width>522</width>
+					<height>293</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>defaultvideobig.png</texture>
+			   		<animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
+				</control>
 				<control type="multiimage">
 					<posx>1</posx>
 					<posy>1</posy>
 					<width>522</width>
 					<height>293</height>
-					<aspectratio>scale</aspectratio>
-					<fadetime>400</fadetime>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>800</fadetime>
 					<timeperimage>4000</timeperimage>
 					<imagepath background="true">$INFO[ListItem.Path,,extrathumbs]</imagepath>
 				</control>
