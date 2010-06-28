@@ -646,7 +646,7 @@
 					<include>Animation_CommonFade</include>
 					<include>Animation_HideShowcase</include>
 					<include>Animation_HideMultiplex</include>
-					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + Container.Content(movies)</visible>
+					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + Container.Content(movies) + !Skin.HasSetting(moviegallerypanelon)</visible>
 					<info>Listitem.Property(mediaTag::contentRating)</info>
 					<animation effect="slide" end="205,-275" time="0" condition="Control.IsVisible(54)">Conditional</animation>
 					<animation effect="slide" end="25,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
@@ -674,6 +674,7 @@
 				<info>Listitem.Property(mediaTag::studio)</info>
 				<aspectratio>keep</aspectratio>
 				<animation effect="slide" end="-30,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
+				<visible>!Skin.HasSetting(moviegallerypanelon)</visible>
 			</control>
 
 			<control type="grouplist">

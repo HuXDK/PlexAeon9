@@ -95,7 +95,16 @@
 		<aligny>center</aligny>
 	</include>
 	
-	<include name="ListLabel_Main_Playlist">
+	<include name="ListLabel_Episodes">
+		<posx>80</posx>
+		<posy>0</posy>
+		<width>538</width>
+		<height>43</height>
+		<font>Font_MediaWindowMenu</font>
+		<aligny>center</aligny>
+	</include>
+
+ 	<include name="ListLabel_Main_Playlist">
 		<posx>40</posx>
 		<posy>0</posy>
 		<width>430</width>
@@ -155,8 +164,20 @@
 				<include>ListLabel_Main</include>
 				<include>listcolornofocus</include>	
 				<info>ListItem.Label</info>
-				<animation effect="slide" end="40,0" time="0" condition="Container.Content(episodes)">Conditional</animation>
+	            <visible>!Container.Content(Episodes)</visible>
 			</control>
+			<control type="label">
+				<include>ListLabel_Episodes</include>
+				<include>listcolornofocus</include>	
+				<info>ListItem.Label</info>
+	            <visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
+			</control>
+			<control type="label">
+				<include>ListLabel_Episodes</include>
+				<include>listcolornofocus</include>	
+				<label>$INFO[ListItem.TVShowTitle]: $INFO[ListItem.Label]</label>
+	            <visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
+ 			</control>
 			<control type="label">
 				<include>listcolornofocus</include>	
 				<posx>40</posx>
@@ -209,10 +230,22 @@
 			</control>
 			<control type="label">
 				<include>ListLabel_Main</include>
-				<include>listcolorfocus</include>
+				<include>listcolorfocus</include>	
 				<info>ListItem.Label</info>
-				<animation effect="slide" end="40,0" time="0" condition="Container.Content(episodes)">Conditional</animation>
+	            <visible>!Container.Content(Episodes)</visible>
 			</control>
+			<control type="label">
+				<include>ListLabel_Episodes</include>
+				<include>listcolorfocus</include>	
+				<info>ListItem.Label</info>
+	            <visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
+			</control>
+			<control type="label">
+				<include>ListLabel_Episodes</include>
+				<include>listcolorfocus</include>	
+				<label>$INFO[ListItem.TVShowTitle]: $INFO[ListItem.Label]</label>
+	            <visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
+ 			</control>
 			<control type="label">
 				<include>listcolorfocus</include>	
 				<posx>40</posx>
@@ -249,9 +282,6 @@
 		    </control>
  		</focusedlayout>
 	</control>
-	<control type="group">
-			<include>MediaListSelectDelay</include>
-			<include>MediaViewFade</include>
 	
 	<control type="scrollbar" id="61">
       <description>My first scroll bar control</description>
@@ -288,7 +318,6 @@
 				<include>listcolorfocus</include>	
 				<info>ListItem.Label</info>
 				<visible>Control.IsVisible(50) + ![Container.Content(episodes) | Container.Content(seasons)]</visible>
-				<animation effect="fade" time="500">Visible</animation>
 			</control>
 
 			<control type="label">
@@ -299,7 +328,6 @@
 				<include>listcolorfocus</include>	
 				<info>Container.SecondTitle</info>
 				<visible>Control.IsVisible(50) + Container.Content(seasons)</visible>
-				<animation effect="fade" time="500">Visible</animation>
 			</control>
 
 			<control type="label">
@@ -308,9 +336,8 @@
 				<font>ListView_ListTitle</font>	
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
-				<label>$INFO[Container.FirstTitle]</label>
+				<label>$INFO[ListItem.TVShowTitle]</label>
 				<visible>Control.IsVisible(50) + Container.Content(episodes)</visible>
-				<animation effect="fade" time="500">Visible</animation>
 			</control>
 
 			<control type="label">
@@ -321,7 +348,6 @@
 				<include>listcolorfocus</include>	
 				<label>(SEASON [UPPERCASE]$INFO[ListItem.Season])[/UPPERCASE]</label>
 				<visible>Control.IsVisible(50) + Container.Content(episodes) + !IsEmpty(ListItem.Season)</visible>
-				<animation effect="fade" time="500">Visible</animation>
 			</control>
 
 			<control type="label">
@@ -332,7 +358,6 @@
 				<include>listcolorfocus</include>	
 				<label>($INFO[ListItem.year])</label>
 				<visible>Control.IsVisible(50) + !IsEmpty(Listitem.Year) + [Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-				<animation effect="fade" time="500">Visible</animation>
 			</control>
 
 	</control>
@@ -346,6 +371,11 @@
 		<label>($INFO[ListItem.year])</label>
 		<visible>Control.IsVisible(50) + !IsEmpty(Listitem.Year) + ![Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 	</control>
+
+<control type="group">
+	<include>MediaListSelectDelay</include>
+	<include>MediaViewFade</include>
+	<visible>Control.IsVisible(50)</visible>
 
 	<control type="image">
 		<posx>68</posx>

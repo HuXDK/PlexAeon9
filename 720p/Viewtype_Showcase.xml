@@ -313,7 +313,7 @@
 					<texture>defaultvideobig.png</texture>
 			   		<animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
 				</control>
-				<control type="image">
+				<control type="largeimage">
 					<posx>1</posx>
 					<posy>1</posy>
 					<width>243</width>
@@ -340,7 +340,7 @@
 					<texture>defaultvideobig.png</texture>
 			   		<animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
 				</control>
-				<control type="image">
+				<control type="largeimage">
 					<posx>1</posx>
 					<posy>156</posy>
 					<width>243</width>
