@@ -5962,10 +5962,18 @@
 				</focusedlayout>
 
 	        </control>
+
 	    <control type="group">
- 	      		<include>CoverflowVisible</include>
-	        <include>CoverflowMovies</include>
-	        <include>CoverflowSquare</include>
+ 	     <include>CoverflowVisible</include>
+
+			<control type="group">
+				<visible>Window.IsActive(28) | Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)]</visible>
+				<include>CoverflowMovies</include>
+			</control>
+			<control type="group">
+				<visible>Window.IsActive(20) | Window.IsActive(500) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(2)</visible>
+				<include>CoverflowSquare</include>
+			</control>
 
 	        <control type="scrollbar" id="60">
 	            <posx>67</posx>
