@@ -20,15 +20,19 @@
 			</control>
 
 			<control type="grouplist" id="213">
+<!--
 				<include condition="VideoPlayer.HasMenu">Objects_OSDButtonGroup12</include>
 				<include condition="!VideoPlayer.HasMenu">Objects_OSDButtonGroup11</include>
+-->
+				<width>790</width>
+				<posx>241</posx>
 				<posy>60</posy>
 				<height>96</height>
 				<itemgap>-10</itemgap>
 				<onup>-</onup>
 				<ondown>-</ondown>
 				<orientation>horizontal</orientation>
-		
+<!--		
 				<control type="button" id="19">
 					<include>Objects_OSDButton</include>
 					<onclick>RunScript(U:/skin/Plexaeon/extras/OpenSubtitles_OSD/default.py, [TV]$INFO[VideoPlayer.Season] $INFO[VideoPlayer.Episode] $INFO[VideoPlayer.TVshowtitle][/TV])</onclick>
@@ -40,7 +44,7 @@
 					<onclick>RunScript(U:/skin/Plexaeon/extras/OpenSubtitles_OSD/default.py, [MOVIE]$INFO[VideoPlayer.Title][/MOVIE])</onclick>
 					<visible>![Player.Forwarding | Player.Rewinding] + !IsEmpty(VideoPlayer.Title) + IsEmpty(VideoPlayer.TVShowTitle)</visible>			
 				</control>
-		
+-->		
 				<control type="button" id="8">
 					<include>Objects_OSDButton</include>
 					<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
@@ -100,13 +104,17 @@
 			</control>
 
 			<control type="grouplist" id="214">
+<!--
 				<include condition="VideoPlayer.HasMenu">Objects_OSDButtonGroup12</include>
 				<include condition="!VideoPlayer.HasMenu">Objects_OSDButtonGroup11</include>
+-->
+				<width>790</width>
+				<posx>241</posx>
 				<posy>60</posy>
 				<height>96</height>
 				<itemgap>-10</itemgap>
 				<orientation>horizontal</orientation>
-				
+<!--				
 				<control type="button">
 					<include>Objects_OSDButtonTop</include>
 					<texturenofocus>osd_button_sub.png</texturenofocus>	
@@ -120,7 +128,7 @@
 					<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(20)">Conditional</animation>
 					<visible>![Player.Forwarding | Player.Rewinding] + !IsEmpty(VideoPlayer.Title) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
 				</control>
-				
+-->				
 				<control type="button">
 					<include>Objects_OSDButtonTop</include>
 					<texturenofocus>osd/osd_button_dvd.png</texturenofocus>
@@ -285,8 +293,8 @@
 	<!-- mod top bar -->
 <control type="group">
 	<description>top bar info</description> 	
-<visible>!Skin.HasSetting(extraosdoff) + !Window.IsVisible(script-OpenSubtitles_OSD-main.xml)</visible>
-<include>Animation_OSDFade</include>
+	<visible>!Skin.HasSetting(extraosdoff) + !Window.IsVisible(script-OpenSubtitles_OSD-main.xml)</visible>
+	<include>Animation_OSDFade</include>
 	<control type="image">
 		<description>Panel</description>
 		<posx>0</posx>
