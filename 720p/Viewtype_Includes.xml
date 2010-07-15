@@ -634,7 +634,6 @@
 	<include name="LowList_MediaFlags">
 		<control type="group">		
 			<include>Animation_CommonFade</include>
-			<visible>![Container().OnNext | Container().OnPrevious]</visible>
 				<posx>875</posx>
 				<posy>670</posy>
 				<control type="image">
@@ -648,7 +647,7 @@
 					<include>Animation_HideMultiplex</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + Container.Content(movies) + !Skin.HasSetting(moviegallerypanelon)</visible>
 					<info>Listitem.Property(mediaTag::contentRating)</info>
-					<animation effect="slide" end="205,-275" time="0" condition="Control.IsVisible(54)">Conditional</animation>
+					<animation effect="slide" end="205,-265" time="0" condition="Control.IsVisible(54)">Conditional</animation>
 					<animation effect="slide" end="25,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
 				</control>
 				<control type="image">
@@ -1870,8 +1869,7 @@
 	<!--#########################################################################################################-->
 	<include name="Animation_MediaMenuSlideVertical">
 		<animation type="Conditional" condition="!ControlGroup(7000).HasFocus()">
-			<effect type="slide" end="-215,0" time="400" easing="in" tween="cubic" />
-			<effect type="fade" start="100" end="0" time="400" />
+			<effect type="slide" end="-345,0" time="400" easing="in" tween="cubic" />
 		</animation>
 	</include>
 	<!--################################### Button Look and Dimensions ##########################################-->
@@ -1899,21 +1897,22 @@
 	</include>
 	<include name="Vertical_MediaMenuButtonVars">
 		<height>30</height>
-		<width>235</width>
+		<width>325</width>
 		<textcolor>FF3243C1</textcolor>
 		<focusedcolor>FFFFFFFF</focusedcolor>
-		<textoffsetx>10</textoffsetx>
+		<textoffsetx>30</textoffsetx>
 		<texturefocus>windows/mediamenu.png</texturefocus>
 		<texturenofocus>verticalmenu/button.png</texturenofocus>
 		<alttexturefocus>windows/mediamenu.png</alttexturefocus>
 		<alttexturenofocus>verticalmenu/button.png</alttexturenofocus>
 		<radiowidth>72</radiowidth>
-		<radioposx>170</radioposx>
+		<radioposx>230</radioposx>
 		<radioheight>50</radioheight>
 		<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
 		<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
 		<align>left</align>
 		<aligny>center</aligny>
+
 	</include>
 	<!-- Common Button -->
 	<include name="MediaMenuButton">
@@ -1986,7 +1985,7 @@
 	<include name="Vertical_MediaMenuGroup">
 		<posx>0</posx>
 		<posy>70</posy>
-		<width>235</width>
+		<width>325</width>
 		<height>600</height>
 		<itemgap>1</itemgap>
 		<orientation>vertical</orientation>
@@ -2025,10 +2024,10 @@
 			<onclick>Container.NextViewMode</onclick>
 			<label>[B]$LOCALIZE[31050] $INFO[Container.ViewMode][/B]</label>
 			<height>30</height>
-			<width>235</width>
+			<width>325</width>
 			<textcolor>60FFFFFF</textcolor>
 			<focusedcolor>d0ffffff</focusedcolor>
-			<textoffsetx>10</textoffsetx>
+			<textoffsetx>30</textoffsetx>
 			<include>MediaMenuButton</include>
 			<radiowidth>72</radiowidth>
 			<radioposx>146</radioposx>
@@ -2051,10 +2050,10 @@
 			<onclick>Container.NextViewMode</onclick>
 			<label>[B]$LOCALIZE[31050] [COLOR=FFFFFFFF]$INFO[Container.ViewMode][/COLOR][/B]</label>
 			<height>30</height>
-			<width>235</width>
+			<width>325</width>
 			<textcolor>FF3243C1</textcolor>
 			<focusedcolor>FFFFFFFF</focusedcolor>
-			<textoffsetx>10</textoffsetx>
+			<textoffsetx>30</textoffsetx>
 			<include>MediaMenuButton</include>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -3165,7 +3164,7 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>235</width>
+				<width>325</width>
 				<height>720</height>
 				<texture>showcase/showcase_menupanel.png</texture>
 				<include>Animation_MediaMenuSlideVertical</include>

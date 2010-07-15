@@ -210,7 +210,7 @@
 		<control type="group" id="2502">
 			<posx>620</posx>
 			<posy>50</posy>
-			<visible>Control.IsVisible(54) + [Window.IsActive(24) | Window.IsActive(1) | Window.IsActive(2)]</visible>
+			<visible>Control.IsVisible(54) + [Window.IsActive(24) | Window.IsActive(1) | Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
 			<include>Animation_cListCommonFade</include>
 			<include>Animation_cListInfoPanelZoom</include>
 			<control type="image">
@@ -233,7 +233,7 @@
 				<texture diffuse="multiplex/multiplex_mask.png">deefaultvideo.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<info>ListItem.Icon</info>
-				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)</visible>
+				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
 			</control>
 
 			<control type="image">
@@ -243,7 +243,7 @@
 				<height>222</height>
 				<bordertexture border="-23">wall/wall_movie_fborder.png</bordertexture>
 				<texture>common/blank.png</texture>
-				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)</visible>
+				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
 			</control>
 <!--
 			<control type="image">
@@ -266,7 +266,7 @@
       			<texture background="true">$INFO[listitem.property(fanart_image)]</texture>
         		<bordertexture border="8">list/list_frame.png</bordertexture>
         		<bordersize>15</bordersize>
-        		<visible>[Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes) + !Container.Content(Seasons)]] + IsEmpty(ListItem.Thumb)</visible>
+        		<visible>[Window.IsActive(1) | [Window.IsActive(24) + !Container.Content(episodes) + !Container.Content(Seasons)]] + IsEmpty(ListItem.Thumb)</visible>
      		</control>
      		 <control type="image">
 				<posx>270</posx>
@@ -276,7 +276,7 @@
         		<aspectratio aligny="top">keep</aspectratio>
         		<texture flipy="true" diffuse="list/list_reflect_mask.png">$INFO[listitem.property(fanart_image)]</texture>
         		<bordersize>8</bordersize>
-       		<visible>[Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)]] + IsEmpty(ListItem.Thumb)</visible>
+       		<visible>[Window.IsActive(1) | [Window.IsActive(24) + !Container.Content(episodes)]] + IsEmpty(ListItem.Thumb)</visible>
       		</control>
 		</control>			
 		
@@ -292,7 +292,7 @@
 				<info>ListItem.Thumb</info>
         		<bordertexture border="8">list/list_frame.png</bordertexture>
         		<bordersize>10</bordersize>
-				<visible>Window.IsActive(myvideofiles) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+				<visible>Window.IsActive(24) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 			</control>
 			<control type="image">
 				<posx>375</posx>
@@ -307,8 +307,8 @@
 			<!-- Movie Infos -->
 			<control type="group">
 				<posx>210</posx>
-				<posy>10</posy>
-				<visible>Container.Content(movies)</visible>
+				<posy>20</posy>
+				<visible>Container.Content(movies) | Container.Content(albums) | Container.Content(songs)</visible>
 <!--
 				<control type="group">
 					<posy>0</posy>
@@ -353,6 +353,7 @@
 			<control type="group">
 				<posy>10</posy>
 				<control type="group">
+						<visible>!Container.Content(albums)</visible>
 					<posy>0</posy>
 					<control type="label">
 						<posy>0</posy>
@@ -368,6 +369,7 @@
 				</control>
 				<control type="group">
 					<posy>55</posy>
+						<visible>!Container.Content(albums)</visible>
 					<control type="label">
 						<posy>0</posy>
 						<include>cList_InfoValueLabel</include>
@@ -424,7 +426,7 @@
 			<!-- TVShows Infos -->
 			<control type="group">
 				<posx>210</posx>
-				<posy>10</posy>
+				<posy>25</posy>
 				<visible>Container.Content(tvshows)</visible>
 				<control type="group">
 					<posy>0</posy>
@@ -495,7 +497,7 @@
 			<!-- Season Infos -->
 			<control type="group">
 				<posx>210</posx>
-				<posy>10</posy>
+				<posy>25</posy>
 				<visible>Container.Content(seasons)</visible>
 				<control type="group">
 					<posy>0</posy>
@@ -541,9 +543,9 @@
 			<!-- Movie/Episode Plot -->
 			<control type="textbox">
 				<posx>20</posx>
-				<posy>250</posy>
+				<posy>260</posy>
 				<width>375</width>
-				<height>178</height>
+				<height>174</height>
 				<font>Font_MultiplexPlotSmall</font>
 				<label>[COLOR=FF3692EE]$INFO[ListItem.tagline][/COLOR][CR]$INFO[ListItem.Plot]</label>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
@@ -553,9 +555,9 @@
 			</control>
 			<control type="textbox">
 				<posx>20</posx>
-				<posy>250</posy>
+				<posy>260</posy>
 				<width>375</width>
-				<height>178</height>
+				<height>174</height>
 				<font>Font_MultiplexPlotSmall</font>
 				<label>$INFO[ListItem.Plot]</label>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
@@ -666,6 +668,7 @@
 	</include>
 	<!--############################################ Music Info - Panel #########################################-->
 	<!--#########################################################################################################-->
+
 	<include name="cList_MusicInfoPanel">
 		<control type="group">
 			<posx>620</posx>
@@ -1051,6 +1054,7 @@
 						<height>25</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>!Container.Content(albums)</visible>
 		     		   <animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 					</control>
 
@@ -1133,6 +1137,7 @@
 						<height>25</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>!Container.Content(albums)</visible>
 		    	    	<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
 					</control>
 
@@ -1268,7 +1273,7 @@
 			<include>MediaListSelectDelay</include>
 			<include>MediaViewFade</include>
 			<include>cList_VideoInfoPanel</include>
-			<include>cList_MusicInfoPanel</include>
+	<!--		<include>cList_MusicInfoPanel</include> -->
 		</control>
 			<!-- Pictures Thumb -->
 			
