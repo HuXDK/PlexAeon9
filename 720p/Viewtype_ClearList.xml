@@ -546,7 +546,7 @@
 				<posx>20</posx>
 				<posy>260</posy>
 				<width>375</width>
-				<height>174</height>
+				<height>173</height>
 				<font>Font_MultiplexPlotSmall</font>
 				<label>[COLOR=FF3692EE]$INFO[ListItem.tagline][/COLOR][CR]$INFO[ListItem.Plot]</label>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
@@ -558,7 +558,7 @@
 				<posx>20</posx>
 				<posy>260</posy>
 				<width>375</width>
-				<height>174</height>
+				<height>173</height>
 				<font>Font_MultiplexPlotSmall</font>
 				<label>$INFO[ListItem.Plot]</label>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
@@ -570,7 +570,7 @@
 				<posx>20</posx>
 				<posy>300</posy>
 				<width>375</width>
-				<height>128</height>
+				<height>123</height>
 				<font>Font_MultiplexPlotSmall</font>
 				<info>ListItem.Plot</info>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
