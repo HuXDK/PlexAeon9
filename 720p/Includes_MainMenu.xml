@@ -67,6 +67,12 @@
 			<onfocus>SetFocus(946)</onfocus>
 			<visible>Container(300).HasFocus(2)</visible>
 		</control>
+		<control type="button" id="351">
+			<ondown>Skin.ToggleSetting(SectionsMenu)</ondown>
+			<ondown>SetFocus(300)</ondown>
+    		<visible>![Container(300).HasFocus(2) | Container(300).HasFocus(6) | Container(300).HasFocus(7) | Container(300).HasFocus(1) | Container(300).HasFocus(9) | Container(300).HasFocus(22) | Container(300).HasFocus(8)]</visible>
+		</control>
+
 
 		<control type="wraplist" id="300">
 			<posx>-240</posx>
@@ -110,6 +116,7 @@
 					<include>BackgroundVarsMusic</include>
 					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
 					<visible>!Skin.HasSetting(nomusic)</visible>
+					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
 				<item id="22">
@@ -118,6 +125,7 @@
 					<label>31019</label>
 					<onclick>XBMC.Shutdown()</onclick>
 					<visible>!Skin.HasSetting(noshutdown) + !Skin.HasSetting(SleepSub)</visible>
+					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
 				<item id="22">
@@ -126,6 +134,7 @@
 					<label>31207</label>
 					<onclick>Plex.SleepSystem</onclick>
 					<visible>!Skin.HasSetting(noshutdown) + Skin.HasSetting(SleepSub)</visible>
+					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
 				<item id="8">
@@ -139,7 +148,7 @@
 					<label>31011</label>
 					<include>BackgroundVarsGames</include>
 		            <onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
-					<visible>true</visible>
+					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
 <!--
@@ -165,6 +174,7 @@
 					<include>BackgroundVarsPictures</include>
 					<onclick>XBMC.ActivateWindow(2)</onclick>
 					<visible>!Skin.HasSetting(nopictures)</visible>
+					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
 <!--
@@ -185,6 +195,7 @@
 					<include condition="!Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather</include>
 					<onclick>xbmc.activatewindow(2600)</onclick>
 					<visible>!Skin.HasSetting(noweather)</visible>
+					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
 				<item id="9">
@@ -193,7 +204,7 @@
 					<onclick>Skin.Reset(settingsfade)</onclick>
 					<onclick>XBMC.ActivateWindow(4)</onclick>
 					<width min="95" max="95">auto</width>
-					<visible>!Skin.HasSetting(nosettings)</visible>
+					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 				</item>
 				<item id="24">
 					<description>Scripts</description>
@@ -202,6 +213,7 @@
 					<onclick>XBMC.ActivateWindow(20)</onclick>
 					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(scripts)</visible>
+					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 				</item>
 				<item id="13">
 					<description>Play DVD</description>
@@ -225,6 +237,7 @@
 					<label>31021</label>
 					<onclick>XBMC.ActivateWindow(134)</onclick>
 					<width min="95" max="95">auto</width>
+					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 					<visible>Skin.HasSetting(assistant)</visible>
 				</item>
 				<item id="23">
@@ -233,6 +246,7 @@
 					<label>31209</label>
 					<onclick>System.LogOff</onclick>
 					<width min="95" max="95">auto</width>
+					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 					<visible>Skin.HasSetting(signout)</visible>
 				</item>
 			</content>

@@ -437,7 +437,7 @@
 					<include>Submenu_Button</include>
 					<label>HULU</label>
 					<onclick>ActivateWindow(10024,plex://localhost/video/hulu/)</onclick>
-					<!--<label>IPLAYER</label><onclick>XBMC.ActivateWindow(MyVideoFiles,plugin://video/IPLAYER)</onclick>--></control>
+				</control>
 				<control type="button" id="46">
 					<include>Submenu_Button</include>
 					<label>DAILY SHOW</label>

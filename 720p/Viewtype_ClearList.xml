@@ -622,43 +622,15 @@
 
 			<control type="textbox">
 				<posx>20</posx>
-				<posy>250</posy>
+				<posy>260</posy>
 				<width>380</width>
-				<height>198</height>
+				<height>196</height>
 				<font>Font_MultiplexPlotSmall</font>
 				<info>Container.Property(description)</info>
 				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightLabelColorsFocus</include>
 				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
 				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
 	            <visible>!IsEmpty(Container.Property(description))</visible>
-			</control>
-			<!-- TvShow Plot -->
-<!--
-			<control type="textbox">
-				<posx>20</posx>
-				<posy>250</posy>
-				<width>400</width>
-				<height>245</height>
-				<font>Font_MultiplexPlotSmall</font>
-				<info>ListItem.Plot</info>
-				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>
-				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
-				<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>
-				<visible>Container.Content(tvshows)|[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]|Window.IsActive(1)</visible>
-			</control>
--->
-			<!-- Season Plot -->
-			<control type="textbox">
-				<posx>20</posx>
-				<posy>250</posy>
-				<width>380</width>
-				<height>198</height>
-				<font>Font_MultiplexPlotSmall</font>
-				<info>ListItem.Plot</info>
-				<!--<textcolor>d0FFFFFF</textcolor>--><include condition="!Skin.HasSetting(Lightclearlist)">cList_NightInfoColor</include>
-				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightInfoColor</include>
-				<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>
-				<visible>Container.Content(seasons)</visible>
 			</control>
 		</control>
 		<control type="group">

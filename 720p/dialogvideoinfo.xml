@@ -294,11 +294,13 @@
     	    <posx>0</posx>
        		<posy>320</posy>
             <ondown>50</ondown>
+<!--
         <control type="button" id ="5">
           <description>Plot/Cast</description>
           <label>$LOCALIZE[206]</label>
           <include>Objects_FSInfoButton</include>
  		</control>
+-->
  		<control type="togglebutton" id ="8">
           <description>Play/Browse to Show</description>
 		  <label>$LOCALIZE[31411]</label>
@@ -360,9 +362,7 @@
 			<label fallback="31414">$INFO[ListItem.Plot]</label>
 			<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>			
 			<include>Colour_OffWhite</include>
-		<!-- castmod prevents it from showing when cast container shows -->
-        <visible>!Control.IsVisible(5050)</visible>
-        <!-- end castmod prevents it from showing when cast container shows -->
+			<!-- <visible>!Control.IsVisible(5050)</visible>  -->
 		</control>
 		
 		<control type="label">
