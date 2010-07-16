@@ -520,11 +520,13 @@
     	    <posx>0</posx>
        		<posy>295</posy>
 			<ondown>5050</ondown>
+<!--
         <control type="button" id ="5">
           <description>Plot/Cast</description>
           <label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
           <include>Objects_FSInfoButton</include>
 		</control>
+-->
         <control type="button" id ="6">
           <description>Refresh</description>
           <label>31410</label>
@@ -553,7 +555,7 @@
 			<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>			
 			<label fallback="31414">$INFO[ListItem.Plot]</label>
 			<include>Colour_OffWhite</include>
-			<visible>!Control.IsVisible(5050)</visible>
+<!--		<visible>!Control.IsVisible(5050)</visible> -->
 		</control>
 		
 		<control type="label">
@@ -710,11 +712,13 @@
     	    <posx>0</posx>
        		<posy>295</posy>
 			<ondown>50</ondown>
+<!--
         <control type="button" id ="5">
           <description>Plot/Cast</description>
           <label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
           <include>Objects_FSInfoButton</include>
 		</control>
+-->
 		<control type="button" id="8">
           <label>[UPPERCASE]$LOCALIZE[31411][/UPPERCASE]</label>
 			<include>Objects_FSInfoButton</include>
@@ -740,7 +744,7 @@
 			<font>Font_FSInfoPlot</font>
 			<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>			
 			<label fallback="31414">$INFO[ListItem.Plot]</label>
-		    <visible>!Control.IsVisible(5050)</visible>
+<!--	    <visible>!Control.IsVisible(5050)</visible> -->
 			<include>Colour_OffWhite</include>
 		</control>
 		
