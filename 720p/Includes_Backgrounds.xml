@@ -659,6 +659,19 @@
 			<visible>Skin.String(CustomGamesFolder)</visible>
 		</control>
 		
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backdrops/default_videos/video.jpg</texture>
+			<info>Skin.String(CustomVideo)</info>
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>!Skin.String(CustomVideoFolder)</visible>
+		</control>
+<!--
 		<control type="multiimage">
 			<include>Background_SingleImage</include>
 			<imagepath>backdrops/default_videos</imagepath>
@@ -666,7 +679,7 @@
 			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
 			<visible>!Skin.String(CustomVideoFolder)</visible>
 		</control>
-
+-->
 		<control type="multiimage">
 			<include>Background_ImageFolder</include>
 			<info>Skin.String(CustomVideoFolder)</info>
