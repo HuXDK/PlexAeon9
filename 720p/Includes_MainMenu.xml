@@ -70,6 +70,7 @@
 		<control type="button" id="351">
 			<ondown>Skin.ToggleSetting(SectionsMenu)</ondown>
 			<ondown>SetFocus(300)</ondown>
+			<onup>SetFocus(300)</onup>
     		<visible>![Container(300).HasFocus(2) | Container(300).HasFocus(6) | Container(300).HasFocus(7) | Container(300).HasFocus(1) | Container(300).HasFocus(9) | Container(300).HasFocus(22) | Container(300).HasFocus(8)]</visible>
 		</control>
 
@@ -111,11 +112,10 @@
 				</control>
 			</focusedlayout>
 			<content>
-				<item id="1">
-					<label>31010</label>
-					<include>BackgroundVarsMusic</include>
-					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
-					<visible>!Skin.HasSetting(nomusic)</visible>
+				<item id="2">
+					<label>31011</label>
+					<include>BackgroundVarsGames</include>
+		            <onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
 					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
@@ -144,13 +144,6 @@
 					<visible>!Skin.HasSetting(novideos)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
-				<item id="2">
-					<label>31011</label>
-					<include>BackgroundVarsGames</include>
-		            <onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
-					<visible>!Skin.HasSetting(SectionsMenu)</visible>
-					<width min="95" max="95">auto</width>
-				</item>
 <!--
 				<item id="2">
 					<label>31011</label>
@@ -174,6 +167,14 @@
 					<include>BackgroundVarsPictures</include>
 					<onclick>XBMC.ActivateWindow(2)</onclick>
 					<visible>!Skin.HasSetting(nopictures)</visible>
+					<visible>!Skin.HasSetting(SectionsMenu)</visible>
+					<width min="95" max="95">auto</width>
+				</item>
+				<item id="1">
+					<label>31010</label>
+					<include>BackgroundVarsMusic</include>
+					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
+					<visible>!Skin.HasSetting(nomusic)</visible>
 					<visible>!Skin.HasSetting(SectionsMenu)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
