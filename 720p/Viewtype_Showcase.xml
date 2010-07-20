@@ -61,16 +61,12 @@
 	</include>
 	<include name="ShowcaseInfoPaneMovies">
 		<control type="group">
-			<include>MediaListSelectDelay</include>
-			<include>MediaViewFade</include>
 			<posx>0</posx>
 			<posy>26</posy>
 			<width>1280</width>
 			<height>381</height>
 			<visible>Control.IsVisible(57)</visible>
-			<animation effect="fade"  start="0" end="100" time="400" condition="!Skin.HasSetting(showcaseinfoon)">WindowOpen</animation>
 			<animation effect="fade" end="0" time="400">WindowClose</animation>
-			<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
 			<control type="image">
 				<posx>75</posx>
 				<width>1130</width>
@@ -93,6 +89,16 @@
 				<texture border="0,0,0,204">multiplex/multiplex_tablet_bigthumb.png</texture>
 				<visible>Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasebigtrailer)</visible>
 			</control>
+		</control>
+		<control type="group">
+			<include>MediaListSelectDelay</include>
+			<include>MediaViewFade</include>
+			<posx>0</posx>
+			<posy>26</posy>
+			<width>1280</width>
+			<height>381</height>
+			<visible>Control.IsVisible(57)</visible>
+			<animation effect="fade" end="0" time="400">WindowClose</animation>
 			<control type="group">
 				<posx>105</posx>
 				<posy>26</posy>

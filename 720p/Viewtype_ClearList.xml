@@ -214,15 +214,6 @@
 			<visible>Control.IsVisible(54) + [Window.IsActive(24) | Window.IsActive(1) | Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
 			<include>Animation_cListCommonFade</include>
 			<include>Animation_cListInfoPanelZoom</include>
-			<control type="image">
-				<posx>10</posx>
-				<posy>10</posy>
-				<width>400</width>
-				<height>480</height>
-				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureInfoPanelSolid</include>
-				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureInfoPanelSolid</include>
-		     	<animation effect="fade" start="80" end="80" time="0" condition="Skin.HasSetting(clearlistinfothin)">Conditional</animation>
-			</control>
 			<!-- Movie/TvShow Icon -->
 		<control type="group">
 			<posx>-240</posx>
@@ -1241,6 +1232,22 @@
 				<visible>!Control.IsVisible(161)</visible>
 			</control>
 			<!--<<<<< Num Items (bottom)-->
+		<control type="group">
+			<posx>620</posx>
+			<posy>50</posy>
+			<visible>Control.IsVisible(54) + [Window.IsActive(24) | Window.IsActive(1) | Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
+			<include>Animation_cListCommonFade</include>
+			<include>Animation_cListInfoPanelZoom</include>
+			<control type="image">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>400</width>
+				<height>480</height>
+				<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightBackgroundTextureInfoPanelSolid</include>
+				<include condition="Skin.HasSetting(Lightclearlist)">cList_LightBackgroundTextureInfoPanelSolid</include>
+		     	<animation effect="fade" start="80" end="80" time="0" condition="Skin.HasSetting(clearlistinfothin)">Conditional</animation>
+			</control>
+		</control>
 		<control type="group">
 			<include>MediaListSelectDelay</include>
 			<include>MediaViewFade</include>

@@ -1,7 +1,36 @@
 <window id="0">
-	<defaultcontrol always="true">300</defaultcontrol>
+	<defaultcontrol always="true">2</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
+		<control type="button" id="2">
+			<description>Defaults Trigger</description>
+			<posx>35</posx>
+			<posy>235</posy>
+			<font>special15</font>
+			<onfocus>Skin.SetBool(multiplexfanart)</onfocus>
+			<onfocus>Skin.SetBool(showcasefanart)</onfocus>
+			<onfocus>Skin.SetBool(oldmultiplexfanart)</onfocus>
+			<onfocus>Skin.SetBool(darkfloor)</onfocus>
+			<onfocus>Skin.SetBool(highlist)</onfocus>
+			<onfocus>Skin.SetBool(anoobiefanart)</onfocus>
+			<onfocus>Skin.SetBool(flattenflow)</onfocus>
+			<onfocus>Skin.SetBool(nomovieoverlays)</onfocus>
+			<onfocus>Skin.SetBool(flattenshowcase)</onfocus>
+			<onfocus>SetFocus(300)</onfocus>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<visible>!Skin.HasSetting(DefaultsSet)</visible>
+		</control>
+		<control type="button" id="2">
+			<description>Defaults Trigger</description>
+			<posx>35</posx>
+			<posy>235</posy>
+			<font>special15</font>
+			<onfocus>SetFocus(300)</onfocus>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<visible>Skin.HasSetting(DefaultsSet)</visible>
+		</control>
 		<control type="label">
 			<description>Force Weather update on load</description>
 			<posx>0</posx>
