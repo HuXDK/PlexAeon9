@@ -8,14 +8,14 @@
 
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
-			<visible>!Skin.HasSetting(curtains) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+			<visible>!Skin.HasSetting(curtains) + [Container.Content(movies) | Container.Content(tvshows)] + !Control.IsActive(53)</visible>
 			<texture>$INFO[listitem(1).property(fanart_image)]</texture>
 			<animation effect="fade" start="30" end="30" condition="Skin.HasSetting(DimFanart)">Conditional</animation>
 			<animation effect="fade" start="20" end="0" delay="500" time="500" condition="![Container().OnNext | Container().OnPrevious]">Conditional</animation>
 		</control>
 		<control type="largeimage">
 			<include>FullscreenDimensions</include>
-			<visible>!Skin.HasSetting(curtains) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+			<visible>!Skin.HasSetting(curtains) + [Container.Content(movies) | Container.Content(tvshows)] + !Control.IsActive(53)</visible>
 			<texture>$INFO[listitem(-1).property(fanart_image)]</texture>
 			<animation effect="fade" start="30" end="30" condition="Skin.HasSetting(DimFanart)">Conditional</animation>
 			<animation effect="fade" start="20" end="0" delay="500" time="500" condition="![Container().OnNext | Container().OnPrevious]">Conditional</animation>
@@ -36,7 +36,7 @@
 		<include>Furniture_MediaPanel</include>
 		<include>Viewtype_List</include>
 		<include condition="!Skin.HasSetting(CoverflowOff)">Viewtype_Coverflow</include>
-<!--		<include condition="!Skin.HasSetting(WallOff)">Viewtype_Wall</include>  -->
+		<include condition="!Skin.HasSetting(WallOff)">Viewtype_Wall</include> 
 		<include condition="!Skin.HasSetting(ListLowOff)">Viewtype_List_Low</include>
 		<include condition="!Skin.HasSetting(ShowcaseOff)">Viewtype_Showcase</include>
 		<include condition="!Skin.HasSetting(SlimListOff)">Viewtype_List_Slim</include>
