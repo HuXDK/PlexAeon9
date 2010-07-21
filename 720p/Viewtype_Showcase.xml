@@ -30,7 +30,7 @@
 		<include condition="Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigtrailer) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">ShowcaseNoPlotWidth</include>
 		<include condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">ShowcaseTVWidth</include>
 		<height>13</height>
-		<font>Font_MediaWindowTitleMenu</font>
+		<font>Font_MediaWindowMenu</font>
 		<textcolor>FFFFFAA6</textcolor>
 	</include>
 	<include name="ShowcaseInfoValue">
@@ -48,7 +48,7 @@
 		<posy>0</posy>
 		<width>200</width>
 		<height>13</height>
-		<font>Font_MediaWindowTitleMenu</font>
+		<font>Font_MediaWindowMenu</font>
 		<textcolor>FFFFFAA6</textcolor>
 	</include>
 	<include name="ShowcaseInfoValueBigThumb">
@@ -56,7 +56,7 @@
 		<posy>17</posy>
 		<width>200</width>
 		<height>13</height>
-		<font>Font_MediaWindowTitleMenu</font>
+		<font>Font_MediaWindowMenu</font>
 		<textcolor>FFFFFFFF</textcolor>
 	</include>
 	<include name="ShowcaseInfoPaneMovies">

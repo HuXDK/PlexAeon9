@@ -37,7 +37,7 @@
 		<posy>0</posy>
 		<width>420</width>
 		<height>39</height>
-		<font>Font_ListSmall</font>
+		<font>Font_MediaWindowTitleMenu</font>
 		<aligny>center</aligny>
 		<animation effect="slide" start="60,0" end="60,0" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(myvideofiles) | Window.IsActive(24) | Window.IsActive(2)]">Conditional</animation>
 	</include>
@@ -47,7 +47,7 @@
 		<posy>0</posy>
 		<width>480</width>
 		<height>39</height>
-		<font>Font_ListSmall</font>
+		<font>Font_MediaWindowTitleMenu</font>
 		<aligny>center</aligny>
 		<animation effect="slide" start="60,0" end="60,0" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(myvideofiles) | Window.IsActive(24) | Window.IsActive(2)]">Conditional</animation>
 	</include>
@@ -57,7 +57,7 @@
 		<posy>0</posy>
 		<width>314</width>
 		<height>39</height>
-		<font>Font_ListSmall</font>
+		<font>Font_MediaWindowTitleMenu</font>
 		<aligny>center</aligny>
 		<animation effect="slide" start="60,0" end="60,0" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]">Conditional</animation>
 		<include>Animation_LandscapeIconSlide</include>

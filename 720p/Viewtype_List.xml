@@ -91,7 +91,7 @@
 		<posy>0</posy>
 		<width>580</width>
 		<height>43</height>
-		<font>Font_MediaWindowMenu</font>
+		<font>Font_MediaWindowTitleMenu</font>
 		<aligny>center</aligny>
 	</include>
 	
@@ -315,17 +315,27 @@
 			<control type="label">
 				<width min="0" max="680">auto</width>
 				<height>43</height>
-				<font>ListView_ListTitle</font>
+				<font>Font_MediaWindowTitleBig</font>
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
 				<info>ListItem.Label</info>
-				<visible>Control.IsVisible(50) + ![Container.Content(episodes) | Container.Content(seasons)]</visible>
+				<visible>Control.IsVisible(50) + ![Container.Content(episodes) | Container.Content(seasons) | Container.Content(Secondary)]</visible>
 			</control>
 
 			<control type="label">
 				<width min="0" max="680">auto</width>
 				<height>43</height>
-				<font>ListView_ListTitle</font>	
+				<font>Font_MediaWindowTitleBig</font>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<info>Container.FirstTitle</info>
+				<visible>Control.IsVisible(50) + Container.Content(Secondary)</visible>
+			</control>
+
+			<control type="label">
+				<width min="0" max="680">auto</width>
+				<height>43</height>
+				<font>Font_MediaWindowTitleBig</font>	
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
 				<info>Container.SecondTitle</info>
@@ -335,7 +345,7 @@
 			<control type="label">
 				<width min="0" max="680">auto</width>
 				<height>43</height>
-				<font>ListView_ListTitle</font>	
+				<font>Font_MediaWindowTitleBig</font>	
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
 				<label>$INFO[ListItem.TVShowTitle]</label>
@@ -353,9 +363,10 @@
 			</control>
 
 			<control type="label">
+				<posy>-15</posy>
 				<width min="0" max="60">auto</width>
 				<height>47</height>
-				<font>Font_FSInfoPlot</font>
+				<font>Font_MediaWindowTitleMenu</font>
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
 				<label>($INFO[ListItem.year])</label>

@@ -3162,11 +3162,11 @@
 		<control type="group">
 			<visible>Control.IsVisible(7000)</visible>
 			<control type="image">
-				<posx>0</posx>
+				<posx>-5</posx>
 				<posy>0</posy>
-				<width>325</width>
+				<width>335</width>
 				<height>720</height>
-				<texture>showcase/showcase_menupanel.png</texture>
+				<texture>list/listpanel_back_dark2.png</texture>
 				<include>Animation_MediaMenuSlideVertical</include>
 				<visible>!Skin.HasSetting(novertikalmenu)</visible>
 			</control>
@@ -6034,7 +6034,7 @@
 					<include>FlowLabelVars</include>
 	  			 	<posy>112</posy>
 					<textcolor>d0FFFFFF</textcolor>
-					<font>cast</font>	
+					<font>Font_List</font>	
 				<visible>!IsEmpty(ListItem.Tagline) + ![Container().OnNext | Container().OnPrevious]</visible>
 	            </control>
 	            <control type="label" id="75">
