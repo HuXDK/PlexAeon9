@@ -27,7 +27,6 @@
 -->
  		<control type="largeimage">
 			<include>FullscreenDimensions</include>
-			<visible>!Skin.HasSetting(curtains) + ![[Container.Content(songs) | Container.Content(albums)] + [Container().OnNext | Container().OnPrevious]]</visible>
 			<animation effect="zoom" start="110" end="130" center="auto" time="30000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
 			<animation effect="slide" start="-10,-10" end="20,20" time="14000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
 			<animation effect="rotate" center="360,640" start="-2" end="2" time="22000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>

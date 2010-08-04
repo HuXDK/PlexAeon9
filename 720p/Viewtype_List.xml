@@ -1,13 +1,13 @@
 <includes>
 
 	<include name="MusicEpisodeListIcon_Thumb">
-		<include condition="Container.Content(Episodes) | [Window.IsActive(myvideofiles) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]">EpisodeListIcon_Thumb</include>
-		<include condition="Window.IsActive(501)">MusicListIcon_Thumb</include>
+	<include condition="Window.IsActive(myvideofiles) + !Container.Content(plugincontent)">EpisodeListIcon_Thumb</include>
+ 	<include condition="Window.IsActive(501)">MusicListIcon_Thumb</include>
 	</include>
 
 	<include name="MusicEpisodeListIcon_Glass">
-		<include condition="Container.Content(Episodes) | [Window.IsActive(myvideofiles) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]">EpisodeListIcon_Glass</include>
-		<include condition="Window.IsActive(501)">MusicListIcon_Glass</include>
+	<include condition="Window.IsActive(myvideofiles) + !Container.Content(plugincontent)">EpisodeListIcon_Glass</include>
+ 	<include condition="Window.IsActive(501)">MusicListIcon_Glass</include>
 	</include>
 
 	<include name="MusicListIcon_Thumb">
@@ -435,7 +435,7 @@
 	<control type="group">
 		<posx>160</posx>
 		<posy>55</posy>
-		<visible>Window.IsActive(2) | [Skin.HasSetting(singlemusiclisticon) + [Window.IsActive(20) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes)]]</visible>
+		<visible>Container.Content(songs) | Window.IsActive(2) | [Skin.HasSetting(singlemusiclisticon) + [Window.IsActive(20) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes)]]</visible>
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" start="0" end="100" time="500" />
 			<effect type="slide" start="300,0" end="0,0" time="500" easing="out" tween="quadratic" acceleration="-1" />
@@ -471,7 +471,8 @@
 	<control type="group">
 		<posx>160</posx>
 		<posy>55</posy>
-		<visible>!Skin.HasSetting(singlemusiclisticon) + [[Window.IsActive(20) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes)] | Window.IsActive(24) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]] + !Container.Content(Secondary)</visible>
+		<visible>!Skin.HasSetting(singlemusiclisticon) + !Container.Content(Secondary) + !Container.Content(songs) + [[Window.IsActive(20) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes) | Container.Content(albums)] | [Window.IsActive(24) + Container.Content(plugins)]]</visible>
+  
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" start="0" end="100" time="500" />
 			<effect type="slide" start="300,0" end="0,0" time="500" easing="out" tween="quadratic" acceleration="-1" />
@@ -658,7 +659,7 @@
 	<control type="group">
 		<posx>95</posx>
 		<posy>8</posy>
-		<visible>Skin.HasSetting(singlemovielisticon) + [!Container.Content(episodes) + [Window.IsActive(28) | Window.IsActive(24) | Window.IsActive(1)]]</visible>
+		<visible>Skin.HasSetting(singlemovielisticon) + !Container.Content(episodes) + [Window.IsActive(28) | Window.IsActive(24) | Window.IsActive(1)]</visible>
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" start="0" end="100" time="500" />
 			<effect type="slide" start="300,0" end="0,0" time="500" easing="out" tween="quadratic" acceleration="-1" />
@@ -686,6 +687,45 @@
 			<include>MovieListIcon_Glass</include>
 		</control>		
 	</control>
+
+<!-- SINGLE POSTER Plugins-->
+
+	<control type="group">
+		<posx>95</posx>
+		<posy>8</posy>
+		<visible>[[Window.IsActive(24) + Container.Content(plugincontent)] | Container.content(secondary)] + !Window.IsActive(1) + !Window.IsActive(2)</visible>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="0" end="100" time="500" />
+			<effect type="slide" start="300,0" end="0,0" time="500" easing="out" tween="quadratic" acceleration="-1" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="200" />
+			<effect type="slide" start="0,0" end="300,0" easing="in" tween="quadratic" time="200" acceleration="-1" />
+		</animation>
+		<animation type="Visible" reversible="false">
+			<effect type="fade" start="0" end="100" time="500" />
+			<effect type="slide" start="300,0" end="0,0" time="500" easing="out" tween="quadratic" acceleration="-1" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="fade" start="100" end="0" time="200" />
+			<effect type="slide" start="0,0" end="300,0" easing="in" tween="quadratic" time="200" acceleration="-1" />
+		</animation>
+		
+		<control type="image">
+			<posx>775</posx>
+			<posy>180</posy>
+			<width>390</width>
+			<height>400</height>
+			<aligny>center</aligny>
+			<align>center</align>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<texture diffuse="thumbs/movieposter_mask.png">defaultvideobig.png</texture>		
+			<info>Listitem.Icon</info>
+			<fadetime>400</fadetime>
+			<visible>!IsEmpty(ListItem.Icon)</visible>
+		</control>
+	</control>
+	
 	
 <!-- POSTER: Rolling down -->
 
