@@ -1531,7 +1531,7 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(31)</visible>
 			</control>
-
+<!--
 			<control type="label">
 				<description>Player Sub Unfocused</description>
 				<posy>148</posy>
@@ -1585,7 +1585,7 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(34)</visible>
 			</control>
-
+-->
 		</control>
 
 		<control type="group">
@@ -1750,7 +1750,7 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(30)</visible>
 			</control>
-
+<!--
 			<control type="label">
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
@@ -1786,7 +1786,7 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(32)</visible>
 			</control>
-
+-->
 			<control type="label">
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
@@ -1980,7 +1980,7 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(32)</visible>
 			</control>
-
+<!--
 			<control type="label">
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
@@ -1998,7 +1998,7 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(33)</visible>
 			</control>
-
+-->
 			<control type="label">
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
