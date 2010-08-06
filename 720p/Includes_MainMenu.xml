@@ -12,8 +12,8 @@
 		<posy>0</posy>
 		<height>40</height>
 		<font>Font_VirtualMainMenu</font>
+		<width>200</width>
 		<posx>53</posx>
-		<width>184</width>
 		<align>center</align>
 		<aligny>center</aligny>
 	</include>
@@ -265,11 +265,11 @@
 			<ondown>6</ondown>
 			<viewtype>list</viewtype>
 			<orientation>horizontal</orientation>
-			<focusposition>2</focusposition>
+			<focusposition>1</focusposition>
 			<scrolltime>120</scrolltime>
 			<visible>![Control.HasFocus(301) | Control.HasFocus(7) | Control.HasFocus(10)]</visible>
 			<animation effect="fade" start="0" end="100" time="200" condition="!Window.Previous(56) + !Window.Previous(12) + !Window.Previous(13) + !Window.Previous(14) + !Window.Previous(15) + !Window.Previous(16) + !Window.Previous(17) + !Window.Previous(18) + !Window.Previous(19)">WindowOpen</animation>
-			<itemlayout width="184" height="40">
+			<itemlayout width="320" height="40">
 				<control type="label">
 					<include>VirtualMainMenu_Label</include>
 					<info>ListItem.Label</info>
@@ -277,7 +277,7 @@
 					<animation effect="fade" start="100" end="0" time="200" condition="Window.Next(56) | Window.Next(12) | Window.Next(13) | Window.Next(14) | Window.Next(15) | Window.Next(16) | Window.Next(17) | Window.Next(18) | Window.Next(19) | Window.Next(3) | Window.Next(2) | Window.Next(20) | Window.Next(1) | Window.Next(24) | Window.Next(25) | Window.Next(501) | Window.Next(502) | Window.Next(2600)">Conditional</animation>
 				</control>
 			</itemlayout>
-			<focusedlayout width="184" height="40">
+			<focusedlayout width="320" height="40">
 				<control type="label">
 					<include>VirtualMainMenu_Label</include>
 					<info>ListItem.Label</info>
@@ -299,6 +299,7 @@
 					<include>BackgroundVarsMusic</include>
 					<onclick>Skin.SetString(custom,CustomMusicfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(nomusic)</visible>
 				</item>
 				<item id="2">
@@ -306,6 +307,7 @@
 					<include>BackgroundVarsGames</include>
 					<onclick>Skin.SetString(custom,CustomGamesfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(nogames)</visible>
 				</item>
 				<item id="5">
@@ -313,6 +315,7 @@
 					<include>BackgroundVarsPictures</include>
 					<onclick>Skin.SetString(custom,CustomPicturesfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(nopictures)</visible>
 				</item>
 <!--
@@ -339,6 +342,7 @@
 					<include>BackgroundVarsVideo</include>
 					<onclick>Skin.SetString(custom,CustomVideofolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(novideos)</visible>
 				</item>
 				<item id="24">
@@ -346,6 +350,7 @@
 					<include>BackgroundVarsScripts</include>
 					<onclick>Skin.SetString(custom,CustomScriptsfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(scripts)</visible>
 				</item>
 				<item id="9">
@@ -353,6 +358,7 @@
 					<label>31016</label>
 					<onclick>Skin.SetString(custom,CustomSettingsfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>true</visible>
 				</item>
 				<item id="10">
@@ -361,6 +367,7 @@
 					<include>BackgroundVarsVideo</include>
 					<onclick>Skin.SetString(custom,CustomWeatherfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(noweather)</visible>
 				</item>
 				<item id="13">
@@ -368,6 +375,7 @@
 					<label>31018</label>
 					<include>BackgroundVarsPlayDVD</include>
 					<onclick>Skin.SetString(custom,CustomPlayDVDfolder)</onclick>
+					<width min="95" max="95">auto</width>
 					<onclick>SetFocus(92)</onclick>
 				</item>
 				<item id="21">
@@ -376,6 +384,7 @@
 					<include>BackgroundVarsAssistant</include>
 					<onclick>Skin.SetString(custom,CustomAssistantfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(assistant)</visible>
 				</item>
 				<item id="23">
@@ -384,6 +393,7 @@
 					<include>BackgroundVarsSignOut</include>
 					<onclick>Skin.SetString(custom,CustomSignOutfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(signout)</visible>
 				</item>
 				<item id="22">
@@ -392,6 +402,7 @@
 					<include>BackgroundVarsShutdown</include>
 					<onclick>Skin.SetString(custom,CustomShutdownfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(noshutdown)</visible>
 				</item>
 			</content>
@@ -411,11 +422,11 @@
 			<ondown>7</ondown>
 			<viewtype>list</viewtype>
 			<orientation>horizontal</orientation>
-			<focusposition>2</focusposition>
+			<focusposition>1</focusposition>
 			<scrolltime>120</scrolltime>
 			<visible allowhiddenfocus="true">Control.HasFocus(301) | Control.HasFocus(7)</visible>
 			<animation effect="fade" start="0" end="100" time="200" condition="!Window.Previous(56) + !Window.Previous(12) + !Window.Previous(13) + !Window.Previous(14) + !Window.Previous(15) + !Window.Previous(16) + !Window.Previous(17) + !Window.Previous(18) + !Window.Previous(19)">WindowOpen</animation>
-			<itemlayout width="184" height="40">
+			<itemlayout width="320" height="40">
 				<control type="label">
 					<include>VirtualMainMenu_Label</include>
 					<info>ListItem.Label</info>
@@ -431,7 +442,7 @@
 				</control>
 
 			</itemlayout>
-			<focusedlayout width="184" height="40">
+			<focusedlayout width="320" height="40">
 				<control type="label">
 					<include>VirtualMainMenu_Label</include>
 					<info>ListItem.Label</info>
@@ -461,36 +472,42 @@
 					<label>31010</label>
 					<include>BackgroundVarsMusic</include>
 					<onclick>Skin.SetBool(nomusic)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(nomusic)</visible>
 				</item>
 				<item id="1">
 					<label2>31010</label2>
 					<include>BackgroundVarsMusic</include>
 					<onclick>Skin.Reset(nomusic)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(nomusic)</visible>
 				</item>
 				<item id="2">
 					<label>31011</label>
 					<include>BackgroundVarsGames</include>
 					<onclick>Skin.SetBool(nogames)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(nogames)</visible>
 				</item>
 				<item id="2">
 					<label2>31011</label2>
 					<include>BackgroundVarsGames</include>
 					<onclick>Skin.Reset(nogames)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(nogames)</visible>
 				</item>
 				<item id="5">
 					<label>31012</label>
 					<include>BackgroundVarsPictures</include>
 					<onclick>Skin.SetBool(nopictures)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(nopictures)</visible>
 				</item>
 				<item id="5">
 					<label2>31012</label2>
 					<include>BackgroundVarsPictures</include>
 					<onclick>Skin.Reset(nopictures)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(nopictures)</visible>
 				</item>
 <!--
@@ -525,12 +542,14 @@
 					<label>31015</label>
 					<include>BackgroundVarsVideo</include>
 					<onclick>Skin.SetBool(novideos)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(novideos)</visible>
 				</item>
 				<item id="8">
 					<label2>31015</label2>
 					<include>BackgroundVarsVideo</include>
 					<onclick>Skin.Reset(novideos)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(novideos)</visible>
 				</item>
 				<item id="10">
@@ -538,6 +557,7 @@
 					<include condition="Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather2</include>
 					<include condition="!Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather</include>
 					<onclick>Skin.Reset(noweather)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(noweather)</visible>
 				</item>
 				<item id="10">
@@ -545,6 +565,7 @@
 					<label>31017</label>
 					<icon>backdrops/summer/summer.png</icon>
 					<thumb>$INFO[Skin.String(CustomWeather)]</thumb>
+					<width min="95" max="95">auto</width>
 					<onclick>Skin.SetBool(noweather)</onclick>
 					<visible>!Skin.HasSetting(noweather)</visible>
 				</item>
@@ -552,6 +573,7 @@
 					<description>My Pictures</description>
 					<label>31020</label>
 					<include>BackgroundVarsScripts</include>
+					<width min="95" max="95">auto</width>
 					<onclick>Skin.Reset(scripts)</onclick>
 					<visible>Skin.HasSetting(scripts)</visible>
 				</item>
@@ -559,6 +581,7 @@
 					<description>My Pictures</description>
 					<label2>31020</label2>
 					<include>BackgroundVarsScripts</include>
+					<width min="95" max="95">auto</width>
 					<onclick>Skin.SetBool(scripts)</onclick>
 					<visible>!Skin.HasSetting(scripts)</visible>
 				</item>
@@ -581,6 +604,7 @@
 					<label2>31019</label2>
 					<include>BackgroundVarsShutdown</include>
 					<onclick>Skin.Reset(noshutdown)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(noshutdown)</visible>
 				</item>
 				<item id="22">
@@ -588,6 +612,7 @@
 					<label>31019</label>
 					<include>BackgroundVarsShutdown</include>
 					<onclick>Skin.SetBool(noshutdown)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(noshutdown)</visible>
 				</item>
 				<item id="21">
@@ -595,6 +620,7 @@
 					<label>31021</label>
 					<include>BackgroundVarsAssistant</include>
 					<onclick>Skin.Reset(assistant)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(assistant)</visible>
 				</item>
 				<item id="21">
@@ -602,6 +628,7 @@
 					<label2>31021</label2>
 					<include>BackgroundVarsAssistant</include>
 					<onclick>Skin.SetBool(assistant)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(assistant)</visible>
 				</item>
 				<item id="23">
@@ -609,6 +636,7 @@
 					<label>31209</label>
 					<include>BackgroundVarsSignOut</include>
 					<onclick>Skin.Reset(signout)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(signout)</visible>
 				</item>
 				<item id="23">
@@ -616,6 +644,7 @@
 					<label2>31209</label2>
 					<include>BackgroundVarsSignOut</include>
 					<onclick>Skin.SetBool(signout)</onclick>
+					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(signout)</visible>
 				</item>
 			</content>

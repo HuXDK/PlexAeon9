@@ -880,7 +880,7 @@
 			<visible>[Container(301).HasFocus(2) + Control.IsVisible(301)] | [Container(300).HasFocus(2) + Control.IsVisible(300)]</visible>
 			<visible>Skin.String(CustomGamesFolder)</visible>
 		</control>
-
+<!--
 		<control type="multiimage">
 			<include>Background_VirtualSingleImage</include>
 			<imagepath>backdrops/default_movies</imagepath>
@@ -895,10 +895,10 @@
 			<visible>[Container(300).HasFocus(6) + Control.IsVisible(300)] | [Container(301).HasFocus(6) + Control.IsVisible(301)]</visible>
 			<visible>Skin.String(CustomMoviesFolder)</visible>
 		</control>
-		
+-->		
 		<control type="multiimage">
 			<include>Background_VirtualSingleImage</include>
-			<imagepath>backdrops/default_movies</imagepath>
+			<imagepath>backdrops/default_videos</imagepath>
 			<info>Skin.String(CustomVideo)</info>
 			<visible>[Container(300).HasFocus(8) + Control.IsVisible(300)] | [Container(301).HasFocus(8) + Control.IsVisible(301)]</visible>
 			<visible>!Skin.String(CustomVideoFolder)</visible>
