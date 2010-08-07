@@ -129,6 +129,8 @@
 	</include>	
 	
 	<include name="Viewtype_Wall">
+	<control type="group">
+		<visible>Control.IsActive(53)</visible>
 
 		<control type="image">
 			<posx>57</posx>
@@ -472,21 +474,8 @@
 			</control>				
 		</control>
 		
-		<control type="label" id="217">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<font>Font_List</font>
-			<align>center</align>
-			<aligny>center</aligny>
-			<textcolor>98FFFFFF</textcolor>
-			<include condition="Window.IsActive(myvideofiles)">EmptyLibraryLabelMovies</include>
-			<include condition="Window.IsActive(502)">EmptyLibraryLabelMusic</include>
-			<include>Animation_CommonFade</include>
-			<visible>[Window.IsActive(myvideofiles) | Window.IsActive(502)] + Control.IsVisible(53) + stringcompare(container(53).numitems,0)</visible>
-		</control>
-		
+
+	</control>		
 	</include>
 
 </includes>

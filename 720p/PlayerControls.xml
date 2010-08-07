@@ -347,8 +347,8 @@
 			</control>
 
 			<control type="grouplist" id="213">
-				<include condition="VideoPlayer.HasMenu">Objects_OSDButtonGroup12</include>
-				<include condition="!VideoPlayer.HasMenu">Objects_OSDButtonGroup11</include>
+<!--			<include condition="VideoPlayer.HasMenu">Objects_OSDButtonGroup12</include> -->
+				<include>Objects_OSDButtonGroup11</include>
 				<posy>60</posy>
 				<height>96</height>
 				<itemgap>-10</itemgap>
@@ -367,13 +367,13 @@
 					<onclick>RunScript(U:/skin/Plexaeon/extras/OpenSubtitles_OSD/default.py, [MOVIE]$INFO[VideoPlayer.Title][/MOVIE])</onclick>
 					<visible>![Player.Forwarding | Player.Rewinding] + !IsEmpty(VideoPlayer.Title) + IsEmpty(VideoPlayer.TVShowTitle)</visible>			
 				</control>
-		
+<!--		
 				<control type="button" id="8">
 					<include>Objects_OSDButton</include>
 					<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
 					<visible>VideoPlayer.HasMenu</visible>
 				</control>
-
+-->
 				<control type="button" id="9">
 					<include>Objects_OSDButton</include>
 					<onclick>XBMC.ActivateWindow(28)</onclick>
@@ -427,8 +427,8 @@
 			</control>
 
 			<control type="grouplist" id="214">
-				<include condition="VideoPlayer.HasMenu">Objects_OSDButtonGroup12</include>
-				<include condition="!VideoPlayer.HasMenu">Objects_OSDButtonGroup11</include>
+<!--			<include condition="VideoPlayer.HasMenu">Objects_OSDButtonGroup12</include>  -->
+				<include>Objects_OSDButtonGroup11</include>
 				<posy>60</posy>
 				<height>96</height>
 				<itemgap>-10</itemgap>
@@ -447,14 +447,14 @@
 					<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(20)">Conditional</animation>
 					<visible>![Player.Forwarding | Player.Rewinding] + !IsEmpty(VideoPlayer.Title) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
 				</control>
-				
+<!--				
 				<control type="button">
 					<include>Objects_OSDButtonTop</include>
 					<texturenofocus>osd/osd_button_dvd.png</texturenofocus>
 					<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(8)">Conditional</animation>
 					<visible>VideoPlayer.HasMenu</visible>
 				</control>
-
+-->
 				<control type="button">
 					<include>Objects_OSDButtonTop</include>
 					<texturenofocus>osd/osd_button_playlist.png</texturenofocus>
@@ -634,6 +634,7 @@
 		<!--<label>[B][COLOR ffc1c2c3]Season $INFO[VideoPlayer.Season] | Episode $INFO[VideoPlayer.Episode][/COLOR][/B]</label>-->
 		<visible>VideoPlayer.Content(episodes)</visible>
 	</control>
+<!--
 	<control type="label">
 		<posy>-500</posy>
 		<posx>500</posx>
@@ -642,9 +643,19 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_OSDSeek</font>
-		<label>[COLOR ffc1c2c3]$INFO[VideoPlayer.Genre][/COLOR]</label>
+		<label>[COLOR ffc1c2c3]$INFO[VideoPlayer.mpaa][/COLOR]</label>
 		<visible>VideoPlayer.Content(movies)</visible>
 	</control>
+-->
+	<control type="label">
+		<posy>-496</posy>
+		<posx>30</posx>
+		<height>50</height>
+		<width>490</width>
+		<font>Font_SettingsSectionTitle</font>
+		<label>[COLOR FFffffff]$INFO[VideoPlayer.Title][/COLOR]</label>
+	</control>
+
 	<control type="label">
 		<posy>-496</posy>
 		<posx>32</posx>
@@ -652,14 +663,6 @@
 		<width>400</width>
 		<font>Font_OSDOptions</font>
 		<label>[COLOR cdfbfbfb]$INFO[VideoPlayer.Year][/COLOR]</label>
-	</control>
-	<control type="label">
-		<posy>-530</posy>
-		<posx>30</posx>
-		<height>50</height>
-		<width>490</width>
-		<font>Font_SettingsSectionTitle</font>
-		<label>[COLOR FFffffff]$INFO[VideoPlayer.Title][/COLOR]</label>
 	</control>
 
 	<control type="textbox">

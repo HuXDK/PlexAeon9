@@ -2,8 +2,6 @@
 	<defaultcontrol>23</defaultcontrol>
 	<visible>Window.IsActive(2005) + !Window.IsActive(2901) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
 
-
-
 	<controls>
 	<control type="group">
 		<posx>0</posx>
@@ -393,6 +391,7 @@
 				<label>$INFO[VideoPlayer.Title]</label>
 				<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
 				<include>Animation_CommonFadeVideo</include>	
+				<visible>Skin.HasSetting(extraosdoff)</visible>
 			</control>
 
 			<control type="label">

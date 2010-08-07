@@ -44,13 +44,13 @@
 					<onclick>RunScript(U:/skin/Plexaeon/extras/OpenSubtitles_OSD/default.py, [MOVIE]$INFO[VideoPlayer.Title][/MOVIE])</onclick>
 					<visible>![Player.Forwarding | Player.Rewinding] + !IsEmpty(VideoPlayer.Title) + IsEmpty(VideoPlayer.TVShowTitle)</visible>			
 				</control>
--->		
+		
 				<control type="button" id="8">
 					<include>Objects_OSDButton</include>
 					<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
 					<visible>VideoPlayer.HasMenu</visible>
 				</control>
-
+-->
 				<control type="button" id="9">
 					<include>Objects_OSDButton</include>
 					<onclick>XBMC.ActivateWindow(28)</onclick>
@@ -128,14 +128,14 @@
 					<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(20)">Conditional</animation>
 					<visible>![Player.Forwarding | Player.Rewinding] + !IsEmpty(VideoPlayer.Title) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
 				</control>
--->				
+		
 				<control type="button">
 					<include>Objects_OSDButtonTop</include>
 					<texturenofocus>osd/osd_button_dvd.png</texturenofocus>
 					<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(8)">Conditional</animation>
 					<visible>VideoPlayer.HasMenu</visible>
 				</control>
-
+-->
 				<control type="button">
 					<include>Objects_OSDButtonTop</include>
 					<texturenofocus>osd/osd_button_playlist.png</texturenofocus>
@@ -334,8 +334,8 @@
 		<font>Font_OSDOptions</font>
 		<label>[COLOR cdfbfbfb]$INFO[VideoPlayer.Year][/COLOR]</label>
 	</control>
-	<control type="image">
-		<posy>-530</posy>
+	<control type="label">
+		<posy>-535</posy>
 		<posx>30</posx>
 		<height>50</height>
 		<width>490</width>
@@ -344,13 +344,13 @@
 	</control>
 
 	<control type="textbox">
-		<posy>-528</posy>
+		<posy>-545</posy>
 		<posx>840</posx>
-		<height>60</height>
+		<height>68</height>
 		<aligny>top</aligny>
 		<font>Font_OSDOptions</font>
 		<label>[COLOR cdc1c2c3]$INFO[VideoPlayer.Plot][/COLOR]</label>
-		<autoscroll delay="3000" time="1500" repeat="10000">true</autoscroll>
+		<autoscroll delay="8000" time="1500" repeat="10000">true</autoscroll>
 	</control>
 
 </control>
