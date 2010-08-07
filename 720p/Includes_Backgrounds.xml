@@ -719,13 +719,13 @@
 		</control>
 
 		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 			<texture>backdrops/default_music/music.jpg</texture>
-			<animation effect="fade" end="100" time="600">Visible</animation>
-			<animation effect="fade" end="0" time="600">Hidden</animation>
 			<info>Skin.String(CustomMusic)</info>
 			<visible>Container(300).HasFocus(1) + Control.IsVisible(300)</visible>
 			<visible>!Skin.String(CustomMusicFolder)</visible>
@@ -739,9 +739,14 @@
 			<visible>Skin.String(CustomMusicFolder)</visible>
 		</control>
 		
-		<control type="multiimage">
-			<include>Background_SingleImage</include>
-			<imagepath>backdrops/default_scripts</imagepath>
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backdrops/default_scripts/scripts.jpg</texture>
 			<info>Skin.String(CustomScripts)</info>
 			<visible>Container(300).HasFocus(24) + Control.IsVisible(300)</visible>
 			<visible>!Skin.String(CustomScriptsFolder)</visible>
@@ -771,9 +776,14 @@
 			<visible>Skin.String(CustomPlayDVDFolder)</visible>
 		</control>
 
-		<control type="multiimage">
-			<include>Background_SingleImage</include>
-			<imagepath>backdrops/default_assistant</imagepath>
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backdrops/default_assistant/favorites.jpg</texture>
 			<info>Skin.String(CustomAssistant)</info>
 			<visible>Container(300).HasFocus(21) + Control.IsVisible(300)</visible>
 			<visible>!Skin.String(CustomAssistantFolder)</visible>
@@ -803,9 +813,14 @@
 			<visible>Skin.String(CustomSignOutFolder)</visible>
 		</control>
 
-		<control type="multiimage">
-			<include>Background_SingleImage</include>
-			<imagepath>backdrops/default_shutdown</imagepath>
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backdrops/default_shutdown/shutdown.jpg</texture>
 			<info>Skin.String(CustomShutdown)</info>
 			<visible>Container(300).HasFocus(22) + Control.IsVisible(300)</visible>
 			<visible>!Skin.String(CustomShutdownFolder)</visible>
