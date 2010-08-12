@@ -379,8 +379,7 @@
 					<aspectratio>scale</aspectratio>
 					<fadetime>800</fadetime>
 					<timeperimage>4000</timeperimage>
-					<visible>![Container().OnNext | Container().OnPrevious]</visible>
-					<imagepath>/extrathumbs/$INFO[ListItem.Title]/extrathumbs</imagepath>
+					<imagepath>$INFO[ListItem.Path,,extrathumbs]</imagepath>
 				</control>
 			</control>
 			<control type="group">
