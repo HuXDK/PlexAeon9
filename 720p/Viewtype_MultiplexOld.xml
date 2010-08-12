@@ -337,6 +337,8 @@
 
 			</control>
 			<control type="group">
+			<include>MediaListSelectDelay</include>
+			<include>MediaViewFade</include>
 				<posx>921</posx>
 				<posy>18</posy>
 				<visible>Skin.HasSetting(oldmultiplexposter)</visible>
@@ -360,6 +362,8 @@
 				</control>
 			</control>
 			<control type="group">
+			<include>MediaListSelectDelay</include>
+			<include>MediaViewFade</include>
 				<posx>612</posx>
 				<posy>18</posy>
 				<visible>Skin.HasSetting(oldmultiplexbigthumb)</visible>
@@ -383,6 +387,8 @@
 				</control>
 			</control>
 			<control type="group">
+			<include>MediaListSelectDelay</include>
+			<include>MediaViewFade</include>
 				<posx>412</posx>
 				<posy>50</posy>
 				<visible>Skin.HasSetting(oldmultiplextrailer)</visible>

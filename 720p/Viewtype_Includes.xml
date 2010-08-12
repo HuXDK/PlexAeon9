@@ -6099,7 +6099,7 @@
 	            </control>
 	            <control type="image">
 	                <include>FlowDetailLabel</include>
-	                <include>StarRatingImage</include>
+	      <!--      <include>StarRatingImage</include>   -->
 	                <visible>![Container.Content(albums) | Container.Content(songs)] + !IsEmpty(ListItem.Rating)</visible>
 	            </control>
 	            <control type="textbox">

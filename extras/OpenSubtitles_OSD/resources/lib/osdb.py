@@ -12,7 +12,7 @@ from utilities import *
 _ = sys.modules[ "__main__" ].__language__
 
 BASE_URL_XMLRPC_DEV = u"http://dev.opensubtitles.org/xml-rpc"
-BASE_URL_XMLRPC = u"http://www.opensubtitles.org/xml-rpc"
+BASE_URL_XMLRPC = u"http://api.opensubtitles.org/xml-rpc"
 BASE_URL_SEARCH = u"http://www.opensubtitles.com/%s/search/moviename-%s/simplexml"
 BASE_URL_SEARCH_ALL = u"http://www.opensubtitles.com/en/search/sublanguageid-%s/moviename-%s/simplexml"
 BASE_URL_SEARCH_OFFSET = u"http://www.opensubtitles.com/en/search/sublanguageid-%s/moviename-%s/offset-40/simplexml"
@@ -39,7 +39,7 @@ class OSDBServer:
 	LOG( LOG_INFO, "Connecting to server " + osdb_server + "..." )
 	try:
 		if osdb_server:
-			self.server = xmlrpclib.Server( "http://www.opensubtitles.org/xml-rpc", verbose=0 )
+			self.server = xmlrpclib.Server( "http://api.opensubtitles.org/xml-rpc", verbose=0 )
 #			info = self.server.ServerInfo()
 #			if username:
 #				LOG( LOG_INFO, "Logging in " + username + "..." )

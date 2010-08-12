@@ -39,7 +39,7 @@
 		<include condition="!Skin.HasSetting(WallOff)">Viewtype_Wall</include> 
 		<include condition="!Skin.HasSetting(ListLowOff)">Viewtype_List_Low</include>
 		<include condition="!Skin.HasSetting(ShowcaseOff)">Viewtype_Showcase</include>
-		<include condition="!Skin.HasSetting(SlimListOff)">Viewtype_List_Slim</include>
+<!--	<include condition="!Skin.HasSetting(SlimListOff)">Viewtype_List_Slim</include> -->
 		<include condition="!Skin.HasSetting(Anoobie3Off)">Viewtype_Anoobie3</include>
 		<include condition="!Skin.HasSetting(MultiplexOff)">Viewtype_Multiplex</include>
 		<include condition="!Skin.HasSetting(OldMultiplexOff)">Viewtype_MultiplexOld</include>

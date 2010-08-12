@@ -31,7 +31,7 @@ __version__ = sys.modules[ "__main__" ].__version__
 STATUS_LABEL = 100
 LOADING_IMAGE = 110
 SUBTITLES_LIST = 120
-OSDB_SERVER = "http://www.opensubtitles.org/xml-rpc"
+OSDB_SERVER = "http://api.opensubtitles.org/xml-rpc"
 
 
 
