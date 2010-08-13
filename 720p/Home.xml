@@ -1,8 +1,8 @@
 <window id="0">
-	<defaultcontrol always="true">2</defaultcontrol>
+	<defaultcontrol always="true">333</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<control type="button" id="2">
+		<control type="button" id="333">
 			<description>Defaults Trigger</description>
 			<posx>35</posx>
 			<posy>235</posy>
@@ -15,14 +15,15 @@
 			<onfocus>Skin.SetBool(anoobiefanart)</onfocus>
 			<onfocus>Skin.SetBool(flattenflow)</onfocus>
 			<onfocus>Skin.SetBool(nomovieoverlays)</onfocus>
-			<onfocus>Skin.SetBool(programs)</onfocus>
 			<onfocus>Skin.SetBool(flattenshowcase)</onfocus>
+			<onfocus>Skin.SetBool(programs)</onfocus>
+			<onfocus>Skin.SetBool(DefaultsSet)</onfocus>
 			<onfocus>SetFocus(300)</onfocus>
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<visible>!Skin.HasSetting(DefaultsSet)</visible>
 		</control>
-		<control type="button" id="2">
+		<control type="button" id="333">
 			<description>Defaults Trigger</description>
 			<posx>35</posx>
 			<posy>235</posy>
