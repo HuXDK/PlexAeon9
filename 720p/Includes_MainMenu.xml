@@ -143,15 +143,15 @@
 					<visible>!Skin.HasSetting(novideos)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
-<!--
-				<item id="2">
-					<label>31011</label>
-					<include>BackgroundVarsGames</include>
-    		        <onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
-					<visible>!Skin.HasSetting(nogames)</visible>
-					<visible>Skin.HasSetting(launcherforgames)</visible>
-				</item>
 
+				<item id="6">
+					<label>31144</label>
+					<include>BackgroundVarsPrograms</include>
+    		        <onclick>Plex.ActivateWindow(1,return)</onclick>
+					<visible>!Skin.HasSetting(programs)</visible>
+					<width min="95" max="95">auto</width>
+				</item>
+<!--
 					<item id="6">
 					<label>31013</label>
 					<include>BackgroundVarsMovies</include>
@@ -307,7 +307,6 @@
 					<onclick>Skin.SetString(custom,CustomGamesfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
 					<width min="95" max="95">auto</width>
-					<visible>!Skin.HasSetting(nogames)</visible>
 				</item>
 				<item id="5">
 					<label>31012</label>
@@ -317,15 +316,14 @@
 					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(nopictures)</visible>
 				</item>
-<!--
 				<item id="6">
-					<label>31013</label>
-					<include>BackgroundVarsMovies</include>
-					<onclick>Skin.SetString(custom,CustomMoviesfolder)</onclick>
+					<label>31144</label>
+					<include>BackgroundVarsPrograms</include>
+					<onclick>Skin.SetString(custom,CustomProgramsfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
-					<visible>!Skin.HasSetting(nomovies)</visible>
+					<visible>!Skin.HasSetting(programs)</visible>
 				</item>
-
+<!--
 				<item id="7">
 					<description>My Videos</description>
 					<label>31014</label>
@@ -509,19 +507,21 @@
 					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(nopictures)</visible>
 				</item>
+				<item id="6">
+					<label>31144</label>
+					<include>BackgroundVarsPrograms</include>
+					<onclick>Skin.SetBool(programs)</onclick>
+					<width min="95" max="95">auto</width>
+					<visible>!Skin.HasSetting(programs)</visible>
+				</item>
+				<item id="6">
+					<label2>31144</label2>
+					<include>BackgroundVarsPrograms</include>
+					<onclick>Skin.Reset(programs)</onclick>
+					<width min="95" max="95">auto</width>
+					<visible>Skin.HasSetting(programs)</visible>
+				</item>
 <!--
-				<item id="6">
-					<label>31013</label>
-					<include>BackgroundVarsMovies</include>
-					<onclick>Skin.SetBool(nomovies)</onclick>
-					<visible>!Skin.HasSetting(nomovies)</visible>
-				</item>
-				<item id="6">
-					<label2>31013</label2>
-					<include>BackgroundVarsMovies</include>
-					<onclick>Skin.Reset(nomovies)</onclick>
-					<visible>Skin.HasSetting(nomovies)</visible>
-				</item>
 				<item id="7">
 					<description>My Videos</description>
 					<label>31014</label>

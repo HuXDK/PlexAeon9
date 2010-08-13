@@ -117,11 +117,11 @@
 		<info>Skin.String(CustomPicturesbg)</info>
 	</include>
 
-	<include name="BackgroundVarsMovies">
-		<icon>backdrops/default_movies/default.png</icon>
-		<thumb>$INFO[Skin.String(CustomMoviesbg)]</thumb>
-		<imagepath>backdrops/default_movies/default.png</imagepath>
-		<info>Skin.String(CustomMoviesbg)</info>
+	<include name="BackgroundVarsPrograms">
+		<icon>backdrops/default_programs/default.jpg</icon>
+		<thumb>$INFO[Skin.String(CustomProgramsbg)]</thumb>
+		<imagepath>backdrops/default_programs/default.jpg</imagepath>
+		<info>Skin.String(Customprogramsbg)</info>
 	</include>
 
 	<include name="BackgroundVarsCurtains">
@@ -702,20 +702,25 @@
 			<visible>Skin.String(CustomVideoFolder)</visible>
 		</control>		
 
-		<control type="multiimage">
-			<include>Background_SingleImage</include>
-			<imagepath>backdrops/default_movies</imagepath>
-			<info>Skin.String(CustomMovies)</info>
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backdrops/default_programs/default.jpg</texture>
+			<info>Skin.String(CustomPrograms)</info>
 			<visible>[Container(300).HasFocus(6) + Control.IsVisible(300)]</visible>
-			<visible>!Skin.String(CustomMoviesFolder)</visible>
+			<visible>!Skin.String(CustomProgramsFolder)</visible>
 		</control>
 
 		<control type="multiimage">
 			<include>Background_ImageFolder</include>
-			<info>Skin.String(CustomMoviesFolder)</info>
+			<info>Skin.String(CustomProgramsFolder)</info>
 			<randomize>true</randomize>
 			<visible>[Container(300).HasFocus(6) + Control.IsVisible(300)]</visible>
-			<visible>Skin.String(CustomMoviesFolder)</visible>			
+			<visible>Skin.String(CustomProgramsFolder)</visible>			
 		</control>
 
 		<control type="largeimage">
@@ -898,22 +903,22 @@
 			<visible>[Container(301).HasFocus(2) + Control.IsVisible(301)] | [Container(300).HasFocus(2) + Control.IsVisible(300)]</visible>
 			<visible>Skin.String(CustomGamesFolder)</visible>
 		</control>
-<!--
+
 		<control type="multiimage">
 			<include>Background_VirtualSingleImage</include>
-			<imagepath>backdrops/default_movies</imagepath>
-			<info>Skin.String(CustomMovies)</info>
+			<imagepath>backdrops/default_programs</imagepath>
+			<info>Skin.String(CustomPrograms)</info>
 			<visible>[Container(300).HasFocus(6) + Control.IsVisible(300)] | [Container(301).HasFocus(6) + Control.IsVisible(301)]</visible>
-			<visible>!Skin.String(CustomMoviesFolder)</visible>
+			<visible>!Skin.String(CustomProgramsFolder)</visible>
 		</control>
 
 		<control type="multiimage">
 			<include>Background_VirtualImageFolder</include>
-			<info>Skin.String(CustomMoviesFolder)</info>
+			<info>Skin.String(CustomProgramsFolder)</info>
 			<visible>[Container(300).HasFocus(6) + Control.IsVisible(300)] | [Container(301).HasFocus(6) + Control.IsVisible(301)]</visible>
-			<visible>Skin.String(CustomMoviesFolder)</visible>
+			<visible>Skin.String(CustomProgramsFolder)</visible>
 		</control>
--->		
+
 		<control type="multiimage">
 			<include>Background_VirtualSingleImage</include>
 			<imagepath>backdrops/default_videos</imagepath>
