@@ -3102,7 +3102,7 @@
 			<onclick>Skin.SetBool(oldmultiplexbigthumb)</onclick>
 			<onclick>Skin.Reset(oldmultiplexplot)</onclick>
 			<onclick>SetFocus(553)</onclick>
-			<visible>Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplextrailer) | Skin.HasSetting(oldmultiplexbigtrailer) | Skin.HasSetting(oldmultiplexposter)]</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexplot)</visible>
 		</control>
 		<control type="button" id="700111">
 			<include>MediaMenuButton</include>
@@ -3140,7 +3140,7 @@
 -->
 		<control type="button" id="700115">
 			<include>MediaMenuButton</include>
-			<label>$LOCALIZE[31047]: Poster</label>
+			<label>$LOCALIZE[31047]: $LOCALIZE[32002]</label>
 			<onclick>Skin.SetBool(oldmultiplexplot)</onclick>
 			<onclick>Skin.Reset(oldmultiplexposter)</onclick>
 			<onclick>SetFocus(553)</onclick>
