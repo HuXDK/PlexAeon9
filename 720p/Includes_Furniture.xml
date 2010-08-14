@@ -238,7 +238,7 @@
 		<control type="image">
 			<posx>-900</posx>
 			<posy>0</posy>
-			<width>300</width>
+			<width>330</width>
 			<height>27</height>
 			<texture flipx="true" flipy="true">common/timepanel_mid.png</texture>
 			<animation type="Conditional" condition="Skin.HasSetting(bighome)">
