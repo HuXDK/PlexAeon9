@@ -22,7 +22,7 @@
 	</include>
 	<include name="Furniture_ListMediaFlagsVars">
 		<width min="0" max="50">auto</width>
-		<height>25</height>
+		<height>35</height>
 		<aspectratio>keep</aspectratio>
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
@@ -190,7 +190,7 @@
 		<control type="group">		
 			<visible>!Skin.HasSetting(nomediaflags)</visible>
 			<control type="grouplist">
-			<posx>943</posx>
+			<posx>930</posx>
 			<posy>575</posy>
 			<animation effect="slide" end="30,-50" time="0" condition="Control.IsVisible(50) + Container.Content(episodes)">Conditional</animation>
 			<orientation>horizontal</orientation>
@@ -214,12 +214,8 @@
 				</control>
 
 				<control type="image">
-					<width min="0" max="30">auto</width>
-					<height>26</height>
 					<aspectratio>keep</aspectratio>
-					<include>Animation_CommonFade</include>
-					<include>Animation_HideShowcase</include>
-					<include>Animation_HideMultiplex</include>
+					<include>Furniture_ListMediaFlagsVars</include>
 					<visible>!Skin.HasSetting(nomediaflags)</visible>
 					<info>Listitem.Property(mediaTag::audioChannels)</info>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>

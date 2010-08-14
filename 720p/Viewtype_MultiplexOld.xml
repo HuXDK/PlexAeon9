@@ -257,39 +257,81 @@
                 	</control>
 				</control>
 			</control>
-			<control type="textbox">
-				<posx>396</posx>
-				<posy>22</posy>
-				<width>491</width>
-				<height>343</height>
-				<font>Font_MultiplexPlotOld</font>
-				<label>[COLOR=FF3692EE]$INFO[ListItem.tagline][/COLOR][CR]$INFO[ListItem.Plot]</label>
-				<textcolor>d0FFFFFF</textcolor>
-				<autoscroll delay="15000" time="2000" repeat="10000">true</autoscroll>
-				<visible>![Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexbigtrailer) | Skin.HasSetting(oldmultiplextrailer)]</visible>
+
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Tagline)</visible>
+				<control type="textbox">
+					<posx>396</posx>
+					<posy>22</posy>
+					<width>491</width>
+					<height>343</height>
+					<font>Font_MultiplexPlotOld</font>
+					<label>[COLOR=FF3692EE]$INFO[ListItem.tagline][/COLOR][CR]$INFO[ListItem.Plot]</label>
+					<textcolor>d0FFFFFF</textcolor>
+					<autoscroll delay="15000" time="2000" repeat="10000">true</autoscroll>
+					<visible>![Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexbigtrailer) | Skin.HasSetting(oldmultiplextrailer)]</visible>
+				</control>
+				<control type="textbox">
+					<posx>955</posx>
+					<posy>24</posy>
+					<width>263</width>
+					<height>341</height>
+					<font>Font_MultiplexPlotOld</font>
+					<label>[COLOR=FF3692EE]$INFO[ListItem.tagline][/COLOR][CR]$INFO[ListItem.Plot]</label>
+					<textcolor>d0FFFFFF</textcolor>
+					<autoscroll delay="15000" time="2000" repeat="10000">true</autoscroll>
+					<visible>Skin.HasSetting(oldmultiplextrailer)</visible>
+				</control>
+				<control type="textbox">
+					<posx>60</posx>
+					<posy>188</posy>
+					<width>470</width>
+					<height>174</height>
+					<font>Font_MultiplexPlotOld</font>
+					<label>[COLOR=FF3692EE]$INFO[ListItem.tagline][/COLOR][CR]$INFO[ListItem.Plot]</label>
+					<textcolor>d0FFFFFF</textcolor>
+					<autoscroll delay="15000" time="2000" repeat="10000">true</autoscroll>
+					<visible>Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexbigtrailer)</visible>
+				</control>
 			</control>
-			<control type="textbox">
-				<posx>955</posx>
-				<posy>24</posy>
-				<width>263</width>
-				<height>341</height>
-				<font>Font_MultiplexPlotOld</font>
-				<label>[COLOR=FF3692EE]$INFO[ListItem.tagline][/COLOR][CR]$INFO[ListItem.Plot]</label>
-				<textcolor>d0FFFFFF</textcolor>
-				<autoscroll delay="15000" time="2000" repeat="10000">true</autoscroll>
-				<visible>Skin.HasSetting(oldmultiplextrailer)</visible>
+
+			<control type="group">
+				<visible>IsEmpty(ListItem.Tagline)</visible>
+				<control type="textbox">
+					<posx>396</posx>
+					<posy>22</posy>
+					<width>491</width>
+					<height>343</height>
+					<font>Font_MultiplexPlotOld</font>
+					<label>$INFO[ListItem.Plot]</label>
+					<textcolor>d0FFFFFF</textcolor>
+					<autoscroll delay="15000" time="2000" repeat="10000">true</autoscroll>
+					<visible>![Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexbigtrailer) | Skin.HasSetting(oldmultiplextrailer)]</visible>
+				</control>
+				<control type="textbox">
+					<posx>955</posx>
+					<posy>24</posy>
+					<width>263</width>
+					<height>341</height>
+					<font>Font_MultiplexPlotOld</font>
+					<label>$INFO[ListItem.Plot]</label>
+					<textcolor>d0FFFFFF</textcolor>
+					<autoscroll delay="15000" time="2000" repeat="10000">true</autoscroll>
+					<visible>Skin.HasSetting(oldmultiplextrailer)</visible>
+				</control>
+				<control type="textbox">
+					<posx>60</posx>
+					<posy>188</posy>
+					<width>470</width>
+					<height>174</height>
+					<font>Font_MultiplexPlotOld</font>
+					<label>$INFO[ListItem.Plot]</label>
+					<textcolor>d0FFFFFF</textcolor>
+					<autoscroll delay="15000" time="2000" repeat="10000">true</autoscroll>
+					<visible>Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexbigtrailer)</visible>
+				</control>
 			</control>
-			<control type="textbox">
-				<posx>60</posx>
-				<posy>188</posy>
-				<width>470</width>
-				<height>174</height>
-				<font>Font_MultiplexPlotOld</font>
-				<label>[COLOR=FF3692EE]$INFO[ListItem.tagline][/COLOR][CR]$INFO[ListItem.Plot]</label>
-				<textcolor>d0FFFFFF</textcolor>
-				<autoscroll delay="15000" time="2000" repeat="10000">true</autoscroll>
-				<visible>Skin.HasSetting(oldmultiplexfanart) | Skin.HasSetting(oldmultiplexbigthumb) | Skin.HasSetting(oldmultiplexbigtrailer)</visible>
-			</control>
+			
 			<control type="group">
 			<include>MediaListSelectDelay</include>
 			<include>MediaViewFade</include>
