@@ -648,7 +648,7 @@
 					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + Container.Content(movies) + !Skin.HasSetting(moviegallerypanelon)</visible>
 					<info>Listitem.Property(mediaTag::contentRating)</info>
 					<animation effect="slide" end="205,-265" time="0" condition="Control.IsVisible(54)">Conditional</animation>
-					<animation effect="slide" end="25,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
+					<animation effect="slide" end="25,10" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
 				</control>
 				<control type="image">
 					<posy>-6</posy>
