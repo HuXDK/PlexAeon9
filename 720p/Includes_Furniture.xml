@@ -233,8 +233,9 @@
 				<effect type="slide" start="200,0" end="200,0" time="0" />
 				<effect type="zoom" start="125" end="125" time="0" />
 			</animation>
-			<visible>!Container.Content(movies)</visible>
+			<visible>true</visible>
 		</control>
+<!--
 		<control type="image">
 			<posx>-900</posx>
 			<posy>0</posy>
@@ -247,6 +248,7 @@
 			</animation>
 			<visible>Container.Content(movies)</visible>
 		</control>
+-->
 		<control type="image">
 			<posx>-890</posx>
 			<posy>0</posy>
