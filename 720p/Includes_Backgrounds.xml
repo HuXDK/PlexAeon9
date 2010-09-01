@@ -682,7 +682,7 @@
 			<height>720</height>
 			<texture>backdrops/default_videos/video.jpg</texture>
 			<info>Skin.String(CustomVideo)</info>
-			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>Container(300).HasFocus(8) + Control.IsVisible(300) + !Window.Previous(24)</visible>
 			<visible>!Skin.String(CustomVideoFolder)</visible>
 		</control>
 <!--
