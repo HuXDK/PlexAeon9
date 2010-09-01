@@ -16,18 +16,47 @@
   
 <!-- Main Menu -->
   
-  <string id="31010">MÚSICA</string>
-  <string id="31011">STORE</string>
-  <string id="31012">IMÁGENES</string>
+  <string id="31010">APPS DE MUSICA</string>
+  <string id="31011">PLEX ONLINE</string>
+  <string id="31012">APPS DE FOTOS</string>
   <string id="31013">PELÍCULAS</string>
   <string id="31014">SERIES</string>
-  <string id="31015">VÍDEOS</string>
+  <string id="31015">APPS DE VIDEO</string>
   <string id="31016">OPCIONES</string>
   <string id="31017">CLIMA</string>
   <string id="31018">PLAY DISC</string>
   <string id="31019">APAGAR</string>
   <string id="31020">SCRIPTS</string>
   <string id="31021">ASISTENTE</string>
+
+<!-- Plexaeon Viewtype Mods Settings-->
+
+	<string id="32010">USE TV POSTERS FOR MULTIPLEX</string>
+	<string id="32011">NUEVA VISTA MURO</string>
+	<string id="32012">USE OLD CLEARLIST EPISODE INFO VIEW</string>
+	<string id="32013">WEATHER BACKDROP BY CURRENT WEATHER CONDITIONS</string>
+	<string id="32014">ENABLE STARTUP PLAYLIST (PLAYLIST, AUDIO, OR VIDEO)</string>
+	<string id="32015">- PATH TO STARTUP FILE/PLAYLIST</string>
+	<string id="32016">NO 'EXTRA ZOOM' ON CONTEXT MENU</string>
+	<string id="32017">USAR FUNDAS DVD</string>	
+	<string id="32018">FAST SCROLLING LETTERS POPUP</string>
+	<string id="32019">USE VERTICAL VIEWTYPE MENU</string>
+	<string id="32020">REPRODUCIR VIDEO DETRAS DE LOS MENUS (APRETAR TAB MIENTRAS EN VIDEO SE ESTA REPRODUCIENDO)</string>
+	<string id="32021">PATH TO AUDIO SOUND CHECK AVI</string>
+	<string id="32022">ENABLE CINEMA PLAY MODE (PLAY A RANDOM VIDEO BEFORE STARTING MOVIE)</string>
+	<string id="32023">- PATH TO CINEMA FOLDER</string>
+	<string id="32024">CLEARART TVSHOWS OVERLAY (OFF FOR TVPOSTER)</string>
+	<string id="32025">EXTRA OSD INFORMATION</string>
+	<string id="32026">PATH TO CUSTOM CURTAINS BACKDROP</string>
+	<string id="32027">USE BACKDROPS FOR MISSING FANART (OFF FOR BLACK SCREEN)</string>
+	<string id="32028">ANIMATED BACKDROPS (KEN BURNS EFFECT)</string>
+	<string id="32029">MOSTRAR PANEL DE NAVEGACION</string>
+	<string id="32030">CONDITION</string>
+	<string id="32031">OSD SUBTITLE</string>
+	<string id="31170">PRESSING UP ACTIVATES CONTEXT MENU (OFF ACTIVATES FAVORITES)</string>
+	<string id="31171">DARK PANEL</string>
+	<string id="31172">USE SLEEP MAC INSTEAD OF SHUTDOWN ON HOMESCREEN</string>
+	<string id="31173">USE ALTERNATE DIALOG POPUPS (AEON STARK STYLE)</string>
  
 <!-- Media Window titles -->
  
@@ -45,12 +74,13 @@
   <string id="31041">POR:</string>
  
 <!-- Media Window options -->
+   <string id="31542">Suelo: [COLOR=FFFFFFFF]Limpio[/COLOR]</string>
 
-   <string id="31042">TEMA: CLARO</string>
-   <string id="31043">TEMA: OSCURO</string>
-   <string id="31044">ARTE</string>
-   <string id="31045">THUMB</string>
-   <string id="31046">TRAMA</string>
+   <string id="31042">Suelo: [COLOR=FFFFFFFF]Luz[/COLOR]</string>
+   <string id="31043">Suelo: [COLOR=FFFFFFFF]Noche[/COLOR]</string>
+   <string id="31044">[COLOR=FFFFFFFF]Arte[/COLOR]</string>
+   <string id="31045">[COLOR=FFFFFFFF]Miniatura/COLOR]</string>
+   <string id="31046">[COLOR=FFFFFFFF]Traza[/COLOR]</string>
    <string id="31047">DISEÑO</string>
    <string id="31048">TRIGGER</string>
    <string id="31049">AUTO</string>
@@ -63,27 +93,37 @@
    <string id="31056">THUMB: CUADRADO</string>
    <string id="31057">ARCHIVOS</string>
    <string id="31058">OCULTAS VISTOS</string>
-   <string id="31059">THUMB: POSTER</string>
+	<string id="31059">Miniatura: [COLOR=FFFFFFFF]Poster[/COLOR]</string>
    <string id="31060">NAVEGACIÓN: PLANO</string>
-   <string id="31061">NAVEGACIÓN: FLUJO</string>
+	<string id="31061">MINIATURAS FLUIDAS</string>
+	<string id="31022">Oscurecer Fondo</string>	
    <string id="31062">TEMPORADA</string>
    <string id="31063">EPISODIO</string>
    <string id="31064">FANART</string>
    <string id="31065">PANEL</string>
-   <string id="31066">OVERLAY</string>
-   <string id="31067">BACKDROP</string>
+	<string id="31066">Icono de No Visto</string>
+	<string id="31067">FanArt</string>
    <string id="31068">LIBRERIA</string>
    <string id="31069">FLAGS</string>
    <string id="31070">INFO</string>
    <string id="31071">DELGADO</string>
    <string id="31072">COMPLETO</string>
-   <string id="31073">POR DEFECTO</string>
+	<string id="31073">[COLOR=FFFFFFFF]Por defecto[/COLOR]</string>
    <string id="31074">MÁX</string>
    <string id="31075">DISEÑO</string>
    <string id="31076">GRILLA</string>
    <string id="31077">ON</string>
    <string id="31078">OFF</string>
    <string id="31079">AUTO OCULTAR</string>
+	<string id="310791">Layout: [COLOR=FFFFFFFF]Horizontal[/COLOR]</string>
+	<string id="310792">Layout: [COLOR=FFFFFFFF]Vertical[/COLOR]</string>
+	<string id="310793">Thin List</string>
+	<string id="310794">Thin List: On</string>
+	<string id="310795">Thin Info</string>
+	<string id="310796">Thin Info: On</string>
+	<string id="310797">Paneles: [COLOR=FFFFFFFF]Luz[/COLOR]</string>
+	<string id="310798">Paneles: [COLOR=FFFFFFFF]Noche[/COLOR]</string>
+	<string id="310799">Use Genre In Full List</string>	
   
 <!-- Aeon Customisation Virtual Home page labels -->
   
@@ -138,17 +178,17 @@
 <!-- XBMC Settings Menu labels -->
   
   <string id="31140">VÍDEO</string>
-  <string id="31141">REPRODUCCIÓN Y BIBLIOTECA</string>
+	<string id="31141">ESCALADO Y SUBTITULOS</string>
   <string id="31142">MÚSICA</string>
-  <string id="31143">REPRODUCCIÓN Y BIBLIOTECA</string>
+	<string id="31143">VISUALIZADOR LAST.FM</string>
   <string id="31144">PROGRAMAS</string>
   <string id="31145">JUEGOS Y APLICACIONES</string>
   <string id="31146">IMÁGENES</string>
   <string id="31147">NAVEGADOR Y DIAPOSITIVAS</string>
   <string id="31148">CLIMA</string>
   <string id="31149">LOCALIZACIÓN Y APARIENCIA</string>
-  <string id="31150">RED</string>
-  <string id="31151">LOCAL E INTERNET</string>
+	<string id="31150">ACTUALIZAR PROGRAMA</string>
+	<string id="31151">COMPROBAR ACTUALIZACION DE PLEX</string>
   <string id="31152">SISTEMA</string>
   <string id="31153">CACHÉ Y HARDWARE</string>
   <string id="31154">APARIENCIA</string>
@@ -181,8 +221,8 @@
  
 <!--  Set Content / Add Source dialogs  --> 
   
-  <string id="31220">EL DIRECTORIO CONTIENE:</string>
-  <string id="31221">INTRODUCIR RUTA O NAVEGAR PARA LOCALIZAR MEDIOS</string>
+	<string id="31320">CALIDAD Y ESCALADO</string>
+	<string id="31321">ETIQUETAS Y VISUALIZACION</string>
   <string id="31222">ELEGIR UN NOMBRE PARA ESTE ORIGEN:</string>
   <string id="31223">LISTA</string>
   <string id="31224">TÍTULO</string>
@@ -190,8 +230,8 @@
 <!-- Aeon Advanced Menu labels -->
   
   <string id="31230">AEON</string> 
-  <string id="31231">OPCIONES</string>
-  <string id="31232">GENERAL</string>
+	<string id="31331">ACTIALIZAR PLEX</string>
+	<string id="31332">CLIENTE</string>
   <string id="31233">OPCIONES GLOBALES</string>
   <string id="31234">PÁGINA DE INICIO</string>
   <string id="31235">OPCIONES DE LA PÁGINA DE INICIO</string>
@@ -278,12 +318,12 @@
   <string id="31336">LOGGING Y TIMEOUTS</string>
   <string id="31337">ENTRADAS Y RETARDOS</string>
   <string id="31338">TIPOS DE MEDIOS</string>
-  <string id="31339">LOCAL Y EN RED</string>
+	<string id="31339">OPCIONES DEL SERVIDOR</string>
   <string id="31340">ANALÓGICO / DIGITAL</string>
   <string id="31341">RESTRICCIÓN DE CONTENIDOS</string>
   <string id="31342">GRABACIONES Y VISUALIZACIÓN</string> 
-  <string id="31343">CONTROL DE LA BASE DE DATOS</string> 
-  <string id="31344">HARDWARE Y NIVELES</string> 
+	<string id="31343">EMPEZAR AUTOMATICAMENTE</string> 
+	<string id="31344">FONDO Y VOLUMEN</string> 
   <string id="31345">ETIQUETAS ID Y BÚSQUEDAS</string> 
   <string id="31346">PROPUESTAS Y PERFIL</string> 
   <string id="31347">CARPETAS Y CONFIGURACIÓN</string>
@@ -319,7 +359,7 @@
   <string id="31422">NOTAS</string>
   <string id="31423">ETIQUETA</string>
   <string id="31424">CRÍTICA DEL ÁLBUM NO DISPONIBLE</string>
-  <string id="31425">INFORMACIÓN NO DISPONIBLE</string>
+	<string id="31425">NO DISPONIBLE</string>
   <string id="31426">PISTA</string>
   <string id="31427">DURACIÓN</string>
   <string id="31428">SIN COMENTARIOS</string>
@@ -338,6 +378,10 @@
   <string id="31442">FECHA MODIFICACIÓN NO DISPONIBLE</string>
   <string id="31443">RESOLUCIÓN NO DISPONIBLE</string>
   <string id="31444">TAMAÑO DE ARCHIVO NO DISPONIBLE</string>
+	<string id="31445">RATING</string>
+	<string id="31446">NUEVOS EPISODIOS</string>
+	<string id="31447">NUEVO EPISODIO</string>
+	<string id="31448">EPISODIOS TOTALES</string>
  
 <!--  Aeon Assistant  -->
  
@@ -402,7 +446,7 @@
   <string id="31701">TASA DE BITS</string>
   <string id="31702">TASA DE MUESTREO</string>
   <string id="31703">CANALES</string>
-  <string id="31704">SIGUIENTE:</string>
+	<string id="31704">AVANCE RAPIDO</string>
   <string id="31705">REBOBINAR</string>
   <string id="31706">AVANZAR</string>
   <string id="31707">VOLUMEN</string>
@@ -435,20 +479,20 @@
   
 <!-- Aeon Settings panel labels -->
   
-  <string id="31800">SUBTÍTULOS APARTE</string>
-  <string id="31801">PARA USAR SUBTÍTULOS APARTE, LOS FICHEROS DE VÍDEO Y DE LOS SUBTÍT. DEBEN TENER EL MISMO NOMBRE.[CR]E.G: VEXILE.AVI REQUIERE DEL ARCHIVO DE SUBTÍTULOS VEXILE.SRT (LA EXTENSIÓN PUEDE VARIAR)</string>
-  <string id="31802">VIDEOCLIPS</string>
-  <string id="31803">XBMC GESTIONA LOS VIDEOCLIPS DE LA MISMA MANERA QUE LAS PELÍCULAS. EN MODO BIBLIOTECA, SEÑALAR[CR]EL CONTENIDO DE LA CARPETA COMO 'VIDEOCLIPS', ESCOGER LA FUENTE ONLINE DE INFORMACIÓN Y LISTOS</string>
-  <string id="31804">EMULACIÓN</string>
-  <string id="31805">XBMC PUEDE UTILIZARSE PARA LANZAR EMULADORES EN TODAS LAS PLATAFORMAS, AUNQUE LOS MÉTODOS[CR]PUEDEN DIFERIR. ACCEDE A LOS FOROS DE XBMC (WWW.XBMC.ORG) PARA SABER MÁS SOBRE ESTE ASPECTO</string>
+	<string id="31800">ESCALADO DE VIDEO Y FUENTE DE SUBTITULO</string>
+	<string id="31801">OPCIONES PARA ACTIVAR EL ESCALADO DE VIDEO, LA ACELERACION POR HARDWARE Y SELECCIONAR LA[CR]FUENTE Y TAMAÑO DEL SUBTITULO</string>
+	<string id="31802">MUSICA</string>
+	<string id="31803">OPCIONES PARA ACTIVAR EL VISUALIZADOR MUSICAL, LAST.FM Y LA MUSICA DE FONDO EN LAS SERIES</string>
+	<string id="31804"></string>
+	<string id="31805"></string>
   <string id="31806">ROTAR UTILIZANDO LA INFORMACIÓN EXIF</string>
   <string id="31807">LAS CÁMARAS ACTUALES INCRUSTAN METADATOS EN CADA FOTOGRAFÍA. CON ESTA OPCIÓN ACTIVADA, LAS[CR]FOTOGRAFÍAS SE ROTAN AUTOMÁTICAMENTE PARA CORREGIR SU POSICIÓN CUANDO SON MOSTRADAS</string>
   <string id="31808">PREVISIONES METEOROLÓGICAS EN VIVO</string>
   <string id="31809">XBMC MUESTRA PREDICCIONES METEOROLÓGICAS DE HASTA TRES LUGARES, CORTESÍA DE WEATHER.COM.[CR]PUEDES ELEGIR ENTRE EL SISTEMA MÉTRICO DECIMAL O EL INGLÉS/IMPERIAL</string>
   <string id="31810">CONFIGURAR UN VISUALIZACIÓN MÁS LIVIANA</string>
-  <string id="31811">PUEDES RECOLOCAR LOS MENÚS DE NAVEGACIÓN DE AEON DE UN MODO RÁPIDO Y FÁCIL. SÓLO PULSA ARRIBA[CR]O ABAJO PARA CAMBIAR LA POSICIÓN Y LOS ELEMENTOS EN PANTALLA SE DISTRIBUIRÁN AUTOMÁTICAMENTE</string>
-  <string id="31812">CAPACIDAD DE ALMACENAMIENTO EXTERNO</string>
-  <string id="31813">LOS HD EXTERNOS DE GRAN CAPACIDAD (500GB+) SON UN MEDIO IDEAL PARA GRANDES COLECCIONES DE[CR]PELÍCULAS EN HD.XBMC PUEDE GESTIONAR MILES DE FICHEROS PARA CADA FUENTE ORIGEN QUE DEFINAS</string>
+	<string id="31811">CAMBIA TUS FONDOS, QUITA OPCIONES DEL MENU, SELECCIONA LA VISUALIZACION EN LA MUSICA. PERO SI DE VERDAD QUIERES PERSONALIZAR TU[CR]EXPERIENCIA CON PLEXAEON , ENTRA EN LA SECCION 'AVANZADO'.</string>
+	<string id="31812">ACTUALIZACIONES DE PLEX</string>
+	<string id="31813">BUSCAR ACTUALIZACIONES MANUALMENTE O DEJA QUE PLEX LO COMPRUEBE DIARIAMENTE</string>
   <string id="31814">UN ENTORNO MULTIMEDIA DE AUTÉNTICA ALTA DEFINICIÓN</string>
   <string id="31815">AEON RENDERIZA LA MAYORÍA DE SUS TEXTURAS EN 1080P NATIVO (FULL HD), REDUCIÉNDOLAS EN CASO[CR]NECESARIO PARA ACOMODARSE A CUALQUIER PANTALLA HD. AEON ES PUNTERO EN ENTRETENIMIENTO DIGITAL</string>
   <string id="31816">¿PUEDE SOPORTARLO TU HARDWARE?</string>
@@ -493,5 +537,10 @@
    <string id="31936">PISTAS</string>
    <string id="31937">TEMPORADAS</string>
    <string id="31938">EPISODIOS</string>
+<!-- Trailer Mod -->
+
+	<string id="32000">[COLOR=FFFFFFFF]Trailer[/COLOR]</string>
+	<string id="32001">[COLOR=FFFFFFFF]Gran Trailer[/COLOR]</string>
+	<string id="32002">[COLOR=FFFFFFFF]Poster[/COLOR]</string>
 	
 </strings>

@@ -65,7 +65,7 @@
 			<posy>26</posy>
 			<width>1280</width>
 			<height>381</height>
-			<visible>Control.IsVisible(57)</visible>
+			<visible>Control.IsVisible(57) + !Skin.HasSetting(ShowcaseInfoOff)</visible>
 			<animation effect="fade" end="0" time="400">WindowClose</animation>
 			<control type="image">
 				<posx>75</posx>
@@ -97,7 +97,7 @@
 			<posy>26</posy>
 			<width>1280</width>
 			<height>381</height>
-			<visible>Control.IsVisible(57)</visible>
+			<visible>Control.IsVisible(57) + !Skin.HasSetting(ShowcaseInfoOff)</visible>
 			<animation effect="fade" end="0" time="400">WindowClose</animation>
 			<control type="group">
 				<posx>105</posx>

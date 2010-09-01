@@ -2083,7 +2083,17 @@
 			<visible>Container.Content(movies)</visible>
 		</control>
 	</include>
+
 	<include name="MediaMenuButton_MultiplexInfo">
+		<control type="radiobutton" id="700003">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]</label>
+			<onclick>Skin.ToggleSetting(multiplexinfooff)</onclick>
+			<selected>!Skin.HasSetting(multiplexinfooff)</selected>
+			<visible>Control.IsVisible(52)</visible>
+		</control>
+
+<!--
 		<control type="button" id="700003">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
@@ -2156,6 +2166,7 @@
 			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Control.IsVisible(52) | Control.IsVisible(552) | Control.IsVisible(563)] + Skin.HasSetting(multiplextvinfoon)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
+-->
 	</include>
 	<include name="MediaMenuButton_WallInfo">
 		<control type="radiobutton" id="700025">
@@ -2783,6 +2794,16 @@
 		</control>
 	</include>
 	<include name="MediaMenuButton_ShowcaseInfo">
+
+		<control type="radiobutton" id="700060">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]</label>
+			<onclick>Skin.ToggleSetting(showcaseinfooff)</onclick>
+			<selected>!Skin.HasSetting(showcaseinfooff)</selected>
+			<visible>Control.IsVisible(57)</visible>
+		</control>
+
+<!--
 		<control type="button" id="700060">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
@@ -2881,7 +2902,7 @@
 			<onclick>SetFocus(57)</onclick>
 			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasetrailer)</visible>
 		</control>
-<!--
+
 		<control type="button" id="700072">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31047]: $LOCALIZE[32001]</label>
@@ -2890,7 +2911,7 @@
 			<onclick>SetFocus(57)</onclick>
 			<visible>Container.Content(movies) + Control.IsVisible(57) + Skin.HasSetting(showcasebigtrailer)</visible>
 		</control>
--->
+
 		<control type="button" id="700073">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31047]: $LOCALIZE[32002]</label>
@@ -2907,6 +2928,7 @@
 			<onclick>Skin.ToggleSetting(showcasetvbigthumb)</onclick>
 			<visible>Container.Content(episodes) + Control.IsVisible(57)</visible>
 		</control>
+-->
 	</include>
 	<include name="Objects_AnoobieStyleButtons">
 
@@ -3247,11 +3269,6 @@
 				<include>MediaMenuButton_ClearList</include>
 				<include>MediaMenuButton_Random</include>
 				<include condition="Window.IsActive(500) | Window.IsActive(28)">MediaMenuButton_Playlist</include>
-		<!--		<include>MediaMenuButton_MultiplexInfo</include>
-				<include>MediaMenuButton_OldMultiplexInfo</include>
-				<include>MediaMenuButton_multiwallInfo</include>
-				<include>MediaMenuButton_ShowcaseInfo</include> 
-				<include>MediaMenuButton_WallInfo</include>  -->
 		<!--	<include>MediaMenuButton_GamesPoster</include> -->
 				<include>MediaMenuButton_MultiplexStyle</include>
 				<include>Objects_AnoobieStyleButtons</include>
@@ -3259,6 +3276,11 @@
 				<include>MediaMenuButton_OldMultiplexStyle</include>
 				<include>MediaMenuButton_ShowcaseStyle</include>
 				<include>MediaMenuButton_ListLayout</include>
+				<include>MediaMenuButton_MultiplexInfo</include> 
+				<include>MediaMenuButton_OldMultiplexInfo</include>
+		<!--	<include>MediaMenuButton_multiwallInfo</include>  -->
+				<include>MediaMenuButton_ShowcaseInfo</include> 
+		<!--	<include>MediaMenuButton_WallInfo</include>  -->
 				<include>MediaMenuButton_FlattenFlow</include>
 				<include>MediaMenuButton_VerticalWall</include>
 				<include>MediaMenuButton_Stripshow</include>
