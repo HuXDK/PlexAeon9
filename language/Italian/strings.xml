@@ -3,7 +3,7 @@
 <!--  strings 31000 thru 31999 reserved for skins  -->
 
 <strings>
-	<string id="31000">1.8a(Kianor / Myriddin)</string> <!-- DO NOT CHANGE -->
+	<string id="31000">2.0(Kianor)</string> <!-- DO NOT CHANGE -->
 	<string id="31001">N/A</string>
 	<string id="31002">MUTE</string>
 	<string id="31003">OPZIONI DI VIS. METEO NON DISP. IN QUESTA VERSIONE</string>
@@ -16,12 +16,12 @@
   
 <!-- Main Menu -->
   
-	<string id="31010">MUSICA</string>
-	<string id="31011">APP STORE</string>
-	<string id="31012">IMMAGINI</string>
+	<string id="31010">APP MUSICA</string>
+	<string id="31011">PLEX ONLINE</string>
+	<string id="31012">APP IMMAGINI</string>
 	<string id="31013">FILM</string>
 	<string id="31014">SERIE TV</string>
-	<string id="31015">VIDEO</string>
+	<string id="31015">APP VIDEO</string>
 	<string id="31016">SETUP</string>
 	<string id="31017">METEO</string>
 	<string id="31018">RIPRODUCI DISCO</string>
@@ -37,11 +37,11 @@
 	<string id="32013">LO SFONDO DEL METEO RISPECCHIA LE ATTUALI CONDIZIONI METEO</string>
 	<string id="32014">ABILITA LA PLAYLIST INIZIALE (PLAYLIST, AUDIO O VIDEO)</string>
 	<string id="32015">- PERCORSO AL FILE/PLAYLIST INIZIALE</string>
-	<string id="32016">NESSUN 'ZOOM EXTRA' NEL MENU' CONTESTUALE</string>
+	<string id="32016">NESSUN 'ZOOM EXTRA' NEL MENU CONTESTUALE</string>
 	<string id="32017">USA L'OVERLAYS CD/DVD </string>	
 	<string id="32018">SCROLLING VELOCE LETTERE DI POPUP</string>
-	<string id="32019">USA LA VISTA VERTICAL PER IL MENU'</string>
-	<string id="32020">RIPRODUCI VIDEO COME SFONDO FANART</string>
+	<string id="32019">USA LA VISTA VERTICAL PER IL MENU</string>
+	<string id="32020">RIPRODUCI VIDEO COME SFONDO FANART (PREMI TAB UNA VOLTA AVVIATO IL VIDEO)</string>
 	<string id="32021">PERCORSO FILE AVI PER IL TEST AUDIO</string>
 	<string id="32022">ABILITA LA MODALITA' CINEMA (ESEGUI UN VIDEO CASUALE PRIMA DI FAR PARTIRE IL FILM)</string>
 	<string id="32023">- PERCORSO PER LA CARTELLA CINEMA</string>
@@ -50,12 +50,13 @@
 	<string id="32026">PERCORSO PER IL TENDONE DI SFONDO PERSONALIZZATO</string>
 	<string id="32027">USA IL TENDONE PER LE FANART MANCANTI (OFF PER SCHERMO NERO)</string>
 	<string id="32028">ANIMA LO SFONDO (EFFETTO KEN BURNS)</string>
-	<string id="32029">VISUALIZZA PANNELLO DEI TOTALI SU TUTTE LE VISUALIZZAZIONI</string>
+	<string id="32029">MOSTRA PANNELLO NAVIGAZIONE</string>
 	<string id="32030">CONDIZIONE</string>
 	<string id="32031">SOTTOTITOLI OSD</string>
-	<string id="31170">PREMERE SOPRA ATTIVA IL MENU' CONTESTUALE (OFF ATTIVA I PREFERITI)</string>
+	<string id="31170">PREMERE SOPRA ATTIVA IL MENU CONTESTUALE (OFF ATTIVA I PREFERITI)</string>
 	<string id="31171">PANNELLO SCURO</string>
-	<string id="31172">USA LO SLEEP AL POSTO DELLO SPEGNI NEL MENU' INIZIALE</string>
+	<string id="31172">USA LO SLEEP AL POSTO DELLO SPEGNI NEL MENU INIZIALE</string>
+	<string id="31173">USA POPUP ALTERNATIVI (STILE AEON STARK)</string>
 
 <!-- Media Window titles -->
  
@@ -73,12 +74,14 @@
 	<string id="31041">DA:</string>
 
 <!-- Media Window options -->
-	<string id="31542">Sfondo: Normale</string>
-	<string id="31042">Sfondo: Chiaro</string>
-	<string id="31043">Sfondo: Scuro</string>
-	<string id="31044">Poster</string>
-	<string id="31045">Thumb</string>
-	<string id="31046">Trama</string>
+
+           <string id="31022">Dim fanart</string>
+	<string id="31542">Sfondo: [COLOR=FFFFFFFF]Normale[/COLOR]</string>
+	<string id="31042">Sfondo: [COLOR=FFFFFFFF]Chiaro[/COLOR]</string>
+	<string id="31043">Sfondo: [COLOR=FFFFFFFF]Scuro[/COLOR]</string>
+	<string id="31044">[COLOR=FFFFFFFF]Poster[/COLOR]</string>
+	<string id="31045">[COLOR=FFFFFFFF]Thumb[/COLOR]</string>
+	<string id="31046">[COLOR=FFFFFFFF]Trama[/COLOR]</string>
 	<string id="31047">Layout</string>
 	<string id="31048">Trigger</string>
 	<string id="31049">Auto</string>
@@ -91,7 +94,7 @@
 	<string id="31056">Thumb: Quadrato</string>
 	<string id="31057">Files</string>
 	<string id="31058">Nascondi Visti</string>
-	<string id="31059">Thumb: Poster</string>
+	<string id="31059">Thumb: [COLOR=FFFFFFFF]Poster[/COLOR]</string>
 	<string id="31060">Layout: Piatto</string>
 	<string id="31061">Layout: Flusso</string>
 	<string id="31062">Stagione</string>
@@ -99,28 +102,28 @@
 	<string id="31063">Episodio</string>
 	<string id="31064">Fanart</string>
 	<string id="31065">Pannello</string>
-	<string id="31066">Overlay</string>
-	<string id="31067">Sfondo</string>
+	<string id="31066">Icona</string>
+	<string id="31067">FanArt</string>
 	<string id="31068">Libreria</string>
 	<string id="31069">Media Flags</string>
 	<string id="31070">Pannello info</string>
 	<string id="31071">Ridotto</string>
 	<string id="31072">Completo</string>
-	<string id="31073">Default</string>
+	<string id="31073">[COLOR=FFFFFFFF]Default[/COLOR]</string>
 	<string id="31074">Vista completa</string>
 	<string id="31075">Layout</string>
 	<string id="31076">Griglia</string>
 	<string id="31077">On</string>
 	<string id="31078">Off</string>
 	<string id="31079">Nascondi aut.</string>
-	<string id="310791">Orizzontale</string>
-	<string id="310792">Verticale</string>
+	<string id="310791">[COLOR=FFFFFFFF]Orizzontale[/COLOR]</string>
+	<string id="310792">[COLOR=FFFFFFFF]Verticale[/COLOR]</string>
 	<string id="310793">Elenco</string>
 	<string id="310794">Elenco Trasparente: On</string>
 	<string id="310795">Pannello Trasparente</string>
 	<string id="310796">Pannello Trasparente: On</string>
-	<string id="310797">Pannelli: Chiari</string>
-	<string id="310798">Pannelli: Scuri</string>
+	<string id="310797">Pannelli: [COLOR=FFFFFFFF]Chiari[/COLOR]</string>
+	<string id="310798">Pannelli: [COLOR=FFFFFFFF]Scuri[/COLOR]</string>
 	<string id="310799">Usa Genere nell'Elenco Completo</string>	
 <!-- Aeon Customisation Virtual Home page labels -->
   
@@ -131,12 +134,12 @@
 	<string id="31084">SCEGLI TIPO DI SFONDO</string>
 	<string id="31085">MUOVI SOPRA PER SFONDO SINGOLO, SOTTO PER CARTELLA A SCORRIMENTO</string>
 	<string id="31086">COLLEGAMENTI</string>
-	<string id="31087">IMPOSTA COLLEGAMENTI DEL MENU' PRINCIPALE</string>
+	<string id="31087">IMPOSTA COLLEGAMENTI DEL MENU PRINCIPALE</string>
 	<string id="31088">MUOVI SINISTRA/DESTRA PER SFOGLIARE, SELEZIONA PER IMPOSTARE</string>
 	<string id="31089">OGGETTI</string>
-	<string id="31090">POSIZIONA OGGETTI DEL MENU' PRINCIPALE</string>
+	<string id="31090">POSIZIONA OGGETTI DEL MENU PRINCIPALE</string>
 	<string id="31091">MUOVI SINISTRA/DESTRA PER SFOGLIARE, SELEZIONA PER RIPOSIZIONARE</string>
-	<string id="31092">SELEZIONA PER RIPOSIZIONARE IL MENU' PRINCIPALE</string>
+	<string id="31092">SELEZIONA PER RIPOSIZIONARE IL MENU PRINCIPALE</string>
 	<string id="31093">SELEZIONA PER AGGANCIARE IL PANNELLO DATA</string>
 	<string id="31094">SELEZIONA PER SGANCIARE IL PANNELLO DATA</string>
 	<string id="31095">SELEZIONA PER PANNELLO RSS</string>
@@ -164,7 +167,7 @@
 	<string id="31120">SFONDI</string>
 	<string id="31121">PERSONALIZZA PLEXAEON</string>
 	<string id="31122">COLLEGAMENTI</string>
-	<string id="31123">POPOLA MENU' PRINCIPALE</string>
+	<string id="31123">POPOLA MENU PRINCIPALE</string>
 	<string id="31124">OGGETTI</string> 
 	<string id="31125">DATA E FEEDS</string>
 	<string id="31126">ELIMINA</string> 
@@ -175,17 +178,17 @@
 <!-- PLEX Settings Menu labels -->
   
 	<string id="31140">VIDEO</string>
-	<string id="31141">RIPRODUZIONE E LIBRERIA</string>
+	<string id="31141">CALIBRAZIONE E SOTTOTITOLI</string>
 	<string id="31142">MUSICA</string>
-	<string id="31143">RIPRODUZIONE E LIBRERIA</string>
+	<string id="31143">VISUALIZZATORE LAST.FM</string>
 	<string id="31144">PROGRAMMI</string>
 	<string id="31145">GIOCHI ED APPLICAZIONI</string>
 	<string id="31146">IMMAGINI</string>
 	<string id="31147">SELEZIONI E PRESENTAZIONE</string>
 	<string id="31148">METEO</string>
 	<string id="31149">LOCALITA' E ASPETTO</string>
-	<string id="31150">RETE</string>
-	<string id="31151">LOCALE E INTERNET</string>
+	<string id="31150">AGG. SOFTWARE</string>
+	<string id="31151">CERCA AGG. PLEX</string>
 	<string id="31152">SISTEMA</string>
 	<string id="31153">CACHE E HARDWARE</string>
 	<string id="31154">ASPETTO</string>
@@ -250,7 +253,7 @@
 	<string id="31241">ARTWORK CONTESTUALE</string>
 	<string id="31242">ABILITA TUTTO</string>
 	<string id="31243">DISABILITA TUTTO</string>
-	<string id="31244">MENU</string>
+	<string id="31244">MENU'</string>
 	<string id="31245">SFOGLIA LAYOUT</string>
 	<string id="31246">VISUALIZZAZIONI</string>
 	<string id="31247">DISATTIVA MODALITA' VISUAL.</string>
@@ -280,7 +283,7 @@
 	<string id="312694">- ABILITA PERCORSO CASUALE ALL'AUTORE, FANART E IMMAGINE CD</string>
 	<string id="312695">- PERCORSO FANART E IMMAGINE CD</string>
 	<string id="31270">ZOOM ANIMAZIONI</string>
-	<string id="31271">DISSOLVI VISTA DEL MENU PANNELLO/ELENCO QUANDO INATTIVO</string>
+	<string id="31271">DISSOLVI VISTA DEL MENU' PANNELLO/ELENCO QUANDO INATTIVO</string>
 	<string id="31278">PERMETTI SCROLLING PER TRAMA/BIO/INFO</string>
 	<string id="31279">ARTWORK CONTESTUALE (FANART) PER INFORMAZIONI IN MODALITA' SCHERMO INTERO</string>
 	<string id="31280">MODALITA' SVILUPPATORE</string>
@@ -318,27 +321,27 @@
 <!-- PLEX Settings Subtitles -->
 	
 	<string id="31319">VISTE PREDEFINITE</string>
-	<string id="31320">CONTROLLO DATABASE</string>
-	<string id="31321">QUALITA' E CALIBRAZIONE</string>
-	<string id="31322">TAGS E DISPLAY</string>	
-	<string id="31324">TAGS E DISPLAY</string>
+	<string id="31320">QUALITA' E CALIBRAZIONE</string>
+	<string id="31321">TAGS E SCHERMO</string>
+	<string id="31322">TAGS E SCHERMO</string>	
+	<string id="31324">TAGS E SCHERMO</string>
 	<string id="31325">TEMPI ED EFFETTI</string>
 	<string id="31326">VISTA SKIN E AUDIO</string>
 	<string id="31327">LINGUA E LOCALITA'</string>
 	<string id="31328">RSS</string>
 	
-	<string id="31331">WEB E CONDIVISIONI SERVER UPNP</string>
+	<string id="31331">AGGIORNA PLEX</string>
 	<string id="31332">CLIENT</string>
 	<string id="31333">AGGIORNA PLEX</string>
 	<string id="31336">RISOLUZIONE E CALIBRAZIONE</string>
 	<string id="31337">HARDWARE</string>
 	<string id="31338">APPLE REMOTE</string>
-	<string id="31339">CONTROLLO E SCROBBLING</string>
+	<string id="31339">OPZIONI SERVER</string>
 	<string id="31340">TEMPI E CONTENUTO</string>
 	<string id="31341">TEMPI E CONTENUTO</string>
 	<string id="31342">VISUALIZZAZIONE</string> 
-	<string id="31343">CONTROLLO DATABASE</string> 
-	<string id="31344">PROFILI</string> 
+	<string id="31343">AVVIO AUTOM.</string> 
+	<string id="31344">SFONDO E VOLUME</string> 
 	<string id="31345">SFONDO E TEMA</string>
 	<string id="31349">CODICI AREA E REGIONALI</string>
 	<string id="31350">CARTELLE DI DEFAULT</string>
@@ -391,6 +394,12 @@
 	<string id="31443">INFORMAZIONI RISOLUZIONE NON DISPONIBILI</string>
 	<string id="31444">INFORMAZIONI SU DIMENSIONI FILE NON DISPONIBILI</string>
 	<string id="31445">VOTO</string>
+	<string id="31446">NUOVI EPISODI</string>
+	<string id="31447">NUOVO EPISODIO</string>
+	<string id="31448">TOTALE EPISODI</string>
+
+
+
 	
 <!--  Aeon Assistant  -->
 
@@ -443,8 +452,8 @@
 	<string id="31655">PREMI SELEZIONA PER INIZIARE IL TOUR. PREMI INDIETRO PER SALTARE</string>
 	<string id="31656">PREMI GIU PER VISUALIZZARE LA PROSSIMA SCHEDA, PREMI SELEZIONA PER SALTARLA</string>
 	<string id="31657">PREMI GIU PER VISUALIZZARE LA PROSSIMA SCHEDA, SU PER LA PRECEDENTE SCHEDA, O PREMI SELEZIONA PER SALTARLA</string>
-	<string id="31659">Navigare tra le finestre e le visuali di Aeon non potrebbe essere più semplice.[CR]L'accesso al menu principale può avvenire in qualsiasi momento e da qualsiasi posizione, fornendo[CR]collegamenti alle Impostazioni, Personalizzazioni e all'Assistenza di Aeon. Il menu a quattro vie[CR]"compass" fornisce l'accesso instantaneo a tutti i tipi di visualizzazioni.</string>
-	<string id="31660">Ogni aspetto di Aeon e XBMC può essere configurato dietro le quinte.[CR]La sezione Impostazione è disponibile per ogni tipo di scena,[CR]divisa in varie sezioni per facilitarne l'uso. Il Menu Principale Virtuale fornisce un[CR]intuitivo riferimento visivo per tutte le vostre esigenze di personalizzazione.</string>
+	<string id="31659">Navigare tra le finestre e le visuali di Aeon non potrebbe essere più semplice.[CR]L'accesso al menù principale può avvenire in qualsiasi momento e da qualsiasi posizione, fornendo[CR]collegamenti alle Impostazioni, Personalizzazioni e all'Assistenza di Aeon. Il menu a quattro vie[CR]"compass" fornisce l'accesso instantaneo a tutti i tipi di visualizzazioni.</string>
+	<string id="31660">Ogni aspetto di Aeon e XBMC può essere configurato dietro le quinte.[CR]La sezione Impostazione è disponibile per ogni tipo di scena,[CR]divisa in varie sezioni per facilitarne l'uso. Il Menù Principale Virtuale fornisce un[CR]intuitivo riferimento visivo per tutte le vostre esigenze di personalizzazione.</string>
 	<string id="31661">Non ci sono limiti a tutte le immagini che si possono inserire come sfondi di[CR]Aeon. Le cartelle contengono migliaia di immagini che possono essere assegnate a[CR]sezioni come Film e Foto. Tutto quello superiore alla risoluzione corrente[CR]verrà ridimensionato, niente verra sovradimensionato.</string>
 	<string id="31662">Controlla ogni aspetto della riproduzione dei media di XBMC senza perdere un secondo.[CR]L'nterfaccia di controllo per film e musica ti permette di regolare qualsiasi cosa dai[CR]sottotitoli all'aspetto audio e video. I preferiti permanenti[CR]possono essere impostati per un facile accesso alle vostre scene preferite.</string>
 	<string id="31663">Sono finiti i giorni in cui la personalizzazione per l'utilizzatore era complessa, e quando[CR]la visualizzazione di alta qualità era tutt'altro che semplice da ottenere. Il sito The Aeon Project offre centinaia[CR]dei migliori sfondi per le finestre di Aeon, liberi di poter essere cambiati e senza[CR]avvertenze. Controlla l'Assistenza di Aeon per scaricare direttamente aggiornamenti e nuovi contenuti.</string>
@@ -457,13 +466,13 @@
 	<string id="31703">CANALI</string>
 	<string id="31706">SUCCESSIVO</string>
 	<string id="31705">INDIETRO</string>
-	<string id="31704">AVANTI</string>
+	<string id="31704">AVANTI VELOCE</string>
 	<string id="31707">VOLUME</string>
 	<string id="31708">POSIZIONE</string>
 	<string id="31709">TEMPO ESECUZIONE</string>
 	<string id="31710">ORA AL TERMINE</string>
 	<string id="31711">SEGNALIBRI DISPONIBILI</string>
-	<string id="31712">SU/GIU: MENU/SEGNALIBRI[CR]SINISTRA/DESTRA: MENU OPZIONI</string>
+	<string id="31712">SU/GIU: MENU'/SEGNALIBRI[CR]SINISTRA/DESTRA: MENU' OPZIONI</string>
 	<string id="31713">OGGETTI IN PLAYLIST</string>
 	<string id="31714">POSIZIONE ATTUALE</string>
 	<string id="31715">PRECEDENTE</string>
@@ -494,26 +503,26 @@
 
 <!-- Aeon Settings panel labels -->
   
-	<string id="31800">SOTTOTITOLI DA UN FILE SEPARATO</string>
-	<string id="31801">PER I SOTTOTITOLI DA FILE, E' NECESSARIO CHE IL FILE VIDEO E IL FILE DEI SOTTOTITOLI CONDIVIDANO LO[CR]STESSO NOME. PER ESEMPIO, VEXILLE.AVI NECESSITA DEL FILE SOTTOTITOLI CON IL NOME VEXILE.STR</string>
-	<string id="31802">VIDEO MUSICALI</string>
-	<string id="31803">PLEX TRATTA I VIDEO MUSICALI COME TRATTA I FILM. NELLA MODALITA' LIBRERIA , BASTA SPECIFICARE LA[CR]CARTELLA CON I 'VIDEO MUSICALI', SCEGLIERE LA FONTE DI INFORMAZIONI ON-LINE E FARA' XBMC IL RESTO</string>
-	<string id="31804">EMULAZIONE</string>
-	<string id="31805">PLEX PUO' ESSERE USATO PER LANCIARE GLI EMULATORI DI QUALSIASI PIATTAFORMA, ANCHE SE CON METODI[CR]DIFFERENTI. CONSULTA IL FORUM PLEX(WWW.PLEXAPP.COM) PER I SOFTWARE SUPPORTATI E ALTRE INFORMAZIONI</string>
+	<string id="31800">CALIBRAZIONE VIDEO E FONT SOTTOTITOLI</string>
+	<string id="31801">OPZIONI PER ABILITARE LA CALIBRAZIONE VIDEO, L'ACCELERAZIONE HARDWARE E IMPOSTARE[CR]FONT E DIMENSIONI</string>
+	<string id="31802">MUSICA</string>
+	<string id="31803">OPZIONI PER IMPOSTARE IL VISUALIZZATORE MUSICA, ABILITARE LAST.FM E ABILITARE MUSICA DI SOTTOFONDO PER SERIE TV</string>
+	<string id="31804"></string>
+	<string id="31805"></string>
 	<string id="31806">RUOTARE USANDO LE INFORMAZIONI EXIF</string>
 	<string id="31807">LE MODERNE FOTOCAMERE INSERISCONO LE INFORMAZIONE IN OGNI FOTO ACQUISITA. CON QUESTA OPZIONE[CR]ATTIVATA, LA FOTO RUOTERA' AUTOMATICAMENTE NELLA CORRETTA POSIZIONE DI VISUALIZZAZIONE</string>
 	<string id="31808">PREVISIONI METEO IN TEMPO REALE</string>
 	<string id="31809">PLEX VISUALIZZA LE PREVISIONI METEO DI TRE LOCALITA', GRAZIE A WEATHER.COM.[CR]OLTRE ALLA TUA LOCALITA', PUOI VEDERE LE INFORMAZIONI SIA IN FORMATO EUROPEO CHE AMERICANO</string>
 	<string id="31810">USA UNA VISUALE PULITA</string>
-	<string id="31811">LA RIPOSIZIONE ONE-TOUCH AEON SEMPLIFICA LA COMPOSIZIONE DEI MENU IN MANIERA SEMPLICE E VELOCE.[CR]PREMERE SU O GIU' PER CAMBIARE POSIZIONE DEI MENU E LA STRUTTURA SI RIARRANGERA' AUTOMATICAMENTE</string>
-	<string id="31812">DISCHI ESTERNI</string>
-	<string id="31813">I DISCHI ESTERNI AD ALTA CAPACITA' (500GB+) SONO LA SOLUZIONE IDEALE PER ARCHIVIARE LA COLLEZIONE[CR]DI FILM IN HD. PLEX E' IN GRADO DI GESTIRE MIGLIAIA DI FILES DA OGNI SORGENTE DEFINITA DALL'UTENTE</string>
+	<string id="31811">CAMBIA GLI SFONDI, DISABILITA OGGETTI MENU', IMPOSTA SCHERMO MUSICALE. TUTTAVIA, PER PERSONALIZZARE COMPLETAMENTE[CR]PLEXAEON, VAI NEL MENU' AVANZATO</string>
+	<string id="31812">AGG. PLEX</string>
+	<string id="31813">CONTROLLA MANUALMENTE AGG. PLEX O IMPOSTA PLEX PER UN CONTROLLO GIORNALIERO</string>
 	<string id="31814">UN VERO AMBIENTE AD ALTA DEFINIZIONE</string>
 	<string id="31815">AEON GESTISCE LA MAGGIORANZA DELLE TEXTURE NATIVE IN 1080P, ADATTANDOLE A[CR]QUALSIASI DISPLAY HD. USANDO LA SORGENTE DI PINNACLE OF DIGITAL ENTERTAINMENT</string>
 	<string id="31816">PUO' IL VOSTRO HARDWARE GESTIRE TUTTO QUESTO?</string>
 	<string id="31817">PLEX HA UNA BASSA RICHIESTA HARDWARE, LA POTENZA DELLA CPU E' RILEVANTE SOLO PER I VIDEO HD.[CR]SONO ALTAMENTE RACCOMANDATE LE SCHEDE VIDEO CHE SUPPORTANO IL PIXEL SHADER 3</string>
 	<string id="31818">INTERFACCIA MINIMALE</string>	
-	<string id="31819">IL MENU PRINCIPALE DI AEON PUO' ESSERE INTERAMENTE RIDOTTO PER PERMETTERE LA VISUALE COMPLETA[CR]DEGLI SFONDI, O PUO' ESSERE ALLARGATO PER MIGLIORARNE LA LEGGIBILITA'</string>	
+	<string id="31819">IL MENU' PRINCIPALE DI AEON PUO' ESSERE INTERAMENTE RIDOTTO PER PERMETTERE LA VISUALE COMPLETA[CR]DEGLI SFONDI, O PUO' ESSERE ALLARGATO PER MIGLIORARNE LA LEGGIBILITA'</string>	
 	<string id="31820">A CIASCUNO IL SUO</string>
 	<string id="31821">PLEX GESTISCE DIVERSI PROFILI UTENTE, CONSENTENDO AGLI UTENTI DI SALVARE LE PROPRIE[CR]CONFIGURAZIONI. RSS, IMPOSTAZIONI E LIBRERIE POSSONO ESSERE SALVATE SEPARATAMENTE</string>
 	
@@ -566,8 +575,9 @@
 
 <!-- Trailer Mod -->
 
-	<string id="32000">Trailer</string>
-	<string id="32001">Big Trailer</string>
+	<string id="32000">[COLOR=FFFFFFFF]Trailer[/COLOR]</string>
+	<string id="32001">[COLOR=FFFFFFFF]Big Trailer[/COLOR]</string>
+	<string id="32002">[COLOR=FFFFFFFF]Big Trailer[/COLOR]</string>
 
 </strings>
 
