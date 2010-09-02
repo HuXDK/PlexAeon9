@@ -136,7 +136,6 @@
 	<include name="Viewtype_List">
 	<control type="group">
 	<visible>Control.IsVisible(50)</visible>
-	<include>Animation_OpenCloseZoom</include>
 	<control type="list" id="50">
 		<viewtype label="31752">list</viewtype>
 		<posx>0</posx>
@@ -149,6 +148,7 @@
 		<onright>61</onright>
 		<onup>50</onup>
 		<ondown>50</ondown>
+	    <include>Animation_OpenCloseZoom</include>
 		<animation effect="fade" time="200">Hidden</animation>
 		<animation effect="fade" time="200">WindowOpen</animation>
 		<animation effect="fade" time="200">WindowClose</animation>

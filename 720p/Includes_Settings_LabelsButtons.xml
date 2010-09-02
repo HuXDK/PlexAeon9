@@ -1289,7 +1289,7 @@
 				<onclick>ActivateWindow(MyWeatherSettings)</onclick>
 				<include>Objects_SettingsSectionMenuButton</include>
 				<onup>9</onup>
-				<ondown>2</ondown>
+				<ondown>4</ondown>
 			</control>
 
 			<control type="label">
@@ -1309,7 +1309,7 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(10)</visible>
 			</control>
-
+<!--
 			<control type="button" id="2">
 				<description>My Network</description>
 				<posy>290</posy>
@@ -1337,20 +1337,20 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(2)</visible>
 			</control>
-
+-->
 			<control type="button" id="4">
 				<description>System</description>
-				<posy>348</posy>
+				<posy>290</posy>
 				<label>31152</label>
 				<onclick>ActivateWindow(SystemSettings)</onclick>
 				<include>Objects_SettingsSectionMenuButton</include>
-				<onup>2</onup>
+				<onup>10</onup>
 				<ondown>3</ondown>
 			</control>
 
 			<control type="label">
 				<description>System Sub Unfocused</description>
-				<posy>380</posy>
+				<posy>322</posy>
 				<label>31153</label>
 				<textcolor>FFf5f5f5</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
@@ -1359,7 +1359,7 @@
 
 			<control type="label">
 				<description>System Sub Unfocused</description>
-				<posy>380</posy>
+				<posy>322</posy>
 				<label>31153</label>
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
@@ -1368,7 +1368,7 @@
 
 			<control type="button" id="3">
 				<description>Appearance</description>
-				<posy>406</posy>
+				<posy>348</posy>
 				<label>31154</label>
 				<onclick>ActivateWindow(AppearanceSettings)</onclick>
 				<include>Objects_SettingsSectionMenuButton</include>
@@ -1378,7 +1378,7 @@
 
 			<control type="label">
 				<description>Appearance Sub Unfocused</description>
-				<posy>438</posy>
+				<posy>380</posy>
 				<label>31155</label>
 				<textcolor>FFf5f5f5</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
@@ -1387,7 +1387,7 @@
 
 			<control type="label">
 				<description>Appearance Sub Unfocused</description>
-				<posy>438</posy>
+				<posy>380</posy>
 				<label>31155</label>
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>

@@ -604,15 +604,16 @@
 			<visible>Skin.HasSetting(NoCustomWeatherConditions)</visible>
 		</control>
 </control>
+
 		<control type="multiimage">
 			<include>Background_ImageFolder</include>
 			<imagepath>weather/$INFO[Weather.FanartCode]</imagepath>
-			<visible>!Skin.HasSetting(NoCustomWeatherConditions)</visible>
 			<visible>Container(300).HasFocus(10) + Control.IsVisible(300)</visible>
+			<visible>!Skin.HasSetting(NoCustomWeatherConditions)</visible>
+			<visible>!Skin.String(CustomWeatherFolder)</visible>
 		</control>
 
 		<control type="largeimage">
-			<visible>Container(300).HasFocus(9) + Control.IsVisible(300)</visible>
 			<animation effect="fade" end="100" time="600" delay="50">Visible</animation>
 			<animation effect="fade" end="0" time="600">Hidden</animation>
 			<texture>backdrops/default_settings/settings.jpg</texture>
@@ -621,6 +622,8 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
+			<visible>Container(300).HasFocus(9) + Control.IsVisible(300)</visible>
+			<visible>!Skin.String(CustomSettingsFolder)</visible>
 		</control>
 
 		<control type="multiimage">

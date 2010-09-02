@@ -95,12 +95,14 @@
 				<onclick>Skin.ToggleSetting(noscrollletters)</onclick>
 				<selected>!Skin.HasSetting(noscrollletters)</selected>
 			</control>
+<!--
 			<control type="radiobutton" id="408">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32019</label>
 				<onclick>Skin.ToggleSetting(novertikalmenu)</onclick>
 				<selected>!Skin.HasSetting(novertikalmenu)</selected>
 			</control>
+-->
 			<control type="radiobutton" id="409">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32020</label>

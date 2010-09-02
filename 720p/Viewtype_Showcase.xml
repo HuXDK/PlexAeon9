@@ -103,6 +103,7 @@
 				<posx>105</posx>
 				<posy>26</posy>
 				<control type="group">
+					<visible>Container.Content(movies)</visible>
 					<posy>22</posy>
 					<control type="label">
 						<include>ShowcaseInfoLabel</include>
@@ -114,6 +115,7 @@
 					</control>
 				</control>
 				<control type="group">
+					<visible>Container.Content(movies)</visible>
 					<posy>67</posy>
 					<control type="label">
 						<include>ShowcaseInfoLabel</include>
@@ -125,6 +127,31 @@
 					</control>
 				</control>
 				<control type="group">
+					<visible>!Container.Content(movies)</visible>
+					<posy>22</posy>
+					<control type="label">
+						<include>ShowcaseInfoLabel</include>
+						<label>$LOCALIZE[31440]:</label>
+					</control>
+					<control type="label">
+						<include>ShowcaseInfoValue</include>
+						<label fallback="31425">$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!Container.Content(movies)</visible>
+					<posy>67</posy>
+					<control type="label">
+						<include>ShowcaseInfoLabel</include>
+						<label>$LOCALIZE[31439]:</label>
+					</control>
+					<control type="label">
+						<include>ShowcaseInfoValue</include>
+						<label fallback="31425">$INFO[ListItem.Property(WatchedEpisodes)]</label>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!Container.Content(seasons)</visible>
 					<posy>112</posy>
 					<control type="label">
 						<include>ShowcaseInfoLabel</include>
@@ -136,8 +163,20 @@
 					</control>
 				</control>
 				<control type="group">
+					<visible>Container.Content(seasons)</visible>
+					<posy>112</posy>
+					<control type="label">
+						<include>ShowcaseInfoLabel</include>
+						<label>$LOCALIZE[31448]:</label>
+					</control>
+					<control type="label">
+						<include>ShowcaseInfoValue</include>
+						<label fallback="31425">$INFO[ListItem.Episode]</label>
+					</control>
+				</control>
+				<control type="group">
 					<posy>157</posy>
-					<visible>![Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigtrailer)]</visible>
+					<visible>![Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigtrailer)] + !Container.Content(Seasons)</visible>
 					<control type="label">
 						<include>ShowcaseInfoLabel</include>
 						<label>$LOCALIZE[31709]:</label>
@@ -149,7 +188,7 @@
 				</control>
 				<control type="group">
 					<posy>202</posy>
-					<visible>![Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigtrailer)]</visible>
+					<visible>![Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigtrailer)] + !Container.Content(Seasons)</visible>
 					<control type="label">
 						<include>ShowcaseInfoLabel</include>
 						<label>$LOCALIZE[31438]:</label>
@@ -161,7 +200,7 @@
 				</control>
 				<control type="group">
 					<posy>247</posy>
-					<visible>![Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigtrailer)]</visible>
+					<visible>![Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigtrailer)] + !Container.Content(Seasons)</visible>
 					<control type="label">
 						<include>ShowcaseInfoLabel</include>
 						<label>$LOCALIZE[31417]:</label>
@@ -173,7 +212,7 @@
 				</control>
 				<control type="group">
 					<posy>292</posy>
-					<visible>![Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigtrailer)]</visible>
+					<visible>![Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigtrailer)] + !Container.Content(Seasons)</visible>
 					<control type="label">
 						<include>ShowcaseInfoLabel</include>
 						<label>$LOCALIZE[31408]:</label>
@@ -196,7 +235,7 @@
 				</control>
 				<control type="group">
 					<posy>22</posy>
-					<visible>Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasebigtrailer)</visible>
+					<visible>[Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasebigtrailer)] + !Container.Content(Seasons)</visible>
 					<control type="label">
 						<include>ShowcaseInfoLabelBigThumb</include>
 						<label>$LOCALIZE[31709]:</label>
@@ -208,7 +247,7 @@
 				</control>
 				<control type="group">
 					<posy>67</posy>
-					<visible>Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasebigtrailer)</visible>
+					<visible>[Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasebigtrailer)] + !Container.Content(Seasons)</visible>
 					<control type="label">
 						<include>ShowcaseInfoLabelBigThumb</include>
 						<label>$LOCALIZE[31417]:</label>
@@ -220,7 +259,7 @@
 				</control>
 				<control type="group">
 					<posy>112</posy>
-					<visible>Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasebigtrailer)</visible>
+					<visible>[Skin.HasSetting(showcasefanart) | Skin.HasSetting(showcasebigthumb) | Skin.HasSetting(showcasebigtrailer)] + !Container.Content(Seasons)</visible>
 					<control type="label">
 						<include>ShowcaseInfoLabelBigThumb</include>
 						<label>$LOCALIZE[31408]:</label>
@@ -3556,7 +3595,7 @@
 
 	<control type="group">
 		<include>Animation_OpenCloseZoom</include>
-		<visible>Control.IsVisible(57) + Container.Content(movies)</visible>
+		<visible>Control.IsVisible(57) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 		<include>ShowcaseInfoPaneMovies</include>
 		<control type="group">
 			<visible>Control.IsVisible(57) + [Window.IsActive(28) | [Window.IsActive(24) + !Container.Content(episodes)] | Window.IsActive(1)]</visible>
@@ -3582,7 +3621,7 @@
 		</control>
 		<control type="group">
 				<control type="fixedlist" id="57">
-				<visible>Container.Content(movies)</visible>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 				<viewtype label="Showcase">list</viewtype>
 				<include condition="Window.IsActive(28) | [Window.IsActive(24) + !Container.Content(episodes)] | Window.IsActive(1)">MovieShowcaseGroupVars</include>
 				<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2) | Window.IsActive(20)">MusicShowcaseGroupVars</include>

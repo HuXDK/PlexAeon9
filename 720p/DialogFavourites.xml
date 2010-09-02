@@ -75,7 +75,7 @@
 					<posy>0</posy>
 					<width>500</width>
 					<height>40</height>
-					<texture>verticalmenu/button.png</texture>
+					<texture>lowlist/lowlistpanel_line.png</texture>
 				</control>
 
 				<control type="label">
@@ -98,7 +98,7 @@
 					<posy>0</posy>
 					<width>481</width>
 					<height>40</height>
-					<texture>lowlist/lowlistpanel_line.png</texture>
+					<texture>verticalmenu/button.png</texture>
 				</control>
 
 				<control type="label">

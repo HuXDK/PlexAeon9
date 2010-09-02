@@ -263,6 +263,31 @@
 				<ondown>352</ondown>
 				<scroll>false</scroll>
 				<orientation>horizontal</orientation>
+
+				<control type="button" id="47">
+					<include>Submenu_Button</include>
+					<label>31156</label>
+					<onclick>XBMC.ActivateWindow(604)</onclick>
+				</control>
+
+				<control type="button" id="42">
+					<include>Submenu_Button</include>
+					<label>31169</label>
+					<onclick>XBMC.ActivateWindow(56)</onclick>
+				</control>
+
+				<control type="button" id="46">
+					<include>Submenu_Button</include>
+					<label>31154</label>
+					<onclick>XBMC.ActivateWindow(AppearanceSettings)</onclick>
+				</control>
+
+				<control type="button" id="45">
+					<include>Submenu_Button</include>
+					<label>31152</label>
+					<onclick>XBMC.ActivateWindow(SystemSettings)</onclick>
+				</control>
+
 				<control type="button" id="40">
 					<include>Submenu_Button</include>
 					<label>31140</label>
@@ -275,12 +300,6 @@
 					<onclick>XBMC.ActivateWindow(MusicSettings)</onclick>
 				</control>
 
-				<control type="button" id="42">
-					<include>Submenu_Button</include>
-					<label>31169</label>
-					<onclick>XBMC.ActivateWindow(56)</onclick>
-				</control>
-
 				<control type="button" id="43">
 					<include>Submenu_Button</include>
 					<label>31146</label>
@@ -289,26 +308,8 @@
 
 				<control type="button" id="44">
 					<include>Submenu_Button</include>
-					<label>31150</label>
-					<onclick>XBMC.ActivateWindow(NetworkSettings)</onclick>
-				</control>
-
-				<control type="button" id="45">
-					<include>Submenu_Button</include>
-					<label>31152</label>
-					<onclick>XBMC.ActivateWindow(SystemSettings)</onclick>
-				</control>
-
-				<control type="button" id="46">
-					<include>Submenu_Button</include>
-					<label>31154</label>
-					<onclick>XBMC.ActivateWindow(AppearanceSettings)</onclick>
-				</control>
-
-				<control type="button" id="47">
-					<include>Submenu_Button</include>
-					<label>31160</label>
-					<onclick>XBMC.ActivateWindow(Profiles)</onclick>
+					<label>31017</label>
+					<onclick>XBMC.ActivateWindow(WeatherSettings)</onclick>
 				</control>
 
 			</control>

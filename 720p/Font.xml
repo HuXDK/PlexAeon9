@@ -747,7 +747,7 @@
 		<font>
 			<name>Font_WeatherTemp</name>
 			<filename>aeon_title.ttf</filename>
-			<size>55</size>
+			<size>30</size>
 		</font>
 		<!-- Media windows -->
 		<font>
@@ -1047,6 +1047,27 @@
 	</fontset>
 	<fontset id="Korean" unicode="true">
 		<!-- Common -->
+		<!-- Media windows -->
+		<font>
+			<name>Font_MediaWindowTitle</name>
+			<filename>aeon_rss_kr.ttf</filename>
+			<size>23</size>
+		</font>
+		<font>
+			<name>Font_MediaWindowTitleBig</name>
+			<filename>aeon_rss_kr.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Font_MediaWindowMenu</name>
+			<filename>aeon_rss_kr.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>Font_MediaWindowTitleMenu</name>
+			<filename>aeon_rss_kr.ttf</filename>
+			<size>21</size>
+		</font>
     <font>
       <name>ListView_ListTitle</name>
       <filename>HelveticaNeue</filename>
@@ -1061,7 +1082,7 @@
 		<font>
 			<name>Font_Time</name>
 			<filename>aeon_main_kr.ttf</filename>
-			<size>18</size>
+			<size>15</size>
 		</font>
 		<font>
 			<name>Font_BigRSS</name>
@@ -1114,7 +1135,7 @@
 		<font>
 			<name>Font_WeatherTemp</name>
 			<filename>aeon_main_kr.ttf</filename>
-			<size>55</size>
+			<size>30</size>
 		</font>
 		<!-- Media windows -->
 		<font>
@@ -1146,17 +1167,17 @@
 		<font>
 			<name>Font_SettingsSectionTitle</name>
 			<filename>aeon_main_kr.ttf</filename>
-			<size>32</size>
+			<size>27</size>
 		</font>
 		<font>
 			<name>Font_SettingsSectionMenuButton</name>
 			<filename>aeon_main_kr.ttf</filename>
-			<size>22</size>
+			<size>19</size>
 		</font>
 		<font>
 			<name>Font_SettingsSectionMenuButtonSubtitle</name>
 			<filename>aeon_main_kr.ttf</filename>
-			<size>14</size>
+			<size>12</size>
 		</font>
 		<font>
 			<name>Font_SettingsOptions</name>
@@ -2149,7 +2170,7 @@
 		<font>
 			<name>Font_WeatherTemp</name>
 			<filename>aeon_title_ce.ttf</filename>
-			<size>55</size>
+			<size>30</size>
 		</font>
 		<!-- Media windows -->
 		<font>
@@ -2537,7 +2558,7 @@
 		<font>
 			<name>Font_WeatherTemp</name>
 			<filename>aeon_title.ttf</filename>
-			<size>55</size>
+			<size>30</size>
 		</font>
 		<!-- Media windows -->
 		<font>
