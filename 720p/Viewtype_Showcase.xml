@@ -3628,15 +3628,15 @@
 				<onleft>57</onleft>
 				<onright>57</onright>
 				<onup>7000</onup>
-
+				<ondown>60</ondown>
 <!--
 				<include condition="!Skin.HasSetting(showcaseinfotrigger)">ShowcaseInfoAutoUp</include>
 				<include condition="Skin.HasSetting(showcaseinfotrigger)">ShowcaseInfoTriggerUp</include>
 				<include condition="[!Skin.HasSetting(showcasetrailer) + !Skin.HasSetting(showcasebigtrailer)] + [!Skin.HasSetting(EnableCinema) | IsEmpty(Skin.String(CinemaPath))]">ShowcaseOnDown</include>
 				<include condition="[Skin.HasSetting(showcasetrailer) | Skin.HasSetting(showcasebigtrailer)] + [!Skin.HasSetting(EnableCinema) | IsEmpty(Skin.String(CinemaPath))]">ShowcaseOnDownTrailer</include>
 				<include condition="Skin.HasSetting(EnableCinema) + !IsEmpty(Skin.String(CinemaPath))">ShowcaseOnDownCinema</include>
-
-				<pagecontrol>60</pagecontrol> -->
+-->
+				<pagecontrol>60</pagecontrol>
 				<orientation>horizontal</orientation>
 				<scrolltime>250</scrolltime>
 				<focusposition>3</focusposition>
