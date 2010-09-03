@@ -2961,6 +2961,14 @@
     </include>
 
 	<include name="MediaMenuButton_OldMultiplexInfo">
+		<control type="radiobutton" id="700100">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]</label>
+			<onclick>Skin.ToggleSetting(oldmultiplexinfooff)</onclick>
+			<selected>!Skin.HasSetting(oldmultiplexinfooff)</selected>
+			<visible>Control.IsVisible(553)</visible>
+		</control>
+<!--
 		<control type="button" id="700100">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
@@ -2970,7 +2978,7 @@
 			<visible>Container.Content(movies) + Control.IsVisible(553) + Skin.HasSetting(oldmultiplexinfooff)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
-<!--
+
 		<control type="button" id="700101">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
@@ -2980,7 +2988,7 @@
 			<visible>Container.Content(movies) + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplexinfotrigger) | Skin.HasSetting(oldmultiplexinfooff) | Skin.HasSetting(oldmultiplexinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
--->
+
 		<control type="button" id="700102">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
@@ -3008,6 +3016,7 @@
 			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextvinfooff)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
+-->
 <!--
 		<control type="button" id="700105">
 			<include>MediaMenuButton</include>

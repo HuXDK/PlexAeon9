@@ -93,7 +93,7 @@
 			<posy>65</posy>
 			<width>1280</width>
 			<height>381</height>
-			<visible>Container.Content(movies) + Control.IsVisible(553) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | true | [ControlGroup(7000).HasFocus() + Skin.HasSetting(oldmultiplexinfotrigger)]]</visible> 
+			<visible>!Skin.HasSetting(oldmultiplexinfooff) + Container.Content(movies) + Control.IsVisible(553) + !Control.HasFocus(197) + [Control.IsVisible(109) | true | Control.HasFocus(110) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(oldmultiplexinfotrigger)]]</visible> 
 			
 <!--			<visible>Container.Content(movies) + Control.IsVisible(553) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(oldmultiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(oldmultiplexinfotrigger)]]</visible> -->
 			<animation effect="fade"  start="0" end="100" time="400" condition="!Skin.HasSetting(oldmultiplexinfoon)">WindowOpen</animation>
@@ -590,7 +590,7 @@
 			<posy>65</posy>
 			<width>1280</width>
 			<height>453</height>
-			<visible>!Container.Content(movies) + Control.IsVisible(553) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | true | [ControlGroup(7000).HasFocus() + Skin.HasSetting(oldmultiplextvinfotrigger)]]</visible>
+			<visible>!Container.Content(movies)  + !Skin.HasSetting(oldmultiplexinfooff) + Control.IsVisible(553) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | true | [ControlGroup(7000).HasFocus() + Skin.HasSetting(oldmultiplextvinfotrigger)]]</visible>
 <!--
 			<visible>!Container.Content(movies) + Control.IsVisible(553) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(oldmultiplextvinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(oldmultiplextvinfotrigger)]]</visible>
 -->
