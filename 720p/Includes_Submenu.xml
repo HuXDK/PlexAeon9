@@ -475,50 +475,50 @@
 				<control type="button" id="40">
 			 	<include>Submenu_Button</include>  
 					<label>31950</label>
-					<onclick>ActivateWindow(10001,plex://localhost/applications/appstore/new/,return)</onclick>
+					<onclick>ActivateWindow(10001,plex://localhost/system/appstore/new/,return)</onclick>
 				</control>
 
 				<control type="button" id="41">
 					<include>Submenu_Button</include>
 					<label>31951</label>
-					<onclick>ActivateWindow(10001,plex://localhost/applications/appstore/popular/,return)</onclick>
+					<onclick>ActivateWindow(1,plex://localhost/system/appstore/popular/,return)</onclick>
 				</control>
 
 				<control type="button" id="42">
 					<include>Submenu_Button</include>
 					<label>31952</label>
-					<onclick>ActivateWindow(10001,plex://localhost/applications/appstore/categories/,return)</onclick>
+					<onclick>ActivateWindow(1,plex://localhost/system/appstore/categories/,return)</onclick>
 				</control>
 
 				<control type="button" id="43">
 					<include>Submenu_Button</include>
 					<label>31953</label>
-					<onclick>ActivateWindow(10001,plex://localhost/applications/appstore/installed/,return)</onclick>
+					<onclick>ActivateWindow(1,plex://localhost/system/appstore/installed/,return)</onclick>
 				</control>
 
 				<control type="button" id="44">
 					<include>Submenu_Button</include>
 					<label>31954</label>
-					<onclick>ActivateWindow(10001,plex://localhost/applications/appstore/history/,return)</onclick>
+					<onclick>ActivateWindow(1,plex://localhost/system/appstore/history/,return)</onclick>
 				</control>
 
 				<control type="button" id="45">
 					<include>Submenu_Button</include>
 					<label>31955</label>
-					<onclick>ActivateWindow(10001,plex://localhost/applications/appstore/types/,return)</onclick>
+					<onclick>ActivateWindow(1,plex://localhost/system/appstore/types/,return)</onclick>
 				</control>
 
 
 				<control type="button" id="46">
 					<include>Submenu_Button</include>
 					<label>31956</label>
-					<onclick>ActivateWindow(10001,plex://localhost/applications/appstore/apps/,return)</onclick>
+					<onclick>ActivateWindow(1,plex://localhost/system/appstore/apps/,return)</onclick>
 				</control>
 
 				<control type="button" id="47">
 					<include>Submenu_Button</include>
 					<label>31957</label>
-					<onclick>ActivateWindow(10001,plex://localhost/applications/appstore/featured/,return)</onclick>
+					<onclick>ActivateWindow(1,plex://localhost/system/appstore/featured/,return)</onclick>
 				</control>
 
 			</control>
