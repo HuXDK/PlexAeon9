@@ -7,7 +7,33 @@
 	</coordinates>
 <!--	<include>Animation_DialogPopup</include> -->
 	<controls>
+		<control type="image">
+			<visible>true</visible>		
+			<description>Cd overlay</description>
 
+<!--			<animation effect="slide" start="-200,0" end="0,0" time="1700" tween="cubic" easing="in">WindowVisible</animation> -->
+
+			<animation type="Visible">
+    		<effect type="slide" start="-50,0" end="0,0" time="300" tween="cubic" easing="out"/> 
+			<condition type="!Player.Playing"/>
+			</animation>
+
+			<animation type="WindowClose">
+    		<effect type="slide" start="0,0" end="-80,0" time="800" tween="cubic" easing="in"/> 
+			<effect type="fade" start="90" end="0" time="800" delay="500"/>
+			<condition type="!Player.Playing"/>
+			</animation>
+
+           <animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="true" condition="true">Conditional</animation>
+			<width>270</width>
+			<height>228</height>
+			<posx>-170</posx><!-- 112 -->
+			<posy>250</posy><!-- -143 -->
+			<texture>backdrops/artist_fanart/default/default.png</texture>
+			<aspectratio align="bottom">keep</aspectratio>
+		</control>
+		
+<!--
 	<control type="group">
 		<visible>Skin.HasSetting(StarkDialogs)</visible>
 		<animation effect="fade" time="200">WindowClose</animation>
@@ -114,7 +140,7 @@
 			<scroll>true</scroll>
 		</control>
 	</control>
-
+-->
 
 </controls>
 </window>

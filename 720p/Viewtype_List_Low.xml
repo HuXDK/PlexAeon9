@@ -256,7 +256,7 @@
 		<posy>-87</posy>
 		<width>266</width>
 		<height>400</height>
-		<visible>[Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows)</visible>
+		<visible>Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows)</visible>
 		<include>Animation_CommonFade</include>
 	</include>
 

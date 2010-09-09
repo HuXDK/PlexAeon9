@@ -1,12 +1,12 @@
 <includes>
 
 	<include name="MusicEpisodeListIcon_Thumb">
-	<include condition="Window.IsActive(myvideofiles) + !Container.Content(plugincontent)">EpisodeListIcon_Thumb</include>
+	<include condition="Window.IsActive(myvideofiles)">EpisodeListIcon_Thumb</include>
  	<include condition="Window.IsActive(501)">MusicListIcon_Thumb</include>
 	</include>
 
 	<include name="MusicEpisodeListIcon_Glass">
-	<include condition="Window.IsActive(myvideofiles) + !Container.Content(plugincontent)">EpisodeListIcon_Glass</include>
+	<include condition="Window.IsActive(myvideofiles)">EpisodeListIcon_Glass</include>
  	<include condition="Window.IsActive(501)">MusicListIcon_Glass</include>
 	</include>
 
@@ -227,7 +227,7 @@
 				<height>87</height>
 				<texture>windows/listselectbar.png</texture>
 				<colordiffuse>CF4250E4</colordiffuse>
-				<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+				<visible>true</visible>
 			</control>
 			<control type="label">
 				<include>ListLabel_Main</include>
@@ -372,18 +372,17 @@
 				<label>($INFO[ListItem.year])</label>
 				<visible>Control.IsVisible(50) + !IsEmpty(Listitem.Year) + [Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			</control>
-
 	</control>
 
-	<control type="label">
-		<posx>70</posx>
-		<posy>122</posy>
-		<font>Font_FSInfoPlot</font>
-		<aligny>center</aligny>
-		<include>listcolorfocus</include>	
-		<label>($INFO[ListItem.year])</label>
-		<visible>Control.IsVisible(50) + !IsEmpty(Listitem.Year) + ![Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-	</control>
+			<control type="label">
+				<posx>70</posx>
+				<posy>122</posy>
+				<font>Font_FSInfoPlot</font>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<label>($INFO[ListItem.year])</label>
+				<visible>Control.IsVisible(50) + !IsEmpty(Listitem.Year) + IsEmpty(Listitem.Rating) + ![Container.Content(TVShows) | Container.Content(Movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			</control>
 
 <control type="group">
 	<include>MediaListSelectDelay</include>

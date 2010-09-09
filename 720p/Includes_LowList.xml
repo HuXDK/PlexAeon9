@@ -312,7 +312,7 @@
 		<include>ListIcon_PosterIconGroup</include>
 			<include>MediaListSelectDelay</include>
 			<include>MediaViewFade</include>
-		<visible>!Container.Content(episodes) + ![Control.HasFocus(55110) | Control.IsVisible(55111) | Control.IsVisible(55112)] + ![Window.IsActive(24) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]</visible>
+		<visible>!Container.Content(episodes) + !Window.IsActive(2) + ![Control.HasFocus(55110) | Control.IsVisible(55111) | Control.IsVisible(55112)] + ![Window.IsActive(24) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]</visible>
 		<control type="image">
 			<description>DVD Case Frame</description>
 			<include>LowList_DVDCaseVars</include>
