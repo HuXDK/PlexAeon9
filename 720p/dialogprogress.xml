@@ -29,7 +29,7 @@
 			<height>228</height>
 			<posx>-170</posx><!-- 112 -->
 			<posy>250</posy><!-- -143 -->
-			<texture>backdrops/artist_fanart/default/default.png</texture>
+			<texture>defaultDVD.png</texture>
 			<aspectratio align="bottom">keep</aspectratio>
 		</control>
 		
