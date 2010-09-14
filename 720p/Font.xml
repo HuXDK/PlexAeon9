@@ -135,7 +135,7 @@
 		<font>
 			<name>Font_MainMenu</name>
 			<filename>aeon_main.ttf</filename>
-			<size>80</size>
+			<size>60</size>
 		</font>
 		<font>
 			<name>Font_HomeNowPlayingTrack</name>
@@ -2630,7 +2630,7 @@
 		<font>
 			<name>Font_MainMenu</name>
 			<filename>aeon_main.ttf</filename>
-			<size>80</size>
+			<size>60</size>
 		</font>
 		<font>
 			<name>Font_HomeNowPlayingTrack</name>
@@ -3273,7 +3273,7 @@
 		<font>
 			<name>Font_MainMenu</name>
 			<filename>aeon_main.ttf</filename>
-			<size>80</size>
+			<size>60</size>
 		</font>
 		<font>
 			<name>Font_HomeNowPlayingTrack</name>

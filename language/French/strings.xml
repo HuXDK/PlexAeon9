@@ -6,9 +6,9 @@
  <strings>
 	<string id="31000">0.9 (STARK)</string>
 	<string id="31001">N/A</string>
-	<string id="31002">SILENCE</string>
+	<string id="31002">MUET</string>
 	<string id="31003">PAS D'OPTION MÉTÉO DANS CETTE VERSION</string>
-	<string id="31004">RÉINITIALISER [CR] BACKDROP</string>
+	<string id="31004">RÉINITIALISER [CR] FOND D'ECRAN</string>
 	<string id="31005">OBJETS</string>
 	<string id="31006">LECTURE EN COURS</string>
 	<string id="31007">PAUSE</string>
@@ -123,7 +123,7 @@
 	<string id="31080">ARRIÈRE-PLANS</string>
 	<string id="31081">CHANGER LE FOND D'ÉCRAN</string>
 	<string id="31082">DÉPLACEZ GAUCHE/DROITE POUR CHOISIR, VALIDEZ POUR CHANGER</string>
-	<string id="31083">PERSONALISER L'ARRIÈRE-PLAN</string>
+	<string id="31083">PERSONNALISER L'VOLUME DE LA M-PLAN</string>
 	<string id="31084">CHOISIR LE TYPE D'ARRIÈRE-PLAN</string>
 	<string id="31085">DÉPLACEZ-VOUS VERS LE HAUT POUR UNE SIMPLE IMAGE, OU VERS LE BAS POUR UN DIAPORAMA</string>
 	<string id="31086">RACCOURCI</string>
@@ -158,7 +158,7 @@
 <!-- Aeon Customisation Menu labels -->
   
 	<string id="31120">ARRIÈRE-PLANS</string>
-	<string id="31121">PERSONALISER AEON</string>
+	<string id="31121">PERSONNALISER AEON</string>
 	<string id="31122">SECTIONS</string>
 	<string id="31123">CONTENU DU MENU ACCUEIL</string>
 	<string id="31124">AGENCEMENTS</string> 
@@ -168,7 +168,7 @@
 	<string id="31128">OSD</string>
 	<string id="31129">INFO LIVE MUSIQUE</string>
 
-<!-- XBMC Settings Menu labels -->
+<!-- PLEX Settings Menu labels -->
   
 	<string id="31140">VIDÉO</string>
 	<string id="31141">LECTURE ET BIBLIOTHÈQUE</string>
@@ -296,7 +296,7 @@
 	<string id="31298">UTILISER VIGNETTE SEULE POUR LES LISTES FILMS</string>
 	<string id="31299">AFFICHER RSS / LECTURE EN COURS DANS LA VUE SHOWCASE</string>
 	<string id="31310">CACHER LECTURE EN COURS DANS LE VISUALIZER</string>	
-<!-- XBMC Settings Menu headings -->
+<!-- PLEX Settings Menu headings -->
 	
 	<string id="31300">VIDÉO</string>
 	<string id="31301">IMAGES</string>
@@ -308,7 +308,7 @@
 	<string id="31307">PROGRAMMES</string>
 	<string id="31308">OPTIONS</string>
 	
-<!-- XBMC Settings Subtitles -->
+<!-- PLEX Settings Subtitles -->
 	
 	<string id="31319">VIEW DEFAULTS</string>
 	<string id="31320">AFFICHAGE PAR DÉFAUT</string>
@@ -328,7 +328,7 @@
 	<string id="31334">CLIENT ET PARTAGES</string>
 	<string id="31335">PORTS ET TIMINGS</string>
 	<string id="31336">CONNEXION ET ARRÊTS</string>
-	<string id="31337">ENTRÉS ET LECTURE AUTOMATIQUE</string>
+	<string id="31337">ENTRÉES ET LECTURE AUTOMATIQUE</string>
 	<string id="31338">CONFIGURATION DU SON</string>
 	<string id="31339">LOCAL ET RÉSEAU</string>
 	<string id="31340">ANALOGUE / DIGITALE</string>
@@ -397,7 +397,7 @@
 	<string id="31500">INFOS.</string>
 	<string id="31501">MISES À JOUR EN LIGNE AEON</string>
 	<string id="31502">ACTIVITÉS</string>
-	<string id="31503">STATISTIQUES XBMC</string>
+	<string id="31503">STATISTIQUES PLEX</string>
 	<string id="31504">CRÉDITS</string>
 	<string id="31505">AUTEURS ET REMERCIEMENTS</string>
 	<string id="31510">ASSISTANTS</string>
@@ -415,13 +415,13 @@
 	
 <!-- Aeon Assistant vitals -->
 
-	<string id="31598">XBMC BUILD DATE[CR]VERSION AEON[CR]THÈME ACTUEL[CR]LANGUE[CR]RÉSOLUTION ÉCRAN[CR]RAM DISPONIBLE[CR]ESPACE DISQUE SYSTÈME[CR]TEMPÉRATURE CPU[CR]TEMPÉRATURE GPU[CR]SYSTEM UPTIME[CR]ÉTAT INTERNET[CR]ADRESSE IP[CR]LECTEUR OPTIQUE</string>
+	<string id="31598">PLEX BUILD DATE[CR]VERSION AEON[CR]THÈME ACTUEL[CR]LANGUE[CR]RÉSOLUTION ÉCRAN[CR]RAM DISPONIBLE[CR]ESPACE DISQUE SYSTÈME[CR]TEMPÉRATURE CPU[CR]TEMPÉRATURE GPU[CR]SYSTEM UPTIME[CR]ÉTAT INTERNET[CR]ADRESSE IP[CR]LECTEUR OPTIQUE</string>
 	
 <!-- Debug mode -->
 
 	<string id="31600">VERSION AEON : 1.0</string>
 	<string id="31601">RAM SYSTÈME LIBRE :</string>
-	<string id="31602">XBMC BUILD DATE :</string>
+	<string id="31602">PLEX BUILD DATE :</string>
 	<string id="31603">FPS :</string>
 	<string id="31604">WINDOW ID ACTUEL :</string>
 	<string id="31605">FOCUS ACTUEL :</string>
@@ -439,14 +439,14 @@
 	<string id="31651">Au centre d'Aeon, la barre de défilement horizontale du menu permet un accès immédiat[CR]aux différentes sections. Assignez des arrière-plans (images fixes ou diaporamas)[CR]pour chaque zone. Le menu peut changer de position d'une simple pression de bouton.[CR]L'heure et le défilement RSS peuvent aussi être déplacés.</string>
 	<string id="31652">Profitez de vos films et musiques grâce aux différentes vues d'Aeon.[CR]Chacune répond à des fonctions spécifiques. La vue "Showcase" offre un affichage optimal de[CR]vignettes visibles ; la vue "Bandeau" ("panel") présente des vues plus conventionnelles ; la vue "Liste" parle d'elle-même ;[CR]"Wall", enfin, fournit un affichage maximal pour les grosses collections.</string>
 	<string id="31653">Aeon rime avec artwork! La philosophie visuelle repose intégralement sur les goûts[CR]et les contenus de chaque utilisateur. Vous aimez les films d'action, fantastiques,[CR] ou les jeux vidéos? Accroc aux séries TV? Redécorez l'environnement en conséquence ![CR]C'est aussi pour ça que les affiches et couvertures sont affichées en haute définition.</string>
-	<string id="31654">En construisant vos bibliothèques vidéos, TV et musicales, Aeon exploite[CR]le plein potentiel d'XBMC, fournissant une expérience de navigation riche et complète.[CR]Les résumés de vidéos et critiques d'albums ne sont que le sommet de l'iceberg grâce aux informations provenant[CR]de sources telles qu'IMDB, Allmusic ou celles qui sont développées par la communauté.</string>	
+	<string id="31654">En construisant vos bibliothèques vidéos, TV et musicales, Aeon exploite[CR]le plein potentiel de PLEX, fournissant une expérience de navigation riche et complète.[CR]Les résumés de vidéos et critiques d'albums ne sont que le sommet de l'iceberg grâce aux informations provenant[CR]de sources telles qu'IMDB, Allmusic ou celles qui sont développées par la communauté.</string>	
 	<string id="31655">APPUYEZ SUR SELECT POUR COMMENCER LE TOUR. TOUCHE RETOUR POUR PASSER.</string>
 	<string id="31656">TOUCHE DU BAS POUR LA PAGE SUIVANTE, SELECT POUR PASSER.</string>
 	<string id="31657">TOUCHE DU BAS POUR LA PAGE SUIVANTE, HAUT POUR LA PAGE PRÉCÉDENTE, OU SELECT POUR PASSER.</string>
 	<string id="31659">Naviguer entre les vues et les fenêtres d'Aeon ne saurait être plus simple.[CR]Le menu général peut être rejoint à tout instant depuis n'importe quel endroit.[CR]Un "compas" à quatre directions offre un acces immédiat à tous les types de vues.</string>
 	<string id="31660">Configurez tous les aspects d'Aeon en coulisse.[CR]Un paramétrage évolué est disponible pour chaque écran,[CR]séparé en sections pour un usage simplifié. Sa page d'accueil fournit[CR]une référence visuelle intuitive pour tous vos besoins de personnalisation.</string>
 	<string id="31661">Aeon supporte une quantité infinie de fonds d'écran pour les arrière-plans.[CR]Assignez des dossiers de plusieurs milliers d'images aux sections[CR]VIDÉO ou IMAGES par exemple. Tout ce qui dépasse de l'écran sera réduit,[CR]ce qui est trop petit sera agrandi.</string>
-	<string id="31662">Contrôlez chaque aspect de la lecture d'XBMC sans en perdre une seconde.[CR]L'affichage à l'écran (OSD) musical ou vidéo permet l'ajustement depuis[CR]les sous-titres et le ratio vidéo jusqu'à la synchro. Les bookmarks[CR]peuvent être mémorisés pour retrouver aisément vos scènes favorites.</string>
+	<string id="31662">Contrôlez chaque aspect de la lecture de PLEX sans en perdre une seconde.[CR]L'affichage à l'écran (OSD) musical ou vidéo permet l'ajustement depuis[CR]les sous-titres et le ratio vidéo jusqu'à la synchro. Les bookmarks[CR]peuvent être mémorisés pour retrouver aisément vos scènes favorites.</string>
 	<string id="31663">Oublié le temps où personnaliser était une gageure et où on avait[CR]tout... sauf la qualité. Le site web "Aeon Project" vous offre des centaines de fonds d'écran[CR]adaptés à chaque section, gratuitement et sans pub![CR]N'oubliez pas l'Assistant Aeon pour les mises-à-jour en ligne.</string>
 
 <!-- OSD -->
@@ -494,26 +494,25 @@
 	<string id="31800">SOUS-TITRES SÉPARÉS</string>
 	<string id="31801">POUR UTILISER DES SOUS-TITRES SÉPARÉS, LES FICHIER SOUS-TITRE ET VIDÉO DOIVENT PARTAGER LE MÊME NOM.[CR]PAR EXEMPLE, VEXILLE.AVI NÉCESSITE UN FICHIER SOUS-TITRE VEXILE.SRT (LES EXTENSIONS PEUVENT VARIER)</string>
 	<string id="31802">MUSIQUE VIDÉOS</string>
-	<string id="31803">XBMC PREND EN CHARGE LES CLIPS DE MUSIQUE DE LA MÊME FAÇON QUE LES FILMS. EN MODE BIBLIOTHÈQUE[CR]SPÉCIFIEZ LA CATÉGORIE "CLIPS MUSICAUX" POUR VOTRE DOSSIER, ET LAISSEZ XBMC S'OCCUPER DU RESTE.</string>
+	<string id="31803">PLEX PREND EN CHARGE LES CLIPS DE MUSIQUE DE LA MÊME FAÇON QUE LES FILMS. EN MODE BIBLIOTHÈQUE[CR]SPÉCIFIEZ LA CATÉGORIE "CLIPS MUSICAUX" POUR VOTRE DOSSIER, ET LAISSEZ PLEX S'OCCUPER DU RESTE.</string>
 	<string id="31804">ÉMULATION</string>
-	<string id="31805">XBMC PEUT LANCER DES ÉMULATEURS SUR TOUTES LES PLATEFORMES SUIVANT DES MÉTHODES DIFFÉRENTES ;[CR]INFOS ET ASTUCES SUR LES FORUMS XBMC(WWW.XBMC.ORG)</string>
 	<string id="31806">ROTATION AVEC LES INFORMATIONS EXIF</string>
 	<string id="31807">LES APNS RÉCENTS INSÈRENT DES DONNÉES DANS LES PHOTOS. AVEC CETTE OPTION,[CR]LES IMAGES PEUVENT PIVOTER AUTOMATIQUEMENT À L'AFFICHAGE</string>
 	<string id="31808">PRÉVISUALISATION MÉTÉO EN LIVE</string>
-	<string id="31809">XBMC PEUT CONSULTER LES PRÉVISIONS MÉTÉO DE TROIS LOCALISATIONS DISPONIBLES SUR WEATHER.COM.[CR]CHOISISSEZ ÉGALEMENT LE SYSTÈME MÉTRIQUE OU US POUR L'AFFICHAGE</string>
+	<string id="31809">PLEX PEUT CONSULTER LES PRÉVISIONS MÉTÉO DE TROIS LOCALISATIONS DISPONIBLES SUR WEATHER.COM.[CR]CHOISISSEZ ÉGALEMENT LE SYSTÈME MÉTRIQUE OU US POUR L'AFFICHAGE</string>
 	<string id="31810">AMÉLIOREZ L'AFFICHAGE</string>
 	<string id="31811">LA RECOMPOSITION ONE-TOUCH REND LES MENUS D'AEON RAPIDES ET AGRÉABLES. UNE PRESSION VERS LE HAUT[CR]OU LE BAS BASCULE LES POSITIONS, LES ÉLÉMENTS SE RÉARRANGENT D'EUX-MÊME</string>
 	<string id="31812">DISQUE DUR EXTERNE</string>
-	<string id="31813">LES DISQUES DURS DE GRANDE CAPACITÉ (500GB+) SONT IDÉAUX POUR STOCKER DE GROSSES COLLECTIONS HD[CR]XBMC PEUT GÉRER DES MILLIERS DE FICHIERS POUR CHAQUE SOURCE</string>
+	<string id="31813">LES DISQUES DURS DE GRANDE CAPACITÉ (500GB+) SONT IDÉAUX POUR STOCKER DE GROSSES COLLECTIONS HD[CR]PLEX PEUT GÉRER DES MILLIERS DE FICHIERS POUR CHAQUE SOURCE</string>
 	<string id="31814">UN VRAI ENVIRONNEMENT HAUTE DÉFINITION</string>
 	<string id="31815">AEON AFFICHE LA PLUPART DE SES TEXTURES EN 1080P NATIF, ADAPTEZ-LES POUR[CR]CONVENIR À VOTRE AFFICHAGE HD. LE TOP DU DIVERTISSEMENT NUMÉRIQUE</string>
 	<string id="31816">VOTRE MATÉRIEL LE SUPPORTE-T-IL ?</string>
-	<string id="31817">LES RESSOURCES NÉCESSAIRES À XBMC SONT ASSEZ FAIBLES, MAIS RÉCLAMENT UN PROCESSEUR[CR]CONSÉQUENT POUR LES VIDÉOS HD. LES CARTES VIDÉOS COMPATIBLES PIXEL SHADER 3 SONT RECOMMANDÉES</string>
-	<string id="31818">INTERFÉRENCE MINIMALE</string>	
+	<string id="31817">LES RESSOURCES NÉCESSAIRES À PLEX SONT ASSEZ FAIBLES, MAIS RÉCLAMENT UN PROCESSEUR[CR]CONSÉQUENT POUR LES VIDÉOS HD. LES CARTES VIDÉOS COMPATIBLES PIXEL SHADER 3 SONT RECOMMANDÉES</string>
+	<string id="31818">INTERFACE MINIMALE</string>	
 	<string id="31819">L'ACCUEIL D'AEON PEUT S'ADAPTER POUR METTRE EN VALEUR VOS FONDS, MAIS AUSSI[CR]S'AGRANDIR POUR AMÉLIORER L'ACCESSIBILITÉ VISUELLE</string>	
 	<string id="31820">À CHACUN LE SIEN</string>
-	<string id="31821">XBMC EST MULTI-UTILISATEURS, PERMETTANT À CHACUN DE SAUVEGARDER SON PROFIL[CR]FLUX RSS, VUES, PARAMÈTRES ET BIBLIOTHEQUES SONT PRIS EN COMPTE</string>
-	<string id="31822">AUDIO SURROUND SOUND CHECK</string>	
+	<string id="31821">PLEX EST MULTI-UTILISATEURS, PERMETTANT À CHACUN DE SAUVEGARDER SON PROFIL[CR]FLUX RSS, VUES, PARAMÈTRES ET BIBLIOTHEQUES SONT PRIS EN COMPTE</string>
+	<string id="31822">VERIFICATION DU SON AUDIO SURROUND</string>	
 	<string id="31823">VÉRIFIEZ VOTRE SYSTÈME SON SURROUND</string>
 	<string id="31824">IMPOSSIBLE DE TESTER -- FICHIER VIDÉO NON FOURNI -- FOURNIR VOTRE FICHIER DE TEST AVI DANS AVANCES, VUES</string>
 	<!-- Credits -->
@@ -525,7 +524,7 @@
 	<string id="31904">TESTEURS</string>
 	<string id="31905">SITE WEB AEONPROJECT</string>
 	<string id="31906">REMERCIEMENTS</string>
-	<string id="31907">TOUT CEUX DU FORUM XBMC</string>
+	<string id="31907">TOUT CEUX DU FORUM PLEX</string>
 	<string id="31908">...ET VOUS</string>
 	<string id="31909">AEON REVIENT DANS</string>
 	<string id="31910">ARRIÈRE-PLANS MÉTÉO</string>

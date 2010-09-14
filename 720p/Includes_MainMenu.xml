@@ -4,7 +4,7 @@
 		<height>61</height>
 		<font>Font_MainMenu</font>
 		<width min="30" max="995">auto</width>
-		<info>ListItem.Label</info>
+		<label>$INFO[ListItem.Label2] $INFO[ListItem.Label]</label>
 		<align>center</align>
 		<aligny>center</aligny>
 	</include>
@@ -323,17 +323,50 @@
 					<onclick>SetFocus(92)</onclick>
 					<visible>!Skin.HasSetting(programs)</visible>
 				</item>
-<!--
+
 				<item id="7">
-					<description>My Videos</description>
-					<label>31014</label>
-					<include>BackgroundVarsTV</include>
-					<onclick>Skin.SetString(custom,CustomTVfolder)</onclick>
+					<description>Section 1</description>
+					<label>SECTION 1</label>
+					<include>BackgroundVarsSectionOne</include>
+					<onclick>Skin.SetString(custom,CustomSectionOnefolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
-					<visible>!Skin.HasSetting(notvshows)</visible>
 				</item>
 				
--->
+				<item id="14">
+					<description>Section 2</description>
+					<label>SECTION 2</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionTwofolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="15">
+					<description>Section 3</description>
+					<label>SECTION 3</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionThreefolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="16">
+					<description>Section 4</description>
+					<label>SECTION 4</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionFourfolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="17">
+					<description>Section 5</description>
+					<label>SECTION 5</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionFivefolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="17">
+					<description>Section 6</description>
+					<label>SECTION 6</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionSixfolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
 				<item id="8">
 					<label>31015</label>
 					<include>BackgroundVarsVideo</include>
@@ -376,7 +409,7 @@
 					<onclick>SetFocus(92)</onclick>
 				</item>
 				<item id="21">
-					<description>Assistant</description>
+					<description>Favorites</description>
 					<label>31021</label>
 					<include>BackgroundVarsAssistant</include>
 					<onclick>Skin.SetString(custom,CustomAssistantfolder)</onclick>
@@ -615,7 +648,7 @@
 					<visible>!Skin.HasSetting(noshutdown)</visible>
 				</item>
 				<item id="21">
-					<description>Assistant</description>
+					<description>Favorites</description>
 					<label>31021</label>
 					<include>BackgroundVarsAssistant</include>
 					<onclick>Skin.Reset(assistant)</onclick>
@@ -623,7 +656,7 @@
 					<visible>Skin.HasSetting(assistant)</visible>
 				</item>
 				<item id="21">
-					<description>Assistant</description>
+					<description>Favorites</description>
 					<label2>31021</label2>
 					<include>BackgroundVarsAssistant</include>
 					<onclick>Skin.SetBool(assistant)</onclick>
