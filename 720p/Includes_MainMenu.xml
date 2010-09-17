@@ -102,12 +102,7 @@
 			<focusedlayout width="400" height="61">
 				<control type="label">
 					<include>MainMenu_Label</include>
-					<textcolor>48FFFFFF</textcolor>
-				</control>
-				<control type="label">
-					<include>MainMenu_Label</include>
 					<textcolor>FFFFFFFF</textcolor>
-					<include>Animation_ButtonFocusFade</include>
 				</control>
 			</focusedlayout>
 			<content>
