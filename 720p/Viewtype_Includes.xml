@@ -3779,7 +3779,6 @@
 				<aligny>center</aligny>
 				<align>center</align>
 				<font>ListView_ListTitle</font>
-				<size>50</size>
 				<textcolor>FFFFFFFF</textcolor>		
 				<label>$INFO[ListItem.Title]</label>
 				<include>Animation_HideMultiplex</include>			
