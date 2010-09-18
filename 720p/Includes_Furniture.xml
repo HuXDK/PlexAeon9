@@ -273,6 +273,7 @@
 			<posy>-10</posy>
 			<orientation>horizontal</orientation>
 			<itemgap>4</itemgap>
+			<visible>!Skin.HasSetting(bighome)</visible>
 
 			<control type="label">
 				<width min="0" max="230">auto</width>
@@ -310,6 +311,55 @@
 				<width min="0" max="230">auto</width>
 				<height>43</height>
 				<font>Font_Time</font>	
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<label>/ $INFO[Container.SecondTitle]</label>
+				<animation effect="fade" time="500">Visible</animation>
+				<visible>!IsEmpty(Container.SecondTitle)</visible>
+			</control>
+	</control>
+		<control type="grouplist">
+			<posx>-850</posx>
+			<posy>-10</posy>
+			<orientation>horizontal</orientation>
+			<itemgap>4</itemgap>
+			<visible>Skin.HasSetting(bighome)</visible>
+			<control type="label">
+				<width min="0" max="230">auto</width>
+				<height>43</height>
+				<font>Font_BigTime</font>	
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<label>Media</label>
+				<visible>Window.IsActive(24) + [!Container.Content(Movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)] + IsEmpty(Container.FirstTitle)</visible>
+				<animation effect="fade" time="500">Visible</animation>
+			</control>
+
+			<control type="label">
+				<width min="0" max="230">auto</width>
+				<height>43</height>
+				<font>Font_BigTime</font>	
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<info>Container.NumItems</info>
+				<animation effect="fade" time="500">Visible</animation>
+				<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows)</visible>
+			</control>
+
+			<control type="label">
+				<width min="0" max="230">auto</width>
+				<height>43</height>
+				<font>Font_BigTime</font>	
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<info>Container.FirstTitle</info>
+				<animation effect="fade" time="500">Visible</animation>
+			</control>
+
+			<control type="label">
+				<width min="0" max="230">auto</width>
+				<height>43</height>
+				<font>Font_BigTime</font>	
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
 				<label>/ $INFO[Container.SecondTitle]</label>

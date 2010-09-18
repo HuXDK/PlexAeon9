@@ -3808,14 +3808,37 @@
             <onup>7000</onup>
             <ondown>563</ondown>
         </control>
+		<control type="scrollbar" id="60">
+			<description>My first scroll bar control</description>
+			<posx>305</posx>
+			<posy>683</posy>
+			<width>670</width>
+			<height>41</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(563) + Control.HasFocus(60) + !Control.IsVisible(105)</visible>
+			<texturesliderbackground>windows/scrollbarbackshowcase.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>
+			<textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
+			<pulseonselect/>
+			<orientation>horizontal</orientation>
+			<showonepage>false</showonepage>
+			<onup>563</onup>
+			<ondown>563</ondown>
+			<onleft>60</onleft>
+			<onright>60</onright>
+			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			<include>Animation_HideMultiplex</include>
+		</control>
 		<control type="wraplist" id="563">
 		<visible>Container.Content(movies)</visible>
 			<viewtype label="31786">wrap</viewtype>
 			<include>Anoobie3MovieVarsWrap</include>
-			<pagecontrol>-</pagecontrol>
+			<pagecontrol>60</pagecontrol>
 			<onleft>563</onleft>
 			<onright>563</onright>
 			<onup>7000</onup>
+			<ondown>60</ondown>
 			<orientation>horizontal</orientation>
 			<focusposition>5</focusposition>	
 			<scrolltime>250</scrolltime>

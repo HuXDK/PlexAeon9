@@ -944,6 +944,8 @@
 				<onup>54</onup>
 				<ondown>54</ondown>
 				<onleft>7000</onleft>
+				<onright>2505</onright>
+      			<pagecontrol>2505</pagecontrol>
 				<scrolltime>0</scrolltime>
 				<itemlayout width="450" height="40">
 					<control type="image">
@@ -1424,15 +1426,15 @@
 -->
 			<!--<<<<< Now Playing -->
 		</control>
-<!--
+
 		<control type="scrollbar" id="2505">
 			<description>My first scroll bar control</description>
-			<posx>54</posx>
-			<posy>56</posy>
+			<posx>510</posx>
+			<posy>116</posy>
 			<width>60</width>
-			<height>640</height>
-			<include>Animation_cListHorizontalMenuBackgroundSlide</include>
-			<visible allowhiddenfocus="false">Control.IsVisible(54)</visible>
+			<height>600</height>
+<!--			<include>Animation_cListHorizontalMenuBackgroundSlide</include> -->
+			<visible allowhiddenfocus="false">Control.IsVisible(54) + !ControlGroup(7000).HasFocus()</visible>
 			<texturesliderbackground>clearlist/scrollbarbacklist.png</texturesliderbackground>
 			<texturesliderbar>-</texturesliderbar>
 			<texturesliderbarfocus>-</texturesliderbarfocus>
@@ -1443,10 +1445,10 @@
 			<showonepage>false</showonepage>
 			<onup>2505</onup>
 			<ondown>2505</ondown>
-			<onleft>7000</onleft>
+			<onleft>54</onleft>
 			<onright>54</onright>
-			<animation effect="fade" start="100" end="0" time="0" condition="[Control.IsVisible(54) + [Control.HasFocus(54) | Control.HasFocus(2501) | Control.HasFocus(2502) | Control.HasFocus(7000)]]">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="Control.IsVisible(54) + [Control.HasFocus(54) | Control.HasFocus(2501) | Control.HasFocus(2502) | Control.HasFocus(7000)]">Conditional</animation>
 		</control>
--->
+
 	</include>
 </includes>
