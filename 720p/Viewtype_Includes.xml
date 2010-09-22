@@ -2930,6 +2930,16 @@
 		</control>
 -->
 	</include>
+	<include name="MediaMenuButton_Anoobie3Info">
+
+		<control type="radiobutton" id="33003">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]</label>
+			<onclick>Skin.ToggleSetting(Annobie3infooff)</onclick>
+			<selected>!Skin.HasSetting(Annobie3infooff)</selected>
+			<visible>Control.IsVisible(563)</visible>
+		</control>
+	</include>
 	<include name="Objects_AnoobieStyleButtons">
 
 		<control type="button" id="33000">
@@ -3286,6 +3296,7 @@
 				<include>MediaMenuButton_ShowcaseStyle</include>
 				<include>MediaMenuButton_ListLayout</include>
 				<include>MediaMenuButton_MultiplexInfo</include> 
+				<include>MediaMenuButton_Anoobie3Info</include> 
 				<include>MediaMenuButton_OldMultiplexInfo</include>
 		<!--	<include>MediaMenuButton_multiwallInfo</include>  -->
 				<include>MediaMenuButton_ShowcaseInfo</include> 
@@ -3429,7 +3440,7 @@
 			<posy>85</posy>
 			<width>1280</width>
 			<height>381</height>
-			<visible>Container.Content(movies) + Control.IsVisible(563)</visible>
+			<visible>Container.Content(movies) + Control.IsVisible(563) + !Skin.HasSetting(Annobie3infooff)</visible>
 			<animation effect="fade" end="0" time="200">WindowClose</animation>
 			<include>MediaListSelectDelay</include>
 			<include>MediaViewFade</include>
