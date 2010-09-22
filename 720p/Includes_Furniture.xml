@@ -1028,7 +1028,7 @@
 			<posy>-30</posy>
 			<height>720</height>
 			<width>1280</width>
-			<visible>Skin.HasSetting(lowerrss) + system.getbool(lookandfeel.enablerssfeeds)</visible>
+			<visible>Skin.HasSetting(lowerrss) + system.getbool(lookandfeel.enablerssfeeds) + Window.IsActive(0)</visible>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" start="-800,0" end="0,0" delay="500" time="200" easing="out" tween="quadratic" />
 				<effect type="fade" start="0" end="100" delay="500" time="200" />
@@ -1048,7 +1048,7 @@
 			<posy>-15</posy>
 			<height>720</height>
 			<width>1280</width>
-			<visible>Skin.HasSetting(lowerrss) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
+			<visible>Skin.HasSetting(lowerrss) + !system.getbool(lookandfeel.enablerssfeeds) + Window.IsActive(0)</visible>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" start="-800,0" end="0,0" delay="500" time="200" easing="out" tween="quadratic" />
 				<effect type="fade" start="0" end="100" delay="500" time="200" />
@@ -1067,7 +1067,7 @@
 			<posy>-15</posy>
 			<height>720</height>
 			<width>1280</width>
-			<visible>![Skin.HasSetting(lowerrss) | system.getbool(lookandfeel.enablerssfeeds)]</visible>
+			<visible>![Skin.HasSetting(lowerrss) | system.getbool(lookandfeel.enablerssfeeds)] + Window.IsActive(0)</visible>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" start="-800,0" end="0,0" delay="500" time="200" easing="out" tween="quadratic" />
 				<effect type="fade" start="0" end="100" delay="500" time="200" />
