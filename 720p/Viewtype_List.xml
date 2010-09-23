@@ -470,7 +470,7 @@
 	<control type="group">
 		<posx>160</posx>
 		<posy>55</posy>
-		<visible>!Skin.HasSetting(singlemusiclisticon) + !Container.Content(Secondary) + !Container.Content(songs) + [[Window.IsActive(20) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes) | Container.Content(albums)] | [Window.IsActive(24) + Container.Content(plugins)]]</visible>
+		<visible>!Skin.HasSetting(singlemusiclisticon) + !Container.Content(Secondary) + !Container.Content(songs) + [Window.IsActive(20) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(502) | Container.Content(episodes) | Container.Content(albums)]</visible>
   
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" start="0" end="100" time="500" />
@@ -731,7 +731,7 @@
 	<control type="group">
 		<posx>70</posx>
 		<posy>10</posy>
-		<visible>!Skin.HasSetting(singlemovielisticon) + [Window.IsActive(28) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(1)] + !Container.Content(Secondary)</visible>
+		<visible>!Skin.HasSetting(singlemovielisticon) + [Window.IsActive(28) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(1)  | [Window.IsActive(24) + Container.Content(plugins)]] + !Container.Content(Secondary)</visible>
 		<animation effect="slide" end="0,-10" time="0" condition="!Skin.HasSetting(nomediaflags)">Conditional</animation>
 
 		<animation type="WindowOpen" reversible="false">
