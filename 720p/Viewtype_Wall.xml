@@ -473,7 +473,7 @@
 				<visible>Window.IsActive(24) | Window.IsActive(myvideofiles)</visible>				
 			</control>				
 		</control>
-		
+		<include>Furniture_WallMediaFlags</include>		
 
 	</control>		
 	</include>

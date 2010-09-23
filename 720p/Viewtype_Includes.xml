@@ -552,7 +552,7 @@
 		<include>Animation_WindowFade200</include>
 		<animation effect="slide" start="0,12" end="0,12" time="0" condition="Skin.HasSetting(smallmoviewall) + [Window.IsActive(1) | Window.IsActive(24)] + !Container.Content(episodes)">Conditional</animation>
 		<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
-		<posy>193</posy>
+		<posy>220</posy>
 		<control type="group">
 			<posx>85</posx>
 		<control type="image" id="91">
