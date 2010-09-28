@@ -297,11 +297,18 @@
 		<control type="image">
 			<texture>backdrops/multiplex/curtains.png</texture>
 			<include>FullscreenDimensions</include>
-			<visible>Skin.HasSetting(curtains) | IsEmpty(listitem.property(fanart_image))</visible>
 			<animation effect="fade" start="40" end="40" condition="true">Conditional</animation>
 			<include>Animation_BackgroundFade</include>
+			<visible>[Skin.HasSetting(curtains) | IsEmpty(listitem.property(fanart_image))] + !Skin.String(CustomCurtainsbg)</visible>
 		</control>
 
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<info>Skin.String(CustomCurtainsbg)</info>
+			<animation effect="fade" start="40" end="40" condition="true">Conditional</animation>
+			<include>Animation_BackgroundFade</include>
+			<visible>[Skin.HasSetting(curtains) | IsEmpty(listitem.property(fanart_image))] + Skin.String(CustomCurtainsbg)</visible>
+		</control>
 	</include>
 
 <!--	<include name="Background_Wallpaper">

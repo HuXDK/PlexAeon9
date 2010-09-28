@@ -3804,7 +3804,7 @@
 
 	<control type="group">
 	<visible>Control.IsVisible(563)</visible>
-	<include>Animation_OpenCloseZoom</include>
+	<include>Animation_CommonFadeVideo</include>
 	
 		<include>Anoobie3InfoPaneMovies</include>		
         <control type="button" id="110">
