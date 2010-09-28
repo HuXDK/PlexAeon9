@@ -202,10 +202,10 @@
 				<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 			</control>			
 		    <control type="image">
-				<posx>430</posx>
-				<posy>10</posy>
-				<width>580</width>
-				<height>25</height>
+				<posx>690</posx>
+				<posy>12</posy>
+				<width>65</width>
+				<height>20</height>
 				<info>ListItem.Overlay</info>
 				<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 				<visible>!Container.Content(Albums)</visible>
@@ -273,10 +273,10 @@
 				<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 			</control>			
 		    <control type="image">
-				<posx>430</posx>
-				<posy>10</posy>
-				<width>580</width>
-				<height>25</height>
+				<posx>690</posx>
+				<posy>12</posy>
+				<width>65</width>
+				<height>20</height>
 				<info>ListItem.Overlay</info>
 				<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 				<visible>!Container.Content(Albums)</visible>
@@ -353,13 +353,23 @@
 			</control>
 
 			<control type="label">
-				<width min="0" max="680">auto</width>
+				<width min="0" max="200">auto</width>
 				<height>47</height>
 				<font>Font_FSInfoPlot</font>
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>	
-				<label>(SEASON [UPPERCASE]$INFO[ListItem.Season])[/UPPERCASE]</label>
-				<visible>Control.IsVisible(50) + Container.Content(episodes) + !IsEmpty(ListItem.Season)</visible>
+				<label>([UPPERCASE]$LOCALIZE[31062] $INFO[ListItem.Season])[/UPPERCASE]</label>
+				<visible>Control.IsVisible(50) + Container.Content(episodes) + !IsEmpty(ListItem.Season) + IsEmpty(ListItem.Episode)</visible>
+			</control>
+
+			<control type="label">
+				<width min="0" max="200">auto</width>
+				<height>47</height>
+				<font>Font_FSInfoPlot</font>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>	
+				<label>([UPPERCASE]$LOCALIZE[31062] $INFO[ListItem.Season], $LOCALIZE[31063] $INFO[ListItem.Episode])[/UPPERCASE]</label>
+				<visible>Control.IsVisible(50) + Container.Content(episodes) + !IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
 			</control>
 
 			<control type="label">

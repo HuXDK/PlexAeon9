@@ -1014,10 +1014,10 @@
 						<visible>Container.Content(episodes) + !Skin.HasSetting(oldCListInfo)</visible>
 					</control>
 					<control type="image">
-						<posx>410</posx>
-						<posy>8</posy>
-						<width>25</width>
-						<height>25</height>
+						<posx>390</posx>
+						<posy>10</posy>
+						<width>65</width>
+						<height>20</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 						<visible>!Container.Content(albums)</visible>
@@ -1097,10 +1097,10 @@
 						<visible>Container.Content(episodes) + !Skin.HasSetting(oldCListInfo)</visible>
 					</control>
 					<control type="image">
-						<posx>410</posx>
-						<posy>8</posy>
-						<width>25</width>
-						<height>25</height>
+						<posx>390</posx>
+						<posy>10</posy>
+						<width>65</width>
+						<height>20</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 						<visible>!Container.Content(albums)</visible>
