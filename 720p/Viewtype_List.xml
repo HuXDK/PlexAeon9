@@ -308,6 +308,7 @@
 	</control>
 
 	<control type="grouplist">
+        <include>Animation_CommonFade</include>
 		<posx>70</posx>
 		<posy>72</posy>
 		<orientation>horizontal</orientation>
