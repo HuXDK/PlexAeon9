@@ -742,7 +742,7 @@
 	<control type="group">
 		<posx>70</posx>
 		<posy>10</posy>
-		<visible>!Skin.HasSetting(singlemovielisticon) + ![Container.Content(movies) + IsEmpty(ListItem.Rating) + IsEmpty(Listitem.Property(mediaTag::studio)) + IsEmpty(ListItem.year)] + [Window.IsActive(28) | Container.Content(movies) | Container.Content(tvshows) | Window.IsActive(1)  | [Window.IsActive(24) + Container.Content(plugins)]] + !Container.Content(Secondary) + ![Container.Content(Episodes) + !IsEmpty(ListItem.Property(singularepisodecount))]</visible>
+		<visible>!Skin.HasSetting(singlemovielisticon) + ![Container.Content(movies) + IsEmpty(ListItem.Rating) + IsEmpty(Listitem.Property(mediaTag::studio))] + [Window.IsActive(28) | Container.Content(movies) | Container.Content(tvshows) | Window.IsActive(1)  | [Window.IsActive(24) + Container.Content(plugins)]] + !Container.Content(Secondary) + ![Container.Content(Episodes) + !IsEmpty(ListItem.Property(singularepisodecount))]</visible>
 		<animation effect="slide" end="0,-10" time="0" condition="!Skin.HasSetting(nomediaflags)">Conditional</animation>
 
 		<animation type="WindowOpen" reversible="false">
