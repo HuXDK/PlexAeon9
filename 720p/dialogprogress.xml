@@ -7,11 +7,14 @@
 	</coordinates>
 <!--	<include>Animation_DialogPopup</include> -->
 	<controls>
+
+
+<!--    Spinning DVD Animation
+
 		<control type="image">
 			<visible>true</visible>		
 			<description>Cd overlay</description>
 
-<!--			<animation effect="slide" start="-200,0" end="0,0" time="1700" tween="cubic" easing="in">WindowVisible</animation> -->
 
 			<animation type="Visible">
     		<effect type="slide" start="-50,0" end="0,0" time="300" tween="cubic" easing="out"/> 
@@ -27,12 +30,50 @@
            <animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="true" condition="true">Conditional</animation>
 			<width>270</width>
 			<height>228</height>
-			<posx>-170</posx><!-- 112 -->
-			<posy>250</posy><!-- -143 -->
+			<posx>-170</posx>
+			<posy>250</posy>
 			<texture>defaultDVD.png</texture>
 			<aspectratio align="bottom">keep</aspectratio>
 		</control>
+-->		
+
+<!--- New Spining Buffer --> 
+
+
+
+		<control type="image">
+			<posx>595</posx>
+			<posy>295</posy>
+			<width>95</width>
+			<height>88</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>		
+			<texture diffuse="thumbs/cdcover_mask.png">AnimProgress.gif</texture>		
+			<bordertexture border="-11">thumbs/cd_shadow.png</bordertexture>
+   		    <colordiffuse>EFFFFFFF</colordiffuse>
+		</control>
 		
+		<control type="label">
+			<posx>608</posx>
+			<posy>340</posy>
+			<width>100</width>
+			<height>43</height>
+			<textcolor>CFFFFFFF</textcolor>
+			<label>Loading...</label>
+			<font>ProgressLoading</font>
+			<aligny>center</aligny>	
+		</control>
+
+		<control type="image">
+			<posx>595</posx>
+			<posy>295</posy>
+			<width>95</width>
+			<height>88</height>
+			<texture diffuse="thumbs/cdcover_mask.png">thumbs/poster_glass_noedge.png</texture>		
+			<aspectratio scalediffuse="false">scale</aspectratio>		
+		</control>
+
+
+<!-- Old Aeon Buffering dialogs -->
 <!--
 	<control type="group">
 		<visible>Skin.HasSetting(StarkDialogs)</visible>

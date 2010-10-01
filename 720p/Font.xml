@@ -1,7 +1,13 @@
 <fonts>
 	<fontset id="Aeon_Standard" unicode="true">
 		<!-- Common -->
- 
+    <font>
+      <name>ProgressLoading</name>
+      <filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+      <size>15</size>
+    </font>
+
     <font>
       <name>PlexNPArtistFont</name>
       <filename>HelveticaNeue</filename>
@@ -681,6 +687,12 @@
 	<fontset id="Aeon_Diacritical" unicode="true">
 		<!-- Common -->
     <font>
+      <name>ProgressLoading</name>
+      <filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+      <size>15</size>
+    </font>
+    <font>
       <name>ListView_ListTitle</name>
       <filename>HelveticaNeue</filename>
 			<variant>Bold</variant>
@@ -1047,6 +1059,12 @@
 	</fontset>
 	<fontset id="Korean" unicode="true">
 		<!-- Common -->
+    <font>
+      <name>ProgressLoading</name>
+      <filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+      <size>15</size>
+    </font>
 		<!-- Media windows -->
 		<font>
 			<name>Font_MediaWindowTitle</name>
@@ -1441,6 +1459,12 @@
 
 	<fontset id="Aeon_Cyrillic" unicode="true">
 	<!-- Common -->
+    <font>
+      <name>ProgressLoading</name>
+      <filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+      <size>15</size>
+    </font>
     <font>
       <name>ListView_ListTitle</name>
       <filename>HelveticaNeue</filename>
@@ -2103,6 +2127,12 @@
 	</fontset>
 	<fontset id="Aeon_Polish" unicode="true">
     <font>
+      <name>ProgressLoading</name>
+      <filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+      <size>15</size>
+    </font>
+    <font>
       <name>ListView_ListTitle</name>
       <filename>HelveticaNeue</filename>
 			<variant>Bold</variant>
@@ -2588,6 +2618,12 @@
 		</font>
 	</fontset>
 	<fontset id="Aeon_Fixed" unicode="true">
+    <font>
+      <name>ProgressLoading</name>
+      <filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+      <size>15</size>
+    </font>
     <font>
       <name>ListView_ListTitle</name>
       <filename>HelveticaNeue</filename>
@@ -3139,6 +3175,12 @@
 	</fontset>
 		<fontset id="Aeon_Lower_Case" unicode="true">
 		<!-- Common -->
+    <font>
+      <name>ProgressLoading</name>
+      <filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+      <size>15</size>
+    </font>
     <font>
       <name>ListView_ListTitle</name>
       <filename>HelveticaNeue</filename>

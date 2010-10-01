@@ -12,7 +12,7 @@
 	<control type="image">
 		<include>FullscreenDimensions</include>
 		<texture>common/darkgrey.png</texture>
-		<colordiffuse>B7FFFFFF</colordiffuse>
+		<colordiffuse>EFFFFFFF</colordiffuse>
 	</control>	
 
 	<control type="image">
