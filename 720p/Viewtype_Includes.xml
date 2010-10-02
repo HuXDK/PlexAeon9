@@ -3037,7 +3037,7 @@
 			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + ![Skin.HasSetting(oldmultiplextvinfotrigger) | Skin.HasSetting(oldmultiplextvinfooff) | Skin.HasSetting(oldmultiplextvinfoon)]</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
--->
+
 		<control type="button" id="700106">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
@@ -3056,6 +3056,8 @@
 			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(553) + Skin.HasSetting(oldmultiplextvinfoon)</visible>
 			<visible>!Skin.HasSetting(nomultiplexinfobuttons)</visible>
 		</control>
+-->
+
 	</include>
 		<include name="MediaMenuButton_multiwallInfo">
 		<control type="button" id="704100">
