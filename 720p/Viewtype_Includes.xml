@@ -2387,8 +2387,8 @@
 			<altclick>XBMC.ReloadSkin</altclick>
 			<visible>Control.IsVisible(54)</visible>
 		</control>
-<!--
-		<control type="radiobutton" id="711028">
+
+		<control type="radiobutton" id="700050">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[31070]</label>
 			<onclick>Skin.ToggleSetting(cListmovieshowinfo)</onclick>
@@ -2396,7 +2396,7 @@
 			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Control.IsVisible(54)</visible>
 		</control>
--->
+
 		<control type="radiobutton" id="700028">
 			<include>MediaMenuButton</include>
 			<label>$LOCALIZE[310793]</label>
@@ -2410,7 +2410,7 @@
 			<label>$LOCALIZE[310795]</label>
 			<onclick>Skin.ToggleSetting(clearlistinfothin)</onclick>
 			<selected>Skin.HasSetting(clearlistinfothin)</selected>
-			<visible>Control.IsVisible(54)</visible>
+			<visible>Control.IsVisible(54) + Skin.HasSetting(cListmovieshowinfo)</visible>
 			<onclick>XBMC.ReloadSkin</onclick>
 		</control>
 

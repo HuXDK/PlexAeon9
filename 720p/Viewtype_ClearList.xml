@@ -1237,7 +1237,7 @@
 		<control type="group">
 			<posx>620</posx>
 			<posy>50</posy>
-			<visible>Control.IsVisible(54) + [Window.IsActive(24) | Window.IsActive(1) | Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
+			<visible>Control.IsVisible(54) + [Window.IsActive(24) | Window.IsActive(1) | Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + Skin.HasSetting(cListmovieshowinfo)</visible>
 			<include>Animation_cListCommonFade</include>
 			<include>Animation_cListInfoPanelZoom</include>
 			<control type="image">
@@ -1253,7 +1253,7 @@
 		<control type="group">
 			<include>MediaListSelectDelay</include>
 			<include>MediaViewFade</include>
-			<include>cList_VideoInfoPanel</include>
+			<include condition="Skin.HasSetting(cListmovieshowinfo)">cList_VideoInfoPanel</include>
 	<!--	<include>cList_MusicInfoPanel</include> -->
 		</control>
 			<!-- Pictures Thumb -->
