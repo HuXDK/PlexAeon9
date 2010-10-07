@@ -192,6 +192,12 @@
 				<onclick>Skin.ToggleSetting(NoCustomWeatherConditions)</onclick>
 				<selected>!Skin.HasSetting(NoCustomWeatherConditions)</selected>
 			</control>
+			<control type="radiobutton" id="709">
+				<include>Objects_SettingsDefaultRadioButton</include>
+				<label>Turn Off "Sections Only" Home Menu Activation</label>
+				<onclick>Skin.ToggleSetting(NoSectionsMenu)</onclick>
+				<selected>Skin.HasSetting(NoSectionsMenu)</selected>
+			</control>
 			<control type="radiobutton" id="506">
 					<include>Objects_SettingsDefaultRadioButton</include>
 					<label>32014</label>
@@ -271,7 +277,7 @@
 			<onclick>Skin.SetFile(CustomCurtainsBG,.jpg)</onclick>
 		</control>
 <!--
-		<control type="radiobutton" id="709">
+		<control type="radiobutton" id="">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>32027</label>
 			<onclick>Skin.ToggleSetting(MissingFanartBlack)</onclick>
