@@ -226,6 +226,7 @@
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<info>ListItem.Icon</info>
 				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+				<visible>![Container.Content(movies) + IsEmpty(ListItem.Plot) + IsEmpty(ListItem.Rating) + IsEmpty(Listitem.Property(mediaTag::studio))]</visible>
 			</control>
 
 			<control type="image">
@@ -235,7 +236,8 @@
 				<height>222</height>
 				<bordertexture border="-23">wall/wall_movie_fborder.png</bordertexture>
 				<texture>common/blank.png</texture>
-				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + !IsEmpty(ListItem.Icon)</visible>
+				<visible>![Container.Content(movies) + IsEmpty(ListItem.Plot) + IsEmpty(ListItem.Rating) + IsEmpty(Listitem.Property(mediaTag::studio))]</visible>
 			</control>
 <!--
 			<control type="image">
@@ -258,8 +260,9 @@
       			<texture background="true">$INFO[listitem.property(fanart_image)]</texture>
         		<bordertexture border="8">list/list_frame.png</bordertexture>
         		<bordersize>15</bordersize>
-        		<visible>[Window.IsActive(1) | [Window.IsActive(24) + !Container.Content(episodes) + !Container.Content(Seasons)]] + IsEmpty(ListItem.Thumb)</visible>
-     		</control>
+        		<visible>[[Window.IsActive(1) | [Window.IsActive(24) + !Container.Content(episodes) + !Container.Content(Seasons) + !Container.Content(movies)]] + IsEmpty(ListItem.Thumb)] | [Container.Content(movies) + IsEmpty(ListItem.Plot) + IsEmpty(ListItem.Rating) + IsEmpty(Listitem.Property(mediaTag::studio))]</visible>
+    		</control>
+
      		 <control type="image">
 				<posx>270</posx>
 				<posy>210</posy>
@@ -268,8 +271,8 @@
         		<aspectratio aligny="top">keep</aspectratio>
         		<texture flipy="true" diffuse="list/list_reflect_mask.png">$INFO[listitem.property(fanart_image)]</texture>
         		<bordersize>8</bordersize>
-       		<visible>[Window.IsActive(1) | [Window.IsActive(24) + !Container.Content(episodes)]] + IsEmpty(ListItem.Thumb)</visible>
-      		</control>
+       			<visible>[Window.IsActive(1) | [Window.IsActive(24) + !Container.Content(episodes) + !Container.Content(movies)]] + IsEmpty(ListItem.Thumb)</visible>
+     		</control>
 		</control>			
 		
 	
@@ -300,7 +303,7 @@
 			<control type="group">
 				<posx>210</posx>
 				<posy>20</posy>
-				<visible>Container.Content(movies) | Container.Content(albums) | Container.Content(songs)</visible>
+				<visible>[Container.Content(movies) | Container.Content(albums) | Container.Content(songs)] + ![Container.Content(movies) + IsEmpty(ListItem.Plot) + IsEmpty(ListItem.Rating) + IsEmpty(Listitem.Property(mediaTag::studio))]</visible>
 <!--
 				<control type="group">
 					<posy>0</posy>

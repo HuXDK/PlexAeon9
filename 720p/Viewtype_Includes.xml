@@ -547,7 +547,7 @@
 	</control>
 </include>
 	<include name="Furniture_WallMediaFlagsVars">
-		<visible>Window.IsActive(24) + Control.IsVisible(53) + !Skin.HasSetting(nomediaflags) + [Container.Content(movies) | Container.Content(episodes)]</visible>
+		<visible>Control.IsVisible(53) + !Skin.HasSetting(nomediaflags) + [Container.Content(movies) | Container.Content(episodes)]</visible>
 		<include>Animation_CommonFade</include>
 		<include>Animation_WindowFade200</include>
 		<animation effect="slide" start="0,12" end="0,12" time="0" condition="Skin.HasSetting(smallmoviewall) + [Window.IsActive(1) | Window.IsActive(24)] + !Container.Content(episodes)">Conditional</animation>
@@ -622,6 +622,49 @@
 			<posx>830</posx>
 			<include>Furniture_WallMediaFlagsVars</include>
 			<visible>[!Skin.HasSetting(smallmoviewall) + [Container(53).Column(4) | Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8)]] | [Skin.HasSetting(smallmoviewall) + [Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8) | Container(53).Column(9) | Container(53).Column(10)]] </visible>
+		</control>
+	</include>
+	<include name="Furniture_MusicWallMediaFlagsVars">
+		<visible>Control.IsVisible(523) + !Skin.HasSetting(nomediaflags)</visible>
+		<include>Animation_CommonFade</include>
+		<include>Animation_WindowFade200</include>
+		<animation effect="slide" start="0,12" end="0,12" time="0" condition="Skin.HasSetting(smallmoviewall) + [Window.IsActive(1) | Window.IsActive(24)] + !Container.Content(episodes)">Conditional</animation>
+		<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+		<posy>220</posy>
+		<control type="group">
+			<posx>230</posx>
+		<control type="image">
+			<posy>440</posy>
+			<width>50</width>
+			<height>39</height>
+			<aspectratio>keep</aspectratio>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(523)</visible>
+			<info>Listitem.Property(mediaTag::audioChannels)</info>
+		</control>
+		</control>
+		<control type="group">
+			<posx>155</posx>
+		<control type="image" id="92">
+			<posy>440</posy>
+			<width>50</width>
+			<height>39</height>
+			<aspectratio>keep</aspectratio>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(523)</visible>
+			<info>Listitem.Property(mediaTag::audioCodec)</info>
+			</control>
+		</control>
+	</include>
+	<include name="Furniture_MusicWallMediaFlags">
+		<control type="group">
+			<include>Furniture_MusicWallMediaFlagsVars</include>
+			<visible>[!Skin.HasSetting(smallmoviewall) + [Container(523).Column(0) | Container(523).Column(1) | Container(523).Column(2) | Container(523).Column(3)]] | [Skin.HasSetting(smallmoviewall) + [Container(523).Column(0) | Container(523).Column(1) | Container(523).Column(2) | Container(523).Column(3) | Container(523).Column(4)]]</visible>
+		</control>
+		<control type="group">
+			<posx>830</posx>
+			<include>Furniture_MusicWallMediaFlagsVars</include>
+			<visible>[!Skin.HasSetting(smallmoviewall) + [Container(523).Column(4) | Container(523).Column(5) | Container(523).Column(6) | Container(523).Column(7) | Container(523).Column(8)]] | [Skin.HasSetting(smallmoviewall) + [Container(523).Column(5) | Container(523).Column(6) | Container(523).Column(7) | Container(523).Column(8) | Container(523).Column(9) | Container(523).Column(10)]] </visible>
 		</control>
 	</include>
 

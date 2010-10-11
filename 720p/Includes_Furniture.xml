@@ -376,6 +376,7 @@
 			<include>Furniture_TimeGroupVars</include>
 			<visible>!Skin.HasSetting(highertime) + Window.IsActive(Home) + !Control.IsVisible(553) + !Control.IsVisible(51) + !Control.IsVisible(52) + !Control.IsVisible(552) + !Control.IsVisible(57) + !Control.IsVisible(53) + !Control.IsVisible(550) + !Control.IsVisible(551) + !Control.IsVisible(54) + !Skin.HasSetting(notime)</visible>
 			<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseZoom</include>
 			<include>Furniture_TimePanel</include>
 		</control>

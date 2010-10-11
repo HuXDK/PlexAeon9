@@ -1,4 +1,19 @@
 <includes>
+	<include name="Conditions_WallLeftSmall">
+		<visible>[Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8) | Container(53).Column(9) | Container(53).Column(10)]</visible>
+	</include>
+
+	<include name="Conditions_WallRightSmall">
+		<visible>[Container(53).Column(0) | Container(53).Column(1) | Container(53).Column(2) | Container(53).Column(3) | Container(53).Column(4)]</visible>
+	</include>
+
+	<include name="Conditions_WallLeftBig">
+		<visible>[Container(53).Column(4) | Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8)]</visible>
+	</include>
+
+	<include name="Conditions_WallRightBig">
+		<visible>[Container(53).Column(0) | Container(53).Column(1) | Container(53).Column(2) | Container(53).Column(3)]</visible>
+	</include>
 
 	<include name="Furniture_WallBackground">
 		
@@ -17,17 +32,7 @@
 			<include>Animation_WindowFade200</include>
 			<animation effect="fade" start="100" end="70" time="400" condition="Skin.HasSetting(transparentwall)">Conditional</animation>
 		</control>		
-<!--	
-		<control type="image">
-			<posx>115</posx>
-			<posy>102</posy>
-			<width>1051</width>
-			<height>516</height>
-			<texture>wall/wall_squares.png</texture>
-			<visible>!Control.IsVisible(217) + !Skin.HasSetting(smallmusicwall) + Control.IsVisible(53) + [Window.IsActive(20) | Window.IsActive(2) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]</visible>
-			<include>Animation_CommonFade</include>			
-		</control>
--->
+
 		<control type="image">
 			<posx>98</posx>
 			<posy>106</posy>
@@ -130,7 +135,8 @@
 	
 	<include name="Viewtype_Wall">
 	<control type="group">
-		<visible>Control.IsActive(53)</visible>
+		<visible>Control.IsVisible(53)</visible>
+		<include>Furniture_WallBackground</include>
 
 		<control type="image">
 			<posx>57</posx>
@@ -155,139 +161,7 @@
 			<animation effect="fade" start="100" end="0" time="400" condition="[[Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + Container(53).Column(7)] | [[Window.IsActive(1) | Window.IsActive(myvideofiles)] + Container(53).Column(8)] + !ControlGroup(7000).HasFocus()">Conditional</animation>				
 			<animation effect="slide" start="-18" end="-18" time="0" condition="Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>				
 		</control>	
-<!--
-		<include>Furniture_WallVignette</include>
-		
-		<control type="panel" id="53">
-			<viewtype label="31750">icon</viewtype>
-			<include condition="!Skin.HasSetting(smallmusicwall)">WallWidthBig</include>
-			<include condition="Skin.HasSetting(smallmusicwall)">WallWidthSmall</include>			
-			<posy>93</posy>
-			<height>540</height>
-			<pagecontrol>61</pagecontrol>
-			<scrolltime>200</scrolltime>
-			<onleft>53</onleft>
-			<onright>53</onright>
-			<onup>9000</onup>
-			<ondown>9000</ondown>
-			<orientation>horizontal</orientation>
-			<visible>Window.IsActive(20) | Window.IsActive(2) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(24)</visible>
-			<itemlayout width="133" height="133" condition="!Skin.HasSetting(smallmusicwall)">
-				<control type="image">
-					<include>WallIconDimensions</include>
-					<texture diffuse="wall/wall_mask.png">defaultpicturebig.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<info>ListItem.Icon</info>
-					<visible>Window.IsActive(2)</visible>
-				</control>
-				<control type="image">
-					<include>WallIconDimensions</include>
-					<texture diffuse="wall/wall_mask.png">defaultaudiobig.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<info>ListItem.Icon</info>
-					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)</visible>
-				</control>				
-				<control type="image">
-					<include>WallIconDimensions</include>
-					<bordertexture border="-3">wall/wall_nfborder.png</bordertexture>
-					<texture>wall/wall_nfoverlay.png</texture>
-				</control>				
-			</itemlayout>
-			<focusedlayout width="133" height="133" condition="!Skin.HasSetting(smallmusicwall)">
-				<control type="image">
-					<include>WallIconDimensions</include>
-					<texture diffuse="wall/wall_mask.png">defaultaudiobig.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<info>ListItem.Icon</info>
-					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)</visible>
-					<animation effect="zoom" center="66,66" start="100" end="190" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-				</control>
-				<control type="image">
-					<include>WallIconDimensions</include>
-					<texture diffuse="wall/wall_mask.png">defaultpicturebig.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<info>ListItem.Icon</info>
-					<visible>Window.IsActive(2)</visible>
-					<animation effect="zoom" center="66,66" start="100" end="190" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-				</control>
-				<control type="image">
-					<include>WallIconDimensions</include>
-					<bordertexture border="-3">wall/wall_nfborder.png</bordertexture>
-					<texture>wall/wall_nfoverlay.png</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="fade" start="100" end="0" time="200" reversible="false" />
-						<effect type="zoom" center="66,66" start="100" end="190" time="400" easing="out" tween="cubic" reversible="false" />
-					</animation>
-				</control>
-				<control type="image">
-					<include>WallIconDimensions</include>
-					<bordertexture border="-8">wall/wall_fborder.png</bordertexture>
-					<texture>common/blank.png</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="100" time="400" reversible="false" />
-						<effect type="zoom" center="66,66" start="100" end="190" time="400" easing="out" tween="cubic" reversible="false" />
-					</animation>
-				</control>						
-			</focusedlayout>
-			<itemlayout width="106" height="106" condition="Skin.HasSetting(smallmusicwall)">
-				<control type="image">
-					<include>WallIconDimensionsSmall</include>
-					<texture diffuse="wall/wall_mask.png">defaultpicturebig.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<info>ListItem.Icon</info>
-					<visible>Window.IsActive(2)</visible>
-				</control>
-				<control type="image">
-					<include>WallIconDimensionsSmall</include>
-					<texture diffuse="wall/wall_mask.png">defaultaudiobig.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<info>ListItem.Icon</info>
-					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)</visible>
-				</control>				
-				<control type="image">
-					<include>WallIconDimensionsSmall</include>
-					<bordertexture border="-3">wall/wall_nfborder.png</bordertexture>
-					<texture>wall/wall_nfoverlay.png</texture>
-				</control>				
-			</itemlayout>
-			<focusedlayout width="106" height="106" condition="Skin.HasSetting(smallmusicwall)">
-				<control type="image">
-					<include>WallIconDimensionsSmall</include>
-					<texture diffuse="wall/wall_mask.png">defaultaudiobig.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<info>ListItem.Icon</info>
-					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)</visible>
-					<animation effect="zoom" center="51,51" start="100" end="190" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-				</control>
-				<control type="image">
-					<include>WallIconDimensionsSmall</include>
-					<texture diffuse="wall/wall_mask.png">defaultpicturebig.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<info>ListItem.Icon</info>
-					<visible>Window.IsActive(2)</visible>
-					<animation effect="zoom" center="51,51" start="100" end="190" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-				</control>
-				<control type="image">
-					<include>WallIconDimensionsSmall</include>
-					<bordertexture border="-3">wall/wall_nfborder.png</bordertexture>
-					<texture>wall/wall_nfoverlay.png</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="fade" start="100" end="0" time="200" reversible="false" />
-						<effect type="zoom" center="51,51" start="100" end="190" time="400" easing="out" tween="cubic" reversible="false" />
-					</animation>
-				</control>
-				<control type="image">
-					<include>WallIconDimensionsSmall</include>
-					<bordertexture border="-5">wall/wall_fborder.png</bordertexture>
-					<texture>common/blank.png</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="100" time="400" reversible="false" />
-						<effect type="zoom" center="51,51" start="100" end="190" time="400" easing="out" tween="cubic" reversible="false" />
-					</animation>
-				</control>					
-			</focusedlayout>
-		</control>
--->		
+
 		<control type="panel" id="53">
 			<viewtype label="Wall">icon</viewtype>
 			<include condition="!Skin.HasSetting(smallmoviewall)">MovieWallBig</include>
