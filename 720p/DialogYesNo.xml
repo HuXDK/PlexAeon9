@@ -148,7 +148,7 @@
 
 		<control type="label" id="4">
 			<posx>40</posx>
-			<posy>81</posy>
+			<posy>89</posy>
 			<width>627</width>
 			<height>51</height>
 			<textcolor>a7ffffff</textcolor>
@@ -158,7 +158,7 @@
 		
 		<control type="button" id="10">
 			<posx>40</posx>
-			<posy>101</posy>
+			<posy>121</posy>
 			<width>627</width>
 			<height>51</height>
 			<texturefocus>-</texturefocus>
@@ -181,7 +181,7 @@
 		
 		<control type="button" id="11">
 			<posx>40</posx>
-			<posy>101</posy>
+			<posy>121</posy>
 			<width>627</width>
 			<height>51</height>
 			<texturefocus>-</texturefocus>

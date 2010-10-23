@@ -148,7 +148,7 @@
 		<control type="image">
 			<description>background image</description>
 			<posx>0</posx>
-			<posy>60</posy>
+			<posy>55</posy>
 			<width>695</width>
 			<height>569</height>
 			<texture>info/info_panellines_movie.png</texture>
@@ -378,7 +378,7 @@
 			<visible>false</visible>
 		</control>
 
-		<include>Furniture_MovieInfoMediaFlags</include>		
+	<!--	<include>Furniture_MovieInfoMediaFlags</include>		-->
 <!--
 		<control type="label">
 			<description>IMDB rating</description>
