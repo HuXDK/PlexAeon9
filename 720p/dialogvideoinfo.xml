@@ -244,17 +244,17 @@
 			<include>Objects_FSInfoLabel</include>
 			<label>31434</label>
 		</control>		
-		
+<!--		
 		<control type="label">
 			<description>Starring:</description>
 			<posy>197</posy>
 			<include>Objects_FSInfoLabel</include>
 			<label>31405</label>
 		</control>
-		
+-->		
 		<control type="label">
 			<description>Director</description>
-			<posy>113</posy>
+			<posy>112</posy>
 			<include>Objects_FSInfoValue</include>
 			<label fallback="31425">$INFO[ListItem.Director]</label>
 		</control>
@@ -262,18 +262,18 @@
 	
 		<control type="label">
 			<description>Writer</description>
-			<posy>142</posy>
+			<posy>141</posy>
 			<include>Objects_FSInfoValue</include>
 			<label fallback="31425">$INFO[ListItem.Writer]</label>
 		</control>
 		
 		<control type="label">
 			<description>Writer</description>
-			<posy>170</posy>
+			<posy>169</posy>
 			<include>Objects_FSInfoValue</include>
 			<label fallback="31425">$INFO[ListItem.Duration]</label>
 		</control>		
-		
+<!--		
 		<control type="textbox">
 			<description>Cast</description>
 			<posx>120</posx>
@@ -285,22 +285,24 @@
 			<label fallback="31435">$INFO[ListItem.CastAndRole]</label>
 			<include>Colour_OffWhite</include>
 		</control>
+-->
+
  <!-- castmod new buttons added-->
 	<control type="grouplist" id="9000">
 			<width>700</width>
 			<height>33</height>
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
-    	    <posx>0</posx>
-       		<posy>320</posy>
+    	    <posx>-37</posx>
+       		<posy>210</posy>
             <ondown>50</ondown>
-<!--
+
         <control type="button" id ="5">
           <description>Plot/Cast</description>
           <label>$LOCALIZE[206]</label>
           <include>Objects_FSInfoButton</include>
  		</control>
--->
+
  		<control type="togglebutton" id ="8">
           <description>Play/Browse to Show</description>
 		  <label>$LOCALIZE[31411]</label>
@@ -315,14 +317,14 @@
           <include>Objects_FSInfoButton</include>
           <visible>!Container.Content(TVShows)</visible>
         </control>
--->
+
         <control type="button" id ="6">
           <description>Refresh</description>
           <label>31410</label>
           <include>Objects_FSInfoButton</include>
           <animation effect="slide" start="0,0" end="0,-30" time="0" condition="Container.Content(TVShows)">conditional</animation>
 		</control>
-
+-->
      	<control type="button" id ="10">
           <description>Get Thumb</description>
    	      <label>31418</label>
@@ -354,31 +356,20 @@
       <control type="textbox">
         <description>Plot</description>
          <posx>3</posx>
-			<posy>356</posy>
+			<posy>250</posy>
 			<width>630</width>
-			<height>212</height>
+			<height>312</height>
 			<align>left</align>
 			<font>Font_FSInfoPlot</font>
 			<label fallback="31414">$INFO[ListItem.Plot]</label>
 			<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>			
 			<include>Colour_OffWhite</include>
-			<!-- <visible>!Control.IsVisible(5050)</visible>  -->
-		</control>
-		
-		<control type="label">
-			<description>IMDB:</description>
-			<posx>3</posx>
-			<posy>583</posy>
-			<width>110</width>
-			<height>29</height>
-			<align>left</align>
-			<font>Font_FSIMDB</font>
-			<label>31408</label>
-			<include>Colour_Grey</include>
-			<visible>false</visible>
+		<!-- castmod prevents it from showing when cast container shows -->
+        <visible>!Control.IsVisible(50)</visible>
+        <!-- end castmod prevents it from showing when cast container shows -->
 		</control>
 
-	<!--	<include>Furniture_MovieInfoMediaFlags</include>		-->
+		<include>Furniture_MovieInfoMediaFlags</include>		
 <!--
 		<control type="label">
 			<description>IMDB rating</description>
@@ -477,14 +468,14 @@
 			<label>31406</label>
 			<include>Objects_FSInfoLabel</include>
 		</control>
-		
+<!--		
 		<control type="label">
 			<description>Starring:</description>
 			<posy>170</posy>
 			<label>31405</label>
 			<include>Objects_FSInfoLabel</include>
 		</control>
-		
+-->	
 		<control type="label">
 			<description>Director</description>
 			<posy>112</posy>
@@ -498,7 +489,7 @@
 			<label fallback="31425">$INFO[ListItem.Episode]</label>
 			<include>Objects_FSInfoValue</include>
 		</control>
-		
+<!--		
 		<control type="textbox">
 			<description>Cast</description>
 			<posx>120</posx>
@@ -510,23 +501,22 @@
 			<label fallback="31435">$INFO[ListItem.CastAndRole]</label>
 			<include>Colour_OffWhite</include>
 		</control>
-
+-->
 <!-- castmod new buttons added-->
 	<control type="grouplist" id="9000">
 			<width>848</width>
 			<height>33</height>
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
-    	    <posx>0</posx>
-       		<posy>295</posy>
-			<ondown>5050</ondown>
-<!--
+    	    <posx>-37</posx>
+       		<posy>210</posy>
+			<ondown>50</ondown>
         <control type="button" id ="5">
           <description>Plot/Cast</description>
           <label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
           <include>Objects_FSInfoButton</include>
 		</control>
--->
+
         <control type="button" id ="6">
           <description>Refresh</description>
           <label>31410</label>
@@ -547,7 +537,7 @@
 		<control type="textbox">
 			<description>Plot</description>
 			<posx>3</posx>
-			<posy>330</posy>
+			<posy>250</posy>
 			<width>630</width>
 			<height>212</height>
 			<align>left</align>
@@ -555,7 +545,7 @@
 			<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>			
 			<label fallback="31414">$INFO[ListItem.Plot]</label>
 			<include>Colour_OffWhite</include>
-<!--		<visible>!Control.IsVisible(5050)</visible> -->
+			<visible>!Control.IsVisible(50)</visible>
 		</control>
 		
 		<control type="label">
@@ -658,14 +648,14 @@
 			<label>31401</label>
 			<include>Objects_FSInfoLabel</include>
 		</control>
-		
+<!--		
 		<control type="label">
 			<description>Starring:</description>
 			<posy>170</posy>
 			<label>31405</label>
 			<include>Objects_FSInfoLabel</include>
 		</control>
-		
+-->		
 		<control type="label">
 			<description>Director value</description>
 			<posy>112</posy>
@@ -679,7 +669,7 @@
 			<label fallback="31425">$INFO[ListItem.Writer]</label>
 			<include>Objects_FSInfoValue</include>
 		</control>
-		
+<!--		
 		<control type="textbox">
 			<description>Cast</description>
 			<posx>120</posx>
@@ -691,6 +681,7 @@
 			<label fallback="31435">$INFO[ListItem.CastAndRole]</label>
 			<include>Colour_OffWhite</include>
 		</control>
+-->
 <!--
 		<control type="label">
 			<description>Filename</description>
@@ -709,16 +700,14 @@
 			<height>33</height>
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
-    	    <posx>0</posx>
-       		<posy>295</posy>
+    	    <posx>-37</posx>
+       		<posy>210</posy>
 			<ondown>50</ondown>
-<!--
         <control type="button" id ="5">
           <description>Plot/Cast</description>
           <label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
           <include>Objects_FSInfoButton</include>
 		</control>
--->
 		<control type="button" id="8">
           <label>[UPPERCASE]$LOCALIZE[31411][/UPPERCASE]</label>
 			<include>Objects_FSInfoButton</include>
@@ -737,14 +726,14 @@
 		<control type="textbox">
 			<description>Plot</description>
 			<posx>3</posx>
-			<posy>330</posy>
+			<posy>250</posy>
 			<width>630</width>
 			<height>212</height>
 			<align>left</align>
 			<font>Font_FSInfoPlot</font>
 			<autoscroll delay="15000" time="3000" repeat="10000">true</autoscroll>			
 			<label fallback="31414">$INFO[ListItem.Plot]</label>
-<!--	    <visible>!Control.IsVisible(5050)</visible> -->
+		    <visible>!Control.IsVisible(50)</visible>
 			<include>Colour_OffWhite</include>
 		</control>
 		
@@ -787,18 +776,18 @@
  <!-- castmod removed this for search dialog -->
     <!-- <include>Background_ContextBlack</include> --><!-- end castmod removed this for search dialog -->
     <!-- castmod displays selectable cast -->
-    <control type="list" id="5050">
+    <control type="list" id="50">
       <description>Cast List Container</description>
       <posx>550</posx>
-      <posy>410</posy>
-      <width>370</width>
+	  <posy>300</posy>
+      <width>340</width>
       <height>206</height>
       <font>Font_FSInfoPlot</font>
-      <animation effect="slide" start="0,0" end="0,-25" time="0" condition="!Container.Content(movies)">conditional</animation>
-      <onleft>9000</onleft>
-      <onright>9000</onright>
-      <onup>9000</onup>
-      <ondown>5050</ondown>
+<!--      <animation effect="slide" start="0,0" end="0,-25" time="0" condition="!Container.Content(movies)">conditional</animation> -->
+        <onup>5</onup>
+        <ondown>5</ondown>
+        <onleft>8</onleft>
+        <onright>10</onright>
       <orientation>vertical</orientation>
       <itemlayout width="250" height="29">
        <control type="image">
@@ -812,7 +801,7 @@
         <control type="label">
           <posx>30</posx>
           <posy>3</posy>
-          <width>370</width>
+          <width>470</width>
           <height>22</height>
          <font>Font_FSInfoPlot</font>
           <include>Colour_Grey</include>
@@ -823,6 +812,7 @@
         </control>
       </itemlayout>
       <focusedlayout height="29" width="250">
+
         <control type="image">
           <posx>0</posx>
          <posy>3</posy>
@@ -844,8 +834,9 @@
         </control>
      </focusedlayout>
     </control>
+<!--
     <control type="group">
-      <visible>Control.IsVisible(5050)</visible>
+      <visible>Control.IsVisible(50)</visible>
       <animation effect="slide" start="0,0" end="25,0" time="0" condition="!Control.IsVisible(61)">conditional</animation>
       <animation effect="slide" start="0,0" end="0,-25" time="0" condition="!Container.Content(movies)">conditional</animation>
       <control type="image">
@@ -854,12 +845,14 @@
         <posy>410</posy>
         <width>150</width>
         <height>200</height>
-        <info>Container(5050).ListItem.icon</info>
+        <info>Container(50).ListItem.Icon</info>
         <aspectratio aligny="center">keep</aspectratio>
         <align>center</align>
       </control>
     </control>
+-->
     <!-- castmod displays selectable cast -->
-  </controls></window>	
+  </controls>
+  </window>	
 
 

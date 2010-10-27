@@ -76,19 +76,19 @@
 	</include>
 	<include name="Furniture_MovieInfoFlagSource">
 		<posx>4</posx>
-		<posy>585</posy>
+		<posy>580</posy>
 		<width>70</width>
 		<height>40</height>
 	</include>
 	<include name="Furniture_MovieInfoFlagAspect">
 		<posx>110</posx>
-		<posy>585</posy>
+		<posy>580</posy>
 		<width>70</width>
 		<height>40</height>
 	</include>
 	<include name="Furniture_MovieInfoFlagSoundCodec">
 		<posx>525</posx>
-		<posy>585</posy>
+		<posy>580</posy>
 		<width>70</width>
 		<height>40</height>
 		<aspectratio>keep</aspectratio>
@@ -96,27 +96,27 @@
 
 	<include name="Furniture_MovieInfoFlagSound">
 		<posx>425</posx>
-		<posy>585</posy>
+		<posy>580</posy>
 		<width>70</width>
 		<height>40</height>
 		<aspectratio>keep</aspectratio>
 	</include>
 	<include name="Furniture_MovieInfoFrame">
 		<posx>325</posx>
-		<posy>585</posy>
+		<posy>580</posy>
 		<width>70</width>
 		<height>40</height>
 		<aspectratio>keep</aspectratio>
 	</include>
 	<include name="Furniture_MovieInfoFlagSubs">
 		<posx>263</posx>
-		<posy>585</posy>
+		<posy>580</posy>
 		<width>70</width>
 		<height>40</height>
 	</include>
 	<include name="Furniture_MovieInfoFlagRes">
 		<posx>210</posx>
-		<posy>585</posy>
+		<posy>580</posy>
 		<width>70</width>
 		<height>40</height>
 		<aspectratio>keep</aspectratio>
