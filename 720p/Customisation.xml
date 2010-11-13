@@ -276,14 +276,14 @@
 			<label2>$INFO[Skin.String(CustomCurtainsBG)]</label2>
 			<onclick>Skin.SetFile(CustomCurtainsBG,.jpg)</onclick>
 		</control>
-<!--
-		<control type="radiobutton" id="">
+
+		<control type="radiobutton" id="717">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>32027</label>
-			<onclick>Skin.ToggleSetting(MissingFanartBlack)</onclick>
-			<selected>!Skin.HasSetting(MissingFanartBlack)</selected>
+			<label>Use plain white Media Flagging</label>
+			<onclick>Skin.ToggleSetting(WhiteMediaFlags)</onclick>
+			<selected>Skin.HasSetting(WhiteMediaFlags)</selected>
 		</control>
--->
+
 	    <control type="radiobutton" id="710">
  			<description>Hide Now playing in viz description</description>
 			<include>Objects_SettingsDefaultRadioButton</include>

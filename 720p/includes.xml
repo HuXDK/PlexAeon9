@@ -36,6 +36,61 @@
 	<include file="Viewtype_Coverflow.xml" />
 	<include file="Viewtype_Includes.xml" />
 
+	<include name="ColourVideoCodecVars">
+		<texture>$INFO[ListItem.Property(mediaTag-videoCodec),flagging/video/,.png]</texture>
+	</include>
+
+	<include name="WhiteVideoCodecVars">
+		<info>Listitem.Property(mediaTag::videoCodec)</info>
+	</include>
+
+	<include name="ColourVideoResolutionVars">
+		<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flagging/video/,.png]</texture>
+	</include>
+
+	<include name="WhiteVideoResolutionVars">
+		<info>Listitem.Property(mediaTag::videoResolution)</info>
+	</include>
+	
+	<include name="ColourAudioCodecVars">
+		<texture>$INFO[ListItem.Property(mediaTag-audioCodec),flagging/audio/,.png]</texture>
+	</include>
+
+	<include name="WhiteAudioCodecVars">
+		<info>Listitem.Property(mediaTag::audioCodec)</info>
+	</include>
+
+	<include name="ColourAudioChannelsVars">
+		<texture>$INFO[ListItem.Property(mediaTag-audioChannels),flagging/audio/,.png]</texture>
+	</include>
+
+	<include name="WhiteAudioChannelsVars">
+		<info>Listitem.Property(mediaTag::audioChannels)</info>
+	</include>
+
+	<include name="ColouraspectRatioVars">
+		<texture>$INFO[ListItem.Property(mediaTag-aspectRatio),flagging/aspectratio/,.png]</texture>
+	</include>
+
+	<include name="WhiteaspectRatioVars">
+		<info>Listitem.Property(mediaTag::aspectRatio)</info>
+	</include>
+
+	<include name="ColourcontentRatingVars">
+			<texture>$INFO[ListItem.Property(mediaTag-contentRating),flagging/ratings/mpaa_,.png]</texture>
+	</include>
+
+	<include name="WhitecontentRatingVars">
+		<info>Listitem.Property(mediaTag::contentRating)</info>
+	</include>
+
+	<include name="ColourStudioVars">
+			<texture>$INFO[ListItem.Property(mediaTag-studio),flagging/studios/,.png]</texture>
+	</include>
+
+	<include name="WhiteStudioVars">
+		<info>Listitem.Property(mediaTag::studio)</info>
+	</include>
 
 	<!-- Text colours ================================== -->
 	<include name="subcolornofocus">

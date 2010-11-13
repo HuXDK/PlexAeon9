@@ -124,28 +124,34 @@
 	<include name="Furniture_MovieInfoMediaFlags">
 		<control type="image" id="91">
 			<include>Furniture_MovieInfoFlagSource</include>
-			<info>Listitem.Property(mediaTag::videoCodec)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
 		</control>
 
 		<control type="image">
 			<include>Furniture_MovieInfoFlagSoundCodec</include>
-			<info>Listitem.Property(mediaTag::audioCodec)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioCodecVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioCodecVars</include>
 		</control>
 		<control type="image">
 			<include>Furniture_MovieInfoFlagAspect</include>
-			<info>Listitem.Property(mediaTag::aspectRatio)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteaspectRatioVars</include>
+			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColouraspectRatioVars</include>
 		</control>
 		<control type="image">
+			<visible>Skin.HasSetting(WhiteMediaFlags)</visible>
 			<include>Furniture_MovieInfoFrame</include>
 			<info>Listitem.Property(mediaTag::videoFrameRate)</info>
 		</control>
 		<control type="image" id="92">
 			<include>Furniture_MovieInfoFlagSound</include>
-			<info>Listitem.Property(mediaTag::audioChannels)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 		</control>
 		<control type="image" id="94">
 			<include>Furniture_MovieInfoFlagRes</include>
-			<info>Listitem.Property(mediaTag::videoResolution)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
 		</control>
 	</include>
 	<include name="Furniture_FlagUpright">
@@ -170,7 +176,8 @@
 			<include>Animation_HideShowcase</include>
 			<include>Animation_HideMultiplex</include>
 			<visible>!Skin.HasSetting(nomediaflags)</visible>
-			<info>Listitem.Property(mediaTag::contentRating)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhitecontentRatingVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourcontentRatingVars</include>
 			<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating))</visible>
 		</control>	
 		<control type="image">
@@ -183,7 +190,7 @@
 			<include>Animation_HideShowcase</include>
 			<include>Animation_HideMultiplex</include>
 			<visible>!Skin.HasSetting(nomediaflags)</visible>
-			<info>Listitem.Property(mediaTag::studio)</info>
+			<texture>$INFO[ListItem.Property(mediaTag-studio),flagging/studios/,.png]</texture>
 			<visible>!IsEmpty(Listitem.Property(mediaTag::studio))</visible>
 		</control>	
 
@@ -197,19 +204,22 @@
 			<itemgap>10</itemgap>
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::videoResolution)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::videoResolution))</visible>
 				</control>	
 
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::videoCodec)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::videoCodec))</visible>
 				</control>
 
 				<control type="image">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::audioCodec)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioCodecVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioCodecVars</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::audioCodec))</visible>
 				</control>
 
@@ -217,7 +227,8 @@
 					<aspectratio>keep</aspectratio>
 					<include>Furniture_ListMediaFlagsVars</include>
 					<visible>!Skin.HasSetting(nomediaflags)</visible>
-					<info>Listitem.Property(mediaTag::audioChannels)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
 				</control>
 
@@ -242,12 +253,13 @@
 					<include>Animation_HideShowcase</include>
 					<include>Animation_HideMultiplex</include>
 				 	<colordiffuse>efffffff</colordiffuse>
-					<info>Listitem.Property(mediaTag::studio)</info>
+					<texture>$INFO[ListItem.Property(mediaTag-studio),flagging/studios/,.png]</texture>
 					<visible>!Skin.HasSetting(nostudio)</visible>
 				</control>
 				<control type="image">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::aspectRatio)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteaspectRatioVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColouraspectRatioVars</include>
 					<visible>Skin.HasSetting(nostudio)</visible>
 				</control>
 			</control>
@@ -255,21 +267,24 @@
 				<control type="image">
 					<posx>1055</posx>
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::videoResolution)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
 				</control>
 
 			<control type="group">
 				<posx>1150</posx>
 				<control type="image">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::audioChannels)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 				</control>
 			</control>
 			<control type="group">
 				<posx>150</posx>
 				<control type="image" id="82">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::videoCodec)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
 					<visible>true</visible>
 				</control>
 			</control>
@@ -290,39 +305,43 @@
 				<height>50</height>
 				<aspectratio>keep</aspectratio>
 				<include>Animation_CommonFade</include>
-				<info>Listitem.Property(mediaTag::studio)</info>
+				<texture>$INFO[ListItem.Property(mediaTag-studio),flagging/studios/,.png]</texture>
 				<visible>!Skin.HasSetting(nostudio)</visible>
-				<colordiffuse>6FFEF280</colordiffuse>
+				<colordiffuse>dFFEF280</colordiffuse>
 			</control>
 			<control type="image" id="91">
 				<include>Furniture_PanelMediaFlagsVars</include>
-				<info>Listitem.Property(mediaTag::aspectRatio)</info>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteaspectRatioVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColouraspectRatioVars</include>
 				<visible>Skin.HasSetting(nostudio)</visible>
-				<colordiffuse>6FFEF280</colordiffuse>
+				<colordiffuse>dFFEF280</colordiffuse>
 			</control>
 			</control>
 			<control type="group">
 				<posx>1030</posx>
 			<control type="image" id="93">
 				<include>Furniture_PanelMediaFlagsVars</include>
-				<info>Listitem.Property(mediaTag::videoResolution)</info>
-				<colordiffuse>6FFEF280</colordiffuse>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
+				<colordiffuse>dFFEF280</colordiffuse>
 			</control>
 			</control>
 			<control type="group">
 				<posx>1140</posx>
 			<control type="image">
 				<include>Furniture_PanelMediaFlagsVars</include>
-				<info>Listitem.Property(mediaTag::audioChannels)</info>
-				<colordiffuse>6FFEF280</colordiffuse>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
+				<colordiffuse>dFFEF280</colordiffuse>
 			</control>
 			</control>
 			<control type="group">
 				<posx>170</posx>
 			<control type="image" id="92">
 				<include>Furniture_PanelMediaFlagsVars</include>
-				<info>Listitem.Property(mediaTag::videoCodec)</info>
-				<colordiffuse>6FFEF280</colordiffuse>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
+				<colordiffuse>dFFEF280</colordiffuse>
 			</control>
 			</control>
 		</control>
@@ -341,12 +360,13 @@
 					<height>50</height>
 					<aspectratio>keep</aspectratio>
 					<include>Animation_CommonFade</include>
-					<info>Listitem.Property(mediaTag::studio)</info>
+					<texture>$INFO[ListItem.Property(mediaTag-studio),flagging/studios/,.png]</texture>
 					<visible>!Skin.HasSetting(nostudio)</visible>
 				</control>
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::aspectRatio)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteaspectRatioVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColouraspectRatioVars</include>
 					<visible>Skin.HasSetting(nostudio)</visible>
 				</control>
 			</control>
@@ -354,21 +374,24 @@
 				<posx>1020</posx>
 				<control type="image" id="93">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::videoResolution)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
 				</control>
 			</control>
 			<control type="group">
 				<posx>1130</posx>
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::audioChannels)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 				</control>
 			</control>
 			<control type="group">
 				<posx>170</posx>
 				<control type="image" id="92">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::videoCodec)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
 					<visible>!Container.Content(tvshows)</visible>
 				</control>
 			</control>
@@ -376,7 +399,8 @@
 				<posx>1115</posx>
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::contentRating)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhitecontentRatingVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourcontentRatingVars</include>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 			</control>
@@ -395,12 +419,13 @@
 				<posx>235</posx>
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars2</include>
-			<info>Listitem.Property(mediaTag::studio)</info>
+			<texture>$INFO[ListItem.Property(mediaTag-studio),flagging/studios/,.png]</texture>
 					<visible>!Skin.HasSetting(nostudio)</visible>
 				</control>
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars2</include>
-			<info>Listitem.Property(mediaTag::aspectRatio)</info>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteaspectRatioVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColouraspectRatioVars</include>
 					<visible>Skin.HasSetting(nostudio)</visible>
 				</control>
 
@@ -412,7 +437,8 @@
 				<posx>300</posx>
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars2</include>
-			<info>Listitem.Property(mediaTag::videoCodec)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
 				</control>
 			</control>
 			<control type="group">
@@ -422,7 +448,8 @@
 				<posx>370</posx>
 				<control type="image" id="93">
 					<include>Furniture_PanelMediaFlagsVars2</include>
-			<info>Listitem.Property(mediaTag::videoResolution)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
 				</control>
 			</control>
 			<control type="group">
@@ -432,7 +459,8 @@
 				<posx>440</posx>
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars2</include>
-			<info>Listitem.Property(mediaTag::audioChannels)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 					<visible>true</visible>
 				</control>
 			</control>
@@ -443,7 +471,8 @@
 			<control type="image">
 				<posx>650</posx>
 				<include>Furniture_PanelMediaFlagsVars2</include>
-				<info>Listitem.Property(mediaTag::contentRating)</info>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhitecontentRatingVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourcontentRatingVars</include>
 				</control>
 			</control>
 
@@ -493,14 +522,16 @@
 				<posx>90</posx>
 				<control type="image" id="91">
 				<include>Furniture_MediaFlagsVarsAnoobie3</include>
-				<info>Listitem.Property(mediaTag::audioCodec)</info>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioCodecVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioCodecVars</include>
 				</control>
 			</control>
 			<control type="group">
 				<posx>175</posx>
 				<control type="image" id="93">
 				<include>Furniture_MediaFlagsVarsAnoobie3</include>
-				<info>Listitem.Property(mediaTag::audioChannels)</info>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 			</control>
 			</control>
 			<control type="group">
@@ -509,22 +540,31 @@
 				<control type="image">
 				<visible>!Skin.HasSetting(nostudio)</visible>
 				<include>Furniture_MediaFlagsVarsAnoobie3</include>
-				<info>Listitem.Property(mediaTag::studio)</info>
+				<texture>$INFO[ListItem.Property(mediaTag-studio),flagging/studios/,.png]</texture>
 			</control>
 			<control type="image">
 				<include>Furniture_MediaFlagsVarsAnoobie3</include>
-				<info>Listitem.Property(mediaTag::aspectRatio)</info>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteaspectRatioVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColouraspectRatioVars</include>
 				<visible>Skin.HasSetting(nostudio)</visible>
 			</control>
 			<control type="image">
 				<posx>85</posx>
 				<include>Furniture_MediaFlagsVarsAnoobie3</include>
-				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
 			</control>
 			<control type="image">
 				<posx>170</posx>
+				<visible>Skin.HasSetting(WhiteMediaFlags)</visible>
 				<include>Furniture_MediaFlagsVarsAnoobie3</include>
 				<info>Listitem.Property(mediaTag::videoFrameRate)</info>
+			</control>
+			<control type="image">
+				<posx>170</posx>
+				<visible>!Skin.HasSetting(WhiteMediaFlags)</visible>
+				<include>Furniture_MediaFlagsVarsAnoobie3</include>
+				<texture>$INFO[ListItem.Property(mediaTag-aspectRatio),flagging/aspectratio/,.png]</texture>
 			</control>
 			<control type="image">
 				<posx>-5</posx>
@@ -534,14 +574,16 @@
 				<align>left</align>
 				<aspectratio>keep</aspectratio>
 				<include>Animation_CommonFade</include>
-				<info>Listitem.Property(mediaTag::contentRating)</info>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhitecontentRatingVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourcontentRatingVars</include>
 			</control>
 			</control>
 			<control type="group">
 				<posx>10</posx>
 				<control type="image" id="92">
 				<include>Furniture_MediaFlagsVarsAnoobie3</include>
-				<info>Listitem.Property(mediaTag::videoCodec)</info>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
 			</control>
 			</control>
 	</control>
@@ -562,7 +604,7 @@
 			<aspectratio>keep</aspectratio>
 			<include>Animation_CommonFade</include>
 			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
-			<info>Listitem.Property(mediaTag::studio)</info>
+			<texture>$INFO[ListItem.Property(mediaTag-studio),flagging/studios/,.png]</texture>
 			<visible>!Skin.HasSetting(nostudio)</visible>
 		</control>
 		<control type="image" id="91">
@@ -572,7 +614,8 @@
 			<aspectratio>keep</aspectratio>
 			<include>Animation_CommonFade</include>
 			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
-			<info>Listitem.Property(mediaTag::aspectRatio)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteaspectRatioVars</include>
+			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColouraspectRatioVars</include>
 			<visible>Skin.HasSetting(nostudio)</visible>
 			</control>
 		</control>
@@ -585,7 +628,8 @@
 			<aspectratio>keep</aspectratio>
 			<include>Animation_CommonFade</include>
 			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
-			<info>Listitem.Property(mediaTag::videoResolution)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
+			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
 			</control>
 		</control>
 		<control type="group">
@@ -597,7 +641,8 @@
 			<aspectratio>keep</aspectratio>
 			<include>Animation_CommonFade</include>
 			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
-			<info>Listitem.Property(mediaTag::audioChannels)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
+			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 		</control>
 		</control>
 		<control type="group">
@@ -609,7 +654,8 @@
 			<aspectratio>keep</aspectratio>
 			<include>Animation_CommonFade</include>
 			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
-			<info>Listitem.Property(mediaTag::videoCodec)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
 			</control>
 		</control>
 	</include>
@@ -640,7 +686,8 @@
 			<aspectratio>keep</aspectratio>
 			<include>Animation_CommonFade</include>
 			<visible>Control.IsVisible(523)</visible>
-			<info>Listitem.Property(mediaTag::audioChannels)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
+			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 		</control>
 		</control>
 		<control type="group">
@@ -652,7 +699,8 @@
 			<aspectratio>keep</aspectratio>
 			<include>Animation_CommonFade</include>
 			<visible>Control.IsVisible(523)</visible>
-			<info>Listitem.Property(mediaTag::audioCodec)</info>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioCodecVars</include>
+			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioCodecVars</include>
 			</control>
 		</control>
 	</include>
@@ -685,7 +733,8 @@
 					<include>Animation_HideShowcase</include>
 					<include>Animation_HideMultiplex</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + Container.Content(movies) + !Skin.HasSetting(moviegallerypanelon)</visible>
-					<info>Listitem.Property(mediaTag::contentRating)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhitecontentRatingVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourcontentRatingVars</include>
 					<animation effect="slide" end="205,-265" time="0" condition="Control.IsVisible(54)">Conditional</animation>
 					<animation effect="slide" end="25,10" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
 				</control>
@@ -699,7 +748,8 @@
 					<include>Animation_HideShowcase</include>
 					<include>Animation_HideMultiplex</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::contentRating)) + !Container.Content(movies)</visible>
-					<info>Listitem.Property(mediaTag::contentRating)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhitecontentRatingVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourcontentRatingVars</include>
 					<animation effect="slide" end="30,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
 				</control>
 
@@ -709,7 +759,7 @@
 				<posx>342</posx>
 				<height>50</height>
 				<width min="1" max="95">auto</width>
-				<info>Listitem.Property(mediaTag::studio)</info>
+				<texture>$INFO[ListItem.Property(mediaTag-studio),flagging/studios/,.png]</texture>
 				<aspectratio>keep</aspectratio>
 				<animation effect="slide" end="-30,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
 				<visible>!Skin.HasSetting(moviegallerypanelon)</visible>
@@ -726,30 +776,28 @@
 
 				<control type="image">
 					<include>Furniture_LowClearListMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::videoResolution)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::videoResolution))</visible>
 				</control>	
 				<control type="image">
 					<include>Furniture_LowClearListMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::videoCodec)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::videoCodec))</visible>
 				</control>
 
 				<control type="image">
 					<include>Furniture_LowClearListMediaFlagsVars</include>
-					<info>Listitem.Property(mediaTag::audioCodec)</info>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioCodecVars</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::audioCodec))</visible>
 				</control>
 
 				<control type="image">
-		<width min="10" max="40">auto</width>
-		<height>40</height>
-		<aspectratio>keep</aspectratio>
-		<include>Animation_CommonFade</include>
-		<include>Animation_HideShowcase</include>
-		<include>Animation_HideMultiplex</include>
-		<visible>!Skin.HasSetting(nomediaflags)</visible>
-					<info>Listitem.Property(mediaTag::audioChannels)</info>
+					<include>Furniture_LowClearListMediaFlagsVars</include>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
 				</control>
 			</control>
