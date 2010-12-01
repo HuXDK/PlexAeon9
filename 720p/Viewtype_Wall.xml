@@ -15,6 +15,23 @@
 		<visible>[Container(53).Column(0) | Container(53).Column(1) | Container(53).Column(2) | Container(53).Column(3)]</visible>
 	</include>
 
+	<include name="VerticalWall">
+		<onleft>7000</onleft>
+		<onright>7000</onright>
+		<onup>53</onup>
+		<ondown>53</ondown>
+		<orientation>vertical</orientation>
+		<pagecontrol>261</pagecontrol>
+	</include>
+	<include name="HorizontalWall">
+		<onleft>53</onleft>
+		<onright>53</onright>
+		<onup>7000</onup>
+		<ondown>7000</ondown>
+		<pagecontrol>60</pagecontrol>
+		<orientation>horizontal</orientation>
+	</include>
+
 	<include name="Furniture_WallBackground">
 		
 		<control type="image">
@@ -123,7 +140,7 @@
 		<posx>85</posx>
 		<posy>91</posy>
 		<width>1108</width>
-		<height>545</height>
+		<height>540</height>
 	</include>
 	
 	<include name="MovieWallSmall">
@@ -137,6 +154,29 @@
 	<control type="group">
 		<visible>Control.IsVisible(53)</visible>
 		<include>Furniture_WallBackground</include>
+		<control type="image">
+			<posx>-10</posx>
+			<posy>51</posy>
+			<width>1300</width>
+			<height>20</height>
+			<texture>wall/wall_arrow_vertical.png</texture>
+			<visible>Control.IsVisible(53) + Skin.HasSetting(VerticalWall)</visible>
+			<animation effect="slide" start="-100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="125" condition="Container(53).Row(0) + !ControlGroup(7000).HasFocus()">Conditional</animation>
+			<animation effect="slide" start="18" end="18" time="0" condition="Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>
+		</control>
+		<control type="image">
+			<posx>-10</posx>
+			<posy>645</posy>
+			<width>1300</width>
+			<height>20</height>
+			<texture flipy="true">wall/wall_arrow_vertical.png</texture>
+			<visible>Control.IsVisible(53) + Skin.HasSetting(VerticalWall)</visible>
+			<animation effect="slide" start="100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="125" condition="[[Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)] + Container(53).Row(3)] + !ControlGroup(7000).HasFocus()">Conditional</animation>
+			<animation effect="slide" start="0" end="0" time="0" condition="Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>
+		</control>
+
 
 		<control type="image">
 			<posx>57</posx>
@@ -144,7 +184,7 @@
 			<width>20</width>
 			<height>524</height>
 			<texture>wall/wall_arrow.png</texture>
-			<visible>Control.IsVisible(53)</visible>
+			<visible>Control.IsVisible(53) + !Skin.HasSetting(VerticalWall)</visible>
 			<animation effect="slide" start="-100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="400" condition="Container(53).Column(0) + !ControlGroup(7000).HasFocus()">Conditional</animation>			
 			<animation effect="slide" start="18" end="18" time="0" condition="Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>				
@@ -156,7 +196,7 @@
 			<width>20</width>
 			<height>524</height>
 			<texture flipx="true">wall/wall_arrow.png</texture>
-			<visible>Control.IsVisible(53)</visible>
+			<visible>Control.IsVisible(53) + !Skin.HasSetting(VerticalWall)</visible>
 			<animation effect="slide" start="100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="400" condition="[[Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + Container(53).Column(7)] | [[Window.IsActive(1) | Window.IsActive(myvideofiles)] + Container(53).Column(8)] + !ControlGroup(7000).HasFocus()">Conditional</animation>				
 			<animation effect="slide" start="-18" end="-18" time="0" condition="Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>				
@@ -166,13 +206,8 @@
 			<viewtype label="Wall">icon</viewtype>
 			<include condition="!Skin.HasSetting(smallmoviewall)">MovieWallBig</include>
 			<include condition="Skin.HasSetting(smallmoviewall)">MovieWallSmall</include>
-			<pagecontrol>61</pagecontrol>
-			<scrolltime>200</scrolltime>
-			<onleft>53</onleft>
-			<onright>53</onright>
-			<onup>7000</onup>
-			<ondown>7000</ondown>
-			<orientation>horizontal</orientation>
+			<include condition="Skin.HasSetting(VerticalWall)">VerticalWall</include>
+			<include condition="!Skin.HasSetting(VerticalWall)">HorizontalWall</include>
 			<visible>Window.IsActive(28) | Window.IsActive(1) | [Window.IsActive(myvideofiles) + !Container.Content(episodes)] | Window.IsActive(501)</visible>
 			<itemlayout width="123" height="179" condition="!Skin.HasSetting(smallmoviewall)">
 				<control type="image">

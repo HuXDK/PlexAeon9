@@ -2410,7 +2410,7 @@
 			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(50)</visible>
 		</control>
 	</include>
-<!--
+
 	<include name="MediaMenuButton_VerticalWall">
 		<control type="togglebutton" id="700024">
 			<include>MediaMenuButton</include>
@@ -2423,7 +2423,7 @@
 			<visible>Control.IsVisible(53)</visible>
 		</control>
 	</include>
--->
+
 <!--
 	<include name="MediaMenuButton_Fanart">
 		<control type="radiobutton" id="700025">
@@ -3397,11 +3397,11 @@
 				<include>MediaMenuButton_ShowcaseInfo</include> 
 		<!--	<include>MediaMenuButton_WallInfo</include>  -->
 				<include>MediaMenuButton_FlattenFlow</include>
-		<!--	<include>MediaMenuButton_VerticalWall</include> -->
 				<include>MediaMenuButton_Stripshow</include>
 		<!--	<include>MediaMenuButton_StackButton</include> -->
 				<include>MediaMenuButton_WallGrid</include>
 		<!--	<include>MediaMenuButton_WallBackdrop</include> -->
+				<include>MediaMenuButton_VerticalWall</include>
 				<include>LowList_SlimFullMediaMenuButton</include>
 				<include>LowList_HighLowMediaMenuButton</include>
 				<include>MediaMenuButton_PanelDensity</include>
