@@ -385,7 +385,6 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
-
 			<control type="multiimage">
 				<include>Background_ImageFolder</include>
 				<info>Skin.String(CustomSectionOnefolder)</info>
@@ -404,7 +403,6 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
-
 			<control type="multiimage">
 				<include>Background_ImageFolder</include>
 				<info>Skin.String(CustomSectionTwofolder)</info>
@@ -423,7 +421,6 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
-
 			<control type="multiimage">
 				<include>Background_ImageFolder</include>
 				<info>Skin.String(CustomSectionThreefolder)</info>
@@ -442,7 +439,6 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
-
 			<control type="multiimage">
 				<include>Background_ImageFolder</include>
 				<info>Skin.String(CustomSectionFourfolder)</info>
@@ -461,7 +457,6 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
-
 			<control type="multiimage">
 				<include>Background_ImageFolder</include>
 				<info>Skin.String(CustomSectionFivefolder)</info>
@@ -480,7 +475,6 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
-
 			<control type="multiimage">
 				<include>Background_ImageFolder</include>
 				<info>Skin.String(CustomSectionSixfolder)</info>
@@ -490,7 +484,7 @@
 			</control>
 
 			<control type="largeimage">
-				<visible>Container(300).HasFocus(1006)</visible>
+				<visible>Container(300).HasFocus(1006) + !Skin.String(CustomSectionSevenfolder)</visible>
 				<animation effect="fade" end="100" time="600">Visible</animation>
 				<animation effect="fade" end="0" time="600">Hidden</animation>
 				<info>Container(300).ListItem.Property(fanart_image)</info>
@@ -499,8 +493,16 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionSevenfolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1006) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionSevenfolder)</visible>
+			</control>
+
 			<control type="largeimage">
-				<visible>Container(300).HasFocus(1007)</visible>
+				<visible>Container(300).HasFocus(1007) + !Skin.String(CustomSectionEightfolder)</visible>
 				<animation effect="fade" end="100" time="600">Visible</animation>
 				<animation effect="fade" end="0" time="600">Hidden</animation>
 				<info>Container(300).ListItem.Property(fanart_image)</info>
@@ -509,8 +511,16 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionEightfolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1007) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionEightfolder)</visible>
+			</control>
+
 			<control type="largeimage">
-				<visible>Container(300).HasFocus(1008)</visible>
+				<visible>Container(300).HasFocus(1008) + !Skin.String(CustomSectionNinefolder)</visible>
 				<animation effect="fade" end="100" time="600">Visible</animation>
 				<animation effect="fade" end="0" time="600">Hidden</animation>
 				<info>Container(300).ListItem.Property(fanart_image)</info>
@@ -519,8 +529,16 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionNinefolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1008) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionNinefolder)</visible>
+			</control>
+
 			<control type="largeimage">
-				<visible>Container(300).HasFocus(1009)</visible>
+				<visible>Container(300).HasFocus(1009) + !Skin.String(CustomSectionTenfolder)</visible>
 				<animation effect="fade" end="100" time="600">Visible</animation>
 				<animation effect="fade" end="0" time="600">Hidden</animation>
 				<info>Container(300).ListItem.Property(fanart_image)</info>
@@ -529,8 +547,16 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionTenfolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1009) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionTenfolder)</visible>
+			</control>
+
 			<control type="largeimage">
-				<visible>Container(300).HasFocus(1010)</visible>
+				<visible>Container(300).HasFocus(1010) + !Skin.String(CustomSectionElevenfolder)</visible>
 				<animation effect="fade" end="100" time="600">Visible</animation>
 				<animation effect="fade" end="0" time="600">Hidden</animation>
 				<info>Container(300).ListItem.Property(fanart_image)</info>
@@ -539,8 +565,16 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionElevenfolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1010) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionElevenfolder)</visible>
+			</control>
+
 			<control type="largeimage">
-				<visible>Container(300).HasFocus(1011)</visible>
+				<visible>Container(300).HasFocus(1011) + !Skin.String(CustomSectionTwelvefolder)</visible>
 				<animation effect="fade" end="100" time="600">Visible</animation>
 				<animation effect="fade" end="0" time="600">Hidden</animation>
 				<info>Container(300).ListItem.Property(fanart_image)</info>
@@ -549,6 +583,14 @@
 				<width>1280</width>
 				<height>720</height>
 			</control>
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionTwelvefolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1011) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionTwelvefolder)</visible>
+			</control>
+
 			<control type="largeimage">
 				<visible>Container(300).HasFocus(1012)</visible>
 				<animation effect="fade" end="100" time="600">Visible</animation>
@@ -1059,19 +1101,55 @@
 			<include>Background_VirtualImageFolder</include>
 			<info>Skin.String(CustomSectionFourfolder)</info>
 			<visible>[Container(301).HasFocus(16) + Control.IsVisible(301)] | [Container(300).HasFocus(16) + Control.IsVisible(300)]</visible>
-			<visible>Skin.String(CustomSectionOnefolder)</visible>
+			<visible>Skin.String(CustomSectionFourfolder)</visible>
 		</control>
 		<control type="multiimage">
 			<include>Background_VirtualImageFolder</include>
 			<info>Skin.String(CustomSectionFivefolder)</info>
 			<visible>[Container(301).HasFocus(17) + Control.IsVisible(301)] | [Container(300).HasFocus(17) + Control.IsVisible(300)]</visible>
-			<visible>Skin.String(CustomSectionOnefolder)</visible>
+			<visible>Skin.String(CustomSectionFivefolder)</visible>
 		</control>
 		<control type="multiimage">
 			<include>Background_VirtualImageFolder</include>
 			<info>Skin.String(CustomSectionSixfolder)</info>
 			<visible>[Container(301).HasFocus(18) + Control.IsVisible(301)] | [Container(300).HasFocus(18) + Control.IsVisible(300)]</visible>
-			<visible>Skin.String(CustomSectionOnefolder)</visible>
+			<visible>Skin.String(CustomSectionSixfolder)</visible>
+		</control>
+		<control type="multiimage">
+			<include>Background_VirtualImageFolder</include>
+			<info>Skin.String(CustomSectionSevenfolder)</info>
+			<visible>[Container(301).HasFocus(30) + Control.IsVisible(301)] | [Container(300).HasFocus(30) + Control.IsVisible(300)]</visible>
+			<visible>Skin.String(CustomSectionSevenfolder)</visible>
+		</control>
+		<control type="multiimage">
+			<include>Background_VirtualImageFolder</include>
+			<info>Skin.String(CustomSectionEightfolder)</info>
+			<visible>[Container(301).HasFocus(31) + Control.IsVisible(301)] | [Container(300).HasFocus(31) + Control.IsVisible(300)]</visible>
+			<visible>Skin.String(CustomSectionEightfolder)</visible>
+		</control>
+		<control type="multiimage">
+			<include>Background_VirtualImageFolder</include>
+			<info>Skin.String(CustomSectionNinefolder)</info>
+			<visible>[Container(301).HasFocus(32) + Control.IsVisible(301)] | [Container(300).HasFocus(32) + Control.IsVisible(300)]</visible>
+			<visible>Skin.String(CustomSectionNinefolder)</visible>
+		</control>
+		<control type="multiimage">
+			<include>Background_VirtualImageFolder</include>
+			<info>Skin.String(CustomSectionTenfolder)</info>
+			<visible>[Container(301).HasFocus(33) + Control.IsVisible(301)] | [Container(300).HasFocus(33) + Control.IsVisible(300)]</visible>
+			<visible>Skin.String(CustomSectionTenfolder)</visible>
+		</control>
+		<control type="multiimage">
+			<include>Background_VirtualImageFolder</include>
+			<info>Skin.String(CustomSectionElevenfolder)</info>
+			<visible>[Container(301).HasFocus(34) + Control.IsVisible(301)] | [Container(300).HasFocus(34) + Control.IsVisible(300)]</visible>
+			<visible>Skin.String(CustomSectionElevenfolder)</visible>
+		</control>
+		<control type="multiimage">
+			<include>Background_VirtualImageFolder</include>
+			<info>Skin.String(CustomSectionTwelvefolder)</info>
+			<visible>[Container(301).HasFocus(35) + Control.IsVisible(301)] | [Container(300).HasFocus(35) + Control.IsVisible(300)]</visible>
+			<visible>Skin.String(CustomSectionTwelvefolder)</visible>
 		</control>
 		
 		<control type="multiimage">

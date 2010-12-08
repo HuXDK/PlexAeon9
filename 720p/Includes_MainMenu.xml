@@ -318,50 +318,6 @@
 					<onclick>SetFocus(92)</onclick>
 					<visible>!Skin.HasSetting(programs)</visible>
 				</item>
-
-				<item id="7">
-					<description>Section 1</description>
-					<label>SECTION 1</label>
-					<include>BackgroundVarsSectionOne</include>
-					<onclick>Skin.SetString(custom,CustomSectionOnefolder)</onclick>
-					<onclick>SetFocus(92)</onclick>
-				</item>
-				
-				<item id="14">
-					<description>Section 2</description>
-					<label>SECTION 2</label>
-					<include>BackgroundVarsTV</include>
-					<onclick>Skin.SetString(custom,CustomSectionTwofolder)</onclick>
-					<onclick>SetFocus(92)</onclick>
-				</item>
-				<item id="15">
-					<description>Section 3</description>
-					<label>SECTION 3</label>
-					<include>BackgroundVarsTV</include>
-					<onclick>Skin.SetString(custom,CustomSectionThreefolder)</onclick>
-					<onclick>SetFocus(92)</onclick>
-				</item>
-				<item id="16">
-					<description>Section 4</description>
-					<label>SECTION 4</label>
-					<include>BackgroundVarsTV</include>
-					<onclick>Skin.SetString(custom,CustomSectionFourfolder)</onclick>
-					<onclick>SetFocus(92)</onclick>
-				</item>
-				<item id="17">
-					<description>Section 5</description>
-					<label>SECTION 5</label>
-					<include>BackgroundVarsTV</include>
-					<onclick>Skin.SetString(custom,CustomSectionFivefolder)</onclick>
-					<onclick>SetFocus(92)</onclick>
-				</item>
-				<item id="17">
-					<description>Section 6</description>
-					<label>SECTION 6</label>
-					<include>BackgroundVarsTV</include>
-					<onclick>Skin.SetString(custom,CustomSectionSixfolder)</onclick>
-					<onclick>SetFocus(92)</onclick>
-				</item>
 				<item id="8">
 					<label>31015</label>
 					<include>BackgroundVarsVideo</include>
@@ -429,6 +385,92 @@
 					<onclick>SetFocus(92)</onclick>
 					<width min="95" max="95">auto</width>
 					<visible>!Skin.HasSetting(noshutdown)</visible>
+				</item>
+
+				<item id="7">
+					<description>Section 1</description>
+					<label>SECTION 1</label>
+					<include>BackgroundVarsSectionOne</include>
+					<onclick>Skin.SetString(custom,CustomSectionOnefolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				
+				<item id="14">
+					<description>Section 2</description>
+					<label>SECTION 2</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionTwofolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="15">
+					<description>Section 3</description>
+					<label>SECTION 3</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionThreefolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="16">
+					<description>Section 4</description>
+					<label>SECTION 4</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionFourfolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="17">
+					<description>Section 5</description>
+					<label>SECTION 5</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionFivefolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="18">
+					<description>Section 6</description>
+					<label>SECTION 6</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionSixfolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="30">
+					<description>Section 7</description>
+					<label>SECTION 7</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionSevenfolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="31">
+					<description>Section 8</description>
+					<label>SECTION 8</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionEightfolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="32">
+					<description>Section 9</description>
+					<label>SECTION 9</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionNinefolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="33">
+					<description>Section 10</description>
+					<label>SECTION 10</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionTenfolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="34">
+					<description>Section 11</description>
+					<label>SECTION 11</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionElevenfolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+				</item>
+				<item id="35">
+					<description>Section 12</description>
+					<label>SECTION 12</label>
+					<include>BackgroundVarsTV</include>
+					<onclick>Skin.SetString(custom,CustomSectionTwelvefolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
 				</item>
 			</content>
 		</control>
