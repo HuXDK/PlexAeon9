@@ -37,15 +37,15 @@
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture>wall/wall_background.png</texture>
-			<visible>Control.IsVisible(53) + ![Skin.HasSetting(smallmoviewall) + Window.IsActive(myvideofiles)]</visible>
+			<visible>Control.IsVisible(53) + ![Skin.HasSetting(smallmoviewall) + Window.IsActive(24)]</visible>
 			<include>Animation_WindowFade200</include>
 			<animation effect="fade" start="100" end="70" time="400" condition="Skin.HasSetting(transparentwall)">Conditional</animation>
 		</control>
 
 		<control type="image">
 			<include>FullscreenDimensions</include>
-			<texture>wall/wall_background_small.png</texture>
-			<visible>Control.IsVisible(53) + Skin.HasSetting(smallmoviewall) + Window.IsActive(myvideofiles)</visible>
+			<texture>wall/wall_background.png</texture>
+			<visible>Control.IsVisible(53) + Skin.HasSetting(smallmoviewall) + Window.IsActive(24)</visible>
 			<include>Animation_WindowFade200</include>
 			<animation effect="fade" start="100" end="70" time="400" condition="Skin.HasSetting(transparentwall)">Conditional</animation>
 		</control>		
@@ -154,7 +154,7 @@
 	<control type="group">
 		<visible>Control.IsVisible(53)</visible>
 		<include>Furniture_WallBackground</include>
-		<control type="image">
+		<control type="largeimage">
 			<posx>-10</posx>
 			<posy>51</posy>
 			<width>1300</width>
@@ -165,7 +165,7 @@
 			<animation effect="fade" start="100" end="0" time="125" condition="Container(53).Row(0) + !ControlGroup(7000).HasFocus()">Conditional</animation>
 			<animation effect="slide" start="18" end="18" time="0" condition="Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>
 		</control>
-		<control type="image">
+		<control type="largeimage">
 			<posx>-10</posx>
 			<posy>645</posy>
 			<width>1300</width>
@@ -176,9 +176,7 @@
 			<animation effect="fade" start="100" end="0" time="125" condition="[[Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)] + Container(53).Row(3)] + !ControlGroup(7000).HasFocus()">Conditional</animation>
 			<animation effect="slide" start="0" end="0" time="0" condition="Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>
 		</control>
-
-
-		<control type="image">
+		<control type="largeimage">
 			<posx>57</posx>
 			<posy>98</posy>
 			<width>20</width>
@@ -189,8 +187,7 @@
 			<animation effect="fade" start="100" end="0" time="400" condition="Container(53).Column(0) + !ControlGroup(7000).HasFocus()">Conditional</animation>			
 			<animation effect="slide" start="18" end="18" time="0" condition="Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>				
 		</control>
-		
-		<control type="image">
+		<control type="largeimage">
 			<posx>1203</posx>
 			<posy>98</posy>
 			<width>20</width>
@@ -231,17 +228,7 @@
 					<info>ListItem.Icon</info>
 					<animation effect="zoom" center="62,90" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
 				</control>
-
-				<control type="image">
-					<include>WallIconMovieDimensions</include>
-					<bordertexture border="-3">wall/wall_movie_nfborder.png</bordertexture>
-					<texture>wall/wall_movie_nfoverlay.png</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="fade" start="100" end="0" time="200" reversible="false" />
-						<effect type="zoom" center="62,90" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false" />
-					</animation>
-				</control>
-				
+		
 				<control type="image">
 					<include>WallIconMovieDimensions</include>
 					<bordertexture border="-12">wall/wall_movie_fborder.png</bordertexture>
@@ -274,17 +261,6 @@
 					<info>ListItem.Icon</info>
 					<animation effect="zoom" center="44,71" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
 				</control>
-
-				<control type="image">
-					<include>WallIconMovieDimensionsSmall</include>
-					<bordertexture border="-5">wall/wall_movie_nfborder.png</bordertexture>
-					<texture>wall/wall_movie_nfoverlay.png</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="fade" start="100" end="0" time="200" reversible="false" />
-						<effect type="zoom" center="44,71" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false" />
-					</animation>
-				</control>
-				
 				<control type="image">
 					<include>WallIconMovieDimensionsSmall</include>
 					<bordertexture border="-9">wall/wall_movie_fborder.png</bordertexture>
@@ -301,8 +277,6 @@
 			<posx>115</posx>
 			<posy>655</posy>
 			<visible>Control.IsVisible(53)</visible>
-			<include condition="[[Window.IsActive(24) | Window.IsActive(1)] + !Skin.HasSetting(smallmoviewall)] | [[Window.IsActive(2) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + !Skin.HasSetting(smallmusicwall)]">Conditions_WallLeftBig</include>			
-			<include condition="[[Window.IsActive(24) | Window.IsActive(1)] + Skin.HasSetting(smallmoviewall)] | [[Window.IsActive(2) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(smallmusicwall)]">Conditions_WallLeftSmall</include>			
 			<animation effect="slide" start="-25,0" end="-25,0" time="0" condition="Window.IsActive(24) + !Container.Content(episodes)">Conditional</animation>	
 			<animation effect="slide" start="0,12" end="0,12" time="0" condition="Skin.HasSetting(smallmoviewall) + [Window.IsActive(1) | Window.IsActive(24)] + !Container.Content(episodes)">Conditional</animation>			
 			<control type="label">
@@ -318,7 +292,7 @@
 				<label>$INFO[ListItem.Label2]</label>
 				<include>Colour_DarkGrey</include>
 				<include>WallLabelVars</include>
-				<visible>![Window.IsActive(2) | Window.IsActive(24) | Window.IsActive(myvideofiles)]</visible>				
+				<visible>![Window.IsActive(2) | Window.IsActive(24)]</visible>				
 			</control>
 			
 			<control type="label" id="72">
@@ -334,10 +308,10 @@
 				<label>$INFO[ListItem.Year]</label>
 				<include>Colour_DarkGrey</include>
 				<include>WallLabelVars</include>
-				<visible>Window.IsActive(24) | Window.IsActive(myvideofiles)</visible>				
+				<visible>Window.IsActive(24)</visible>				
 			</control>			
 		</control>
-		
+<!--		
 		<control type="group">
 			<posx>1165</posx>
 			<posy>655</posy>
@@ -382,6 +356,7 @@
 				<visible>Window.IsActive(24) | Window.IsActive(myvideofiles)</visible>				
 			</control>				
 		</control>
+-->
 		<include>Furniture_WallMediaFlags</include>		
 
 	</control>		
