@@ -110,7 +110,7 @@
 					<label>31011</label>
 					<include>BackgroundVarsGames</include>
 		            <onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
-					<visible>!Skin.HasSetting(SectionsMenu)</visible>
+					<visible>!Skin.HasSetting(SectionsMenu) + !Skin.HasSetting(NoPlexOnline)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
 				<item id="22">
@@ -552,16 +552,16 @@
 				<item id="2">
 					<label>31011</label>
 					<include>BackgroundVarsGames</include>
-					<onclick>Skin.SetBool(nogames)</onclick>
+					<onclick>Skin.SetBool(NoPlexOnline)</onclick>
 					<width min="95" max="95">auto</width>
-					<visible>!Skin.HasSetting(nogames)</visible>
+					<visible>!Skin.HasSetting(NoPlexOnline)</visible>
 				</item>
 				<item id="2">
 					<label2>31011</label2>
 					<include>BackgroundVarsGames</include>
-					<onclick>Skin.Reset(nogames)</onclick>
+					<onclick>Skin.Reset(NoPlexOnline)</onclick>
 					<width min="95" max="95">auto</width>
-					<visible>Skin.HasSetting(nogames)</visible>
+					<visible>Skin.HasSetting(NoPlexOnline)</visible>
 				</item>
 				<item id="5">
 					<label>31012</label>

@@ -22,7 +22,7 @@
 		<onclick>Skin.Reset(tutorials)</onclick>
 		<onclick>Skin.Reset(visualisation)</onclick>
 		<onclick>Skin.Reset(nomusic)</onclick>
-		<onclick>Skin.Reset(nogames)</onclick>
+		<onclick>Skin.Reset(NoPlexOnline)</onclick>
 		<onclick>Skin.Reset(arcade)</onclick>
 		<onclick>Skin.Reset(apps)</onclick>
 		<onclick>Skin.Reset(nomovies)</onclick>
