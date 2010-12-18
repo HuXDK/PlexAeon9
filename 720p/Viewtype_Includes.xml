@@ -2962,7 +2962,9 @@
 			<onclick>SetFocus(57)</onclick>
 			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(57) + Skin.HasSetting(showcasetvinfoon)</visible>
 		</control>
+-->
 	</include>
+
 	<include name="MediaMenuButton_ShowcaseStyle">
 		<control type="button" id="700068">
 			<include>MediaMenuButton</include>
