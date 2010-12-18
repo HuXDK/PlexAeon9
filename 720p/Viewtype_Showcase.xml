@@ -67,6 +67,7 @@
 			<height>381</height>
 			<visible>Control.IsVisible(57) + !Skin.HasSetting(ShowcaseInfoOff)</visible>
 			<animation effect="fade" end="0" time="400">WindowClose</animation>
+			<include condition="Skin.HasSetting(ShowcaseInfoDelay)">MediaInfoDelay</include>
 			<control type="image">
 				<posx>75</posx>
 				<width>1130</width>
@@ -93,6 +94,7 @@
 		<control type="group">
 			<include>MediaListSelectDelay</include>
 			<include>MediaViewFade</include>
+			<include condition="Skin.HasSetting(ShowcaseInfoDelay)">MediaInfoDelay</include>
 			<posx>0</posx>
 			<posy>26</posy>
 			<width>1280</width>

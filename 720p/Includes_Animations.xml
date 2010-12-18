@@ -26,6 +26,9 @@
 		<include>MediaViewTransition</include>
 		<include>MediaFade</include>
 	</include>
+	<include name="MediaInfoDelay">
+		<animation effect="fade" start="0" end="100" time="400" delay="4000" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+	</include>
 	<include name="MediaListSelectDelay">
 		<visible>!Container.OnNext + !Container.OnPrevious</visible>
 		<animation effect="fade" start="0" end="100" time="300" delay="200">Visible</animation>

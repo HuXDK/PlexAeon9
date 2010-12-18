@@ -2894,9 +2894,18 @@
 			<label>$LOCALIZE[31070]</label>
 			<onclick>Skin.ToggleSetting(showcaseinfooff)</onclick>
 			<selected>!Skin.HasSetting(showcaseinfooff)</selected>
+			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Control.IsVisible(57)</visible>
 		</control>
 
+		<control type="radiobutton" id="700061">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[303] $LOCALIZE[31070]</label>
+			<onclick>Skin.ToggleSetting(ShowcaseInfoDelay)</onclick>
+			<selected>Skin.HasSetting(ShowcaseInfoDelay)</selected>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Control.IsVisible(57) + !Skin.HasSetting(showcaseinfooff)</visible>
+		</control>
 <!--
 		<control type="button" id="700060">
 			<include>MediaMenuButton</include>
