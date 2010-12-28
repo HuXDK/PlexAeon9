@@ -47,5 +47,6 @@
 		<include>Furniture_DarkGradient</include>
 		<!--<include>Background_ContextBlack</include>-->
 		<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
+		<include>CerberosSmoke</include>
 	</controls>
 </window>

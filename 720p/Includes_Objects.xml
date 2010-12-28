@@ -641,8 +641,8 @@
 
 	<!-- OSD -->
 	<include name="Objects_OSDButtonGroup12">
-		<width>956</width>
-		<posx>171</posx>
+		<width>976</width>
+		<posx>191</posx>
 	</include>
 
 

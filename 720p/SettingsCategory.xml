@@ -155,6 +155,7 @@
 			<include>Animations_SettingsButtonFade</include>
 			<onright>SetFocus(1)</onright>
 		</control>
+		<include>CerberosSmoke</include>
  
 		<!--<include>Background_ContextBlack</include>-->
 	</controls>

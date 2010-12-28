@@ -2,16 +2,10 @@
 	<!-- Common -->
 	<include name="CerberosSmoke">
 	  	<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 			<imagepath>cerberus</imagepath>
-			<timeperimage>0</timeperimage>
-			<fadetime>0</fadetime>
-			<loop>yes</loop>
-			<randomize>false</randomize>
-			<visible>!Skin.HasSetting(NOCerberos)</visible>
+      		<visible>Skin.HasSetting(CerberosSmoke)</visible>
 		</control>
 	</include>
 	<include name="MediaViewTransition">

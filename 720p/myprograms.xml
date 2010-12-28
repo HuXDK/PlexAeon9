@@ -34,6 +34,7 @@
 -->
 		<include>NewMediaMenu</include>
 		<include>Furniture_DarkGradient</include>
+		<include>CerberosSmoke</include>
 		<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
 	</controls>
 </window>

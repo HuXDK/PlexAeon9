@@ -507,7 +507,8 @@
       </control>
     -->
       <include>MusicNowPlayingIndicators</include>
-    </control>
+ 	  <include>CerberosSmoke</include>
+   </control>
 
 
 

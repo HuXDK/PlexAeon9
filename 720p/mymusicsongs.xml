@@ -51,6 +51,7 @@
 			<include>NewMediaMenu</include>
 			<include>ScrollOffsetLabel</include>
 			<include>Furniture_DarkGradient</include>
+			<include>CerberosSmoke</include>
 		<!--<include>Background_ContextBlack</include>--><include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
 	</controls>
 </window>

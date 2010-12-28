@@ -1,5 +1,6 @@
 <window type="dialog" id="400">
 	<defaultcontrol>13</defaultcontrol>
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
 	<controls>
 		<control type="group">
  			<visible>Player.HasAudio + !Window.IsActive(2901)</visible>
@@ -27,6 +28,7 @@
 				<onup>-</onup>
 				<ondown>-</ondown>
 				<orientation>horizontal</orientation>
+				<visible allowhiddenfocus="true">Controlgroup(213).HasFocus + !Window.IsVisible(125)</visible>
 				<control type="button" id="9">
 					<include>Objects_OSDButton</include>
 					<onclick>XBMC.ActivateWindow(500)</onclick>

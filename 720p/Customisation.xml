@@ -98,9 +98,9 @@
 <!--
 			<control type="radiobutton" id="408">
 				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>32019</label>
-				<onclick>Skin.ToggleSetting(novertikalmenu)</onclick>
-				<selected>!Skin.HasSetting(novertikalmenu)</selected>
+				<label>Cerberos Smoke</label>
+				<onclick>Skin.ToggleSetting(CerberosSmoke)</onclick>
+				<selected>Skin.HasSetting(CerberosSmoke)</selected>
 			</control>
 -->
 			<control type="radiobutton" id="409">
@@ -503,8 +503,9 @@
 				<selected>!Skin.HasSetting(CoverflowOff)</selected>
 			</control>
 		</control>
-			<include>Viewtype_Select</include>
+		<include>Viewtype_Select</include>
 		<include>Furniture_SettingsFrontPanel</include>
+		<include>CerberosSmoke</include>
 		<!--<include>Background_ContextBlack</include>--><include>Furniture_Debug</include>
 	</controls>
 </window>

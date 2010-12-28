@@ -67,6 +67,7 @@
 		<include>Furniture_Time</include>
 		<include>Furniture_HomeRSS</include>
 		<include>Submenu</include>
+		<include>CerberosSmoke</include>
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
