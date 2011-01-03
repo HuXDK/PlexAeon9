@@ -2541,7 +2541,7 @@
 			<include>MediaMenuButton</include>
 			<onclick>Skin.ToggleSetting(nomediaflags)</onclick>
 			<selected>!Skin.HasSetting(nomediaflags)</selected>
-			<visible>!Skin.HasSetting(nomediaflagsbutton)</visible>
+			<visible>!Skin.HasSetting(nomediaflagsbutton) + !Container.Content(Secondary)</visible>
 		</control>
 	</include>
 	<include name="MediaMenuButton_DVDCases">
@@ -2610,7 +2610,23 @@
 			<selected>!Skin.HasSetting(curtains)</selected>
 			<usealttexture>Skin.HasSetting(curtains)</usealttexture>
 			<onclick>Skin.ToggleSetting(curtains)</onclick>
-			<visible>true</visible>
+			<visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)] + !Container.Content(Secondary)</visible>
+		</control>
+		<control type="radiobutton" id="700027">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31067]</label>
+			<selected>!Skin.HasSetting(NoMovieFanart)</selected>
+			<usealttexture>Skin.HasSetting(NoMovieFanart)</usealttexture>
+			<onclick>Skin.ToggleSetting(NoMovieFanart)</onclick>
+			<visible>Container.Content(Movies)</visible>
+		</control>
+		<control type="radiobutton" id="700026">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31067]</label>
+			<selected>!Skin.HasSetting(NoTVFanart)</selected>
+			<usealttexture>Skin.HasSetting(NoTVFanart)</usealttexture>
+			<onclick>Skin.ToggleSetting(NoTVFanart)</onclick>
+			<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)</visible>
 		</control>
 	</include>
 	<include name="MediaMenuButton_DimFanart">

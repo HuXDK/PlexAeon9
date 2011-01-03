@@ -299,7 +299,7 @@
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" start="40" end="40" condition="true">Conditional</animation>
 			<include>Animation_BackgroundFade</include>
-			<visible>[Skin.HasSetting(curtains) | IsEmpty(listitem.property(fanart_image))] + !Skin.String(CustomCurtainsbg)</visible>
+			<visible>[Container.Content(Movies) + Skin.HasSetting(NoMovieFanart)] | [[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)] + Skin.HasSetting(NoTVFanart)] | [![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)] + Skin.HasSetting(curtains)]] + !Container.Content(Secondary) + !Skin.String(CustomCurtainsbg)</visible>
 		</control>
 
 		<control type="image">
@@ -307,7 +307,7 @@
 			<info>Skin.String(CustomCurtainsbg)</info>
 			<animation effect="fade" start="40" end="40" condition="true">Conditional</animation>
 			<include>Animation_BackgroundFade</include>
-			<visible>[Skin.HasSetting(curtains) | IsEmpty(listitem.property(fanart_image))] + Skin.String(CustomCurtainsbg)</visible>
+			<visible>[Container.Content(Movies) + Skin.HasSetting(NoMovieFanart)] | [[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)] + Skin.HasSetting(NoTVFanart)] | [![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)] + Skin.HasSetting(curtains)]] + !Container.Content(Secondary) + Skin.String(CustomCurtainsbg)</visible>
 		</control>
 	</include>
 
