@@ -362,6 +362,7 @@
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<visible>Control.HasFocus(10) | ControlGroup(14).HasFocus</visible>
+<!--
 			<control type="radiobutton" id="800">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31288</label>
@@ -375,14 +376,14 @@
 				<onclick>Skin.ToggleSetting(nomenutvsearch)</onclick>
 				<selected>!Skin.HasSetting(nomenutvsearch)</selected>
 			</control>
-
+-->
 			<control type="radiobutton" id="802">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31290</label>
 				<onclick>Skin.ToggleSetting(nomenusettings)</onclick>
 				<selected>!Skin.HasSetting(nomenusettings)</selected>
 			</control>
-
+<!--
 			<control type="radiobutton" id="803">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31291</label>
@@ -396,21 +397,21 @@
 				<onclick>Skin.ToggleSetting(nomenutvwatched)</onclick>
 				<selected>!Skin.HasSetting(nomenutvwatched)</selected>
 			</control>
-<!--
+
 			<control type="radiobutton" id="805">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31293</label>
 				<onclick>Skin.ToggleSetting(nomenufiles)</onclick>
 				<selected>!Skin.HasSetting(nomenufiles)</selected>
 			</control>
--->
+
 			<control type="radiobutton" id="806">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31296</label>
 				<onclick>Skin.ToggleSetting(nolightnightbuttons)</onclick>
 				<selected>!Skin.HasSetting(nolightnightbuttons)</selected>
 			</control>
-
+-->
 			<control type="radiobutton" id="807">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31251</label>
