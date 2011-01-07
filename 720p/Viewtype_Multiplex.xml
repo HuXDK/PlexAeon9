@@ -218,7 +218,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[ListItem.RatingandVotes]</label>
+						<label fallback="31425">$INFO[ListItem.Rating]</label>
 						<visible>Skin.HasSetting(movieratingtext)</visible>
 					</control>
 					  <control type="image">

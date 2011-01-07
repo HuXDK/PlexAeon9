@@ -408,6 +408,15 @@
         <colordiffuse>FFFFFF00</colordiffuse>
 		<aspectratio>keep</aspectratio>
 	    <visible>!IsEmpty(ListItem.Rating)</visible>
+		<visible>!Skin.HasSetting(movieratingtext)</visible>
+	</control>
+	<control type="label">
+		<posx>70</posx>
+		<posy>116</posy>
+		<label fallback="31425">IMDB: $INFO[ListItem.Rating]</label>
+		<font>Font_MediaWindowTitleMenu</font>
+	    <visible>!IsEmpty(ListItem.Rating)</visible>
+		<visible>Skin.HasSetting(movieratingtext)</visible>
 	</control>
 
 	<include>Furniture_ListMediaFlags</include>

@@ -1669,7 +1669,17 @@
                 <info>ListItem.StarRating</info>
                 <colordiffuse>FFffff00</colordiffuse>
 				<visible>Window.IsActive(myvideofiles)</visible>
-          	</control>
+				<visible>!Skin.HasSetting(movieratingtext)</visible>
+			</control>
+			<control type="label">
+         	    <posx>235</posx>
+                <posy>125</posy>
+                <width>100</width>
+				<label fallback="31425">IMDB: [COLOR FFFFFFFF]$INFO[ListItem.Rating][/COLOR]</label>
+				<include>LowList_DetailInfoLabelPos4L</include>
+			    <visible>!IsEmpty(ListItem.Rating)</visible>
+				<visible>Skin.HasSetting(movieratingtext)</visible>
+			</control>
 
 		</control>
 

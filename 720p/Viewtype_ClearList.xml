@@ -392,6 +392,15 @@
  						<aspectratio>keep</aspectratio>
                         <info>ListItem.StarRating</info>
                         <colordiffuse>FFFFFF00</colordiffuse>
+						<visible>!Skin.HasSetting(movieratingtext)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>20</posy>
+						<width>140</width>
+                        <height>25</height>
+						<label fallback="31425">$INFO[ListItem.Rating]</label>
+						<visible>Skin.HasSetting(movieratingtext)</visible>
 					</control>
 				<control type="group">
 					<posy>50</posy>
@@ -893,8 +902,17 @@
 						<height>28</height>
 						<info>ListItem.StarRating</info>
 						<colordiffuse>dcbdbdbd</colordiffuse>
+						<visible>!Skin.HasSetting(movieratingtext)</visible>
 					</control>
-					<!--<control type="label"><include>Music_MultiplexInfoValue</include>				<label fallback="31425">$INFO[Container(51).ListItem.Rating]</label></control>--></control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>15</posy>
+						<width>130</width>
+						<height>28</height>
+						<label fallback="31425">$INFO[ListItem.Rating]</label>
+						<visible>Skin.HasSetting(movieratingtext)</visible>
+					</control>
+				</control>
 			</control>
 			<control type="textbox">
 				<visible>!IsEmpty(ListItem.Property(description))</visible>

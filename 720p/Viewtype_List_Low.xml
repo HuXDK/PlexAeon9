@@ -728,7 +728,7 @@
 						<height>13</height>
 						<info>ListItem.StarRating</info>
 						<colordiffuse>dcbdbdbd</colordiffuse>
-						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres))] + !Skin.HasSetting(movieratingtext)</visible>
+						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres)] + !Skin.HasSetting(movieratingtext)</visible>
 					</control>
 
 					<control type="label">
@@ -738,7 +738,7 @@
 						<info>ListItem.Rating</info>
 						<include>lowlistcolornofocus</include>
 						<include>ListLabel_Detail_LowFull_Low</include>
-						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres))] + Skin.HasSetting(movieratingtext)</visible>
+						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres)] + Skin.HasSetting(movieratingtext)</visible>
 					</control>
 
 					<include>ListLabel_Detail_LowAlbumCover_Low</include>
@@ -890,7 +890,7 @@
 						<info>ListItem.Rating</info>
 						<include>lowlistcolorfocus</include>
 						<include>ListLabel_Detail_LowFull_Low</include>
-						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres))] + Skin.HasSetting(movieratingtext)</visible>
+						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres)] + Skin.HasSetting(movieratingtext)</visible>
 					</control>
 
 					<include>ListLabel_Detail_LowAlbumCover_Low</include>

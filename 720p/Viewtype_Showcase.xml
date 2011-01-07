@@ -222,7 +222,8 @@
 					<control type="label">
 						<include>ShowcaseInfoValue</include>
 						<visible>Skin.HasSetting(movieratingtext)</visible>
-						<label fallback="31425">$INFO[ListItem.RatingAndVotes]</label>
+						<label fallback="31425">$INFO[ListItem.Rating]</label>
+						<visible>Skin.HasSetting(movieratingtext)</visible>
 					</control>
 					<control type="image">
 	            	    <description>IMDB Star Rating</description>
@@ -269,7 +270,8 @@
 					<control type="label">
 						<include>ShowcaseInfoValueBigThumb</include>
 						<visible>Skin.HasSetting(movieratingtext)</visible>
-						<label fallback="31425">$INFO[ListItem.RatingAndVotes]</label>
+						<label fallback="31425">$INFO[ListItem.Rating]</label>
+						<visible>Skin.HasSetting(movieratingtext)</visible>
 					</control>
 					<control type="image">
 	            	    <description>IMDB Star Rating</description>

@@ -2678,14 +2678,17 @@
 			<visible>[Container.Content(movies) + !Skin.HasSetting(nomenumoviewatched)] | [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(nomenutvwatched)]</visible>
 		</control>
 	</include>
-
-	<include name="MediaMenuButton_Search">
-		<control type="button" id="8">
-			<label>137</label>
+-->
+	<include name="MediaMenuButton_movieratingtext">
+		<control type="radiobutton" id="700049">
 			<include>MediaMenuButton</include>
-			<visible>[Container.Content(movies) + !Skin.HasSetting(nomenumoviesearch)] | [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(nomenutvsearch)]</visible>
+			<label>IMDB Text Rating</label>
+			<onclick>Skin.ToggleSetting(movieratingtext)</onclick>
+			<selected>Skin.HasSetting(movieratingtext)</selected>
+			<visible>Container.Content(movies)</visible>
 		</control>
 	</include>
+<!--
 	<include name="MediaMenuButton_Filter">
 		<control type="button" id="19">
 			<label>587</label>
@@ -3442,8 +3445,9 @@
 				<include>MediaMenuButton_Curtains</include>
 		<!--	<include>MediaMenuButton_Watched</include>
 				<include>MediaMenuButton_Sort</include> 
-				<include>MediaMenuButton_Filter</include>
-				<include>MediaMenuButton_Search</include>
+				<include>MediaMenuButton_Filter</include>  -->
+				<include>MediaMenuButton_movieratingtext</include>
+		<!--
 				<include>MediaMenuButton_Files</include> 
 				<include>MediaMenuButton_Setup</include> -->
 				<include>MediaMenuButton_MediaDebug</include>
@@ -3711,7 +3715,7 @@
 						<textcolor>FFFFFAA6</textcolor>
 						<label>IMDB RATING:</label>
 					</control>
-<!--					
+					
 					<control type="label">
 						<posx>0</posx>	
 						<posy>17</posy>
@@ -3719,9 +3723,10 @@
 						<height>13</height>
 						<font>cast</font>
 						<textcolor>FFFFFFFF</textcolor>							
-						<label>$INFO[ListItem.RatingAndVotes]</label>
+						<label>$INFO[ListItem.Rating]</label>
+						<visible>Skin.HasSetting(movieratingtext)</visible>
 					</control>
--->							
+						
 					  <control type="image">
                         <description>IMDB rating</description>
                         <posx></posx>
@@ -3731,6 +3736,7 @@
                         <info>ListItem.StarRating</info>
                         <colordiffuse>FFFFFF00</colordiffuse>
                          <include>Animation_CommonFade</include>
+						<visible>!Skin.HasSetting(movieratingtext)</visible>
                 	</control>
 					<include>Furniture_Anoobie3MediaFlags</include>
 				</control>
