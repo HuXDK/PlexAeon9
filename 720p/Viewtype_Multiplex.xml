@@ -774,7 +774,7 @@
  
 					<control type="label">
 						<include>MultiplexInfoValue</include>
-						<label fallback="31425">$INFO[ListItem.Epidsode]</label>
+						<label fallback="31425">$INFO[ListItem.Episode]</label>
 					</control>
  
 				</control>
