@@ -146,7 +146,7 @@
 		<control type="image" id="92">
 			<include>Furniture_MovieInfoFlagSound</include>
 			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
-				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
+			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 		</control>
 		<control type="image" id="94">
 			<include>Furniture_MovieInfoFlagRes</include>
@@ -2261,8 +2261,17 @@
 -->
 	</include>
 	<include name="MediaMenuButton_WallInfo">
+
 		<control type="radiobutton" id="700025">
-				<!-- NEW WALL TOGGLE-->
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[31070]</label>
+			<onclick>Skin.ToggleSetting(wallinfoon)</onclick>
+			<selected>Skin.HasSetting(wallinfoon)</selected>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Control.IsVisible(53)</visible>
+		</control>
+<!--
+		<control type="radiobutton" id="700025">
 			<include>MediaMenuButton</include>
 				<label>32011</label>
 				<onclick>Skin.ToggleSetting(newwall)</onclick>
@@ -2293,6 +2302,7 @@
 			<onclick>SetFocus(53)</onclick>
 			<visible>Container.Content(movies) + Control.IsVisible(53) + Skin.HasSetting(wallinfooff)</visible>
 		</control>
+-->
 	</include>
 	<include name="MediaMenuButton_MultiplexStyle">
 		<control type="button" id="700014">
@@ -3426,7 +3436,6 @@
 				<include>MediaMenuButton_OldMultiplexInfo</include>
 		<!--	<include>MediaMenuButton_multiwallInfo</include>  -->
 				<include>MediaMenuButton_ShowcaseInfo</include> 
-		<!--	<include>MediaMenuButton_WallInfo</include>  -->
 				<include>MediaMenuButton_FlattenFlow</include>
 				<include>MediaMenuButton_Stripshow</include>
 		<!--	<include>MediaMenuButton_StackButton</include> -->
@@ -3438,6 +3447,7 @@
 				<include>MediaMenuButton_PanelDensity</include>
 				<include>MediaMenuButton_PanelDark</include>
 				<include>MediaMenuButton_DVDCases</include>
+				<include>MediaMenuButton_WallInfo</include> 
 				<include>MediaMenuButton_Overlay</include>
 				<include>MediaMenuButton_Flags</include>
 		<!--	<include>MediaMenuButton_Fanart</include>  -->

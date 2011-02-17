@@ -215,9 +215,13 @@
 				</control>
 
 				<control type="image">
-					<include>WallIconMovieDimensions</include>
-					<bordertexture border="-5">wall/wall_movie_nfborder.png</bordertexture>
-					<texture>wall/wall_nfoverlay.png</texture>
+					<posx>92</posx>
+					<posy>4</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>OverlayUnwatched.png</texture>
+					<info>ListItem.Overlay</info>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 				</control>				
 			</itemlayout>
 			<focusedlayout width="123" height="179" condition="!Skin.HasSetting(smallmoviewall)">
@@ -230,9 +234,13 @@
 				</control>
 		
 				<control type="image">
-					<include>WallIconMovieDimensions</include>
-					<bordertexture border="-12">wall/wall_movie_fborder.png</bordertexture>
-					<texture>common/blank.png</texture>
+					<posx>92</posx>
+					<posy>4</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>OverlayUnwatched.png</texture>
+					<info>ListItem.Overlay</info>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 					<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="100" time="400" reversible="false" />
 						<effect type="zoom" center="62,90" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false" />
@@ -250,7 +258,7 @@
 				<control type="image">
 					<include>WallIconMovieDimensionsSmall</include>
 					<bordertexture border="-4">wall/wall_movie_nfborder.png</bordertexture>
-					<texture>wall/wall_nfoverlay.png</texture>
+					<texture>OverlayUnwatched.png</texture>
 				</control>				
 			</itemlayout>
 			<focusedlayout width="101" height="146" condition="Skin.HasSetting(smallmoviewall)">
@@ -358,6 +366,8 @@
 		</control>
 -->
 		<include>Furniture_WallMediaFlags</include>		
+		<include condition="!Skin.HasSetting(smallmoviewall) + Skin.HasSetting(wallinfoon)">WallInfoPaneMoviesBig</include>
+		<include condition="Skin.HasSetting(smallmoviewall) + Skin.HasSetting(wallinfoon)">WallInfoPaneMoviesSmall</include>
 
 	</control>		
 	</include>
