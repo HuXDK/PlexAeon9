@@ -959,27 +959,30 @@
 					  <height>240</height>
 					  <control type="image">
 					    <visible>Control.HasFocus(9001)</visible>
-              <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
 					  <control type="image">
 					    <visible>!Control.HasFocus(9001)</visible>
 			 	 		<animation effect="fade" start="0" end="30" time="00" condition="true">Conditional</animation>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
   					<control type="label" id="8001">
 					    <visible>Control.HasFocus(9001)</visible>
   						<include>Search_Label</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[342]</label>
+  						<label>$INFO[Container(9001).NumItems] $LOCALIZE[342]</label>
   					</control>
   					<control type="label" id="8001">
 					    <visible>!Control.HasFocus(9001)</visible>
   						<include>Search_Label_Unfocused</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[342]</label>
+  						<label>$INFO[Container(9001).NumItems] $LOCALIZE[342]</label>
   					</control>
 						<visible allowhiddenfocus="false">true</visible>
   					<control type="image">
+  					  <height>210</height>
   					  <posy>35</posy>
   					  <animation effect="fade" end="100" time="300" delay="0">Visible</animation>
   		    		  <animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
@@ -1079,24 +1082,26 @@
 					  <height>220</height>
 					  <control type="image">
 					    <visible>Control.HasFocus(9002)</visible>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
 					  <control type="image">
 					    <visible>!Control.HasFocus(9002)</visible>
 			 	 		<animation effect="fade" start="0" end="30" time="00" condition="true">Conditional</animation>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
   					<control type="label" id="8002">
 					    <visible>Control.HasFocus(9002)</visible>
   						<include>Search_Label</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[20343]</label>
+  						<label>$INFO[Container(9002).NumItems] $LOCALIZE[20343]</label>
   					</control>
   					<control type="label" id="8002">
 					    <visible>!Control.HasFocus(9002)</visible>
   						<include>Search_Label_Unfocused</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[20343]</label>
+  						<label>$INFO[Container(9002).NumItems] $LOCALIZE[20343]</label>
   					</control>
     				<control type="image">
   					  <posy>35</posy>
@@ -1175,24 +1180,26 @@
 					  <height>180</height>
 					  <control type="image">
 					    <visible>Control.HasFocus(9004)</visible>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
 					  <control type="image">
 					    <visible>!Control.HasFocus(9004)</visible>
 			 	 		<animation effect="fade" start="0" end="30" time="00" condition="true">Conditional</animation>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
   					<control type="label" id="8004">
 					    <visible>Control.HasFocus(9004)</visible>
   						<include>Search_Label</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[20360]</label>
+  						<label>$INFO[Container(9004).NumItems] $LOCALIZE[20360]</label>
   					</control>
   					<control type="label" id="8004">
 					    <visible>!Control.HasFocus(9004)</visible>
   						<include>Search_Label_Unfocused</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[20360]</label>
+  						<label>$INFO[Container(9004).NumItems] $LOCALIZE[20360]</label>
   					</control>
 						<visible allowhiddenfocus="false">true</visible>
   					<control type="image">
@@ -1296,24 +1303,26 @@
 					  <height>220</height>
 					  <control type="image">
 					    <visible>Control.HasFocus(9008)</visible>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
 					  <control type="image">
 					    <visible>!Control.HasFocus(9008)</visible>
 			 	 		<animation effect="fade" start="0" end="30" time="00" condition="true">Conditional</animation>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
   					<control type="label" id="8008">
 					    <visible>Control.HasFocus(9008)</visible>
   						<include>Search_Label</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[133]</label>
+  						<label>$INFO[Container(9008).NumItems] $LOCALIZE[133]</label>
   					</control>
   					<control type="label" id="8008">
 					    <visible>!Control.HasFocus(9008)</visible>
   						<include>Search_Label_Unfocused</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[133]</label>
+  						<label>$INFO[Container(9008).NumItems] $LOCALIZE[133]</label>
   					</control>
     				<control type="image">
   					  <posy>35</posy>
@@ -1392,24 +1401,26 @@
 					  <height>240</height>
 					  <control type="image">
 					    <visible>Control.HasFocus(9009)</visible>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
 					  <control type="image">
 					    <visible>!Control.HasFocus(9009)</visible>
 			 	 		<animation effect="fade" start="0" end="30" time="00" condition="true">Conditional</animation>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
   					<control type="label" id="8009">
 					    <visible>Control.HasFocus(9009)</visible>
   						<include>Search_Label</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[132]</label>
+  						<label>$INFO[Container(9009).NumItems] $LOCALIZE[132]</label>
   					</control>
   					<control type="label" id="8009">
 					    <visible>!Control.HasFocus(9009)</visible>
   						<include>Search_Label_Unfocused</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[132]</label>
+  						<label>$INFO[Container(9009).NumItems] $LOCALIZE[132]</label>
   					</control>
 						<visible allowhiddenfocus="false">true</visible>
   					<control type="image">
@@ -1512,24 +1523,26 @@
 					  <height>240</height>
 					  <control type="image">
 					    <visible>Control.HasFocus(9010)</visible>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
 					  <control type="image">
 					    <visible>!Control.HasFocus(9010)</visible>
 			 	 		<animation effect="fade" start="0" end="30" time="00" condition="true">Conditional</animation>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
   					<control type="label" id="8010">
 					    <visible>Control.HasFocus(9010)</visible>
   						<include>Search_Label</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[182]</label>
+  						<label>$INFO[Container(9010).NumItems] $LOCALIZE[182]</label>
   					</control>
   					<control type="label" id="8010">
 					    <visible>!Control.HasFocus(9010)</visible>
   						<include>Search_Label_Unfocused</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[182]</label>
+  						<label>$INFO[Container(9010).NumItems] $LOCALIZE[182]</label>
   					</control>
 						<visible allowhiddenfocus="false">true</visible>
   					<control type="image">
@@ -1632,24 +1645,26 @@
 					  <height>220</height>
 					  <control type="image">
 					    <visible>Control.HasFocus(9013)</visible>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
 					  <control type="image">
 					    <visible>!Control.HasFocus(9013)</visible>
 			 	 		<animation effect="fade" start="0" end="30" time="00" condition="true">Conditional</animation>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
   					<control type="label" id="8013">
 					    <visible>Control.HasFocus(9013)</visible>
   						<include>Search_Label</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[344]</label>
+  						<label>$INFO[Container(9013).NumItems] $LOCALIZE[344]</label>
   					</control>
   					<control type="label" id="8013">
 					    <visible>!Control.HasFocus(9013)</visible>
   						<include>Search_Label_Unfocused</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[344]</label>
+  						<label>$INFO[Container(9013).NumItems] $LOCALIZE[344]</label>
   					</control>
     				<control type="image">
   					  <posy>35</posy>
@@ -1728,24 +1743,26 @@
 					  
 					  <control type="image">
 					    <visible>Control.HasFocus(9012)</visible>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
 					  <control type="image">
 					    <visible>!Control.HasFocus(9012)</visible>
 			 	 		<animation effect="fade" start="0" end="30" time="00" condition="true">Conditional</animation>
-  			            <texture>DialogContextTop.png</texture>  
+      			        <texture>DialogContextTop.png</texture>  
+						<width>500</width>
 				    </control>
   					<control type="label" id="8012">
 					    <visible>Control.HasFocus(9012)</visible>
   						<include>Search_Label</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[443] $LOCALIZE[444]</label>
+  						<label>$INFO[Container(9012).NumItems] $LOCALIZE[443] $LOCALIZE[444]</label>
   					</control>
   					<control type="label" id="8012">
 					    <visible>!Control.HasFocus(9012)</visible>
   						<include>Search_Label_Unfocused</include>
   						<posy>4</posy>
-  						<label>$LOCALIZE[443] $LOCALIZE[444]</label>
+  						<label>$INFO[Container(9012).NumItems] $LOCALIZE[443] $LOCALIZE[444]</label>
   					</control>
 						<visible allowhiddenfocus="false">true</visible>
   					<control type="image">
