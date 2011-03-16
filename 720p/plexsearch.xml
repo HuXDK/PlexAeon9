@@ -937,7 +937,7 @@
 			<control type="group" id="5000">
 				<visible>true</visible>
 				<posx>390</posx>
-				<posy>15</posy>
+				<posy>45</posy>
 				<width>880</width>
 				<height>640</height>
 				
@@ -1012,7 +1012,7 @@
           			</control>
            			<control type="label">
           				<posx>81</posx>
-          				<posy>170</posy>
+          				<posy>172</posy>
           				<width>122</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1024,7 +1024,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>190</posy>
+          				<posy>192</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1050,7 +1050,7 @@
          			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>170</posy>
+          				<posy>172</posy>
           				<width>122</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1062,7 +1062,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>190</posy>
+          				<posy>192</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1134,7 +1134,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>167</posy>
+          				<posy>169</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1160,7 +1160,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>167</posy>
+          				<posy>169</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1233,7 +1233,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>105</posy>
+          				<posy>107</posy>
           				<width>125</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1245,7 +1245,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>125</posy>
+          				<posy>127</posy>
           				<width>120</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1271,7 +1271,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>105</posy>
+          				<posy>107</posy>
           				<width>125</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1283,7 +1283,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>125</posy>
+          				<posy>127</posy>
           				<width>120</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1355,7 +1355,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>167</posy>
+          				<posy>169</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1381,7 +1381,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>167</posy>
+          				<posy>169</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1453,7 +1453,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>165</posy>
+          				<posy>167</posy>
           				<width>122</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1465,7 +1465,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>185</posy>
+          				<posy>187</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1491,7 +1491,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>165</posy>
+          				<posy>167</posy>
           				<width>122</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1503,7 +1503,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>185</posy>
+          				<posy>187</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1575,7 +1575,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>165</posy>
+          				<posy>167</posy>
           				<width>122</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1587,7 +1587,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>185</posy>
+          				<posy>187</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1613,7 +1613,7 @@
          			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>165</posy>
+          				<posy>167</posy>
           				<width>122</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1625,7 +1625,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>185</posy>
+          				<posy>187</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1696,7 +1696,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>167</posy>
+          				<posy>169</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
@@ -1722,7 +1722,7 @@
           			</control>
           			<control type="label">
           				<posx>81</posx>
-          				<posy>167</posy>
+          				<posy>169</posy>
           				<width>130</width>
           				<align>center</align>
           				<aligny>center</aligny>
