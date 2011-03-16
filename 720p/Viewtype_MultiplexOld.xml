@@ -89,6 +89,7 @@
 	</include>
 	<include name="OldMultiplexInfoPaneMovies">
 		<control type="group">
+		<include condition="Skin.HasSetting(OldMultiplexInfoDelay)">MediaInfoDelay</include>
 			<posx>0</posx>
 			<posy>65</posy>
 			<width>1280</width>
@@ -586,6 +587,7 @@
 	</include>
 	<include name="OldMultiplexInfoPaneTV">
 		<control type="group">
+		<include condition="Skin.HasSetting(OldMultiplexInfoDelay)">MediaInfoDelay</include>
 			<posx>0</posx>
 			<posy>65</posy>
 			<width>1280</width>

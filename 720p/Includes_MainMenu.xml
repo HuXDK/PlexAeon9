@@ -45,10 +45,6 @@
 			<visible>Container(300).HasFocus(6)</visible>
 		</control>
 		<control type="button" id="351">
-			<onfocus>SetFocus(942)</onfocus>
-			<visible>Container(300).HasFocus(7)</visible>
-		</control>
-		<control type="button" id="351">
 			<onfocus>SetFocus(941)</onfocus>
 			<visible>Container(300).HasFocus(1)</visible>
 		</control>
@@ -71,7 +67,7 @@
 		<control type="button" id="351">
 			<onfocus>Skin.ToggleSetting(SectionsMenu)</onfocus>
 			<onfocus>SetFocus(300)</onfocus>
-    		<visible>![Container(300).HasFocus(2) | Container(300).HasFocus(10) |Container(300).HasFocus(6) | Container(300).HasFocus(7) | Container(300).HasFocus(1) | Container(300).HasFocus(9) | Container(300).HasFocus(22) | Container(300).HasFocus(8)] + !Skin.HasSetting(NoSectionsMenu)</visible>
+    		<visible>![Container(300).HasFocus(2) | Container(300).HasFocus(10) |Container(300).HasFocus(6) | Container(300).HasFocus(11) | Container(300).HasFocus(1) | Container(300).HasFocus(9) | Container(300).HasFocus(22) | Container(300).HasFocus(8)] + !Skin.HasSetting(NoSectionsMenu)</visible>
 		</control>
 
 		<control type="wraplist" id="300">
@@ -146,6 +142,12 @@
 					<visible>!Skin.HasSetting(programs)</visible>
 					<width min="95" max="95">auto</width>
 				</item>
+					<item id="11">
+						<description>Search Menu</description>
+						<include>BackgroundVarsSearch</include>
+						<label>$LOCALIZE[137]</label>
+						<onclick>Plex.ActivateWindow(10051)</onclick>
+					</item>
 <!--
 					<item id="6">
 					<label>31013</label>
@@ -317,6 +319,14 @@
 					<onclick>Skin.SetString(custom,CustomProgramsfolder)</onclick>
 					<onclick>SetFocus(92)</onclick>
 					<visible>!Skin.HasSetting(programs)</visible>
+				</item>
+				<item id="11">
+					<label>$LOCALIZE[137]</label>
+					<include>BackgroundVarsSearch</include>
+					<onclick>Skin.SetString(custom,CustomSearchfolder)</onclick>
+					<onclick>SetFocus(92)</onclick>
+					<width min="95" max="95">auto</width>
+					<visible>!Skin.HasSetting(noSearch)</visible>
 				</item>
 				<item id="8">
 					<label>31015</label>
@@ -591,22 +601,21 @@
 					<width min="95" max="95">auto</width>
 					<visible>Skin.HasSetting(programs)</visible>
 				</item>
-<!--
 				<item id="7">
-					<description>My Videos</description>
-					<label>31014</label>
-					<include>BackgroundVarsTV</include>
-					<onclick>Skin.SetBool(notvshows)</onclick>
-					<visible>!Skin.HasSetting(notvshows)</visible>
+					<description>Search</description>
+					<label>$LOCALIZE[137]</label>
+					<include>BackgroundVarsSearch</include>
+					<onclick>Skin.SetBool(noSearch)</onclick>
+					<visible>!Skin.HasSetting(noSearch)</visible>
 				</item>
 				<item id="7">
-					<description>My Videos</description>
-					<label2>31014</label2>
-					<include>BackgroundVarsTV</include>
-					<onclick>Skin.Reset(notvshows)</onclick>
-					<visible>Skin.HasSetting(notvshows)</visible>
+					<description>Search</description>
+					<label2>$LOCALIZE[137]</label2>
+					<include>BackgroundVarssearch</include>
+					<onclick>Skin.Reset(noSearch)</onclick>
+					<visible>Skin.HasSetting(noSearch)</visible>
 				</item>
--->
+
 				<item id="8">
 					<label>31015</label>
 					<include>BackgroundVarsVideo</include>

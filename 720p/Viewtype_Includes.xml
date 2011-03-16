@@ -2184,6 +2184,14 @@
 			<selected>!Skin.HasSetting(multiplexinfooff)</selected>
 			<visible>Control.IsVisible(52)</visible>
 		</control>
+		<control type="radiobutton" id="700004">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[303] $LOCALIZE[31070]</label>
+			<onclick>Skin.ToggleSetting(MultiplexInfoDelay)</onclick>
+			<selected>Skin.HasSetting(MultiplexInfoDelay)</selected>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Control.IsVisible(52) + !Skin.HasSetting(multiplexinfooff)</visible>
+		</control>
 
 <!--
 		<control type="button" id="700003">
@@ -3111,6 +3119,14 @@
 			<onclick>Skin.ToggleSetting(oldmultiplexinfooff)</onclick>
 			<selected>!Skin.HasSetting(oldmultiplexinfooff)</selected>
 			<visible>Control.IsVisible(553)</visible>
+		</control>
+		<control type="radiobutton" id="700101">
+			<include>MediaMenuButton</include>
+			<label>$LOCALIZE[303] $LOCALIZE[31070]</label>
+			<onclick>Skin.ToggleSetting(OldMultiplexInfoDelay)</onclick>
+			<selected>Skin.HasSetting(OldMultiplexInfoDelay)</selected>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Control.IsVisible(553) + !Skin.HasSetting(oldmultiplexinfooff)</visible>
 		</control>
 <!--
 		<control type="button" id="700100">

@@ -1,6 +1,28 @@
 <fonts>
 	<fontset id="Aeon_Standard" unicode="true">
 		<!-- Common -->
+		<font>
+			<name>Font_Search</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>19</size>
+		</font>
+		<font>
+			<name>Font_SearchBig</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>21</size>
+		</font>
+		<font>
+			<name>Font_SearchSmall</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>17</size>
+		</font>
+
+		<font>
+			<name>Font_SearchTitle</name>
+			<filename>aeon_rss_ce.ttf</filename>
+			<size>26</size>
+		</font>
+
     <font>
       <name>ProgressLoading</name>
       <filename>HelveticaNeue</filename>

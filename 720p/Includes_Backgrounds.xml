@@ -142,6 +142,13 @@
 		<info>Skin.String(CustomTVbg)</info>
 	</include>
 
+	<include name="BackgroundVarsSearch">
+		<icon>backdrops/default_search/search.jpg</icon>
+		<thumb>$INFO[Skin.String(CustomSearchbgfolder)]</thumb>
+		<imagepath>backdrops/default_search/search.jpg</imagepath>
+		<info>Skin.String(CustomSearchbg)</info>
+	</include>
+
 	<include name="BackgroundVarsSectionOne">
 		<icon></icon>
 		<thumb>$INFO[Skin.String(CustomSectionOnefolder)]</thumb>
@@ -852,6 +859,27 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
+			<texture>backdrops/default_search/search.jpg</texture>
+			<info>Skin.String(CustomSearch)</info>
+			<visible>[Container(300).HasFocus(11) + Control.IsVisible(300)]</visible>
+			<visible>!Skin.String(CustomSearchFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomSearchFolder)</info>
+			<randomize>true</randomize>
+			<visible>[Container(300).HasFocus(11) + Control.IsVisible(300)]</visible>
+			<visible>Skin.String(CustomSearchFolder)</visible>			
+		</control>
+
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
 			<texture>backdrops/default_music/music.jpg</texture>
 			<info>Skin.String(CustomMusic)</info>
 			<visible>Container(300).HasFocus(1) + Control.IsVisible(300)</visible>
@@ -1055,6 +1083,23 @@
 			<visible>[Container(300).HasFocus(8) + Control.IsVisible(300)] | [Container(301).HasFocus(8) + Control.IsVisible(301)]</visible>
 			<visible>Skin.String(CustomVideoFolder)</visible>
 		</control>		
+
+		<control type="multiimage">
+			<include>Background_VirtualSingleImage</include>
+			<imagepath>backdrops/default_search</imagepath>
+			<info>Skin.String(CustomSearchbg)</info>
+			<visible>[Container(300).HasFocus(11) + Control.IsVisible(300)] | [Container(301).HasFocus(11) + Control.IsVisible(301)]</visible>
+			<visible>!Skin.String(CustomSearchFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_VirtualImageFolder</include>
+			<info>Skin.String(CustomSearchFolder)</info>
+			<visible>[Container(300).HasFocus(11) + Control.IsVisible(300)] | [Container(301).HasFocus(11) + Control.IsVisible(301)]</visible>
+			<visible>Skin.String(CustomSearchFolder)</visible>
+		</control>		
+
+
 
 		<control type="multiimage">
 			<include>Background_VirtualSingleImage</include>

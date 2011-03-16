@@ -346,7 +346,7 @@
 				<description>Main instruction labels</description>
 				<include>FullscreenDimensions</include>
 				<include>Animation_CommonFade</include>
-				<include>Labels_AeonScreenLabels</include>
+				<include>Labels_AeonScresenLabels</include>
 			</control>
 
 			<control type="button" id="92">

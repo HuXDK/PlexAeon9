@@ -726,13 +726,15 @@
 
 	<!-- Keyboard -->
 	<include name="Objects_KeyOffVars">
-		<textcolor>77FFFFFF</textcolor>
-		<focusedcolor>77FFFFFF</focusedcolor>
+		<textcolor>88FFFFFF</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
 		<selectedcolor>77FFFFFF</selectedcolor>
 		<align>center</align>
 		<aligny>top</aligny>
 		<textoffsety>21</textoffsety>
 		<font>Font_KeyboardKeys</font>
+		<animation effect="zoom" start="100" end="110" center="auto" time="100" delay="0" easing="out" reversible="false" tween="cubic">Focus</animation>
+		<animation effect="zoom" start="110" end="100" center="auto" time="100" delay="0" easing="out" reversible="false" tween="cubic">UnFocus</animation>
 	</include>
 
 	<include name="Objects_KeyOnVars">
@@ -789,7 +791,7 @@
 		<posy>0</posy>
 		<width>68</width>
 		<height>68</height>
-		<texturefocus>keyboard/keyboard_singlenf.png</texturefocus>
+		<texturefocus>keyboard/keyboard_singlef.png</texturefocus>
 		<texturenofocus>keyboard/keyboard_singlenf.png</texturenofocus>
 		<include>Objects_KeyOffVars</include>
 	</include>

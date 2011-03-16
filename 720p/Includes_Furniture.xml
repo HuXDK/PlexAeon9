@@ -527,6 +527,7 @@
 				<effect type="slide" start="0,-181" end="0,-181" time="0" />
 				<effect type="zoom" start="125" end="125" time="0" />
 			</animation>
+<!--
 			<control type="image">
 				<posx>54</posx>
 				<posy>0</posy>
@@ -535,15 +536,35 @@
 				<texture flipy="true">common/rssbar_mid.png</texture>
 				<include>Animation_CommonFade</include>
 			</control>
+-->
+			<control type="image">
+				<posx>74</posx>
+				<posy>30</posy>
+				<width>1253</width>
+				<height>27</height>
+				<texture flipy="false">common/rssbar_mid.png</texture>
+				<include>Animation_CommonFade</include>
+				<colordiffuse>e3FFFFFF</colordiffuse>
+			</control>
 			<control type="rss" id="1">
 				<posx>110</posx>
 				<posy>34</posy>
 				<width>1280</width>
-				<visible>true</visible>
 				<font>Font_RSS</font>
-				<include>Colour_RSS</include>
+				<include>Colour_RSSLight</include>
 				<urlset>1</urlset>
 				<include>Animation_CommonFade</include>
+				<visible>!Skin.HasSetting(bighome)</visible>
+			</control>
+			<control type="rss" id="1">
+				<posx>110</posx>
+				<posy>30</posy>
+				<width>1280</width>
+				<font>Font_BigRSS</font>
+				<include>Colour_RSSLight</include>
+				<urlset>1</urlset>
+				<include>Animation_CommonFade</include>
+				<visible>Skin.HasSetting(bighome)</visible>
 			</control>
 			<control type="image">
 				<posx>77</posx>
@@ -551,6 +572,7 @@
 				<width>133</width>
 				<height>27</height>
 				<texture flipy="true">common/rssbar_mid_fade.png</texture>
+				<colordiffuse>e3FFFFFF</colordiffuse>
 				<include>Animation_CommonFade</include>
 			</control>
 		</control>
@@ -768,11 +790,11 @@
 			<visible>Skin.HasSetting(lowerrss) + system.getbool(lookandfeel.enablerssfeeds)</visible>
 			<include>Animation_CommonFade</include>
 			<control type="image">
-				<posx>36</posx>
-				<posy>0</posy>
+				<posx>52</posx>
+				<posy>20</posy>
 				<width>804</width>
-				<height>38</height>
-				<texture flipy="true">common/rssbar_mid.png</texture>
+				<height>18</height>
+				<texture flipy="false">common/rssbar_mid.png</texture>
 			</control>
 			<control type="rss" id="1">
 				<description>My First RSS control</description>
@@ -781,7 +803,7 @@
 				<width>769</width>
 				<visible>true</visible>
 				<font>Font_VirtualRSS</font>
-				<include>Colour_RSS</include>
+				<include>Colour_RSSLight</include>
 				<urlset>1</urlset>
 			</control>
 			<control type="image">

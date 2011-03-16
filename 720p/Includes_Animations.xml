@@ -8,6 +8,9 @@
       		<visible>Skin.HasSetting(CerberosSmoke)</visible>
 		</control>
 	</include>
+	<include name="SearchZoom">
+ 		<animation effect="zoom" start="100" end="105" center="auto" time="400" delay="0" easing="out" reversible="false" tween="cubic">Focus</animation>
+	</include>
 	<include name="MediaViewTransition">
 		<animation effect="fade" start="0" end="100" time="500" delay="0">WindowOpen</animation>
 		<animation effect="fade" start="100" end="0" time="200" delay="0">WindowClose</animation>
