@@ -242,6 +242,7 @@
 			<visible>!Skin.HasSetting(nomediaflags) + ![Control.HasFocus(60) | Control.HasFocus(94)] + ![Container().OnNext | Container().OnPrevious]</visible>
 			<include>Animation_CommonFade</include>
 			<posy>0</posy>
+<!--
 			<control type="group">
 					<posx>60</posx>
 					<control type="image">
@@ -263,12 +264,31 @@
 					<visible>Skin.HasSetting(nostudio)</visible>
 				</control>
 			</control>
+-->
+			<control type="group">
+					<posx>60</posx>
+					<control type="image">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+						<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
+						<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
+					</control>
+			</control>
+
+			<control type="group">
+				<posx>150</posx>
+				<control type="image">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
+					<visible>true</visible>
+				</control>
+			</control>
 
 				<control type="image">
 					<posx>1055</posx>
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
-					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioCodecVars</include>
 				</control>
 
 			<control type="group">
@@ -276,16 +296,7 @@
 				<control type="image">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
-				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
-				</control>
-			</control>
-			<control type="group">
-				<posx>150</posx>
-				<control type="image" id="82">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
-					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
-					<visible>true</visible>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 				</control>
 			</control>
 		</control>
@@ -297,6 +308,8 @@
 			<visible>!Skin.HasSetting(nomediaflags) + Container.Content(movies) + ![Container().OnNext | Container().OnPrevious]</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideMultiplex</include>
+
+<!--
 			<control type="group">
 				<posx>60</posx>
 			<control type="image" id="91">
@@ -317,12 +330,31 @@
 				<colordiffuse>dFFEF280</colordiffuse>
 			</control>
 			</control>
+-->
+			<control type="group">
+				<posx>60</posx>
+				<control type="image">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
+					<colordiffuse>dFFEF280</colordiffuse>
+				</control>
+			</control>
+			<control type="group">
+				<posx>170</posx>
+			<control type="image">
+				<include>Furniture_PanelMediaFlagsVars</include>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
+				<colordiffuse>dFFEF280</colordiffuse>
+			</control>
+			</control>
 			<control type="group">
 				<posx>1030</posx>
-			<control type="image" id="93">
+			<control type="image">
 				<include>Furniture_PanelMediaFlagsVars</include>
-				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
-					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
+				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioCodecVars</include>
+				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioCodecVars</include>
 				<colordiffuse>dFFEF280</colordiffuse>
 			</control>
 			</control>
@@ -335,15 +367,6 @@
 				<colordiffuse>dFFEF280</colordiffuse>
 			</control>
 			</control>
-			<control type="group">
-				<posx>170</posx>
-			<control type="image" id="92">
-				<include>Furniture_PanelMediaFlagsVars</include>
-				<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
-					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
-				<colordiffuse>dFFEF280</colordiffuse>
-			</control>
-			</control>
 		</control>
 	</include>
 	<include name="Furniture_CoverflowMediaFlags">  <!-- CoverFlow Media Flags -->
@@ -352,6 +375,7 @@
 			<visible>!Skin.HasSetting(nomediaflags) + ![Container().OnNext | Container().OnPrevious]</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideMultiplex</include>
+<!--
 			<control type="group">
 				<posx>60</posx>
 				<control type="image" id="91">
@@ -370,12 +394,30 @@
 					<visible>Skin.HasSetting(nostudio)</visible>
 				</control>
 			</control>
+-->
 			<control type="group">
-				<posx>1020</posx>
-				<control type="image" id="93">
+				<posx>60</posx>
+				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
 					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
+				</control>
+			</control>
+			<control type="group">
+				<posx>170</posx>
+				<control type="image">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
+					<visible>!Container.Content(tvshows)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<posx>1020</posx>
+				<control type="image">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioCodecVars</include>
+					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioCodecVars</include>
 				</control>
 			</control>
 			<control type="group">
@@ -384,15 +426,6 @@
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
 				<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
-				</control>
-			</control>
-			<control type="group">
-				<posx>170</posx>
-				<control type="image" id="92">
-					<include>Furniture_PanelMediaFlagsVars</include>
-					<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
-					<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
-					<visible>!Container.Content(tvshows)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -594,6 +627,7 @@
 		<include>Animation_WindowFade200</include>
 		<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
 		<posy>220</posy>
+<!--
 		<control type="group">
 			<posx>85</posx>
 		<control type="image" id="91">
@@ -618,9 +652,10 @@
 			<visible>Skin.HasSetting(nostudio)</visible>
 			</control>
 		</control>
+-->
 		<control type="group">
-			<posx>230</posx>
-		<control type="image" id="93">
+			<posx>85</posx>
+		<control type="image">
 			<posy>440</posy>
 			<width>50</width>
 			<height>39</height>
@@ -629,6 +664,32 @@
 			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
 			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoResolutionVars</include>
 			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoResolutionVars</include>
+			</control>
+		</control>
+		<control type="group">
+			<posx>155</posx>
+		<control type="image">
+			<posy>440</posy>
+			<width>50</width>
+			<height>39</height>
+			<aspectratio>keep</aspectratio>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
+			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
+			</control>
+		</control>
+		<control type="group">
+			<posx>230</posx>
+		<control type="image">
+			<posy>440</posy>
+			<width>50</width>
+			<height>39</height>
+			<aspectratio>keep</aspectratio>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
+			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioCodecVars</include>
+			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioCodecVars</include>
 			</control>
 		</control>
 		<control type="group">
@@ -643,19 +704,6 @@
 			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteAudioChannelsVars</include>
 			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourAudioChannelsVars</include>
 		</control>
-		</control>
-		<control type="group">
-			<posx>155</posx>
-		<control type="image" id="92">
-			<posy>440</posy>
-			<width>50</width>
-			<height>39</height>
-			<aspectratio>keep</aspectratio>
-			<include>Animation_CommonFade</include>
-			<visible>Control.IsVisible(553) | Control.IsVisible(53)</visible>
-			<include condition="Skin.HasSetting(WhiteMediaFlags)">WhiteVideoCodecVars</include>
-			<include condition="!Skin.HasSetting(WhiteMediaFlags)">ColourVideoCodecVars</include>
-			</control>
 		</control>
 	</include>
 	<include name="Furniture_WallMediaFlags">
