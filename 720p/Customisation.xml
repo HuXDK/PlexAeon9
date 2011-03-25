@@ -152,6 +152,13 @@
 			<onleft>7</onleft>
 			<onright>7</onright>
 			<visible>Control.HasFocus(7) | ControlGroup(911).HasFocus</visible>
+
+			<control type="radiobutton" id="508">
+				<include>Objects_SettingsDefaultRadioButton</include>
+				<label>Use Fanart Slideshow</label>
+				<onclick>Skin.ToggleSetting(FanartSlideshow)</onclick>
+				<selected>Skin.HasSetting(FanartSlideshow)</selected>
+			</control>
 			<control type="radiobutton" id="500">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31261</label>
