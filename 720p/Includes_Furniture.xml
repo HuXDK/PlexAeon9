@@ -988,6 +988,10 @@
 		</control>
 	</include>
 	<include name="Furniture_HomeNowPlaying">
+			<include condition="Player.HasVideo | Player.HasAudio">Furniture_HomeNowPlayingYes</include>
+	</include>
+
+	<include name="Furniture_HomeNowPlayingYes">
 		<control type="group">
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" delay="14500" time="400" />
@@ -1002,6 +1006,7 @@
 				<include>FullscreenDimensions</include>
 			</control>
 		</control>
+
 		<control type="group">
 			<visible>!Skin.HasSetting(homevis) + Player.HasAudio</visible>			
 			<control type="visualisation">
