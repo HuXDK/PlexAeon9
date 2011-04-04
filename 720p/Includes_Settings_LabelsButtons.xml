@@ -4,10 +4,6 @@
 		<posy>565</posy>
 		<width>1280</width>
 		<height>720</height>
-		<animation effect="fade" time="500">Visible</animation>
-		<animation effect="fade" time="200">Hidden</animation>
-		<animation effect="fade" time="500">WindowOpen</animation>
-		<animation effect="fade" time="200">WindowClose</animation>
 		<animation effect="slide" start="0,-8" end="0,-8" time="0" condition="Window.IsActive(4)">Conditional</animation>
 	</include>
 
@@ -880,7 +876,7 @@
 		<control type="group">
 
 			<include>Settings_ButtonGroupDimensionsXBMC</include>
-			<include>Animation_CommonFade</include>
+			<include>Animation_CommoenFade</include>
 			<control type="button" id="6">
 				<description>Backdrops</description>
 				<posy>0</posy>

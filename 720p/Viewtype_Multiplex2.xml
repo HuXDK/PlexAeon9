@@ -117,29 +117,14 @@
 				<visible>!Container(555).OnNext + !Container(555).OnPrevious</visible>
 				<animation effect="fade" delay="3000" start="0" end="100" time="500" >Visible</animation>
 				<animation effect="fade" delay="3000" start="0" end="100" time="500" >WindowOpen</animation>
-				<control type="image">
-					<posx>-2</posx>
-					<posy>-2</posy>	
-					<width>356</width>
-					<height>200</height>
-					<texture diffuse="list/list_episodeicon_mask.png">mod/black.png</texture>
-				</control>			
 				<control type="multiimage">	
 					<posx>0</posx>
 					<width>352</width>
 					<height>196</height>
-					<fadetime>500</fadetime>
-					<timeperimage>3000</timeperimage>
-					<imagepath diffuse="list/list_episodeicon_mask.png" background="true">$INFO[Container(555).ListItem.Path,,extrathumbs]</imagepath>		
+					<fadetime>1300</fadetime>
+					<timeperimage>5000</timeperimage>
+					<imagepath diffuse="list/list_episodeicon_mask.png" background="true">$INFO[ListItem.Path,,extrathumbs]</imagepath>		
 					<animation effect="fade" delay="700" start="0" end="100" time="500" >WindowOpen</animation>
-				</control>
-				<control type="image">	
-					<width>352</width>
-					<height>196</height>
-					<aspectratio></aspectratio>
-					<fadetime>500</fadetime>
-					<texture>list/list_musicicon_glass.png</texture>
-					<animation effect="fade" delay="700" start="100" end="0" time="500" condition="Player.HasVideo">conditional</animation>
 				</control>
 			</control>			
 			<control type="group">
