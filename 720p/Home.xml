@@ -15,10 +15,11 @@
 			<onfocus>Skin.SetBool(anoobiefanart)</onfocus>
 			<onfocus>Skin.SetBool(flattenflow)</onfocus>
 			<onfocus>Skin.SetBool(nomovieoverlays)</onfocus>
+			<onfocus>Skin.SetBool(FanartSlideshow)</onfocus>
 			<onfocus>Skin.SetBool(flattenshowcase)</onfocus>
 			<onfocus>Skin.SetBool(programs)</onfocus>
 			<onfocus>Skin.SetBool(DefaultsSet)</onfocus>
-			<onfocus>SetFocus(300)</onfocus>
+			<onfocus>ReloadSkin()</onfocus>
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<visible>!Skin.HasSetting(DefaultsSet)</visible>
@@ -70,7 +71,7 @@
 		<timeperimage>20000</timeperimage>
 		<fadetime>2000</fadetime>
 		<randomize>true</randomize>
-		<animation effect="fade" start="20" end="100" time="800">Visible</animation>
+		<animation effect="fade" start="20" end="70" time="500">Visible</animation>
 		<animation effect="fade" end="0" time="600">Hidden</animation>
 		<imagepath>../../../userdata/Thumbnails/PlexMediaServer/Fanart/</imagepath>
 		<visible>Skin.HasSetting(FanartSlideshow)</visible>
