@@ -235,7 +235,7 @@
 				<height>28</height>
 				<aspectratio>keep</aspectratio>
 				<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
-				<visible>!Skin.HasSetting(HDiconOff)</visible>
+				<visible>!Skin.HasSetting(HDiconOff) + Container.Content(movies)</visible>
 			</control>
 
 			<control type="image">
