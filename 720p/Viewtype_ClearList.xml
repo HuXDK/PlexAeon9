@@ -228,6 +228,15 @@
 				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
 				<visible>![Container.Content(movies) + IsEmpty(ListItem.Plot) + IsEmpty(ListItem.Rating) + IsEmpty(Listitem.Property(mediaTag::studio))]</visible>
 			</control>
+			<control type="image">
+				<posx>368</posx>
+				<posy>210</posy>
+				<width>54</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+				<visible>!Skin.HasSetting(HDiconOff)</visible>
+			</control>
 
 			<control type="image">
 				<posx>270</posx>

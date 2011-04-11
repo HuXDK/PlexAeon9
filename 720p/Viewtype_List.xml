@@ -783,6 +783,17 @@
 			<animation effect="zoom" start="90" end="80" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
 			<visible>Container.OnPrevious</visible>			
 		</control>
+			<control type="image">
+				<posx>1030</posx>
+				<posy>530</posy>
+				<width>54</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem(2).Property(mediaTag-videoResolution),hd/,.png]</texture>
+			<animation effect="zoom" start="90" end="80" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
+			<visible>Container.OnPrevious + !Skin.HasSetting(HDiconOff)</visible>			
+			</control>
+
 
 		<control type="image" id="4000">
 			<include>MovieListIcon_Thumb</include>
@@ -796,6 +807,16 @@
 			<animation effect="zoom" start="100" end="90" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
 			<visible>Container.OnPrevious</visible>			
 		</control>
+			<control type="image">
+				<posx>1030</posx>
+				<posy>530</posy>
+				<width>54</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem(1).Property(mediaTag-videoResolution),hd/,.png]</texture>
+			<animation effect="zoom" start="100" end="90" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
+			<visible>Container.OnPrevious + !Skin.HasSetting(HDiconOff)</visible>			
+			</control>
 
 		<control type="image" id="4000">
 			<include>MovieListIcon_Thumb</include>
@@ -811,6 +832,17 @@
 			<animation effect="fade" start="0" end="100" time="200">Hidden</animation>
 			<visible>Container.OnPrevious</visible>			
 		</control>
+			<control type="image">
+				<posx>1030</posx>
+				<posy>530</posy>
+				<width>54</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem(0).Property(mediaTag-videoResolution),hd/,.png]</texture>
+			<animation effect="fade" start="0" end="0" time="0">visible</animation>
+			<animation effect="fade" start="0" end="100" time="200">Hidden</animation>
+			<visible>Container.OnPrevious + !Skin.HasSetting(HDiconOff)</visible>			
+			</control>
 
 <!-- POSTER: Rolling up -->
 
@@ -832,6 +864,19 @@
 				<effect type="zoom" start="80" end="80" time="0" center="1400,383" />
 			</animation>
 		</control>
+			<control type="image">
+				<posx>1030</posx>
+				<posy>530</posy>
+				<width>54</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem(2).Property(mediaTag-videoResolution),hd/,.png]</texture>
+			<visible>Container.OnNext + !Skin.HasSetting(HDiconOff)</visible>			
+			<animation type="Hidden" reversible="false">
+				<effect type="fade" start="0" end="100" time="200" />
+				<effect type="zoom" start="80" end="80" time="0" center="1400,383" />
+			</animation>
+			</control>
 
 		<control type="image" id="4001">
 			<include>MovieListIcon_Thumb</include>
@@ -845,6 +890,16 @@
 			<visible>Container.OnNext</visible>					
 			<animation effect="zoom" start="80" end="90" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
 		</control>
+			<control type="image">
+				<posx>1030</posx>
+				<posy>530</posy>
+				<width>54</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem(1).Property(mediaTag-videoResolution),hd/,.png]</texture>
+			<visible>Container.OnNext + !Skin.HasSetting(HDiconOff)</visible>			
+			<animation effect="zoom" start="80" end="90" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
+			</control>
 
 		<control type="image" id="4001">
 			<include>MovieListIcon_Thumb</include>
@@ -858,6 +913,16 @@
 			<visible>Container.OnNext</visible>					
 			<animation effect="zoom" start="90" end="100" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
 		</control>
+			<control type="image">
+				<posx>1030</posx>
+				<posy>530</posy>
+				<width>54</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem(0).Property(mediaTag-videoResolution),hd/,.png]</texture>
+			<visible>Container.OnNext + !Skin.HasSetting(HDiconOff)</visible>			
+			<animation effect="zoom" start="90" end="100" easing="out" tween="quadratic" time="200" reversible="false" center="1400,383">Hidden</animation>
+			</control>
 
 		<control type="image" id="4001">
 			<include>MovieListIcon_Thumb</include>
@@ -871,6 +936,17 @@
 			<visible>Container.OnNext</visible>					
 			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 		</control>
+			<control type="image">
+				<posx>1030</posx>
+				<posy>530</posy>
+				<width>54</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem(-1).Property(mediaTag-videoResolution),hd/,.png]</texture>
+			<visible>Container.OnNext + !Skin.HasSetting(HDiconOff)</visible>			
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			</control>
+
 
 <!-- POSTER: Rolling static -->
 
@@ -887,6 +963,16 @@
 				<include>MovieListIcon_Glass</include>
 				<animation effect="zoom" start="90" end="80" time="0" center="1400,383" condition="true">Conditional</animation>
 			</control>
+			<control type="image">
+				<posx>1030</posx>
+				<posy>530</posy>
+				<width>54</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem(2).Property(mediaTag-videoResolution),hd/,.png]</texture>
+				<animation effect="zoom" start="90" end="80" time="0" center="1400,383" condition="true">Conditional</animation>
+			<visible>!Skin.HasSetting(HDiconOff)</visible>			
+			</control>
 
 			<control type="image">
 				<include>MovieListIcon_Thumb</include>
@@ -898,6 +984,16 @@
 				<include>MovieListIcon_Glass</include>
 				<animation effect="zoom" start="100" end="90" time="0" center="1400,383" condition="true">Conditional</animation>
 			</control>
+			<control type="image">
+				<posx>1030</posx>
+				<posy>530</posy>
+				<width>54</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem(1).Property(mediaTag-videoResolution),hd/,.png]</texture>
+				<animation effect="zoom" start="100" end="90" time="0" center="1400,383" condition="true">Conditional</animation>
+			<visible>!Skin.HasSetting(HDiconOff)</visible>			
+			</control>
 
 			<control type="image">
 				<include>MovieListIcon_Thumb</include>
@@ -906,6 +1002,16 @@
 
 			<control type="image">
 				<include>MovieListIcon_Glass</include>
+			</control>
+
+			<control type="image">
+				<posx>1030</posx>
+				<posy>530</posy>
+				<width>54</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+			<visible>!Skin.HasSetting(HDiconOff)</visible>			
 			</control>
 
 		</control>

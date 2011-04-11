@@ -1008,6 +1008,15 @@
                         <include>MovieFlowGlassOverlay</include>
 						<visible>!Control.IsVisible(9000)</visible>
                     </control>
+				<control type="image">
+					<posx>143</posx>
+					<posy>207</posy>
+					<width>70</width>
+					<height>50</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+					<visible>!Skin.HasSetting(HDiconOff)</visible>
+				</control>
 				    <control type="image">
 						<posx>185</posx>
 						<posy>18</posy>
@@ -1049,6 +1058,18 @@
 						<animation effect="zoom" start="100" end="120" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55)">Unfocus</animation>
 					</control>
+				<control type="image">
+					<posx>143</posx>
+					<posy>207</posy>
+					<width>70</width>
+					<height>50</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<animation effect="zoom" start="100" end="120" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="200" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(55)">Unfocus</animation>
+					<visible>!Skin.HasSetting(HDiconOff)</visible>
+				</control>
                    </control>
 				</focusedlayout>
  

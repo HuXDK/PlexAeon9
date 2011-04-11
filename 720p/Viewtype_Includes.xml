@@ -2815,20 +2815,17 @@
 			<visible>Window.IsActive(2)</visible>
 		</control>
 	</include>
-<!--
-	<include name="MediaMenuButton_GamesPoster">
-		<control type="togglebutton" id="700042">
+
+	<include name="MediaMenuButton_HDiconOff">
+		<control type="radiobutton" id="700042">
 			<include>MediaMenuButton</include>
-			<label>$LOCALIZE[31059]</label>
-			<altlabel>$LOCALIZE[31056]</altlabel>
-			<usealttexture>Skin.HasSetting(listgamessquare)</usealttexture>
-			<onclick>Skin.SetBool(listgamessquare)</onclick>
-			<altclick>Skin.Reset(listgamessquare)</altclick>
-			<visible>Control.IsVisible(50) | Control.IsVisible(550)</visible>
-			<visible>Window.IsActive(1)</visible>
+			<label>HD Icon Off</label>
+			<onclick>Skin.ToggleSetting(HDiconOff)</onclick>
+			<selected>Skin.HasSetting(HDiconOff)</selected>
+			<visible>true</visible>
 		</control>
 	</include>
-
+<!--
 	<include name="MediaMenuButton_Setup">
 		<control type="button" id="700043">
 			<label>31016</label>
@@ -3488,7 +3485,6 @@
 				<include>MediaMenuButton_ClearList</include>
 				<include>MediaMenuButton_Random</include>
 				<include condition="Window.IsActive(500) | Window.IsActive(28)">MediaMenuButton_Playlist</include>
-		<!--	<include>MediaMenuButton_GamesPoster</include> -->
 				<include>MediaMenuButton_MultiplexStyle</include>
 				<include>Objects_AnoobieStyleButtons</include>
 		<!--	<include>MediaMenuButton_MultiplexFlow</include>-->
@@ -3521,6 +3517,7 @@
 				<include>MediaMenuButton_Sort</include> 
 				<include>MediaMenuButton_Filter</include>  -->
 				<include>MediaMenuButton_movieratingtext</include>
+				<include>MediaMenuButton_HDiconOff</include> 
 		<!--
 				<include>MediaMenuButton_Files</include> 
 				<include>MediaMenuButton_Setup</include> -->
@@ -4077,6 +4074,15 @@
 					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 					<info>ListItem.Overlay</info>
 				</control>
+				<control type="image">
+					<posx>43</posx>
+					<posy>127</posy>
+					<width>54</width>
+					<height>24</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+					<visible>!Skin.HasSetting(HDiconOff)</visible>
+				</control>
 			</itemlayout>
 			<focusedlayout width="105" height="129">
 				<control type="image">
@@ -4104,6 +4110,17 @@
 					<animation effect="zoom" center="45,75" start="115" end="100" time="450" delay="250" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
 					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
 					<info>ListItem.Overlay</info>
+				</control>
+				<control type="image">
+					<posx>43</posx>
+					<posy>127</posy>
+					<width>54</width>
+					<height>24</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="200" easing="out" tween="cubic" reversible="true">Focus</animation>					
+					<animation effect="zoom" center="45,75" start="115" end="100" time="450" delay="250" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
+					<visible>!Skin.HasSetting(HDiconOff)</visible>
 				</control>
 				
 			</focusedlayout>
@@ -6137,6 +6154,15 @@
                         <include>MovieFlowGlassOverlay</include>
 						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
                     </control>
+					<control type="image">
+						<posx>168</posx>
+						<posy>230</posy>
+						<width>54</width>
+						<height>28</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+						<visible>!Skin.HasSetting(HDiconOff)</visible>
+					</control>
 				    <control type="image">
 						<posx>185</posx>
 						<posy>18</posy>
@@ -6175,6 +6201,18 @@
 						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
 		   			</control>
+					<control type="image">
+						<posx>168</posx>
+						<posy>230</posy>
+						<width>54</width>
+						<height>28</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
+						<visible>!Skin.HasSetting(HDiconOff)</visible>
+					</control>
 				</focusedlayout>
  
                <itemlayout condition="Container.Content(episodes)" height="226" width="450">

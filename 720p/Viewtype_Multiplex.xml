@@ -995,7 +995,16 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<info>ListItem.Icon</info>
 		</control>
- 
+ 		<control type="image">
+			<posx>63</posx>
+			<posy>137</posy>
+			<width>54</width>
+			<height>23</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+			<visible>!Skin.HasSetting(HDiconOff)</visible>
+		</control>
+
 		<control type="image">
 			<include>MultiplexIconDimensionsWrap</include>
 			<bordertexture border="-3">wall/wall_movie_nfborder.png</bordertexture>
@@ -1059,6 +1068,16 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<info>ListItem.Icon</info>
 			<include>Animation_MultiplexFocusZoom</include>
+		</control>
+ 		<control type="image">
+			<posx>63</posx>
+			<posy>137</posy>
+			<width>54</width>
+			<height>23</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+			<include>Animation_MultiplexFocusZoom</include>
+			<visible>!Skin.HasSetting(HDiconOff)</visible>
 		</control>
  
 		<control type="image">

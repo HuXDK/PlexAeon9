@@ -257,6 +257,15 @@
 					<info>ListItem.Icon</info>
 					<bordertexture border="-17">thumbs/poster_shadow.png</bordertexture>
 				</control>		
+					<control type="image">
+						<posx>105</posx>
+						<posy>225</posy>
+						<width>64</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+					<visible>!Control.IsVisible(3327) + !Skin.HasSetting(HDiconOff)</visible>			
+					</control>
 				<control type="image">
 					<include>WatchedOverlayAnoobie2</include>
 					<visible>!Skin.HasSetting(nomovieoverlays) + !Control.IsVisible(3327)</visible>
@@ -285,7 +294,18 @@
 					<visible>!Skin.HasSetting(nomovieoverlays) + !Control.IsVisible(3327)</visible>
 					<info>ListItem.Overlay</info>
 				</control>
-
+					<control type="image">
+					<animation type="Focus">
+						<effect type="zoom" center="90,250" start="100" end="230" time="700" easing="inout" tween="back"/>
+					</animation>			
+						<posx>105</posx>
+						<posy>225</posy>
+						<width>64</width>
+						<height>40</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+					<visible>!Control.IsVisible(3327) + !Skin.HasSetting(HDiconOff)</visible>			
+				</control>
 			</focusedlayout>
 						
 		</control>	

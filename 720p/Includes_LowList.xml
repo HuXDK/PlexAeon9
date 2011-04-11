@@ -340,6 +340,15 @@
 			<include condition="!Skin.HasSetting(dvdcase)">LowList_PosterIconGlass</include>
 			<include condition="Skin.HasSetting(dvdcase)">LowList_DVDCaseGlass</include>
 		</control>
+			<control type="image">
+				<posx>200</posx>
+				<posy>355</posy>
+				<width>54</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+			<visible>!Skin.HasSetting(HDiconOff)</visible>			
+			</control>
 		<control type="image">
 			<description>DVD Case Double Thick Glass</description>
 			<include>LowList_DVDCaseGlass</include>
