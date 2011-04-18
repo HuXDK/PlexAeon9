@@ -6161,7 +6161,7 @@
 						<height>28</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
-						<visible>!Skin.HasSetting(HDiconOff)</visible>
+						<visible>!Skin.HasSetting(HDiconOff) + Skin.HasSetting(flattenflow)</visible>
 					</control>
 				    <control type="image">
 						<posx>185</posx>
@@ -6211,7 +6211,7 @@
 		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
 						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
-						<visible>!Skin.HasSetting(HDiconOff)</visible>
+						<visible>!Skin.HasSetting(HDiconOff) + Skin.HasSetting(flattenflow)</visible>
 					</control>
 				</focusedlayout>
  

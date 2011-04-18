@@ -19,6 +19,7 @@
 			<onfocus>Skin.SetBool(flattenshowcase)</onfocus>
 			<onfocus>Skin.SetBool(programs)</onfocus>
 			<onfocus>Skin.SetBool(DefaultsSet)</onfocus>
+			<onfocus>Skin.SetBool(cListmovieshowinfo)</onfocus>
 			<onfocus>ReloadSkin()</onfocus>
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
