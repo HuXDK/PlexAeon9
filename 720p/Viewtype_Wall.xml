@@ -225,14 +225,24 @@
 			</control>
 
 				<control type="image">
-					<posx>92</posx>
-					<posy>4</posy>
-					<width>20</width>
-					<height>20</height>
-					<texture>OverlayUnwatched.png</texture>
-					<info>ListItem.Overlay</info>
+					<posx>68</posx>
+					<posy>-1</posy>
+					<width>55</width>
+					<height>55</height>
+					<visible>Skin.HasSetting(BlueDot)</visible>
 					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-				</control>				
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="image">
+					<posx>68</posx>
+					<posy>-1</posy>
+					<width>55</width>
+					<height>55</height>
+					<visible>!Skin.HasSetting(BlueDot)</visible>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+					<texture>NewLabel/$INFO[ListItem.overlay]</texture>
+				</control>
+
 			</itemlayout>
 			<focusedlayout width="123" height="179" condition="!Skin.HasSetting(smallmoviewall)">
 				<control type="image">
@@ -242,20 +252,6 @@
 					<info>ListItem.Icon</info>
 					<animation effect="zoom" center="62,90" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
 				</control>
-		
-				<control type="image">
-					<posx>92</posx>
-					<posy>4</posy>
-					<width>20</width>
-					<height>20</height>
-					<texture>OverlayUnwatched.png</texture>
-					<info>ListItem.Overlay</info>
-					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-					<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="100" time="400" reversible="false" />
-						<effect type="zoom" center="62,90" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false" />
-					</animation>
-				</control>					
 			<control type="image">
 				<posx>73</posx>
 				<posy>150</posy>
@@ -265,10 +261,33 @@
 				<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
 				<visible>!Skin.HasSetting(HDiconOff)</visible>
 					<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="100" time="400" reversible="false" />
 						<effect type="zoom" center="62,90" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false" />
 					</animation>
 			</control>
+				<control type="image">
+					<posx>68</posx>
+					<posy>-1</posy>
+					<width>55</width>
+					<height>55</height>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="62,90" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false" />
+					</animation>
+					<visible>Skin.HasSetting(BlueDot)</visible>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="image">
+					<posx>68</posx>
+					<posy>-1</posy>
+					<width>55</width>
+					<height>55</height>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="62,90" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false" />
+					</animation>
+					<visible>!Skin.HasSetting(BlueDot)</visible>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+					<texture>NewLabel/$INFO[ListItem.overlay]</texture>
+				</control>
 			</focusedlayout>
 			<itemlayout width="101" height="146" condition="Skin.HasSetting(smallmoviewall)">
 				<control type="image">
@@ -277,7 +296,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<info>ListItem.Icon</info>
 				</control>
-
+<!--
 				<control type="image">
 					<posx>72</posx>
 					<posy>4</posy>
@@ -287,15 +306,34 @@
 					<info>ListItem.Overlay</info>
 					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 				</control>				
-			<control type="image">
-				<posx>53</posx>
-				<posy>117</posy>
-				<width>54</width>
-				<height>23</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
-				<visible>!Skin.HasSetting(HDiconOff)</visible>
-			</control>
+-->
+				<control type="image">
+					<posx>53</posx>
+					<posy>120</posy>
+					<width>54</width>
+					<height>20</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+					<visible>!Skin.HasSetting(HDiconOff)</visible>
+				</control>
+				<control type="image">
+					<posx>56</posx>
+					<posy>0</posy>
+					<width>45</width>
+					<height>45</height>
+					<visible>Skin.HasSetting(BlueDot)</visible>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="image">
+					<posx>56</posx>
+					<posy>0</posy>
+					<width>45</width>
+					<height>45</height>
+					<visible>!Skin.HasSetting(BlueDot)</visible>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+					<texture>NewLabel/$INFO[ListItem.overlay]</texture>
+				</control>
 			</itemlayout>
 			<focusedlayout width="101" height="146" condition="Skin.HasSetting(smallmoviewall)">
 				<control type="image">
@@ -306,19 +344,6 @@
 					<animation effect="zoom" center="44,71" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
 				</control>
 				<control type="image">
-					<posx>72</posx>
-					<posy>4</posy>
-					<width>20</width>
-					<height>20</height>
-					<texture>OverlayUnwatched.png</texture>
-					<info>ListItem.Overlay</info>
-					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-					<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="100" time="400" reversible="false" />
-						<effect type="zoom" center="44,71" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false" />
-					</animation>
-				</control>					
-				<control type="image">
 					<include>WallIconMovieDimensionsSmall</include>
 					<bordertexture border="-9">wall/wall_movie_fborder.png</bordertexture>
 					<texture>common/blank.png</texture>
@@ -328,18 +353,41 @@
 					</animation>
 				</control>					
 			<control type="image">
-				<posx>53</posx>
-				<posy>117</posy>
-				<width>54</width>
-				<height>23</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+					<posx>53</posx>
+					<posy>120</posy>
+					<width>54</width>
+					<height>20</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
 					<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="100" time="400" reversible="false" />
 						<effect type="zoom" center="44,71" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false" />
 					</animation>
 				<visible>!Skin.HasSetting(HDiconOff)</visible>
 			</control>
+				<control type="image">
+					<posx>56</posx>
+					<posy>0</posy>
+					<width>45</width>
+					<height>45</height>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="44,71" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false" />
+					</animation>
+					<visible>Skin.HasSetting(BlueDot)</visible>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="image">
+					<posx>56</posx>
+					<posy>0</posy>
+					<width>45</width>
+					<height>45</height>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="44,71" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false" />
+					</animation>
+					<visible>!Skin.HasSetting(BlueDot)</visible>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+					<texture>NewLabel/$INFO[ListItem.overlay]</texture>
+				</control>
 			</focusedlayout>			
 		</control>		
 

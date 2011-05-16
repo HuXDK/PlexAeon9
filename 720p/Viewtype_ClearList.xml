@@ -299,13 +299,25 @@
 				<visible>Window.IsActive(24) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 			</control>
 			<control type="image">
-				<posx>375</posx>
-				<posy>30</posy>
-				<width>17</width>
-				<height>15</height>
+				<posx>350</posx>
+				<posy>25</posy>
+				<width>53</width>
+				<height>53</height>
+				<aspectratio>keep</aspectratio>
 				<texture>$INFO[ListItem.Overlay]</texture>
 				<visible>Container.Content(Episodes) + !Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+				<visible>Skin.HasSetting(BlueDot)</visible>
 				<animation effect="fade" start="40" time="200" delay="3000" condition="true" pulse="true">Conditional</animation> 
+			</control>
+			<control type="image">
+				<posx>349</posx>
+				<posy>15</posy>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>NewLabel/episode/$INFO[ListItem.Overlay]</texture>
+				<visible>Container.Content(Episodes) + !Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+				<visible>!Skin.HasSetting(BlueDot)</visible>
 			</control>
 
 			<!-- Movie Infos -->
@@ -1044,23 +1056,33 @@
 						<visible>Container.Content(episodes) + !Skin.HasSetting(oldCListInfo)</visible>
 					</control>
 					<control type="image">
-						<posx>390</posx>
-						<posy>10</posy>
-						<width>65</width>
-						<height>20</height>
+						<posx>405</posx>
+						<posy>2</posy>
+						<width>53</width>
+						<height>53</height>
+						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-						<visible>!Container.Content(albums)</visible>
-		     		   <animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+						<visible>!Container.Content(albums) + Skin.HasSetting(BlueDot)</visible>
+					</control>
+					<control type="image">
+						<posx>405</posx>
+						<posy>-2</posy>
+						<width>43</width>
+						<height>43</height>
+						<aspectratio>keep</aspectratio>
+						<texture>NewLabel/$INFO[ListItem.Overlay]</texture>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>!Container.Content(albums) + !Skin.HasSetting(BlueDot)</visible>
 					</control>
 
 				</itemlayout>
 				<focusedlayout width="450" height="40">
 					<control type="image">
 						<posx>-12</posx>
-						<posy>-20</posy>
+						<posy>-1</posy>
 						<width>473</width>
-						<height>79</height>
+						<height>40</height>
 						<include condition="!Skin.HasSetting(Lightclearlist)">cList_NightButtonTextureFocus</include>
 						<include condition="Skin.HasSetting(Lightclearlist)">cList_LightButtonTextureFocus</include>
 					</control>
@@ -1127,14 +1149,22 @@
 						<visible>Container.Content(episodes) + !Skin.HasSetting(oldCListInfo)</visible>
 					</control>
 					<control type="image">
-						<posx>390</posx>
-						<posy>10</posy>
-						<width>65</width>
-						<height>20</height>
+						<posx>405</posx>
+						<posy>2</posy>
+						<width>53</width>
+						<height>53</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-						<visible>!Container.Content(albums)</visible>
-		    	    	<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>!Container.Content(albums) + Skin.HasSetting(BlueDot)</visible>
+					</control>
+					<control type="image">
+						<posx>405</posx>
+						<posy>-2</posy>
+						<width>43</width>
+						<height>43</height>
+						<texture>NewLabel/$INFO[ListItem.Overlay]</texture>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>!Container.Content(albums) + !Skin.HasSetting(BlueDot)</visible>
 					</control>
 
 				</focusedlayout>
@@ -1157,113 +1187,6 @@
 					<scroll>false</scroll>
 				</control>
 			</control>
-<!--
-				<control type="image">
-					<posx>745</posx>
-					<posy>638</posy>
-					<align>center</align>
-					<width>240</width>
-					<height>32</height>
-					<texture>multiplex/multiplex_trailer_label.png</texture>
-					<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(cListmovieshowinfo)</visible>
-					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasVideo">Conditional</animation>
-				</control>
-
-				<control type="label">
-					<posx>745</posx>
-					<posy>642</posy>
-					<align>center</align>
-					<width>240</width>
-					<height>32</height>
-					<font>Font_MultiplexPlot</font>
-					<label>Press Right to see trailer</label>
-					<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(cListmovieshowinfo)</visible>
-					<colordiffuse>d0FFFFFF</colordiffuse>
-					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
-				</control>
--->
-			<!--<<<<< Title (top) -->
-			<!-- Num Items (bottom) >>>>>-->
-<!--
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>330</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31927]</label>
-				<visible>Container.Content(artists)</visible>
-			</control>
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>330</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31934]</label>
-				<visible>Container.Content(movies)</visible>
-			</control>
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>330</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31938]</label>
-				<visible>Container.Content(episodes)</visible>
-			</control>
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>330</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31937]</label>
-				<visible>Container.Content(seasons)</visible>
-			</control>
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>330</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31933]</label>
-				<visible>Container.Content(tvshows)</visible>
-			</control>
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>330</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31924]</label>
-				<visible>Container.Content(actors)</visible>
-			</control>
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>330</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31925]</label>
-				<visible>Container.Content(directors)</visible>
-			</control>
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>330</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31926]</label>
-				<visible>Container.Content(studios)</visible>
-			</control>
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>310</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31928]</label>
-				<visible>Container.Content(albums)</visible>
-			</control>
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>310</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31935]</label>
-				<visible>Container.Content(files)</visible>
-			</control>
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>310</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31936]</label>
-				<visible>Window.IsActive(500) | [Window.IsActive(502) + Container.Content(songs)]</visible>
-			</control>
-			<control type="label" id="161">
-				<include>cList_NumItems</include>
-				<width>310</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31935]</label>
-				<visible>Window.IsActive(2)</visible>
-			</control>
-			<control type="label">
-				<include>cList_NumItems</include>
-				<width>330</width>
-				<label>$INFO[Container(54).NumItems] $LOCALIZE[31935]</label>
-				<visible>!Control.IsVisible(161)</visible>
-			</control>
-			<!--<<<<< Num Items (bottom)-->
 		<control type="group">
 			<posx>620</posx>
 			<posy>50</posy>

@@ -820,7 +820,7 @@
 				<orientation>horizontal</orientation>
 				<height>85</height>
 				<itemgap>10</itemgap>
-				<animation effect="slide" end="-900,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
+				<animation effect="slide" end="-910,0" time="0" condition="!Control.IsVisible(54)">Conditional</animation>
 				<animation effect="slide" end="-75,0" time="0" condition="Control.IsVisible(54) + Container.Content(movies)">Conditional</animation>
 
 				<control type="image">
@@ -876,20 +876,24 @@
 	<include name="WatchedOverlayAnoobie3">
 		<posx>58</posx>
 		<posy>16</posy>
-		<width>25</width>
-		<height>25</height>
+		<width>43</width>
+		<height>43</height>
 	</include>
 
 	<include name="WatchedOverlayAnoobie2">
-		<posx>140</posx>
-		<posy>25</posy>
-		<width>25</width>
-		<height>25</height>
+		<posx>119</posx>
+		<posy>16</posy>
+		<width>60</width>
+		<height>60</height>
 	</include>
 
 	<!-- SHOWCASE -->
 	<!-- Watched Overlay -->
 	<include name="WatchedOverlayShowCaseNormal">
+		<include condition="Skin.HasSetting(WatchedBlueDot)">WatchedOverlayShowCaseNormalBlueDot</include>
+		<include condition="!Skin.HasSetting(WatchedNew)">WatchedOverlayShowCaseNormalNew</include>
+	</include>
+	<include name="WatchedOverlayShowCaseNormalBlueDot">
 		<posx>187</posx>
 		<posy>15</posy>
 		<width>25</width>
@@ -897,11 +901,19 @@
 		<aspectratio>keep</aspectratio>
 	</include>
 
+	<include name="WatchedOverlayShowCaseNormalNew">
+		<posx>159</posx>
+		<posy>3</posy>
+		<width>65</width>
+		<height>65</height>
+		<aspectratio>keep</aspectratio>
+	</include>
+
 	<include name="WatchedOverlayShowCaseDVD">
-		<posx>181</posx>
-		<posy>30</posy>
-		<width>25</width>
-		<height>25</height>
+		<posx>165</posx>
+		<posy>23</posy>
+		<width>60</width>
+		<height>60</height>
 		<aspectratio>keep</aspectratio>
 	</include>
 
@@ -926,10 +938,10 @@
 
 	<!-- Watched Overlay -->
 	<include name="WatchedOverlayMultiPlexNormal">
-		<posx>83</posx>
-		<posy>4</posy>
-		<width>25</width>
-		<height>25</height>
+		<posx>70</posx>
+		<posy>-2</posy>
+		<width>43</width>
+		<height>43</height>
 	</include>
 
 	<include name="WatchedOverlayMultiPlexNormalFlow">
@@ -940,10 +952,10 @@
 	</include>
 
 	<include name="WatchedOverlayMultiPlexDVD">
-		<posx>79</posx>
-		<posy>9</posy>
-		<width>25</width>
-		<height>25</height>
+		<posx>72</posx>
+		<posy>5</posy>
+		<width>40</width>
+		<height>40</height>
 	</include>
 
 	<include name="WatchedOverlayMultiPlexDVDFlow">
@@ -2669,6 +2681,15 @@
 			<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 		</control>
 	</include>
+	<include name="WatchedIcon">
+		<control type="radiobutton" id="700043">
+			<label> - Blue Dot Icon</label>
+			<include>MediaMenuButton</include>
+			<onclick>Skin.ToggleSetting(BlueDot)</onclick>
+			<selected>Skin.HasSetting(BlueDot)</selected>
+			<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+		</control>
+	</include>
 	<include name="MediaMenuButton_Curtains">
 		<control type="radiobutton" id="700040">
 			<include>MediaMenuButton</include>
@@ -2698,12 +2719,12 @@
 	<include name="MediaMenuButton_DimFanart">
 		<control type="radiobutton" id="711028">
 			<include>MediaMenuButton</include>
-			<label>$LOCALIZE[31022]</label>
+			<label> - $LOCALIZE[31022]</label>
 			<selected>Skin.HasSetting(DimFanart)</selected>
 			<usealttexture>!Skin.HasSetting(DimFanart)</usealttexture>
 			<onclick>Skin.ToggleSetting(DimFanart)</onclick>
 			<onclick>XBMC.ReloadSkin</onclick>
-			<visible>true</visible>
+			<visible>[Container.Content(Movies) + !Skin.HasSetting(NoMovieFanart)] | [[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)] + !Skin.HasSetting(NoTVFanart)]</visible>
 		</control>
 	</include>
 	<include name="MediaMenuButton_LightNight">
@@ -2825,14 +2846,8 @@
 			<visible>true</visible>
 		</control>
 	</include>
+
 <!--
-	<include name="MediaMenuButton_Setup">
-		<control type="button" id="700043">
-			<label>31016</label>
-			<include>MediaMenuButton</include>
-			<onclick>XBMC.ActivateWindow(VideosSettings)</onclick>
-			<visible>!Skin.HasSetting(nomenusettings) + [Window.IsActive(myvideofiles) | Window.IsActive(28)]</visible>
-		</control>
 		<control type="button" id="700044">
 			<label>31016</label>
 			<include>MediaMenuButton</include>
@@ -3509,13 +3524,14 @@
 				<include>MediaMenuButton_DVDCases</include>
 				<include>MediaMenuButton_WallInfo</include> 
 				<include>MediaMenuButton_Overlay</include>
-				<include>MediaMenuButton_Flags</include>
+				<include>WatchedIcon</include>
 		<!--	<include>MediaMenuButton_Fanart</include>  -->
-				<include>MediaMenuButton_DimFanart</include>
 				<include>MediaMenuButton_Curtains</include>
+				<include>MediaMenuButton_DimFanart</include>
 		<!--	<include>MediaMenuButton_Watched</include>
 				<include>MediaMenuButton_Sort</include> 
 				<include>MediaMenuButton_Filter</include>  -->
+				<include>MediaMenuButton_Flags</include>
 				<include>MediaMenuButton_movieratingtext</include>
 				<include>MediaMenuButton_HDiconOff</include> 
 		<!--
@@ -4067,21 +4083,31 @@
 				    <texture>thumbs/poster_glass_noedge.png</texture>
 				</control>		
 				<control type="image">
-					<posx>63</posx>
-					<posy>23</posy>
-					<width>23</width>
-					<height>23</height>
-					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+					<posx>48</posx>
+					<posy>131</posy>
+					<width>54</width>
+					<height>20</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+					<visible>!Skin.HasSetting(HDiconOff)</visible>
+				</control>
+				<control type="image">
+					<posx>43</posx>
+					<posy>18</posy>
+					<width>50</width>
+					<height>50</height>
+					<visible>Skin.HasSetting(BlueDot)</visible>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 					<info>ListItem.Overlay</info>
 				</control>
 				<control type="image">
 					<posx>43</posx>
-					<posy>127</posy>
-					<width>54</width>
-					<height>24</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
-					<visible>!Skin.HasSetting(HDiconOff)</visible>
+					<posy>18</posy>
+					<width>50</width>
+					<height>50</height>
+					<visible>!Skin.HasSetting(BlueDot)</visible>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+					<texture>NewLabel/$INFO[ListItem.overlay]</texture>
 				</control>
 			</itemlayout>
 			<focusedlayout width="105" height="129">
@@ -4102,25 +4128,37 @@
 					<animation effect="zoom" center="45,75" start="115" end="100" time="400" delay="200" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
 				</control>		
 				<control type="image">
-					<posx>63</posx>
-					<posy>23</posy>
-					<width>23</width>
-					<height>23</height>
+					<posx>48</posx>
+					<posy>131</posy>
+					<width>54</width>
+					<height>20</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
 					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="200" easing="out" tween="cubic" reversible="true">Focus</animation>					
-					<animation effect="zoom" center="45,75" start="115" end="100" time="450" delay="250" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
-					<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+					<animation effect="zoom" center="45,75" start="115" end="100" time="400" delay="200" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
+					<visible>!Skin.HasSetting(HDiconOff)</visible>
+				</control>
+				<control type="image">
+					<posx>43</posx>
+					<posy>18</posy>
+					<width>50</width>
+					<height>50</height>
+					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="200" easing="out" tween="cubic" reversible="true">Focus</animation>					
+					<animation effect="zoom" center="45,75" start="115" end="100" time="400" delay="200" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
+					<visible>Skin.HasSetting(BlueDot)</visible>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 					<info>ListItem.Overlay</info>
 				</control>
 				<control type="image">
 					<posx>43</posx>
-					<posy>127</posy>
-					<width>54</width>
-					<height>24</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
+					<posy>18</posy>
+					<width>50</width>
+					<height>50</height>
 					<animation effect="zoom" center="45,75" start="100" end="115" time="400" delay="200" easing="out" tween="cubic" reversible="true">Focus</animation>					
-					<animation effect="zoom" center="45,75" start="115" end="100" time="450" delay="250" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
-					<visible>!Skin.HasSetting(HDiconOff)</visible>
+					<animation effect="zoom" center="45,75" start="115" end="100" time="400" delay="200" easing="out" tween="cubic" reversible="true">Unfocus</animation>					
+					<visible>!Skin.HasSetting(BlueDot)</visible>
+					<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+					<texture>NewLabel/$INFO[ListItem.overlay]</texture>
 				</control>
 				
 			</focusedlayout>
@@ -4162,7 +4200,7 @@
 	    <width>173</width>
 	    <height>254</height>
     </include>
-  
+ 
 	<include name="MovieFlowThumb">
 	    <include>MovieFlowThumbDimensions</include>
 		<align>center</align>
@@ -4179,6 +4217,21 @@
 	</include>
 
 <!-- Movie Flow Variables: Thumb glass overlays -->
+	<include name="MovieWatchedIcon">
+		<posx>156</posx>
+		<posy>7</posy>
+		<width>65</width>
+		<height>65</height>
+		<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+	</include>
+
+	<include name="TVWatchedIcon">
+		<posx>-478</posx>
+		<posy>15</posy>
+		<width>65</width>
+		<height>65</height>
+		<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+    </include>
 	
 	<include name="MovieFlowGlassOverlayDimensions">
 	    <posx>17</posx>
@@ -4294,9 +4347,9 @@
 
 	<include name="FlowMainLabel">
 		<include>FlowLabelVars</include>
-	    <posy>88</posy>
+	    <posy>92</posy>
 	    <font>Font_MediaWindowTitle</font>
-		<textcolor>9b3cd2fd</textcolor>
+		<textcolor>FF2446B5</textcolor>
 	</include>
 
 	<include name="FlowDetailLabel">
@@ -5202,15 +5255,15 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(6).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(6).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5230,15 +5283,15 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(5).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(5).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5258,15 +5311,15 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(4).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(4).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5286,15 +5339,15 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(3).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(3).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5314,15 +5367,15 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(2).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(2).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5342,15 +5395,15 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(1).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(1).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5375,15 +5428,15 @@
 	                        <include>MovieFlowOverlay</include>
 	                    </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(0).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(0).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	                </control>
 	            </control>
 	            <control type="group">
@@ -5404,15 +5457,15 @@
 	                        <include>MovieFlowOverlay</include>
 	                    </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(-1).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(-1).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	                </control>
 	            </control>
 	        </control>
@@ -5440,15 +5493,15 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(7).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(7).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5468,15 +5521,15 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(6).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(6).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5496,15 +5549,15 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(5).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(5).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5524,15 +5577,15 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(4).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			   			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-					</control>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(4).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	            </control>
 	        </control>
 	        <control type="group">
@@ -5552,14 +5605,14 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(3).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(3).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
 		   			</control>
 	            </control>
 	        </control>
@@ -5580,14 +5633,14 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(2).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(2).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
 		   			</control>
 	            </control>
 	        </control>
@@ -5722,16 +5775,16 @@
 	                        <description>Black overlay</description>
 	                        <include>MovieFlowOverlay</include>
 	                    </control>
-					    <control type="image">
-							<posx>185</posx>
-							<posy>18</posy>
-							<width>25</width>
-							<height>25</height>
-							<aspectratio>keep</aspectratio>
-							<info>ListItem(0).Overlay</info>
-							<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-			   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<info>ListItem(0).Overlay</info>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(0).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	                </control>
 	            </control>
 	            <control type="group">
@@ -5751,16 +5804,16 @@
 	                        <description>Black overlay</description>
 	                        <include>MovieFlowOverlay</include>
 	                    </control>
-					    <control type="image">
-							<posx>185</posx>
-							<posy>18</posy>
-							<width>25</width>
-							<height>25</height>
-							<aspectratio>keep</aspectratio>
-							<info>ListItem(1).Overlay</info>
-							<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-			      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-			   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<info>ListItem(0).Overlay</info>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(0).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
+		   			</control>
 	                </control>
 	            </control>
 	        </control>
@@ -5926,14 +5979,14 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(6).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(6).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
 		   			</control>
 	            </control>
 	        </control>
@@ -5958,14 +6011,14 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(5).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(5).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
 		   			</control>
 	            </control>
 	        </control>
@@ -5990,14 +6043,14 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(4).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(4).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
 		   			</control>
 	            </control>
 	        </control>
@@ -6022,14 +6075,14 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(3).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(3).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
 		   			</control>
 	            </control>
 	        </control>
@@ -6054,14 +6107,14 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(2).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(2).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
 		   			</control>
 	            </control>
 	        </control>
@@ -6086,14 +6139,14 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(1).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(1).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
 		   			</control>
 	            </control>
 	        </control>
@@ -6113,14 +6166,14 @@
 	                    <include>MovieFlowOverlay</include>
 	                </control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem(0).Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem(0).overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
 		   			</control>
 	            </control>
 	        </control>
@@ -6164,14 +6217,14 @@
 						<visible>!Skin.HasSetting(HDiconOff) + Skin.HasSetting(flattenflow)</visible>
 					</control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem.Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes) + Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem.overlay]</texture>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes) + !Skin.HasSetting(BlueDot)</visible>
 		   			</control>
 				</itemlayout>
                 <focusedlayout condition="!Container.Content(episodes)" height="350" width="196">
@@ -6190,14 +6243,16 @@
 						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
 					</control>
 				    <control type="image">
-						<posx>185</posx>
-						<posy>18</posy>
-						<width>25</width>
-						<height>25</height>
+                        <include>MovieWatchedIcon</include>
 						<info>ListItem.Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes)</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes) + Skin.HasSetting(BlueDot)</visible>
+						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
+		   			</control>
+				    <control type="image">
+                        <include>MovieWatchedIcon</include>
+						<texture>NewLabel/$INFO[ListItem.overlay]</texture>
+						<visible>Skin.HasSetting(flattenflow) + !Control.IsVisible(9000) + !Container.Content(episodes) + !Skin.HasSetting(BlueDot)</visible>
 						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
 		   			</control>
@@ -6208,7 +6263,6 @@
 						<height>28</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),hd/,.png]</texture>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
 						<animation effect="zoom" start="100" end="110" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="135,130" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
 						<visible>!Skin.HasSetting(HDiconOff) + Skin.HasSetting(flattenflow)</visible>
@@ -6227,13 +6281,14 @@
 						<visible>Container.Content(episodes)</visible>
                     </control>
 				    <control type="image">
-						<posx>-460</posx>
-						<posy>35</posy>
-						<width>25</width>
-						<height>25</height>
+                        <include>TVWatchedIcon</include>
 						<info>ListItem.Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-		      			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+				    <control type="image">
+                        <include>TVWatchedIcon</include>
+						<texture>NewLabel/episode/$INFO[ListItem.overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
 		   			</control>
 				</itemlayout>
                 <focusedlayout condition="Container.Content(episodes)" height="226" width="450">
@@ -6250,12 +6305,16 @@
 						<animation effect="zoom" start="110" end="100" center="auto" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
                    </control>
 				    <control type="image">
-						<posx>-460</posx>
-						<posy>35</posy>
-						<width>25</width>
-						<height>25</height>
+                        <include>TVWatchedIcon</include>
 						<info>ListItem.Overlay</info>
-						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>Skin.HasSetting(BlueDot)</visible>
+						<animation effect="zoom" center="-616,135" start="100" end="110" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
+						<animation effect="zoom" center="-616,135" start="110" end="100" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
+		   			</control>
+				    <control type="image">
+                        <include>TVWatchedIcon</include>
+						<texture>NewLabel/episode/$INFO[ListItem.overlay]</texture>
+						<visible>!Skin.HasSetting(BlueDot)</visible>
 						<animation effect="zoom" center="-616,135" start="100" end="110" time="400" delay="300" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" center="-616,135" start="110" end="100" time="400" delay="300" easing="out" reversible="false" tween="cubic">Unfocus</animation>
 		   			</control>

@@ -30,12 +30,39 @@
 			<posx>35</posx>
 			<posy>235</posy>
 			<font>special15</font>
-			<onfocus>SetFocus(300)</onfocus>
+			<onfocus>SetFocus(334)</onfocus>
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<visible>Skin.HasSetting(DefaultsSet)</visible>
 		</control>
-		<control type="label">
+ 		<control type="button" id="334">
+	      <description>Home Menu Offset</description>
+    	  <posx>-20</posx>
+ 	      <posy>-20</posy>
+   	  	  <width>1</width>
+   	  	  <height>1</height>
+   	  	  <label>-</label>
+   	  	  <font>-</font>
+   	      <onfocus>Control.Move(300,$INFO[Skin.String(HomeFocusOffset)])</onfocus>
+   	      <onfocus>SetFocus(300)</onfocus>
+ 		  <texturenofocus>-</texturenofocus>
+   	      <texturefocus>-</texturefocus>
+   	      <visible>Window.Previous(startup) + Skin.HasSetting(customstartupfocus)</visible>
+  		</control>
+ 		<control type="button" id="334">
+	      <description>Home Menu Offset</description>
+    	  <posx>-20</posx>
+ 	      <posy>-20</posy>
+   	  	  <width>1</width>
+   	  	  <height>1</height>
+   	  	  <label>-</label>
+   	  	  <font>-</font>
+   	      <onfocus>SetFocus(300)</onfocus>
+   	      <texturenofocus>-</texturenofocus>
+   	      <texturefocus>-</texturefocus>
+   	      <visible>!Window.Previous(startup) | !Skin.HasSetting(customstartupfocus)</visible>
+  		</control>
+ 		<control type="label">
 			<description>Force Weather update on load</description>
 			<posx>0</posx>
 			<posy>-100</posy>
@@ -75,7 +102,21 @@
 		<animation effect="fade" start="20" end="70" time="500">Visible</animation>
 		<animation effect="fade" end="0" time="600">Hidden</animation>
 		<imagepath>../../../userdata/Thumbnails/PlexMediaServer/Fanart/</imagepath>
-		<visible>Skin.HasSetting(FanartSlideshow)</visible>
+		<visible>Skin.HasSetting(FanartSlideshow) + !Skin.HasSetting(CustomFanartSlideshow)</visible>
+	</control>
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<animation effect="fade" start="20" end="70" time="500">Visible</animation>
+		<animation effect="fade" end="0" time="600">Hidden</animation>
+		<info>Skin.String(CustomFanartSlideshowFolder)</info>
+		<visible>Skin.HasSetting(FanartSlideshow) + Skin.HasSetting(CustomFanartSlideshow)</visible>
 	</control>
 
 		<include condition="!Skin.HasSetting(FanartSlideshow)">Background_Wallpaper</include>

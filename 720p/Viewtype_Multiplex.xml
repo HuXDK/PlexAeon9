@@ -1024,13 +1024,19 @@
 			<info>ListItem.Icon</info>
 		</control>
  
-		<control type="image">
+ 		<control type="image">
 			<include>WatchedOverlayMultiPlexNormal</include>
-			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+			<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			<visible>Skin.HasSetting(BlueDot)</visible>
 			<info>ListItem.Overlay</info>
 		</control>
- 
+		<control type="image">
+			<include>WatchedOverlayMultiPlexNormal</include>
+			<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			<visible>!Skin.HasSetting(BlueDot)</visible>
+			<texture>NewLabel/$INFO[ListItem.overlay]</texture>
+		</control>
+
 	</include>
  
 	<include name="MultiplexNormalCoversFocus">
@@ -1082,12 +1088,19 @@
  
 		<control type="image">
 			<include>WatchedOverlayMultiPlexNormal</include>
-			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nomovieoverlays)</visible>
+			<visible>Skin.HasSetting(BlueDot)</visible>
+			<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 			<info>ListItem.Overlay</info>
 			<include>Animation_MultiplexFocusZoom</include>
 		</control>
- 
+		<control type="image">
+			<include>WatchedOverlayMultiPlexNormal</include>
+			<visible>!Skin.HasSetting(BlueDot)</visible>
+			<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			<texture>NewLabel/$INFO[ListItem.overlay]</texture>
+			<include>Animation_MultiplexFocusZoom</include>
+		</control>
+
 	</include>
  
 	<include name="MultiplexDVDCoversNoFocus">
@@ -1137,18 +1150,17 @@
  
 		<control type="image">
 			<include>WatchedOverlayMultiPlexDVD</include>
-			<include>detailcolornofocus</include>
-			<visible>Container.Content(movies) + !Skin.HasSetting(nomovieoverlays)</visible>
+			<visible>Skin.HasSetting(BlueDot)</visible>
+			<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 			<info>ListItem.Overlay</info>
-			<include>Animation_MultiplexFocusZoomDVD</include>
+			<include>Animation_MultiplexFocusZoom</include>
 		</control>
- 
 		<control type="image">
 			<include>WatchedOverlayMultiPlexDVD</include>
-			<include>detailcolornofocus</include>
-			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(notvoverlays)</visible>
-			<info>ListItem.Overlay</info>
-			<include>Animation_MultiplexFocusZoomDVD</include>
+			<visible>!Skin.HasSetting(BlueDot)</visible>
+			<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			<texture>NewLabel/$INFO[ListItem.overlay]</texture>
+			<include>Animation_MultiplexFocusZoom</include>
 		</control>
  
 	</include>
@@ -1207,23 +1219,23 @@
  
 		<control type="image">
 			<include>WatchedOverlayMultiPlexDVD</include>
-			<include>detailcolornofocus</include>
-			<visible>Container.Content(movies) + !Skin.HasSetting(nomovieoverlays)</visible>
+			<visible>Skin.HasSetting(BlueDot)</visible>
+			<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 			<info>ListItem.Overlay</info>
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>
- 
 		<control type="image">
 			<include>WatchedOverlayMultiPlexDVD</include>
-			<include>detailcolornofocus</include>
-			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(notvoverlays)</visible>
-			<info>ListItem.Overlay</info>
+			<visible>!Skin.HasSetting(BlueDot)</visible>
+			<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			<texture>NewLabel/$INFO[ListItem.overlay]</texture>
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>
  
 	</include>
  
 	<!-- TV Shows -->
+<!--
 	<include name="MultiplexTVCaseNormalNoFocus">
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrap</include>
@@ -1263,10 +1275,16 @@
 		</control>
  
 		<control type="image">
-			<include>WatchedOverlayMultiPlexTVNormal</include>
-			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(notvoverlays)</visible>
+			<include>WatchedOverlayMultiPlexNormal</include>
+			<visible>!Skin.HasSetting(noTVoverlays) + Skin.HasSetting(BlueDot)</visible>
 			<info>ListItem.Overlay</info>
+			<include>Animation_MultiplexFocusZoom</include>
+		</control>
+		<control type="image">
+			<include>WatchedOverlayMultiPlexNormal</include>
+			<visible>!Skin.HasSetting(noTVoverlays) + !Skin.HasSetting(BlueDot)</visible>
+			<texture>NewLabel/$INFO[ListItem.overlay]</texture>
+			<include>Animation_MultiplexFocusZoom</include>
 		</control>
  
 	</include>
@@ -1316,10 +1334,16 @@
 		</control>
  
 		<control type="image">
-			<include>WatchedOverlayMultiPlexTVNormal</include>
-			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(notvoverlays)</visible>
+			<include>WatchedOverlayMultiPlexNormal</include>
+			<visible>!Skin.HasSetting(noTVoverlays) + Skin.HasSetting(BlueDot)</visible>
 			<info>ListItem.Overlay</info>
+			<include>Animation_MultiplexFocusZoom</include>
+		</control>
+		<control type="image">
+			<include>WatchedOverlayMultiPlexNormal</include>
+			<visible>!Skin.HasSetting(noTVoverlays) + !Skin.HasSetting(BlueDot)</visible>
+			<texture>NewLabel/$INFO[ListItem.overlay]</texture>
+			<include>Animation_MultiplexFocusZoom</include>
 		</control>
  
 	</include>
@@ -1428,7 +1452,7 @@
 		</control>
  
 	</include>
- 
+--> 
 	<include name="Viewtype_Multiplex">
 
 		<control type="group">

@@ -153,12 +153,39 @@
 			<onright>7</onright>
 			<visible>Control.HasFocus(7) | ControlGroup(911).HasFocus</visible>
 
+         <control type="radiobutton" id="509">
+            <label>Home Menu Focus on Startup</label>
+			<include>Objects_SettingsDefaultRadioButton</include>
+            <onclick>Skin.ToggleSetting(customstartupfocus)</onclick>
+            <selected>Skin.HasSetting(customstartupfocus)</selected>
+          </control>
+          <control type="button" id="510">
+            <label> - Set Offset of Home Menu Focus on Startup</label>
+			<label2>$INFO[Skin.String(HomeFocusOffset)]</label2>
+			<include>Objects_SettingsDefaultRadioButton</include>
+            <onclick>Skin.SetString(HomeFocusOffset)</onclick>
+            <visible>Skin.HasSetting(customstartupfocus)</visible>
+          </control>
 			<control type="radiobutton" id="508">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>Use Fanart Slideshow</label>
 				<onclick>Skin.ToggleSetting(FanartSlideshow)</onclick>
 				<selected>Skin.HasSetting(FanartSlideshow)</selected>
 			</control>
+			<control type="radiobutton" id="511">
+				<include>Objects_SettingsDefaultRadioButton</include>
+				<label> - Set Custom folder for Fanart Slideshow</label>
+				<onclick>Skin.ToggleSetting(CustomFanartSlideshow)</onclick>
+				<selected>Skin.HasSetting(CustomFanartSlideshow)</selected>
+           		<visible>Skin.HasSetting(FanartSlideshow)</visible>
+			</control>
+          <control type="button" id="512">
+            <label> - Custom Fanart slideshow folder </label>
+			<label2>$INFO[Skin.String(CustomFanartSlideshowFolder)]</label2>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<onclick>Skin.SetPath(CustomFanartSlideshowFolder)</onclick>
+            <visible>Skin.HasSetting(CustomFanartSlideshow) + Skin.HasSetting(FanartSlideshow)</visible>
+          </control>
 			<control type="radiobutton" id="500">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31261</label>
@@ -217,7 +244,7 @@
 					<label>32015</label>
 					<label2>$INFO[Skin.String(startuplocation)]</label2>
 					<onclick>Skin.SetFile(startuplocation)</onclick>
-					<enable>Skin.HasSetting(startplay)</enable>
+					<visible>Skin.HasSetting(startplay)</visible>
 			</control>	
 		</control>
 

@@ -1006,13 +1006,14 @@
 				<include>FullscreenDimensions</include>
 			</control>
 		</control>
-
+<!--
 		<control type="group">
 			<visible>!Skin.HasSetting(homevis) + Player.HasAudio</visible>			
 			<control type="visualisation">
 				<include>FullscreenDimensions</include>
 			</control>
 		</control>
+-->
 		<control type="image">
 			<posx>0</posx>
 			<posy>240</posy>

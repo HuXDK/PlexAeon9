@@ -147,17 +147,17 @@
 	</include>
 
 	<include name="WatchedOverlaySlim_Low">
-		<posx>572</posx>
-		<posy>10</posy>
-		<width>65</width>
-		<height>20</height>
+		<posx>587</posx>
+		<posy>-3</posy>
+		<width>45</width>
+		<height>45</height>
 	</include>
 
 	<include name="WatchedOverlayFull_Low">
-		<posx>572</posx>
-		<posy>10</posy>
-		<width>65</width>
-		<height>20</height>
+		<posx>589</posx>
+		<posy>-2</posy>
+		<width>45</width>
+		<height>45</height>
 	</include>
 
 	<include name="ListLabel_Detail_LowTV_Low">
@@ -355,11 +355,9 @@
 			<posx>69</posx>
 			<posy>39</posy>
 			<height>1</height>
-			<width>536</width>
+			<width>563</width>
 			<texture>lowlist/lowlistpanel_line.png</texture>
 		        <animation effect="slide" start="0,0" end="0,26" time="0" condition="[Window.IsActive(myvideofiles) + Skin.HasSetting(movieslistfull)+!Container.Content(episodes)+!Container.Content(seasons)+!Container.Content(tvshows)] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + [[Container.Content(artists) + Skin.HasSetting(artistlistfull)] | [Container.Content(albums) + Skin.HasSetting(albumlistfull)] | [Container.Content(songs) + Skin.HasSetting(songlistfull)]]] + [!Window.IsActive(24) + !Window.IsActive(2)]">Conditional</animation>  
-			<animation effect="slide" start="30,0" end="30,0" time="0" condition="Container.Content(tvshows) | Container.Content(series)">Conditional</animation>
-<!--			<animation effect="zoom" end="104,0,496,1" time="0" condition="Container.Content(episodes)">Conditional</animation> -->
 		</control>
 	</include>
 
@@ -406,7 +404,7 @@
 
 			<control type="image">
 				<description>Left list background texture (track number)</description>
-				<posx>265</posx>
+				<posx>255</posx>
 				<posy>503</posy>
 				<width>35</width>
 				<height>327</height>
@@ -421,7 +419,7 @@
 
 			<control type="image">
 				<description>Right list background texture (detailslim)</description>
-				<posx>802</posx>
+				<posx>792</posx>
 				<posy>503</posy>
 				<width>44</width>
 				<height>327</height>
@@ -433,7 +431,7 @@
 
 			<control type="image">
 				<description>Right list background texture (detailfull)</description>
-				<posx>749</posx>
+				<posx>739</posx>
 				<posy>503</posy>
 				<width>97</width>
 				<height>327</height>
@@ -446,7 +444,7 @@
 			<!-- Beginning of List control -->
 			<control type="fixedlist" id="551">
 				<viewtype label="31580">list</viewtype>
-				<posx>260</posx>
+				<posx>250</posx>
 				<posy>503</posy>
 				<width>651</width>
 				<height>327</height>
@@ -522,14 +520,18 @@
 						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
 						<visible>[!Control.IsVisible(76) + Container.Content(movies)] | Container.Content(albums)</visible>
 					</control>
-
-					<control type="image">
+		  			<control type="image">
 						<include>WatchedOverlaySlim_Low</include>
-						<include>detailcolornofocus</include>
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-						<visible>!Container.Content(Albums)</visible>
 						<info>ListItem.Overlay</info>
-		     		    <animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+						<visible>!Container.Content(albums) + Skin.HasSetting(BlueDot)</visible>
+						<animation effect="slide" start="0,0" end="0,7" time="0" condition="true">Conditional</animation>
+		   			</control>
+		   			<control type="image">
+						<include>WatchedOverlaySlim_Low</include>
+						<texture>NewLabel/$INFO[ListItem.Overlay]</texture>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>!Container.Content(albums) + !Skin.HasSetting(BlueDot)</visible>
 					</control>
 
 				</itemlayout>
@@ -538,13 +540,12 @@
 					<include>List_Separator_Low</include>
 
 					<control type="image">
-						<posx>60</posx>
-						<posy>-20</posy>
-						<width>583</width>
-						<height>79</height>
-						<texture>windows/listselectbar.png</texture>
+						<posx>73</posx>
+						<posy>-1</posy>
+						<width>560</width>
+						<height>40</height>
+						<texture>windows/mediamenu.png</texture>
 						<colordiffuse>CF4250E4</colordiffuse>
-						<visible>Control.IsVisible(551) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 					</control>
 
 					<control type="label">
@@ -601,12 +602,18 @@
 						<visible>!Control.IsVisible(76) + ![Container.Content(albums) | Window.IsActive(24)]</visible>
 					</control>
 
-					<control type="image">
+		  			<control type="image">
 						<include>WatchedOverlaySlim_Low</include>
-						<include>detailcolorfocus</include>
 						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
-						<visible>!Container.Content(Albums)</visible>
 						<info>ListItem.Overlay</info>
+						<visible>!Container.Content(albums) + Skin.HasSetting(BlueDot)</visible>
+						<animation effect="slide" start="0,0" end="0,7" time="0" condition="true">Conditional</animation>
+		   			</control>
+		   			<control type="image">
+						<include>WatchedOverlaySlim_Low</include>
+						<texture>NewLabel/$INFO[ListItem.Overlay]</texture>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>!Container.Content(albums) + !Skin.HasSetting(BlueDot)</visible>
 					</control>
 
 				</focusedlayout>
@@ -742,12 +749,19 @@
 					</control>
 
 					<include>ListLabel_Detail_LowAlbumCover_Low</include>
-					<control type="image">
+
+		  			<control type="image">
 						<include>WatchedOverlayFull_Low</include>
-						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-		     		   <animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 						<info>ListItem.Overlay</info>
+						<visible>!Container.Content(albums) + Skin.HasSetting(BlueDot)</visible>
+						<animation effect="slide" start="0,0" end="-7,20" time="0" condition="true">Conditional</animation>
+		   			</control>
+		   			<control type="image">
+						<include>WatchedOverlayFull_Low</include>
+						<texture>NewLabel/$INFO[ListItem.Overlay]</texture>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>!Container.Content(albums) + !Skin.HasSetting(BlueDot)</visible>
 					</control>
 
 				</itemlayout>
@@ -756,13 +770,12 @@
 					<include>List_Separator_Low</include>
 
 					<control type="image">
-						<posx>55</posx>
-						<posy>-32</posy>
-						<width>593</width>
-						<height>129</height>
-						<texture>windows/listselectbar.png</texture>
+						<posx>73</posx>
+						<posy>-1</posy>
+						<width>560</width>
+						<height>67</height>
+						<texture>windows/mediamenu.png</texture>
 						<colordiffuse>CF4250E4</colordiffuse>
-						<visible>Control.IsVisible(551) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 					</control>
 
 					<control type="label">
@@ -894,11 +907,19 @@
 					</control>
 
 					<include>ListLabel_Detail_LowAlbumCover_Low</include>
-					<control type="image">
+
+		  			<control type="image">
 						<include>WatchedOverlayFull_Low</include>
-						<include>detailcolorfocus</include>
-						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 						<info>ListItem.Overlay</info>
+						<visible>!Container.Content(albums) + Skin.HasSetting(BlueDot)</visible>
+						<animation effect="slide" start="0,0" end="-7,20" time="0" condition="true">Conditional</animation>
+		   			</control>
+		   			<control type="image">
+						<include>WatchedOverlayFull_Low</include>
+						<texture>NewLabel/$INFO[ListItem.Overlay]</texture>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>!Container.Content(albums) + !Skin.HasSetting(BlueDot)</visible>
 					</control>
 
 				</focusedlayout>
@@ -970,25 +991,32 @@
 						<visible>Container.Content(episodes)</visible>
 					</control>
 
-					<control type="image">
+		  			<control type="image">
 						<include>WatchedOverlaySlim_Low</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 						<info>ListItem.Overlay</info>
-		     		    <animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+						<animation effect="slide" start="0,0" end="0,7" time="0" condition="true">Conditional</animation>
+						<visible>!Container.Content(albums) + Skin.HasSetting(BlueDot)</visible>
+		   			</control>
+		   			<control type="image">
+						<include>WatchedOverlaySlim_Low</include>
+						<include>detailcolornofocus</include>
+						<texture>NewLabel/$INFO[ListItem.Overlay]</texture>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>!Container.Content(albums) + !Skin.HasSetting(BlueDot)</visible>
 					</control>
 
 				</itemlayout>
 				<focusedlayout condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)" height="40">
 					<include>List_Separator_Low</include>
 					<control type="image">
-						<posx>60</posx>
-						<posy>-20</posy>
-						<width>585</width>
-						<height>79</height>
-						<texture>windows/listselectbar.png</texture>
+						<posx>73</posx>
+						<posy>-1</posy>
+						<width>560</width>
+						<height>40</height>
+						<texture>windows/mediamenu.png</texture>
 						<colordiffuse>CF4250E4</colordiffuse>
-	<!--					<animation effect="zoom" end="129,0,458,39" time="0" condition="Container.Content(episodes)">Conditional</animation> -->
 					</control>
 
 					<control type="label">
@@ -1055,11 +1083,18 @@
 						<visible>Container.Content(episodes)</visible>
 					</control>
 
-					<control type="image">
+		  			<control type="image">
 						<include>WatchedOverlaySlim_Low</include>
-						<include>detailcolorfocus</include>
-						<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
 						<info>ListItem.Overlay</info>
+						<visible>!Container.Content(albums) + Skin.HasSetting(BlueDot)</visible>
+						<animation effect="slide" start="0,0" end="0,7" time="0" condition="true">Conditional</animation>
+		   			</control>
+		   			<control type="image">
+						<include>WatchedOverlaySlim_Low</include>
+						<texture>NewLabel/$INFO[ListItem.Overlay]</texture>
+						<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+						<visible>!Container.Content(albums) + !Skin.HasSetting(BlueDot)</visible>
 					</control>
 
 				</focusedlayout>
