@@ -2679,7 +2679,7 @@
 			<include>MediaMenuButton</include>
 			<onclick>Skin.ToggleSetting(BlueDot)</onclick>
 			<selected>Skin.HasSetting(BlueDot)</selected>
-			<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [!Container.Content(Movies) + !Skin.HasSetting(notvoverlays)]</visible>
+			<visible>[Container.Content(Movies) + !Skin.HasSetting(nomovieoverlays)] | [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(notvoverlays)]</visible>
 		</control>
 	</include>
 	<include name="MediaMenuButton_Curtains">
@@ -2835,7 +2835,7 @@
 			<label>HD Icon Off</label>
 			<onclick>Skin.ToggleSetting(HDiconOff)</onclick>
 			<selected>Skin.HasSetting(HDiconOff)</selected>
-			<visible>true</visible>
+			<visible>Container.Content(Movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 		</control>
 	</include>
 
