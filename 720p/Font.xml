@@ -216,7 +216,7 @@
 		<!-- Media windows -->
 		<font>
 			<name>Font_MediaWindowTitle</name>
-			<filename>aeon_rss_ce.ttf</filename>
+			<filename>aeon_main_kr.ttf</filename>
 			<size>23</size>
 		</font>
 		<font>
