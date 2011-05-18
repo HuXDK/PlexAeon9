@@ -72,7 +72,7 @@
 		</control>
 		<control type="button" id="351">
 			<onfocus>Skin.ToggleSetting(SectionsMenu)</onfocus>
-			<onfocus>Notification(Sections Only Menu Active,Press Down for Full Menu,6000)</onfocus>
+			<onfocus>Notification(Sections Only Menu Active,Press Down for Full Menu,5000)</onfocus>
  			<onfocus>SetFocus(300)</onfocus>
     		<visible>![Container(300).HasFocus(2) | Container(300).HasFocus(10) |Container(300).HasFocus(6) | Container(300).HasFocus(1) | Container(300).HasFocus(9) | Container(300).HasFocus(22) | Container(300).HasFocus(8)] + !Skin.HasSetting(NoSectionsMenu) + !Skin.HasSetting(SectionsMenu)</visible>
 		</control>

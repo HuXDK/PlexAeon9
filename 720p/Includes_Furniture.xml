@@ -178,27 +178,27 @@
 
 		</control>
 		<control type="label" id="70">
-			<posx>340</posx>
+			<posx>335</posx>
 			<posy>3</posy>
 			<width>400</width>
 			<font>Font_Time</font>
 			<align>right</align>
 			<include>Colour_WhiteAlpha80</include>
 			<visible>!Skin.HasSetting(bighome)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[System.Date][/UPPERCASE]  |  [/COLOR][COLOR FFcdcdcd]$INFO[System.Time][/COLOR] | $INFO[Weather.Temperature]</label>
+			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[System.Date][/UPPERCASE]  |  [/COLOR][COLOR FFcdcdcd]$INFO[System.Time][/COLOR] | $INFO[Weather.Temperature] $INFO[Weather.Conditions]</label>
 		</control>
 		<control type="label" id="70">
-			<posx>340</posx>
+			<posx>335</posx>
 			<posy>3</posy>
 			<width>600</width>
 			<font>Font_BigTime</font>
 			<align>right</align>
 			<include>Colour_WhiteAlpha80</include>
 			<visible>Skin.HasSetting(bighome)</visible>
-			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[System.Date][/UPPERCASE]  |  [/COLOR][COLOR FFcdcdcd]$INFO[System.Time][/COLOR] | $INFO[Weather.Temperature]</label>
+			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[System.Date][/UPPERCASE]  |  [/COLOR][COLOR FFcdcdcd]$INFO[System.Time][/COLOR] | $INFO[Weather.Temperature]  $INFO[Weather.Conditions]</label>
 		</control>
 		<control type="image">
-			<posx>345</posx>
+			<posx>343</posx>
 			<posy>0</posy>
 			<width>30</width>
 			<height>30</height>
@@ -206,7 +206,7 @@
 			<texture>$INFO[Weather.Conditions]</texture>				
 		</control>	
 		<control type="image">
-			<posx>345</posx>
+			<posx>343</posx>
 			<posy>0</posy>
 			<width>25</width>
 			<height>25</height>
