@@ -2059,11 +2059,9 @@
 	</include>
 	<!-- Common Button -->
 	<include name="MediaMenuButton">
-		<include condition="Skin.HasSetting(novertikalmenu)">Horizontal_MediaMenuButtonVars</include>
-		<include condition="!Skin.HasSetting(novertikalmenu)">Vertical_MediaMenuButtonVars</include>
+		<include>Vertical_MediaMenuButtonVars</include>
 		<pulseonselect>false</pulseonselect>
 		<font>Font_MediaWindowTitleMenu</font>
-		<include>Animation_CommonFade</include>
 	</include>
 	<include name="VerticalMenu_ButtonSecondColumn">
 		<height>35</height>
@@ -2077,38 +2075,18 @@
 		<align>center</align>
 		<font>Font_MediaWindowTitle</font>
 	</include>
-	<include name="Vertical_MediaLogo">
-		<posx>10</posx>
-		<posy>15</posy>
-	</include>
-	<include name="Horizontal_MediaLogo">
-		<posx>49</posx>
-		<posy>13</posy>
-		<include>Animation_MediaMenuSlide</include>
-	</include>
 	<include name="MediaMenuLogo">
-		<include condition="Skin.HasSetting(novertikalmenu)">Horizontal_MediaLogo</include>
-		<include condition="!Skin.HasSetting(novertikalmenu)">Vertical_MediaLogo</include>
+		<posx>10</posx>
+		<posy>50</posy>
 		<width>44</width>
 		<height>30</height>
 		<include>common-fade-quick</include>
 	</include>
-	<include name="Vertical_MediaMenuLabelVars">
+	<include name="MediaMenuLabel">
 		<posx>70</posx>
-		<posy>18</posy>
+		<posy>53</posy>
 		<height>25</height>
 		<width>170</width>
-	</include>
-	<include name="Horizontal_MediaMenuLabelVars">
-		<posx>111</posx>
-		<posy>14</posy>
-		<height>25</height>
-		<visible allowhiddenfocus="true">!Control.HasFocus(88)</visible>
-		<include>Animation_MediaMenuSlide</include>
-	</include>
-	<include name="MediaMenuLabel">
-		<include condition="Skin.HasSetting(novertikalmenu)">Horizontal_MediaMenuLabelVars</include>
-		<include condition="!Skin.HasSetting(novertikalmenu)">Vertical_MediaMenuLabelVars</include>
 		<font>Font_MediaWindowTitle</font>
 		<textcolor>d0FFFFFF</textcolor>
 		<align>left</align>
@@ -2125,7 +2103,7 @@
 	</include>
 	<include name="Vertical_MediaMenuGroup">
 		<posx>0</posx>
-		<posy>70</posy>
+		<posy>110</posy>
 		<width>325</width>
 		<height>600</height>
 		<itemgap>1</itemgap>
@@ -2137,23 +2115,6 @@
 		<ondown>7000</ondown>
 		<include>Animation_CommonFade</include>
 		<visible>!Skin.HasSetting(kiosk)</visible>
-	</include>
-	<include name="Horizontal_MediaMenuGroup">
-		<posx>230</posx>
-		<posy>9</posy>
-		<width>990</width>
-		<height>34</height>
-		<itemgap>0</itemgap>
-		<orientation>horizontal</orientation>
-		<scroll>false</scroll>
-		<onup>50</onup>
-		<ondown>50</ondown>
-		<onleft>7000</onleft>
-		<onright>7000</onright>
-		<include>Animation_CommonFade</include>
-		<include>Animation_MediaMenuSlide</include>
-		<visible>!Skin.HasSetting(kiosk)</visible>
-		<animation effect="fade" start="100" end="50" time="200" condition="!ControlGroup(7000).HasFocus() + !Skin.HasSetting(fademenus)">Conditional</animation>
 	</include>
 	<!--############################################ Buttons ####################################################-->
 	<!--#########################################################################################################-->
@@ -3402,24 +3363,15 @@
 	<include name="NewMediaMenu">
 		<control type="group">
 			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
-			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+			<animation effect="slide" start="-300" end="0" time="100">Visible</animation>
+			<animation effect="slide" start="0" end="-300" time="100">Hidden</animation>
 			<control type="image">
-				<posx>-5</posx>
-				<posy>0</posy>
-				<width>335</width>
+				<posx>-20</posx>
+				<posy>35</posy>
+				<width>352</width>
 				<height>720</height>
 				<texture>list/listpanel_back_dark2.png</texture>
-				<visible>!Skin.HasSetting(novertikalmenu)</visible>
-			</control>
-			<control type="image" id="74">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>57</height>
-				<texture>showcase/showcase_menupanel.png</texture>
-				<include>Animation_MediaMenuSlide</include>
-				<visible>Skin.HasSetting(novertikalmenu)</visible>
+				<visible>true</visible>
 			</control>
 			<control type="image">
 				<include>MediaMenuLogo</include>

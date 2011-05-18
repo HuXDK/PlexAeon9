@@ -51,12 +51,14 @@
 				<onclick>Skin.ToggleSetting(notime)</onclick>
 				<selected>!Skin.HasSetting(notime)</selected>
 			</control>
+<!--
 			<control type="radiobutton" id="401">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>32029</label>
 				<onclick>Skin.ToggleSetting(TotalsPanelOff)</onclick>
 				<selected>!Skin.HasSetting(TotalsPanelOff)</selected>
 			</control>
+-->
 			<control type="radiobutton" id="402">
 				<include>Objects_SettingsDefaultRadioButton</include>
 				<label>31270</label>

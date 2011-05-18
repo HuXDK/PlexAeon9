@@ -9,8 +9,8 @@
 
 	<include name="Anoobie2InfoPaneMovies">
 		<control type="group" id="37">
-			<posx>0</posx>
-			<posy>85</posy>
+			<posx>-15</posx>
+			<posy>95</posy>
 			<width>1280</width>
 			<height>381</height>
 			<visible>Container.Content(movies) + Control.IsVisible(555)</visible>
@@ -336,13 +336,12 @@
 					<texture>NewLabel/$INFO[ListItem.overlay]</texture>
 				</control>
 			</focusedlayout>
-						
 		</control>	
 
 		<control type="label">	
-			<posx>40</posx>
-			<posy>15</posy>
-			<width>1200</width>
+			<posx>-15</posx>
+			<posy>25</posy>
+			<width>1280</width>
 			<height>71</height>
 			<scroll>true</scroll>
 			<aligny>center</aligny>
