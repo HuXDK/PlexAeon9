@@ -737,7 +737,7 @@
 		</control>		
 	</control>
 
-<!-- SINGLE POSTER Plugins-->
+<!-- SINGLE POSTER Plugins and Secondary List -->
 
 	<control type="group">
 		<posx>95</posx>
@@ -771,7 +771,20 @@
 			<texture diffuse="thumbs/movieposter_mask.png">defaultvideobig.png</texture>		
 			<info>Listitem.Icon</info>
 			<fadetime>400</fadetime>
-			<visible>!IsEmpty(ListItem.Icon)</visible>
+			<visible>!IsEmpty(ListItem.Icon) + !Container.content(secondary)</visible>
+		</control>
+		<control type="image">
+			<posx>535</posx>
+			<posy>250</posy>
+			<width>280</width>
+			<height>280</height>
+			<aligny>center</aligny>
+			<align>center</align>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<texture diffuse="thumbs/movieposter_mask.png">defaultvideobig.png</texture>		
+			<info>Listitem.Icon</info>
+			<fadetime>400</fadetime>
+			<visible>!IsEmpty(ListItem.Icon) + Container.content(secondary)</visible>
 		</control>
 	</control>
 	
