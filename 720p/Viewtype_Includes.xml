@@ -4293,7 +4293,7 @@
 		<include>FlowLabelVars</include>
 	    <posy>92</posy>
 	    <font>Font_MediaWindowTitle</font>
-		<textcolor>FF2446B5</textcolor>
+		<textcolor>FF3446FF</textcolor>
 	</include>
 
 	<include name="FlowDetailLabel">
@@ -6330,7 +6330,14 @@
 	                <description>Title</description>
 	                <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 	                <include>FlowMainLabel</include>
-	                <animation effect="slide" start="0,0" end="0,10" time="200" condition="IsEmpty(Control.GetLabel(75))">Conditional</animation>
+					<visible>!IsEmpty(ListItem.Tagline)</visible>
+	            </control>
+	            <control type="label">
+	                <description>Title</description>
+	                <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+	                <include>FlowMainLabel</include>
+	                <animation effect="slide" start="0,0" end="0,10" time="200" condition="true">Conditional</animation>
+					<visible>IsEmpty(ListItem.Tagline)</visible>
 	            </control>
 	            <control type="label" id="75">
 	                <description>Detail</description>
@@ -6391,7 +6398,7 @@
 	            </control>
 	            <control type="label" id="75">
 	                <description>Detail</description>
-	                <label>$LOCALIZE[31062] $INFO[ListItem.Season], $LOCALIZE[31063] $INFO[ListItem.Episode]</label>
+	                <label>$INFO[ListItem.TVShowTitle] ($LOCALIZE[31062] $INFO[ListItem.Season], $LOCALIZE[31063] $INFO[ListItem.Episode])</label>
 	                <include>FlowDetailLabel</include>
 	                <visible>Container.Content(episodes) + !IsEmpty(ListItem.Episode)</visible>
 	            </control>
