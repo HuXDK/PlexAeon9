@@ -3625,9 +3625,9 @@
 			
 			<control type="label">
 				<posx>340</posx>
-				<posy>-100</posy>
+				<posy>-30</posy>
 				<width>600</width>
-				<height>150</height>
+				<height>50</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>tagline</font>	
