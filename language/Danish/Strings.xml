@@ -34,18 +34,18 @@
 	<string id="32010">BRUG TV PLAKATER TIL MULTIPLEX</string>
 	<string id="32011">NYT VÆG UDSEENDE</string>
 	<string id="32012">BRUG GAMMEL CLEARLIST EPISODE INFO VISNING</string>
-	<string id="32013">VEJR BAGGRUND EFTER NUVÆRENDE WEATHER BACKDROP BY CURRENT WEATHER CONDITIONS</string>
+	<string id="32013">VEJR BAGGRUND EFTER NUVÆRENDE VEJRFORHOLD</string>
 	<string id="32014">AKTIVER OPSTARTS SPILLELISTE  (SPILLELISTE, LYD ELLER VIDEO)</string>
 	<string id="32015">- STI TIL OPSTARTS-FIL/SPILLELISTE</string>
 	<string id="32016">INGEN 'EKSTRA ZOOM' PÅ GENVEJSMENU</string>
-	<string id="32017">Brug DVD Covere</string>	
+	<string id="32017">BRUG DVD Covere</string>	
 	<string id="32018">HURTIG RULNING BOGSTAVS POPUP</string>
 	<string id="32019">BRUG VERTIKAL VISNINGSTYPE MENU</string>
 	<string id="32020">AFSPIL BAG MENUER (TRYK TAB TASTEN EN ENKELT GANG NÅR VIDEO AFSPILLES)</string>
 	<string id="32021">STI TIL LYDKONTROLS AVI</string>
 	<string id="32022">AKTIVER BIOGRAF AFSPILNINGSTILSTAND (AFSPILLER EN TILFÆLDIG VIDEO FØR FILMEN STARTER)</string>
 	<string id="32023">- PATH TO CINEMA FOLDER</string>
-	<string id="32024">CLEARART TVPROGRAM OVERLEJRING (FRA VED TVPOSTER)</string>
+	<string id="32024">CLEARART TV-PROGRAM OVERLEJRING (FRA VED TV-POSTER)</string>
 	<string id="32025">EKSTRA OSD INFORMATION</string>
 	<string id="32026">STI TIL BRUGERDEFINERET TÆPPE BAGGRUND</string>
 	<string id="32027">BRUG BAGGRUND TIL MANGLENDE FANKUNST (FRA VED SORT SKÆRM)</string>
@@ -101,7 +101,7 @@
 	<string id="31063">Afsnit</string>
 	<string id="31064">Fankunst</string>
 	<string id="31065">Panel</string>
-	<string id="31066">Unwatched Icon</string>
+	<string id="31066">Uset ikon</string>
 	<string id="31067">FanKunst</string>
 	<string id="31068">Bibliotek</string>
 	<string id="31069">Medie flag</string>
@@ -153,11 +153,11 @@
 	<string id="31104">SKIFT MELLEM</string>
 	<string id="31105">GENVEJ</string>
 	<string id="31106">ARRANGER OSD OBJEKTER</string>
-	<string id="31107">MOVE LEFT/RIGHT TO BROWSE, SELECT TO TOGGLE</string>
+	<string id="31107">FLYT VENSTRE/HØJRE FOR AT GENNEMSE, VÆLG FOR AT BYTTE</string>
 	<string id="31108">SKIFT MELLEM ØVERSTE DETALJE STILE (NUVÆRENDE: MINIMAL)</string>
 	<string id="31109">SKIFT STATUSLINIE (NUVÆRENDE: TIL)</string>
 	<string id="31110">SKIFT TIDS/LÆNGDE TEKST (NUVÆRENDE: FRA)</string>
-	<string id="31111">TOGGLE UPPER DETAIL STYLES (CURRENTLY: MAX)</string>
+	<string id="31111">BYT ØVRE DETALJESTIL (NUVÆRERENDE: MAX)</string>
 	<string id="31112">SKIFT STATUSLINIE (NUVÆRENDE: FRA)</string>
 	<string id="31113">SKIFT TIDS/LÆNGDE TEKST (NUVÆRENDE: TIL)</string>	
   
@@ -232,7 +232,7 @@
   
 	<string id="31220">MAPPE INDEHOLDER:</string>
 	<string id="31221">SKRIV STI ELLER SØG EFTER MEDIERS PLACERING</string>
-	<string id="31222">CHOOSE A NAME FOR THIS SHARE</string>
+	<string id="31222">VÆNG NAVN FOR DETTE DELEDREV</string>
 	<string id="31223">LIST</string>
 	<string id="31224">FLISE</string>
 
@@ -348,7 +348,7 @@
 
 <!--  Fullscreen info panel  -->
 
-	<string id="31400">INGEN PLAKAT[CR][CR]CHECK OM DU HAR ET SEPERAT "STORT" MINIATUREBILLEDE[CR]SAMMEN MED DIN FILMFIL OG AT[CR]NAVNEKONVENTIONEN ER OVERHOLDT[CR](BARBARELLA.MKV-BIG.PNG)[CR][CR]CHECK PLEXAEON MANUALEN FOR FLERE DETALJER</string>
+	<string id="31400">INGEN PLAKAT[CR][CR]CHECK OM DU HAR ET SEPERAT "BIG" MINIATUREBILLEDE[CR]SAMMEN MED DIN FILMFIL OG AT[CR]NAVNEKONVENTIONEN ER OVERHOLDT[CR](BARBARELLA.MKV-BIG.PNG)[CR][CR]CHECK PLEXAEON MANUALEN FOR FLERE DETALJER</string>
 	<string id="31401">SKREVET AF</string>
 	<string id="31402">INSTRUERET AF</string>
 	<string id="31403">AFSNIT</string>
@@ -400,7 +400,7 @@
 <!--  Aeon Assistant  -->
 
 	<string id="31500">NYHEDER</string>
-	<string id="31501">ONLINE AEON UPDATERINGER</string>
+	<string id="31501">ONLINE AEON OPDATERINGER</string>
 	<string id="31502">VITALE</string>
 	<string id="31503">PLEX STATISTIKKER</string>
 	<string id="31504">KREDITERINGER</string>
@@ -411,7 +411,7 @@
 	<string id="31520">START TUR</string>
 	<string id="31521">AEON VELKOMSTSIDE</string>
 	<string id="31522">BACK TO BASICS</string>
-	<string id="31523">TRYK CALG FOR AT GENTAGE AEON INTRODUKTIONSTUR</string>
+	<string id="31523">TRYK VALG FOR AT GENTAGE AEON INTRODUKTIONSTUR</string>
 	<string id="31524">KONTAKTER AEON SERVER</string>
 	
 <!--  Aeon Assistant Tutorials  -->
